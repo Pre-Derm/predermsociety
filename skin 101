@@ -1,1 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Skin Science 01 | Pre-Derm Society</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    nav {
+      border-bottom: 1px solid #e8e8e8;
+      background: #ffffff;
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: auto;
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+    }
+
+    .back {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .back:hover {
+      opacity: 0.45;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 90px 25px 120px;
+    }
+
+    .label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #777777;
+    }
+
+    .intro {
+      max-width: 850px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .intro .label {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 9vw, 105px);
+      line-height: 0.92;
+      letter-spacing: -5px;
+      font-weight: 500;
+      margin-bottom: 35px;
+    }
+
+    .intro p {
+      max-width: 650px;
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .lesson {
+      padding: 75px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .lesson-number {
+      font-size: 9px;
+      font-weight: 600;
+      color: #777777;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 55px);
+      line-height: 1;
+      letter-spacing: -2.5px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .lesson p {
+      max-width: 700px;
+      color: #555555;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .layer-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    .layer {
+      padding: 35px 25px;
+      border-right: 1px solid #dcdcdc;
+    }
+
+    .layer:last-child {
+      border-right: none;
+    }
+
+    .layer-number {
+      font-size: 9px;
+      color: #888888;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+
+    .layer strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .layer span {
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .quiz {
+      margin-top: 80px;
+      padding: 55px;
+      background: #f7f7f7;
+    }
+
+    .quiz h2 {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    .quiz-intro {
+      color: #666666;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .question {
+      padding: 30px 0;
+      border-top: 1px solid #dddddd;
+    }
+
+    .question p {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .answer-button {
+      border: 1px solid #111111;
+      background: #ffffff;
+      color: #111111;
+      padding: 10px 18px;
+      margin: 4px;
+      font-family: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .answer-button:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .answer-button.correct {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .answer-button.incorrect {
+      opacity: 0.35;
+    }
+
+    .answer-button:disabled {
+      cursor: default;
+    }
+
+    .question-result {
+      min-height: 22px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666666;
+    }
+
+    #result {
+      border-top: 1px solid #dddddd;
+      margin-top: 25px;
+      padding-top: 25px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .finish {
+      text-align: center;
+      padding: 100px 0 40px;
+    }
+
+    .finish h2 {
+      margin-top: 12px;
+    }
+
+    .finish p {
+      max-width: 520px;
+      margin: 20px auto 30px;
+      color: #666666;
+      font-size: 14px;
+    }
+
+    .home-link {
+      display: inline-block;
+      border-bottom: 1px solid #111111;
+      padding-bottom: 5px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      background: #ffffff;
+      padding: 55px 25px 35px;
+    }
+
+    .footer-inner {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      margin-bottom: 30px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 45px;
+    }
+
+    .footer-links a {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.7px;
+      border-bottom: 1px solid #111111;
+      padding-bottom: 4px;
+    }
+
+    .footer-links a:hover {
+      opacity: 0.45;
+    }
+
+    .footer-note {
+      font-size: 8px;
+      letter-spacing: 2px;
+      color: #888888;
+      margin-bottom: 10px;
+    }
+
+    .footer-copy {
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      color: #888888;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 18px 20px;
+      }
+
+      main {
+        padding: 65px 22px 90px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .layer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .layer {
+        border-right: none;
+        border-bottom: 1px solid #dcdcdc;
+      }
+
+      .layer:last-child {
+        border-bottom: none;
+      }
+
+      .quiz {
+        padding: 35px 22px;
+      }
+
+      .answer-button {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav">
+
+      <a href="index.html" class="brand">
+        PRE-DERM SOCIETY
+      </a>
+
+      <a href="index.html" class="back">
+        ← Back
+      </a>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="intro">
+
+      <div class="label">
+        Skin Science 01 · Foundations
+      </div>
+
+      <h1>
+        The science<br>
+        of skin.
+      </h1>
+
+      <p>
+        Before exploring dermatology, it helps to understand
+        the structure and function of the skin. This lesson
+        introduces the fundamentals.
+      </p>
+
+    </section>
+
+
+    <section class="lesson">
+
+      <div class="lesson-number">
+        01 · The basics
+      </div>
+
+      <h2>
+        What is skin?
+      </h2>
+
+      <p>
+        Skin is the body's largest organ. It forms a protective
+        boundary between the body and its environment and also
+        contributes to sensation and temperature regulation.
+      </p>
+
+    </section>
+
+
+    <section class="lesson">
+
+      <div class="lesson-number">
+        02 · Structure
+      </div>
+
+      <h2>
+        Three major layers.
+      </h2>
+
+      <p>
+        Skin is organized into three major regions. Each has
+        different structures and contributes to the overall
+        function of the skin.
+      </p>
+
+      <div class="layer-grid">
+
+        <div class="layer">
+
+          <div class="layer-number">
+            01
+          </div>
+
+          <strong>
+            Epidermis
+          </strong>
+
+          <span>
+            The outermost layer of skin and an important part
+            of the body's protective barrier.
+          </span>
+
+        </div>
+
+
+        <div class="layer">
+
+          <div class="layer-number">
+            02
+          </div>
+
+          <strong>
+            Dermis
+          </strong>
+
+          <span>
+            A deeper layer containing structures such as
+            nerves, blood vessels, glands, and hair follicles.
+          </span>
+
+        </div>
+
+
+        <div class="layer">
+
+          <div class="layer-number">
+            03
+          </div>
+
+          <strong>
+            Subcutaneous tissue
+          </strong>
+
+          <span>
+            Deeper tissue containing connective tissue and
+            fat that helps cushion and insulate the body.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="lesson">
+
+      <div class="lesson-number">
+        03 · Function
+      </div>
+
+      <h2>
+        More than a barrier.
+      </h2>
+
+      <p>
+        Skin protects the body, allows us to sense our
+        surroundings, and contributes to temperature
+        regulation. It is a dynamic organ that interacts
+        continuously with the environment.
+      </p>
+
+    </section>
+
+
+    <section class="quiz">
+
+      <div class="label">
+        Knowledge check
+      </div>
+
+      <h2>
+        Test your understanding.
+      </h2>
+
+      <p class="quiz-intro">
+        Three questions. Select one answer for each.
+      </p>
+
+
+      <div class="question">
+
+        <p>
+          1. Which is the outermost layer of skin?
+        </p>
+
+        <button class="answer-button"
+          onclick="answer(this, 1, true)">
+          Epidermis
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 1, false)">
+          Dermis
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 1, false)">
+          Subcutaneous tissue
+        </button>
+
+        <div id="question-result-1" class="question-result"></div>
+
+      </div>
+
+
+      <div class="question">
+
+        <p>
+          2. Which layer contains nerves and blood vessels?
+        </p>
+
+        <button class="answer-button"
+          onclick="answer(this, 2, false)">
+          Epidermis
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 2, true)">
+          Dermis
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 2, false)">
+          Subcutaneous tissue
+        </button>
+
+        <div id="question-result-2" class="question-result"></div>
+
+      </div>
+
+
+      <div class="question">
+
+        <p>
+          3. Which is an important function of skin?
+        </p>
+
+        <button class="answer-button"
+          onclick="answer(this, 3, true)">
+          Protection
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 3, false)">
+          Pumping blood
+        </button>
+
+        <button class="answer-button"
+          onclick="answer(this, 3, false)">
+          Producing bones
+        </button>
+
+        <div id="question-result-3" class="question-result"></div>
+
+      </div>
+
+
+      <div id="result">
+        Score: 0 / 3
+      </div>
+
+    </section>
+
+
+    <section class="finish">
+
+      <div class="label">
+        Complete
+      </div>
+
+      <h2>
+        Skin Science 01 complete.
+      </h2>
+
+      <p>
+        You've completed the first Pre-Derm Society
+        foundation lesson.
+      </p>
+
+      <a href="index.html" class="home-link">
+        Return to Pre-Derm Society →
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        PRE-DERM SOCIETY
+      </div>
+
+      <div class="footer-links">
+
+        <a
+          href="https://www.tiktok.com/@prederm_society"
+          target="_blank"
+          rel="noopener noreferrer">
+          TIKTOK
+        </a>
+
+        <a
+          href="https://www.instagram.com/prederm_society"
+          target="_blank"
+          rel="noopener noreferrer">
+          INSTAGRAM
+        </a>
+
+        <a href="mailto:predermsociety@gmail.com">
+          EMAIL
+        </a>
+
+      </div>
+
+      <div class="footer-note">
+        SKIN SCIENCE · DERMATOLOGY · EDUCATION
+      </div>
+
+      <div class="footer-copy">
+        © 2026 PRE-DERM SOCIETY
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    let score = 0;
+
+    let answeredQuestions = {
+      1: false,
+      2: false,
+      3: false
+    };
+
+
+    function answer(button, questionNumber, isCorrect) {
+
+      if (answeredQuestions[questionNumber]) {
+        return;
+      }
+
+      answeredQuestions[questionNumber] = true;
+
+      if (isCorrect) {
+
+        score++;
+
+        button.classList.add("correct");
+
+        document.getElementById(
+          "question-result-" + questionNumber
+        ).textContent = "✓ Correct";
+
+      } else {
+
+        button.classList.add("incorrect");
+
+        document.getElementById(
+          "question-result-" + questionNumber
+        ).textContent = "Not quite — keep learning.";
+
+      }
+
+
+      const question = button.closest(".question");
+
+      const buttons =
+        question.querySelectorAll(".answer-button");
+
+      buttons.forEach(function(btn) {
+        btn.disabled = true;
+      });
+
+
+      document.getElementById("result").textContent =
+        "Score: " + score + " / 3";
+
+
+      if (
+        answeredQuestions[1] &&
+        answeredQuestions[2] &&
+        answeredQuestions[3]
+      ) {
+
+        if (score === 3) {
+
+          document.getElementById("result").textContent =
+            "Perfect score — 3 / 3";
+
+        } else {
+
+          document.getElementById("result").textContent =
+            "Final score: " + score + " / 3";
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
