@@ -1,555 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pre-Derm Society</title>
-
-<style>
-
-/* =========================
-   RESET
-========================= */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #fff;
-  color: #111;
-  font-family: "London", "Century Gothic", "Avenir Next", Avenir, sans-serif;
-  font-weight: 300;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-  height: 82px;
-  padding: 0 6%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background: #fff;
-  border-bottom: 1px solid #111;
-
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  font-size: 23px;
-  font-weight: 300;
-  letter-spacing: .5px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav-links a {
-  font-size: 14px;
-  font-weight: 300;
-  transition: .25s ease;
-}
-
-.nav-links a:hover {
-  opacity: .45;
-  transform: translateY(-1px);
-}
-
-.skin-button {
-  padding: 10px 20px;
-  border: 1px solid #111;
-  border-radius: 100px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  min-height: 720px;
-  padding: 120px 6% 130px;
-
-  display: flex;
-  align-items: center;
-
-  background: #fff;
-}
-
-.hero-content {
-  max-width: 1150px;
-}
-
-.small-heading {
-  margin-bottom: 32px;
-
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(75px, 12vw, 155px);
-  font-weight: 300;
-  line-height: .84;
-  letter-spacing: -7px;
-}
-
-.hero-description {
-  max-width: 540px;
-  margin-top: 48px;
-
-  font-size: 19px;
-  font-weight: 300;
-  line-height: 1.55;
-}
-
-.hero-actions {
-  margin-top: 36px;
-
-  display: flex;
-  gap: 18px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 13px 25px;
-
-  border-radius: 100px;
-
-  font-size: 14px;
-  font-weight: 300;
-
-  transition: .25s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button-black {
-  background: #111;
-  color: #fff;
-}
-
-.button-black:hover {
-  background: #fff;
-  color: #111;
-  box-shadow: inset 0 0 0 1px #111;
-}
-
-.button-outline {
-  border: 1px solid #111;
-}
-
-.button-outline:hover {
-  background: #111;
-  color: #fff;
-}
-
-
-/* =========================
-   STATEMENT
-========================= */
-
-.statement {
-  padding: 35px 6%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
-}
-
-.statement p {
-  font-size: 17px;
-}
-
-.statement span {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-
-/* =========================
-   STATS
-========================= */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid #111;
-}
-
-.stat {
-  padding: 55px 30px;
-  text-align: center;
-  border-right: 1px solid #111;
-}
-
-.stat:last-child {
-  border-right: none;
-}
-
-.stat-number {
-  font-size: 62px;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.stat-label {
-  margin-top: 12px;
-
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-  padding: 145px 6%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-
-  border-bottom: 1px solid #111;
-}
-
-.section-title {
-  font-size: clamp(52px, 6.5vw, 90px);
-  font-weight: 300;
-  line-height: .94;
-  letter-spacing: -4px;
-}
-
-.about-copy {
-  max-width: 570px;
-  align-self: end;
-}
-
-.about-copy p {
-  margin-bottom: 24px;
-
-  font-size: 19px;
-  line-height: 1.55;
-}
-
-
-/* =========================
-   LESSONS
-========================= */
-
-.lessons {
-  padding: 145px 6%;
-  border-bottom: 1px solid #111;
-}
-
-.lessons-header {
-  margin-bottom: 70px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 40px;
-}
-
-.lessons-description {
-  max-width: 410px;
-  font-size: 18px;
-  line-height: 1.55;
-}
-
-.lesson-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-
-  background: #111;
-  border: 1px solid #111;
-}
-
-.lesson-card {
-  min-height: 390px;
-  padding: 35px;
-
-  display: flex;
-  flex-direction: column;
-
-  background: #fff;
-
-  transition: .25s ease;
-}
-
-.lesson-card:hover {
-  transform: translateY(-5px);
-}
-
-.lesson-card h3 {
-  margin-top: 80px;
-
-  font-size: 38px;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.lesson-card p {
-  margin-top: 20px;
-
-  font-size: 17px;
-  line-height: 1.55;
-}
-
-.lesson-card .button {
-  width: fit-content;
-  margin-top: auto;
-}
-
-
-/* =========================
-   MISSION
-========================= */
-
-.mission {
-  padding: 145px 6%;
-
-  background: #111;
-  color: #fff;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-}
-
-.mission-copy {
-  max-width: 570px;
-  align-self: end;
-}
-
-.mission-copy p {
-  margin-bottom: 24px;
-
-  font-size: 19px;
-  line-height: 1.55;
-}
-
-
-/* =========================
-   JOIN
-========================= */
-
-.join {
-  padding: 155px 6%;
-  text-align: center;
-  background: #fff;
-}
-
-.join h2 {
-  font-size: clamp(62px, 8vw, 115px);
-  font-weight: 300;
-  line-height: .9;
-  letter-spacing: -5px;
-}
-
-.join p {
-  max-width: 550px;
-  margin: 32px auto;
-
-  font-size: 19px;
-  line-height: 1.55;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  padding: 45px 6%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: #111;
-  color: #fff;
-}
-
-.footer-name {
-  font-size: 22px;
-  font-weight: 300;
-}
-
-.footer-text {
-  margin-top: 6px;
-  font-size: 14px;
-}
-
-.socials {
-  display: flex;
-  gap: 25px;
-}
-
-.socials a {
-  font-size: 14px;
-}
-
-.socials a:hover {
-  opacity: .5;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-  nav {
-    padding: 0 5%;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a:not(.skin-button) {
-    display: none;
-  }
-
-  .skin-button {
-    padding: 8px 15px;
-    font-size: 12px !important;
-  }
-
-  .hero {
-    min-height: 600px;
-    padding: 90px 6%;
-  }
-
-  .hero h1 {
-    font-size: 70px;
-    letter-spacing: -4px;
-  }
-
-  .hero-description {
-    font-size: 18px;
-  }
-
-  .hero-actions {
-    flex-wrap: wrap;
-  }
-
-  .statement {
-    display: block;
-  }
-
-  .statement span {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .stat {
-    border-right: none;
-    border-bottom: 1px solid #111;
-  }
-
-  .stat:last-child {
-    border-bottom: none;
-  }
-
-  .about,
-  .mission {
-    grid-template-columns: 1fr;
-    gap: 55px;
-    padding: 90px 6%;
-  }
-
-  .lessons {
-    padding: 90px 6%;
-  }
-
-  .lessons-header {
-    display: block;
-  }
-
-  .lessons-description {
-    margin-top: 25px;
-  }
-
-  .lesson-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .join {
-    padding: 100px 6%;
-  }
-
-  footer {
-    display: block;
-  }
-
-  .socials {
-    margin-top: 25px;
-  }
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pre-Derm Society</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #050505;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      height: 82px;
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+      border-bottom: 1px solid #111111;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: "Cinzel", serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      transition: opacity 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.4;
+    }
+
+    .skin-button {
+      padding: 10px 19px;
+      border: 1px solid #111111;
+      border-radius: 100px;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .skin-button:hover {
+      background: #111111;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 720px;
+      padding: 120px 6% 130px;
+
+      display: flex;
+      align-items: center;
+
+      background: #ffffff;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+    }
+
+    .small-heading {
+      margin-bottom: 30px;
+
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 1050px;
+
+      font-family: "Cinzel", serif;
+      font-size: clamp(65px, 10vw, 145px);
+      font-weight: 400;
+      line-height: 0.88;
+      letter-spacing: -4px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      margin-top: 48px;
+
+      font-size: 19px;
+      line-height: 1.55;
+      color: #202020;
+    }
+
+    .hero-actions {
+      margin-top: 35px;
+
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 24px;
+
+      border-radius: 100px;
+
+      font-size: 14px;
+      font-weight: 400;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-black {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .button-black:hover {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: inset 0 0 0 1px #111111;
+    }
+
+    .button-outline {
+      border: 1px solid #111111;
+      background: #ffffff;
+    }
+
+    .button-outline:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    /* STATEMENT */
+
+    .statement {
+      padding: 35px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-top: 1px solid #111111;
+      border-bottom: 1px solid #111111;
+    }
+
+    .statement p {
+      font-family: "Cinzel", serif;
+      font-size: 17px;
+    }
+
+    .statement span {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid #111111;
+    }
+
+    .stat {
+      padding: 50px 30px;
+      text-align: center;
+      border-right: 1px solid #111111;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      font-family: "Cinzel", serif;
+      font-size: 58px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 10px;
+
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ABOUT */
+
+    .about {
+      padding: 140px 6%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(48px, 6vw, 82px);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -3px;
+    }
+
+    .about-copy {
+      max-width: 570px;
+      align-self: end;
+    }
+
+    .about-copy p {
+      margin-bottom: 22px;
+
+      font-size: 19px;
+      line-height: 1.6;
+      color: #202020;
+    }
+
+    /* LESSONS */
+
+    .lessons {
+      padding: 140px 6%;
+      border-bottom: 1px solid #111111;
+    }
+
+    .lessons-header {
+      margin-bottom: 70px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+    }
+
+    .lessons-description {
+      max-width: 390px;
+
+      font-size: 18px;
+      line-height: 1.6;
+      color: #202020;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      background: #111111;
+      border: 1px solid #111111;
+    }
+
+    .lesson-card {
+      min-height: 390px;
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+
+      background: #ffffff;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .lesson-card h3 {
+      margin-top: 80px;
+
+      font-family: "Cinzel", serif;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .lesson-card p {
+      margin-top: 20px;
+
+      font-size: 17px;
+      line-height: 1.6;
+      color: #202020;
+    }
+
+    .lesson-card .button {
+      width: fit-content;
+      margin-top: auto;
+    }
+
+    /* MISSION */
+
+    .mission {
+      padding: 140px 6%;
+
+      background: #111111;
+      color: #ffffff;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+    }
+
+    .mission .section-title {
+      color: #ffffff;
+    }
+
+    .mission-copy {
+      max-width: 570px;
+      align-self: end;
+    }
+
+    .mission-copy p {
+      margin-bottom: 22px;
+
+      font-size: 19px;
+      line-height: 1.6;
+      color: #f4f4f4;
+    }
+
+    /* JOIN */
+
+    .join {
+      padding: 150px 6%;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .join h2 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(60px, 8vw, 105px);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: -4px;
+    }
+
+    .join p {
+      max-width: 540px;
+      margin: 30px auto;
+
+      font-size: 19px;
+      line-height: 1.6;
+      color: #202020;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .footer-name {
+      font-family: "Cinzel", serif;
+      font-size: 21px;
+      font-weight: 400;
+    }
+
+    .footer-text {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #eeeeee;
+    }
+
+    .socials {
+      display: flex;
+      gap: 25px;
+    }
+
+    .socials a {
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    .socials a:hover {
+      opacity: 0.5;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a:not(.skin-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding: 90px 6%;
+      }
+
+      .hero h1 {
+        font-size: 65px;
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        flex-wrap: wrap;
+      }
+
+      .statement {
+        display: block;
+      }
+
+      .statement span {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid #111111;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .about,
+      .mission {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 90px 6%;
+      }
+
+      .lessons {
+        padding: 90px 6%;
+      }
+
+      .lessons-header {
+        display: block;
+      }
+
+      .lessons-description {
+        margin-top: 25px;
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .join {
+        padding: 100px 6%;
+      }
+
+      footer {
+        display: block;
+      }
+
+      .socials {
+        margin-top: 25px;
+      }
+    }
+
+  </style>
 </head>
 
-
 <body>
-
-
-<!-- NAVIGATION -->
 
 <nav>
 
@@ -559,17 +563,11 @@ footer {
 
   <div class="nav-links">
 
-    <a href="#about">
-      About
-    </a>
+    <a href="#about">About</a>
 
-    <a href="#lessons">
-      Lessons
-    </a>
+    <a href="#lessons">Lessons</a>
 
-    <a href="#join">
-      Join
-    </a>
+    <a href="#join">Join</a>
 
     <a href="skin101.html" class="skin-button">
       Skin 101
@@ -579,8 +577,6 @@ footer {
 
 </nav>
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -592,7 +588,7 @@ footer {
 
     <h1>
       Pre-Derm<br>
-      Society.
+      <em>Society.</em>
     </h1>
 
     <p class="hero-description">
@@ -618,8 +614,6 @@ footer {
 </section>
 
 
-<!-- STATEMENT -->
-
 <section class="statement">
 
   <p>
@@ -632,8 +626,6 @@ footer {
 
 </section>
 
-
-<!-- STATS -->
 
 <section class="stats">
 
@@ -678,8 +670,6 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
-
 <section class="about" id="about">
 
   <div>
@@ -711,8 +701,6 @@ footer {
 </section>
 
 
-<!-- LESSONS -->
-
 <section class="lessons" id="lessons">
 
   <div class="lessons-header">
@@ -732,7 +720,6 @@ footer {
 
 
   <div class="lesson-grid">
-
 
     <article class="lesson-card">
 
@@ -796,8 +783,6 @@ footer {
 </section>
 
 
-<!-- MISSION -->
-
 <section class="mission">
 
   <div>
@@ -829,8 +814,6 @@ footer {
 </section>
 
 
-<!-- JOIN -->
-
 <section class="join" id="join">
 
   <h2>
@@ -853,8 +836,6 @@ footer {
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -891,8 +872,6 @@ footer {
 </footer>
 
 
-<!-- COUNTERS -->
-
 <script>
 
   const lessons =
@@ -901,12 +880,13 @@ footer {
   const people =
     Number(localStorage.getItem("peopleEducated")) || 0;
 
-  document.getElementById("lessonsTaught").textContent = lessons;
+  document.getElementById("lessonsTaught").textContent =
+    lessons;
 
-  document.getElementById("peopleEducated").textContent = people;
+  document.getElementById("peopleEducated").textContent =
+    people;
 
 </script>
-
 
 </body>
 </html>
