@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,19 @@
 
   <title>Pre-Derm Society</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
   <style>
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -17,767 +26,858 @@
     }
 
     body {
-      margin: 0;
-      background: #faf9f6;
-      color: #111;
-      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
     }
 
     a {
-      color: #111;
+      color: inherit;
+      text-decoration: none;
     }
 
     /* NAVIGATION */
 
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 50;
+      height: 82px;
+      padding: 0 6%;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
-      padding: 22px 6%;
+      background: #ffffff;
+      border-bottom: 1px solid #111111;
 
-      background: rgba(250, 249, 246, 0.88);
-      backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid #e2e0dc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 3px;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
     }
 
-    .links a {
-      text-decoration: none;
-      font-size: 9px;
-      letter-spacing: 2px;
-      margin-left: 24px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
     }
 
-    .links a:hover,
-    .logo:hover {
-      opacity: 0.5;
+    .nav-links a {
+      font-size: 16px;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.45;
+    }
+
+    .skin-button {
+      padding: 10px 20px;
+      border: 1px solid #111111;
+      border-radius: 100px;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
+      min-height: 720px;
+      padding: 120px 6% 130px;
 
       display: flex;
-      align-items: flex-end;
+      align-items: center;
 
-      padding: 160px 8% 90px;
-    }
-
-    .hero-background {
-      position: absolute;
-      inset: 0;
-
-      background:
-        radial-gradient(
-          circle at 75% 25%,
-          #e8e2dc 0%,
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 20% 70%,
-          #eee9e3 0%,
-          transparent 40%
-        ),
-        #faf9f6;
+      background: #ffffff;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
       max-width: 1100px;
     }
 
-    .eyebrow {
-      font-size: 9px;
+    .small-heading {
+      margin-bottom: 30px;
+
+      font-family: Arial, sans-serif;
+      font-size: 10px;
       letter-spacing: 3px;
-      color: #777;
-      margin-bottom: 28px;
+      text-transform: uppercase;
     }
 
-    h1 {
-      font-size: clamp(68px, 13vw, 160px);
-      line-height: 0.78;
-      letter-spacing: -9px;
-      font-weight: 400;
-      margin: 0;
+    .hero h1 {
+      max-width: 1050px;
+
+      font-size: clamp(75px, 11vw, 150px);
+      font-weight: 300;
+      line-height: 0.82;
+      letter-spacing: -7px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
     }
 
     .hero-description {
-      max-width: 540px;
-      margin-top: 42px;
+      max-width: 530px;
+      margin-top: 48px;
 
-      font-size: 15px;
-      line-height: 1.8;
-      color: #5f5f5f;
+      font-size: 21px;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      margin-top: 35px;
+
+      display: flex;
+      align-items: center;
+      gap: 22px;
     }
 
     .button {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-      margin-top: 25px;
-      padding-bottom: 7px;
+      padding: 13px 25px;
 
-      border-bottom: 1px solid #111;
+      border-radius: 100px;
 
-      text-decoration: none;
+      font-size: 16px;
 
-      font-size: 9px;
-      font-weight: bold;
-      letter-spacing: 2px;
+      transition: all 0.25s ease;
     }
 
     .button:hover {
-      opacity: 0.5;
+      transform: translateY(-2px);
     }
 
-    /* GENERAL SECTIONS */
-
-    section {
-      padding: 130px 8%;
-      border-top: 1px solid #dedcd8;
+    .button-black {
+      background: #111111;
+      color: #ffffff;
     }
 
-    .label {
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: #777;
-      margin-bottom: 30px;
+    .button-black:hover {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: inset 0 0 0 1px #111111;
     }
 
-    h2 {
-      font-size: clamp(52px, 8vw, 100px);
-      line-height: 0.86;
-      letter-spacing: -6px;
-      font-weight: 400;
-      margin: 0 0 35px;
+    .button-outline {
+      border: 1px solid #111111;
     }
 
-    .text {
-      max-width: 600px;
-      color: #666;
-      line-height: 1.8;
-      font-size: 15px;
+    .button-outline:hover {
+      background: #111111;
+      color: #ffffff;
     }
 
-    /* ABOUT */
+    /* STATEMENT */
 
-    .about {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .about-content {
-      max-width: 850px;
-    }
-
-    /* VISUAL SECTION */
-
-    .photo-section {
-      min-height: 70vh;
-      position: relative;
-      overflow: hidden;
-
-      display: flex;
-      align-items: flex-end;
-
-      background:
-        radial-gradient(
-          circle at 70% 30%,
-          #e7dfd7,
-          transparent 42%
-        ),
-        #f1eee9;
-    }
-
-    .photo-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(250, 249, 246, 0.18);
-    }
-
-    .photo-content {
-      position: relative;
-      z-index: 2;
-      padding: 90px 8%;
-    }
-
-    /* LEARNING */
-
-    .learn {
-      background: #efeee9;
-    }
-
-    .lesson-card {
-      min-height: 460px;
-
-      margin-top: 60px;
-      padding: 55px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      background: #faf9f6;
-
-      border: 1px solid #dedcd8;
-    }
-
-    .lesson-card h3 {
-      font-size: clamp(45px, 6vw, 75px);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      font-weight: 400;
-      margin: 10px 0 20px;
-    }
-
-    /* IMPACT */
-
-    .impact {
-      background: #faf9f6;
-    }
-
-    .impact-number {
-      font-size: clamp(110px, 19vw, 230px);
-      line-height: 0.8;
-      letter-spacing: -14px;
-      font-weight: 400;
-
-      margin: 80px 0 25px;
-    }
-
-    .impact-label {
-      font-size: 10px;
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      margin-top: 80px;
-
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
-    }
-
-    .impact-box {
-      min-height: 210px;
-
-      padding: 40px;
-
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-    }
-
-    .impact-box-number {
-      font-size: 58px;
-      letter-spacing: -4px;
-      margin: 15px 0;
-    }
-
-    .impact-box-label {
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #666;
-    }
-
-    /* DONATION */
-
-    .donation {
-      min-height: 75vh;
-
-      background:
-        radial-gradient(
-          circle at 80% 25%,
-          #e7dfd7,
-          transparent 38%
-        ),
-        #f4f1ec;
-    }
-
-    .donation-content {
-      max-width: 800px;
-    }
-
-    /* JOIN */
-
-    .join {
-      text-align: center;
-    }
-
-    .join .text {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 45px 8%;
+    .statement {
+      padding: 35px 6%;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      border-top: 1px solid #dedcd8;
+      border-top: 1px solid #111111;
+      border-bottom: 1px solid #111111;
     }
 
-    footer a {
-      text-decoration: none;
+    .statement p {
+      font-size: 18px;
+    }
 
+    .statement span {
+      font-family: Arial, sans-serif;
       font-size: 9px;
       letter-spacing: 2px;
-
-      margin-right: 25px;
+      text-transform: uppercase;
     }
 
-    footer a:hover {
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .stat {
+      padding: 50px 30px;
+      text-align: center;
+
+      border-right: 1px solid #111111;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      font-size: 58px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 10px;
+
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ABOUT */
+
+    .about {
+      padding: 140px 6%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .section-title {
+      font-size: clamp(50px, 6vw, 85px);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -4px;
+    }
+
+    .about-copy {
+      max-width: 570px;
+      align-self: end;
+    }
+
+    .about-copy p {
+      margin-bottom: 22px;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    /* LESSONS */
+
+    .lessons {
+      padding: 140px 6%;
+      border-bottom: 1px solid #111111;
+    }
+
+    .lessons-header {
+      margin-bottom: 70px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+    }
+
+    .lessons-description {
+      max-width: 390px;
+
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      background: #111111;
+      border: 1px solid #111111;
+    }
+
+    .lesson-card {
+      min-height: 390px;
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+
+      background: #ffffff;
+
+      transition: transform 0.25s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .lesson-card h3 {
+      margin-top: 80px;
+
+      font-size: 37px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .lesson-card p {
+      margin-top: 20px;
+
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .lesson-card .button {
+      width: fit-content;
+      margin-top: auto;
+    }
+
+    /* MISSION */
+
+    .mission {
+      padding: 140px 6%;
+
+      background: #111111;
+      color: #ffffff;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+    }
+
+    .mission .section-title {
+      color: #ffffff;
+    }
+
+    .mission-copy {
+      max-width: 570px;
+      align-self: end;
+    }
+
+    .mission-copy p {
+      margin-bottom: 22px;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    /* JOIN */
+
+    .join {
+      padding: 150px 6%;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .join h2 {
+      font-size: clamp(60px, 8vw, 110px);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -5px;
+    }
+
+    .join p {
+      max-width: 540px;
+      margin: 30px auto;
+
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .footer-name {
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .footer-text {
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 25px;
+    }
+
+    .socials a {
+      font-size: 15px;
+    }
+
+    .socials a:hover {
       opacity: 0.5;
     }
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
       nav {
-        padding: 18px 5%;
+        padding: 0 5%;
       }
 
-      .links a {
-        margin-left: 8px;
-        font-size: 8px;
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a:not(.skin-button) {
+        display: none;
       }
 
       .hero {
-        padding: 140px 8% 70px;
+        min-height: 600px;
+        padding: 90px 6%;
       }
 
-      h1 {
-        letter-spacing: -5px;
-      }
-
-      h2 {
+      .hero h1 {
+        font-size: 72px;
         letter-spacing: -4px;
       }
 
-      section {
-        padding: 90px 8%;
+      .hero-description {
+        font-size: 18px;
       }
 
-      .lesson-card {
-        min-height: 420px;
-        padding: 30px;
+      .statement {
+        display: block;
       }
 
-      .impact-grid {
+      .statement span {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .stats {
         grid-template-columns: 1fr;
       }
 
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid #111111;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .about,
+      .mission {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 90px 6%;
+      }
+
+      .lessons {
+        padding: 90px 6%;
+      }
+
+      .lessons-header {
+        display: block;
+      }
+
+      .lessons-description {
+        margin-top: 25px;
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .join {
+        padding: 100px 6%;
+      }
+
       footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
+        display: block;
+      }
+
+      .socials {
+        margin-top: 25px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- NAVIGATION -->
 
-<!-- NAVIGATION -->
+  <nav>
 
-<nav>
-
-  <a href="index.html" class="logo">
-    PRE-DERM SOCIETY
-  </a>
-
-  <div class="links">
-
-    <a href="#about">ABOUT</a>
-
-    <a href="skin101.html">LEARN</a>
-
-    <a href="#impact">IMPACT</a>
-
-    <a href="#donate">DONATE</a>
-
-  </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-  <div class="hero-background"></div>
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      SKIN SCIENCE · EDUCATION · COMMUNITY
-    </div>
-
-    <h1>
-      PRE-DERM<br>
-      SOCIETY
-    </h1>
-
-    <p class="hero-description">
-      A student-led space for exploring dermatology,
-      learning skin science, teaching others,
-      and giving back.
-    </p>
-
-    <a href="skin101.html" class="button">
-      START LEARNING →
+    <a href="index.html" class="logo">
+      Pre-Derm Society
     </a>
 
-  </div>
+    <div class="nav-links">
 
-</div>
+      <a href="#about">About</a>
 
+      <a href="#lessons">Lessons</a>
 
-<!-- ABOUT -->
+      <a href="#join">Join</a>
 
-<section class="about" id="about">
+      <a href="skin101.html" class="skin-button">
+        Skin 101
+      </a>
 
-  <div class="about-content">
-
-    <div class="label">
-      01 · ABOUT
     </div>
 
-    <h2>
-      Learn about<br>
-      skin differently.
-    </h2>
+  </nav>
 
-    <p class="text">
-      Pre-Derm Society is a student-led educational
-      initiative created to make dermatology and
-      skin science easier to understand and explore.
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-heading">
+        Student-led dermatology education
+      </div>
+
+      <h1>
+        The future of<br>
+        <em>skin education.</em>
+      </h1>
+
+      <p class="hero-description">
+        Pre-Derm Society is a student-led organization
+        dedicated to making dermatology and skin science
+        easier to understand, explore, and share.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#lessons" class="button button-black">
+          Explore Lessons
+        </a>
+
+        <a href="#about" class="button button-outline">
+          Our Mission
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATEMENT -->
+
+  <section class="statement">
+
+    <p>
+      Learn about your skin. Understand the science.
     </p>
 
-    <p class="text">
-      We believe knowledge becomes more meaningful
-      when it is shared. Our goal is to learn,
-      teach, and give back to our community.
-    </p>
+    <span>
+      Pre-Derm Society
+    </span>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- VISUAL SECTION -->
+  <!-- STATS -->
 
-<section class="photo-section">
+  <section class="stats">
 
-  <div class="photo-overlay"></div>
+    <div class="stat">
 
-  <div class="photo-content">
-
-    <div class="label">
-      LEARN · TEACH · GIVE
-    </div>
-
-    <h2>
-      Knowledge<br>
-      should be shared.
-    </h2>
-
-  </div>
-
-</section>
-
-
-<!-- LEARNING -->
-
-<section class="learn">
-
-  <div class="label">
-    02 · LEARNING
-  </div>
-
-  <h2>
-    Start with<br>
-    the basics.
-  </h2>
-
-  <p class="text">
-    Build your foundation in skin science before
-    exploring the deeper world of dermatology.
-  </p>
-
-
-  <div class="lesson-card">
-
-    <div class="label">
-      SKIN SCIENCE 01
-    </div>
-
-    <h3>
-      The Science of Skin
-    </h3>
-
-    <p class="text">
-      Explore the major layers of skin, what they do,
-      and why understanding the basics matters.
-    </p>
-
-    <a href="skin101.html" class="button">
-      BEGIN LESSON →
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- IMPACT -->
-
-<section class="impact" id="impact">
-
-  <div class="label">
-    03 · OUR IMPACT
-  </div>
-
-  <h2>
-    Learning becomes<br>
-    impact.
-  </h2>
-
-  <p class="text">
-    Pre-Derm Society has already begun creating
-    impact through skin-science education.
-  </p>
-
-
-  <!-- MAIN IMPACT NUMBER -->
-
-  <div class="impact-number">
-    38
-  </div>
-
-  <div class="impact-label">
-    PEOPLE EDUCATED
-  </div>
-
-
-  <!-- IMPACT GRID -->
-
-  <div class="impact-grid">
-
-
-    <!-- PEOPLE EDUCATED -->
-
-    <div class="impact-box">
-
-      <div class="label">
-        01
-      </div>
-
-      <div class="impact-box-number">
-        38
-      </div>
-
-      <div class="impact-box-label">
-        PEOPLE EDUCATED
-      </div>
-
-    </div>
-
-
-    <!-- PEOPLE IMPACTED -->
-
-    <div class="impact-box">
-
-      <div class="label">
-        02
-      </div>
-
-      <div class="impact-box-number">
-        38
-      </div>
-
-      <div class="impact-box-label">
-        PEOPLE IMPACTED
-      </div>
-
-    </div>
-
-
-    <!-- LESSONS -->
-
-    <div class="impact-box">
-
-      <div class="label">
-        03
-      </div>
-
-      <div class="impact-box-number">
+      <div class="stat-number" id="lessonsTaught">
         2
       </div>
 
-      <div class="impact-box-label">
-        LESSONS TAUGHT
+      <div class="stat-label">
+        Lessons Taught
       </div>
 
     </div>
 
 
-    <!-- CARE BOXES -->
+    <div class="stat">
 
-    <div class="impact-box">
-
-      <div class="label">
-        04
+      <div class="stat-number" id="peopleImpacted">
+        38
       </div>
 
-      <div class="impact-box-number">
-        0
-      </div>
-
-      <div class="impact-box-label">
-        CARE BOXES · COMING SOON
+      <div class="stat-label">
+        People Impacted
       </div>
 
     </div>
 
 
-  </div>
+    <div class="stat">
 
-</section>
+      <div class="stat-number">
+        01
+      </div>
 
+      <div class="stat-label">
+        Current Lesson
+      </div>
 
-<!-- DONATION -->
-
-<section class="donation" id="donate">
-
-  <div class="donation-content">
-
-    <div class="label">
-      04 · GIVE BACK
     </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div>
+
+      <h2 class="section-title">
+        Dermatology<br>
+        starts with<br>
+        understanding.
+      </h2>
+
+    </div>
+
+    <div class="about-copy">
+
+      <p>
+        Pre-Derm Society was created to give students
+        an accessible introduction to dermatology,
+        skin health, and the science behind skincare.
+      </p>
+
+      <p>
+        Through short educational lessons and student
+        leadership, we hope to make skin science feel
+        less intimidating and more approachable.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- LESSONS -->
+
+  <section class="lessons" id="lessons">
+
+    <div class="lessons-header">
+
+      <h2 class="section-title">
+        Learn<br>
+        with us.
+      </h2>
+
+      <p class="lessons-description">
+        Short, science-based lessons designed for
+        students who want to understand dermatology
+        beyond the surface.
+      </p>
+
+    </div>
+
+
+    <div class="lesson-grid">
+
+      <article class="lesson-card">
+
+        <h3>
+          Skin 101
+        </h3>
+
+        <p>
+          Learn the foundations of skin anatomy,
+          structure, and function.
+        </p>
+
+        <a
+          href="skin101.html"
+          class="button button-black">
+
+          Start Lesson →
+
+        </a>
+
+      </article>
+
+
+      <article class="lesson-card">
+
+        <h3>
+          Skin Health
+        </h3>
+
+        <p>
+          Explore the science behind healthy skin
+          and everyday skin health.
+        </p>
+
+        <a
+          href="#"
+          class="button button-outline">
+
+          Coming Soon
+
+        </a>
+
+      </article>
+
+
+      <article class="lesson-card">
+
+        <h3>
+          Acne
+        </h3>
+
+        <p>
+          Understand what acne is, why it develops,
+          and how dermatology approaches it.
+        </p>
+
+        <a
+          href="#"
+          class="button button-outline">
+
+          Coming Soon
+
+        </a>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- MISSION -->
+
+  <section class="mission">
+
+    <div>
+
+      <h2 class="section-title">
+        Education<br>
+        can create<br>
+        impact.
+      </h2>
+
+    </div>
+
+    <div class="mission-copy">
+
+      <p>
+        We believe students should have opportunities
+        to explore medicine and science before entering
+        the professional world.
+      </p>
+
+      <p>
+        Pre-Derm Society combines education,
+        curiosity, and student leadership to create
+        a community around dermatology.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOIN -->
+
+  <section class="join" id="join">
 
     <h2>
-      Make a<br>
-      difference.
+      Start here.
     </h2>
 
-    <p class="text">
-      Help support future educational programs,
-      community initiatives, and care-box projects.
+    <p>
+      Curious about dermatology, skincare, biology,
+      or medicine? Explore your first lesson and
+      begin learning.
     </p>
 
     <a
-      href="#"
-      class="button"
-      onclick="alert('Our donation program is coming soon!')"
-    >
-      MAKE A DONATION →
+      href="skin101.html"
+      class="button button-black">
+
+      Enter Skin 101 →
+
     </a>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- JOIN -->
+  <!-- FOOTER -->
 
-<section class="join">
+  <footer>
 
-  <div class="label">
-    05 · JOIN
-  </div>
+    <div>
 
-  <h2>
-    Learn with us.
-  </h2>
+      <div class="footer-name">
+        Pre-Derm Society
+      </div>
 
-  <p class="text">
-    Interested in dermatology, skin science,
-    education, or community service?
-    We'd love to have you be part of the journey.
-  </p>
+      <div class="footer-text">
+        Student-led dermatology education.
+      </div>
 
-  <a
-    href="mailto:predermsociety@gmail.com"
-    class="button"
-  >
-    CONTACT PRE-DERM SOCIETY →
-  </a>
+    </div>
 
-</section>
+    <div class="socials">
 
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
 
-<!-- FOOTER -->
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok
+      </a>
 
-<footer>
+    </div>
 
-  <div>
-
-    <!-- INSTAGRAM -->
-
-    <a
-      href="https://www.instagram.com/prederm_society/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      INSTAGRAM
-    </a>
+  </footer>
 
 
-    <!-- TIKTOK -->
+  <!-- COUNTERS -->
 
-    <a
-      href="https://www.tiktok.com/@prederm_society"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      TIKTOK
-    </a>
+  <script>
 
+    const lessonsTaught =
+      Number(localStorage.getItem("lessonsTaught"));
 
-    <!-- EMAIL -->
+    const peopleImpacted =
+      Number(localStorage.getItem("peopleImpacted"));
 
-    <a
-      href="mailto:predermsociety@gmail.com"
-    >
-      EMAIL
-    </a>
+    document.getElementById("lessonsTaught").textContent =
+      Number.isFinite(lessonsTaught) && lessonsTaught >= 2
+        ? lessonsTaught
+        : 2;
 
-  </div>
+    document.getElementById("peopleImpacted").textContent =
+      Number.isFinite(peopleImpacted) && peopleImpacted >= 38
+        ? peopleImpacted
+        : 38;
 
-  <div class="label">
-    PRE-DERM SOCIETY
-  </div>
-
-</footer>
-
+  </script>
 
 </body>
 </html>
-```
