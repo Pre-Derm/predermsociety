@@ -148,11 +148,7 @@
 
       font-size: 16px;
 
-      transition: all 0.25s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
+      transition: all 0.2s ease;
     }
 
     .button-black {
@@ -305,12 +301,6 @@
       flex-direction: column;
 
       background: #ffffff;
-
-      transition: transform 0.25s ease;
-    }
-
-    .lesson-card:hover {
-      transform: translateY(-4px);
     }
 
     .lesson-card h3 {
@@ -608,6 +598,17 @@
 
     </div>
 
+    <div class="stat">
+
+      <div class="stat-number" id="peopleEducated">
+        38
+      </div>
+
+      <div class="stat-label">
+        People Educated
+      </div>
+
+    </div>
 
     <div class="stat">
 
@@ -617,19 +618,6 @@
 
       <div class="stat-label">
         People Impacted
-      </div>
-
-    </div>
-
-
-    <div class="stat">
-
-      <div class="stat-number">
-        01
-      </div>
-
-      <div class="stat-label">
-        Current Lesson
       </div>
 
     </div>
@@ -725,12 +713,8 @@
           and everyday skin health.
         </p>
 
-        <a
-          href="#"
-          class="button button-outline">
-
+        <a href="#" class="button button-outline">
           Coming Soon
-
         </a>
 
       </article>
@@ -747,12 +731,8 @@
           and how dermatology approaches it.
         </p>
 
-        <a
-          href="#"
-          class="button button-outline">
-
+        <a href="#" class="button button-outline">
           Coming Soon
-
         </a>
 
       </article>
@@ -857,25 +837,34 @@
   </footer>
 
 
-  <!-- COUNTERS -->
+  <!-- IMPACT COUNTERS -->
 
   <script>
 
-    const lessonsTaught =
-      Number(localStorage.getItem("lessonsTaught"));
+    const DEFAULT_LESSONS = 2;
+    const DEFAULT_EDUCATED = 38;
+    const DEFAULT_IMPACTED = 38;
 
-    const peopleImpacted =
-      Number(localStorage.getItem("peopleImpacted"));
+    if (localStorage.getItem("lessonsTaught") === null) {
+      localStorage.setItem("lessonsTaught", DEFAULT_LESSONS);
+    }
+
+    if (localStorage.getItem("peopleEducated") === null) {
+      localStorage.setItem("peopleEducated", DEFAULT_EDUCATED);
+    }
+
+    if (localStorage.getItem("peopleImpacted") === null) {
+      localStorage.setItem("peopleImpacted", DEFAULT_IMPACTED);
+    }
 
     document.getElementById("lessonsTaught").textContent =
-      Number.isFinite(lessonsTaught) && lessonsTaught >= 2
-        ? lessonsTaught
-        : 2;
+      localStorage.getItem("lessonsTaught");
+
+    document.getElementById("peopleEducated").textContent =
+      localStorage.getItem("peopleEducated");
 
     document.getElementById("peopleImpacted").textContent =
-      Number.isFinite(peopleImpacted) && peopleImpacted >= 38
-        ? peopleImpacted
-        : 38;
+      localStorage.getItem("peopleImpacted");
 
   </script>
 
