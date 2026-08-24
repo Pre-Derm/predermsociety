@@ -24,11 +24,12 @@
       padding: 22px 6%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     nav a {
-      color: #111;
-      text-decoration: none;
+      color: #111 !important;
+      text-decoration: none !important;
       font-size: 10px;
       font-weight: bold;
       letter-spacing: 1.5px;
@@ -90,12 +91,15 @@
 
     .layer h3 {
       font-size: 20px;
+      font-weight: 500;
     }
 
     .layer p {
       color: #666;
       font-size: 14px;
     }
+
+    /* QUIZ */
 
     .quiz {
       margin-top: 80px;
@@ -108,6 +112,12 @@
       border-top: 1px solid #ddd;
     }
 
+    .question strong {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
     button {
       display: block;
       width: 100%;
@@ -118,19 +128,46 @@
       border: 1px solid #111;
       cursor: pointer;
       text-align: left;
+
+      /* FIXES BLUE TEXT */
+      color: #111 !important;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-decoration: none !important;
+
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    button:hover {
+      background: #111;
+      color: #fff !important;
     }
 
     button.correct {
       background: #111;
-      color: #fff;
+      color: #fff !important;
+      border-color: #111;
     }
 
     button.wrong {
-      opacity: .35;
+      background: #fff;
+      color: #777 !important;
+      border-color: #aaa;
+      opacity: .55;
     }
 
     button:disabled {
       cursor: default;
+    }
+
+    button:disabled:hover {
+      background: inherit;
+    }
+
+    button.correct:disabled:hover {
+      background: #111;
+      color: #fff !important;
     }
 
     .feedback {
@@ -144,14 +181,15 @@
       padding-top: 25px;
       border-top: 1px solid #ddd;
       font-weight: bold;
+      color: #111;
     }
 
     .back {
       display: inline-block;
       margin-top: 50px;
       border-bottom: 1px solid #111;
-      color: #111;
-      text-decoration: none;
+      color: #111 !important;
+      text-decoration: none !important;
       font-size: 10px;
       font-weight: bold;
       letter-spacing: 1.5px;
@@ -163,10 +201,11 @@
     }
 
     footer a {
-      color: #111;
+      color: #111 !important;
       margin-right: 25px;
       font-size: 10px;
       letter-spacing: 1.5px;
+      text-decoration: none !important;
     }
 
     @media (max-width: 700px) {
@@ -176,6 +215,10 @@
 
       .quiz {
         padding: 25px;
+      }
+
+      h2 {
+        font-size: 42px;
       }
     }
   </style>
@@ -189,6 +232,7 @@
   <a href="index.html">← BACK</a>
 </nav>
 
+
 <main>
 
   <div class="small">SKIN SCIENCE 01 · FOUNDATIONS</div>
@@ -199,6 +243,8 @@
     Let's start with the basics of skin structure and function.
   </p>
 
+
+  <!-- LESSON 01 -->
 
   <div class="lesson">
 
@@ -215,6 +261,8 @@
   </div>
 
 
+  <!-- LESSON 02 -->
+
   <div class="lesson">
 
     <div class="small">02 · STRUCTURE</div>
@@ -229,25 +277,33 @@
 
       <div class="layer">
         <div class="small">01</div>
+
         <h3>Epidermis</h3>
+
         <p>
           The outermost layer of skin and an important
           part of the protective barrier.
         </p>
       </div>
 
+
       <div class="layer">
         <div class="small">02</div>
+
         <h3>Dermis</h3>
+
         <p>
           A deeper layer containing nerves, blood vessels,
           glands, and hair follicles.
         </p>
       </div>
 
+
       <div class="layer">
         <div class="small">03</div>
+
         <h3>Subcutaneous tissue</h3>
+
         <p>
           Deeper tissue that helps cushion and insulate
           the body.
@@ -258,6 +314,8 @@
 
   </div>
 
+
+  <!-- LESSON 03 -->
 
   <div class="lesson">
 
@@ -273,6 +331,8 @@
   </div>
 
 
+  <!-- QUIZ -->
+
   <div class="quiz">
 
     <div class="small">KNOWLEDGE CHECK</div>
@@ -284,9 +344,13 @@
     </p>
 
 
+    <!-- QUESTION 1 -->
+
     <div class="question">
 
-      <strong>1. Which is the outermost layer of skin?</strong>
+      <strong>
+        1. Which is the outermost layer of skin?
+      </strong>
 
       <button onclick="answer(1, true, this)">
         Epidermis
@@ -305,9 +369,13 @@
     </div>
 
 
+    <!-- QUESTION 2 -->
+
     <div class="question">
 
-      <strong>2. Which layer contains nerves and blood vessels?</strong>
+      <strong>
+        2. Which layer contains nerves and blood vessels?
+      </strong>
 
       <button onclick="answer(2, false, this)">
         Epidermis
@@ -326,9 +394,13 @@
     </div>
 
 
+    <!-- QUESTION 3 -->
+
     <div class="question">
 
-      <strong>3. Which is an important function of skin?</strong>
+      <strong>
+        3. Which is an important function of skin?
+      </strong>
 
       <button onclick="answer(3, true, this)">
         Protection
@@ -361,13 +433,23 @@
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-  <a href="https://www.tiktok.com/@prederm_society" target="_blank">
+  <a
+    href="https://www.tiktok.com/@prederm_society"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     TIKTOK
   </a>
 
-  <a href="https://www.instagram.com/prederm_society" target="_blank">
+  <a
+    href="https://www.instagram.com/prederm_society"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     INSTAGRAM
   </a>
 
@@ -388,7 +470,10 @@ let answered = {
   3: false
 };
 
+
 function answer(question, correct, button) {
+
+  /* Prevent answering the same question twice */
 
   if (answered[question]) {
     return;
@@ -396,12 +481,22 @@ function answer(question, correct, button) {
 
   answered[question] = true;
 
+
+  /* Find all buttons in this question */
+
   let questionBox = button.closest(".question");
+
   let buttons = questionBox.querySelectorAll("button");
+
+
+  /* Disable every button in this question */
 
   buttons.forEach(function(b) {
     b.disabled = true;
   });
+
+
+  /* Correct answer */
 
   if (correct) {
 
@@ -409,20 +504,31 @@ function answer(question, correct, button) {
 
     button.classList.add("correct");
 
-    document.getElementById("feedback" + question).textContent =
-      "✓ Correct!";
-
-  } else {
-
-    button.classList.add("wrong");
-
-    document.getElementById("feedback" + question).textContent =
-      "Not quite — keep learning!";
+    document.getElementById(
+      "feedback" + question
+    ).textContent = "✓ Correct!";
 
   }
 
+
+  /* Wrong answer */
+
+  else {
+
+    button.classList.add("wrong");
+
+    document.getElementById(
+      "feedback" + question
+    ).textContent = "Not quite — keep learning!";
+
+  }
+
+
+  /* Update score */
+
   document.getElementById("score").textContent =
     "Score: " + score + " / 3";
+
 }
 
 </script>
