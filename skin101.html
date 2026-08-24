@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Skin 101 | Pre-Derm Society</title>
+  <title>Skin 101 · Pre-Derm Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap"
     rel="stylesheet">
 
   <style>
@@ -30,8 +30,7 @@
       background: #ffffff;
       color: #111111;
       font-family: "Cormorant Garamond", serif;
-      font-weight: 400;
-      line-height: 1.5;
+      font-weight: 300;
     }
 
     a {
@@ -39,8 +38,7 @@
       text-decoration: none;
     }
 
-
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
       height: 82px;
@@ -51,7 +49,6 @@
       justify-content: space-between;
 
       background: #ffffff;
-
       border-bottom: 1px solid #111111;
 
       position: sticky;
@@ -60,146 +57,196 @@
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 25px;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 18px;
       font-weight: 400;
+
+      transition: opacity .2s ease;
     }
 
-    .back-link {
-      font-size: 16px;
-      font-weight: 400;
+    .nav-links a:hover {
+      opacity: .45;
     }
 
-    .back-link:hover {
-      opacity: 0.45;
+    .home-button {
+      padding: 9px 20px;
+
+      border: 1px solid #111111;
+      border-radius: 100px;
     }
 
 
-    /* HEADER */
+    /* HERO */
 
-    .lesson-header {
-      padding: 120px 6% 105px;
+    .hero {
+      min-height: 650px;
+      padding: 120px 6%;
 
-      background: #ffffff;
+      display: flex;
+      align-items: center;
 
       border-bottom: 1px solid #111111;
     }
 
-    .lesson-header small {
+    .hero-content {
+      max-width: 1050px;
+    }
+
+    .small-heading {
+      margin-bottom: 30px;
+
       font-family: Arial, sans-serif;
       font-size: 9px;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
-    .lesson-header h1 {
-      margin-top: 30px;
-
-      font-size: clamp(80px, 12vw, 160px);
+    .hero h1 {
+      font-size: clamp(85px, 13vw, 165px);
       font-weight: 300;
-      line-height: 0.8;
-      letter-spacing: -7px;
+
+      line-height: .78;
+      letter-spacing: -8px;
     }
 
-    .lesson-header h1 em {
+    .hero h1 em {
       font-style: italic;
+      font-weight: 300;
     }
 
-    .lesson-header p {
-      max-width: 600px;
+    .hero p {
+      max-width: 560px;
       margin-top: 45px;
 
-      font-size: 21px;
+      font-size: 22px;
       line-height: 1.5;
     }
 
 
-    /* CONTENT */
+    /* PROGRESS */
 
-    .content {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 110px 6% 140px;
+    .progress {
+      padding: 28px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid #111111;
     }
 
-    .lesson-section {
-      margin-bottom: 120px;
+    .progress-label {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .lesson-section h2 {
-      max-width: 800px;
+    .progress-number {
+      font-size: 17px;
+    }
 
-      margin-bottom: 25px;
 
-      font-size: clamp(45px, 6vw, 75px);
+    /* LESSON */
+
+    .lesson {
+      padding: 130px 6%;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .lesson-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .lesson-small {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      margin-bottom: 30px;
+    }
+
+    .lesson h2 {
+      font-size: clamp(60px, 8vw, 105px);
       font-weight: 300;
-      line-height: 0.95;
-      letter-spacing: -3px;
+
+      line-height: .88;
+      letter-spacing: -5px;
+
+      margin-bottom: 40px;
     }
 
-    .lesson-section p {
-      max-width: 760px;
+    .lesson-intro {
+      max-width: 650px;
 
-      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.5;
 
-      font-size: 20px;
-      line-height: 1.55;
-    }
-
-
-    /* FEATURE BOX */
-
-    .feature {
-      margin-top: 45px;
-      padding: 40px;
-
-      border: 1px solid #111111;
-    }
-
-    .feature h3 {
-      margin-bottom: 12px;
-
-      font-size: 30px;
-      font-weight: 400;
-    }
-
-    .feature p {
-      margin: 0;
-
-      font-size: 18px;
+      margin-bottom: 70px;
     }
 
 
-    /* LAYERS */
+    /* INFO */
 
-    .layers {
+    .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
 
-      margin-top: 50px;
+      gap: 1px;
 
       background: #111111;
       border: 1px solid #111111;
     }
 
-    .layer {
-      min-height: 300px;
+    .info-card {
+      min-height: 320px;
       padding: 35px;
 
       background: #ffffff;
+
+      transition:
+        transform .3s ease,
+        background .3s ease;
     }
 
-    .layer h3 {
-      margin-top: 80px;
+    .info-card:hover {
+      transform: translateY(-5px);
+      background: #fafafa;
+    }
 
-      font-size: 32px;
+    .info-label {
+      font-family: Arial, sans-serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .info-card h3 {
+      margin-top: 70px;
+
+      font-size: 42px;
       font-weight: 300;
+
+      line-height: 1;
     }
 
-    .layer p {
-      margin-top: 15px;
+    .info-card p {
+      margin-top: 20px;
 
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.5;
     }
 
@@ -207,183 +254,188 @@
     /* QUIZ */
 
     .quiz {
-      padding: 60px;
+      margin-top: 90px;
 
-      background: #111111;
-      color: #ffffff;
+      padding: 50px;
+
+      border: 1px solid #111111;
     }
 
-    .quiz small {
+    .quiz-label {
       font-family: Arial, sans-serif;
       font-size: 9px;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
-    .quiz h2 {
-      margin-top: 20px;
-
-      font-size: 65px;
-      font-weight: 300;
-      line-height: 0.9;
-      letter-spacing: -3px;
-    }
-
-    .quiz-intro {
-      max-width: 600px;
+    .quiz h3 {
       margin-top: 25px;
 
-      font-size: 18px;
-    }
-
-    .question {
-      margin-top: 55px;
-    }
-
-    .question-title {
-      margin-bottom: 18px;
-
-      font-size: 22px;
-      font-weight: 400;
-    }
-
-
-    /* QUIZ OPTIONS */
-
-    .quiz-option {
-      width: 100%;
-
-      display: block;
-
-      margin-bottom: 10px;
-      padding: 15px 22px;
-
-      background: #111111;
-      color: #ffffff;
-
-      border: 1px solid #ffffff;
-      border-radius: 100px;
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
-      font-weight: 400;
-
-      text-align: left;
-
-      cursor: pointer;
-
-      transition: all 0.2s ease;
-    }
-
-    .quiz-option:hover {
-      background: #ffffff;
-      color: #111111;
-    }
-
-    .quiz-option.selected {
-      background: #ffffff;
-      color: #111111;
-    }
-
-    .quiz-option.correct {
-      background: #ffffff;
-      color: #111111;
-    }
-
-    .quiz-option.incorrect {
-      opacity: 0.55;
-    }
-
-    .quiz-option:disabled {
-      cursor: default;
-    }
-
-
-    /* CHECK BUTTON */
-
-    .check-button {
-      margin-top: 30px;
-
-      padding: 14px 26px;
-
-      background: #ffffff;
-      color: #111111;
-
-      border: 1px solid #ffffff;
-      border-radius: 100px;
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
-
-      cursor: pointer;
-
-      transition: all 0.2s ease;
-    }
-
-    .check-button:hover {
-      background: #111111;
-      color: #ffffff;
-    }
-
-
-    /* RESULT */
-
-    #quizResult {
-      display: none;
-
-      margin-top: 25px;
-
-      font-size: 19px;
-    }
-
-
-    /* COMPLETION */
-
-    .completion {
-      margin-top: 120px;
-
-      padding: 90px 40px;
-
-      text-align: center;
-
-      border-top: 1px solid #111111;
-      border-bottom: 1px solid #111111;
-    }
-
-    .completion h2 {
-      font-size: clamp(55px, 7vw, 95px);
+      font-size: clamp(45px, 6vw, 75px);
       font-weight: 300;
-      line-height: 0.9;
+
+      line-height: .9;
       letter-spacing: -4px;
     }
 
-    .completion p {
-      max-width: 520px;
+    .question {
+      margin-top: 30px;
 
-      margin: 30px auto;
-
-      font-size: 20px;
-      line-height: 1.5;
+      font-size: 21px;
     }
 
-    .finish-button {
-      padding: 15px 28px;
+    .answers {
+      margin-top: 30px;
 
-      background: #111111;
-      color: #ffffff;
+      display: grid;
+      gap: 12px;
+    }
+
+    .answer {
+      padding: 15px 22px;
+
+      background: #ffffff;
+      color: #111111;
 
       border: 1px solid #111111;
       border-radius: 100px;
 
+      text-align: left;
+
       font-family: "Cormorant Garamond", serif;
       font-size: 18px;
 
       cursor: pointer;
+
+      transition: all .25s ease;
     }
 
-    .finish-button:hover {
+    .answer:hover {
+      background: #111111;
+      color: #ffffff;
+
+      transform: translateX(5px);
+    }
+
+    .answer.correct {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .answer.wrong {
+      opacity: .35;
+    }
+
+    .quiz-result {
+      min-height: 30px;
+      margin-top: 25px;
+
+      font-size: 18px;
+    }
+
+
+    /* COMPLETE */
+
+    .complete {
+      padding: 140px 6%;
+
+      text-align: center;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .complete h2 {
+      font-size: clamp(65px, 9vw, 115px);
+      font-weight: 300;
+
+      line-height: .85;
+      letter-spacing: -6px;
+    }
+
+    .complete p {
+      max-width: 550px;
+      margin: 30px auto;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .complete-button {
+      display: inline-flex;
+
+      padding: 14px 28px;
+
+      background: #111111;
+      color: #ffffff;
+
+      border-radius: 100px;
+
+      font-size: 17px;
+
+      transition: all .25s ease;
+    }
+
+    .complete-button:hover {
       background: #ffffff;
       color: #111111;
+
+      box-shadow: inset 0 0 0 1px #111111;
+
+      transform: translateY(-3px);
+    }
+
+
+    /* IMPACT */
+
+    .impact {
+      padding: 100px 6%;
+
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .impact-heading {
+      font-size: clamp(60px, 8vw, 105px);
+      font-weight: 300;
+
+      line-height: .88;
+      letter-spacing: -5px;
+
+      margin-bottom: 70px;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 1px;
+
+      background: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    .impact-box {
+      padding: 45px;
+
+      min-height: 230px;
+
+      background: #111111;
+    }
+
+    .impact-label {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .impact-number {
+      margin-top: 20px;
+
+      font-size: 75px;
+      font-weight: 300;
+
+      line-height: 1;
     }
 
 
@@ -393,21 +445,17 @@
       padding: 45px 6%;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
 
       background: #111111;
       color: #ffffff;
+
+      border-top: 1px solid #ffffff;
     }
 
     .footer-name {
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    .footer-text {
-      margin-top: 5px;
-      font-size: 15px;
+      font-size: 25px;
     }
 
     .socials {
@@ -416,11 +464,11 @@
     }
 
     .socials a {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .socials a:hover {
-      opacity: 0.5;
+      opacity: .5;
     }
 
 
@@ -432,29 +480,38 @@
         padding: 0 5%;
       }
 
-      .lesson-header {
-        padding: 85px 6%;
+      .nav-links a:not(.home-button) {
+        display: none;
       }
 
-      .lesson-header h1 {
-        font-size: 80px;
+      .hero {
+        min-height: 580px;
+        padding: 90px 6%;
+      }
+
+      .hero h1 {
+        font-size: 72px;
         letter-spacing: -4px;
       }
 
-      .content {
-        padding: 75px 6% 90px;
+      .lesson {
+        padding: 90px 6%;
       }
 
-      .layers {
+      .info-grid {
         grid-template-columns: 1fr;
       }
 
       .quiz {
-        padding: 40px 25px;
+        padding: 30px;
       }
 
-      .quiz h2 {
-        font-size: 55px;
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .complete {
+        padding: 100px 6%;
       }
 
       footer {
@@ -468,8 +525,8 @@
     }
 
   </style>
-</head>
 
+</head>
 
 <body>
 
@@ -482,327 +539,278 @@
       Pre-Derm Society
     </a>
 
-    <a href="index.html" class="back-link">
-      ← Back to Home
-    </a>
+    <div class="nav-links">
+
+      <a href="index.html" class="home-button">
+        Home
+      </a>
+
+    </div>
 
   </nav>
 
 
-  <!-- HEADER -->
+  <!-- HERO -->
 
-  <header class="lesson-header">
+  <section class="hero">
 
-    <small>
-      Skin education
-    </small>
+    <div class="hero-content">
 
-    <h1>
-      Skin <em>101.</em>
-    </h1>
-
-    <p>
-      An introduction to the science of skin —
-      what it is, how it works, and why understanding
-      it matters.
-    </p>
-
-  </header>
-
-
-  <!-- CONTENT -->
-
-  <main class="content">
-
-
-    <!-- WHAT IS SKIN -->
-
-    <section class="lesson-section">
-
-      <h2>
-        What exactly is skin?
-      </h2>
-
-      <p>
-        Skin is the body's largest organ. It creates
-        a protective boundary between your body and
-        the world around you.
-      </p>
-
-      <p>
-        It protects the body, helps regulate temperature,
-        allows us to sense our surroundings, and plays
-        an important role in maintaining the body's balance.
-      </p>
-
-
-      <div class="feature">
-
-        <h3>
-          Your skin is always changing.
-        </h3>
-
-        <p>
-          New skin cells are continually produced in
-          deeper parts of the epidermis and gradually
-          move toward the surface.
-        </p>
-
+      <div class="small-heading">
+        Pre-Derm Society · Lesson One
       </div>
 
-    </section>
-
-
-    <!-- STRUCTURE -->
-
-    <section class="lesson-section">
-
-      <h2>
-        Beneath the surface.
-      </h2>
+      <h1>
+        Skin<br>
+        <em>101.</em>
+      </h1>
 
       <p>
-        Skin is organized into three major layers.
-        Each layer has a different role.
+        Your introduction to the science of skin.
+        Learn the basic structure of the skin,
+        understand what each layer does, and test
+        what you've learned.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROGRESS -->
+
+  <section class="progress">
+
+    <div class="progress-label">
+      Lesson Progress
+    </div>
+
+    <div
+      class="progress-number"
+      id="progressText">
+      0% complete
+    </div>
+
+  </section>
+
+
+  <!-- LESSON -->
+
+  <section class="lesson">
+
+    <div class="lesson-inner">
+
+      <div class="lesson-small">
+        The Foundation
+      </div>
+
+      <h2>
+        Meet your<br>
+        skin.
+      </h2>
+
+      <p class="lesson-intro">
+        Your skin is your body's largest organ.
+        It protects you from the outside environment,
+        helps regulate temperature, and allows you
+        to experience touch.
       </p>
 
 
-      <div class="layers">
+      <div class="info-grid">
 
 
-        <div class="layer">
+        <article class="info-card">
+
+          <div class="info-label">
+            Outer Layer
+          </div>
 
           <h3>
             Epidermis
           </h3>
 
           <p>
-            The outermost layer of skin. It forms a
-            protective barrier and contains cells
-            called keratinocytes.
+            The epidermis is the outermost layer.
+            It creates an important protective barrier
+            between your body and the outside world.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="layer">
+        <article class="info-card">
+
+          <div class="info-label">
+            Middle Layer
+          </div>
 
           <h3>
             Dermis
           </h3>
 
           <p>
-            The middle layer. It contains blood vessels,
-            nerves, hair follicles, and glands.
+            The dermis sits beneath the epidermis.
+            It contains blood vessels, nerves,
+            glands, and hair follicles.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="layer">
+        <article class="info-card">
+
+          <div class="info-label">
+            Deep Layer
+          </div>
 
           <h3>
             Hypodermis
           </h3>
 
           <p>
-            The deepest layer. It contains connective
-            tissue and helps cushion and insulate the body.
+            The hypodermis is the deepest layer.
+            It contains connective tissue and helps
+            cushion and insulate the body.
           </p>
 
-        </div>
+        </article>
 
 
       </div>
 
-    </section>
 
+      <!-- QUIZ -->
 
-    <!-- WHY IT MATTERS -->
+      <div class="quiz">
 
-    <section class="lesson-section">
-
-      <h2>
-        Why does skin health matter?
-      </h2>
-
-      <p>
-        Skin health is about more than appearance.
-        Your skin is one of the body's first lines
-        of defense.
-      </p>
-
-      <p>
-        Understanding basic skin science can help
-        you better understand skincare information,
-        common skin concerns, and dermatology.
-      </p>
-
-    </section>
-
-
-    <!-- QUIZ -->
-
-    <section class="quiz">
-
-      <small>
-        Knowledge check
-      </small>
-
-      <h2>
-        What did you learn?
-      </h2>
-
-      <p class="quiz-intro">
-        Answer the questions below to check your
-        understanding of the lesson.
-      </p>
-
-
-      <!-- QUESTION -->
-
-      <div class="question">
-
-        <div class="question-title">
-          What is the outermost layer of skin?
+        <div class="quiz-label">
+          Quick Check
         </div>
 
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Dermis
-        </button>
+        <h3>
+          Which layer is<br>
+          the outermost?
+        </h3>
 
-        <button
-          class="quiz-option"
-          onclick="answer(this, true)">
-          Epidermis
-        </button>
+        <div class="question">
+          Choose the correct answer.
+        </div>
 
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Hypodermis
-        </button>
+        <div class="answers">
+
+          <button
+            class="answer"
+            onclick="answerQuestion(this, false)">
+            Dermis
+          </button>
+
+          <button
+            class="answer"
+            onclick="answerQuestion(this, true)">
+            Epidermis
+          </button>
+
+          <button
+            class="answer"
+            onclick="answerQuestion(this, false)">
+            Hypodermis
+          </button>
+
+        </div>
+
+        <div
+          class="quiz-result"
+          id="quizResult">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMPLETE -->
+
+  <section class="complete">
+
+    <h2>
+      You've learned<br>
+      the foundation.
+    </h2>
+
+    <p>
+      Complete the lesson to add your impact
+      to Pre-Derm Society.
+    </p>
+
+    <a
+      href="#impact"
+      class="complete-button"
+      onclick="completeLesson()">
+
+      Complete Lesson →
+
+    </a>
+
+  </section>
+
+
+  <!-- IMPACT -->
+
+  <section class="impact" id="impact">
+
+    <h2 class="impact-heading">
+      Learning<br>
+      creates impact.
+    </h2>
+
+    <div class="impact-grid">
+
+
+      <div class="impact-box">
+
+        <div class="impact-label">
+          People Educated
+        </div>
+
+        <div
+          class="impact-number"
+          id="peopleEducated">
+          38
+        </div>
 
       </div>
 
 
-      <!-- QUESTION -->
+      <div class="impact-box">
 
-      <div class="question">
-
-        <div class="question-title">
-          Which layer contains blood vessels and nerves?
+        <div class="impact-label">
+          Lessons Taught
         </div>
 
-        <button
-          class="quiz-option"
-          onclick="answer(this, true)">
-          Dermis
-        </button>
-
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Epidermis
-        </button>
-
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Hypodermis
-        </button>
+        <div
+          class="impact-number"
+          id="lessonsTaught">
+          2
+        </div>
 
       </div>
 
 
-      <!-- QUESTION -->
+    </div>
 
-      <div class="question">
-
-        <div class="question-title">
-          Which is an important function of skin?
-        </div>
-
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Producing oxygen
-        </button>
-
-        <button
-          class="quiz-option"
-          onclick="answer(this, true)">
-          Protecting the body
-        </button>
-
-        <button
-          class="quiz-option"
-          onclick="answer(this, false)">
-          Digesting food
-        </button>
-
-      </div>
-
-
-      <button
-        class="check-button"
-        onclick="showScore()">
-
-        Check my answers →
-
-      </button>
-
-
-      <div id="quizResult"></div>
-
-    </section>
-
-
-    <!-- COMPLETION -->
-
-    <section class="completion">
-
-      <h2>
-        Lesson complete.
-      </h2>
-
-      <p>
-        Finish the lesson to record your progress
-        with Pre-Derm Society.
-      </p>
-
-      <button
-        class="finish-button"
-        onclick="completeLesson()">
-
-        Finish lesson →
-
-      </button>
-
-    </section>
-
-
-  </main>
+  </section>
 
 
   <!-- FOOTER -->
 
   <footer>
 
-    <div>
-
-      <div class="footer-name">
-        Pre-Derm Society
-      </div>
-
-      <div class="footer-text">
-        Student-led dermatology education.
-      </div>
-
+    <div class="footer-name">
+      Pre-Derm Society
     </div>
-
 
     <div class="socials">
 
@@ -818,109 +826,116 @@
         TikTok
       </a>
 
+      <a href="index.html">
+        Home
+      </a>
+
     </div>
 
   </footer>
 
 
-  <!-- JAVASCRIPT -->
-
   <script>
 
-    let score = 0;
-    let answered = 0;
+    let answered = false;
+    let completed = false;
 
 
-    function answer(button, correct) {
+    /* LOAD SAVED NUMBERS */
 
-      const question = button.parentElement;
+    function loadNumbers() {
 
-      if (question.dataset.answered === "true") {
-        return;
-      }
+      const lessons =
+        Number(
+          localStorage.getItem("preDermLessons")
+        ) || 2;
 
-      question.dataset.answered = "true";
+      const people =
+        Number(
+          localStorage.getItem("preDermPeople")
+        ) || 38;
 
-      answered++;
+      document.getElementById(
+        "lessonsTaught"
+      ).textContent = lessons;
+
+      document.getElementById(
+        "peopleEducated"
+      ).textContent = people;
+
+    }
+
+
+    /* QUIZ */
+
+    function answerQuestion(button, correct) {
+
+      if (answered) return;
+
+      answered = true;
+
+      const result =
+        document.getElementById("quizResult");
 
       if (correct) {
 
         button.classList.add("correct");
 
-        score++;
+        result.textContent =
+          "Correct. The epidermis is the outermost layer of skin.";
+
+        document.getElementById(
+          "progressText"
+        ).textContent =
+          "100% complete";
 
       } else {
 
-        button.classList.add("incorrect");
+        button.classList.add("wrong");
+
+        document.querySelectorAll(
+          ".answer"
+        ).forEach(function(answer) {
+
+          if (
+            answer.textContent.trim() ===
+            "Epidermis"
+          ) {
+            answer.classList.add("correct");
+          }
+
+        });
+
+        result.textContent =
+          "Not quite — the epidermis is the outermost layer.";
+
+        document.getElementById(
+          "progressText"
+        ).textContent =
+          "100% complete";
 
       }
-
-
-      const buttons =
-        question.querySelectorAll(".quiz-option");
-
-
-      buttons.forEach(function(btn) {
-
-        btn.disabled = true;
-
-      });
 
     }
 
 
-    function showScore() {
-
-      const result =
-        document.getElementById("quizResult");
-
-
-      if (answered < 3) {
-
-        result.style.display = "block";
-
-        result.innerHTML =
-          "Please answer all three questions first.";
-
-        return;
-      }
-
-
-      result.style.display = "block";
-
-
-      result.innerHTML =
-        "You scored <strong>" +
-        score +
-        "/3</strong>. Well done.";
-
-    }
-
+    /* COMPLETE LESSON */
 
     function completeLesson() {
 
-      if (
-        localStorage.getItem("skin101Completed")
-        === "true"
-      ) {
+      if (completed) return;
 
-        window.location.href = "index.html";
-
-        return;
-
-      }
-
+      completed = true;
 
       let lessons =
         Number(
-          localStorage.getItem("lessonsTaught")
-        ) || 0;
-
+          localStorage.getItem("preDermLessons")
+        ) || 2;
 
       let people =
         Number(
-          localStorage.getItem("peopleEducated")
-        ) || 0;
+          localStorage.getItem("preDermPeople")
+        ) || 38;
 
 
       lessons++;
@@ -928,29 +943,30 @@
 
 
       localStorage.setItem(
-        "lessonsTaught",
+        "preDermLessons",
         lessons
       );
 
-
       localStorage.setItem(
-        "peopleEducated",
+        "preDermPeople",
         people
       );
 
 
-      localStorage.setItem(
-        "skin101Completed",
-        "true"
-      );
+      document.getElementById(
+        "lessonsTaught"
+      ).textContent = lessons;
 
-
-      window.location.href = "index.html";
+      document.getElementById(
+        "peopleEducated"
+      ).textContent = people;
 
     }
 
-  </script>
 
+    loadNumbers();
+
+  </script>
 
 </body>
 </html>
