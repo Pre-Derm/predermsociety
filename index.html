@@ -6,10 +6,6 @@
 
   <title>Pre-Derm Society</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
 
     * {
@@ -24,7 +20,7 @@
       margin: 0;
       background: #faf9f6;
       color: #111;
-      font-family: "DM Sans", Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 300;
     }
 
@@ -32,59 +28,62 @@
       color: #111;
     }
 
-    /* NAVIGATION */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 50;
+      z-index: 100;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      padding: 22px 6%;
+      min-height: 115px;
+      padding: 24px 5%;
 
-      background: rgba(250, 249, 246, 0.90);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(250, 249, 246, 0.92);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
 
-      border-bottom: 1px solid #e2e0dc;
+      border-bottom: 1px solid #dedcd8;
     }
 
     .logo {
       text-decoration: none;
-      font-size: 11px;
+      font-size: 13px;
+      line-height: 1.45;
       font-weight: 500;
-      letter-spacing: 3px;
-      line-height: 1.35;
+      letter-spacing: 4px;
     }
 
     .links {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      max-width: 330px;
+      gap: 30px;
     }
 
     .links a {
       text-decoration: none;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 400;
       letter-spacing: 3px;
-      margin-left: 25px;
-      margin-bottom: 7px;
     }
 
     .links a:hover,
     .logo:hover {
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100vh;
@@ -94,7 +93,7 @@
       display: flex;
       align-items: flex-end;
 
-      padding: 160px 8% 90px;
+      padding: 180px 8% 100px;
     }
 
     .hero-background {
@@ -122,54 +121,62 @@
     }
 
     .eyebrow {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 400;
       letter-spacing: 4px;
       color: #777;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: clamp(68px, 13vw, 160px);
+      font-size: clamp(70px, 13vw, 165px);
       line-height: 0.78;
-      letter-spacing: -8px;
+      letter-spacing: -9px;
       font-weight: 300;
       margin: 0;
     }
 
     .hero-description {
       max-width: 650px;
-      margin-top: 42px;
+      margin-top: 48px;
 
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 1.8;
+      font-size: 19px;
+      line-height: 1.9;
       color: #666;
+      font-weight: 300;
     }
+
+
+    /* =========================
+       LINKS / BUTTONS
+    ========================= */
 
     .button {
       display: inline-block;
 
-      margin-top: 25px;
-      padding-bottom: 8px;
+      margin-top: 28px;
+      padding-bottom: 9px;
 
       border-bottom: 1px solid #111;
 
       text-decoration: none;
 
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 3px;
     }
 
     .button:hover {
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
-    /* GENERAL SECTIONS */
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
-      padding: 130px 8%;
+      padding: 140px 8%;
       border-top: 1px solid #dedcd8;
     }
 
@@ -178,26 +185,29 @@
       font-weight: 400;
       letter-spacing: 4px;
       color: #777;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     h2 {
-      font-size: clamp(52px, 8vw, 100px);
+      font-size: clamp(55px, 8vw, 105px);
       line-height: 0.86;
       letter-spacing: -6px;
       font-weight: 300;
-      margin: 0 0 35px;
+      margin: 0 0 40px;
     }
 
     .text {
-      max-width: 650px;
+      max-width: 700px;
       color: #666;
-      line-height: 1.8;
-      font-size: 16px;
+      line-height: 1.9;
+      font-size: 18px;
       font-weight: 300;
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       min-height: 75vh;
@@ -209,7 +219,14 @@
       max-width: 900px;
     }
 
-    /* VISUAL SECTION */
+    .about .text + .text {
+      margin-top: 25px;
+    }
+
+
+    /* =========================
+       VISUAL SECTION
+    ========================= */
 
     .photo-section {
       min-height: 70vh;
@@ -240,17 +257,20 @@
       padding: 90px 0;
     }
 
-    /* LEARNING */
+
+    /* =========================
+       LEARNING
+    ========================= */
 
     .learn {
       background: #efeee9;
     }
 
     .lesson-card {
-      min-height: 460px;
+      min-height: 500px;
 
-      margin-top: 60px;
-      padding: 55px;
+      margin-top: 70px;
+      padding: 65px;
 
       display: flex;
       flex-direction: column;
@@ -262,14 +282,17 @@
     }
 
     .lesson-card h3 {
-      font-size: clamp(45px, 6vw, 75px);
+      font-size: clamp(45px, 6vw, 78px);
       line-height: 0.9;
       letter-spacing: -5px;
       font-weight: 300;
-      margin: 10px 0 20px;
+      margin: 12px 0 25px;
     }
 
-    /* IMPACT */
+
+    /* =========================
+       IMPACT
+    ========================= */
 
     .impact {
       background: #faf9f6;
@@ -281,12 +304,12 @@
       letter-spacing: -14px;
       font-weight: 300;
 
-      margin: 80px 0 25px;
+      margin: 85px 0 30px;
     }
 
     .impact-label {
       font-size: 10px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       font-weight: 500;
     }
 
@@ -294,36 +317,39 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      margin-top: 80px;
+      margin-top: 90px;
 
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
     .impact-box {
-      min-height: 210px;
+      min-height: 220px;
 
-      padding: 40px;
+      padding: 42px;
 
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
     }
 
     .impact-box-number {
-      font-size: 58px;
-      font-weight: 300;
+      font-size: 62px;
       letter-spacing: -4px;
+      font-weight: 300;
       margin: 15px 0;
     }
 
     .impact-box-label {
-      font-size: 9px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 3px;
       color: #666;
       font-weight: 400;
     }
 
-    /* DONATION */
+
+    /* =========================
+       DONATION
+    ========================= */
 
     .donation {
       min-height: 75vh;
@@ -338,10 +364,13 @@
     }
 
     .donation-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
-    /* JOIN */
+
+    /* =========================
+       JOIN
+    ========================= */
 
     .join {
       text-align: center;
@@ -352,10 +381,13 @@
       margin-right: auto;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 45px 8%;
+      padding: 50px 8%;
 
       display: flex;
       justify-content: space-between;
@@ -367,468 +399,524 @@
     footer a {
       text-decoration: none;
 
-      font-size: 9px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 3px;
       font-weight: 400;
 
-      margin-right: 25px;
+      margin-right: 28px;
     }
 
     footer a:hover {
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
 
       nav {
-        padding: 22px 5%;
-        align-items: flex-start;
+        min-height: 105px;
+        padding: 20px 5%;
       }
 
       .logo {
-        font-size: 10px;
-        max-width: 130px;
+        font-size: 11px;
+        letter-spacing: 3px;
       }
 
       .links {
-        max-width: 190px;
-        justify-content: flex-start;
+        gap: 17px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: 230px;
       }
 
       .links a {
-        margin-left: 15px;
-        font-size: 8px;
+        font-size: 9px;
         letter-spacing: 2.5px;
       }
 
       .hero {
-        padding: 180px 8% 80px;
-        min-height: 100vh;
+        padding: 165px 8% 75px;
       }
 
       h1 {
-        font-size: clamp(64px, 16vw, 110px);
-        letter-spacing: -6px;
+        letter-spacing: -5px;
       }
 
       h2 {
         letter-spacing: -4px;
       }
 
+      .hero-description {
+        font-size: 17px;
+      }
+
       section {
         padding: 100px 8%;
       }
 
-      .hero-description,
-      .text {
-        font-size: 15px;
-      }
-
       .lesson-card {
-        min-height: 420px;
-        padding: 30px;
+        min-height: 450px;
+        padding: 32px;
       }
 
       .lesson-card h3 {
-        letter-spacing: -4px;
+        letter-spacing: -3px;
       }
 
       .impact-grid {
         grid-template-columns: 1fr;
       }
 
+      .impact-box {
+        padding: 32px;
+      }
+
       footer {
         flex-direction: column;
         align-items: flex-start;
-        gap: 25px;
+        gap: 28px;
       }
 
       footer a {
-        display: block;
-        margin-bottom: 14px;
+        display: inline-block;
+        margin-bottom: 15px;
       }
+
     }
 
   </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
 
-<nav>
+  <!-- NAVIGATION -->
 
-  <a href="index.html" class="logo">
-    PRE-DERM<br>SOCIETY
-  </a>
+  <nav>
 
-  <div class="links">
-    <a href="#about">ABOUT</a>
-    <a href="skin101.html">LEARN</a>
-    <a href="#impact">IMPACT</a>
-    <a href="#donate">DONATE</a>
-  </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-  <div class="hero-background"></div>
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      SKIN SCIENCE · EDUCATION · COMMUNITY
-    </div>
-
-    <h1>
+    <a href="index.html" class="logo">
       PRE-DERM<br>
       SOCIETY
-    </h1>
-
-    <p class="hero-description">
-      A student-led space for exploring dermatology,
-      learning skin science, teaching others, and giving
-      back.
-    </p>
-
-    <a href="skin101.html" class="button">
-      START LEARNING →
     </a>
 
+    <div class="links">
+
+      <a href="#about">ABOUT</a>
+
+      <a href="skin101.html">LEARN</a>
+
+      <a href="#impact">IMPACT</a>
+
+      <a href="#donate">DONATE</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        SKIN SCIENCE · EDUCATION · COMMUNITY
+      </div>
+
+      <h1>
+        PRE-DERM<br>
+        SOCIETY
+      </h1>
+
+      <p class="hero-description">
+        A student-led space for exploring dermatology,
+        learning skin science, teaching others, and giving
+        back.
+      </p>
+
+      <a href="skin101.html" class="button">
+        START LEARNING →
+      </a>
+
+    </div>
+
   </div>
 
-</div>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="about-content">
+
+      <div class="label">
+        01 · ABOUT
+      </div>
+
+      <h2>
+        Learn about<br>
+        skin differently.
+      </h2>
+
+      <p class="text">
+        Pre-Derm Society is a student-led educational
+        initiative created to make dermatology and
+        skin science easier to understand and explore.
+      </p>
+
+      <p class="text">
+        We believe knowledge becomes more meaningful
+        when it is shared. Our goal is to learn,
+        teach, and give back to our community.
+      </p>
+
+    </div>
+
+  </section>
 
 
-<!-- ABOUT -->
+  <!-- VISUAL SECTION -->
 
-<section class="about" id="about">
+  <section class="photo-section">
 
-  <div class="about-content">
+    <div class="photo-overlay"></div>
+
+    <div class="photo-content">
+
+      <div class="label">
+        LEARN · TEACH · GIVE
+      </div>
+
+      <h2>
+        Knowledge<br>
+        should be shared.
+      </h2>
+
+    </div>
+
+  </section>
+
+
+  <!-- LEARNING -->
+
+  <section class="learn">
 
     <div class="label">
-      01 · ABOUT
+      02 · LEARNING
     </div>
 
     <h2>
-      Learn about<br>
-      skin differently.
+      Start with<br>
+      the basics.
     </h2>
 
     <p class="text">
-      Pre-Derm Society is a student-led educational
-      initiative created to make dermatology and
-      skin science easier to understand and explore.
+      Build your foundation in skin science before
+      exploring the deeper world of dermatology.
     </p>
 
-    <p class="text">
-      We believe knowledge becomes more meaningful
-      when it is shared. Our goal is to learn,
-      teach, and give back to our community.
-    </p>
 
-  </div>
+    <div class="lesson-card">
 
-</section>
+      <div class="label">
+        SKIN SCIENCE 01
+      </div>
+
+      <h3>
+        The Science of Skin
+      </h3>
+
+      <p class="text">
+        Explore the major layers of skin, what they do,
+        and why understanding the basics matters.
+      </p>
+
+      <a href="skin101.html" class="button">
+        BEGIN LESSON →
+      </a>
+
+    </div>
+
+  </section>
 
 
-<!-- VISUAL SECTION -->
+  <!-- IMPACT -->
 
-<section class="photo-section">
-
-  <div class="photo-overlay"></div>
-
-  <div class="photo-content">
+  <section class="impact" id="impact">
 
     <div class="label">
-      LEARN · TEACH · GIVE
+      03 · OUR IMPACT
     </div>
 
     <h2>
-      Knowledge<br>
-      should be shared.
+      Learning becomes<br>
+      impact.
     </h2>
 
-  </div>
-
-</section>
-
-
-<!-- LEARNING -->
-
-<section class="learn">
-
-  <div class="label">
-    02 · LEARNING
-  </div>
-
-  <h2>
-    Start with<br>
-    the basics.
-  </h2>
-
-  <p class="text">
-    Build your foundation in skin science before
-    exploring the deeper world of dermatology.
-  </p>
-
-  <div class="lesson-card">
-
-    <div class="label">
-      SKIN SCIENCE 01
-    </div>
-
-    <h3>
-      The Science of Skin
-    </h3>
-
     <p class="text">
-      Explore the major layers of skin, what they do,
-      and why understanding the basics matters.
+      Pre-Derm Society creates impact by making
+      skin-science education accessible and
+      meaningful.
     </p>
 
-    <a href="skin101.html" class="button">
-      BEGIN LESSON →
-    </a>
 
-  </div>
+    <!-- MAIN IMPACT NUMBER -->
 
-</section>
+    <div class="impact-number" id="mainPeopleImpacted">
+      38
+    </div>
 
-
-<!-- IMPACT -->
-
-<section class="impact" id="impact">
-
-  <div class="label">
-    03 · OUR IMPACT
-  </div>
-
-  <h2>
-    Learning becomes<br>
-    impact.
-  </h2>
-
-  <p class="text">
-    Pre-Derm Society creates impact through
-    accessible skin-science education.
-  </p>
-
-  <div class="impact-number" id="mainPeopleImpacted">
-    38
-  </div>
-
-  <div class="impact-label">
-    PEOPLE IMPACTED
-  </div>
-
-  <div class="impact-grid">
-
-    <div class="impact-box">
-
-      <div class="label">
-        01
-      </div>
-
-      <div class="impact-box-number">
-        38
-      </div>
-
-      <div class="impact-box-label">
-        PEOPLE EDUCATED
-      </div>
-
+    <div class="impact-label">
+      PEOPLE IMPACTED
     </div>
 
 
-    <div class="impact-box">
+    <!-- IMPACT GRID -->
 
-      <div class="label">
-        02
+    <div class="impact-grid">
+
+
+      <!-- PEOPLE EDUCATED -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          01
+        </div>
+
+        <div class="impact-box-number">
+          38
+        </div>
+
+        <div class="impact-box-label">
+          PEOPLE EDUCATED
+        </div>
+
       </div>
 
-      <div class="impact-box-number" id="peopleImpacted">
-        38
+
+      <!-- PEOPLE IMPACTED -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          02
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="peopleImpacted"
+        >
+          38
+        </div>
+
+        <div class="impact-box-label">
+          PEOPLE IMPACTED
+        </div>
+
       </div>
 
-      <div class="impact-box-label">
-        PEOPLE IMPACTED
+
+      <!-- LESSONS TAUGHT -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          03
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="lessonsTaught"
+        >
+          2
+        </div>
+
+        <div class="impact-box-label">
+          LESSONS TAUGHT
+        </div>
+
       </div>
+
+
+      <!-- CARE BOXES -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          04
+        </div>
+
+        <div class="impact-box-number">
+          0
+        </div>
+
+        <div class="impact-box-label">
+          CARE BOXES · COMING SOON
+        </div>
+
+      </div>
+
 
     </div>
 
+  </section>
 
-    <div class="impact-box">
+
+  <!-- DONATION -->
+
+  <section class="donation" id="donate">
+
+    <div class="donation-content">
 
       <div class="label">
-        03
+        04 · GIVE BACK
       </div>
 
-      <div class="impact-box-number" id="lessonsTaught">
-        2
-      </div>
+      <h2>
+        Make a<br>
+        difference.
+      </h2>
 
-      <div class="impact-box-label">
-        LESSONS TAUGHT
-      </div>
+      <p class="text">
+        Help support future educational programs,
+        community initiatives, and care-box projects.
+      </p>
+
+      <a
+        href="#"
+        class="button"
+        onclick="alert('Our donation program is coming soon!'); return false;"
+      >
+        MAKE A DONATION →
+      </a>
 
     </div>
 
-
-    <div class="impact-box">
-
-      <div class="label">
-        04
-      </div>
-
-      <div class="impact-box-number">
-        0
-      </div>
-
-      <div class="impact-box-label">
-        CARE BOXES · COMING SOON
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- DONATION -->
+  <!-- JOIN -->
 
-<section class="donation" id="donate">
-
-  <div class="donation-content">
+  <section class="join">
 
     <div class="label">
-      04 · GIVE BACK
+      05 · JOIN
     </div>
 
     <h2>
-      Make a<br>
-      difference.
+      Learn with us.
     </h2>
 
     <p class="text">
-      Help support future educational programs,
-      community initiatives, and care-box projects.
+      Interested in dermatology, skin science,
+      education, or community service?
+      We'd love to have you be part of the journey.
     </p>
 
     <a
-      href="#"
+      href="mailto:predermsociety@gmail.com"
       class="button"
-      onclick="alert('Our donation program is coming soon!'); return false;"
     >
-      MAKE A DONATION →
+      CONTACT PRE-DERM SOCIETY →
     </a>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- JOIN -->
+  <!-- FOOTER -->
 
-<section class="join">
+  <footer>
 
-  <div class="label">
-    05 · JOIN
-  </div>
+    <div>
 
-  <h2>
-    Learn with us.
-  </h2>
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM
+      </a>
 
-  <p class="text">
-    Interested in dermatology, skin science,
-    education, or community service?
-    We'd love to have you be part of the journey.
-  </p>
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TIKTOK
+      </a>
 
-  <a
-    href="mailto:predermsociety@gmail.com"
-    class="button"
-  >
-    CONTACT PRE-DERM SOCIETY →
-  </a>
+      <a href="mailto:predermsociety@gmail.com">
+        EMAIL
+      </a>
 
-</section>
+    </div>
 
+    <div class="label">
+      PRE-DERM SOCIETY
+    </div>
 
-<!-- FOOTER -->
-
-<footer>
-
-  <div>
-
-    <a
-      href="https://www.instagram.com/prederm_society/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      INSTAGRAM
-    </a>
-
-    <a
-      href="https://www.tiktok.com/@prederm_society"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      TIKTOK
-    </a>
-
-    <a href="mailto:predermsociety@gmail.com">
-      EMAIL
-    </a>
-
-  </div>
-
-  <div class="label">
-    PRE-DERM SOCIETY
-  </div>
-
-</footer>
+  </footer>
 
 
-<!-- IMPACT COUNTER -->
+  <!-- IMPACT COUNTER -->
 
-<script>
+  <script>
 
-  const startingPeopleImpacted = 38;
-  const startingLessonsTaught = 2;
+    document.addEventListener("DOMContentLoaded", function () {
 
-  if (localStorage.getItem("peopleImpacted") === null) {
-    localStorage.setItem("peopleImpacted", startingPeopleImpacted);
-  }
+      let peopleImpacted =
+        parseInt(localStorage.getItem("peopleImpacted"));
 
-  if (localStorage.getItem("lessonsTaught") === null) {
-    localStorage.setItem("lessonsTaught", startingLessonsTaught);
-  }
+      let lessonsTaught =
+        parseInt(localStorage.getItem("lessonsTaught"));
 
-  const peopleImpacted =
-    Number(localStorage.getItem("peopleImpacted"));
 
-  const lessonsTaught =
-    Number(localStorage.getItem("lessonsTaught"));
+      if (isNaN(peopleImpacted)) {
+        peopleImpacted = 38;
+        localStorage.setItem(
+          "peopleImpacted",
+          "38"
+        );
+      }
 
-  document.getElementById("peopleImpacted").textContent =
-    peopleImpacted;
 
-  document.getElementById("mainPeopleImpacted").textContent =
-    peopleImpacted;
+      if (isNaN(lessonsTaught)) {
+        lessonsTaught = 2;
+        localStorage.setItem(
+          "lessonsTaught",
+          "2"
+        );
+      }
 
-  document.getElementById("lessonsTaught").textContent =
-    lessonsTaught;
 
-</script>
+      document.getElementById(
+        "peopleImpacted"
+      ).textContent = peopleImpacted;
+
+
+      document.getElementById(
+        "lessonsTaught"
+      ).textContent = lessonsTaught;
+
+
+      document.getElementById(
+        "mainPeopleImpacted"
+      ).textContent = peopleImpacted;
+
+    });
+
+  </script>
+
 
 </body>
 </html>
