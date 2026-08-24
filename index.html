@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Pre-Derm Society</title>
 
   <style>
@@ -26,14 +27,16 @@
     }
 
     .logo {
+      color: #111;
+      text-decoration: none;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 3px;
     }
 
     nav a {
-      color: #111;
-      text-decoration: none;
+      color: #111 !important;
+      text-decoration: none !important;
       margin-left: 25px;
       font-size: 10px;
       letter-spacing: 1.5px;
@@ -86,6 +89,8 @@
       line-height: 1.8;
     }
 
+    /* LEARNING CARD */
+
     .lesson {
       margin-top: 40px;
       padding: 40px;
@@ -97,16 +102,47 @@
       font-weight: 500;
     }
 
+    /* IMPACT */
+
+    .impact-preview {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .impact-card {
+      padding: 30px;
+      border: 1px solid #ddd;
+    }
+
+    .impact-number {
+      font-size: 50px;
+      letter-spacing: -3px;
+      margin: 15px 0;
+    }
+
+    .impact-label {
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    /* BUTTONS */
+
     .button {
       display: inline-block;
       margin-top: 20px;
       padding-bottom: 5px;
       border-bottom: 1px solid #111;
-      color: #111;
-      text-decoration: none;
+      color: #111 !important;
+      text-decoration: none !important;
       font-size: 10px;
       font-weight: bold;
       letter-spacing: 1.5px;
+    }
+
+    .button:hover {
+      opacity: .55;
     }
 
     footer {
@@ -115,13 +151,17 @@
     }
 
     footer a {
-      color: #111;
+      color: #111 !important;
       margin-right: 25px;
       font-size: 10px;
       letter-spacing: 1.5px;
+      text-decoration: none !important;
     }
 
-    @media (max-width: 600px) {
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
       nav {
         flex-direction: column;
         gap: 18px;
@@ -138,69 +178,157 @@
       .lesson {
         padding: 25px;
       }
+
+      .impact-preview {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 80px 8%;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-  <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
+
+  <a href="index.html" class="logo">
+    PRE-DERM SOCIETY
+  </a>
 
   <div>
-    <a href="#about">ABOUT</a>
-    <a href="#explore">EXPLORE</a>
-    <a href="#learning">LEARNING</a>
-    <a href="#join">JOIN</a>
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+    <a href="skin101.html">
+      LEARN
+    </a>
+
+    <a href="impact.html">
+      IMPACT
+    </a>
+
+    <a href="#join">
+      JOIN
+    </a>
+
   </div>
+
 </nav>
 
+
+<!-- HERO -->
+
 <div class="hero">
+
   <div>
-    <div class="small">STUDENT-LED · DERMATOLOGY · EDUCATION</div>
+
+    <div class="small">
+      STUDENT-LED · DERMATOLOGY · EDUCATION
+    </div>
 
     <h1>
-      PRE-DERM<br>SOCIETY
+      PRE-DERM<br>
+      SOCIETY
     </h1>
 
     <p class="intro">
       A student-led space for exploring dermatology,
-      skin science, medicine, and the journey toward the field.
+      skin science, medicine, and the journey toward
+      the field.
     </p>
+
+    <a href="skin101.html" class="button">
+      START LEARNING →
+    </a>
+
   </div>
+
 </div>
 
-<section id="about">
-  <div class="small">01 · ABOUT</div>
 
-  <h2>Start with<br>the science.</h2>
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="small">
+    01 · ABOUT
+  </div>
+
+  <h2>
+    Start with<br>
+    the science.
+  </h2>
 
   <p class="text">
     Pre-Derm Society makes skin science and dermatology
     approachable, interesting, and easy to explore.
   </p>
-</section>
-
-<section id="explore">
-  <div class="small">02 · EXPLORE</div>
-
-  <h2>Foundations<br>first.</h2>
 
   <p class="text">
-    Explore the science behind skin and learn foundational
-    concepts before diving deeper into dermatology.
+    Our goal is to help students learn about the field,
+    share knowledge with others, and turn education into
+    meaningful community impact.
   </p>
+
 </section>
 
-<section id="learning">
-  <div class="small">03 · LEARNING</div>
 
-  <h2>Begin with<br>the basics.</h2>
+<!-- EXPLORE -->
+
+<section id="explore">
+
+  <div class="small">
+    02 · EXPLORE
+  </div>
+
+  <h2>
+    Foundations<br>
+    first.
+  </h2>
+
+  <p class="text">
+    Before diving deep into dermatology, start by
+    understanding the science behind skin.
+  </p>
+
+  <a href="skin101.html" class="button">
+    EXPLORE SKIN SCIENCE →
+  </a>
+
+</section>
+
+
+<!-- LEARNING -->
+
+<section id="learning">
+
+  <div class="small">
+    03 · LEARNING
+  </div>
+
+  <h2>
+    Begin with<br>
+    the basics.
+  </h2>
 
   <div class="lesson">
-    <div class="small">SKIN SCIENCE 01 · FOUNDATIONS</div>
 
-    <h3>The Science of Skin</h3>
+    <div class="small">
+      SKIN SCIENCE 01 · FOUNDATIONS
+    </div>
+
+    <h3>
+      The Science of Skin
+    </h3>
 
     <p class="text">
       Learn about the skin, its major layers, and
@@ -210,31 +338,148 @@
     <a href="skin101.html" class="button">
       BEGIN LESSON →
     </a>
+
   </div>
+
 </section>
 
-<section id="join">
-  <div class="small">04 · JOIN</div>
 
-  <h2>Learn with us.</h2>
+<!-- IMPACT -->
+
+<section id="impact">
+
+  <div class="small">
+    04 · COMMUNITY
+  </div>
+
+  <h2>
+    Learn.<br>
+    Teach.<br>
+    Give.
+  </h2>
+
+  <p class="text">
+    Pre-Derm Society isn't only about learning.
+    We're building toward a community where students
+    can share skin-health education and give back.
+  </p>
+
+
+  <div class="impact-preview">
+
+    <div class="impact-card">
+
+      <div class="small">
+        01
+      </div>
+
+      <div class="impact-number">
+        0
+      </div>
+
+      <div class="impact-label">
+        PEOPLE EDUCATED
+      </div>
+
+    </div>
+
+
+    <div class="impact-card">
+
+      <div class="small">
+        02
+      </div>
+
+      <div class="impact-number">
+        0
+      </div>
+
+      <div class="impact-label">
+        LESSONS TAUGHT
+      </div>
+
+    </div>
+
+
+    <div class="impact-card">
+
+      <div class="small">
+        03
+      </div>
+
+      <div class="impact-number">
+        0
+      </div>
+
+      <div class="impact-label">
+        CARE BOXES GIVEN
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a href="impact.html" class="button">
+    SEE OUR IMPACT →
+  </a>
+
+</section>
+
+
+<!-- JOIN -->
+
+<section id="join">
+
+  <div class="small">
+    05 · JOIN
+  </div>
+
+  <h2>
+    Learn with us.
+  </h2>
 
   <p class="text">
     Questions, ideas, or interested in getting involved?
     Reach out to Pre-Derm Society.
   </p>
 
-  <a href="mailto:predermsociety@gmail.com" class="button">
-    PREDERMSOCIETY@GMAIL.COM
+  <a
+    href="mailto:predermsociety@gmail.com"
+    class="button"
+  >
+    CONTACT PRE-DERM SOCIETY →
   </a>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a>
 
-  <a href="https://www.instagram.com/prederm_society" target="_blank">INSTAGRAM</a>
+  <a
+    href="https://www.tiktok.com/@prederm_society"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    TIKTOK
+  </a>
 
-  <a href="mailto:predermsociety@gmail.com">EMAIL</a>
+  <a
+    href="https://www.instagram.com/prederm_society"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    INSTAGRAM
+  </a>
+
+  <a href="mailto:predermsociety@gmail.com">
+    EMAIL
+  </a>
+
 </footer>
+
 
 </body>
 </html>
