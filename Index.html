@@ -5,117 +5,238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pre-Derm Society</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      background: #ffffff;
-      color: #111111;
-      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #111;
+      text-decoration: none;
     }
 
     nav {
-      border-bottom: 1px solid #eeeeee;
-      padding: 22px 6%;
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8;
+      background: #fff;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 22px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
-
-    nav a {
-      color: #111111;
-      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
     }
 
     .links {
       display: flex;
-      gap: 25px;
+      gap: 24px;
     }
 
     .links a {
-      font-size: 10px;
+      font-size: 9px;
+      font-weight: 500;
       letter-spacing: 1.5px;
     }
 
+    .links a:hover {
+      opacity: .45;
+    }
+
     .hero {
-      min-height: 75vh;
-      padding: 100px 8%;
+      max-width: 1100px;
+      min-height: 78vh;
+      margin: auto;
+      padding: 100px 25px;
       display: flex;
       align-items: center;
     }
 
     .eyebrow {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #777777;
-      margin-bottom: 25px;
+      font-size: 9px;
+      color: #777;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
+      margin-bottom: 25px;
     }
 
     h1 {
       font-size: clamp(55px, 11vw, 125px);
-      line-height: .9;
+      line-height: .88;
       letter-spacing: -6px;
       font-weight: 500;
-      margin: 0 0 35px;
+      margin-bottom: 35px;
     }
 
-    .hero p {
-      max-width: 550px;
-      color: #666666;
-      line-height: 1.8;
+    .hero-text {
+      max-width: 570px;
+      color: #666;
+      font-size: 15px;
+      line-height: 1.85;
+      margin-bottom: 30px;
     }
 
-    .button {
+    .line-link {
       display: inline-block;
-      margin-top: 25px;
-      padding: 13px 20px;
-      background: #111111;
-      color: white;
-      text-decoration: none;
-      font-size: 10px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 5px;
+      font-size: 9px;
+      font-weight: 600;
       letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     section {
-      padding: 100px 8%;
-      border-top: 1px solid #eeeeee;
+      max-width: 1100px;
+      margin: auto;
+      padding: 110px 25px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .label {
+      font-size: 9px;
+      color: #777;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
     }
 
     h2 {
-      font-size: clamp(40px, 7vw, 75px);
-      font-weight: 500;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: .95;
       letter-spacing: -3px;
+      font-weight: 500;
+      margin-bottom: 25px;
     }
 
-    p {
+    .section-text {
       max-width: 650px;
-      color: #666666;
-      line-height: 1.8;
+      color: #666;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .learning {
+      background: #f7f7f7;
+      max-width: none;
+    }
+
+    .learning-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .lesson-card {
+      margin-top: 45px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 45px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+    }
+
+    .lesson-number {
+      color: #777;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .lesson-card h3 {
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+
+    .lesson-card p {
+      max-width: 600px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .join {
+      text-align: center;
+    }
+
+    .join .section-text {
+      margin: auto;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 30px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 5px;
+      font-size: 10px;
+      letter-spacing: 1px;
     }
 
     footer {
-      padding: 50px 8%;
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid #e8e8e8;
+      padding: 50px 25px 35px;
     }
 
-    footer a {
-      color: #111111;
-      margin-right: 25px;
-      font-size: 10px;
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      margin-bottom: 25px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .socials a {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #111;
+    }
+
+    .copyright {
+      color: #999;
+      font-size: 8px;
       letter-spacing: 1.5px;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
       .links {
         gap: 10px;
       }
@@ -125,7 +246,20 @@
       }
 
       .hero {
-        padding: 80px 6%;
+        padding: 80px 22px;
+      }
+
+      h1 {
+        letter-spacing: -4px;
+      }
+
+      section {
+        padding: 80px 22px;
+      }
+
+      .lesson-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
       }
     }
   </style>
@@ -133,104 +267,193 @@
 
 <body>
 
-<nav>
-  <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
+  <nav>
+    <div class="nav">
 
-  <div class="links">
-    <a href="#about">ABOUT</a>
-    <a href="#explore">EXPLORE</a>
-    <a href="skin101.html">SKIN SCIENCE</a>
-    <a href="#join">JOIN</a>
-  </div>
-</nav>
+      <a href="index.html" class="logo">
+        PRE-DERM SOCIETY
+      </a>
 
-<header class="hero">
+      <div class="links">
+        <a href="#about">ABOUT</a>
+        <a href="#explore">EXPLORE</a>
+        <a href="#learning">LEARNING</a>
+        <a href="#join">JOIN</a>
+      </div>
 
-  <div>
+    </div>
+  </nav>
 
-    <div class="eyebrow">
-      Student-led · Dermatology · Education
+
+  <header class="hero">
+
+    <div>
+
+      <div class="eyebrow">
+        Student-led · Dermatology · Education
+      </div>
+
+      <h1>
+        PRE-DERM<br>SOCIETY
+      </h1>
+
+      <p class="hero-text">
+        An educational space for students interested in
+        dermatology, skin science, medicine, and the journey
+        toward the field.
+      </p>
+
+      <a href="#learning" class="line-link">
+        Explore learning →
+      </a>
+
     </div>
 
-    <h1>
-      PRE-DERM<br>SOCIETY
-    </h1>
+  </header>
 
-    <p>
-      An educational space for students interested in
-      dermatology, skin science, medicine, and learning
-      more about the field.
+
+  <section id="about">
+
+    <div class="label">
+      01 · About
+    </div>
+
+    <h2>
+      Start with<br>the science.
+    </h2>
+
+    <p class="section-text">
+      Pre-Derm Society is a student-led educational platform
+      created to make skin science and dermatology approachable,
+      interesting, and easy to explore.
     </p>
 
-    <a href="skin101.html" class="button">
-      START SKIN SCIENCE 01 →
+  </section>
+
+
+  <section id="explore">
+
+    <div class="label">
+      02 · Explore
+    </div>
+
+    <h2>
+      Foundations<br>first.
+    </h2>
+
+    <p class="section-text">
+      Learn the basics of skin science before exploring the
+      broader world of dermatology.
+    </p>
+
+  </section>
+
+
+  <section class="learning" id="learning">
+
+    <div class="learning-inner">
+
+      <div class="label">
+        03 · Learning
+      </div>
+
+      <h2>
+        Begin with<br>the basics.
+      </h2>
+
+      <p class="section-text">
+        Short educational lessons designed to introduce
+        foundational concepts in skin science.
+      </p>
+
+
+      <div class="lesson-card">
+
+        <div>
+
+          <div class="lesson-number">
+            SKIN SCIENCE 01 · FOUNDATIONS
+          </div>
+
+          <h3>
+            The Science of Skin
+          </h3>
+
+          <p>
+            Learn about the skin, its three major layers,
+            and some of its most important functions.
+          </p>
+
+        </div>
+
+        <div>
+
+          <a href="skin101.html" class="line-link">
+            Begin lesson →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="join" id="join">
+
+    <div class="label">
+      04 · Join
+    </div>
+
+    <h2>
+      Learn with us.
+    </h2>
+
+    <p class="section-text">
+      Questions, ideas, or interested in getting involved?
+      Reach out to Pre-Derm Society.
+    </p>
+
+    <a href="mailto:predermsociety@gmail.com" class="email">
+      predermsociety@gmail.com
     </a>
 
-  </div>
+  </section>
 
-</header>
 
-<section id="about">
+  <footer>
 
-  <h2>
-    Start with<br>the science.
-  </h2>
+    <div class="footer-inner">
 
-  <p>
-    Pre-Derm Society is a student-led educational platform
-    created to make learning about skin science and
-    dermatology approachable and interesting.
-  </p>
+      <div class="footer-brand">
+        PRE-DERM SOCIETY
+      </div>
 
-</section>
+      <div class="socials">
 
-<section id="explore">
+        <a href="https://www.tiktok.com/@prederm_society" target="_blank">
+          TIKTOK
+        </a>
 
-  <h2>
-    Explore.
-  </h2>
+        <a href="https://www.instagram.com/prederm_society" target="_blank">
+          INSTAGRAM
+        </a>
 
-  <p>
-    Learn the foundations of skin science before diving
-    deeper into dermatology.
-  </p>
+        <a href="mailto:predermsociety@gmail.com">
+          EMAIL
+        </a>
 
-  <a href="skin101.html" class="button">
-    SKIN SCIENCE 01 →
-  </a>
+      </div>
 
-</section>
+      <div class="copyright">
+        SKIN SCIENCE · DERMATOLOGY · EDUCATION
+      </div>
 
-<section id="join">
+    </div>
 
-  <h2>
-    Join us.
-  </h2>
-
-  <p>
-    Questions, ideas, or interested in getting involved?
-    Email us at predermsociety@gmail.com.
-  </p>
-
-  <a href="mailto:predermsociety@gmail.com" class="button">
-    EMAIL PRE-DERM SOCIETY →
-  </a>
-
-</section>
-
-<footer>
-
-  <p>PRE-DERM SOCIETY</p>
-
-  <a href="https://www.tiktok.com/@prederm_society" target="_blank">
-    TIKTOK
-  </a>
-
-  <a href="https://www.instagram.com/prederm_society" target="_blank">
-    INSTAGRAM
-  </a>
-
-</footer>
+  </footer>
 
 </body>
 </html>
