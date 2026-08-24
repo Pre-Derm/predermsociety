@@ -8,9 +8,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -23,134 +24,162 @@
 
     body {
       font-family: "DM Sans", sans-serif;
-      background: #f8f8f6;
-      color: #1d1d1d;
+      background: #fbfaf8;
+      color: #514b4b;
     }
 
-    /* NAVIGATION */
+    /* NAV */
+
     nav {
       height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 7%;
-      background: rgba(248, 248, 246, 0.96);
-      border-bottom: 1px solid #e9e9e6;
+      background: #fbfaf8;
+      border-bottom: 1px solid #eee8e5;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
     .logo {
-      font-size: 19px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      color: #1d1d1d;
       text-decoration: none;
+      color: #6c5c61;
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      font-weight: 600;
     }
 
     .nav-links {
       display: flex;
-      gap: 34px;
       align-items: center;
+      gap: 30px;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #333;
+      color: #71676a;
       font-size: 14px;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
+      transition: 0.2s;
     }
 
     .nav-links a:hover {
-      opacity: 0.55;
+      color: #b88f9b;
     }
 
     .join-button {
-      background: #1d1d1d;
-      color: white !important;
+      background: #ead8dd;
+      color: #6c5c61 !important;
       padding: 11px 20px;
-      border-radius: 30px;
+      border-radius: 25px;
     }
 
     /* HERO */
+
     .hero {
-      min-height: 650px;
+      min-height: 620px;
+      padding: 100px 7%;
       display: flex;
       align-items: center;
-      padding: 100px 7%;
-      background: #f8f8f6;
+      background:
+        radial-gradient(circle at 85% 20%, #f2e4e7 0%, transparent 28%),
+        #fbfaf8;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 850px;
     }
 
     .eyebrow {
+      color: #b08b96;
       font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
+      margin-bottom: 25px;
       font-weight: 600;
-      color: #777;
-      margin-bottom: 24px;
     }
 
     .hero h1 {
-      font-size: clamp(60px, 8vw, 110px);
-      line-height: 0.9;
-      letter-spacing: -6px;
+      font-family: "Playfair Display", serif;
+      color: #685b60;
+      font-size: clamp(62px, 8vw, 110px);
+      line-height: 0.95;
+      letter-spacing: -4px;
       font-weight: 600;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .hero h1 span {
-      color: #777;
+      color: #b58f9a;
     }
 
     .hero-text {
+      max-width: 550px;
+      color: #81777a;
       font-size: 18px;
-      line-height: 1.7;
-      color: #5c5c5c;
-      max-width: 560px;
+      line-height: 1.75;
       margin-bottom: 35px;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 14px;
       align-items: center;
+      gap: 18px;
     }
 
     .primary-button {
       display: inline-block;
-      background: #1d1d1d;
-      color: white;
       text-decoration: none;
+      background: #dfc5cc;
+      color: #65575c;
       padding: 14px 24px;
-      border-radius: 30px;
+      border-radius: 28px;
       font-size: 14px;
-      font-weight: 500;
-      transition: transform 0.2s ease;
+      transition: 0.2s;
     }
 
     .primary-button:hover {
+      background: #d5b5be;
       transform: translateY(-2px);
     }
 
     .secondary-button {
-      display: inline-block;
-      color: #1d1d1d;
+      color: #8a747b;
       text-decoration: none;
-      padding: 14px 10px;
       font-size: 14px;
-      font-weight: 500;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: #f4ebe9;
+      padding: 45px 7%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      gap: 20px;
+    }
+
+    .stat-number {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: #8d6974;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      color: #887a7e;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     /* ABOUT */
+
     .intro {
       padding: 110px 7%;
-      background: white;
+      background: #fff;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
@@ -158,50 +187,50 @@
     }
 
     .intro-label {
+      color: #b08b96;
       font-size: 12px;
-      text-transform: uppercase;
       letter-spacing: 2px;
-      color: #888;
+      text-transform: uppercase;
       margin-bottom: 18px;
     }
 
     .intro h2 {
+      font-family: "Playfair Display", serif;
+      color: #685b60;
       font-size: 48px;
-      line-height: 1.05;
-      letter-spacing: -2px;
+      line-height: 1.1;
       font-weight: 600;
     }
 
     .intro p {
+      color: #81777a;
       font-size: 17px;
       line-height: 1.8;
-      color: #666;
     }
 
     /* LESSONS */
+
     .cards-section {
       padding: 110px 7%;
-      background: #f8f8f6;
+      background: #fbfaf8;
     }
 
     .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
       margin-bottom: 45px;
     }
 
     .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      color: #685b60;
       font-size: 48px;
-      letter-spacing: -2px;
       font-weight: 600;
     }
 
     .section-heading p {
-      max-width: 360px;
-      color: #777;
-      line-height: 1.6;
-      font-size: 15px;
+      color: #81777a;
+      max-width: 450px;
+      line-height: 1.7;
+      margin-top: 12px;
     }
 
     .cards {
@@ -211,38 +240,40 @@
     }
 
     .card {
-      background: white;
+      background: #fff;
+      border: 1px solid #eee4e3;
       padding: 35px;
-      min-height: 310px;
-      border: 1px solid #e8e8e5;
+      min-height: 315px;
       display: flex;
       flex-direction: column;
-      transition: transform 0.25s ease;
+      border-radius: 3px;
+      transition: 0.25s;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      border-color: #e1cbd0;
     }
 
     .card-number {
+      color: #b08b96;
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #999;
       margin-bottom: 55px;
-      font-weight: 600;
     }
 
     .card h3 {
-      font-size: 25px;
+      font-family: "Playfair Display", serif;
+      color: #6b5d62;
+      font-size: 27px;
       margin-bottom: 14px;
-      font-weight: 600;
     }
 
     .card p {
-      color: #777;
-      line-height: 1.6;
+      color: #82777a;
       font-size: 14px;
+      line-height: 1.7;
       margin-bottom: 25px;
     }
 
@@ -252,9 +283,10 @@
     }
 
     /* JOIN */
+
     .join-section {
       padding: 110px 7%;
-      background: white;
+      background: #f3e8e9;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
@@ -262,38 +294,39 @@
     }
 
     .join-section h2 {
-      font-size: 48px;
-      line-height: 1;
-      letter-spacing: -2px;
-      font-weight: 600;
+      font-family: "Playfair Display", serif;
+      color: #685b60;
+      font-size: 50px;
+      line-height: 1.05;
     }
 
     .join-section p {
+      color: #81777a;
       font-size: 17px;
       line-height: 1.8;
-      color: #666;
       margin-bottom: 25px;
     }
 
     /* FOOTER */
+
     footer {
-      background: #1d1d1d;
-      color: white;
-      padding: 60px 7%;
+      background: #eee3e2;
+      color: #6d6064;
+      padding: 55px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .footer-title {
-      font-size: 20px;
-      font-weight: 600;
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
     }
 
     footer p {
-      color: #aaa;
+      color: #8c7e81;
       font-size: 13px;
-      margin-top: 8px;
+      margin-top: 7px;
     }
 
     .socials {
@@ -302,21 +335,18 @@
     }
 
     .socials a {
-      color: white;
       text-decoration: none;
+      color: #76676c;
       font-size: 13px;
     }
 
     .socials a:hover {
-      opacity: 0.6;
+      color: #b08b96;
     }
 
     /* MOBILE */
-    @media (max-width: 800px) {
 
-      nav {
-        padding: 0 5%;
-      }
+    @media (max-width: 800px) {
 
       .nav-links {
         gap: 12px;
@@ -328,12 +358,15 @@
 
       .hero {
         padding: 80px 6%;
-        min-height: 600px;
       }
 
       .hero h1 {
         font-size: 64px;
-        letter-spacing: -4px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        padding: 40px;
       }
 
       .intro,
@@ -347,14 +380,6 @@
         grid-template-columns: 1fr;
       }
 
-      .section-heading {
-        display: block;
-      }
-
-      .section-heading p {
-        margin-top: 15px;
-      }
-
       footer {
         display: block;
       }
@@ -363,12 +388,14 @@
         margin-top: 25px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
+
   <nav>
 
     <a href="index.html" class="logo">
@@ -389,6 +416,7 @@
 
 
   <!-- HERO -->
+
   <section class="hero">
 
     <div class="hero-content">
@@ -425,7 +453,30 @@
   </section>
 
 
+  <!-- LIVE STATS -->
+
+  <section class="stats">
+
+    <div>
+      <div class="stat-number" id="lessonsTaught">0</div>
+      <div class="stat-label">Lessons Taught</div>
+    </div>
+
+    <div>
+      <div class="stat-number" id="peopleEducated">0</div>
+      <div class="stat-label">People Educated</div>
+    </div>
+
+    <div>
+      <div class="stat-number">01</div>
+      <div class="stat-label">Lesson Available</div>
+    </div>
+
+  </section>
+
+
   <!-- ABOUT -->
+
   <section class="intro" id="about">
 
     <div>
@@ -463,25 +514,22 @@
 
 
   <!-- LESSONS -->
+
   <section class="cards-section" id="lessons">
 
     <div class="section-heading">
 
-      <div>
-
-        <div class="intro-label">
-          Education
-        </div>
-
-        <h2>
-          The Lessons.
-        </h2>
-
+      <div class="intro-label">
+        Education
       </div>
 
+      <h2>
+        The Lessons.
+      </h2>
+
       <p>
-        Short, student-friendly lessons designed to
-        build your understanding of dermatology and skin health.
+        Short, student-friendly lessons designed to build
+        your understanding of dermatology and skin health.
       </p>
 
     </div>
@@ -490,6 +538,7 @@
     <div class="cards">
 
       <!-- LESSON 01 -->
+
       <div class="card">
 
         <div class="card-number">
@@ -501,8 +550,8 @@
         </h3>
 
         <p>
-          Learn the basics of your skin, including
-          its layers, functions, and why skin health matters.
+          Learn the basics of your skin, including its
+          layers, functions, and why skin health matters.
         </p>
 
         <a href="skin101.html" class="primary-button">
@@ -513,6 +562,7 @@
 
 
       <!-- LESSON 02 -->
+
       <div class="card">
 
         <div class="card-number">
@@ -524,8 +574,8 @@
         </h3>
 
         <p>
-          Explore the foundations of healthy skin
-          and how everyday habits can affect it.
+          Explore the foundations of healthy skin and
+          how everyday habits can affect it.
         </p>
 
         <a href="#" class="primary-button">
@@ -536,6 +586,7 @@
 
 
       <!-- LESSON 03 -->
+
       <div class="card">
 
         <div class="card-number">
@@ -563,6 +614,7 @@
 
 
   <!-- JOIN -->
+
   <section class="join-section" id="join">
 
     <div>
@@ -598,6 +650,7 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <div>
@@ -629,6 +682,25 @@
     </div>
 
   </footer>
+
+
+  <!-- COUNTER SYSTEM -->
+
+  <script>
+
+    const lessonsTaught =
+      Number(localStorage.getItem("lessonsTaught")) || 0;
+
+    const peopleEducated =
+      Number(localStorage.getItem("peopleEducated")) || 0;
+
+    document.getElementById("lessonsTaught").textContent =
+      lessonsTaught;
+
+    document.getElementById("peopleEducated").textContent =
+      peopleEducated;
+
+  </script>
 
 </body>
 </html>
