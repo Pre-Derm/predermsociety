@@ -3,18 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Pre-Derm Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -26,23 +21,22 @@
     }
 
     body {
-      background: #ffffff;
-      color: #111111;
+      background: #fff;
+      color: #111;
       font-family: 'DM Sans', sans-serif;
       line-height: 1.7;
     }
 
     a {
-      color: #111111;
+      color: #111;
       text-decoration: none;
     }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
+      z-index: 10;
+      background: rgba(255,255,255,.96);
       border-bottom: 1px solid #e8e8e8;
     }
 
@@ -63,25 +57,24 @@
 
     .links {
       display: flex;
-      gap: 28px;
+      gap: 25px;
     }
 
     .links a {
       font-size: 9px;
       font-weight: 600;
-      letter-spacing: 1.7px;
-      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
     .links a:hover {
-      opacity: 0.45;
+      opacity: .45;
     }
 
     .hero {
       max-width: 1100px;
-      min-height: 82vh;
+      min-height: 80vh;
       margin: auto;
-      padding: 110px 25px 100px;
+      padding: 110px 25px;
       display: flex;
       align-items: center;
     }
@@ -90,18 +83,22 @@
       max-width: 900px;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .label {
       font-size: 9px;
       font-weight: 600;
-      letter-spacing: 2.8px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: #777777;
+      color: #777;
+    }
+
+    .eyebrow {
       margin-bottom: 25px;
     }
 
     h1 {
       font-size: clamp(58px, 11vw, 125px);
-      line-height: 0.88;
+      line-height: .88;
       letter-spacing: -6px;
       font-weight: 500;
       margin-bottom: 40px;
@@ -109,24 +106,20 @@
 
     .hero-text {
       max-width: 600px;
-      color: #666666;
+      color: #666;
       font-size: 16px;
       line-height: 1.85;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .text-link {
       display: inline-block;
-      border-bottom: 1px solid #111111;
+      border-bottom: 1px solid #111;
       padding-bottom: 5px;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-    }
-
-    .text-link:hover {
-      opacity: 0.45;
     }
 
     section {
@@ -137,23 +130,15 @@
 
     .section-top {
       display: grid;
-      grid-template-columns: 0.55fr 1.45fr;
+      grid-template-columns: .55fr 1.45fr;
       gap: 50px;
       padding-bottom: 55px;
       border-bottom: 1px solid #e5e5e5;
     }
 
-    .label {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #777777;
-    }
-
     h2 {
       font-size: clamp(38px, 6vw, 70px);
-      line-height: 0.95;
+      line-height: .95;
       letter-spacing: -3px;
       font-weight: 500;
       margin-bottom: 25px;
@@ -161,7 +146,7 @@
 
     .section-text {
       max-width: 650px;
-      color: #666666;
+      color: #666;
       font-size: 15px;
       line-height: 1.85;
     }
@@ -169,38 +154,36 @@
     .explore-grid {
       margin-top: 55px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #dcdcdc;
-      border-bottom: 1px solid #dcdcdc;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
     }
 
-    .explore-card {
+    .card {
       padding: 35px 25px;
-      min-height: 250px;
-      border-right: 1px solid #dcdcdc;
+      min-height: 230px;
+      border-right: 1px solid #ddd;
     }
 
-    .explore-card:last-child {
+    .card:last-child {
       border-right: none;
     }
 
-    .card-number {
+    .number {
       font-size: 9px;
-      color: #888888;
+      color: #888;
       letter-spacing: 2px;
-      margin-bottom: 55px;
+      margin-bottom: 50px;
     }
 
-    .explore-card h3 {
+    .card h3 {
       font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .explore-card p {
-      color: #666666;
+    .card p {
+      color: #666;
       font-size: 13px;
-      line-height: 1.75;
     }
 
     .learning {
@@ -211,55 +194,49 @@
     .learning-inner {
       max-width: 1100px;
       margin: auto;
-      padding: 110px 25px;
     }
 
     .lesson {
       margin-top: 55px;
-      background: #ffffff;
-      border: 1px solid #e2e2e2;
+      background: #fff;
+      border: 1px solid #e1e1e1;
       padding: 50px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 70px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
     }
 
     .lesson-meta {
       font-size: 9px;
       font-weight: 600;
-      color: #777777;
       letter-spacing: 2px;
-      text-transform: uppercase;
+      color: #777;
       margin-bottom: 18px;
+      text-transform: uppercase;
     }
 
     .lesson h3 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 0.98;
+      font-size: clamp(35px,5vw,58px);
+      line-height: .98;
       letter-spacing: -2.5px;
       font-weight: 500;
       margin-bottom: 25px;
     }
 
     .lesson p {
-      max-width: 580px;
-      color: #666666;
+      color: #666;
       font-size: 14px;
-      line-height: 1.8;
+      max-width: 600px;
       margin-bottom: 30px;
     }
 
     .lesson-side {
-      border-left: 1px solid #dddddd;
-      padding-left: 40px;
-    }
-
-    .lesson-side .label {
-      margin-bottom: 18px;
+      border-left: 1px solid #ddd;
+      padding-left: 35px;
     }
 
     .lesson-side p {
-      margin: 0;
+      margin-top: 15px;
     }
 
     .join {
@@ -276,24 +253,21 @@
     .join p {
       max-width: 550px;
       margin: auto;
-      color: #666666;
+      color: #666;
       font-size: 14px;
     }
 
     .email {
       display: inline-block;
       margin-top: 30px;
-      border-bottom: 1px solid #111111;
-      padding-bottom: 5px;
+      border-bottom: 1px solid #111;
       font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      padding-bottom: 5px;
     }
 
     footer {
       border-top: 1px solid #e5e5e5;
       padding: 55px 25px 35px;
-      background: #ffffff;
     }
 
     .footer-inner {
@@ -310,44 +284,30 @@
 
     .footer-links {
       display: flex;
-      flex-wrap: wrap;
       gap: 25px;
-      margin-bottom: 45px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
     }
 
     .footer-links a {
       font-size: 9px;
       font-weight: 600;
-      letter-spacing: 1.7px;
-      border-bottom: 1px solid #111111;
-      padding-bottom: 4px;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #111;
     }
 
     .footer-note {
+      color: #888;
       font-size: 8px;
       letter-spacing: 2px;
-      color: #888888;
-      margin-bottom: 10px;
     }
 
-    .footer-copy {
-      font-size: 8px;
-      letter-spacing: 1.5px;
-      color: #888888;
-    }
-
-    @media (max-width: 700px) {
-
-      .nav {
-        padding: 18px 20px;
-      }
-
+    @media (max-width:700px) {
       .links {
-        gap: 16px;
+        gap: 12px;
       }
 
       .hero {
-        min-height: 75vh;
         padding: 80px 22px;
       }
 
@@ -368,324 +328,246 @@
         grid-template-columns: 1fr;
       }
 
-      .explore-card {
+      .card {
         border-right: none;
-        border-bottom: 1px solid #dcdcdc;
+        border-bottom: 1px solid #ddd;
       }
 
-      .explore-card:last-child {
+      .card:last-child {
         border-bottom: none;
       }
 
       .lesson {
         grid-template-columns: 1fr;
-        padding: 32px;
-        gap: 35px;
+        padding: 30px;
       }
 
       .lesson-side {
         border-left: none;
-        border-top: 1px solid #dddddd;
-        padding-left: 0;
-        padding-top: 30px;
-      }
-
-      .learning-inner {
-        padding: 80px 22px;
+        border-top: 1px solid #ddd;
+        padding: 30px 0 0;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav">
+<nav>
+  <div class="nav">
+    <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
 
-      <a href="index.html" class="logo">
-        PRE-DERM SOCIETY
-      </a>
-
-      <div class="links">
-        <a href="#about">ABOUT</a>
-        <a href="#explore">EXPLORE</a>
-        <a href="#learning">LEARNING</a>
-        <a href="#join">JOIN</a>
-      </div>
-
+    <div class="links">
+      <a href="#about">ABOUT</a>
+      <a href="#explore">EXPLORE</a>
+      <a href="#learning">LEARNING</a>
+      <a href="#join">JOIN</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
+<header class="hero">
+  <div class="hero-content">
 
-  <header class="hero">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        Student-led · Dermatology · Education
-      </div>
-
-      <h1>
-        PRE-DERM<br>
-        SOCIETY
-      </h1>
-
-      <p class="hero-text">
-        An educational space for students interested in
-        dermatology, skin science, medicine, and the path
-        toward a career in dermatology.
-      </p>
-
-      <a href="#learning" class="text-link">
-        Explore learning →
-      </a>
-
+    <div class="eyebrow">
+      Student-led · Dermatology · Education
     </div>
 
-  </header>
-
-
-  <section id="about">
-
-    <div class="section-top">
-
-      <div class="label">
-        01 · About
-      </div>
-
-      <div>
-
-        <h2>
-          Start with<br>
-          the science.
-        </h2>
-
-        <p class="section-text">
-          Pre-Derm Society is a student-led educational
-          platform designed to make dermatology and skin
-          science approachable, structured, and interesting.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section id="explore">
-
-    <div class="section-top">
-
-      <div class="label">
-        02 · Explore
-      </div>
-
-      <div>
-
-        <h2>
-          Foundations<br>
-          first.
-        </h2>
-
-        <p class="section-text">
-          Build a foundation in the science behind skin
-          before exploring the broader world of dermatology.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="explore-grid">
-
-      <div class="explore-card">
-
-        <div class="card-number">01</div>
-
-        <h3>Skin Science</h3>
-
-        <p>
-          Explore the structure, function, and biology
-          of the skin.
-        </p>
-
-      </div>
-
-
-      <div class="explore-card">
-
-        <div class="card-number">02</div>
-
-        <h3>Dermatology</h3>
-
-        <p>
-          Learn about the specialty and the many areas
-          dermatologists study.
-        </p>
-
-      </div>
-
-
-      <div class="explore-card">
-
-        <div class="card-number">03</div>
-
-        <h3>Medicine</h3>
-
-        <p>
-          Explore the academic journey and skills involved
-          in pursuing medicine.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="learning" id="learning">
-
-    <div class="learning-inner">
-
-      <div class="section-top">
-
-        <div class="label">
-          03 · Learning
-        </div>
-
-        <div>
-
-          <h2>
-            Begin with<br>
-            the basics.
-          </h2>
-
-          <p class="section-text">
-            Short, focused lessons designed to introduce
-            foundational concepts in skin science.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="lesson">
-
-        <div>
-
-          <div class="lesson-meta">
-            Skin Science 01 · Foundations
-          </div>
-
-          <h3>
-            The science<br>
-            of skin.
-          </h3>
-
-          <p>
-            A 10–15 minute introduction to the structure
-            and function of skin, followed by a short
-            knowledge check.
-          </p>
-
-          <a href="skin101.html" class="text-link">
-            Begin lesson →
-          </a>
-
-        </div>
-
-
-        <div class="lesson-side">
-
-          <div class="label">
-            Inside this lesson
-          </div>
-
-          <p>
-            The basics · Skin structure · Three major layers
-            · Skin function · Knowledge check
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="join" id="join">
-
-    <div class="label">
-      04 · Join
-    </div>
-
-    <h2>
-      Interested in<br>
-      learning with us?
-    </h2>
-
-    <p>
-      Get in touch with Pre-Derm Society to learn more,
-      share ideas, or find out how to get involved.
+    <h1>
+      PRE-DERM<br>SOCIETY
+    </h1>
+
+    <p class="hero-text">
+      An educational space for students interested in
+      dermatology, skin science, medicine, and the journey
+      toward dermatology.
     </p>
 
-    <a
-      href="mailto:predermsociety@gmail.com"
-      class="email">
-      predermsociety@gmail.com
+    <a href="#learning" class="text-link">
+      Explore learning →
     </a>
 
-  </section>
+  </div>
+</header>
 
+<section id="about">
 
-  <footer>
+  <div class="section-top">
 
-    <div class="footer-inner">
+    <div class="label">01 · About</div>
 
-      <div class="footer-brand">
-        PRE-DERM SOCIETY
-      </div>
+    <div>
+      <h2>
+        Start with<br>the science.
+      </h2>
 
-      <div class="footer-links">
+      <p class="section-text">
+        Pre-Derm Society is a student-led educational platform
+        designed to make dermatology and skin science
+        approachable, structured, and interesting.
+      </p>
+    </div>
 
-        <a
-          href="https://www.tiktok.com/@prederm_society"
-          target="_blank"
-          rel="noopener noreferrer">
-          TIKTOK
-        </a>
+  </div>
 
-        <a
-          href="https://www.instagram.com/prederm_society"
-          target="_blank"
-          rel="noopener noreferrer">
-          INSTAGRAM
-        </a>
+</section>
 
-        <a href="mailto:predermsociety@gmail.com">
-          EMAIL
-        </a>
+<section id="explore">
 
-      </div>
+  <div class="section-top">
 
-      <div class="footer-note">
-        SKIN SCIENCE · DERMATOLOGY · EDUCATION
-      </div>
+    <div class="label">02 · Explore</div>
 
-      <div class="footer-copy">
-        © 2026 PRE-DERM SOCIETY
+    <div>
+      <h2>
+        Foundations<br>first.
+      </h2>
+
+      <p class="section-text">
+        Build a foundation in the science behind skin before
+        exploring the broader world of dermatology.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="explore-grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Skin Science</h3>
+      <p>Explore the structure, function, and biology of skin.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Dermatology</h3>
+      <p>Learn about the specialty and its many areas of study.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Medicine</h3>
+      <p>Explore the academic journey toward medicine.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="learning" id="learning">
+
+  <div class="learning-inner">
+
+    <div class="section-top">
+
+      <div class="label">03 · Learning</div>
+
+      <div>
+        <h2>
+          Begin with<br>the basics.
+        </h2>
+
+        <p class="section-text">
+          Short, focused lessons designed to introduce
+          foundational concepts in skin science.
+        </p>
       </div>
 
     </div>
 
-  </footer>
+    <div class="lesson">
+
+      <div>
+
+        <div class="lesson-meta">
+          Skin Science 01 · Foundations
+        </div>
+
+        <h3>
+          The science<br>of skin.
+        </h3>
+
+        <p>
+          A short introduction to the structure and function
+          of skin, followed by a knowledge check.
+        </p>
+
+        <a href="skin101.html" class="text-link">
+          Begin lesson →
+        </a>
+
+      </div>
+
+      <div class="lesson-side">
+
+        <div class="label">Inside this lesson</div>
+
+        <p>
+          The basics · Skin structure · Three major layers ·
+          Skin function · Knowledge check
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="join" id="join">
+
+  <div class="label">04 · Join</div>
+
+  <h2>
+    Interested in<br>learning with us?
+  </h2>
+
+  <p>
+    Get in touch with Pre-Derm Society to learn more,
+    share ideas, or find out how to get involved.
+  </p>
+
+  <a href="mailto:predermsociety@gmail.com" class="email">
+    predermsociety@gmail.com
+  </a>
+
+</section>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      PRE-DERM SOCIETY
+    </div>
+
+    <div class="footer-links">
+
+      <a href="https://www.tiktok.com/@prederm_society"
+         target="_blank">
+        TIKTOK
+      </a>
+
+      <a href="https://www.instagram.com/prederm_society"
+         target="_blank">
+        INSTAGRAM
+      </a>
+
+      <a href="mailto:predermsociety@gmail.com">
+        EMAIL
+      </a>
+
+    </div>
+
+    <div class="footer-note">
+      SKIN SCIENCE · DERMATOLOGY · EDUCATION
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
