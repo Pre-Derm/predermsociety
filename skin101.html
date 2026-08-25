@@ -23,14 +23,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* REMOVE BLUE LINK COLOR */
-
 a,
 a:visited,
 a:hover,
 a:active {
   color: #111;
 }
+
 
 /* NAVIGATION */
 
@@ -77,6 +76,7 @@ nav {
 .logo:hover {
   opacity: 0.5;
 }
+
 
 /* HERO */
 
@@ -125,6 +125,7 @@ h1 {
   color: #666;
 }
 
+
 /* GENERAL */
 
 section {
@@ -162,6 +163,7 @@ h3 {
   font-size: 15px;
 }
 
+
 /* INTRO */
 
 .intro {
@@ -173,6 +175,7 @@ h3 {
 .intro-content {
   max-width: 850px;
 }
+
 
 /* LESSON */
 
@@ -207,6 +210,7 @@ h3 {
   line-height: 1.8;
   color: #666;
 }
+
 
 /* SKIN LAYERS */
 
@@ -251,6 +255,7 @@ h3 {
   font-size: 14px;
 }
 
+
 /* KEY IDEA */
 
 .key {
@@ -271,6 +276,7 @@ h3 {
 .key-content {
   max-width: 900px;
 }
+
 
 /* QUIZ */
 
@@ -318,6 +324,7 @@ h3 {
   margin-bottom: 40px;
 }
 
+
 /* QUIZ ANSWERS */
 
 .answers {
@@ -332,6 +339,8 @@ h3 {
   padding: 18px 20px;
 
   border: 1px solid #cfcac4;
+
+  border-radius: 14px;
 
   background: #faf9f6;
 
@@ -348,7 +357,8 @@ h3 {
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
-    opacity 0.2s ease;
+    opacity 0.2s ease,
+    transform 0.2s ease;
 
   -webkit-appearance: none;
   appearance: none;
@@ -362,6 +372,7 @@ h3 {
 
 .answer:hover:not(.locked) {
   background: #f0eee9;
+  transform: translateY(-2px);
 }
 
 .answer.correct {
@@ -383,6 +394,7 @@ h3 {
 .answer.locked:not(.correct):not(.incorrect) {
   opacity: 0.55;
 }
+
 
 /* FEEDBACK */
 
@@ -408,6 +420,7 @@ h3 {
   color: #765752;
 }
 
+
 /* NEXT BUTTON */
 
 .next-button {
@@ -415,14 +428,15 @@ h3 {
 
   margin-top: 30px;
 
-  padding: 14px 0;
+  padding: 14px 22px;
 
-  background: transparent;
+  background: #111;
 
-  border: none;
-  border-bottom: 1px solid #111;
+  border: 1px solid #111;
 
-  color: #111 !important;
+  border-radius: 100px;
+
+  color: #fff !important;
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -438,8 +452,10 @@ h3 {
 }
 
 .next-button:hover {
-  opacity: 0.5;
+  background: #fff;
+  color: #111 !important;
 }
+
 
 /* QUIZ RESULT */
 
@@ -481,6 +497,7 @@ h3 {
   line-height: 1.7;
 }
 
+
 /* RETURN */
 
 .return {
@@ -504,6 +521,7 @@ h3 {
   letter-spacing: 2px;
   font-weight: 600;
 }
+
 
 /* FOOTER */
 
@@ -531,6 +549,7 @@ footer a {
 footer a:hover {
   opacity: 0.5;
 }
+
 
 /* MOBILE */
 
@@ -593,12 +612,14 @@ footer a:hover {
     align-items: flex-start;
     gap: 25px;
   }
+
 }
 
 </style>
 </head>
 
 <body>
+
 
 <!-- NAVIGATION -->
 
@@ -610,10 +631,23 @@ footer a:hover {
   </a>
 
   <div class="links">
-    <a href="index.html#about">ABOUT</a>
-    <a href="skin101.html">LEARN</a>
-    <a href="index.html#impact">IMPACT</a>
-    <a href="index.html#donate">DONATE</a>
+
+    <a href="index.html#about">
+      ABOUT
+    </a>
+
+    <a href="skin101.html">
+      LEARN
+    </a>
+
+    <a href="index.html#impact">
+      IMPACT
+    </a>
+
+    <a href="index.html#donate">
+      DONATE
+    </a>
+
   </div>
 
 </nav>
@@ -703,8 +737,6 @@ footer a:hover {
 
   <div class="layers">
 
-    <!-- EPIDERMIS -->
-
     <div class="layer">
 
       <div class="layer-number">
@@ -724,8 +756,6 @@ footer a:hover {
     </div>
 
 
-    <!-- DERMIS -->
-
     <div class="layer">
 
       <div class="layer-number">
@@ -744,8 +774,6 @@ footer a:hover {
 
     </div>
 
-
-    <!-- HYPODERMIS -->
 
     <div class="layer">
 
@@ -826,7 +854,7 @@ footer a:hover {
 
     <!-- QUESTION 1 -->
 
-    <div class="question-card active" data-question="1">
+    <div class="question-card active">
 
       <div class="question-number">
         QUESTION 01 · 04
@@ -867,7 +895,7 @@ footer a:hover {
 
     <!-- QUESTION 2 -->
 
-    <div class="question-card" data-question="2">
+    <div class="question-card">
 
       <div class="question-number">
         QUESTION 02 · 04
@@ -908,7 +936,7 @@ footer a:hover {
 
     <!-- QUESTION 3 -->
 
-    <div class="question-card" data-question="3">
+    <div class="question-card">
 
       <div class="question-number">
         QUESTION 03 · 04
@@ -949,7 +977,7 @@ footer a:hover {
 
     <!-- QUESTION 4 -->
 
-    <div class="question-card" data-question="4">
+    <div class="question-card">
 
       <div class="question-number">
         QUESTION 04 · 04
@@ -1002,11 +1030,14 @@ footer a:hover {
 
       <p>
         You finished Skin 101. Your participation
-        has been added to the Pre-Derm Society impact
-        counter.
+        has been added to the Pre-Derm Society
+        impact counters.
       </p>
 
-      <a href="index.html#impact" class="return-button">
+      <a
+        href="index.html#impact"
+        class="return-button"
+      >
         VIEW OUR IMPACT →
       </a>
 
@@ -1029,7 +1060,10 @@ footer a:hover {
     Keep learning.
   </h2>
 
-  <a href="index.html" class="return-button">
+  <a
+    href="index.html"
+    class="return-button"
+  >
     RETURN HOME →
   </a>
 
@@ -1074,58 +1108,74 @@ footer a:hover {
 <script>
 
 /* =========================================
-   QUIZ SYSTEM
+   QUIZ
    ========================================= */
 
 const questions = document.querySelectorAll(".question-card");
+
 const result = document.querySelector(".quiz-result");
 
 let currentQuestion = 0;
+
 let score = 0;
 
+let quizCompleted = false;
 
-/* -----------------------------------------
-   ANSWER BUTTONS
-   ----------------------------------------- */
 
-questions.forEach((questionCard, questionIndex) => {
+/* =========================================
+   ANSWERS
+   ========================================= */
 
-  const answers = questionCard.querySelectorAll(".answer");
-  const feedback = questionCard.querySelector(".feedback");
-  const nextButton = questionCard.querySelector(".next-button");
+questions.forEach((questionCard) => {
+
+  const answers =
+    questionCard.querySelectorAll(".answer");
+
+  const feedback =
+    questionCard.querySelector(".feedback");
+
+  const nextButton =
+    questionCard.querySelector(".next-button");
+
 
   answers.forEach(answer => {
 
     answer.addEventListener("click", function() {
 
-      /* IMPORTANT:
-         If this question has already been answered,
-         do absolutely nothing.
-      */
+      /* STOP if this question was already answered */
 
-      if (questionCard.classList.contains("answered")) {
+      if (
+        questionCard.classList.contains("answered")
+      ) {
         return;
       }
 
-      /* LOCK THE QUESTION */
+
+      /* LOCK QUESTION */
 
       questionCard.classList.add("answered");
 
+
       answers.forEach(button => {
+
         button.classList.add("locked");
+
       });
 
 
       /* CHECK ANSWER */
 
-      const isCorrect = this.dataset.correct === "true";
+      const isCorrect =
+        this.dataset.correct === "true";
 
 
       if (isCorrect) {
 
         this.classList.add("correct");
 
-        feedback.textContent = "CORRECT ✓";
+        feedback.textContent =
+          "CORRECT ✓";
+
         feedback.classList.add(
           "show",
           "correct-text"
@@ -1137,7 +1187,8 @@ questions.forEach((questionCard, questionIndex) => {
 
         this.classList.add("incorrect");
 
-        feedback.textContent = "INCORRECT";
+        feedback.textContent =
+          "INCORRECT";
 
         feedback.classList.add(
           "show",
@@ -1145,12 +1196,16 @@ questions.forEach((questionCard, questionIndex) => {
         );
 
 
-        /* Show the correct answer */
+        /* Show correct answer */
 
         answers.forEach(button => {
 
-          if (button.dataset.correct === "true") {
+          if (
+            button.dataset.correct === "true"
+          ) {
+
             button.classList.add("correct");
+
           }
 
         });
@@ -1164,12 +1219,13 @@ questions.forEach((questionCard, questionIndex) => {
 
     });
 
+
   });
 
 
-  /* -----------------------------------------
+  /* =========================================
      NEXT QUESTION
-     ----------------------------------------- */
+     ========================================= */
 
   nextButton.addEventListener("click", function() {
 
@@ -1177,28 +1233,56 @@ questions.forEach((questionCard, questionIndex) => {
 
     currentQuestion++;
 
-    if (currentQuestion < questions.length) {
 
-      questions[currentQuestion].classList.add("active");
+    if (
+      currentQuestion < questions.length
+    ) {
+
+      questions[
+        currentQuestion
+      ].classList.add("active");
+
 
       window.scrollTo({
-        top: document.querySelector(".quiz").offsetTop - 80,
+
+        top:
+          document.querySelector(".quiz")
+            .offsetTop - 80,
+
         behavior: "smooth"
+
       });
 
     } else {
 
-      /* QUIZ FINISHED */
+      /* QUIZ COMPLETE */
 
-      document.getElementById("score").textContent = score;
+      document.getElementById(
+        "score"
+      ).textContent = score;
+
 
       result.classList.add("show");
 
-      updateImpact();
+
+      /* UPDATE IMPACT ONLY ONCE */
+
+      if (!quizCompleted) {
+
+        updateImpact();
+
+        quizCompleted = true;
+
+      }
+
 
       window.scrollTo({
-        top: result.offsetTop - 80,
+
+        top:
+          result.offsetTop - 80,
+
         behavior: "smooth"
+
       });
 
     }
@@ -1209,57 +1293,80 @@ questions.forEach((questionCard, questionIndex) => {
 
 
 /* =========================================
-   IMPACT COUNTER
+   IMPACT COUNTERS
    ========================================= */
 
 function updateImpact() {
 
-  /*
-    Starting numbers:
-
-    People Impacted = 38
-    Lessons Taught = 2
-
-    Every completed quiz adds:
-
-    +1 People Impacted
-    +1 Lessons Taught
-  */
-
   let peopleImpacted =
     parseInt(
-      localStorage.getItem("peopleImpacted")
+      localStorage.getItem(
+        "peopleImpacted"
+      )
     );
+
+
+  let peopleEducated =
+    parseInt(
+      localStorage.getItem(
+        "peopleEducated"
+      )
+    );
+
 
   let lessonsTaught =
     parseInt(
-      localStorage.getItem("lessonsTaught")
+      localStorage.getItem(
+        "lessonsTaught"
+      )
     );
 
 
-  /* If numbers don't exist yet, start at 38 and 2 */
+  /* Starting values */
 
   if (isNaN(peopleImpacted)) {
+
     peopleImpacted = 38;
+
   }
+
+
+  if (isNaN(peopleEducated)) {
+
+    peopleEducated = 38;
+
+  }
+
 
   if (isNaN(lessonsTaught)) {
+
     lessonsTaught = 2;
+
   }
 
 
-  /* Increase numbers */
+  /* ONE COMPLETED LESSON */
 
   peopleImpacted++;
+
+  peopleEducated++;
+
   lessonsTaught++;
 
 
-  /* Save them */
+  /* SAVE */
 
   localStorage.setItem(
     "peopleImpacted",
     peopleImpacted
   );
+
+
+  localStorage.setItem(
+    "peopleEducated",
+    peopleEducated
+  );
+
 
   localStorage.setItem(
     "lessonsTaught",
@@ -1270,11 +1377,13 @@ function updateImpact() {
 
 
 /* =========================================
-   INITIALIZE COUNTERS
+   INITIAL VALUES
    ========================================= */
 
 if (
-  localStorage.getItem("peopleImpacted") === null
+  localStorage.getItem(
+    "peopleImpacted"
+  ) === null
 ) {
 
   localStorage.setItem(
@@ -1284,8 +1393,25 @@ if (
 
 }
 
+
 if (
-  localStorage.getItem("lessonsTaught") === null
+  localStorage.getItem(
+    "peopleEducated"
+  ) === null
+) {
+
+  localStorage.setItem(
+    "peopleEducated",
+    "38"
+  );
+
+}
+
+
+if (
+  localStorage.getItem(
+    "lessonsTaught"
+  ) === null
 ) {
 
   localStorage.setItem(
