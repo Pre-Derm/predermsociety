@@ -1,36 +1,51 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medicine 101 | Pre-Derm Society</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}a{color:inherit;text-decoration:none}
-nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:100}.logo{font-size:18px;font-weight:700}.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}.nav-links a:hover{opacity:.55}.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}.join-btn:hover{background:#171717;color:white}
-.hero{text-align:center;padding:100px 7% 80px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}h1{font-size:clamp(48px,8vw,82px);line-height:1;letter-spacing:-4px;margin-bottom:25px}.hero p{max-width:650px;margin:auto;color:#666;font-size:17px}
-section{padding:70px 7%}.container{max-width:950px;margin:auto}.section-heading{margin-bottom:35px}.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-top:10px}p{color:#666}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px}.card h3{font-size:22px;margin-bottom:10px}.number{font-size:11px;color:#999;margin-bottom:8px}
-.quiz{background:#f8f8f8;border-radius:30px;padding:45px}.question{background:#fff;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}.question h3{font-size:17px;margin-bottom:15px}label{display:block;padding:11px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}label:hover{background:#f7f7f7}input{margin-right:8px}button{border:0;background:#171717;color:#fff;padding:13px 23px;border-radius:30px;font-family:inherit;font-weight:600;cursor:pointer}#result{margin-top:20px;font-weight:700}.back{text-align:center;padding-top:20px}.back a{border:1px solid #ddd;padding:12px 20px;border-radius:30px;font-size:14px}footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
-@media(max-width:700px){.nav-links{gap:12px}.nav-links a:not(.join-btn){display:none}.cards{grid-template-columns:1fr}h1{letter-spacing:-2.5px}.quiz{padding:25px}}
-</style></head>
+nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:1000}.logo{font-size:18px;font-weight:700}.nav-links{display:flex;gap:28px;align-items:center;font-size:14px}.nav-item{position:relative}.nav-button{border:0;background:none;font-family:inherit;font-size:14px;cursor:pointer}.dropdown{position:absolute;top:35px;left:-18px;width:245px;background:#fff;border:1px solid #e7e7e7;border-radius:18px;padding:10px;box-shadow:0 15px 40px rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:block;padding:11px 13px;border-radius:10px;font-size:13px}.dropdown a:hover{background:#f7f7f7}.dropdown-title{padding:8px 13px 6px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#999}.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}.join-btn:hover{background:#171717;color:#fff}
+.hero{min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 7%}.hero-content{max-width:800px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:28px}.hero p{max-width:620px;margin:auto;color:#666;font-size:17px}
+section{padding:90px 7%}.container{max-width:950px;margin:auto}.section-heading{max-width:700px;margin-bottom:45px}.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}.section-heading h2{font-size:clamp(34px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px}.section-heading p{margin-top:15px;color:#777}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;min-height:210px}.card-number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:8px}.card h3{font-size:22px;margin-bottom:8px}.card p{font-size:14px;color:#777}
+.quiz{background:#f8f8f8;border-radius:30px;padding:50px}.question{background:#fff;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}.question h3{font-size:17px;margin-bottom:15px}.answer{display:block;padding:12px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}.answer input{margin-right:8px}.correct{border-color:#171717!important;background:#f3f3f3!important}.incorrect{border-color:#aaa!important;background:#fafafa!important}.feedback{display:none;margin-top:12px;font-size:13px;font-weight:600}.submit-btn{margin-top:10px;border:0;background:#171717;color:#fff;padding:13px 23px;border-radius:30px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer}.submit-btn:disabled{opacity:.5;cursor:not-allowed}#result{margin-top:25px;font-size:18px;font-weight:700}.back{text-align:center;padding:20px 7% 70px}.back a{display:inline-block;border:1px solid #ddd;border-radius:30px;padding:12px 20px;font-size:14px;font-weight:600}footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+@media(max-width:850px){.cards{grid-template-columns:1fr}.nav-item,.nav-links>a:not(.join-btn){display:none}.quiz{padding:25px}}
+</style>
+</head>
 <body>
-<nav><a href="index.html" class="logo">Pre-Derm Society</a><div class="nav-links"><a href="index.html#lessons">Learn</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a><a href="join.html" class="join-btn">Join Now</a></div></nav>
-<header class="hero"><div class="eyebrow">Lesson 06 · Medicine</div><h1>Medicine 101</h1><p>Get introduced to healthcare, medical specialties, clinical thinking, and the people who work together to care for patients.</p></header>
-<section><div class="container"><div class="section-heading"><span>01 — Learn</span><h2>How medicine works.</h2></div><div class="cards">
-<div class="card"><div class="number">01</div><h3>Patient care</h3><p>Healthcare professionals gather information, communicate with patients and use evidence to help guide care.</p></div>
-<div class="card"><div class="number">02</div><h3>Medical specialties</h3><p>Medicine includes many specialties, including dermatology, cardiology, pediatrics, surgery and many others.</p></div>
-<div class="card"><div class="number">03</div><h3>Clinical thinking</h3><p>Clinicians combine a patient's history, physical findings, tests and scientific evidence when considering possible explanations.</p></div>
-<div class="card"><div class="number">04</div><h3>Teamwork</h3><p>Modern healthcare often involves physicians, nurses, pharmacists, therapists, technicians and many other professionals working together.</p></div>
+<nav>
+<a href="index.html" class="logo">Pre-Derm Society</a>
+<div class="nav-links">
+<div class="nav-item"><button class="nav-button">Learn ▾</button><div class="dropdown"><div class="dropdown-title">Lessons</div><a href="skin101.html">🔎 Skin 101</a><a href="cleansing.html">🫧 Cleansing</a><a href="moisturizing.html">💧 Moisturizing</a><a href="sun-protection.html">☀️ Sun Protection</a><a href="acne.html">🧴 Acne</a><a href="medicine101.html">🩺 Medicine 101</a></div></div>
+<div class="nav-item"><button class="nav-button">Resources ▾</button><div class="dropdown"><div class="dropdown-title">Student Resources</div><a href="medical-careers.html">💻 Medical Careers</a><a href="project-ideas.html">💡 Project Ideas</a><a href="research-guide.html">🧪 Research Guide</a><a href="read-a-paper.html">📄 Read a Paper</a><a href="opportunities.html">🔬 Research Opportunities</a><a href="student-resources.html">📚 Student Resources</a></div></div>
+<a href="index.html#contact">Contact</a><a href="join.html" class="join-btn">Join Now</a>
+</div></nav>
+
+<header class="hero"><div class="hero-content"><div class="eyebrow">Lesson 06 · Medicine</div><h1>Medicine 101</h1><p>Get introduced to healthcare, medical specialties, clinical thinking, and the world of medicine.</p></div></header>
+
+<section><div class="container"><div class="section-heading"><span>01 — Learn</span><h2>Exploring medicine.</h2><p>Medicine combines science, evidence, communication, and problem-solving to support human health.</p></div>
+<div class="cards">
+<div class="card"><div class="card-number">01</div><h3>Medical Specialties</h3><p>Doctors can specialize in different areas, including dermatology, pediatrics, cardiology, surgery, and many others.</p></div>
+<div class="card"><div class="card-number">02</div><h3>Clinical Thinking</h3><p>Healthcare professionals use observations, patient information, scientific knowledge, and evidence to make decisions.</p></div>
+<div class="card"><div class="card-number">03</div><h3>Evidence</h3><p>Medical decisions can be informed by scientific research, clinical experience, and individual patient circumstances.</p></div>
+<div class="card"><div class="card-number">04</div><h3>Communication</h3><p>Clear communication is an important part of healthcare, from listening to patients to explaining information.</p></div>
 </div></div></section>
-<section><div class="container quiz"><div class="section-heading"><span>02 — Knowledge Check</span><h2>Quick quiz</h2></div>
+
+<section><div class="container"><div class="quiz"><div class="section-heading"><span>02 — Knowledge Check</span><h2>Test your knowledge.</h2><p>Your answers lock after submission.</p></div>
 <form>
-<div class="question"><h3>1. What is a medical specialty?</h3><label><input type="radio" name="q1" value="a"> A specific area of medicine</label><label><input type="radio" name="q1" value="b"> A type of hospital room</label><label><input type="radio" name="q1" value="c"> A medical device</label></div>
-<div class="question"><h3>2. What can clinicians use when thinking about a patient's condition?</h3><label><input type="radio" name="q2" value="a"> Only guesses</label><label><input type="radio" name="q2" value="b"> History, findings, tests and evidence</label><label><input type="radio" name="q2" value="c"> Social media posts only</label></div>
-<div class="question"><h3>3. Why is teamwork important in healthcare?</h3><label><input type="radio" name="q3" value="a"> One person must do every job</label><label><input type="radio" name="q3" value="b"> It eliminates the need for communication</label><label><input type="radio" name="q3" value="c"> Different professionals contribute different skills</label></div>
-<button type="button" onclick="checkQuiz()">Check Answers</button><div id="result"></div>
-</form></div></section>
-<div class="back"><a href="index.html">← Back to Lessons</a></div><footer>© 2026 Pre-Derm Society · Student-led education</footer>
-<script>function checkQuiz(){let s=0;if(document.querySelector('input[name="q1"]:checked')?.value==="a")s++;if(document.querySelector('input[name="q2"]:checked')?.value==="b")s++;if(document.querySelector('input[name="q3"]:checked')?.value==="c")s++;document.getElementById("result").textContent="You scored "+s+"/3!";}</script>
-</body></html>
-```
+<div class="question"><h3>1. What is a medical specialty?</h3><label class="answer"><input type="radio" name="q1" value="a"> A focused area of medicine</label><label class="answer"><input type="radio" name="q1" value="b"> A type of school subject only</label><label class="answer"><input type="radio" name="q1" value="c"> A type of exercise</label><div class="feedback"></div></div>
+<div class="question"><h3>2. What can help healthcare professionals make decisions?</h3><label class="answer"><input type="radio" name="q2" value="a"> Evidence and patient information</label><label class="answer"><input type="radio" name="q2" value="b"> Guessing only</label><label class="answer"><input type="radio" name="q2" value="c"> Social media popularity</label><div class="feedback"></div></div>
+<div class="question"><h3>3. Why is communication important in healthcare?</h3><label class="answer"><input type="radio" name="q3" value="a"> It helps professionals understand and explain information</label><label class="answer"><input type="radio" name="q3" value="b"> It replaces science</label><label class="answer"><input type="radio" name="q3" value="c"> It eliminates all uncertainty</label><div class="feedback"></div></div>
+<button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button><div id="result"></div>
+</form></div></div></section>
+<div class="back"><a href="index.html">← Back to Lessons</a></div>
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
+<script>
+function submitQuiz(){const answers=["a","a","a"];let score=0;document.querySelectorAll(".question").forEach((q,i)=>{const selected=q.querySelector("input:checked"),inputs=q.querySelectorAll("input"),f=q.querySelector(".feedback");inputs.forEach(x=>{x.disabled=true;if(x.value===answers[i])x.parentElement.classList.add("correct");if(selected&&x.value===selected.value&&selected.value!==answers[i])x.parentElement.classList.add("incorrect")});f.style.display="block";if(selected&&selected.value===answers[i]){score++;f.textContent="✓ Correct!"}else f.textContent="✕ Incorrect. The correct answer is highlighted above."});document.getElementById("result").textContent="Your score: "+score+"/3";document.querySelector(".submit-btn").disabled=true}
+</script>
+</body>
+</html>
