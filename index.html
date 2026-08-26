@@ -3,9 +3,7 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Pre-Derm Society</title>
@@ -180,6 +178,61 @@
       max-width: 850px;
     }
 
+    /* SKIN JOURNEY */
+
+    .journey {
+      min-height: 75vh;
+      background: #faf9f6;
+    }
+
+    .journey-content {
+      max-width: 900px;
+    }
+
+    .journey-statement {
+      max-width: 750px;
+      margin-top: 55px;
+      font-size: 22px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 80px;
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
+    }
+
+    .journey-box {
+      min-height: 230px;
+      padding: 35px;
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
+      background: #faf9f6;
+    }
+
+    .journey-box-number {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #777;
+    }
+
+    .journey-box h3 {
+      font-size: 32px;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      font-weight: 400;
+      margin: 45px 0 20px;
+    }
+
+    .journey-box p {
+      color: #666;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
     /* VISUAL SECTION */
 
     .photo-section {
@@ -234,71 +287,23 @@
       margin: 10px 0 20px;
     }
 
-    /* SKIN JOURNEY */
+    /* LESSON ROADMAP */
 
-    .journey {
+    .roadmap {
       background: #faf9f6;
     }
 
-    .journey-intro {
-      max-width: 750px;
-    }
-
-    .journey-progress {
-      margin-top: 60px;
-      max-width: 850px;
-    }
-
-    .journey-progress-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #777;
-      margin-bottom: 12px;
-    }
-
-    .journey-progress-bar {
-      width: 100%;
-      height: 2px;
-      background: #dedcd8;
-    }
-
-    .journey-progress-fill {
-      width: 8.33%;
-      height: 100%;
-      background: #111;
-    }
-
-    .journey-level {
-      margin-top: 100px;
-    }
-
-    .journey-level-number {
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: #777;
-      margin-bottom: 15px;
-    }
-
-    .journey-level-title {
-      font-size: clamp(40px, 6vw, 70px);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      font-weight: 400;
-      margin: 0 0 40px;
-    }
-
-    .journey-grid {
+    .roadmap-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 70px;
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
-    .journey-card {
-      min-height: 280px;
-      padding: 35px;
+    .roadmap-card {
+      min-height: 300px;
+      padding: 40px;
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
       background: #faf9f6;
@@ -307,56 +312,32 @@
       justify-content: space-between;
     }
 
-    .journey-card-number {
-      font-size: 9px;
+    .roadmap-number {
+      font-size: 10px;
       letter-spacing: 3px;
       color: #777;
     }
 
-    .journey-card h4 {
-      font-size: 32px;
+    .roadmap-card h3 {
+      font-size: 42px;
       line-height: 0.95;
-      letter-spacing: -2px;
+      letter-spacing: -3px;
       font-weight: 400;
-      margin: 35px 0 15px;
+      margin: 45px 0 20px;
     }
 
-    .journey-card p {
+    .roadmap-card p {
       color: #666;
       line-height: 1.7;
       font-size: 14px;
-      margin: 0;
+      max-width: 480px;
     }
 
-    .journey-card-link {
-      display: inline-block;
-      margin-top: 25px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #111;
-      text-decoration: none;
-      color: #111;
+    .coming-soon {
       font-size: 9px;
-      font-weight: bold;
       letter-spacing: 2px;
-      width: fit-content;
-    }
-
-    .journey-card-link:hover {
-      opacity: 0.5;
-    }
-
-    .journey-card.locked {
-      background: #efeee9;
-    }
-
-    .journey-card.locked .journey-card-link {
-      border-bottom: none;
       color: #777;
-      cursor: default;
-    }
-
-    .journey-card.locked .journey-card-link:hover {
-      opacity: 1;
+      margin-top: 25px;
     }
 
     /* IMPACT */
@@ -493,12 +474,8 @@
         grid-template-columns: 1fr;
       }
 
-      .journey-card {
-        min-height: 250px;
-      }
-
-      .journey-level {
-        margin-top: 75px;
+      .roadmap-grid {
+        grid-template-columns: 1fr;
       }
 
       .impact-grid {
@@ -529,15 +506,25 @@
 
     <div class="links">
 
-      <a href="#about">ABOUT</a>
+      <a href="#about">
+        ABOUT
+      </a>
 
-      <a href="skin101.html">LEARN</a>
+      <a href="skin101.html">
+        LEARN
+      </a>
 
-      <a href="#journey">JOURNEY</a>
+      <a href="#journey">
+        JOURNEY
+      </a>
 
-      <a href="#impact">IMPACT</a>
+      <a href="#impact">
+        IMPACT
+      </a>
 
-      <a href="#donate">DONATE</a>
+      <a href="#donate">
+        DONATE
+      </a>
 
     </div>
 
@@ -608,6 +595,97 @@
   </section>
 
 
+  <!-- SKIN JOURNEY -->
+
+  <section class="journey" id="journey">
+
+    <div class="journey-content">
+
+      <div class="label">
+        OUR MISSION · THE SKIN JOURNEY
+      </div>
+
+      <h2>
+        Everyone has<br>
+        a skin journey.
+      </h2>
+
+      <p class="journey-statement">
+        The Skin Journey is our mission to make
+        dermatology education accessible, understandable,
+        and meaningful — from the first questions about
+        healthy skin to discovering the science behind
+        dermatologic conditions and care.
+      </p>
+
+      <p class="text">
+        Pre-Derm Society is not about telling people
+        how they should look. It is about helping people
+        understand the organ they live in every day.
+      </p>
+
+      <div class="journey-grid">
+
+        <div class="journey-box">
+
+          <div class="journey-box-number">
+            01 · LEARN
+          </div>
+
+          <h3>
+            Understand
+          </h3>
+
+          <p>
+            Learn the science behind skin, its structures,
+            functions, and the biology that makes it unique.
+          </p>
+
+        </div>
+
+
+        <div class="journey-box">
+
+          <div class="journey-box-number">
+            02 · EXPLORE
+          </div>
+
+          <h3>
+            Discover
+          </h3>
+
+          <p>
+            Explore topics in dermatology and understand
+            how scientists and physicians study skin health.
+          </p>
+
+        </div>
+
+
+        <div class="journey-box">
+
+          <div class="journey-box-number">
+            03 · SHARE
+          </div>
+
+          <h3>
+            Teach
+          </h3>
+
+          <p>
+            Turn what you learn into educational resources
+            that can be shared with students and communities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- VISUAL SECTION -->
 
   <section class="photo-section">
@@ -648,6 +726,7 @@
       exploring the deeper world of dermatology.
     </p>
 
+
     <div class="lesson-card">
 
       <div class="label">
@@ -672,468 +751,208 @@
   </section>
 
 
-  <!-- SKIN JOURNEY -->
+  <!-- LESSON ROADMAP -->
 
-  <section class="journey" id="journey">
+  <section class="roadmap" id="lessons">
 
-    <div class="journey-intro">
-
-      <div class="label">
-        THE SKIN JOURNEY
-      </div>
-
-      <h2>
-        Learn skin.<br>
-        Step by step.
-      </h2>
-
-      <p class="text">
-        The Skin Journey is a student-led introduction
-        to dermatology and skin science. Start with the
-        fundamentals, then build your understanding
-        one lesson at a time.
-      </p>
-
+    <div class="label">
+      THE SKIN JOURNEY · LESSON ROADMAP
     </div>
 
+    <h2>
+      Where the<br>
+      journey goes.
+    </h2>
 
-    <!-- PROGRESS -->
-
-    <div class="journey-progress">
-
-      <div class="journey-progress-label">
-
-        <span>
-          YOUR JOURNEY
-        </span>
-
-        <span>
-          1 / 12 LESSONS
-        </span>
-
-      </div>
-
-      <div class="journey-progress-bar">
-
-        <div class="journey-progress-fill"></div>
-
-      </div>
-
-    </div>
+    <p class="text">
+      Pre-Derm Society is building a growing educational
+      series that takes students from the foundations
+      of skin science into the wider world of dermatology.
+    </p>
 
 
-    <!-- LEVEL 01 -->
-
-    <div class="journey-level">
-
-      <div class="journey-level-number">
-        LEVEL 01 · UNDERSTAND YOUR SKIN
-      </div>
-
-      <h3 class="journey-level-title">
-        The foundation.
-      </h3>
-
-      <div class="journey-grid">
+    <div class="roadmap-grid">
 
 
-        <!-- LESSON 01 -->
+      <!-- LESSON 01 -->
 
-        <div class="journey-card">
+      <div class="roadmap-card">
 
-          <div>
+        <div>
 
-            <div class="journey-card-number">
-              LESSON 01
-            </div>
-
-            <h4>
-              Skin 101
-            </h4>
-
-            <p>
-              Learn the major layers of skin,
-              their functions, and why skin
-              acts as an important protective barrier.
-            </p>
-
+          <div class="roadmap-number">
+            LESSON 01
           </div>
 
-          <a
-            href="skin101.html"
-            class="journey-card-link"
-          >
-            START LESSON →
-          </a>
+          <h3>
+            The Science<br>
+            of Skin
+          </h3>
+
+          <p>
+            Learn about the major layers of skin,
+            their functions, and why the skin
+            is such an important organ.
+          </p>
 
         </div>
 
+        <a href="skin101.html" class="button">
+          BEGIN LESSON →
+        </a>
 
-        <!-- LESSON 02 -->
+      </div>
 
-        <div class="journey-card locked">
 
-          <div>
+      <!-- LESSON 02 -->
 
-            <div class="journey-card-number">
-              LESSON 02
-            </div>
+      <div class="roadmap-card">
 
-            <h4>
-              The Skin Barrier
-            </h4>
+        <div>
 
-            <p>
-              Explore how the skin barrier works
-              and why protecting it matters.
-            </p>
-
+          <div class="roadmap-number">
+            LESSON 02
           </div>
 
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
+          <h3>
+            Skin<br>
+            Barrier
+          </h3>
+
+          <p>
+            Explore the skin barrier and how it
+            helps protect the body from the
+            outside environment.
+          </p>
 
         </div>
 
-
-        <!-- LESSON 03 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 03
-            </div>
-
-            <h4>
-              Hydration & Moisture
-            </h4>
-
-            <p>
-              Understand the difference between
-              hydration and moisture in the skin.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
+        <div class="coming-soon">
+          COMING SOON
         </div>
 
       </div>
 
-    </div>
 
+      <!-- LESSON 03 -->
 
-    <!-- LEVEL 02 -->
+      <div class="roadmap-card">
 
-    <div class="journey-level">
+        <div>
 
-      <div class="journey-level-number">
-        LEVEL 02 · COMMON SKIN CONDITIONS
-      </div>
-
-      <h3 class="journey-level-title">
-        Understand conditions.
-      </h3>
-
-      <div class="journey-grid">
-
-
-        <!-- LESSON 04 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 04
-            </div>
-
-            <h4>
-              Acne 101
-            </h4>
-
-            <p>
-              Learn the biology behind acne
-              and why it develops.
-            </p>
-
+          <div class="roadmap-number">
+            LESSON 03
           </div>
 
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
+          <h3>
+            Acne<br>
+            Science
+          </h3>
+
+          <p>
+            Learn the biology behind acne and
+            why understanding the science matters
+            when discussing treatment and care.
+          </p>
 
         </div>
 
-
-        <!-- LESSON 05 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 05
-            </div>
-
-            <h4>
-              Eczema & Sensitive Skin
-            </h4>
-
-            <p>
-              Explore inflammation, the skin
-              barrier, and sensitive skin.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
-        </div>
-
-
-        <!-- LESSON 06 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 06
-            </div>
-
-            <h4>
-              Sun & Your Skin
-            </h4>
-
-            <p>
-              Discover how ultraviolet radiation
-              interacts with the skin.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
+        <div class="coming-soon">
+          COMING SOON
         </div>
 
       </div>
 
-    </div>
 
+      <!-- LESSON 04 -->
 
-    <!-- LEVEL 03 -->
+      <div class="roadmap-card">
 
-    <div class="journey-level">
+        <div>
 
-      <div class="journey-level-number">
-        LEVEL 03 · DERMATOLOGY
-      </div>
-
-      <h3 class="journey-level-title">
-        Explore the field.
-      </h3>
-
-      <div class="journey-grid">
-
-
-        <!-- LESSON 07 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 07
-            </div>
-
-            <h4>
-              What Does a Dermatologist Do?
-            </h4>
-
-            <p>
-              Explore the different areas of
-              modern dermatology.
-            </p>
-
+          <div class="roadmap-number">
+            LESSON 04
           </div>
 
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
+          <h3>
+            Sun<br>
+            & Skin
+          </h3>
+
+          <p>
+            Explore ultraviolet radiation, skin
+            protection, and the science of how
+            sunlight interacts with skin.
+          </p>
 
         </div>
 
-
-        <!-- LESSON 08 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 08
-            </div>
-
-            <h4>
-              Dermatology Treatments
-            </h4>
-
-            <p>
-              Learn how dermatologists approach
-              common skin conditions.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
-        </div>
-
-
-        <!-- LESSON 09 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 09
-            </div>
-
-            <h4>
-              Skincare Ingredients
-            </h4>
-
-            <p>
-              Learn the science behind common
-              skincare ingredients.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
+        <div class="coming-soon">
+          COMING SOON
         </div>
 
       </div>
 
-    </div>
 
+      <!-- LESSON 05 -->
 
-    <!-- LEVEL 04 -->
+      <div class="roadmap-card">
 
-    <div class="journey-level">
+        <div>
 
-      <div class="journey-level-number">
-        LEVEL 04 · EXPLORE
-      </div>
-
-      <h3 class="journey-level-title">
-        Think like a student scientist.
-      </h3>
-
-      <div class="journey-grid">
-
-
-        <!-- LESSON 10 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 10
-            </div>
-
-            <h4>
-              Genetics & Skin
-            </h4>
-
-            <p>
-              Explore how genetics can influence
-              skin and dermatologic conditions.
-            </p>
-
+          <div class="roadmap-number">
+            LESSON 05
           </div>
 
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
+          <h3>
+            Dermatology<br>
+            Conditions
+          </h3>
+
+          <p>
+            Begin exploring common dermatologic
+            conditions and the science behind
+            how they affect the skin.
+          </p>
 
         </div>
 
-
-        <!-- LESSON 11 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 11
-            </div>
-
-            <h4>
-              Dermatology Case Studies
-            </h4>
-
-            <p>
-              Practice thinking through
-              age-appropriate dermatology cases.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
-        </div>
-
-
-        <!-- LESSON 12 -->
-
-        <div class="journey-card locked">
-
-          <div>
-
-            <div class="journey-card-number">
-              LESSON 12
-            </div>
-
-            <h4>
-              Dermatology Careers
-            </h4>
-
-            <p>
-              Discover the people, science,
-              and careers behind dermatology.
-            </p>
-
-          </div>
-
-          <div class="journey-card-link">
-            COMING SOON
-          </div>
-
+        <div class="coming-soon">
+          COMING SOON
         </div>
 
       </div>
+
+
+      <!-- LESSON 06 -->
+
+      <div class="roadmap-card">
+
+        <div>
+
+          <div class="roadmap-number">
+            LESSON 06
+          </div>
+
+          <h3>
+            A Career<br>
+            in Dermatology
+          </h3>
+
+          <p>
+            Discover what dermatologists study,
+            what their work involves, and the
+            different paths into the field.
+          </p>
+
+        </div>
+
+        <div class="coming-soon">
+          COMING SOON
+        </div>
+
+      </div>
+
 
     </div>
 
@@ -1161,10 +980,7 @@
 
     <!-- MAIN IMPACT NUMBER -->
 
-    <div
-      class="impact-number"
-      id="peopleImpactedMain"
-    >
+    <div class="impact-number" id="peopleImpactedMain">
       38
     </div>
 
@@ -1188,8 +1004,7 @@
 
         <div
           class="impact-box-number"
-          id="peopleImpacted"
-        >
+          id="peopleImpacted">
           38
         </div>
 
@@ -1210,8 +1025,7 @@
 
         <div
           class="impact-box-number"
-          id="meetingsDone"
-        >
+          id="meetingsDone">
           10
         </div>
 
@@ -1232,8 +1046,7 @@
 
         <div
           class="impact-box-number"
-          id="lessonsTaught"
-        >
+          id="lessonsTaught">
           2
         </div>
 
@@ -1445,13 +1258,16 @@
       "peopleImpacted"
     ).textContent = peopleImpacted;
 
+
     document.getElementById(
       "peopleImpactedMain"
     ).textContent = peopleImpacted;
 
+
     document.getElementById(
       "meetingsDone"
     ).textContent = meetingsDone;
+
 
     document.getElementById(
       "lessonsTaught"
