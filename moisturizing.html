@@ -1,35 +1,66 @@
-<!-- Same NAV as cleansing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moisturizing | Pre-Derm Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}a{color:inherit;text-decoration:none}
+nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:1000}.logo{font-size:18px;font-weight:700}.nav-links{display:flex;gap:28px;align-items:center;font-size:14px}.nav-item{position:relative}.nav-button{border:0;background:none;font-family:inherit;font-size:14px;cursor:pointer}.dropdown{position:absolute;top:35px;left:-18px;width:245px;background:#fff;border:1px solid #e7e7e7;border-radius:18px;padding:10px;box-shadow:0 15px 40px rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:block;padding:11px 13px;border-radius:10px;font-size:13px}.dropdown a:hover{background:#f7f7f7}.dropdown-title{padding:8px 13px 6px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#999}.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}.join-btn:hover{background:#171717;color:#fff}
+.hero{min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 7%}.hero-content{max-width:800px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:28px}.hero p{max-width:620px;margin:auto;color:#666;font-size:17px}
+section{padding:90px 7%}.container{max-width:950px;margin:auto}.section-heading{max-width:700px;margin-bottom:45px}.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}.section-heading h2{font-size:clamp(34px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px}.section-heading p{margin-top:15px;color:#777}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;min-height:210px}.card-number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:8px}.card h3{font-size:22px;margin-bottom:8px}.card p{font-size:14px;color:#777}
+.quiz{background:#f8f8f8;border-radius:30px;padding:50px}.question{background:#fff;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}.question h3{font-size:17px;margin-bottom:15px}.answer{display:block;padding:12px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}.answer input{margin-right:8px}.correct{border-color:#171717!important;background:#f3f3f3!important}.incorrect{border-color:#aaa!important;background:#fafafa!important}.feedback{display:none;margin-top:12px;font-size:13px;font-weight:600}.submit-btn{margin-top:10px;border:0;background:#171717;color:#fff;padding:13px 23px;border-radius:30px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer}.submit-btn:disabled{opacity:.5;cursor:not-allowed}#result{margin-top:25px;font-size:18px;font-weight:700}.back{text-align:center;padding:20px 7% 70px}.back a{display:inline-block;border:1px solid #ddd;border-radius:30px;padding:12px 20px;font-size:14px;font-weight:600}footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+@media(max-width:850px){.cards{grid-template-columns:1fr}.nav-item,.nav-links>a:not(.join-btn){display:none}.quiz{padding:25px}}
+</style>
+</head>
+<body>
+
 <nav>
-  <a href="index.html" class="logo">Pre-Derm Society</a>
-
-  <div class="nav-links">
-    <div class="nav-item">
-      <button class="nav-button">Learn ▾</button>
-      <div class="dropdown">
-        <div class="dropdown-title">Lessons</div>
-        <a href="skin101.html">🔎 Skin 101</a>
-        <a href="cleansing.html">🫧 Cleansing</a>
-        <a href="moisturizing.html">💧 Moisturizing</a>
-        <a href="sun-protection.html">☀️ Sun Protection</a>
-        <a href="acne.html">🧴 Acne</a>
-        <a href="medicine101.html">🩺 Medicine 101</a>
-      </div>
-    </div>
-
-    <div class="nav-item">
-      <button class="nav-button">Resources ▾</button>
-      <div class="dropdown">
-        <div class="dropdown-title">Student Resources</div>
-        <a href="medical-careers.html">💻 Medical Careers</a>
-        <a href="project-ideas.html">💡 Project Ideas</a>
-        <a href="research-guide.html">🧪 Research Guide</a>
-        <a href="read-a-paper.html">📄 Read a Paper</a>
-        <a href="opportunities.html">🔬 Research Opportunities</a>
-        <a href="student-resources.html">📚 Student Resources</a>
-      </div>
-    </div>
-
-    <a href="index.html#contact">Contact</a>
-    <a href="join.html" class="join-btn">Join Now</a>
-  </div>
+<a href="index.html" class="logo">Pre-Derm Society</a>
+<div class="nav-links">
+<div class="nav-item"><button class="nav-button">Learn ▾</button><div class="dropdown"><div class="dropdown-title">Lessons</div><a href="skin101.html">🔎 Skin 101</a><a href="cleansing.html">🫧 Cleansing</a><a href="moisturizing.html">💧 Moisturizing</a><a href="sun-protection.html">☀️ Sun Protection</a><a href="acne.html">🧴 Acne</a><a href="medicine101.html">🩺 Medicine 101</a></div></div>
+<div class="nav-item"><button class="nav-button">Resources ▾</button><div class="dropdown"><div class="dropdown-title">Student Resources</div><a href="medical-careers.html">💻 Medical Careers</a><a href="project-ideas.html">💡 Project Ideas</a><a href="research-guide.html">🧪 Research Guide</a><a href="read-a-paper.html">📄 Read a Paper</a><a href="opportunities.html">🔬 Research Opportunities</a><a href="student-resources.html">📚 Student Resources</a></div></div>
+<a href="index.html#contact">Contact</a><a href="join.html" class="join-btn">Join Now</a>
+</div>
 </nav>
+
+<header class="hero"><div class="hero-content"><div class="eyebrow">Lesson 03 · Skincare</div><h1>Moisturizing</h1><p>Explore hydration, moisturizers, ingredients, and the role of the skin barrier.</p></div></header>
+
+<section><div class="container"><div class="section-heading"><span>01 — Learn</span><h2>Understanding moisturizers.</h2><p>Moisturizers can help support the skin barrier and reduce water loss from the skin.</p></div>
+<div class="cards">
+<div class="card"><div class="card-number">01</div><h3>Hydration</h3><p>Water is important for healthy skin function. Moisturizing can help maintain the skin's water balance.</p></div>
+<div class="card"><div class="card-number">02</div><h3>Humectants</h3><p>Humectants are ingredients that help attract and hold water in the outer layers of the skin.</p></div>
+<div class="card"><div class="card-number">03</div><h3>Emollients</h3><p>Emollients help smooth the skin by filling spaces between skin cells.</p></div>
+<div class="card"><div class="card-number">04</div><h3>Occlusives</h3><p>Occlusives form a protective layer that can help reduce water loss from the skin.</p></div>
+</div></div></section>
+
+<section><div class="container"><div class="quiz"><div class="section-heading"><span>02 — Knowledge Check</span><h2>Test your knowledge.</h2><p>Submit once you're ready. Your answers will be locked.</p></div>
+<form>
+<div class="question"><h3>1. What is one purpose of moisturizer?</h3><label class="answer"><input type="radio" name="q1" value="a"> Help support the skin barrier</label><label class="answer"><input type="radio" name="q1" value="b"> Remove bones</label><label class="answer"><input type="radio" name="q1" value="c"> Produce blood</label><div class="feedback"></div></div>
+<div class="question"><h3>2. What do humectants help do?</h3><label class="answer"><input type="radio" name="q2" value="a"> Attract and hold water</label><label class="answer"><input type="radio" name="q2" value="b"> Remove hair</label><label class="answer"><input type="radio" name="q2" value="c"> Produce sweat</label><div class="feedback"></div></div>
+<div class="question"><h3>3. What can occlusives help reduce?</h3><label class="answer"><input type="radio" name="q3" value="a"> Water loss</label><label class="answer"><input type="radio" name="q3" value="b"> Blood flow</label><label class="answer"><input type="radio" name="q3" value="c"> Bone growth</label><div class="feedback"></div></div>
+<button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button><div id="result"></div>
+</form></div></div></section>
+
+<div class="back"><a href="index.html">← Back to Lessons</a></div>
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
+
+<script>
+function submitQuiz(){
+const answers=["a","a","a"];let score=0;
+document.querySelectorAll(".question").forEach((q,i)=>{
+const selected=q.querySelector("input:checked"),inputs=q.querySelectorAll("input"),feedback=q.querySelector(".feedback");
+inputs.forEach(input=>{input.disabled=true;if(input.value===answers[i])input.parentElement.classList.add("correct");if(selected&&input.value===selected.value&&selected.value!==answers[i])input.parentElement.classList.add("incorrect")});
+feedback.style.display="block";
+if(selected&&selected.value===answers[i]){score++;feedback.textContent="✓ Correct!"}else{feedback.textContent="✕ Incorrect. The correct answer is highlighted above."}
+});
+document.getElementById("result").textContent="Your score: "+score+"/3";
+document.querySelector(".submit-btn").disabled=true;
+}
+</script>
+</body>
+</html>
