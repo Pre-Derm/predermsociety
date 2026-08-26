@@ -1,1224 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Opportunities | Pre-Derm Society</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",sans-serif;background:#faf8f9;color:#292329}
+a{text-decoration:none;color:inherit}
+
+nav{
+padding:20px 6%;
+background:#fff;
+border-bottom:1px solid #eee;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:10
 }
 
-html {
-  scroll-behavior: smooth;
+.logo{font-weight:700;font-size:15px;letter-spacing:.1em}
+
+.nav{display:flex;gap:25px;font-size:13px;font-weight:600}
+
+.hero{
+padding:75px 7% 40px;
+background:#fff
 }
 
-body {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  color: #171717;
-  background: #fff;
+.hero small{
+color:#999;
+letter-spacing:.15em
 }
 
-/* NAVIGATION */
-
-nav {
-  height: 76px;
-  padding: 0 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eeeeee;
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
+h1{
+font-size:clamp(50px,8vw,90px);
+letter-spacing:-.06em;
+margin-top:15px
 }
 
-.logo {
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #171717;
+.hero p{
+max-width:650px;
+color:#777;
+line-height:1.7;
+margin-top:18px
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 27px;
+.layout{
+padding:30px 5%;
+display:grid;
+grid-template-columns:260px 1fr;
+gap:25px
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #555;
-  font-size: 13px;
+.filters{
+background:#fff;
+border:1px solid #eadfe5;
+border-radius:24px;
+padding:25px;
+height:max-content;
+position:sticky;
+top:90px
 }
 
-.nav-links a:hover {
-  color: #000;
+.filters h2{
+font-size:25px;
+margin-bottom:20px
 }
 
-.join {
-  border: 1px solid #171717;
-  padding: 9px 17px;
-  border-radius: 30px;
-  color: #171717 !important;
+.filter{
+display:block;
+padding:11px 0;
+font-size:14px;
+color:#6f626d;
+cursor:pointer
 }
 
-/* HERO */
-
-.hero {
-  text-align: center;
-  padding: 85px 7% 65px;
+.filter:hover{
+color:#222
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  color: #999;
-  margin-bottom: 18px;
+.results{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: clamp(44px, 7vw, 74px);
-  line-height: 1;
-  letter-spacing: -3px;
-  font-weight: 600;
+.result{
+background:#fff;
+border:1px solid #eadfe5;
+border-radius:22px;
+padding:27px;
+min-height:220px
 }
 
-.hero p {
-  max-width: 650px;
-  margin: 24px auto 0;
-  color: #777;
-  font-size: 15px;
+.result-type{
+font-size:10px;
+letter-spacing:.15em;
+color:#999;
+margin-bottom:15px
 }
 
-/* MAIN AREA */
-
-.explorer {
-  width: 86%;
-  max-width: 1200px;
-  margin: 0 auto 90px;
-  display: grid;
-  grid-template-columns: 285px 1fr;
-  gap: 45px;
+.result h3{
+font-size:22px;
+margin-bottom:10px
 }
 
-/* FILTER PANEL */
-
-.filters {
-  border: 1px solid #e9e9e9;
-  border-radius: 25px;
-  padding: 28px;
-  height: fit-content;
-  position: sticky;
-  top: 100px;
+.result p{
+font-size:14px;
+line-height:1.6;
+color:#777
 }
 
-.filter-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
+.visit{
+display:inline-block;
+margin-top:20px;
+border:1px solid #ddd;
+border-radius:25px;
+padding:10px 15px;
+font-size:11px;
+font-weight:700
 }
 
-.filter-title h2 {
-  margin: 0;
-  font-size: 25px;
-  letter-spacing: -1px;
-}
-
-.clear {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-  color: #999;
-  font-size: 12px;
-}
-
-.filter-group {
-  border-top: 1px solid #eeeeee;
-  padding-top: 22px;
-  margin-top: 22px;
-}
-
-.filter-group h3 {
-  font-size: 14px;
-  margin: 0 0 15px;
-}
-
-.option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 11px 0;
-  font-size: 13px;
-  color: #666;
-  cursor: pointer;
-}
-
-.option input {
-  width: 17px;
-  height: 17px;
-  accent-color: #171717;
-  cursor: pointer;
-}
-
-/* SEARCH */
-
-.search {
-  width: 100%;
-  border: 1px solid #e4e4e4;
-  border-radius: 30px;
-  padding: 14px 18px;
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
-  margin-bottom: 30px;
-}
-
-.search:focus {
-  border-color: #999;
-}
-
-/* RESULTS */
-
-.results-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.results-top h2 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.count {
-  color: #999;
-  font-size: 13px;
-}
-
-/* RESOURCE CARDS */
-
-.resources {
-  display: grid;
-  gap: 15px;
-}
-
-.resource {
-  border: 1px solid #e8e8e8;
-  border-radius: 20px;
-  padding: 23px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  transition: .2s;
-  background: white;
-}
-
-.resource:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.05);
-}
-
-.resource-info {
-  min-width: 0;
-}
-
-.tag {
-  display: inline-block;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  color: #999;
-  margin-bottom: 7px;
-}
-
-.resource h3 {
-  margin: 0 0 5px;
-  font-size: 18px;
-}
-
-.resource p {
-  margin: 0;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.visit {
-  flex-shrink: 0;
-  border: 1px solid #171717;
-  border-radius: 30px;
-  padding: 10px 16px;
-  text-decoration: none;
-  color: #171717;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.visit:hover {
-  background: #171717;
-  color: white;
-}
-
-/* EMPTY */
-
-.empty {
-  display: none;
-  padding: 45px 20px;
-  text-align: center;
-  border: 1px dashed #ddd;
-  border-radius: 20px;
-  color: #888;
-}
-
-.empty h3 {
-  color: #222;
-  margin-bottom: 7px;
-}
-
-/* INFO */
-
-.info {
-  width: 86%;
-  max-width: 1200px;
-  margin: 0 auto 80px;
-  border-top: 1px solid #eee;
-  padding-top: 35px;
-}
-
-.info p {
-  max-width: 800px;
-  color: #888;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 1px solid #eee;
-  padding: 35px 7%;
-  text-align: center;
-  color: #999;
-  font-size: 11px;
-}
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  nav {
-    padding: 0 5%;
-  }
-
-  .nav-links a:not(.join) {
-    display: none;
-  }
-
-  .hero {
-    padding: 65px 7% 45px;
-  }
-
-  .hero h1 {
-    letter-spacing: -2px;
-  }
-
-  .explorer {
-    width: 90%;
-    display: block;
-  }
-
-  .filters {
-    position: static;
-    margin-bottom: 30px;
-  }
-
-  .resource {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .visit {
-    width: 100%;
-    text-align: center;
-  }
+@media(max-width:850px){
+.layout{grid-template-columns:1fr}
+.filters{position:static}
+.results{grid-template-columns:1fr}
+.nav a{display:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-
 <nav>
+<a class="logo" href="index.html">PRE-DERM SOCIETY</a>
 
-  <a href="index.html" class="logo">
-    Pre-Derm Society
-  </a>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#lessons">Learn</a>
-    <a href="opportunities.html">Opportunities</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="join.html" class="join">Join Now</a>
-  </div>
-
+<div class="nav">
+<a href="about.html">ABOUT</a>
+<a href="index.html#learn">LEARN</a>
+<a href="opportunities.html">OPPORTUNITIES</a>
+<a href="research.html">RESEARCH</a>
+</div>
 </nav>
 
 
-<!-- HERO -->
+<section class="hero">
 
-<header class="hero">
+<small>OPPORTUNITY HUB</small>
 
-  <div class="eyebrow">
-    Pre-Derm Society • Student Opportunities
-  </div>
+<h1>Find your next step.</h1>
 
-  <h1>
-    Find your path<br>
-    in medicine.
-  </h1>
-
-  <p>
-    Explore research, programs, internships, publications,
-    career resources and more — organized around the fields
-    you're actually interested in.
-  </p>
-
-</header>
-
-
-<!-- EXPLORER -->
-
-<main class="explorer">
-
-
-  <!-- FILTERS -->
-
-  <aside class="filters">
-
-    <div class="filter-title">
-      <h2>Explore</h2>
-
-      <button class="clear" onclick="clearFilters()">
-        clear all
-      </button>
-    </div>
-
-
-    <!-- OPPORTUNITY TYPE -->
-
-    <div class="filter-group">
-
-      <h3>Opportunity type</h3>
-
-      <label class="option">
-        <input type="checkbox" value="research" class="type">
-        Research
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="internship" class="type">
-        Internships
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="program" class="type">
-        Programs
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="publication" class="type">
-        Research papers
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="career" class="type">
-        Medical careers
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="education" class="type">
-        Education
-      </label>
-
-    </div>
-
-
-    <!-- FIELD -->
-
-    <div class="filter-group">
-
-      <h3>Field of interest</h3>
-
-      <label class="option">
-        <input type="checkbox" value="dermatology" class="field">
-        Dermatology
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="pediatrics" class="field">
-        Pediatrics
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="orthopedics" class="field">
-        Orthopedics
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="cardiology" class="field">
-        Cardiology
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="neurology" class="field">
-        Neurology
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="genetics" class="field">
-        Genetics
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="radiology" class="field">
-        Radiology
-      </label>
-
-      <label class="option">
-        <input type="checkbox" value="general" class="field">
-        General medicine
-      </label>
-
-    </div>
-
-  </aside>
-
-
-  <!-- RESULTS -->
-
-  <section>
-
-    <input
-      type="text"
-      id="search"
-      class="search"
-      placeholder="Search opportunities..."
-    >
-
-
-    <div class="results-top">
-
-      <h2>Resources</h2>
-
-      <span class="count" id="count">
-        0 resources
-      </span>
-
-    </div>
-
-
-    <div class="resources" id="resources">
-
-
-      <!-- DERMATOLOGY -->
-
-
-      <article
-        class="resource"
-        data-type="research education"
-        data-field="dermatology"
-        data-search="dermatology american academy dermatology research students"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Dermatology · Education
-          </span>
-
-          <h3>
-            American Academy of Dermatology
-          </h3>
-
-          <p>
-            Explore dermatology education, student resources,
-            publications and information about the specialty.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.aad.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <article
-        class="resource"
-        data-type="research education"
-        data-field="dermatology"
-        data-search="AAD medical student resources dermatology"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Dermatology · Student Resources
-          </span>
-
-          <h3>
-            AAD Medical Student Resources
-          </h3>
-
-          <p>
-            Dermatology-focused educational resources and
-            opportunities for students interested in the field.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.aad.org/member/education/residents/medical-students"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <!-- GENERAL RESEARCH -->
-
-
-      <article
-        class="resource"
-        data-type="research internship program"
-        data-field="general dermatology pediatrics orthopedics cardiology neurology genetics radiology"
-        data-search="NIH research training student opportunities biomedical research"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Research · Programs
-          </span>
-
-          <h3>
-            NIH Research Training
-          </h3>
-
-          <p>
-            Explore biomedical research training and programs
-            offered through the National Institutes of Health.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.training.nih.gov/research-training/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <article
-        class="resource"
-        data-type="research internship program"
-        data-field="general dermatology pediatrics orthopedics cardiology neurology genetics radiology"
-        data-search="NIH student opportunities summer internship biomedical research"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Research · Internship
-          </span>
-
-          <h3>
-            NIH Student Opportunities
-          </h3>
-
-          <p>
-            Find NIH student research opportunities, including
-            biomedical research training programs.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <!-- PAPERS -->
-
-
-      <article
-        class="resource"
-        data-type="publication research"
-        data-field="general dermatology pediatrics orthopedics cardiology neurology genetics radiology"
-        data-search="PubMed biomedical research papers medicine"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Research Papers
-          </span>
-
-          <h3>
-            PubMed
-          </h3>
-
-          <p>
-            Search biomedical research and scientific literature
-            across thousands of journals.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://pubmed.ncbi.nlm.nih.gov/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SEARCH →
-        </a>
-
-      </article>
-
-
-      <!-- MEDICAL CAREERS -->
-
-
-      <article
-        class="resource"
-        data-type="career education"
-        data-field="general dermatology pediatrics orthopedics cardiology neurology genetics radiology"
-        data-search="AAMC medical careers aspiring doctors premed"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Medical Careers
-          </span>
-
-          <h3>
-            AAMC — Aspiring Docs
-          </h3>
-
-          <p>
-            Learn about medical careers, medically related
-            experiences and the journey toward medicine.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://students-residents.aamc.org/aspiring-docs/aspiring-docs-resources"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <article
-        class="resource"
-        data-type="career education"
-        data-field="general"
-        data-search="AAMC premed resources medical school career"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Medical Careers · Premed
-          </span>
-
-          <h3>
-            AAMC Premed Resources
-          </h3>
-
-          <p>
-            Reliable resources for students beginning to explore
-            medicine and preparing for medical school.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://students-residents.aamc.org/premed-resources/premed-resources"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <!-- PEDIATRICS -->
-
-
-      <article
-        class="resource"
-        data-type="education career research"
-        data-field="pediatrics"
-        data-search="American Academy Pediatrics pediatrics students medicine"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Pediatrics · Education
-          </span>
-
-          <h3>
-            American Academy of Pediatrics
-          </h3>
-
-          <p>
-            Explore pediatrics and learn more about child and
-            adolescent healthcare.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.aap.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <!-- ORTHOPEDICS -->
-
-
-      <article
-        class="resource"
-        data-type="research education program"
-        data-field="orthopedics"
-        data-search="orthopaedic research society student research"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Orthopedics · Research
-          </span>
-
-          <h3>
-            Orthopaedic Research Society
-          </h3>
-
-          <p>
-            Explore orthopedic research and scientific work
-            related to musculoskeletal health.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.ors.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <article
-        class="resource"
-        data-type="program education"
-        data-field="orthopedics"
-        data-search="AAOS medical student program orthopaedics"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Orthopedics · Program
-          </span>
-
-          <h3>
-            AAOS Medical Student Program
-          </h3>
-
-          <p>
-            Explore orthopaedics and student-focused educational
-            opportunities through AAOS.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.aaos.org/annual/explore-the-program/medical-student-program/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          EXPLORE →
-        </a>
-
-      </article>
-
-
-      <!-- CARDIOLOGY -->
-
-
-      <article
-        class="resource"
-        data-type="research education career"
-        data-field="cardiology"
-        data-search="American Heart Association cardiology research education"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Cardiology · Research
-          </span>
-
-          <h3>
-            American Heart Association
-          </h3>
-
-          <p>
-            Explore cardiovascular science, education and
-            research in heart health.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.heart.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <!-- NEUROLOGY -->
-
-
-      <article
-        class="resource"
-        data-type="research education career"
-        data-field="neurology"
-        data-search="American Academy Neurology students neurology"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Neurology · Education
-          </span>
-
-          <h3>
-            American Academy of Neurology
-          </h3>
-
-          <p>
-            Explore neurology, neuroscience and resources
-            connected to the nervous system.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.aan.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <!-- GENETICS -->
-
-
-      <article
-        class="resource"
-        data-type="research education"
-        data-field="genetics"
-        data-search="NHGRI genetics genomics research education"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Genetics · Research
-          </span>
-
-          <h3>
-            National Human Genome Research Institute
-          </h3>
-
-          <p>
-            Explore genetics, genomics, research and educational
-            resources.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.genome.gov/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-      <!-- RADIOLOGY -->
-
-
-      <article
-        class="resource"
-        data-type="research education career"
-        data-field="radiology"
-        data-search="RSNA radiology medical imaging research education"
-      >
-
-        <div class="resource-info">
-
-          <span class="tag">
-            Radiology · Research
-          </span>
-
-          <h3>
-            Radiological Society of North America
-          </h3>
-
-          <p>
-            Explore medical imaging, radiology education
-            and research.
-          </p>
-
-        </div>
-
-        <a
-          class="visit"
-          href="https://www.rsna.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT →
-        </a>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="empty" id="empty">
-
-      <h3>No resources found</h3>
-
-      <p>
-        Try choosing a different field or opportunity type.
-      </p>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-<!-- NOTE -->
-
-<section class="info">
-
-  <p>
-    Pre-Derm Society is a student-led educational resource.
-    Opportunities and eligibility requirements can change.
-    Always check the official organization website for current
-    deadlines, age requirements, application rules and other details.
-  </p>
+<p>
+Choose an opportunity type and then explore a medical field.
+The page will organize resources around what you're actually
+looking for.
+</p>
 
 </section>
 
 
-<footer>
-  © 2026 Pre-Derm Society
-</footer>
+<div class="layout">
+
+<aside class="filters">
+
+<h2>Filter by</h2>
+
+<a class="filter" href="opportunities.html">
+✦ All opportunities
+</a>
+
+<a class="filter" href="opportunities.html?type=internships">
+□ Internships
+</a>
+
+<a class="filter" href="opportunities.html?type=research">
+□ Research programs
+</a>
+
+<a class="filter" href="opportunities.html?type=summer">
+□ Summer programs
+</a>
+
+<a class="filter" href="opportunities.html?type=volunteering">
+□ Volunteering
+</a>
+
+<a class="filter" href="opportunities.html?type=scholarships">
+□ Scholarships
+</a>
+
+<br>
+
+<h2>Field</h2>
+
+<a class="filter" href="opportunities.html?field=dermatology">
+Dermatology
+</a>
+
+<a class="filter" href="opportunities.html?field=pediatrics">
+Pediatrics
+</a>
+
+<a class="filter" href="opportunities.html?field=orthopedics">
+Orthopedics
+</a>
+
+<a class="filter" href="opportunities.html?field=surgery">
+Surgery
+</a>
+
+<a class="filter" href="opportunities.html?field=pharmacy">
+Pharmacy
+</a>
+
+<a class="filter" href="opportunities.html?field=cardiology">
+Cardiology
+</a>
+
+<a class="filter" href="opportunities.html?field=neurology">
+Neurology
+</a>
+
+</aside>
+
+
+<main>
+
+<div class="results" id="results"></div>
+
+</main>
+
+</div>
 
 
 <script>
 
-const resources = document.querySelectorAll(".resource");
-const typeBoxes = document.querySelectorAll(".type");
-const fieldBoxes = document.querySelectorAll(".field");
-const searchBox = document.getElementById("search");
-const count = document.getElementById("count");
-const empty = document.getElementById("empty");
+const programs=[
+
+{
+name:"Dermatology Research",
+field:"dermatology",
+type:"research",
+description:"Explore dermatology research opportunities and learn how to locate current programs through universities and research institutions."
+},
+
+{
+name:"Dermatology Internships",
+field:"dermatology",
+type:"internships",
+description:"Explore current dermatology-related experiences and use official institution pages to check eligibility and applications."
+},
+
+{
+name:"Pediatrics Research",
+field:"pediatrics",
+type:"research",
+description:"Explore pediatric research and learn how to look for opportunities through children's hospitals and universities."
+},
+
+{
+name:"Pediatrics Internships",
+field:"pediatrics",
+type:"internships",
+description:"Find starting points for exploring pediatric healthcare experiences and student programs."
+},
+
+{
+name:"Orthopedics Research",
+field:"orthopedics",
+type:"research",
+description:"Explore research related to bones, joints, movement, sports medicine, and orthopedic science."
+},
+
+{
+name:"Orthopedics Internships",
+field:"orthopedics",
+type:"internships",
+description:"Explore ways to investigate orthopedic medicine and related student experiences."
+},
+
+{
+name:"Surgery Research",
+field:"surgery",
+type:"research",
+description:"Explore surgical research and learn how to find university and hospital research opportunities."
+},
+
+{
+name:"Surgery Internships",
+field:"surgery",
+type:"internships",
+description:"Explore surgical medicine and student opportunities through healthcare institutions."
+},
+
+{
+name:"Pharmacy Research",
+field:"pharmacy",
+type:"research",
+description:"Explore pharmacology, medications, pharmaceutical science, and research."
+},
+
+{
+name:"Pharmacy Internships",
+field:"pharmacy",
+type:"internships",
+description:"Explore pharmacy-related experiences and student programs."
+},
+
+{
+name:"Cardiology Research",
+field:"cardiology",
+type:"research",
+description:"Explore cardiovascular research and university-based science opportunities."
+},
+
+{
+name:"Neurology Research",
+field:"neurology",
+type:"research",
+description:"Explore neuroscience and neurological research opportunities."
+},
+
+{
+name:"Summer Medicine Programs",
+field:"all",
+type:"summer",
+description:"Explore summer educational experiences related to medicine, science, healthcare, and research."
+},
+
+{
+name:"Medical Volunteering",
+field:"all",
+type:"volunteering",
+description:"Explore volunteering pathways and learn how to find legitimate opportunities in your community."
+},
+
+{
+name:"Student Scholarships",
+field:"all",
+type:"scholarships",
+description:"Explore scholarship and award opportunities connected to STEM, healthcare, leadership, and service."
+}
+
+];
 
 
-function filterResources() {
+const params=new URLSearchParams(window.location.search);
 
-  const selectedTypes = [...typeBoxes]
-    .filter(box => box.checked)
-    .map(box => box.value);
+const selectedType=params.get("type");
+const selectedField=params.get("field");
 
-  const selectedFields = [...fieldBoxes]
-    .filter(box => box.checked)
-    .map(box => box.value);
+let filtered=programs.filter(item=>{
 
-  const search = searchBox.value
-    .toLowerCase()
-    .trim();
+const typeMatch=!selectedType || item.type===selectedType;
 
-  let visible = 0;
+const fieldMatch=
+!selectedField ||
+item.field===selectedField ||
+item.field==="all";
 
+return typeMatch && fieldMatch;
 
-  resources.forEach(resource => {
-
-    const types =
-      resource.dataset.type.split(" ");
-
-    const fields =
-      resource.dataset.field.split(" ");
-
-    const searchable =
-      resource.dataset.search.toLowerCase();
+});
 
 
-    const typeMatch =
-      selectedTypes.length === 0 ||
-      selectedTypes.some(type => types.includes(type));
+if(filtered.length===0){
 
+filtered=programs;
 
-    const fieldMatch =
-      selectedFields.length === 0 ||
-      selectedFields.some(field => fields.includes(field));
-
-
-    const searchMatch =
-      search === "" ||
-      searchable.includes(search);
-
-
-    if (
-      typeMatch &&
-      fieldMatch &&
-      searchMatch
-    ) {
-
-      resource.style.display = "flex";
-      visible++;
-
-    } else {
-
-      resource.style.display = "none";
-
-    }
-
-  });
-
-
-  count.textContent =
-    visible + (visible === 1 ? " resource" : " resources");
-
-
-  empty.style.display =
-    visible === 0 ? "block" : "none";
 }
 
 
-function clearFilters() {
-
-  typeBoxes.forEach(box => {
-    box.checked = false;
-  });
-
-  fieldBoxes.forEach(box => {
-    box.checked = false;
-  });
-
-  searchBox.value = "";
-
-  filterResources();
-}
+const results=document.getElementById("results");
 
 
-typeBoxes.forEach(box => {
-  box.addEventListener("change", filterResources);
+filtered.forEach(item=>{
+
+const card=document.createElement("article");
+
+card.className="result";
+
+card.innerHTML=`
+
+<div class="result-type">
+${item.type.toUpperCase()} • ${item.field.toUpperCase()}
+</div>
+
+<h3>${item.name}</h3>
+
+<p>${item.description}</p>
+
+<a
+class="visit"
+href="research.html"
+>
+LEARN HOW TO FIND IT →
+</a>
+
+`;
+
+results.appendChild(card);
+
 });
-
-fieldBoxes.forEach(box => {
-  box.addEventListener("change", filterResources);
-});
-
-searchBox.addEventListener("input", filterResources);
-
-
-filterResources();
 
 </script>
 
