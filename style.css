@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f8f7f4;
+  color: #20201e;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  height: 82px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f7f4;
+  border-bottom: 1px solid #e7e5df;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 38px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+.join-btn {
+  padding: 11px 20px;
+  border: 1px solid #20201e;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.join-btn:hover {
+  background: #20201e;
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 130px 30px 150px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #77756e;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 8vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 600;
+}
+
+.hero h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.hero-text {
+  max-width: 570px;
+  margin: 30px auto;
+  color: #6e6c66;
+  font-size: 17px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #20201e;
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid #d4d1c9;
+}
+
+/* SECTIONS */
+
+.intro {
+  background: #eeece6;
+  padding: 100px 7%;
+}
+
+.intro h2 {
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  font-weight: 500;
+  margin-bottom: 55px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #f8f7f4;
+  padding: 35px;
+  min-height: 220px;
+  border-radius: 4px;
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card span {
+  font-size: 25px;
+}
+
+.card h3 {
+  margin-top: 30px;
+  font-size: 21px;
+}
+
+.card p {
+  margin-top: 8px;
+  color: #77756e;
+  font-size: 14px;
+}
+
+/* PAGE HERO */
+
+.page-hero {
+  padding: 100px 7% 80px;
+  max-width: 1100px;
+}
+
+.page-hero h1 {
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 1;
+  letter-spacing: -3px;
+  font-weight: 500;
+}
+
+.page-hero h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+/* CONTENT */
+
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 7% 100px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.content-card {
+  padding: 38px;
+  background: #eeece6;
+  border-radius: 4px;
+}
+
+.content-card h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.content-card p {
+  color: #6e6c66;
+}
+
+/* LESSONS */
+
+.lesson-list {
+  display: grid;
+  gap: 15px;
+}
+
+.lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border: 1px solid #dedbd3;
+  background: #f8f7f4;
+  border-radius: 4px;
+}
+
+.lesson small {
+  color: #85827a;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 6%;
+  border-top: 1px solid #e2dfd8;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+footer div:last-child {
+  display: flex;
+  gap: 20px;
+}
+
+footer a {
+  letter-spacing: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  .navbar {
+    height: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .join-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 90px 20px 110px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .cards,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    padding: 75px 20px;
+  }
+
+  .page-hero {
+    padding: 75px 20px 50px;
+  }
+
+  .content {
+    padding: 20px 20px 75px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
