@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skin Journey · Pre-Derm Society</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf9f6;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #111;
+}
+
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 6%;
+
+  background: rgba(250, 249, 246, 0.92);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #dedcd8;
+}
+
+.logo {
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.links a:hover,
+.logo:hover {
+  opacity: 0.5;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 75vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 180px 8% 100px;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      #e8e2dc 0%,
+      transparent 35%
+    ),
+    #faf9f6;
+}
+
+.hero-content {
+  max-width: 1050px;
+}
+
+.eyebrow {
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: clamp(65px, 13vw, 155px);
+
+  line-height: 0.8;
+
+  letter-spacing: -9px;
+
+  font-weight: 300;
+
+  margin: 0;
+}
+
+.hero-description {
+  max-width: 650px;
+
+  margin-top: 45px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* GENERAL */
+
+section {
+  padding: 120px 8%;
+
+  border-top: 1px solid #dedcd8;
+}
+
+.label {
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: clamp(50px, 8vw, 100px);
+
+  line-height: 0.86;
+
+  letter-spacing: -6px;
+
+  font-weight: 300;
+
+  margin: 0 0 35px;
+}
+
+h3 {
+  font-size: clamp(40px, 6vw, 75px);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 300;
+
+  margin: 15px 0 25px;
+}
+
+.text {
+  max-width: 650px;
+
+  color: #666;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+
+/* MISSION */
+
+.mission {
+  min-height: 65vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.mission-content {
+  max-width: 850px;
+}
+
+
+/* JOURNEY */
+
+.journey {
+  background: #efeee9;
+}
+
+.journey-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-top: 70px;
+
+  border-top: 1px solid #dedcd8;
+
+  border-left: 1px solid #dedcd8;
+}
+
+.journey-card {
+  min-height: 300px;
+
+  padding: 40px;
+
+  border-right: 1px solid #dedcd8;
+
+  border-bottom: 1px solid #dedcd8;
+
+  background: #faf9f6;
+}
+
+.journey-number {
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #777;
+}
+
+.journey-card h4 {
+  font-size: 35px;
+
+  font-weight: 300;
+
+  letter-spacing: -2px;
+
+  margin: 50px 0 20px;
+}
+
+.journey-card p {
+  color: #666;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+
+/* MYTHS */
+
+.myths {
+  background: #faf9f6;
+}
+
+.myth-card {
+  max-width: 900px;
+
+  margin-top: 60px;
+
+  padding: 50px;
+
+  border: 1px solid #dedcd8;
+
+  background: #faf9f6;
+}
+
+.myth-label {
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+.myth {
+  font-size: 32px;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  font-weight: 300;
+
+  margin-bottom: 25px;
+}
+
+.fact {
+  color: #666;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+
+/* TEACH */
+
+.teach {
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      #e7dfd7,
+      transparent 42%
+    ),
+    #f4f1ec;
+}
+
+.resource-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 70px;
+
+  border-top: 1px solid #dedcd8;
+
+  border-left: 1px solid #dedcd8;
+}
+
+.resource {
+  min-height: 250px;
+
+  padding: 35px;
+
+  border-right: 1px solid #dedcd8;
+
+  border-bottom: 1px solid #dedcd8;
+
+  background: #faf9f6;
+}
+
+.resource h4 {
+  font-size: 28px;
+
+  font-weight: 300;
+
+  letter-spacing: -2px;
+
+  margin: 45px 0 15px;
+}
+
+.resource p {
+  color: #666;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+
+/* QUIZ */
+
+.quiz {
+  background: #faf9f6;
+}
+
+.quiz-container {
+  max-width: 850px;
+
+  margin-top: 70px;
+}
+
+.question-card {
+  display: none;
+
+  border: 1px solid #dedcd8;
+
+  padding: 50px;
+
+  background: #faf9f6;
+}
+
+.question-card.active {
+  display: block;
+}
+
+.question-number {
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+.question {
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  font-weight: 300;
+
+  margin-bottom: 40px;
+}
+
+.answers {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.answer {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border: 1px solid #cfcac4;
+
+  border-radius: 14px;
+
+  background: #faf9f6;
+
+  color: #111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.answer:hover {
+  background: #f0eee9;
+}
+
+.answer.correct {
+  background: #e8eee8;
+
+  border-color: #aebbae;
+}
+
+.answer.incorrect {
+  background: #eee8e6;
+
+  border-color: #c4aaa4;
+}
+
+.feedback {
+  display: none;
+
+  margin-top: 25px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+}
+
+.feedback.show {
+  display: block;
+}
+
+.feedback.correct-text {
+  color: #536653;
+}
+
+.feedback.incorrect-text {
+  color: #765752;
+}
+
+.next-button {
+  display: none;
+
+  margin-top: 30px;
+
+  padding: 14px 22px;
+
+  background: #111;
+
+  border: 1px solid #111;
+
+  border-radius: 100px;
+
+  color: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.next-button.show {
+  display: inline-block;
+}
+
+.next-button:hover {
+  background: #fff;
+
+  color: #111;
+}
+
+
+/* RESULT */
+
+.result {
+  display: none;
+
+  max-width: 850px;
+
+  padding: 70px 50px;
+
+  border: 1px solid #dedcd8;
+
+  text-align: center;
+}
+
+.result.show {
+  display: block;
+}
+
+.result-number {
+  font-size: clamp(90px, 15vw, 180px);
+
+  line-height: 0.8;
+
+  letter-spacing: -10px;
+
+  font-weight: 300;
+
+  margin-bottom: 35px;
+}
+
+
+/* RETURN */
+
+.return {
+  text-align: center;
+}
+
+.return-button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #111;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 45px 8%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-top: 1px solid #dedcd8;
+}
+
+footer a {
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  margin-right: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  nav {
+    padding: 18px 5%;
+  }
+
+  .links {
+    gap: 13px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    max-width: 230px;
+  }
+
+  .links a {
+    font-size: 8px;
+  }
+
+  .hero {
+    min-height: 80vh;
+
+    padding: 150px 8% 80px;
+  }
+
+  h1 {
+    letter-spacing: -5px;
+  }
+
+  h2 {
+    letter-spacing: -4px;
+  }
+
+  section {
+    padding: 90px 8%;
+  }
+
+  .journey-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myth-card,
+  .question-card {
+    padding: 30px;
+  }
+
+  .question {
+    font-size: 28px;
+  }
+
+  footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <a href="index.html" class="logo">
+    PRE-DERM<br>
+    SOCIETY
+  </a>
+
+  <div class="links">
+
+    <a href="index.html#about">
+      ABOUT
+    </a>
+
+    <a href="skinjourney.html">
+      JOURNEY
+    </a>
+
+    <a href="skin101.html">
+      LEARN
+    </a>
+
+    <a href="index.html#impact">
+      IMPACT
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      PRE-DERM SOCIETY · SKIN JOURNEY
+    </div>
+
+    <h1>
+      SKIN<br>
+      JOURNEY
+    </h1>
+
+    <p class="hero-description">
+
+      Everyone has a skin journey.
+
+      Explore the science behind skin,
+
+      understand common skin concerns,
+
+      and discover how knowledge can
+
+      be shared with others.
+
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- MISSION -->
+
+<section class="mission">
+
+  <div class="mission-content">
+
+    <div class="label">
+      01 · OUR MISSION
+    </div>
+
+    <h2>
+      Learn.<br>
+      Understand.<br>
+      Share.
+    </h2>
+
+    <p class="text">
+
+      The Skin Journey is an educational initiative
+
+      created by Pre-Derm Society to make skin science
+
+      easier to understand and more accessible to students.
+
+    </p>
+
+    <p class="text">
+
+      We believe learning about skin should not be
+
+      about perfection. It should be about understanding
+
+      how the body's largest organ works and knowing
+
+      where reliable information comes from.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section class="journey">
+
+  <div class="label">
+    02 · THE JOURNEY
+  </div>
+
+  <h2>
+    Six steps.<br>
+    One foundation.
+  </h2>
+
+  <p class="text">
+
+    Follow the Skin Journey from the basic biology
+
+    of skin to becoming someone who can share
+
+    accurate skin-health knowledge with others.
+
+  </p>
+
+
+  <div class="journey-grid">
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        01 · DISCOVER
+      </div>
+
+      <h4>
+        Know Your Skin
+      </h4>
+
+      <p>
+        Learn about the major layers of skin,
+        skin cells, the skin barrier, and the
+        structures that make skin function.
+      </p>
+
+    </div>
+
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        02 · UNDERSTAND
+      </div>
+
+      <h4>
+        Skin Science
+      </h4>
+
+      <p>
+        Explore how skin protects the body,
+        regulates temperature, senses the
+        environment, and repairs itself.
+      </p>
+
+    </div>
+
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        03 · EXPLORE
+      </div>
+
+      <h4>
+        Common Concerns
+      </h4>
+
+      <p>
+        Learn the science behind common skin
+        concerns such as acne, irritation,
+        inflammation, and sun damage.
+      </p>
+
+    </div>
+
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        04 · PROTECT
+      </div>
+
+      <h4>
+        Skin & Environment
+      </h4>
+
+      <p>
+        Discover how ultraviolet radiation,
+        environmental exposure, and other
+        factors can affect skin.
+      </p>
+
+    </div>
+
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        05 · DISCOVER DERMATOLOGY
+      </div>
+
+      <h4>
+        Dermatology 101
+      </h4>
+
+      <p>
+        Explore what dermatologists study,
+        the different areas of dermatology,
+        and how skin conditions are evaluated.
+      </p>
+
+    </div>
+
+
+    <div class="journey-card">
+
+      <div class="journey-number">
+        06 · SHARE
+      </div>
+
+      <h4>
+        Become a Skin Educator
+      </h4>
+
+      <p>
+        Take what you learned and share reliable
+        skin-science information with your school,
+        family, or community.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MYTHS -->
+
+<section class="myths">
+
+  <div class="label">
+    03 · SKIN SCIENCE
+  </div>
+
+  <h2>
+    Skin myths.<br>
+    Meet science.
+  </h2>
+
+  <p class="text">
+
+    The internet is full of skincare advice.
+
+    Learning how to recognize reliable information
+
+    is an important part of your skin journey.
+
+  </p>
+
+
+  <div class="myth-card">
+
+    <div class="myth-label">
+      MYTH → FACT
+    </div>
+
+    <div class="myth">
+      "More skincare products automatically
+      mean healthier skin."
+    </div>
+
+    <p class="fact">
+
+      <strong>FACT:</strong>
+
+      Skin health is not determined by how many
+
+      products someone uses. Different skin concerns
+
+      can have different causes, and skincare should
+
+      be based on individual needs and reliable
+
+      health information.
+
+    </p>
+
+  </div>
+
+
+  <div class="myth-card">
+
+    <div class="myth-label">
+      MYTH → FACT
+    </div>
+
+    <div class="myth">
+      "Sun protection only matters on hot,
+      sunny days."
+    </div>
+
+    <p class="fact">
+
+      <strong>FACT:</strong>
+
+      Ultraviolet radiation can reach the skin
+
+      even when the weather does not feel hot.
+
+      Understanding UV exposure is an important
+
+      part of learning about skin health.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- TEACH -->
+
+<section class="teach">
+
+  <div class="label">
+    04 · TEACH SKIN
+  </div>
+
+  <h2>
+    Knowledge<br>
+    should travel.
+  </h2>
+
+  <p class="text">
+
+    Pre-Derm Society is building free educational
+
+    resources that students can use to share
+
+    skin-science knowledge with others.
+
+  </p>
+
+
+  <div class="resource-grid">
+
+
+    <div class="resource">
+
+      <div class="journey-number">
+        RESOURCE 01
+      </div>
+
+      <h4>
+        Mini Lessons
+      </h4>
+
+      <p>
+        Short, student-friendly lessons designed
+        to make skin science easier to understand.
+      </p>
+
+    </div>
+
+
+    <div class="resource">
+
+      <div class="journey-number">
+        RESOURCE 02
+      </div>
+
+      <h4>
+        Classroom Guides
+      </h4>
+
+      <p>
+        Educational activities and discussion
+        materials for schools and student groups.
+      </p>
+
+    </div>
+
+
+    <div class="resource">
+
+      <div class="journey-number">
+        RESOURCE 03
+      </div>
+
+      <h4>
+        Student Worksheets
+      </h4>
+
+      <p>
+        Printable resources that help students
+        review and apply what they learn.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz">
+
+  <div class="label">
+    05 · CHECK YOUR KNOWLEDGE
+  </div>
+
+  <h2>
+    Your Skin<br>
+    Journey Quiz.
+  </h2>
+
+  <p class="text">
+
+    See what you remember from the Skin Journey.
+
+  </p>
+
+
+  <div class="quiz-container">
+
+
+    <!-- QUESTION 1 -->
+
+    <div class="question-card active">
+
+      <div class="question-number">
+        QUESTION 01 · 04
+      </div>
+
+      <div class="question">
+        What is one major function of the skin?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="true">
+          Protect the body
+        </button>
+
+        <button class="answer" data-correct="false">
+          Pump blood
+        </button>
+
+        <button class="answer" data-correct="false">
+          Digest food
+        </button>
+
+        <button class="answer" data-correct="false">
+          Produce bones
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 02 · 04
+      </div>
+
+      <div class="question">
+        Which layer contains structures such as
+        blood vessels, nerves, and hair follicles?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="false">
+          Epidermis
+        </button>
+
+        <button class="answer" data-correct="true">
+          Dermis
+        </button>
+
+        <button class="answer" data-correct="false">
+          Hypodermis
+        </button>
+
+        <button class="answer" data-correct="false">
+          Bone
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 03 · 04
+      </div>
+
+      <div class="question">
+        What should you do when you see
+        questionable skincare information online?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="false">
+          Believe it immediately
+        </button>
+
+        <button class="answer" data-correct="false">
+          Share it immediately
+        </button>
+
+        <button class="answer" data-correct="true">
+          Check reliable sources
+        </button>
+
+        <button class="answer" data-correct="false">
+          Assume it is medical advice
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 04 · 04
+      </div>
+
+      <div class="question">
+        What is the goal of the Skin Journey?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="false">
+          Make everyone look the same
+        </button>
+
+        <button class="answer" data-correct="true">
+          Make skin science easier to understand
+        </button>
+
+        <button class="answer" data-correct="false">
+          Replace medical professionals
+        </button>
+
+        <button class="answer" data-correct="false">
+          Promote unrealistic skin standards
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        FINISH JOURNEY →
+      </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="result">
+
+      <div class="result-number">
+        <span id="score">0</span>/4
+      </div>
+
+      <h3>
+        Journey complete.
+      </h3>
+
+      <p class="text">
+
+        You completed the Skin Journey quiz.
+
+        Keep learning, keep asking questions,
+
+        and keep sharing reliable information.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RETURN -->
+
+<section class="return">
+
+  <div class="label">
+    PRE-DERM SOCIETY
+  </div>
+
+  <h2>
+    Keep learning.
+  </h2>
+
+  <a
+    href="index.html"
+    class="return-button"
+  >
+    RETURN HOME →
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div>
+
+    <a
+      href="https://www.instagram.com/prederm_society/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      INSTAGRAM
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@prederm_society"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TIKTOK
+    </a>
+
+    <a href="mailto:predermsociety@gmail.com">
+      EMAIL
+    </a>
+
+  </div>
+
+  <div class="label">
+    PRE-DERM SOCIETY
+  </div>
+
+</footer>
+
+
+<script>
+
+
+/* =========================================
+   SKIN JOURNEY QUIZ
+   ========================================= */
+
+const questions =
+  document.querySelectorAll(".question-card");
+
+const result =
+  document.querySelector(".result");
+
+let currentQuestion = 0;
+
+let score = 0;
+
+
+questions.forEach((questionCard) => {
+
+  const answers =
+    questionCard.querySelectorAll(".answer");
+
+  const feedback =
+    questionCard.querySelector(".feedback");
+
+  const nextButton =
+    questionCard.querySelector(".next-button");
+
+
+  answers.forEach(answer => {
+
+    answer.addEventListener("click", function() {
+
+      if (
+        questionCard.classList.contains("answered")
+      ) {
+        return;
+      }
+
+
+      questionCard.classList.add("answered");
+
+
+      answers.forEach(button => {
+        button.classList.add("locked");
+      });
+
+
+      const isCorrect =
+        this.dataset.correct === "true";
+
+
+      if (isCorrect) {
+
+        this.classList.add("correct");
+
+        feedback.textContent =
+          "CORRECT ✓";
+
+        feedback.classList.add(
+          "show",
+          "correct-text"
+        );
+
+        score++;
+
+      } else {
+
+        this.classList.add("incorrect");
+
+        feedback.textContent =
+          "INCORRECT";
+
+        feedback.classList.add(
+          "show",
+          "incorrect-text"
+        );
+
+
+        answers.forEach(button => {
+
+          if (
+            button.dataset.correct === "true"
+          ) {
+
+            button.classList.add("correct");
+
+          }
+
+        });
+
+      }
+
+
+      nextButton.classList.add("show");
+
+    });
+
+  });
+
+
+  nextButton.addEventListener("click", function() {
+
+    questionCard.classList.remove("active");
+
+    currentQuestion++;
+
+
+    if (
+      currentQuestion < questions.length
+    ) {
+
+      questions[
+        currentQuestion
+      ].classList.add("active");
+
+
+      window.scrollTo({
+
+        top:
+          document.querySelector(".quiz")
+            .offsetTop - 80,
+
+        behavior: "smooth"
+
+      });
+
+    } else {
+
+      document.getElementById(
+        "score"
+      ).textContent = score;
+
+
+      result.classList.add("show");
+
+
+      window.scrollTo({
+
+        top:
+          result.offsetTop - 80,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
