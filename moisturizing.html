@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moisturizers · Pre-Derm Society</title>
+<title>Moisturizing · Pre-Derm Society</title>
 
 <style>
 * {
@@ -29,6 +29,7 @@ a:active {
 }
 
 /* NAVIGATION */
+
 nav {
   position: fixed;
   top: 0;
@@ -70,6 +71,7 @@ nav {
 }
 
 /* HERO */
+
 .hero {
   min-height: 75vh;
   display: flex;
@@ -112,6 +114,7 @@ h1 {
 }
 
 /* GENERAL */
+
 section {
   padding: 120px 8%;
   border-top: 1px solid #dedcd8;
@@ -147,9 +150,26 @@ h3 {
   font-size: 15px;
 }
 
+/* INTRO */
+
+.intro {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-content {
+  max-width: 850px;
+}
+
 /* LESSON */
+
 .lesson {
   background: #efeee9;
+}
+
+.lesson-intro {
+  margin-bottom: 70px;
 }
 
 .lesson-box {
@@ -157,6 +177,12 @@ h3 {
   background: #faf9f6;
   border: 1px solid #dedcd8;
   padding: 60px;
+}
+
+.lesson-number {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
 }
 
 .lesson-box p {
@@ -167,6 +193,7 @@ h3 {
 }
 
 /* MOISTURIZER TYPES */
+
 .types {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -176,7 +203,7 @@ h3 {
 }
 
 .type {
-  min-height: 300px;
+  min-height: 280px;
   padding: 35px;
   border-right: 1px solid #dedcd8;
   border-bottom: 1px solid #dedcd8;
@@ -203,6 +230,7 @@ h3 {
 }
 
 /* KEY IDEA */
+
 .key {
   min-height: 60vh;
   display: flex;
@@ -221,6 +249,7 @@ h3 {
 }
 
 /* QUIZ */
+
 .quiz {
   background: #faf9f6;
 }
@@ -260,7 +289,6 @@ h3 {
   margin-bottom: 40px;
 }
 
-/* ANSWERS */
 .answers {
   display: flex;
   flex-direction: column;
@@ -283,6 +311,7 @@ h3 {
     border-color 0.2s ease,
     opacity 0.2s ease,
     transform 0.2s ease;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -294,18 +323,25 @@ h3 {
 .answer.correct {
   background: #e8eee8;
   border-color: #aebbae;
+  color: #111 !important;
 }
 
 .answer.incorrect {
   background: #eee8e6;
   border-color: #c4aaa4;
+  color: #111 !important;
 }
 
 .answer.locked {
   cursor: default;
 }
 
+.answer.locked:not(.correct):not(.incorrect) {
+  opacity: 0.55;
+}
+
 /* FEEDBACK */
+
 .feedback {
   display: none;
   margin-top: 25px;
@@ -326,7 +362,8 @@ h3 {
   color: #765752;
 }
 
-/* NEXT */
+/* NEXT BUTTON */
+
 .next-button {
   display: none;
   margin-top: 30px;
@@ -351,7 +388,8 @@ h3 {
   color: #111 !important;
 }
 
-/* RESULT */
+/* QUIZ RESULT */
+
 .quiz-result {
   display: none;
   max-width: 850px;
@@ -383,6 +421,7 @@ h3 {
 }
 
 /* RETURN */
+
 .return {
   text-align: center;
 }
@@ -400,6 +439,7 @@ h3 {
 }
 
 /* FOOTER */
+
 footer {
   padding: 45px 8%;
   display: flex;
@@ -421,7 +461,9 @@ footer a:hover {
 }
 
 /* MOBILE */
+
 @media (max-width: 700px) {
+
   nav {
     padding: 18px 5%;
   }
@@ -486,43 +528,63 @@ footer a:hover {
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
+
   <a href="index.html" class="logo">
     PRE-DERM<br>
     SOCIETY
   </a>
 
   <div class="links">
-    <a href="index.html#about">ABOUT</a>
-    <a href="index.html#learn">LEARN</a>
-    <a href="index.html#impact">IMPACT</a>
-    <a href="index.html#donate">DONATE</a>
+
+    <a href="index.html#about">
+      ABOUT
+    </a>
+
+    <a href="index.html#learn">
+      LEARN
+    </a>
+
+    <a href="index.html#impact">
+      IMPACT
+    </a>
+
+    <a href="index.html#donate">
+      DONATE
+    </a>
+
   </div>
+
 </nav>
 
+
 <!-- HERO -->
+
 <div class="hero">
+
   <div class="hero-content">
 
     <div class="eyebrow">
-      SKIN SCIENCE · LESSON 02
+      SKIN SCIENCE · LESSON 03
     </div>
 
     <h1>
-      MOISTURIZE<br>
-      101
+      MOISTURIZING
     </h1>
 
     <p class="hero-description">
-      Learn what moisturizers do, how different
-      formulas work, and how to understand
-      skincare labels through science.
+      A simple introduction to moisturizers and how
+      they support the skin barrier and hydration.
     </p>
 
   </div>
+
 </div>
 
+
 <!-- INTRO -->
+
 <section class="intro">
 
   <div class="intro-content">
@@ -532,49 +594,102 @@ footer a:hover {
     </div>
 
     <h2>
-      Why does<br>
-      skin need moisture?
+      Hydration<br>
+      matters.
     </h2>
 
     <p class="text">
-      Your skin naturally contains water and oils that
-      help maintain its protective barrier. Environmental
-      conditions, cleansing, and other factors can affect
-      how comfortable and hydrated skin feels.
+      The skin barrier helps limit water loss from the
+      body and helps protect the skin from the outside
+      environment.
     </p>
 
     <p class="text">
-      Moisturizers are products designed to help support
-      the skin barrier and reduce water loss from the
-      outermost layer of skin.
+      Moisturizers can support this process by adding
+      water to the outer layers of skin, helping reduce
+      water loss, and improving the feel and flexibility
+      of the skin.
     </p>
 
   </div>
 
 </section>
 
-<!-- LESSON -->
+
+<!-- MOISTURIZING SCIENCE -->
+
 <section class="lesson">
 
-  <div class="lesson-box">
+  <div class="lesson-intro">
 
     <div class="label">
-      02 · HOW MOISTURIZERS WORK
+      02 · MOISTURIZING SCIENCE
     </div>
 
-    <h3>
-      Three ideas<br>
-      to remember.
-    </h3>
+    <h2>
+      What does<br>
+      moisturizer do?
+    </h2>
 
-    <p>
-      Moisturizers can contain different types of
-      ingredients that work in different ways.
-      Understanding these categories is more useful
-      than simply memorizing product names.
+    <p class="text">
+      Moisturizers are products designed to improve
+      skin hydration and support the skin barrier.
+      Different ingredients can accomplish this in
+      different ways.
     </p>
 
   </div>
+
+
+  <div class="lesson-box">
+
+    <div class="lesson-number">
+      THE BIG IDEA
+    </div>
+
+    <h3>
+      Hydrated skin<br>
+      isn't oily skin.
+    </h3>
+
+    <p>
+      Skin hydration refers to the amount of water
+      present in the outer layers of the skin. Oiliness
+      refers mainly to the amount of sebum produced.
+      They are different concepts.
+    </p>
+
+    <p>
+      This means a person can have oily skin that still
+      needs hydration, just as someone with dry skin may
+      benefit from a moisturizer that supports the
+      skin barrier.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- MOISTURIZER INGREDIENTS -->
+
+<section>
+
+  <div class="label">
+    03 · UNDERSTANDING INGREDIENTS
+  </div>
+
+  <h2>
+    Three ways<br>
+    moisturizers work.
+  </h2>
+
+  <p class="text">
+    Many moisturizers contain combinations of
+    ingredients that help hydrate and protect the
+    outer layer of skin.
+  </p>
+
 
   <div class="types">
 
@@ -589,12 +704,13 @@ footer a:hover {
       </h4>
 
       <p>
-        Humectants help attract and hold water.
-        Examples include ingredients such as
+        Humectants help attract and hold water in the
+        outer layers of the skin. Examples include
         glycerin and hyaluronic acid.
       </p>
 
     </div>
+
 
     <div class="type">
 
@@ -607,11 +723,13 @@ footer a:hover {
       </h4>
 
       <p>
-        Emollients help smooth the skin surface
-        by filling spaces between skin cells.
+        Emollients help smooth the spaces between
+        skin cells and can make the skin feel softer
+        and smoother.
       </p>
 
     </div>
+
 
     <div class="type">
 
@@ -624,8 +742,9 @@ footer a:hover {
       </h4>
 
       <p>
-        Occlusives help reduce water loss by
-        forming a protective layer on the skin.
+        Occlusives help reduce water loss by forming
+        a protective layer over the skin. Petrolatum
+        is one example.
       </p>
 
     </div>
@@ -634,43 +753,42 @@ footer a:hover {
 
 </section>
 
+
 <!-- KEY IDEA -->
+
 <section class="key">
 
   <div class="key-content">
 
     <div class="label">
-      03 · KEY IDEA
+      04 · KEY IDEA
     </div>
 
     <h2>
-      Read the<br>
-      ingredients.
+      Moisturizing<br>
+      is about balance.
     </h2>
 
     <p class="text">
-      A moisturizer is more than its packaging.
-      Learning about ingredient functions can help
-      you understand what a product is designed to do.
-    </p>
-
-    <p class="text">
-      Remember: skincare is personal. A product that
-      works well for one person may not work the same
-      way for another.
+      A moisturizer does not need to feel heavy or
+      greasy to be useful. The goal is to choose a
+      formula that supports the skin's needs and feels
+      comfortable enough to use consistently.
     </p>
 
   </div>
 
 </section>
 
+
 <!-- QUIZ -->
+
 <section class="quiz" id="quiz">
 
   <div class="quiz-header">
 
     <div class="label">
-      04 · CHECK YOUR KNOWLEDGE
+      05 · CHECK YOUR KNOWLEDGE
     </div>
 
     <h2>
@@ -679,13 +797,14 @@ footer a:hover {
     </h2>
 
     <p class="text">
-      Test what you learned about moisturizers
-      and their ingredients.
+      Test what you learned about moisturizing.
     </p>
 
   </div>
 
+
   <div class="quiz-container">
+
 
     <!-- QUESTION 1 -->
 
@@ -702,19 +821,19 @@ footer a:hover {
       <div class="answers">
 
         <button class="answer" data-correct="true">
-          Support the skin barrier and reduce water loss
+          Support skin hydration and the skin barrier
         </button>
 
         <button class="answer" data-correct="false">
-          Remove all bacteria from the skin
+          Remove every natural oil from the skin
         </button>
 
         <button class="answer" data-correct="false">
-          Permanently change your skin type
+          Change a person's natural skin type
         </button>
 
         <button class="answer" data-correct="false">
-          Replace sunscreen
+          Permanently close pores
         </button>
 
       </div>
@@ -726,6 +845,7 @@ footer a:hover {
       </button>
 
     </div>
+
 
     <!-- QUESTION 2 -->
 
@@ -736,25 +856,25 @@ footer a:hover {
       </div>
 
       <div class="question">
-        Which type of ingredient helps attract and hold water?
+        What do humectants help do?
       </div>
 
       <div class="answers">
 
         <button class="answer" data-correct="false">
-          Occlusives
+          Remove dead skin instantly
         </button>
 
         <button class="answer" data-correct="true">
-          Humectants
+          Attract and hold water in the skin
         </button>
 
         <button class="answer" data-correct="false">
-          Emollients
+          Permanently remove sebum
         </button>
 
         <button class="answer" data-correct="false">
-          Exfoliants
+          Block all sunlight
         </button>
 
       </div>
@@ -766,6 +886,7 @@ footer a:hover {
       </button>
 
     </div>
+
 
     <!-- QUESTION 3 -->
 
@@ -776,25 +897,25 @@ footer a:hover {
       </div>
 
       <div class="question">
-        What do occlusives primarily help with?
+        What do occlusives primarily help reduce?
       </div>
 
       <div class="answers">
 
         <button class="answer" data-correct="true">
-          Reducing water loss from the skin
+          Water loss from the skin
         </button>
 
         <button class="answer" data-correct="false">
-          Removing dead skin cells
+          Blood circulation
         </button>
 
         <button class="answer" data-correct="false">
-          Producing collagen instantly
+          Hair growth
         </button>
 
         <button class="answer" data-correct="false">
-          Changing your natural skin type
+          The number of skin cells
         </button>
 
       </div>
@@ -807,6 +928,7 @@ footer a:hover {
 
     </div>
 
+
     <!-- QUESTION 4 -->
 
     <div class="question-card">
@@ -816,25 +938,25 @@ footer a:hover {
       </div>
 
       <div class="question">
-        Why is learning about ingredients useful?
+        True or false: oily skin can still need hydration.
       </div>
 
       <div class="answers">
 
         <button class="answer" data-correct="true">
-          It helps you understand what a product is designed to do
+          True
         </button>
 
         <button class="answer" data-correct="false">
-          It guarantees a product will work for everyone
+          False
         </button>
 
         <button class="answer" data-correct="false">
-          It means you never need sunscreen
+          Only during winter
         </button>
 
         <button class="answer" data-correct="false">
-          It permanently changes your skin
+          Only if the skin is dry
         </button>
 
       </div>
@@ -846,6 +968,7 @@ footer a:hover {
       </button>
 
     </div>
+
 
     <!-- RESULT -->
 
@@ -860,15 +983,16 @@ footer a:hover {
       </h3>
 
       <p>
-        You completed Moisturize 101.
-        Keep exploring the science behind skincare.
+        You finished Moisturizing.
+        Keep building your Skin Journey by exploring
+        the next lesson.
       </p>
 
       <a
-        href="index.html#impact"
+        href="index.html"
         class="return-button"
       >
-        VIEW OUR IMPACT →
+        RETURN HOME →
       </a>
 
     </div>
@@ -876,6 +1000,7 @@ footer a:hover {
   </div>
 
 </section>
+
 
 <!-- RETURN -->
 
@@ -897,6 +1022,7 @@ footer a:hover {
   </a>
 
 </section>
+
 
 <!-- FOOTER -->
 
@@ -932,7 +1058,12 @@ footer a:hover {
 
 </footer>
 
+
 <script>
+
+/* =========================================
+   QUIZ
+   ========================================= */
 
 const questions =
   document.querySelectorAll(".question-card");
@@ -942,6 +1073,11 @@ const result =
 
 let currentQuestion = 0;
 let score = 0;
+
+
+/* =========================================
+   ANSWERS
+   ========================================= */
 
 questions.forEach((questionCard) => {
 
@@ -953,6 +1089,7 @@ questions.forEach((questionCard) => {
 
   const nextButton =
     questionCard.querySelector(".next-button");
+
 
   answers.forEach(answer => {
 
@@ -970,8 +1107,10 @@ questions.forEach((questionCard) => {
         button.classList.add("locked");
       });
 
+
       const isCorrect =
         this.dataset.correct === "true";
+
 
       if (isCorrect) {
 
@@ -999,6 +1138,7 @@ questions.forEach((questionCard) => {
           "incorrect-text"
         );
 
+
         answers.forEach(button => {
 
           if (
@@ -1013,17 +1153,24 @@ questions.forEach((questionCard) => {
 
       }
 
+
       nextButton.classList.add("show");
 
     });
 
   });
 
+
+  /* =========================================
+     NEXT QUESTION
+     ========================================= */
+
   nextButton.addEventListener("click", function() {
 
     questionCard.classList.remove("active");
 
     currentQuestion++;
+
 
     if (
       currentQuestion < questions.length
@@ -1033,11 +1180,15 @@ questions.forEach((questionCard) => {
         currentQuestion
       ].classList.add("active");
 
+
       window.scrollTo({
+
         top:
           document.querySelector(".quiz")
             .offsetTop - 80,
+
         behavior: "smooth"
+
       });
 
     } else {
@@ -1046,14 +1197,17 @@ questions.forEach((questionCard) => {
         "score"
       ).textContent = score;
 
+
       result.classList.add("show");
 
-      updateImpact();
 
       window.scrollTo({
+
         top:
           result.offsetTop - 80,
+
         behavior: "smooth"
+
       });
 
     }
@@ -1061,35 +1215,6 @@ questions.forEach((questionCard) => {
   });
 
 });
-
-/* IMPACT */
-
-function updateImpact() {
-
-  let peopleImpacted =
-    Number(
-      localStorage.getItem("peopleImpacted")
-    ) || 38;
-
-  let lessonsTaught =
-    Number(
-      localStorage.getItem("lessonsTaught")
-    ) || 2;
-
-  peopleImpacted++;
-  lessonsTaught++;
-
-  localStorage.setItem(
-    "peopleImpacted",
-    peopleImpacted
-  );
-
-  localStorage.setItem(
-    "lessonsTaught",
-    lessonsTaught
-  );
-
-}
 
 </script>
 
