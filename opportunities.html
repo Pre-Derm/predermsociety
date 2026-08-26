@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Medical Opportunities | Pre-Derm Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,7 +18,7 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background: #ffffff;
+      background: #fff;
       color: #171717;
       line-height: 1.6;
     }
@@ -30,16 +28,14 @@
       text-decoration: none;
     }
 
-    /* NAV */
-
     nav {
       width: 100%;
       padding: 24px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #eeeeee;
-      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #eee;
+      background: rgba(255,255,255,.96);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -48,7 +44,7 @@
     .logo {
       font-size: 18px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      letter-spacing: -.5px;
     }
 
     .nav-links {
@@ -74,8 +70,6 @@
       color: white;
       opacity: 1 !important;
     }
-
-    /* HERO */
 
     .hero {
       text-align: center;
@@ -104,8 +98,6 @@
       color: #707070;
       font-size: 17px;
     }
-
-    /* MAIN */
 
     section {
       padding: 70px 7%;
@@ -140,8 +132,6 @@
       max-width: 650px;
     }
 
-    /* FILTERS */
-
     .filters {
       display: flex;
       flex-wrap: wrap;
@@ -151,13 +141,13 @@
 
     .filter-btn {
       background: white;
-      border: 1px solid #dddddd;
+      color: #171717;
+      border: 1px solid #ddd;
       border-radius: 30px;
       padding: 10px 17px;
       font-family: inherit;
       font-size: 13px;
       cursor: pointer;
-      transition: .2s;
     }
 
     .filter-btn:hover {
@@ -169,8 +159,6 @@
       color: white;
       border-color: #171717;
     }
-
-    /* OPPORTUNITY CARDS */
 
     .opportunity-grid {
       display: grid;
@@ -184,10 +172,10 @@
       padding: 30px;
       background: white;
       transition: .25s;
+      min-height: 285px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 270px;
     }
 
     .opportunity:hover {
@@ -199,7 +187,6 @@
       display: flex;
       justify-content: space-between;
       gap: 15px;
-      align-items: flex-start;
     }
 
     .opportunity h3 {
@@ -221,6 +208,7 @@
       font-size: 11px;
       white-space: nowrap;
       color: #666;
+      height: fit-content;
     }
 
     .details {
@@ -233,7 +221,7 @@
     .detail {
       font-size: 12px;
       color: #777;
-      border: 1px solid #eeeeee;
+      border: 1px solid #eee;
       border-radius: 20px;
       padding: 6px 10px;
     }
@@ -249,13 +237,11 @@
       opacity: .55;
     }
 
-    /* INFO */
-
     .info-box {
       background: #f8f8f8;
       border-radius: 30px;
       padding: 45px;
-      margin-top: 30px;
+      margin-top: 35px;
     }
 
     .info-box h2 {
@@ -284,21 +270,16 @@
       font-size: 14px;
     }
 
-    /* FOOTER */
-
     footer {
       text-align: center;
       font-size: 12px;
       color: #999;
       padding: 30px;
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid #eee;
       margin-top: 40px;
     }
 
-    /* MOBILE */
-
     @media(max-width:850px) {
-
       .opportunity-grid {
         grid-template-columns: 1fr;
       }
@@ -318,122 +299,88 @@
       h1 {
         letter-spacing: -2.5px;
       }
-
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-
 <nav>
-
-  <a href="index.html" class="logo">
-    Pre-Derm Society
-  </a>
+  <a href="index.html" class="logo">Pre-Derm Society</a>
 
   <div class="nav-links">
-
-    <a href="index.html#lessons">
-      Learn
-    </a>
-
-    <a href="index.html#resources">
-      Resources
-    </a>
-
-    <a href="index.html#contact">
-      Contact
-    </a>
-
-    <a href="join.html" class="join-btn">
-      Join Now
-    </a>
-
+    <a href="index.html#lessons">Learn</a>
+    <a href="index.html#resources">Resources</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="join.html" class="join-btn">Join Now</a>
   </div>
-
 </nav>
 
 
-<!-- HERO -->
-
 <header class="hero">
+  <div class="eyebrow">Student Resources</div>
 
-  <div class="eyebrow">
-    Medical Opportunities
-  </div>
-
-  <h1>
-    Find your<br>opportunity.
-  </h1>
+  <h1>Medical<br>Opportunities.</h1>
 
   <p>
-    A student-friendly collection of medicine, healthcare,
-    research, clinical, and science opportunities.
+    Explore medicine, healthcare, biomedical research,
+    clinical experiences, volunteering, and student programs.
   </p>
-
 </header>
 
 
-<!-- OPPORTUNITIES -->
-
 <section>
-
   <div class="container">
 
     <div class="section-heading">
-
-      <span>
-        01 — Opportunity Finder
-      </span>
+      <span>01 — Opportunity Finder</span>
 
       <h2>
-        Explore opportunities<br>
-        in medicine.
+        Find an opportunity<br>
+        that fits you.
       </h2>
 
       <p>
-        Use the categories below to explore different types
-        of experiences that can help you learn more about medicine.
+        Browse medicine-focused opportunities and use the
+        categories to find what interests you most.
       </p>
-
     </div>
 
 
-    <!-- FILTERS -->
-
     <div class="filters">
 
-      <button class="filter-btn active" onclick="filterOpportunities('all', this)">
+      <button class="filter-btn active"
+        onclick="filterOpportunities('all', this)">
         All
       </button>
 
-      <button class="filter-btn" onclick="filterOpportunities('research', this)">
+      <button class="filter-btn"
+        onclick="filterOpportunities('research', this)">
         Research
       </button>
 
-      <button class="filter-btn" onclick="filterOpportunities('clinical', this)">
+      <button class="filter-btn"
+        onclick="filterOpportunities('clinical', this)">
         Clinical
       </button>
 
-      <button class="filter-btn" onclick="filterOpportunities('summer', this)">
+      <button class="filter-btn"
+        onclick="filterOpportunities('summer', this)">
         Summer Programs
       </button>
 
-      <button class="filter-btn" onclick="filterOpportunities('volunteer', this)">
+      <button class="filter-btn"
+        onclick="filterOpportunities('volunteer', this)">
         Volunteering
       </button>
 
-      <button class="filter-btn" onclick="filterOpportunities('medicine', this)">
+      <button class="filter-btn"
+        onclick="filterOpportunities('medicine', this)">
         Medicine
       </button>
 
     </div>
 
-
-    <!-- CARDS -->
 
     <div class="opportunity-grid">
 
@@ -447,38 +394,22 @@
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                AAMC Medical Pathways
-              </h3>
+              <h3>AAMC Opportunities</h3>
 
               <p>
-                A directory of programs and opportunities
-                for students interested in medicine and healthcare.
+                Explore medical and health-profession
+                enrichment opportunities for students.
               </p>
-
             </div>
 
-            <span class="tag">
-              MEDICINE
-            </span>
+            <span class="tag">MEDICINE</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              🩺 Medicine
-            </span>
-
-            <span class="detail">
-              🎓 Student
-            </span>
-
-            <span class="detail">
-              🔎 Directory
-            </span>
-
+            <span class="detail">🩺 Medicine</span>
+            <span class="detail">🎓 Students</span>
+            <span class="detail">🔎 Directory</span>
           </div>
 
         </div>
@@ -486,8 +417,8 @@
         <a
           href="https://students-residents.aamc.org/applying-medical-school/medical-pathways-enrichment-opportunities"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
@@ -503,38 +434,22 @@
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                NIH Biomedical Research
-              </h3>
+              <h3>NIH Research</h3>
 
               <p>
-                Explore biomedical research opportunities
-                through the National Institutes of Health.
+                Explore biomedical research and student
+                opportunities through the National Institutes of Health.
               </p>
-
             </div>
 
-            <span class="tag">
-              RESEARCH
-            </span>
+            <span class="tag">RESEARCH</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              🧪 Research
-            </span>
-
-            <span class="detail">
-              🧬 Biomedical
-            </span>
-
-            <span class="detail">
-              🏛 NIH
-            </span>
-
+            <span class="detail">🧪 Research</span>
+            <span class="detail">🧬 Biomedical</span>
+            <span class="detail">🏛 NIH</span>
           </div>
 
         </div>
@@ -542,15 +457,15 @@
         <a
           href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
       </div>
 
 
-      <!-- STANFORD -->
+      <!-- STANFORD MEDICINE -->
 
       <div class="opportunity" data-type="summer">
 
@@ -559,38 +474,22 @@
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                Stanford Medicine Programs
-              </h3>
+              <h3>Stanford Medicine Programs</h3>
 
               <p>
-                Explore Stanford Medicine programs for high
-                school students interested in medicine and research.
+                Explore programs offered through Stanford
+                Medicine for students interested in healthcare.
               </p>
-
             </div>
 
-            <span class="tag">
-              SUMMER
-            </span>
+            <span class="tag">SUMMER</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              🩺 Medicine
-            </span>
-
-            <span class="detail">
-              🔬 Research
-            </span>
-
-            <span class="detail">
-              🎓 High School
-            </span>
-
+            <span class="detail">🩺 Medicine</span>
+            <span class="detail">🔬 Research</span>
+            <span class="detail">☀️ Summer</span>
           </div>
 
         </div>
@@ -598,8 +497,8 @@
         <a
           href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
@@ -608,45 +507,29 @@
 
       <!-- STANFORD EXPLORE -->
 
-      <div class="opportunity" data-type="medicine">
+      <div class="opportunity" data-type="research">
 
         <div>
 
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                Stanford EXPLORE
-              </h3>
+              <h3>Stanford EXPLORE</h3>
 
               <p>
-                A lecture series introducing high school students
-                to biomedical research and medicine.
+                Learn about biomedical research and
+                medicine through Stanford's educational programs.
               </p>
-
             </div>
 
-            <span class="tag">
-              MEDICINE
-            </span>
+            <span class="tag">RESEARCH</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              🔎 Research
-            </span>
-
-            <span class="detail">
-              🧬 Biomedical
-            </span>
-
-            <span class="detail">
-              💻 Educational
-            </span>
-
+            <span class="detail">🔬 Research</span>
+            <span class="detail">🧬 Biomedical</span>
+            <span class="detail">🎓 Students</span>
           </div>
 
         </div>
@@ -654,15 +537,15 @@
         <a
           href="https://med.stanford.edu/explore.html"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
       </div>
 
 
-      <!-- STANFORD CSI -->
+      <!-- CLINICAL -->
 
       <div class="opportunity" data-type="clinical">
 
@@ -671,54 +554,38 @@
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                Stanford Clinical Summer Internship
-              </h3>
+              <h3>Clinical Experiences</h3>
 
               <p>
-                A medical education program introducing students
-                to clinical medicine and healthcare.
+                Explore medical experiences that introduce
+                students to clinical healthcare environments.
               </p>
-
             </div>
 
-            <span class="tag">
-              CLINICAL
-            </span>
+            <span class="tag">CLINICAL</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              🩺 Clinical
-            </span>
-
-            <span class="detail">
-              🏥 Healthcare
-            </span>
-
-            <span class="detail">
-              ☀️ Summer
-            </span>
-
+            <span class="detail">🏥 Healthcare</span>
+            <span class="detail">🩺 Clinical</span>
+            <span class="detail">🎓 Students</span>
           </div>
 
         </div>
 
         <a
-          href="https://med.stanford.edu/medcsi.html"
+          href="https://students-residents.aamc.org/getting-experience"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
       </div>
 
 
-      <!-- AAMC VOLUNTEERING -->
+      <!-- VOLUNTEERING -->
 
       <div class="opportunity" data-type="volunteer">
 
@@ -727,39 +594,22 @@
           <div class="opportunity-top">
 
             <div>
-
-              <h3>
-                Healthcare Volunteering
-              </h3>
+              <h3>Healthcare Volunteering</h3>
 
               <p>
                 Learn how students can find healthcare-related
-                volunteer experiences through hospitals, clinics,
-                organizations, and community programs.
+                volunteer experiences in their communities.
               </p>
-
             </div>
 
-            <span class="tag">
-              VOLUNTEER
-            </span>
+            <span class="tag">VOLUNTEER</span>
 
           </div>
 
           <div class="details">
-
-            <span class="detail">
-              ❤️ Service
-            </span>
-
-            <span class="detail">
-              🏥 Healthcare
-            </span>
-
-            <span class="detail">
-              🤝 Community
-            </span>
-
+            <span class="detail">❤️ Service</span>
+            <span class="detail">🏥 Healthcare</span>
+            <span class="detail">🤝 Community</span>
           </div>
 
         </div>
@@ -767,61 +617,55 @@
         <a
           href="https://students-residents.aamc.org/getting-experience/finding-health-care-related-volunteer-opportunities"
           target="_blank"
-          class="learn-more"
-        >
+          rel="noopener"
+          class="learn-more">
           LEARN MORE →
         </a>
 
       </div>
 
-
     </div>
 
 
-    <!-- INFO -->
-
     <div class="info-box">
 
-      <h2>
-        What type of opportunity are you looking for?
-      </h2>
+      <h2>Opportunity Type</h2>
 
       <p>
-        You don't need to do everything. Start by exploring
-        the type of experience that interests you most.
+        Not sure where to start? Choose the type of experience
+        that sounds most interesting to you.
       </p>
-
 
       <div class="info-list">
 
         <div class="info-item">
           🔬 <strong>Research</strong><br>
-          Explore scientific questions and biomedical research.
+          Explore biomedical and scientific research.
         </div>
 
         <div class="info-item">
           🏥 <strong>Clinical</strong><br>
-          Learn more about healthcare and clinical environments.
+          Learn about patient care and healthcare settings.
         </div>
 
         <div class="info-item">
           ☀️ <strong>Summer Programs</strong><br>
-          Explore medicine-focused educational programs.
+          Explore medicine-focused summer experiences.
         </div>
 
         <div class="info-item">
           ❤️ <strong>Volunteering</strong><br>
-          Find ways to serve patients and your community.
+          Serve patients and your local community.
         </div>
 
         <div class="info-item">
           🩺 <strong>Medicine</strong><br>
-          Discover programs designed around careers in medicine.
+          Explore programs focused on medical careers.
         </div>
 
         <div class="info-item">
           🎓 <strong>Student Programs</strong><br>
-          Find experiences designed specifically for students.
+          Find opportunities created specifically for students.
         </div>
 
       </div>
@@ -829,7 +673,6 @@
     </div>
 
   </div>
-
 </section>
 
 
@@ -845,13 +688,13 @@ function filterOpportunities(type, button) {
   const cards = document.querySelectorAll(".opportunity");
   const buttons = document.querySelectorAll(".filter-btn");
 
-  buttons.forEach(btn => {
+  buttons.forEach(function(btn) {
     btn.classList.remove("active");
   });
 
   button.classList.add("active");
 
-  cards.forEach(card => {
+  cards.forEach(function(card) {
 
     if (type === "all") {
       card.style.display = "flex";
@@ -866,7 +709,6 @@ function filterOpportunities(type, button) {
     }
 
   });
-
 }
 
 </script>
