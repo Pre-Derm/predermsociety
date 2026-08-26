@@ -3,62 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medical Opportunities | Pre-Derm Society</title>
+
+<title>Opportunities | Pre-Derm Society</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:100}
-.logo{font-size:18px;font-weight:700}
-.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
-.nav-links a:hover{opacity:.55}
-.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}
-.join-btn:hover{background:#171717;color:#fff;opacity:1!important}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-.hero{text-align:center;padding:100px 7% 75px}
-.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
-h1{font-size:clamp(48px,8vw,82px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
-.hero p{max-width:680px;margin:auto;color:#707070;font-size:17px}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff;
+  color: #171717;
+  line-height: 1.6;
+}
 
-section{padding:70px 7%}
-.container{max-width:1150px;margin:auto}
-.section-heading{margin-bottom:35px}
-.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
-.section-heading h2{font-size:clamp(35px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px}
-.section-heading p{margin-top:15px;color:#777;max-width:700px}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:35px}
-.filter-btn{background:#fff;color:#171717;border:1px solid #ddd;border-radius:30px;padding:10px 17px;font-family:inherit;font-size:13px;cursor:pointer}
-.filter-btn.active{background:#171717;color:#fff;border-color:#171717}
+nav {
+  width: 100%;
+  padding: 24px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.97);
+}
 
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;background:#fff;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,.06)}
-.top{display:flex;justify-content:space-between;gap:15px}
-.card h3{font-size:23px;letter-spacing:-.5px;margin-bottom:8px}
-.card p{font-size:14px;color:#707070}
-.tag{background:#f5f5f5;border-radius:20px;padding:6px 10px;font-size:11px;height:max-content;white-space:nowrap;color:#666}
-.details{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.detail{font-size:12px;color:#777;border:1px solid #eee;border-radius:20px;padding:6px 10px}
-.learn{display:inline-block;font-size:13px;font-weight:700;margin-top:10px}
-.learn:hover{opacity:.55}
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+}
 
-.note{background:#f8f8f8;border-radius:30px;padding:45px;margin-top:35px}
-.note h2{font-size:35px;letter-spacing:-1.5px;margin-bottom:12px}
-.note p{color:#707070;max-width:760px}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-footer{text-align:center;font-size:12px;color:#999;padding:30px;border-top:1px solid #eee;margin-top:40px}
+.nav-links a:hover {
+  opacity: .55;
+}
 
-@media(max-width:850px){
-.grid{grid-template-columns:1fr}
-.nav-links{gap:12px}
-.nav-links a:not(.join-btn){display:none}
-h1{letter-spacing:-2.5px}
+.join-btn {
+  border: 1px solid #171717;
+  padding: 9px 18px;
+  border-radius: 30px;
+}
+
+.hero {
+  text-align: center;
+  padding: 95px 7% 70px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(45px, 7vw, 76px);
+  line-height: 1;
+  letter-spacing: -3px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #707070;
+  font-size: 16px;
+}
+
+section {
+  padding: 60px 7%;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: #777;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.interest {
+  border: 1px solid #e9e9e9;
+  border-radius: 22px;
+  padding: 27px;
+  min-height: 175px;
+  transition: .25s;
+  background: #fff;
+}
+
+.interest:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,.06);
+}
+
+.icon {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.interest h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.interest p {
+  font-size: 13px;
+  color: #777;
+}
+
+.category-section {
+  background: #f8f8f8;
+  border-radius: 30px;
+  margin: 30px 7%;
+  padding: 55px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.category {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  padding: 23px;
+  transition: .2s;
+}
+
+.category:hover {
+  transform: translateY(-3px);
+}
+
+.category h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.category p {
+  font-size: 13px;
+  color: #777;
+}
+
+.results {
+  padding-top: 40px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.result {
+  border: 1px solid #e8e8e8;
+  border-radius: 22px;
+  padding: 28px;
+}
+
+.result small {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #999;
+}
+
+.result h3 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.result p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+.result a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 1px solid #171717;
+}
+
+.note {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  font-size: 13px;
+  color: #777;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding: 30px;
+  border-top: 1px solid #eee;
+  margin-top: 70px;
+}
+
+@media(max-width:850px) {
+  .interest-grid,
+  .category-grid,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-section {
+    margin: 20px 5%;
+    padding: 35px 25px;
+  }
+
+  .nav-links a:not(.join-btn) {
+    display: none;
+  }
 }
 </style>
 </head>
@@ -66,211 +263,445 @@ h1{letter-spacing:-2.5px}
 <body>
 
 <nav>
-<a href="index.html" class="logo">Pre-Derm Society</a>
-<div class="nav-links">
-<a href="index.html#lessons">Learn</a>
-<a href="index.html#resources">Resources</a>
-<a href="index.html#contact">Contact</a>
-<a href="join.html" class="join-btn">Join Now</a>
-</div>
+  <a href="index.html" class="logo">Pre-Derm Society</a>
+
+  <div class="nav-links">
+    <a href="index.html#lessons">Learn</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="index.html#resources">Resources</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="join.html" class="join-btn">Join Now</a>
+  </div>
 </nav>
 
+
 <header class="hero">
-<div class="eyebrow">Student Resources</div>
-<h1>Find your<br>opportunity.</h1>
-<p>Explore medicine-focused research, internships, clinical experiences, summer programs, and volunteering opportunities.</p>
+
+  <div class="eyebrow">Pre-Derm Society • Opportunities</div>
+
+  <h1>Find your place<br>in medicine.</h1>
+
+  <p>
+    Explore research, programs, internships, papers, and
+    career resources based on what you're interested in.
+  </p>
+
 </header>
 
+
 <section>
-<div class="container">
 
-<div class="section-heading">
-<span>01 — Opportunity Finder</span>
-<h2>Explore medicine<br>in the real world.</h2>
-<p>Choose an opportunity type below. Each card takes you directly to an official organization or program page.</p>
-</div>
+  <div class="section-heading">
+    <div class="eyebrow">01 — Choose an Interest</div>
 
-<div class="filters">
-<button class="filter-btn active" onclick="filter('all',this)">All</button>
-<button class="filter-btn" onclick="filter('research',this)">Research</button>
-<button class="filter-btn" onclick="filter('internship',this)">Internships</button>
-<button class="filter-btn" onclick="filter('clinical',this)">Clinical</button>
-<button class="filter-btn" onclick="filter('summer',this)">Summer</button>
-<button class="filter-btn" onclick="filter('volunteer',this)">Volunteering</button>
-</div>
+    <h2>What part of medicine interests you?</h2>
 
-<div class="grid">
+    <p>
+      Start with a specialty or field you're curious about.
+    </p>
+  </div>
 
-<div class="card" data-type="research">
-<div>
-<div class="top">
-<div>
-<h3>AAMC Medical Opportunities</h3>
-<p>Search medicine and health-profession enrichment programs, including research, internships, workshops, and summer academies.</p>
-</div>
-<span class="tag">RESEARCH</span>
-</div>
-<div class="details">
-<span class="detail">🔬 Research</span>
-<span class="detail">💼 Internships</span>
-<span class="detail">☀️ Summer</span>
-</div>
-</div>
-<a class="learn" href="https://students-residents.aamc.org/resources-k-12-community/explore-medicine-high-school-students" target="_blank" rel="noopener">EXPLORE →</a>
-</div>
 
-<div class="card" data-type="research">
-<div>
-<div class="top">
-<div>
-<h3>NIH Student Opportunities</h3>
-<p>Explore biomedical research training opportunities offered through the National Institutes of Health.</p>
-</div>
-<span class="tag">RESEARCH</span>
-</div>
-<div class="details">
-<span class="detail">🧪 Biomedical</span>
-<span class="detail">🏛 NIH</span>
-<span class="detail">🔬 Research</span>
-</div>
-</div>
-<a class="learn" href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities" target="_blank" rel="noopener">EXPLORE →</a>
-</div>
+  <div class="interest-grid">
 
-<div class="card" data-type="internship summer">
-<div>
-<div class="top">
-<div>
-<h3>Stanford Medicine Programs</h3>
-<p>Explore Stanford Medicine's collection of high-school and undergraduate medicine, research, and healthcare programs.</p>
-</div>
-<span class="tag">INTERNSHIPS</span>
-</div>
-<div class="details">
-<span class="detail">🩺 Medicine</span>
-<span class="detail">🔬 Research</span>
-<span class="detail">💼 Internship</span>
-</div>
-</div>
-<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">EXPLORE →</a>
-</div>
+    <a href="#dermatology" class="interest">
+      <div class="icon">🧴</div>
+      <h3>Dermatology</h3>
+      <p>Skin, hair, nails, cosmetic and medical dermatology.</p>
+    </a>
 
-<div class="card" data-type="clinical summer">
-<div>
-<div class="top">
-<div>
-<h3>Stanford Clinical Summer Internship</h3>
-<p>A medicine-focused summer experience introducing high school students to clinical skills and healthcare.</p>
-</div>
-<span class="tag">CLINICAL</span>
-</div>
-<div class="details">
-<span class="detail">🏥 Clinical</span>
-<span class="detail">🩺 Medicine</span>
-<span class="detail">☀️ Summer</span>
-</div>
-</div>
-<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
-</div>
+    <a href="#pediatrics" class="interest">
+      <div class="icon">🧸</div>
+      <h3>Pediatrics</h3>
+      <p>Healthcare focused on children and adolescents.</p>
+    </a>
 
-<div class="card" data-type="research summer">
-<div>
-<div class="top">
-<div>
-<h3>Stanford SIMR</h3>
-<p>An eight-week summer research program for eligible high-school students involving hands-on biomedical research and mentorship.</p>
-</div>
-<span class="tag">RESEARCH</span>
-</div>
-<div class="details">
-<span class="detail">🔬 Research</span>
-<span class="detail">🧬 Biomedical</span>
-<span class="detail">☀️ Summer</span>
-</div>
-</div>
-<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
-</div>
+    <a href="#orthopedics" class="interest">
+      <div class="icon">🦴</div>
+      <h3>Orthopedics</h3>
+      <p>Bones, joints, muscles, movement and sports medicine.</p>
+    </a>
 
-<div class="card" data-type="research">
-<div>
-<div class="top">
-<div>
-<h3>Stanford EXPLORE</h3>
-<p>Explore biomedical research topics including immunology, neuroscience, cancer biology, bioengineering, and bioinformatics.</p>
-</div>
-<span class="tag">RESEARCH</span>
-</div>
-<div class="details">
-<span class="detail">🧪 Research</span>
-<span class="detail">🧬 Biology</span>
-<span class="detail">🎓 High School</span>
-</div>
-</div>
-<a class="learn" href="https://med.stanford.edu/explore/explore-program-description.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
-</div>
+    <a href="#cardiology" class="interest">
+      <div class="icon">❤️</div>
+      <h3>Cardiology</h3>
+      <p>The heart, blood vessels and cardiovascular health.</p>
+    </a>
 
-<div class="card" data-type="research internship">
-<div>
-<div class="top">
-<div>
-<h3>NIH Biomedical Research SIP</h3>
-<p>Learn about NIH's Summer Internship Program in Biomedical Research and check the current eligibility requirements.</p>
-</div>
-<span class="tag">INTERNSHIP</span>
-</div>
-<div class="details">
-<span class="detail">🧬 Biomedical</span>
-<span class="detail">💼 Internship</span>
-<span class="detail">🏛 NIH</span>
-</div>
-</div>
-<a class="learn" href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities" target="_blank" rel="noopener">VIEW PROGRAM →</a>
-</div>
+    <a href="#neurology" class="interest">
+      <div class="icon">🧠</div>
+      <h3>Neurology</h3>
+      <p>The brain, spinal cord and nervous system.</p>
+    </a>
 
-<div class="card" data-type="volunteer">
-<div>
-<div class="top">
-<div>
-<h3>AAMC Healthcare Experience Guide</h3>
-<p>Learn how students can explore healthcare-related experiences and ways to build exposure to medicine.</p>
-</div>
-<span class="tag">VOLUNTEER</span>
-</div>
-<div class="details">
-<span class="detail">❤️ Service</span>
-<span class="detail">🏥 Healthcare</span>
-<span class="detail">🎓 Students</span>
-</div>
-</div>
-<a class="learn" href="https://students-residents.aamc.org/getting-experience" target="_blank" rel="noopener">EXPLORE →</a>
-</div>
+    <a href="#genetics" class="interest">
+      <div class="icon">🧬</div>
+      <h3>Genetics</h3>
+      <p>Genes, heredity, genomics and genetic disease.</p>
+    </a>
 
-</div>
+    <a href="#radiology" class="interest">
+      <div class="icon">🩻</div>
+      <h3>Radiology</h3>
+      <p>Medical imaging and diagnostic technology.</p>
+    </a>
 
-<div class="note">
-<h2>Before you apply.</h2>
-<p>Always check the official program page for current eligibility, grade level, location, deadlines, cost, and application requirements. Programs change their requirements, so Pre-Derm Society does not guarantee eligibility or acceptance.</p>
-</div>
+    <a href="#research" class="interest">
+      <div class="icon">🔬</div>
+      <h3>Biomedical Research</h3>
+      <p>Scientific research connected to human health.</p>
+    </a>
 
-</div>
+    <a href="#general" class="interest">
+      <div class="icon">🩺</div>
+      <h3>General Medicine</h3>
+      <p>Explore medicine when you aren't sure which specialty fits.</p>
+    </a>
+
+  </div>
+
 </section>
 
-<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
-<script>
-function filter(type,button){
-document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
-button.classList.add("active");
+<div class="category-section">
 
-document.querySelectorAll(".card").forEach(card=>{
-if(type==="all" || card.dataset.type.includes(type)){
-card.style.display="flex";
-}else{
-card.style.display="none";
-}
-});
-}
-</script>
+  <div class="section-heading">
+    <div class="eyebrow">02 — Choose a Resource</div>
+
+    <h2>What are you looking for?</h2>
+
+    <p>
+      Choose the type of experience or resource you want to explore.
+    </p>
+  </div>
+
+
+  <div class="category-grid">
+
+    <a href="#programs" class="category">
+      <h3>🔬 Research Programs</h3>
+      <p>Structured programs for students interested in research.</p>
+    </a>
+
+    <a href="#internships" class="category">
+      <h3>💼 Internships</h3>
+      <p>Explore clinical, scientific and healthcare experiences.</p>
+    </a>
+
+    <a href="#papers" class="category">
+      <h3>📄 Research Papers</h3>
+      <p>Find scientific literature and learn how to read it.</p>
+    </a>
+
+    <a href="#training" class="category">
+      <h3>🧪 Research Training</h3>
+      <p>Learn research skills before starting a project.</p>
+    </a>
+
+    <a href="#careers" class="category">
+      <h3>💻 Medical Careers</h3>
+      <p>Understand specialties and different healthcare careers.</p>
+    </a>
+
+    <a href="#projects" class="category">
+      <h3>💡 Project Ideas</h3>
+      <p>Find questions that could inspire your next project.</p>
+    </a>
+
+  </div>
+
+</div>
+
+
+<section class="results">
+
+  <div class="section-heading">
+    <div class="eyebrow">03 — Start Exploring</div>
+
+    <h2>Real places to begin.</h2>
+
+    <p>
+      These are starting points for finding legitimate information.
+      Always check eligibility, deadlines and requirements directly
+      with the organization.
+    </p>
+  </div>
+
+
+  <div class="result-grid">
+
+
+    <div class="result" id="programs">
+      <small>RESEARCH PROGRAMS</small>
+      <h3>NIH Research & Training</h3>
+
+      <p>
+        Explore NIH research training, education and
+        biomedical science opportunities.
+      </p>
+
+      <a href="https://www.nih.gov/research-training"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT NIH →
+      </a>
+    </div>
+
+
+    <div class="result" id="internships">
+      <small>STUDENT OPPORTUNITIES</small>
+      <h3>NIH Student Opportunities</h3>
+
+      <p>
+        A starting point for exploring NIH programs and
+        training opportunities for students.
+      </p>
+
+      <a href="https://www.nih.gov/research-training"
+         target="_blank"
+         rel="noopener noreferrer">
+        EXPLORE →
+      </a>
+    </div>
+
+
+    <div class="result" id="papers">
+      <small>RESEARCH PAPERS</small>
+      <h3>PubMed</h3>
+
+      <p>
+        Search biomedical and health research papers
+        from a huge scientific literature database.
+      </p>
+
+      <a href="https://pubmed.ncbi.nlm.nih.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+        SEARCH PAPERS →
+      </a>
+    </div>
+
+
+    <div class="result" id="training">
+      <small>RESEARCH TRAINING</small>
+      <h3>NIAMS Student Research Training</h3>
+
+      <p>
+        Explore student research training connected to
+        arthritis, musculoskeletal and skin research.
+      </p>
+
+      <a href="https://www.niams.nih.gov/labs/career-development-outreach/student-research-training"
+         target="_blank"
+         rel="noopener noreferrer">
+        EXPLORE →
+      </a>
+    </div>
+
+
+    <div class="result" id="careers">
+      <small>MEDICAL CAREERS</small>
+      <h3>AAMC Students & Residents</h3>
+
+      <p>
+        Learn about medical education, physician careers
+        and the journey toward becoming a doctor.
+      </p>
+
+      <a href="https://students-residents.aamc.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT AAMC →
+      </a>
+    </div>
+
+
+    <div class="result" id="dermatology">
+      <small>DERMATOLOGY</small>
+      <h3>American Academy of Dermatology</h3>
+
+      <p>
+        Explore dermatology, skin health and information
+        about the specialty.
+      </p>
+
+      <a href="https://www.aad.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT AAD →
+      </a>
+    </div>
+
+
+    <div class="result" id="research">
+      <small>BIOMEDICAL RESEARCH</small>
+      <h3>NIH Research</h3>
+
+      <p>
+        Explore biomedical research and the different
+        areas scientists study.
+      </p>
+
+      <a href="https://www.nih.gov/research-training"
+         target="_blank"
+         rel="noopener noreferrer">
+        EXPLORE RESEARCH →
+      </a>
+    </div>
+
+
+    <div class="result" id="projects">
+      <small>PROJECT IDEAS</small>
+      <h3>Start With a Question</h3>
+
+      <p>
+        Use scientific literature to discover questions
+        you could investigate further.
+      </p>
+
+      <a href="https://pubmed.ncbi.nlm.nih.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+        FIND A TOPIC →
+      </a>
+    </div>
+
+
+    <div class="result" id="general">
+      <small>GENERAL MEDICINE</small>
+      <h3>Explore Healthcare Careers</h3>
+
+      <p>
+        Compare healthcare occupations, education paths
+        and career information.
+      </p>
+
+      <a href="https://www.bls.gov/ooh/healthcare/home.htm"
+         target="_blank"
+         rel="noopener noreferrer">
+        EXPLORE CAREERS →
+      </a>
+    </div>
+
+
+    <div class="result" id="pediatrics">
+      <small>PEDIATRICS</small>
+      <h3>American Academy of Pediatrics</h3>
+
+      <p>
+        Explore pediatrics and learn more about
+        child and adolescent healthcare.
+      </p>
+
+      <a href="https://www.aap.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT AAP →
+      </a>
+    </div>
+
+
+    <div class="result" id="orthopedics">
+      <small>ORTHOPEDICS</small>
+      <h3>Orthopaedic Research Society</h3>
+
+      <p>
+        Explore orthopedic research and scientific
+        work related to musculoskeletal health.
+      </p>
+
+      <a href="https://www.ors.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT ORS →
+      </a>
+    </div>
+
+
+    <div class="result" id="cardiology">
+      <small>CARDIOLOGY</small>
+      <h3>American Heart Association</h3>
+
+      <p>
+        Explore cardiovascular science, education
+        and heart-health research.
+      </p>
+
+      <a href="https://www.heart.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT AHA →
+      </a>
+    </div>
+
+
+    <div class="result" id="neurology">
+      <small>NEUROLOGY</small>
+      <h3>American Academy of Neurology</h3>
+
+      <p>
+        Explore neurology and learn about the
+        nervous system and neurological medicine.
+      </p>
+
+      <a href="https://www.aan.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT AAN →
+      </a>
+    </div>
+
+
+    <div class="result" id="genetics">
+      <small>GENETICS</small>
+      <h3>NHGRI</h3>
+
+      <p>
+        Explore genetics and genomics research,
+        education and discoveries.
+      </p>
+
+      <a href="https://www.genome.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT NHGRI →
+      </a>
+    </div>
+
+
+    <div class="result" id="radiology">
+      <small>RADIOLOGY</small>
+      <h3>Radiological Society of North America</h3>
+
+      <p>
+        Explore medical imaging, radiology and
+        research in diagnostic medicine.
+      </p>
+
+      <a href="https://www.rsna.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        VISIT RSNA →
+      </a>
+    </div>
+
+
+  </div>
+
+
+  <div class="note">
+    <strong>Important:</strong> Pre-Derm Society is a student
+    educational resource. Opportunities change frequently, and
+    eligibility varies by age, location and program. Always verify
+    requirements and deadlines on the organization's official website.
+  </div>
+
+</section>
+
+
+<footer>
+© 2026 Pre-Derm Society · Student-led education
+</footer>
 
 </body>
 </html>
