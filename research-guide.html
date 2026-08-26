@@ -1,527 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Guide | Pre-Derm Society</title>
 
-  <title>Research Guide | Pre-Derm Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #fff;
-      color: #171717;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    nav {
-      width: 100%;
-      padding: 24px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      background: rgba(255,255,255,.96);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      opacity: .55;
-    }
-
-    .join-btn {
-      border: 1px solid #171717;
-      padding: 9px 18px;
-      border-radius: 30px;
-    }
-
-    .join-btn:hover {
-      background: #171717;
-      color: white;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 7% 80px;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 8vw, 82px);
-      line-height: 1;
-      letter-spacing: -4px;
-      font-weight: 600;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #707070;
-      font-size: 17px;
-    }
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .container {
-      max-width: 950px;
-      margin: auto;
-    }
-
-    .card {
-      border: 1px solid #e9e9e9;
-      border-radius: 22px;
-      padding: 35px;
-      margin-bottom: 18px;
-    }
-
-    .card h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: #707070;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .step {
-      background: #f8f8f8;
-      border-radius: 18px;
-      padding: 25px;
-    }
-
-    .step-number {
-      font-size: 12px;
-      color: #999;
-      margin-bottom: 8px;
-    }
-
-    .step h3 {
-      margin-bottom: 7px;
-    }
-
-    .step p {
-      font-size: 14px;
-    }
-
-    .resource-link {
-      display: inline-block;
-      margin-top: 12px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .resource-link:hover {
-      opacity: .55;
-    }
-
-    .quiz {
-      background: #f8f8f8;
-      border-radius: 28px;
-      padding: 40px;
-      margin-top: 30px;
-    }
-
-    .quiz h2 {
-      font-size: 35px;
-      margin-bottom: 25px;
-    }
-
-    .question {
-      background: white;
-      border: 1px solid #e8e8e8;
-      border-radius: 18px;
-      padding: 25px;
-      margin-bottom: 18px;
-    }
-
-    .question h3 {
-      font-size: 17px;
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      padding: 9px 0;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    button {
-      border: none;
-      background: #171717;
-      color: white;
-      padding: 13px 23px;
-      border-radius: 30px;
-      font-family: inherit;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button:disabled {
-      opacity: .5;
-      cursor: default;
-    }
-
-    #quiz-result {
-      margin-top: 20px;
-      font-weight: 600;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-      padding: 30px;
-      border-top: 1px solid #eee;
-    }
-
-    @media(max-width:850px) {
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a:not(.join-btn) {
-        display: none;
-      }
-    }
-
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
+.nav-links a:hover{opacity:.55}
+.join{border:1px solid #171717;padding:9px 18px;border-radius:30px}
+.join:hover{background:#171717;color:#fff;opacity:1!important}
+.hero{text-align:center;padding:100px 7% 75px}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,82px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
+.hero p{max-width:650px;margin:auto;color:#707070;font-size:17px}
+section{padding:70px 7%}
+.container{max-width:950px;margin:auto}
+.card{border:1px solid #e9e9e9;border-radius:22px;padding:35px;margin-bottom:18px}
+.card h2{font-size:28px;margin-bottom:12px}
+.card p{color:#707070}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.step{background:#f8f8f8;border-radius:18px;padding:25px}
+.step-number{font-size:12px;color:#999}
+.step h3{margin:7px 0}
+.step p{font-size:14px}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.link{border:1px solid #eee;border-radius:18px;padding:20px;font-weight:600}
+.link:hover{background:#f8f8f8}
+.quiz{background:#f8f8f8;border-radius:28px;padding:40px;margin-top:30px}
+.quiz h2{font-size:35px;margin-bottom:25px}
+.question{background:#fff;border:1px solid #e8e8e8;border-radius:18px;padding:25px;margin-bottom:18px}
+.question h3{font-size:17px;margin-bottom:15px}
+label{display:block;padding:9px 0;cursor:pointer;font-size:14px}
+button{border:0;background:#171717;color:#fff;padding:13px 23px;border-radius:30px;font-family:inherit;font-weight:600;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+.result{margin-top:20px;font-weight:600}
+footer{text-align:center;font-size:12px;color:#999;padding:30px;border-top:1px solid #eee}
+@media(max-width:850px){.steps,.links{grid-template-columns:1fr}.nav-links{gap:12px}.nav-links a:not(.join){display:none}}
+</style>
 </head>
 
 <body>
 
 <nav>
-
-  <a href="index.html" class="logo">
-    Pre-Derm Society
-  </a>
-
-  <div class="nav-links">
-    <a href="index.html#lessons">Learn</a>
-    <a href="index.html#resources">Resources</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="join.html" class="join-btn">Join Now</a>
-  </div>
-
+<a href="index.html" class="logo">Pre-Derm Society</a>
+<div class="nav-links">
+<a href="index.html#lessons">Learn</a>
+<a href="index.html#resources">Resources</a>
+<a href="index.html#contact">Contact</a>
+<a href="join.html" class="join">Join Now</a>
+</div>
 </nav>
 
-
 <header class="hero">
-
-  <div class="eyebrow">
-    Student Resources
-  </div>
-
-  <h1>
-    Research<br>Guide.
-  </h1>
-
-  <p>
-    Learn how to explore scientific questions,
-    understand research, and begin reading
-    medical and scientific papers.
-  </p>
-
+<div class="eyebrow">Student Resources</div>
+<h1>Research<br>Guide.</h1>
+<p>Learn how to ask scientific questions, read research papers, understand evidence, and explore medicine responsibly.</p>
 </header>
 
-
 <section>
+<div class="container">
 
-  <div class="container">
+<div class="card">
+<h2>01 — Ask a Question</h2>
+<p>Good research starts with a focused question. Instead of starting with an answer, begin by identifying something you genuinely want to understand.</p>
 
-    <div class="card">
+<div class="steps">
+<div class="step"><div class="step-number">01</div><h3>🔎 Identify</h3><p>Find a topic you are curious about.</p></div>
+<div class="step"><div class="step-number">02</div><h3>💡 Narrow</h3><p>Turn the topic into a specific question.</p></div>
+<div class="step"><div class="step-number">03</div><h3>🧪 Investigate</h3><p>Look for reliable scientific evidence.</p></div>
+</div>
+</div>
 
-      <h2>
-        What is research?
-      </h2>
+<div class="card">
+<h2>02 — Read a Paper</h2>
+<p>Scientific papers can look intimidating. Start with the abstract, then learn what question the researchers asked, how they studied it, what they found, and what the results mean.</p>
 
-      <p>
-        Scientific research is a structured way of asking
-        questions, collecting evidence, analyzing information,
-        and reaching conclusions.
-      </p>
+<div class="links">
+<a href="read-a-paper.html" class="link">📄 Read a Paper →</a>
+<a href="project-ideas.html" class="link">💡 Project Ideas →</a>
+</div>
+</div>
 
-    </div>
+<div class="card">
+<h2>03 — Find Opportunities</h2>
+<p>Once you understand the basics, explore real medicine and biomedical research opportunities.</p>
 
+<div class="links">
+<a href="opportunities.html" class="link">🔬 Medical Opportunities →</a>
+<a href="medical-careers.html" class="link">🩺 Medical Careers →</a>
+</div>
+</div>
 
-    <div class="card">
+<div class="quiz">
+<h2>Research Quiz</h2>
 
-      <h2>
-        How to approach research
-      </h2>
+<form id="quiz">
 
-      <div class="steps">
+<div class="question">
+<h3>1. What should you begin with?</h3>
+<label><input type="radio" name="q1" value="a"> A conclusion</label>
+<label><input type="radio" name="q1" value="b"> A clear question</label>
+<label><input type="radio" name="q1" value="c"> A random fact</label>
+</div>
 
-        <div class="step">
-          <div class="step-number">01</div>
-          <h3>🔎 Ask</h3>
-          <p>
-            Start with a clear question you genuinely
-            want to understand.
-          </p>
-        </div>
+<div class="question">
+<h3>2. Which section explains how a study was performed?</h3>
+<label><input type="radio" name="q2" value="a"> Methods</label>
+<label><input type="radio" name="q2" value="b"> Title</label>
+<label><input type="radio" name="q2" value="c"> References</label>
+</div>
 
-        <div class="step">
-          <div class="step-number">02</div>
-          <h3>📄 Read</h3>
-          <p>
-            Learn how to navigate the abstract,
-            introduction, methods, results, and conclusion.
-          </p>
-        </div>
+<div class="question">
+<h3>3. Why are limitations important?</h3>
+<label><input type="radio" name="q3" value="a"> They make the paper longer</label>
+<label><input type="radio" name="q3" value="b"> They show what the evidence cannot tell us</label>
+<label><input type="radio" name="q3" value="c"> They replace the research question</label>
+</div>
 
-        <div class="step">
-          <div class="step-number">03</div>
-          <h3>🧪 Evaluate</h3>
-          <p>
-            Consider the evidence, limitations,
-            and strength of the conclusions.
-          </p>
-        </div>
+<button type="button" id="submit" onclick="submitQuiz()">Submit Quiz</button>
+<div class="result" id="result"></div>
 
-      </div>
+</form>
+</div>
 
-    </div>
-
-
-    <div class="card">
-
-      <h2>
-        Explore more
-      </h2>
-
-      <a href="read-a-paper.html" class="resource-link">
-        📄 Read a Paper →
-      </a>
-
-      <br>
-
-      <a href="project-ideas.html" class="resource-link">
-        💡 Project Ideas →
-      </a>
-
-      <br>
-
-      <a href="opportunities.html" class="resource-link">
-        🔬 Research Opportunities →
-      </a>
-
-    </div>
-
-
-    <div class="quiz">
-
-      <h2>
-        Quick Quiz
-      </h2>
-
-      <form id="quiz">
-
-
-        <div class="question">
-
-          <h3>
-            1. What should you start with when beginning research?
-          </h3>
-
-          <label>
-            <input type="radio" name="q1" value="a">
-            A random fact
-          </label>
-
-          <label>
-            <input type="radio" name="q1" value="b">
-            A clear question
-          </label>
-
-          <label>
-            <input type="radio" name="q1" value="c">
-            A conclusion
-          </label>
-
-        </div>
-
-
-        <div class="question">
-
-          <h3>
-            2. Which section explains how a study was performed?
-          </h3>
-
-          <label>
-            <input type="radio" name="q2" value="a">
-            Methods
-          </label>
-
-          <label>
-            <input type="radio" name="q2" value="b">
-            Title
-          </label>
-
-          <label>
-            <input type="radio" name="q2" value="c">
-            References
-          </label>
-
-        </div>
-
-
-        <div class="question">
-
-          <h3>
-            3. Why should researchers consider limitations?
-          </h3>
-
-          <label>
-            <input type="radio" name="q3" value="a">
-            To make the paper longer
-          </label>
-
-          <label>
-            <input type="radio" name="q3" value="b">
-            To understand what the evidence cannot tell us
-          </label>
-
-          <label>
-            <input type="radio" name="q3" value="c">
-            To change the research question
-          </label>
-
-        </div>
-
-
-        <button
-          type="button"
-          id="submitQuiz"
-          onclick="submitQuiz()">
-          Submit Quiz
-        </button>
-
-        <div id="quiz-result"></div>
-
-      </form>
-
-    </div>
-
-
-    <a href="index.html" class="back">
-      ← Back to Home
-    </a>
-
-  </div>
-
+</div>
 </section>
 
-
-<footer>
-  © 2026 Pre-Derm Society · Student-led education
-</footer>
-
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
 <script>
+function submitQuiz(){
 
-function submitQuiz() {
+const answers={q1:"b",q2:"a",q3:"b"};
+let score=0;
 
-  const answers = {
-    q1: "b",
-    q2: "a",
-    q3: "b"
-  };
+for(const q in answers){
+const selected=document.querySelector('input[name="'+q+'"]:checked');
 
-  let score = 0;
-
-  for (let question in answers) {
-
-    const selected =
-      document.querySelector(
-        'input[name="' + question + '"]:checked'
-      );
-
-    if (!selected) {
-      document.getElementById("quiz-result").textContent =
-        "Please answer every question first.";
-      return;
-    }
-
-    if (selected.value === answers[question]) {
-      score++;
-    }
-  }
-
-
-  document.querySelectorAll("#quiz input").forEach(function(input) {
-    input.disabled = true;
-  });
-
-
-  document.getElementById("submitQuiz").disabled = true;
-
-
-  document.getElementById("quiz-result").innerHTML =
-    "You scored " + score + " / 3.<br>" +
-    "Correct answers: 1 — B · 2 — A · 3 — B";
-
+if(!selected){
+document.getElementById("result").textContent="Please answer every question first.";
+return;
 }
 
+if(selected.value===answers[q]) score++;
+}
+
+document.querySelectorAll("#quiz input").forEach(input=>input.disabled=true);
+document.getElementById("submit").disabled=true;
+
+document.getElementById("result").innerHTML=
+"You scored "+score+" / 3.<br>Correct answers: 1 — B · 2 — A · 3 — B";
+}
 </script>
 
 </body>
