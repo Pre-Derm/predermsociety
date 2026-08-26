@@ -7,7 +7,6 @@
   <title>Pre-Derm Society</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -20,70 +19,54 @@
       margin: 0;
       background: #faf9f6;
       color: #111;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
       color: #111;
     }
 
-
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 100;
+      z-index: 50;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      min-height: 115px;
-      padding: 24px 5%;
+      padding: 22px 6%;
 
-      background: rgba(250, 249, 246, 0.92);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
+      background: rgba(250, 249, 246, 0.88);
+      backdrop-filter: blur(12px);
 
-      border-bottom: 1px solid #dedcd8;
+      border-bottom: 1px solid #e2e0dc;
     }
 
     .logo {
       text-decoration: none;
-      font-size: 13px;
-      line-height: 1.45;
-      font-weight: 500;
-      letter-spacing: 4px;
-    }
-
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
     }
 
     .links a {
       text-decoration: none;
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 3px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-left: 24px;
     }
 
     .links a:hover,
     .logo:hover {
-      opacity: 0.45;
+      opacity: 0.5;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -93,7 +76,7 @@
       display: flex;
       align-items: flex-end;
 
-      padding: 180px 8% 100px;
+      padding: 160px 8% 90px;
     }
 
     .hero-background {
@@ -121,93 +104,78 @@
     }
 
     .eyebrow {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 4px;
+      font-size: 9px;
+      letter-spacing: 3px;
       color: #777;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     h1 {
-      font-size: clamp(70px, 13vw, 165px);
+      font-size: clamp(68px, 13vw, 160px);
       line-height: 0.78;
       letter-spacing: -9px;
-      font-weight: 300;
+      font-weight: 400;
       margin: 0;
     }
 
     .hero-description {
-      max-width: 650px;
-      margin-top: 48px;
+      max-width: 540px;
+      margin-top: 42px;
 
-      font-size: 19px;
-      line-height: 1.9;
-      color: #666;
-      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5f5f5f;
     }
-
-
-    /* =========================
-       LINKS / BUTTONS
-    ========================= */
 
     .button {
       display: inline-block;
 
-      margin-top: 28px;
-      padding-bottom: 9px;
+      margin-top: 25px;
+      padding-bottom: 7px;
 
       border-bottom: 1px solid #111;
 
       text-decoration: none;
 
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 3px;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
 
     .button:hover {
-      opacity: 0.45;
+      opacity: 0.5;
     }
 
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 140px 8%;
+      padding: 130px 8%;
       border-top: 1px solid #dedcd8;
     }
 
     .label {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 4px;
+      font-size: 9px;
+      letter-spacing: 3px;
       color: #777;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     h2 {
-      font-size: clamp(55px, 8vw, 105px);
+      font-size: clamp(52px, 8vw, 100px);
       line-height: 0.86;
       letter-spacing: -6px;
-      font-weight: 300;
-      margin: 0 0 40px;
+      font-weight: 400;
+      margin: 0 0 35px;
     }
 
     .text {
-      max-width: 700px;
+      max-width: 600px;
       color: #666;
-      line-height: 1.9;
-      font-size: 18px;
-      font-weight: 300;
+      line-height: 1.8;
+      font-size: 15px;
     }
 
-
-    /* =========================
-       ABOUT
-    ========================= */
+    /* ABOUT */
 
     .about {
       min-height: 75vh;
@@ -216,17 +184,10 @@
     }
 
     .about-content {
-      max-width: 900px;
+      max-width: 850px;
     }
 
-    .about .text + .text {
-      margin-top: 25px;
-    }
-
-
-    /* =========================
-       VISUAL SECTION
-    ========================= */
+    /* VISUAL SECTION */
 
     .photo-section {
       min-height: 70vh;
@@ -254,23 +215,20 @@
     .photo-content {
       position: relative;
       z-index: 2;
-      padding: 90px 0;
+      padding: 90px 8%;
     }
 
-
-    /* =========================
-       LEARNING
-    ========================= */
+    /* LEARNING */
 
     .learn {
       background: #efeee9;
     }
 
     .lesson-card {
-      min-height: 500px;
+      min-height: 460px;
 
-      margin-top: 70px;
-      padding: 65px;
+      margin-top: 60px;
+      padding: 55px;
 
       display: flex;
       flex-direction: column;
@@ -282,17 +240,14 @@
     }
 
     .lesson-card h3 {
-      font-size: clamp(45px, 6vw, 78px);
+      font-size: clamp(45px, 6vw, 75px);
       line-height: 0.9;
       letter-spacing: -5px;
-      font-weight: 300;
-      margin: 12px 0 25px;
+      font-weight: 400;
+      margin: 10px 0 20px;
     }
 
-
-    /* =========================
-       IMPACT
-    ========================= */
+    /* IMPACT */
 
     .impact {
       background: #faf9f6;
@@ -302,54 +257,49 @@
       font-size: clamp(110px, 19vw, 230px);
       line-height: 0.8;
       letter-spacing: -14px;
-      font-weight: 300;
+      font-weight: 400;
 
-      margin: 85px 0 30px;
+      margin: 80px 0 25px;
     }
 
     .impact-label {
       font-size: 10px;
-      letter-spacing: 4px;
-      font-weight: 500;
+      letter-spacing: 3px;
+      font-weight: bold;
     }
 
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      margin-top: 90px;
+      margin-top: 80px;
 
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
     .impact-box {
-      min-height: 220px;
+      min-height: 210px;
 
-      padding: 42px;
+      padding: 40px;
 
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
     }
 
     .impact-box-number {
-      font-size: 62px;
+      font-size: 58px;
       letter-spacing: -4px;
-      font-weight: 300;
       margin: 15px 0;
     }
 
     .impact-box-label {
-      font-size: 10px;
-      letter-spacing: 3px;
+      font-size: 9px;
+      letter-spacing: 2px;
       color: #666;
-      font-weight: 400;
     }
 
-
-    /* =========================
-       DONATION
-    ========================= */
+    /* DONATION */
 
     .donation {
       min-height: 75vh;
@@ -364,13 +314,10 @@
     }
 
     .donation-content {
-      max-width: 850px;
+      max-width: 800px;
     }
 
-
-    /* =========================
-       JOIN
-    ========================= */
+    /* JOIN */
 
     .join {
       text-align: center;
@@ -381,13 +328,10 @@
       margin-right: auto;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
-      padding: 50px 8%;
+      padding: 45px 8%;
 
       display: flex;
       justify-content: space-between;
@@ -399,48 +343,31 @@
     footer a {
       text-decoration: none;
 
-      font-size: 10px;
-      letter-spacing: 3px;
-      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 2px;
 
-      margin-right: 28px;
+      margin-right: 25px;
     }
 
     footer a:hover {
-      opacity: 0.45;
+      opacity: 0.5;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
       nav {
-        min-height: 105px;
-        padding: 20px 5%;
-      }
-
-      .logo {
-        font-size: 11px;
-        letter-spacing: 3px;
-      }
-
-      .links {
-        gap: 17px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        max-width: 230px;
+        padding: 18px 5%;
       }
 
       .links a {
-        font-size: 9px;
-        letter-spacing: 2.5px;
+        margin-left: 8px;
+        font-size: 8px;
       }
 
       .hero {
-        padding: 165px 8% 75px;
+        padding: 140px 8% 70px;
       }
 
       h1 {
@@ -451,58 +378,36 @@
         letter-spacing: -4px;
       }
 
-      .hero-description {
-        font-size: 17px;
-      }
-
       section {
-        padding: 100px 8%;
+        padding: 90px 8%;
       }
 
       .lesson-card {
-        min-height: 450px;
-        padding: 32px;
-      }
-
-      .lesson-card h3 {
-        letter-spacing: -3px;
+        min-height: 420px;
+        padding: 30px;
       }
 
       .impact-grid {
         grid-template-columns: 1fr;
       }
 
-      .impact-box {
-        padding: 32px;
-      }
-
       footer {
         flex-direction: column;
         align-items: flex-start;
-        gap: 28px;
+        gap: 25px;
       }
-
-      footer a {
-        display: inline-block;
-        margin-bottom: 15px;
-      }
-
     }
-
   </style>
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
   <nav>
 
     <a href="index.html" class="logo">
-      PRE-DERM<br>
-      SOCIETY
+      PRE-DERM SOCIETY
     </a>
 
     <div class="links">
@@ -539,8 +444,8 @@
 
       <p class="hero-description">
         A student-led space for exploring dermatology,
-        learning skin science, teaching others, and giving
-        back.
+        learning skin science, teaching others,
+        and giving back.
       </p>
 
       <a href="skin101.html" class="button">
@@ -559,7 +464,7 @@
     <div class="about-content">
 
       <div class="label">
-        01 · ABOUT
+        ABOUT
       </div>
 
       <h2>
@@ -611,7 +516,7 @@
   <section class="learn">
 
     <div class="label">
-      02 · LEARNING
+      LEARNING
     </div>
 
     <h2>
@@ -623,7 +528,6 @@
       Build your foundation in skin science before
       exploring the deeper world of dermatology.
     </p>
-
 
     <div class="lesson-card">
 
@@ -654,7 +558,7 @@
   <section class="impact" id="impact">
 
     <div class="label">
-      03 · OUR IMPACT
+      OUR IMPACT
     </div>
 
     <h2>
@@ -663,15 +567,14 @@
     </h2>
 
     <p class="text">
-      Pre-Derm Society creates impact by making
-      skin-science education accessible and
-      meaningful.
+      Pre-Derm Society has already begun creating
+      impact through skin-science education.
     </p>
 
 
     <!-- MAIN IMPACT NUMBER -->
 
-    <div class="impact-number" id="mainPeopleImpacted">
+    <div class="impact-number" id="peopleImpactedMain">
       38
     </div>
 
@@ -685,37 +588,17 @@
     <div class="impact-grid">
 
 
-      <!-- PEOPLE EDUCATED -->
-
-      <div class="impact-box">
-
-        <div class="label">
-          01
-        </div>
-
-        <div class="impact-box-number">
-          38
-        </div>
-
-        <div class="impact-box-label">
-          PEOPLE EDUCATED
-        </div>
-
-      </div>
-
-
       <!-- PEOPLE IMPACTED -->
 
       <div class="impact-box">
 
         <div class="label">
-          02
+          PEOPLE IMPACTED
         </div>
 
         <div
           class="impact-box-number"
-          id="peopleImpacted"
-        >
+          id="peopleImpacted">
           38
         </div>
 
@@ -726,18 +609,38 @@
       </div>
 
 
+      <!-- MEETINGS DONE -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          MEETINGS DONE
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="meetingsDone">
+          10
+        </div>
+
+        <div class="impact-box-label">
+          MEETINGS DONE
+        </div>
+
+      </div>
+
+
       <!-- LESSONS TAUGHT -->
 
       <div class="impact-box">
 
         <div class="label">
-          03
+          LESSONS TAUGHT
         </div>
 
         <div
           class="impact-box-number"
-          id="lessonsTaught"
-        >
+          id="lessonsTaught">
           2
         </div>
 
@@ -753,7 +656,7 @@
       <div class="impact-box">
 
         <div class="label">
-          04
+          CARE BOXES
         </div>
 
         <div class="impact-box-number">
@@ -779,7 +682,7 @@
     <div class="donation-content">
 
       <div class="label">
-        04 · GIVE BACK
+        GIVE BACK
       </div>
 
       <h2>
@@ -810,7 +713,7 @@
   <section class="join">
 
     <div class="label">
-      05 · JOIN
+      JOIN
     </div>
 
     <h2>
@@ -868,55 +771,100 @@
   </footer>
 
 
-  <!-- IMPACT COUNTER -->
+  <!-- IMPACT COUNTERS -->
 
   <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
+    /*
+      These are the current official starting numbers.
+      Quiz completions from Skin 101 can update
+      PEOPLE IMPACTED and LESSONS TAUGHT.
+    */
 
-      let peopleImpacted =
-        parseInt(localStorage.getItem("peopleImpacted"));
-
-      let lessonsTaught =
-        parseInt(localStorage.getItem("lessonsTaught"));
-
-
-      if (isNaN(peopleImpacted)) {
-        peopleImpacted = 38;
-        localStorage.setItem(
-          "peopleImpacted",
-          "38"
-        );
-      }
+    const defaultPeopleImpacted = 38;
+    const defaultMeetingsDone = 10;
+    const defaultLessonsTaught = 2;
 
 
-      if (isNaN(lessonsTaught)) {
-        lessonsTaught = 2;
-        localStorage.setItem(
-          "lessonsTaught",
-          "2"
-        );
-      }
+    /*
+      Keep the counters synchronized between
+      index.html and skin101.html.
+    */
+
+    let peopleImpacted =
+      Number(localStorage.getItem("peopleImpacted"));
+
+    let lessonsTaught =
+      Number(localStorage.getItem("lessonsTaught"));
 
 
-      document.getElementById(
-        "peopleImpacted"
-      ).textContent = peopleImpacted;
+    /*
+      If this is the first time the updated system
+      is being used, start with the official numbers.
+    */
+
+    if (
+      !localStorage.getItem("impactSystemInitialized")
+    ) {
+      peopleImpacted = defaultPeopleImpacted;
+      lessonsTaught = defaultLessonsTaught;
+
+      localStorage.setItem(
+        "peopleImpacted",
+        peopleImpacted
+      );
+
+      localStorage.setItem(
+        "lessonsTaught",
+        lessonsTaught
+      );
+
+      localStorage.setItem(
+        "meetingsDone",
+        defaultMeetingsDone
+      );
+
+      localStorage.setItem(
+        "impactSystemInitialized",
+        "true"
+      );
+    }
 
 
-      document.getElementById(
-        "lessonsTaught"
-      ).textContent = lessonsTaught;
+    /*
+      Meetings stay at 10 unless you manually
+      change the number later.
+    */
+
+    const meetingsDone =
+      Number(localStorage.getItem("meetingsDone"))
+      || defaultMeetingsDone;
 
 
-      document.getElementById(
-        "mainPeopleImpacted"
-      ).textContent = peopleImpacted;
+    /*
+      Display the numbers.
+    */
 
-    });
+    document.getElementById(
+      "peopleImpacted"
+    ).textContent = peopleImpacted;
+
+
+    document.getElementById(
+      "peopleImpactedMain"
+    ).textContent = peopleImpacted;
+
+
+    document.getElementById(
+      "meetingsDone"
+    ).textContent = meetingsDone;
+
+
+    document.getElementById(
+      "lessonsTaught"
+    ).textContent = lessonsTaught;
 
   </script>
-
 
 </body>
 </html>
