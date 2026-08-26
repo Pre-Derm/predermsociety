@@ -3,40 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Read a Paper · Pre-Derm Society</title>
+<title>Read a Paper | Pre-Derm Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#faf9f6;color:#111;font-family:Arial,Helvetica,sans-serif}
-a,a:visited,a:hover,a:active{color:#111}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 6%;background:rgba(250,249,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid #dedcd8}
-.logo{text-decoration:none;font-size:11px;font-weight:600;letter-spacing:3px;line-height:1.5}.links{display:flex;align-items:center;gap:25px}.links a{text-decoration:none;font-size:9px;letter-spacing:2px}
-.hero{min-height:75vh;display:flex;align-items:flex-end;padding:180px 8% 100px;background:radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),#faf9f6}.hero-content{max-width:1050px}.eyebrow,.label{font-size:9px;letter-spacing:3px;color:#777;margin-bottom:30px}.emoji{font-size:38px;margin-bottom:25px}
-h1{font-size:clamp(65px,13vw,155px);line-height:.8;letter-spacing:-9px;font-weight:300;margin:0}.hero-description,.text{max-width:650px;margin-top:45px;font-size:16px;line-height:1.8;color:#666}
-section{padding:120px 8%;border-top:1px solid #dedcd8}h2{font-size:clamp(50px,8vw,100px);line-height:.86;letter-spacing:-6px;font-weight:300;margin:0 0 35px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);margin-top:70px;border-top:1px solid #dedcd8;border-left:1px solid #dedcd8}.card{min-height:260px;padding:40px;border-right:1px solid #dedcd8;border-bottom:1px solid #dedcd8}.card-emoji{font-size:32px}.card-number{font-size:9px;letter-spacing:3px;color:#777;margin-top:25px}.card h3{font-size:38px;line-height:.95;letter-spacing:-3px;font-weight:300;margin:25px 0 20px}.card p{color:#666;line-height:1.7;font-size:14px}
-.button{display:inline-block;margin-top:20px;padding-bottom:7px;border-bottom:1px solid #111;text-decoration:none;font-size:9px;font-weight:600;letter-spacing:2px}
-footer{padding:45px 8%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #dedcd8}footer a{text-decoration:none;font-size:9px;letter-spacing:2px;margin-right:25px}
-@media(max-width:700px){nav{padding:18px 5%}.links{gap:13px;flex-wrap:wrap;justify-content:flex-end;max-width:230px}.links a{font-size:8px}.hero{min-height:80vh;padding:150px 8% 80px}h1{letter-spacing:-5px}h2{letter-spacing:-4px}section{padding:90px 8%}.cards{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start;gap:25px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+nav{width:100%;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:1000}
+.logo{font-size:18px;font-weight:700}
+.nav-right{display:flex;align-items:center;gap:25px}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:500}
+.nav-links a:hover{opacity:.55}
+.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}
+.join-btn:hover{background:#171717;color:#fff}
+
+.menu{position:relative}
+.menu-button{border:none!important;background:none!important;color:#171717!important;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;padding:8px 0}
+.menu-dropdown{position:absolute;right:0;top:42px;width:250px;background:#fff;border:1px solid #e8e8e8;border-radius:18px;padding:10px;box-shadow:0 15px 45px rgba(0,0,0,.08);display:none}
+.menu:hover .menu-dropdown{display:block}
+.menu-dropdown a{display:block;padding:13px 14px;border-radius:12px;font-size:13px}
+.menu-dropdown a:hover{background:#f7f7f7}
+.menu-title{font-size:10px;color:#999;text-transform:uppercase;letter-spacing:1.5px;padding:10px 14px 5px}
+
+.hero{padding:110px 7% 80px;text-align:center;min-height:55vh;display:flex;align-items:center;justify-content:center}
+.hero-content{max-width:800px}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,82px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
+.hero p{max-width:620px;margin:auto;color:#666;font-size:17px}
+
+section{padding:80px 7%}
+.section-heading{max-width:700px;margin-bottom:45px}
+.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
+.section-heading h2{font-size:clamp(34px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px;font-weight:600}
+.section-heading p{margin-top:15px;color:#777}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,.06)}
+.emoji{font-size:27px;margin-bottom:18px}
+.card-number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:7px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{font-size:14px;color:#777}
+.card-link{margin-top:20px;font-size:13px;font-weight:700}
+
+.resource-box{background:#f8f8f8;border-radius:30px;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.resource-link{background:#fff;border:1px solid #e7e7e7;border-radius:18px;padding:22px;transition:.2s}
+.resource-link:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.resource-link strong{display:block;margin-bottom:5px}
+.resource-link span{font-size:13px;color:#777}
+
+.contact{text-align:center;border-top:1px solid #eee;padding-top:80px;padding-bottom:30px}
+.contact h2{font-size:clamp(40px,6vw,70px);letter-spacing:-3px;margin-bottom:15px}
+.contact p{color:#777;margin-bottom:25px}
+.socials{display:flex;justify-content:center;gap:25px;font-size:14px;font-weight:600;margin-bottom:55px}
+footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+
+@media(max-width:850px){
+.cards,.resource-box{grid-template-columns:1fr}
+.nav-links{display:none}
+.nav-right{gap:16px}
+h1{letter-spacing:-2.5px}
+}
 </style>
 </head>
+
 <body>
 
-<nav><a href="index.html" class="logo">PRE-DERM<br>SOCIETY</a><div class="links"><a href="index.html#about">ABOUT</a><a href="index.html#hub">LEARN</a><a href="index.html#impact">IMPACT</a><a href="index.html#donate">DONATE</a></div></nav>
+<nav>
+<a href="index.html" class="logo">Pre-Derm Society</a>
 
-<div class="hero"><div class="hero-content"><div class="eyebrow">RESEARCH · READING</div><div class="emoji">📄</div><h1>READ A<br>PAPER</h1><p class="hero-description">A simple framework for understanding scientific papers without getting overwhelmed.</p></div></div>
+<div class="nav-right">
+<div class="nav-links">
+<a href="index.html#lessons">Learn</a>
+<a href="index.html#resources">Resources</a>
+<a href="index.html#research">Research</a>
+<a href="index.html#contact">Contact</a>
+</div>
 
-<section><div class="label">01 · START HERE</div><h2>Read with<br>a question.</h2><p class="text">Scientific papers can seem complicated. Instead of trying to understand every sentence immediately, focus on the research question, methods, results, and conclusions.</p></section>
+<div class="menu">
+<button class="menu-button">Menu ↓</button>
+<div class="menu-dropdown">
 
-<section><div class="label">02 · THE PAPER</div><div class="cards">
-<div class="card"><div class="card-emoji">🎯</div><div class="card-number">01</div><h3>Question</h3><p>What question were the researchers trying to answer?</p></div>
-<div class="card"><div class="card-emoji">🧪</div><div class="card-number">02</div><h3>Methods</h3><p>How did the researchers investigate the question?</p></div>
-<div class="card"><div class="card-emoji">📊</div><div class="card-number">03</div><h3>Results</h3><p>What did the study actually find?</p></div>
-<div class="card"><div class="card-emoji">💭</div><div class="card-number">04</div><h3>Meaning</h3><p>What do the findings suggest, and what limitations should be considered?</p></div>
-</div></section>
+<div class="menu-title">Lessons</div>
+<a href="skin101.html">🔎 Skin 101</a>
+<a href="cleansing.html">🫧 Cleansing</a>
+<a href="moisturizing.html">💧 Moisturizing</a>
+<a href="sun-protection.html">☀️ Sun Protection</a>
+<a href="acne.html">🧴 Acne</a>
+<a href="medicine101.html">🩺 Medicine 101</a>
 
-<section><div class="label">03 · KEEP EXPLORING</div><h2>Think like<br>a researcher.</h2><a href="research-guide.html" class="button">RESEARCH GUIDE →</a></section>
+<div class="menu-title">Student Resources</div>
+<a href="medical-careers.html">💻 Medical Careers</a>
+<a href="project-ideas.html">💡 Project Ideas</a>
+<a href="research-guide.html">🧪 Research Guide</a>
+<a href="read-a-paper.htm">📄 Read a Paper</a>
+<a href="opportunities.html">🔬 Research Opportunities</a>
+<a href="healthcare-explained.html">🏥 Healthcare Explained</a>
 
-<footer><div><a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a><a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a><a href="mailto:predermsociety@gmail.com">EMAIL</a></div><div class="label">PRE-DERM SOCIETY</div></footer>
+</div>
+</div>
+
+<a href="join.html" class="join-btn">Join Now</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+<div class="eyebrow">Student Resources · Research</div>
+<h1>Learn to read<br>a research paper.</h1>
+<p>Scientific papers can look intimidating. Break them into smaller sections and learn what each part is actually telling you.</p>
+</div>
+</header>
+
+<section>
+
+<div class="section-heading">
+<span>01 — The Paper</span>
+<h2>Know what you're<br>looking at.</h2>
+<p>Most scientific papers follow a structure that makes them easier to navigate once you know what to look for.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div>
+<div class="emoji">📌</div>
+<div class="card-number">01</div>
+<h3>Abstract</h3>
+<p>A short overview of the research question, methods, results, and conclusions.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">❓</div>
+<div class="card-number">02</div>
+<h3>Introduction</h3>
+<p>Explains the background and why the research question matters.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">🧪</div>
+<div class="card-number">03</div>
+<h3>Methods</h3>
+<p>Explains how researchers collected and analyzed their data.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">📊</div>
+<div class="card-number">04</div>
+<h3>Results</h3>
+<p>Shows what the researchers found through their analysis.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">💭</div>
+<div class="card-number">05</div>
+<h3>Discussion</h3>
+<p>Explains what the results might mean and how they connect to previous research.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">📚</div>
+<div class="card-number">06</div>
+<h3>References</h3>
+<p>Lists the sources and previous studies used by the researchers.</p>
+</div>
+<div class="card-link">READ →</div>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="section-heading">
+<span>02 — Helpful Research Tools</span>
+<h2>Go beyond<br>the abstract.</h2>
+<p>Use research education resources to become more comfortable with scientific literature.</p>
+</div>
+
+<div class="resource-box">
+
+<a class="resource-link" href="https://rockedu.rockefeller.edu/research/" target="_blank">
+<strong>RockEDU Student Research Toolkit</strong>
+<span>Learn scientific reasoning and research basics →</span>
+</a>
+
+<a class="resource-link" href="https://www.researchgirl.org/resources" target="_blank">
+<strong>Research Girl Resources</strong>
+<span>Explore research education resources and workshops →</span>
+</a>
+
+<a class="resource-link" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">
+<strong>PubMed</strong>
+<span>Search biomedical and health research literature →</span>
+</a>
+
+<a class="resource-link" href="https://scholar.google.com/" target="_blank">
+<strong>Google Scholar</strong>
+<span>Search scholarly literature across many fields →</span>
+</a>
+
+</div>
+</section>
+
+<section class="contact">
+<div class="eyebrow">Pre-Derm Society</div>
+<h2>Read. Question. Explore.</h2>
+<p>Research gets easier when you know where to start.</p>
+<div class="socials">
+<a href="https://www.instagram.com/prederm_society/" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@prederm_society" target="_blank">TikTok</a>
+<a href="index.html">Home</a>
+</div>
+</section>
+
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
 </body>
 </html>
