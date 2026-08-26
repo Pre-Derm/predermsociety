@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pre-Derm Lab | Pre-Derm Society</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAV */
+
+    nav {
+      height: 82px;
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffffff;
+      border-bottom: 1px solid #111111;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 16px;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.45;
+    }
+
+    .lab-button {
+      border: 1px solid #111111;
+      border-radius: 100px;
+      padding: 9px 18px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: 700px;
+      padding: 130px 6% 120px;
+
+      display: flex;
+      align-items: center;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+    }
+
+    .small-heading {
+      margin-bottom: 30px;
+
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(80px, 12vw, 165px);
+      line-height: 0.78;
+      letter-spacing: -8px;
+      font-weight: 300;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 560px;
+      margin-top: 45px;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 30px;
+      padding: 13px 24px;
+
+      border-radius: 100px;
+
+      font-size: 16px;
+      font-weight: 300;
+
+      transition: all 0.2s ease;
+    }
+
+    .button-black {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .button-black:hover {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: inset 0 0 0 1px #111111;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+      padding: 110px 6%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .section-title {
+      font-size: clamp(55px, 7vw, 95px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+      font-weight: 300;
+    }
+
+    .intro-copy {
+      max-width: 550px;
+      align-self: end;
+    }
+
+    .intro-copy p {
+      font-size: 21px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+
+    /* LAB CARDS */
+
+    .experiences {
+      padding: 130px 6%;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .experiences-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 50px;
+
+      margin-bottom: 70px;
+    }
+
+    .experiences-description {
+      max-width: 400px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 1px;
+
+      background: #111111;
+      border: 1px solid #111111;
+    }
+
+    .experience-card {
+      min-height: 470px;
+      padding: 35px;
+
+      background: #ffffff;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .experience-number {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .experience-card h3 {
+      margin-top: 100px;
+
+      font-size: 45px;
+      line-height: 0.95;
+      font-weight: 300;
+    }
+
+    .experience-card p {
+      margin-top: 20px;
+
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .experience-card .button {
+      margin-top: auto;
+      width: fit-content;
+    }
+
+
+    /* SKIN EXPLORER */
+
+    .explorer {
+      padding: 140px 6%;
+
+      background: #111111;
+      color: #ffffff;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .explorer-grid {
+      margin-top: 80px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+    }
+
+    .skin-diagram {
+      min-height: 520px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border: 1px solid #ffffff;
+    }
+
+    .skin-layer {
+      padding: 35px;
+
+      border-bottom: 1px solid #ffffff;
+
+      cursor: pointer;
+
+      transition: all 0.25s ease;
+    }
+
+    .skin-layer:last-child {
+      border-bottom: none;
+    }
+
+    .skin-layer:hover,
+    .skin-layer.active {
+      background: #ffffff;
+      color: #111111;
+      padding-left: 50px;
+    }
+
+    .layer-name {
+      font-size: 32px;
+      font-weight: 300;
+    }
+
+    .layer-description {
+      display: none;
+
+      margin-top: 8px;
+
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .skin-layer.active .layer-description {
+      display: block;
+    }
+
+    .explorer-info {
+      align-self: center;
+    }
+
+    .explorer-info p {
+      margin-top: 25px;
+
+      max-width: 500px;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+
+    /* UNDER THE SURFACE */
+
+    .surface {
+      padding: 140px 6%;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .surface-buttons {
+      margin-top: 70px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .surface-button {
+      padding: 15px 25px;
+
+      border: 1px solid #111111;
+      border-radius: 100px;
+
+      background: #ffffff;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      font-weight: 300;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .surface-button:hover,
+    .surface-button.active {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .surface-result {
+      min-height: 230px;
+
+      margin-top: 35px;
+      padding: 45px;
+
+      border: 1px solid #111111;
+    }
+
+    .surface-result h3 {
+      font-size: 42px;
+      font-weight: 300;
+    }
+
+    .surface-result p {
+      max-width: 700px;
+
+      margin-top: 15px;
+
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+
+    /* MYTH LAB */
+
+    .myth {
+      padding: 140px 6%;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .myth-box {
+      max-width: 850px;
+
+      margin: 70px auto 0;
+      padding: 55px;
+
+      border: 1px solid #111111;
+
+      text-align: center;
+    }
+
+    .myth-label {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .myth-box h3 {
+      margin-top: 35px;
+
+      font-size: 38px;
+      line-height: 1.05;
+      font-weight: 300;
+    }
+
+    .myth-buttons {
+      margin-top: 40px;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .myth-button {
+      padding: 13px 28px;
+
+      border: 1px solid #111111;
+      border-radius: 100px;
+
+      background: #ffffff;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 17px;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .myth-button:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .myth-result {
+      min-height: 70px;
+
+      margin-top: 30px;
+
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+
+    /* IMPACT */
+
+    .impact {
+      padding: 130px 6%;
+
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .impact-grid {
+      margin-top: 80px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      border: 1px solid #ffffff;
+    }
+
+    .impact-box {
+      padding: 45px 25px;
+
+      text-align: center;
+
+      border-right: 1px solid #ffffff;
+    }
+
+    .impact-box:last-child {
+      border-right: none;
+    }
+
+    .impact-number {
+      font-size: 58px;
+      font-weight: 300;
+    }
+
+    .impact-label {
+      margin-top: 10px;
+
+      font-family: Arial, sans-serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: #111111;
+      color: #ffffff;
+
+      border-top: 1px solid #ffffff;
+    }
+
+    .footer-name {
+      font-size: 24px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 25px;
+    }
+
+    .socials a {
+      font-size: 15px;
+    }
+
+    .socials a:hover {
+      opacity: 0.5;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a:not(.lab-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding: 90px 6%;
+      }
+
+      .hero h1 {
+        font-size: 72px;
+        letter-spacing: -4px;
+      }
+
+      .intro,
+      .explorer-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .experiences {
+        padding: 90px 6%;
+      }
+
+      .experiences-header {
+        display: block;
+      }
+
+      .experiences-description {
+        margin-top: 25px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .explorer {
+        padding: 90px 6%;
+      }
+
+      .surface,
+      .myth {
+        padding: 90px 6%;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .impact-box {
+        border-bottom: 1px solid #ffffff;
+      }
+
+      footer {
+        display: block;
+      }
+
+      .socials {
+        margin-top: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="index.html" class="logo">
+      Pre-Derm Society
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="skin101.html">
+        Skin 101
+      </a>
+
+      <a href="#experiences" class="lab-button">
+        Pre-Derm Lab
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-heading">
+        Pre-Derm Society · Interactive Science
+      </div>
+
+      <h1>
+        Explore<br>
+        <em>beneath the surface.</em>
+      </h1>
+
+      <p class="hero-description">
+        Welcome to the Pre-Derm Lab — an interactive
+        space where students can explore skin biology,
+        discover what happens beneath the surface,
+        and test what they know.
+      </p>
+
+      <a href="#experiences" class="button button-black">
+        Enter the Lab →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div>
+
+      <h2 class="section-title">
+        Dermatology<br>
+        is more than<br>
+        what we see.
+      </h2>
+
+    </div>
+
+    <div class="intro-copy">
+
+      <p>
+        Skin is a living, constantly changing organ.
+        The Pre-Derm Lab turns the science behind it
+        into interactive experiences.
+      </p>
+
+      <p>
+        Explore. Experiment. Learn.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCES -->
+
+  <section class="experiences" id="experiences">
+
+    <div class="experiences-header">
+
+      <h2 class="section-title">
+        Choose<br>
+        your lab.
+      </h2>
+
+      <p class="experiences-description">
+        Three ways to explore dermatology and skin
+        science without needing a medical background.
+      </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+      <article class="experience-card">
+
+        <div class="experience-number">
+          Lab · 01
+        </div>
+
+        <h3>
+          Inside<br>
+          the Skin
+        </h3>
+
+        <p>
+          Explore the three major layers of skin
+          and discover what happens inside each one.
+        </p>
+
+        <a href="#explorer" class="button button-black">
+          Explore →
+        </a>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-number">
+          Lab · 02
+        </div>
+
+        <h3>
+          Under<br>
+          the Surface
+        </h3>
+
+        <p>
+          Follow the biology behind everyday
+          skin processes.
+        </p>
+
+        <a href="#surface" class="button button-black">
+          Discover →
+        </a>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-number">
+          Lab · 03
+        </div>
+
+        <h3>
+          Myth<br>
+          Lab
+        </h3>
+
+        <p>
+          Test common skin claims and discover
+          what the science actually says.
+        </p>
+
+        <a href="#myth" class="button button-black">
+          Test Yourself →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- INSIDE THE SKIN -->
+
+  <section class="explorer" id="explorer">
+
+    <h2 class="section-title">
+      Inside<br>
+      the skin.
+    </h2>
+
+
+    <div class="explorer-grid">
+
+
+      <div class="skin-diagram">
+
+
+        <div
+          class="skin-layer active"
+          onclick="showLayer(this, 'Epidermis', 'The outermost layer of skin. It helps form a protective barrier between your body and the environment.')">
+
+          <div class="layer-name">
+            Epidermis
+          </div>
+
+          <div class="layer-description">
+            Protective outer layer.
+          </div>
+
+        </div>
+
+
+        <div
+          class="skin-layer"
+          onclick="showLayer(this, 'Dermis', 'The layer beneath the epidermis. It contains structures such as blood vessels, nerves, hair follicles, and glands.')">
+
+          <div class="layer-name">
+            Dermis
+          </div>
+
+          <div class="layer-description">
+            Support, sensation, vessels, follicles and glands.
+          </div>
+
+        </div>
+
+
+        <div
+          class="skin-layer"
+          onclick="showLayer(this, 'Hypodermis', 'The deepest layer beneath the skin. It contains connective tissue and fat that help cushion and insulate the body.')">
+
+          <div class="layer-name">
+            Hypodermis
+          </div>
+
+          <div class="layer-description">
+            Cushioning and insulation.
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="explorer-info">
+
+        <div class="small-heading">
+          Click a layer
+        </div>
+
+        <h2 id="layerTitle" class="section-title">
+          Epidermis
+        </h2>
+
+        <p id="layerText">
+          The outermost layer of skin. It helps form
+          a protective barrier between your body
+          and the environment.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- UNDER THE SURFACE -->
+
+  <section class="surface" id="surface">
+
+    <h2 class="section-title">
+      Under the<br>
+      surface.
+    </h2>
+
+    <div class="surface-buttons">
+
+      <button
+        class="surface-button active"
+        onclick="showProcess(this, 'UV Exposure', 'Ultraviolet radiation can interact with cells in the skin. Your skin has natural protective responses, including the production of melanin.')">
+
+        UV Exposure
+
+      </button>
+
+
+      <button
+        class="surface-button"
+        onclick="showProcess(this, 'Skin Repair', 'When skin is injured, the body coordinates a series of responses involving inflammation, cell activity, and tissue repair.')">
+
+        Skin Repair
+
+      </button>
+
+
+      <button
+        class="surface-button"
+        onclick="showProcess(this, 'The Skin Barrier', 'The outer skin barrier helps limit water loss and provides protection from the outside environment.')">
+
+        Skin Barrier
+
+      </button>
+
+
+      <button
+        class="surface-button"
+        onclick="showProcess(this, 'Inflammation', 'Inflammation is part of the body’s immune response. It can help the body respond to injury or other signals.')">
+
+        Inflammation
+
+      </button>
+
+    </div>
+
+
+    <div class="surface-result">
+
+      <h3 id="processTitle">
+        UV Exposure
+      </h3>
+
+      <p id="processText">
+        Ultraviolet radiation can interact with cells
+        in the skin. Your skin has natural protective
+        responses, including the production of melanin.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MYTH LAB -->
+
+  <section class="myth" id="myth">
+
+    <h2 class="section-title">
+      Myth<br>
+      lab.
+    </h2>
+
+
+    <div class="myth-box">
+
+      <div class="myth-label">
+        Skin science question
+      </div>
+
+      <h3>
+        Drinking more water automatically
+        clears acne.
+      </h3>
+
+
+      <div class="myth-buttons">
+
+        <button
+          class="myth-button"
+          onclick="answerMyth(false, this)">
+          True
+        </button>
+
+        <button
+          class="myth-button"
+          onclick="answerMyth(true, this)">
+          False
+        </button>
+
+        <button
+          class="myth-button"
+          onclick="answerMyth(false, this)">
+          Not that simple
+        </button>
+
+      </div>
+
+
+      <div
+        class="myth-result"
+        id="mythResult">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMPACT -->
+
+  <section class="impact">
+
+    <h2 class="section-title">
+      Learning<br>
+      creates impact.
+    </h2>
+
+
+    <div class="impact-grid">
+
+
+      <div class="impact-box">
+
+        <div
+          class="impact-number"
+          id="labStudents">
+          0
+        </div>
+
+        <div class="impact-label">
+          Students Reached
+        </div>
+
+      </div>
+
+
+      <div class="impact-box">
+
+        <div
+          class="impact-number"
+          id="labsCompleted">
+          0
+        </div>
+
+        <div class="impact-label">
+          Labs Completed
+        </div>
+
+      </div>
+
+
+      <div class="impact-box">
+
+        <div
+          class="impact-number"
+          id="mythsTested">
+          0
+        </div>
+
+        <div class="impact-label">
+          Myths Tested
+        </div>
+
+      </div>
+
+
+      <div class="impact-box">
+
+        <div
+          class="impact-number"
+          id="quizzesCompleted">
+          0
+        </div>
+
+        <div class="impact-label">
+          Quizzes Completed
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+
+      <div class="footer-name">
+        Pre-Derm Society
+      </div>
+
+      <div>
+        Interactive dermatology education.
+      </div>
+
+    </div>
+
+
+    <div class="socials">
+
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank">
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank">
+        TikTok
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+
+    /* SKIN LAYER EXPLORER */
+
+    function showLayer(element, title, text) {
+
+      document.querySelectorAll(".skin-layer")
+        .forEach(layer => {
+          layer.classList.remove("active");
+        });
+
+      element.classList.add("active");
+
+      document.getElementById("layerTitle")
+        .textContent = title;
+
+      document.getElementById("layerText")
+        .textContent = text;
+
+    }
+
+
+    /* UNDER THE SURFACE */
+
+    function showProcess(element, title, text) {
+
+      document.querySelectorAll(".surface-button")
+        .forEach(button => {
+          button.classList.remove("active");
+        });
+
+      element.classList.add("active");
+
+      document.getElementById("processTitle")
+        .textContent = title;
+
+      document.getElementById("processText")
+        .textContent = text;
+
+    }
+
+
+    /* MYTH LAB */
+
+    function answerMyth(correct, button) {
+
+      const buttons =
+        document.querySelectorAll(".myth-button");
+
+      buttons.forEach(b => {
+        b.disabled = true;
+        b.style.cursor = "default";
+      });
+
+
+      const result =
+        document.getElementById("mythResult");
+
+
+      if (correct) {
+
+        result.textContent =
+          "Correct. Acne is influenced by multiple biological factors, and simply drinking more water does not automatically clear acne.";
+
+        increaseMythsTested();
+
+      } else {
+
+        result.textContent =
+          "Not quite. The relationship between hydration and skin is more complicated than this statement suggests.";
+
+      }
+
+    }
+
+
+    /* IMPACT COUNTER */
+
+    function increaseMythsTested() {
+
+      let myths =
+        Number(localStorage.getItem("mythsTested")) || 0;
+
+      myths++;
+
+      localStorage.setItem(
+        "mythsTested",
+        myths
+      );
+
+      document.getElementById(
+        "mythsTested"
+      ).textContent = myths;
+
+    }
+
+
+    function loadImpact() {
+
+      const students =
+        Number(localStorage.getItem("labStudents")) || 0;
+
+      const labs =
+        Number(localStorage.getItem("labsCompleted")) || 0;
+
+      const myths =
+        Number(localStorage.getItem("mythsTested")) || 0;
+
+      const quizzes =
+        Number(localStorage.getItem("quizzesCompleted")) || 0;
+
+
+      document.getElementById(
+        "labStudents"
+      ).textContent = students;
+
+      document.getElementById(
+        "labsCompleted"
+      ).textContent = labs;
+
+      document.getElementById(
+        "mythsTested"
+      ).textContent = myths;
+
+      document.getElementById(
+        "quizzesCompleted"
+      ).textContent = quizzes;
+
+    }
+
+
+    loadImpact();
+
+
+  </script>
+
+</body>
+</html>
