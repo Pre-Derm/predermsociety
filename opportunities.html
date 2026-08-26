@@ -1,716 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical Opportunities | Pre-Derm Society</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Opportunities | Pre-Derm Society</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
+.nav-links a:hover{opacity:.55}
+.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}
+.join-btn:hover{background:#171717;color:#fff;opacity:1!important}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #fff;
-      color: #171717;
-      line-height: 1.6;
-    }
+.hero{text-align:center;padding:100px 7% 75px}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,82px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
+.hero p{max-width:680px;margin:auto;color:#707070;font-size:17px}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+section{padding:70px 7%}
+.container{max-width:1150px;margin:auto}
+.section-heading{margin-bottom:35px}
+.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
+.section-heading h2{font-size:clamp(35px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px}
+.section-heading p{margin-top:15px;color:#777;max-width:700px}
 
-    nav {
-      width: 100%;
-      padding: 24px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      background: rgba(255,255,255,.96);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:35px}
+.filter-btn{background:#fff;color:#171717;border:1px solid #ddd;border-radius:30px;padding:10px 17px;font-family:inherit;font-size:13px;cursor:pointer}
+.filter-btn.active{background:#171717;color:#fff;border-color:#171717}
 
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -.5px;
-    }
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;background:#fff;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,.06)}
+.top{display:flex;justify-content:space-between;gap:15px}
+.card h3{font-size:23px;letter-spacing:-.5px;margin-bottom:8px}
+.card p{font-size:14px;color:#707070}
+.tag{background:#f5f5f5;border-radius:20px;padding:6px 10px;font-size:11px;height:max-content;white-space:nowrap;color:#666}
+.details{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.detail{font-size:12px;color:#777;border:1px solid #eee;border-radius:20px;padding:6px 10px}
+.learn{display:inline-block;font-size:13px;font-weight:700;margin-top:10px}
+.learn:hover{opacity:.55}
 
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 500;
-    }
+.note{background:#f8f8f8;border-radius:30px;padding:45px;margin-top:35px}
+.note h2{font-size:35px;letter-spacing:-1.5px;margin-bottom:12px}
+.note p{color:#707070;max-width:760px}
 
-    .nav-links a:hover {
-      opacity: .55;
-    }
+footer{text-align:center;font-size:12px;color:#999;padding:30px;border-top:1px solid #eee;margin-top:40px}
 
-    .join-btn {
-      border: 1px solid #171717;
-      padding: 9px 18px;
-      border-radius: 30px;
-    }
-
-    .join-btn:hover {
-      background: #171717;
-      color: white;
-      opacity: 1 !important;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 7% 75px;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 8vw, 82px);
-      line-height: .98;
-      letter-spacing: -4px;
-      font-weight: 600;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: #707070;
-      font-size: 17px;
-    }
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .section-heading {
-      margin-bottom: 35px;
-    }
-
-    .section-heading span {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #888;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(35px, 5vw, 55px);
-      letter-spacing: -2px;
-      line-height: 1.05;
-      margin-top: 10px;
-    }
-
-    .section-heading p {
-      margin-top: 15px;
-      color: #777;
-      max-width: 650px;
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 35px;
-    }
-
-    .filter-btn {
-      background: white;
-      color: #171717;
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      padding: 10px 17px;
-      font-family: inherit;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .filter-btn:hover {
-      background: #f7f7f7;
-    }
-
-    .filter-btn.active {
-      background: #171717;
-      color: white;
-      border-color: #171717;
-    }
-
-    .opportunity-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .opportunity {
-      border: 1px solid #e9e9e9;
-      border-radius: 22px;
-      padding: 30px;
-      background: white;
-      transition: .25s;
-      min-height: 285px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .opportunity:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 40px rgba(0,0,0,.06);
-    }
-
-    .opportunity-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .opportunity h3 {
-      font-size: 23px;
-      letter-spacing: -.6px;
-      margin-bottom: 8px;
-    }
-
-    .opportunity p {
-      color: #707070;
-      font-size: 14px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #f5f5f5;
-      border-radius: 20px;
-      padding: 6px 10px;
-      font-size: 11px;
-      white-space: nowrap;
-      color: #666;
-      height: fit-content;
-    }
-
-    .details {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 20px 0;
-    }
-
-    .detail {
-      font-size: 12px;
-      color: #777;
-      border: 1px solid #eee;
-      border-radius: 20px;
-      padding: 6px 10px;
-    }
-
-    .learn-more {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-
-    .learn-more:hover {
-      opacity: .55;
-    }
-
-    .info-box {
-      background: #f8f8f8;
-      border-radius: 30px;
-      padding: 45px;
-      margin-top: 35px;
-    }
-
-    .info-box h2 {
-      font-size: 35px;
-      letter-spacing: -1.5px;
-      margin-bottom: 12px;
-    }
-
-    .info-box p {
-      color: #707070;
-      max-width: 750px;
-    }
-
-    .info-list {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 15px;
-    }
-
-    .info-item {
-      background: white;
-      border: 1px solid #e8e8e8;
-      border-radius: 18px;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-      padding: 30px;
-      border-top: 1px solid #eee;
-      margin-top: 40px;
-    }
-
-    @media(max-width:850px) {
-      .opportunity-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .info-list {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a:not(.join-btn) {
-        display: none;
-      }
-
-      h1 {
-        letter-spacing: -2.5px;
-      }
-    }
-  </style>
+@media(max-width:850px){
+.grid{grid-template-columns:1fr}
+.nav-links{gap:12px}
+.nav-links a:not(.join-btn){display:none}
+h1{letter-spacing:-2.5px}
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <a href="index.html" class="logo">Pre-Derm Society</a>
-
-  <div class="nav-links">
-    <a href="index.html#lessons">Learn</a>
-    <a href="index.html#resources">Resources</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="join.html" class="join-btn">Join Now</a>
-  </div>
+<a href="index.html" class="logo">Pre-Derm Society</a>
+<div class="nav-links">
+<a href="index.html#lessons">Learn</a>
+<a href="index.html#resources">Resources</a>
+<a href="index.html#contact">Contact</a>
+<a href="join.html" class="join-btn">Join Now</a>
+</div>
 </nav>
 
-
 <header class="hero">
-  <div class="eyebrow">Student Resources</div>
-
-  <h1>Medical<br>Opportunities.</h1>
-
-  <p>
-    Explore medicine, healthcare, biomedical research,
-    clinical experiences, volunteering, and student programs.
-  </p>
+<div class="eyebrow">Student Resources</div>
+<h1>Find your<br>opportunity.</h1>
+<p>Explore medicine-focused research, internships, clinical experiences, summer programs, and volunteering opportunities.</p>
 </header>
 
-
 <section>
-  <div class="container">
-
-    <div class="section-heading">
-      <span>01 — Opportunity Finder</span>
-
-      <h2>
-        Find an opportunity<br>
-        that fits you.
-      </h2>
-
-      <p>
-        Browse medicine-focused opportunities and use the
-        categories to find what interests you most.
-      </p>
-    </div>
-
-
-    <div class="filters">
-
-      <button class="filter-btn active"
-        onclick="filterOpportunities('all', this)">
-        All
-      </button>
-
-      <button class="filter-btn"
-        onclick="filterOpportunities('research', this)">
-        Research
-      </button>
-
-      <button class="filter-btn"
-        onclick="filterOpportunities('clinical', this)">
-        Clinical
-      </button>
-
-      <button class="filter-btn"
-        onclick="filterOpportunities('summer', this)">
-        Summer Programs
-      </button>
-
-      <button class="filter-btn"
-        onclick="filterOpportunities('volunteer', this)">
-        Volunteering
-      </button>
-
-      <button class="filter-btn"
-        onclick="filterOpportunities('medicine', this)">
-        Medicine
-      </button>
-
-    </div>
-
-
-    <div class="opportunity-grid">
-
-
-      <!-- AAMC -->
-
-      <div class="opportunity" data-type="medicine">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>AAMC Opportunities</h3>
-
-              <p>
-                Explore medical and health-profession
-                enrichment opportunities for students.
-              </p>
-            </div>
-
-            <span class="tag">MEDICINE</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">🩺 Medicine</span>
-            <span class="detail">🎓 Students</span>
-            <span class="detail">🔎 Directory</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://students-residents.aamc.org/applying-medical-school/medical-pathways-enrichment-opportunities"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-
-      <!-- NIH -->
-
-      <div class="opportunity" data-type="research">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>NIH Research</h3>
-
-              <p>
-                Explore biomedical research and student
-                opportunities through the National Institutes of Health.
-              </p>
-            </div>
-
-            <span class="tag">RESEARCH</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">🧪 Research</span>
-            <span class="detail">🧬 Biomedical</span>
-            <span class="detail">🏛 NIH</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-
-      <!-- STANFORD MEDICINE -->
-
-      <div class="opportunity" data-type="summer">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>Stanford Medicine Programs</h3>
-
-              <p>
-                Explore programs offered through Stanford
-                Medicine for students interested in healthcare.
-              </p>
-            </div>
-
-            <span class="tag">SUMMER</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">🩺 Medicine</span>
-            <span class="detail">🔬 Research</span>
-            <span class="detail">☀️ Summer</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-
-      <!-- STANFORD EXPLORE -->
-
-      <div class="opportunity" data-type="research">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>Stanford EXPLORE</h3>
-
-              <p>
-                Learn about biomedical research and
-                medicine through Stanford's educational programs.
-              </p>
-            </div>
-
-            <span class="tag">RESEARCH</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">🔬 Research</span>
-            <span class="detail">🧬 Biomedical</span>
-            <span class="detail">🎓 Students</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://med.stanford.edu/explore.html"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-
-      <!-- CLINICAL -->
-
-      <div class="opportunity" data-type="clinical">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>Clinical Experiences</h3>
-
-              <p>
-                Explore medical experiences that introduce
-                students to clinical healthcare environments.
-              </p>
-            </div>
-
-            <span class="tag">CLINICAL</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">🏥 Healthcare</span>
-            <span class="detail">🩺 Clinical</span>
-            <span class="detail">🎓 Students</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://students-residents.aamc.org/getting-experience"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-
-      <!-- VOLUNTEERING -->
-
-      <div class="opportunity" data-type="volunteer">
-
-        <div>
-
-          <div class="opportunity-top">
-
-            <div>
-              <h3>Healthcare Volunteering</h3>
-
-              <p>
-                Learn how students can find healthcare-related
-                volunteer experiences in their communities.
-              </p>
-            </div>
-
-            <span class="tag">VOLUNTEER</span>
-
-          </div>
-
-          <div class="details">
-            <span class="detail">❤️ Service</span>
-            <span class="detail">🏥 Healthcare</span>
-            <span class="detail">🤝 Community</span>
-          </div>
-
-        </div>
-
-        <a
-          href="https://students-residents.aamc.org/getting-experience/finding-health-care-related-volunteer-opportunities"
-          target="_blank"
-          rel="noopener"
-          class="learn-more">
-          LEARN MORE →
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="info-box">
-
-      <h2>Opportunity Type</h2>
-
-      <p>
-        Not sure where to start? Choose the type of experience
-        that sounds most interesting to you.
-      </p>
-
-      <div class="info-list">
-
-        <div class="info-item">
-          🔬 <strong>Research</strong><br>
-          Explore biomedical and scientific research.
-        </div>
-
-        <div class="info-item">
-          🏥 <strong>Clinical</strong><br>
-          Learn about patient care and healthcare settings.
-        </div>
-
-        <div class="info-item">
-          ☀️ <strong>Summer Programs</strong><br>
-          Explore medicine-focused summer experiences.
-        </div>
-
-        <div class="info-item">
-          ❤️ <strong>Volunteering</strong><br>
-          Serve patients and your local community.
-        </div>
-
-        <div class="info-item">
-          🩺 <strong>Medicine</strong><br>
-          Explore programs focused on medical careers.
-        </div>
-
-        <div class="info-item">
-          🎓 <strong>Student Programs</strong><br>
-          Find opportunities created specifically for students.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+<div class="container">
+
+<div class="section-heading">
+<span>01 — Opportunity Finder</span>
+<h2>Explore medicine<br>in the real world.</h2>
+<p>Choose an opportunity type below. Each card takes you directly to an official organization or program page.</p>
+</div>
+
+<div class="filters">
+<button class="filter-btn active" onclick="filter('all',this)">All</button>
+<button class="filter-btn" onclick="filter('research',this)">Research</button>
+<button class="filter-btn" onclick="filter('internship',this)">Internships</button>
+<button class="filter-btn" onclick="filter('clinical',this)">Clinical</button>
+<button class="filter-btn" onclick="filter('summer',this)">Summer</button>
+<button class="filter-btn" onclick="filter('volunteer',this)">Volunteering</button>
+</div>
+
+<div class="grid">
+
+<div class="card" data-type="research">
+<div>
+<div class="top">
+<div>
+<h3>AAMC Medical Opportunities</h3>
+<p>Search medicine and health-profession enrichment programs, including research, internships, workshops, and summer academies.</p>
+</div>
+<span class="tag">RESEARCH</span>
+</div>
+<div class="details">
+<span class="detail">🔬 Research</span>
+<span class="detail">💼 Internships</span>
+<span class="detail">☀️ Summer</span>
+</div>
+</div>
+<a class="learn" href="https://students-residents.aamc.org/resources-k-12-community/explore-medicine-high-school-students" target="_blank" rel="noopener">EXPLORE →</a>
+</div>
+
+<div class="card" data-type="research">
+<div>
+<div class="top">
+<div>
+<h3>NIH Student Opportunities</h3>
+<p>Explore biomedical research training opportunities offered through the National Institutes of Health.</p>
+</div>
+<span class="tag">RESEARCH</span>
+</div>
+<div class="details">
+<span class="detail">🧪 Biomedical</span>
+<span class="detail">🏛 NIH</span>
+<span class="detail">🔬 Research</span>
+</div>
+</div>
+<a class="learn" href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities" target="_blank" rel="noopener">EXPLORE →</a>
+</div>
+
+<div class="card" data-type="internship summer">
+<div>
+<div class="top">
+<div>
+<h3>Stanford Medicine Programs</h3>
+<p>Explore Stanford Medicine's collection of high-school and undergraduate medicine, research, and healthcare programs.</p>
+</div>
+<span class="tag">INTERNSHIPS</span>
+</div>
+<div class="details">
+<span class="detail">🩺 Medicine</span>
+<span class="detail">🔬 Research</span>
+<span class="detail">💼 Internship</span>
+</div>
+</div>
+<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">EXPLORE →</a>
+</div>
+
+<div class="card" data-type="clinical summer">
+<div>
+<div class="top">
+<div>
+<h3>Stanford Clinical Summer Internship</h3>
+<p>A medicine-focused summer experience introducing high school students to clinical skills and healthcare.</p>
+</div>
+<span class="tag">CLINICAL</span>
+</div>
+<div class="details">
+<span class="detail">🏥 Clinical</span>
+<span class="detail">🩺 Medicine</span>
+<span class="detail">☀️ Summer</span>
+</div>
+</div>
+<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
+</div>
+
+<div class="card" data-type="research summer">
+<div>
+<div class="top">
+<div>
+<h3>Stanford SIMR</h3>
+<p>An eight-week summer research program for eligible high-school students involving hands-on biomedical research and mentorship.</p>
+</div>
+<span class="tag">RESEARCH</span>
+</div>
+<div class="details">
+<span class="detail">🔬 Research</span>
+<span class="detail">🧬 Biomedical</span>
+<span class="detail">☀️ Summer</span>
+</div>
+</div>
+<a class="learn" href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
+</div>
+
+<div class="card" data-type="research">
+<div>
+<div class="top">
+<div>
+<h3>Stanford EXPLORE</h3>
+<p>Explore biomedical research topics including immunology, neuroscience, cancer biology, bioengineering, and bioinformatics.</p>
+</div>
+<span class="tag">RESEARCH</span>
+</div>
+<div class="details">
+<span class="detail">🧪 Research</span>
+<span class="detail">🧬 Biology</span>
+<span class="detail">🎓 High School</span>
+</div>
+</div>
+<a class="learn" href="https://med.stanford.edu/explore/explore-program-description.html" target="_blank" rel="noopener">VIEW PROGRAM →</a>
+</div>
+
+<div class="card" data-type="research internship">
+<div>
+<div class="top">
+<div>
+<h3>NIH Biomedical Research SIP</h3>
+<p>Learn about NIH's Summer Internship Program in Biomedical Research and check the current eligibility requirements.</p>
+</div>
+<span class="tag">INTERNSHIP</span>
+</div>
+<div class="details">
+<span class="detail">🧬 Biomedical</span>
+<span class="detail">💼 Internship</span>
+<span class="detail">🏛 NIH</span>
+</div>
+</div>
+<a class="learn" href="https://oir.nih.gov/sourcebook/personnel/ipds-appointment-mechanisms/student-opportunities" target="_blank" rel="noopener">VIEW PROGRAM →</a>
+</div>
+
+<div class="card" data-type="volunteer">
+<div>
+<div class="top">
+<div>
+<h3>AAMC Healthcare Experience Guide</h3>
+<p>Learn how students can explore healthcare-related experiences and ways to build exposure to medicine.</p>
+</div>
+<span class="tag">VOLUNTEER</span>
+</div>
+<div class="details">
+<span class="detail">❤️ Service</span>
+<span class="detail">🏥 Healthcare</span>
+<span class="detail">🎓 Students</span>
+</div>
+</div>
+<a class="learn" href="https://students-residents.aamc.org/getting-experience" target="_blank" rel="noopener">EXPLORE →</a>
+</div>
+
+</div>
+
+<div class="note">
+<h2>Before you apply.</h2>
+<p>Always check the official program page for current eligibility, grade level, location, deadlines, cost, and application requirements. Programs change their requirements, so Pre-Derm Society does not guarantee eligibility or acceptance.</p>
+</div>
+
+</div>
 </section>
 
-
-<footer>
-  © 2026 Pre-Derm Society · Student-led education
-</footer>
-
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
 <script>
+function filter(type,button){
+document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
 
-function filterOpportunities(type, button) {
-
-  const cards = document.querySelectorAll(".opportunity");
-  const buttons = document.querySelectorAll(".filter-btn");
-
-  buttons.forEach(function(btn) {
-    btn.classList.remove("active");
-  });
-
-  button.classList.add("active");
-
-  cards.forEach(function(card) {
-
-    if (type === "all") {
-      card.style.display = "flex";
-    }
-
-    else if (card.dataset.type === type) {
-      card.style.display = "flex";
-    }
-
-    else {
-      card.style.display = "none";
-    }
-
-  });
+document.querySelectorAll(".card").forEach(card=>{
+if(type==="all" || card.dataset.type.includes(type)){
+card.style.display="flex";
+}else{
+card.style.display="none";
 }
-
+});
+}
 </script>
 
 </body>
