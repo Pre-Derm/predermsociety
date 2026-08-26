@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine 101 · Pre-Derm Society</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf9f6;color:#111;font-family:Arial,Helvetica,sans-serif}
+a,a:visited,a:hover,a:active{color:#111}
+
+nav{
+position:fixed;top:0;left:0;right:0;z-index:100;
+display:flex;justify-content:space-between;align-items:center;
+padding:22px 6%;background:rgba(250,249,246,.92);
+backdrop-filter:blur(12px);border-bottom:1px solid #dedcd8
+}
+.logo{text-decoration:none;font-size:11px;font-weight:600;letter-spacing:3px;line-height:1.5}
+.links{display:flex;align-items:center;gap:25px}
+.links a{text-decoration:none;font-size:9px;letter-spacing:2px}
+.links a:hover,.logo:hover{opacity:.5}
+
+.hero{
+min-height:75vh;display:flex;align-items:flex-end;
+padding:180px 8% 100px;
+background:radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),#faf9f6
+}
+.hero-content{max-width:1050px}
+.eyebrow{font-size:9px;letter-spacing:3px;color:#777;margin-bottom:30px}
+.emoji{font-size:38px;margin-bottom:25px}
+h1{font-size:clamp(65px,13vw,155px);line-height:.8;letter-spacing:-9px;font-weight:300;margin:0}
+.hero-description{max-width:650px;margin-top:45px;font-size:16px;line-height:1.8;color:#666}
+
+section{padding:120px 8%;border-top:1px solid #dedcd8}
+.label{font-size:9px;letter-spacing:3px;color:#777;margin-bottom:30px}
+h2{font-size:clamp(50px,8vw,100px);line-height:.86;letter-spacing:-6px;font-weight:300;margin:0 0 35px}
+.text{max-width:650px;color:#666;line-height:1.8;font-size:15px}
+
+.cards{
+display:grid;grid-template-columns:repeat(2,1fr);
+margin-top:70px;border-top:1px solid #dedcd8;border-left:1px solid #dedcd8
+}
+.card{
+min-height:260px;padding:40px;border-right:1px solid #dedcd8;
+border-bottom:1px solid #dedcd8;background:#faf9f6
+}
+.card-emoji{font-size:32px}
+.card-number{font-size:9px;letter-spacing:3px;color:#777;margin-top:25px}
+.card h3{font-size:38px;line-height:.95;letter-spacing:-3px;font-weight:300;margin:25px 0 20px}
+.card p{color:#666;line-height:1.7;font-size:14px}
+
+.button{
+display:inline-block;margin-top:20px;padding-bottom:7px;
+border-bottom:1px solid #111;text-decoration:none;
+font-size:9px;font-weight:600;letter-spacing:2px
+}
+
+footer{
+padding:45px 8%;display:flex;justify-content:space-between;
+align-items:center;border-top:1px solid #dedcd8
+}
+footer a{text-decoration:none;font-size:9px;letter-spacing:2px;margin-right:25px}
+
+@media(max-width:700px){
+nav{padding:18px 5%}
+.links{gap:13px;flex-wrap:wrap;justify-content:flex-end;max-width:230px}
+.links a{font-size:8px}
+.hero{min-height:80vh;padding:150px 8% 80px}
+h1{letter-spacing:-5px}
+h2{letter-spacing:-4px}
+section{padding:90px 8%}
+.cards{grid-template-columns:1fr}
+footer{flex-direction:column;align-items:flex-start;gap:25px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html" class="logo">PRE-DERM<br>SOCIETY</a>
+<div class="links">
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#hub">LEARN</a>
+<a href="index.html#impact">IMPACT</a>
+<a href="index.html#donate">DONATE</a>
+</div>
+</nav>
+
+<div class="hero">
+<div class="hero-content">
+<div class="eyebrow">MEDICINE · LESSON 01</div>
+<div class="emoji">🩺</div>
+<h1>MEDICINE<br>101</h1>
+<p class="hero-description">
+An introduction to medicine, healthcare, and the many fields that make modern healthcare possible.
+</p>
+</div>
+</div>
+
+<section>
+<div class="label">01 · THE FOUNDATION</div>
+<h2>What is<br>medicine?</h2>
+<p class="text">
+Medicine is the science and practice of understanding the human body, preventing illness, diagnosing conditions, and helping people maintain their health.
+</p>
+</section>
+
+<section>
+<div class="label">02 · EXPLORE</div>
+<h2>Start<br>exploring.</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-emoji">🧠</div>
+<div class="card-number">01</div>
+<h3>Anatomy</h3>
+<p>Learn how the structures of the human body are organized.</p>
+</div>
+
+<div class="card">
+<div class="card-emoji">🔬</div>
+<div class="card-number">02</div>
+<h3>Science</h3>
+<p>Explore biology, chemistry, genetics, and other sciences connected to medicine.</p>
+</div>
+
+<div class="card">
+<div class="card-emoji">🏥</div>
+<div class="card-number">03</div>
+<h3>Healthcare</h3>
+<p>Discover how doctors, nurses, researchers, and other professionals work together.</p>
+</div>
+
+<div class="card">
+<div class="card-emoji">🩺</div>
+<div class="card-number">04</div>
+<h3>Patient Care</h3>
+<p>Learn why communication, teamwork, and compassion are important in healthcare.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="label">03 · KEEP LEARNING</div>
+<h2>Your medical<br>journey starts here.</h2>
+<p class="text">
+Continue exploring medicine through Pre-Derm Society's student resources.
+</p>
+<a href="index.html" class="button">RETURN HOME →</a>
+</section>
+
+<footer>
+<div>
+<a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a>
+<a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a>
+<a href="mailto:predermsociety@gmail.com">EMAIL</a>
+</div>
+<div class="label">PRE-DERM SOCIETY</div>
+</footer>
+
+</body>
+</html>
