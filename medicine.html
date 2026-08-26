@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine · Pre-Derm Society</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+background:#faf9f6;
+color:#111;
+font-family:Arial,Helvetica,sans-serif
+}
+a,a:visited,a:hover,a:active{color:#111}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:100;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 6%;
+background:rgba(250,249,246,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #dedcd8
+}
+.logo{
+text-decoration:none;
+font-size:11px;
+font-weight:600;
+letter-spacing:3px;
+line-height:1.5
+}
+.links{
+display:flex;
+gap:25px;
+align-items:center
+}
+.links a{
+text-decoration:none;
+font-size:9px;
+letter-spacing:2px
+}
+.links a:hover,.logo:hover{opacity:.5}
+
+.hero{
+min-height:75vh;
+display:flex;
+align-items:flex-end;
+padding:180px 8% 100px;
+background:
+radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),
+#faf9f6
+}
+.hero-content{max-width:1050px}
+.eyebrow,.label{
+font-size:9px;
+letter-spacing:3px;
+color:#777;
+margin-bottom:30px
+}
+h1{
+font-size:clamp(65px,13vw,155px);
+line-height:.8;
+letter-spacing:-9px;
+font-weight:300;
+margin:0
+}
+h2{
+font-size:clamp(50px,8vw,100px);
+line-height:.86;
+letter-spacing:-6px;
+font-weight:300;
+margin:0 0 35px
+}
+h3{
+font-size:35px;
+font-weight:300;
+letter-spacing:-2px;
+margin:20px 0
+}
+.text{
+max-width:650px;
+color:#666;
+line-height:1.8;
+font-size:15px
+}
+section{
+padding:120px 8%;
+border-top:1px solid #dedcd8
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+margin-top:70px;
+border-top:1px solid #dedcd8;
+border-left:1px solid #dedcd8
+}
+.card{
+min-height:280px;
+padding:40px;
+border-right:1px solid #dedcd8;
+border-bottom:1px solid #dedcd8;
+background:#faf9f6
+}
+.card p{
+color:#666;
+line-height:1.7;
+font-size:14px
+}
+.button{
+display:inline-block;
+margin-top:20px;
+padding-bottom:7px;
+border-bottom:1px solid #111;
+text-decoration:none;
+font-size:9px;
+font-weight:bold;
+letter-spacing:2px
+}
+.button:hover{opacity:.5}
+footer{
+padding:45px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #dedcd8
+}
+footer a{
+text-decoration:none;
+font-size:9px;
+letter-spacing:2px;
+margin-right:25px
+}
+@media(max-width:700px){
+nav{padding:18px 5%}
+.links{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.links a{font-size:8px}
+.hero{padding:150px 8% 80px}
+h1{letter-spacing:-5px}
+h2{letter-spacing:-4px}
+section{padding:90px 8%}
+.cards{grid-template-columns:1fr}
+footer{flex-direction:column;align-items:flex-start;gap:25px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html" class="logo">PRE-DERM<br>SOCIETY</a>
+<div class="links">
+<a href="index.html">HOME</a>
+<a href="medicine.html">MEDICINE</a>
+<a href="research.html">RESEARCH</a>
+<a href="opportunities.html">OPPORTUNITIES</a>
+</div>
+</nav>
+
+<div class="hero">
+<div class="hero-content">
+<div class="eyebrow">MEDICINE · EXPLORATION · EDUCATION</div>
+<h1>MEDICINE<br>101</h1>
+<p class="text">
+Explore the science of medicine, discover different areas of healthcare,
+and begin building your understanding of how medicine works.
+</p>
+</div>
+</div>
+
+<section>
+<div class="label">01 · EXPLORE</div>
+<h2>Medicine is<br>a journey.</h2>
+<p class="text">
+Medicine connects biology, research, technology, communication, and
+human care. Explore the subjects that make modern healthcare possible.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="label">01</div>
+<h3>Anatomy</h3>
+<p>Explore the structures that make up the human body and how they work together.</p>
+</div>
+
+<div class="card">
+<div class="label">02</div>
+<h3>Physiology</h3>
+<p>Learn how organs and body systems function and communicate.</p>
+</div>
+
+<div class="card">
+<div class="label">03</div>
+<h3>Disease</h3>
+<p>Discover how researchers and physicians study diseases and their causes.</p>
+</div>
+
+<div class="card">
+<div class="label">04</div>
+<h3>Medical Research</h3>
+<p>Learn how scientific research helps improve our understanding of health and disease.</p>
+<a href="research.html" class="button">EXPLORE RESEARCH →</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="label">02 · FIND YOUR PATH</div>
+<h2>There is more<br>than one way.</h2>
+<p class="text">
+Medicine includes hundreds of specialties and careers. Explore different
+fields and discover what interests you.
+</p>
+<a href="careers.html" class="button">EXPLORE MEDICAL CAREERS →</a>
+</section>
+
+<section>
+<div class="label">03 · KEEP EXPLORING</div>
+<h2>Learn.<br>Question.<br>Discover.</h2>
+<p class="text">
+Use Pre-Derm Society's research guides, educational resources, and
+opportunity hub to continue your journey.
+</p>
+<a href="resources.html" class="button">VIEW RESOURCES →</a>
+</section>
+
+<footer>
+<div>
+<a href="index.html">HOME</a>
+<a href="research.html">RESEARCH</a>
+<a href="opportunities.html">OPPORTUNITIES</a>
+<a href="mailto:predermsociety@gmail.com">EMAIL</a>
+</div>
+<div class="label">PRE-DERM SOCIETY</div>
+</footer>
+
+</body>
+</html>
