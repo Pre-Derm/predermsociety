@@ -3,82 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Healthcare Explained · Pre-Derm Society</title>
+<title>Healthcare Explained | Pre-Derm Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#faf9f6;color:#111;font-family:Arial,Helvetica,sans-serif}
-a,a:visited,a:hover,a:active{color:#111}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 6%;background:rgba(250,249,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid #dedcd8}
-.logo{text-decoration:none;font-size:11px;font-weight:600;letter-spacing:3px;line-height:1.5}
-.links{display:flex;align-items:center;gap:25px}.links a{text-decoration:none;font-size:9px;letter-spacing:2px}
-.hero{min-height:75vh;display:flex;align-items:flex-end;padding:180px 8% 100px;background:radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),#faf9f6}
-.hero-content{max-width:1050px}.eyebrow,.label{font-size:9px;letter-spacing:3px;color:#777;margin-bottom:30px}.emoji{font-size:38px;margin-bottom:25px}
-h1{font-size:clamp(65px,13vw,155px);line-height:.8;letter-spacing:-9px;font-weight:300;margin:0}
-.hero-description,.text{max-width:650px;margin-top:45px;font-size:16px;line-height:1.8;color:#666}
-section{padding:120px 8%;border-top:1px solid #dedcd8}
-h2{font-size:clamp(50px,8vw,100px);line-height:.86;letter-spacing:-6px;font-weight:300;margin:0 0 35px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);margin-top:70px;border-top:1px solid #dedcd8;border-left:1px solid #dedcd8}
-.card{min-height:260px;padding:40px;border-right:1px solid #dedcd8;border-bottom:1px solid #dedcd8}
-.card-emoji{font-size:32px}.card-number{font-size:9px;letter-spacing:3px;color:#777;margin-top:25px}
-.card h3{font-size:38px;line-height:.95;letter-spacing:-3px;font-weight:300;margin:25px 0 20px}
-.card p{color:#666;line-height:1.7;font-size:14px}
-.button{display:inline-block;margin-top:20px;padding-bottom:7px;border-bottom:1px solid #111;text-decoration:none;font-size:9px;font-weight:600;letter-spacing:2px}
-footer{padding:45px 8%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #dedcd8}
-footer a{text-decoration:none;font-size:9px;letter-spacing:2px;margin-right:25px}
-@media(max-width:700px){nav{padding:18px 5%}.links{gap:13px;flex-wrap:wrap;justify-content:flex-end;max-width:230px}.links a{font-size:8px}.hero{min-height:80vh;padding:150px 8% 80px}h1{letter-spacing:-5px}h2{letter-spacing:-4px}section{padding:90px 8%}.cards{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start;gap:25px}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+nav{width:100%;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);position:sticky;top:0;z-index:1000}
+.logo{font-size:18px;font-weight:700}
+.nav-right{display:flex;align-items:center;gap:25px}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:500}
+.nav-links a:hover{opacity:.55}
+.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}
+.join-btn:hover{background:#171717;color:white}
+
+.menu{position:relative}
+.menu-button{border:none!important;background:none!important;color:#171717!important;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;padding:8px 0}
+.menu-dropdown{position:absolute;right:0;top:42px;width:250px;background:#fff;border:1px solid #e8e8e8;border-radius:18px;padding:10px;box-shadow:0 15px 45px rgba(0,0,0,.08);display:none}
+.menu:hover .menu-dropdown{display:block}
+.menu-dropdown a{display:block;padding:13px 14px;border-radius:12px;font-size:13px}
+.menu-dropdown a:hover{background:#f7f7f7}
+.menu-title{font-size:10px;color:#999;text-transform:uppercase;letter-spacing:1.5px;padding:10px 14px 5px}
+
+.hero{padding:110px 7% 80px;text-align:center;min-height:55vh;display:flex;align-items:center;justify-content:center}
+.hero-content{max-width:800px}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,82px);line-height:.98;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
+.hero p{max-width:620px;margin:auto;color:#666;font-size:17px}
+
+section{padding:80px 7%}
+.section-heading{max-width:700px;margin-bottom:45px}
+.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
+.section-heading h2{font-size:clamp(34px,5vw,55px);letter-spacing:-2px;line-height:1.05;margin-top:10px;font-weight:600}
+.section-heading p{margin-top:15px;color:#777}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;min-height:225px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,.06)}
+.emoji{font-size:27px;margin-bottom:18px}
+.card-number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:7px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{font-size:14px;color:#777}
+.card-link{margin-top:20px;font-size:13px;font-weight:700}
+
+.resource-box{background:#f8f8f8;border-radius:30px;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.resource-link{background:#fff;border:1px solid #e7e7e7;border-radius:18px;padding:22px;transition:.2s}
+.resource-link:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.resource-link strong{display:block;margin-bottom:5px}
+.resource-link span{font-size:13px;color:#777}
+
+.contact{text-align:center;border-top:1px solid #eee;padding-top:80px;padding-bottom:30px}
+.contact h2{font-size:clamp(40px,6vw,70px);letter-spacing:-3px;margin-bottom:15px}
+.contact p{color:#777;margin-bottom:25px}
+.socials{display:flex;justify-content:center;gap:25px;font-size:14px;font-weight:600;margin-bottom:55px}
+footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+
+@media(max-width:850px){
+.cards,.resource-box{grid-template-columns:1fr}
+.nav-links{display:none}
+.nav-right{gap:16px}
+h1{letter-spacing:-2.5px}
+}
 </style>
 </head>
+
 <body>
 
 <nav>
-<a href="index.html" class="logo">PRE-DERM<br>SOCIETY</a>
-<div class="links">
-<a href="index.html#about">ABOUT</a>
-<a href="index.html#hub">LEARN</a>
-<a href="index.html#impact">IMPACT</a>
-<a href="index.html#donate">DONATE</a>
+<a href="index.html" class="logo">Pre-Derm Society</a>
+
+<div class="nav-right">
+<div class="nav-links">
+<a href="index.html#lessons">Learn</a>
+<a href="index.html#resources">Resources</a>
+<a href="index.html#research">Research</a>
+<a href="index.html#contact">Contact</a>
+</div>
+
+<div class="menu">
+<button class="menu-button">Menu ↓</button>
+<div class="menu-dropdown">
+
+<div class="menu-title">Lessons</div>
+<a href="skin101.html">🔎 Skin 101</a>
+<a href="cleansing.html">🫧 Cleansing</a>
+<a href="moisturizing.html">💧 Moisturizing</a>
+<a href="sun-protection.html">☀️ Sun Protection</a>
+<a href="acne.html">🧴 Acne</a>
+<a href="medicine101.html">🩺 Medicine 101</a>
+
+<div class="menu-title">Student Resources</div>
+<a href="medical-careers.html">💻 Medical Careers</a>
+<a href="project-ideas.html">💡 Project Ideas</a>
+<a href="research-guide.html">🧪 Research Guide</a>
+<a href="read-a-paper.htm">📄 Read a Paper</a>
+<a href="opportunities.html">🔬 Research Opportunities</a>
+<a href="healthcare-explained.html">🏥 Healthcare Explained</a>
+
+</div>
+</div>
+
+<a href="join.html" class="join-btn">Join Now</a>
 </div>
 </nav>
 
-<div class="hero">
+<header class="hero">
 <div class="hero-content">
-<div class="eyebrow">MEDICINE · HEALTHCARE</div>
-<div class="emoji">🏥</div>
-<h1>HEALTHCARE<br>EXPLAINED</h1>
-<p class="hero-description">Understand the people, systems, and ideas that make healthcare work.</p>
+<div class="eyebrow">Student Resources · Healthcare</div>
+<h1>Healthcare,<br>explained.</h1>
+<p>Understand how healthcare works, who provides care, and how different parts of the medical system connect.</p>
 </div>
-</div>
+</header>
 
 <section>
-<div class="label">01 · THE BIG PICTURE</div>
-<h2>Healthcare<br>is a team.</h2>
-<p class="text">Healthcare involves many professionals working together to support patients. Doctors, nurses, pharmacists, researchers, therapists, technicians, and many others each have important roles.</p>
-</section>
 
-<section>
-<div class="label">02 · EXPLORE</div>
+<div class="section-heading">
+<span>01 — The Basics</span>
+<h2>How does<br>healthcare work?</h2>
+<p>Healthcare involves many different professionals working together to help people stay healthy and receive care.</p>
+</div>
+
 <div class="cards">
-<div class="card"><div class="card-emoji">🩺</div><div class="card-number">01</div><h3>Doctors</h3><p>Diagnose conditions and help create treatment plans.</p></div>
-<div class="card"><div class="card-emoji">💊</div><div class="card-number">02</div><h3>Pharmacists</h3><p>Study medications and help patients use them safely.</p></div>
-<div class="card"><div class="card-emoji">🧑‍⚕️</div><div class="card-number">03</div><h3>Nurses</h3><p>Provide direct patient care and support.</p></div>
-<div class="card"><div class="card-emoji">🔬</div><div class="card-number">04</div><h3>Researchers</h3><p>Investigate scientific questions that can improve healthcare.</p></div>
+
+<div class="card">
+<div>
+<div class="emoji">🩺</div>
+<div class="card-number">01</div>
+<h3>Doctors</h3>
+<p>Physicians diagnose conditions, provide treatment, and help patients manage their health.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">💉</div>
+<div class="card-number">02</div>
+<h3>Nurses</h3>
+<p>Nurses provide patient care, education, monitoring, and support across many healthcare settings.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">🧪</div>
+<div class="card-number">03</div>
+<h3>Laboratories</h3>
+<p>Laboratory professionals analyze samples and produce information that can help with diagnosis and research.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">💊</div>
+<div class="card-number">04</div>
+<h3>Pharmacy</h3>
+<p>Pharmacists specialize in medications and help patients and healthcare teams use them safely.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">🧠</div>
+<div class="card-number">05</div>
+<h3>Specialties</h3>
+<p>Medicine is divided into many specialties, each focusing on different areas of health.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
+<div class="card">
+<div>
+<div class="emoji">🔬</div>
+<div class="card-number">06</div>
+<h3>Research</h3>
+<p>Researchers study diseases, treatments, biology, and healthcare systems to build new knowledge.</p>
+</div>
+<div class="card-link">LEARN →</div>
+</div>
+
 </div>
 </section>
 
 <section>
-<div class="label">03 · KEEP LEARNING</div>
-<h2>Explore the<br>health sciences.</h2>
-<a href="index.html" class="button">RETURN HOME →</a>
+
+<div class="section-heading">
+<span>02 — Reliable Resources</span>
+<h2>Keep learning<br>from trusted sources.</h2>
+<p>Healthcare information should come from reliable medical and scientific organizations.</p>
+</div>
+
+<div class="resource-box">
+
+<a class="resource-link" href="https://www.nih.gov/" target="_blank">
+<strong>National Institutes of Health</strong>
+<span>Explore health and biomedical research →</span>
+</a>
+
+<a class="resource-link" href="https://medlineplus.gov/" target="_blank">
+<strong>MedlinePlus</strong>
+<span>Health information from the U.S. National Library of Medicine →</span>
+</a>
+
+<a class="resource-link" href="https://www.cdc.gov/" target="_blank">
+<strong>CDC</strong>
+<span>Public health and disease information →</span>
+</a>
+
+<a class="resource-link" href="https://www.who.int/" target="_blank">
+<strong>World Health Organization</strong>
+<span>Global health information and education →</span>
+</a>
+
+</div>
 </section>
 
-<footer>
-<div>
-<a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a>
-<a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a>
-<a href="mailto:predermsociety@gmail.com">EMAIL</a>
+<section class="contact">
+<div class="eyebrow">Pre-Derm Society</div>
+<h2>Keep learning.</h2>
+<p>Understanding healthcare starts with curiosity.</p>
+<div class="socials">
+<a href="https://www.instagram.com/prederm_society/" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@prederm_society" target="_blank">TikTok</a>
+<a href="index.html">Home</a>
 </div>
-<div class="label">PRE-DERM SOCIETY</div>
-</footer>
+</section>
+
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
 </body>
 </html>
