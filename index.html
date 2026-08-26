@@ -5,570 +5,377 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pre-Derm Society</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      background: #faf9f6;
-      color: #111;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'DM Sans', sans-serif;
+      background: #ffffff;
+      color: #171717;
+      line-height: 1.6;
     }
 
     a {
-      color: #111;
+      color: inherit;
+      text-decoration: none;
     }
 
     /* NAVIGATION */
-
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 50;
+      width: 100%;
+      padding: 24px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 6%;
-      background: rgba(250, 249, 246, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e2e0dc;
+      border-bottom: 1px solid #eeeeee;
+      background: rgba(255,255,255,0.96);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 3px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
-    .links a {
-      text-decoration: none;
-      font-size: 9px;
-      letter-spacing: 2px;
-      margin-left: 24px;
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
     }
 
-    .links a:hover,
-    .logo:hover {
-      opacity: 0.5;
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .join-btn {
+      border: 1px solid #171717;
+      padding: 9px 18px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+
+    .join-btn:hover {
+      background: #171717;
+      color: white;
     }
 
     /* HERO */
-
     .hero {
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
+      min-height: 75vh;
       display: flex;
-      align-items: flex-end;
-      padding: 160px 8% 90px;
-    }
-
-    .hero-background {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(
-          circle at 75% 25%,
-          #e8e2dc 0%,
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 20% 70%,
-          #eee9e3 0%,
-          transparent 40%
-        ),
-        #faf9f6;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 7%;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
+      max-width: 850px;
     }
 
     .eyebrow {
-      font-size: 9px;
-      letter-spacing: 3px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       color: #777;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: clamp(68px, 13vw, 160px);
-      line-height: 0.78;
-      letter-spacing: -9px;
-      font-weight: 400;
-      margin: 0;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      font-weight: 600;
+      margin-bottom: 28px;
     }
 
-    .hero-description {
-      max-width: 540px;
-      margin-top: 42px;
-      font-size: 15px;
-      line-height: 1.8;
-      color: #5f5f5f;
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 35px;
+      color: #666;
+      font-size: 17px;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding-bottom: 7px;
-      border-bottom: 1px solid #111;
-      text-decoration: none;
-      font-size: 9px;
-      font-weight: bold;
-      letter-spacing: 2px;
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .button:hover {
-      opacity: 0.5;
+    .primary-btn,
+    .secondary-btn {
+      padding: 13px 23px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
-    /* GENERAL SECTIONS */
+    .primary-btn {
+      background: #171717;
+      color: white;
+    }
 
+    .secondary-btn {
+      border: 1px solid #dddddd;
+    }
+
+    .primary-btn:hover {
+      opacity: 0.8;
+    }
+
+    .secondary-btn:hover {
+      background: #f7f7f7;
+    }
+
+    /* SECTION */
     section {
-      padding: 130px 8%;
-      border-top: 1px solid #dedcd8;
+      padding: 90px 7%;
     }
 
-    .label {
-      font-size: 9px;
-      letter-spacing: 3px;
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading span {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 5vw, 55px);
+      letter-spacing: -2px;
+      line-height: 1.05;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .section-heading p {
+      margin-top: 15px;
       color: #777;
-      margin-bottom: 30px;
     }
 
-    h2 {
-      font-size: clamp(52px, 8vw, 100px);
-      line-height: 0.86;
-      letter-spacing: -6px;
-      font-weight: 400;
-      margin: 0 0 35px;
-    }
-
-    .text {
-      max-width: 600px;
-      color: #666;
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .about-content {
-      max-width: 850px;
-    }
-
-    /* VISUAL SECTION */
-
-    .photo-section {
-      min-height: 70vh;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      background:
-        radial-gradient(
-          circle at 70% 30%,
-          #e7dfd7,
-          transparent 42%
-        ),
-        #f1eee9;
-    }
-
-    .photo-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(250, 249, 246, 0.18);
-    }
-
-    .photo-content {
-      position: relative;
-      z-index: 2;
-      padding: 90px 8%;
-    }
-
-    /* LEARNING */
-
-    .learn {
-      background: #efeee9;
-    }
-
-    .lesson-card {
-      min-height: 460px;
-      margin-top: 60px;
-      padding: 55px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background: #faf9f6;
-      border: 1px solid #dedcd8;
-    }
-
-    .lesson-card h3 {
-      font-size: clamp(45px, 6vw, 75px);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      font-weight: 400;
-      margin: 10px 0 20px;
-    }
-
-    /* LESSON COLLECTION */
-
-    .lesson-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 60px;
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
-    }
-
-    .lesson-mini {
-      min-height: 330px;
-      padding: 40px;
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-      background: #faf9f6;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .lesson-mini h3 {
-      font-size: 38px;
-      line-height: 0.95;
-      letter-spacing: -3px;
-      font-weight: 400;
-      margin: 15px 0 18px;
-    }
-
-    .lesson-mini p {
-      max-width: 500px;
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    /* MEDICINE HUB */
-
-    .medicine {
-      background: #faf9f6;
-    }
-
-    .medicine-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 70px;
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
-    }
-
-    .medicine-card {
-      min-height: 330px;
-      padding: 45px;
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-      background: #faf9f6;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .medicine-card h3 {
-      font-size: 40px;
-      line-height: 0.92;
-      letter-spacing: -3px;
-      font-weight: 400;
-      margin: 15px 0 20px;
-    }
-
-    .medicine-card p {
-      max-width: 520px;
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    /* RESEARCH */
-
-    .research {
-      background: #efeee9;
-    }
-
-    .research-intro {
-      max-width: 850px;
-    }
-
-    .research-grid {
+    /* LESSON CARDS */
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      margin-top: 70px;
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
+      gap: 18px;
     }
 
-    .research-card {
-      min-height: 320px;
-      padding: 40px;
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-      background: #faf9f6;
+    .card {
+      border: 1px solid #e9e9e9;
+      border-radius: 22px;
+      padding: 30px;
+      min-height: 245px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .research-card h3 {
-      font-size: 34px;
-      line-height: 0.95;
-      letter-spacing: -3px;
-      font-weight: 400;
-      margin: 15px 0 18px;
-    }
-
-    .research-card p {
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    /* OPPORTUNITIES */
-
-    .opportunities {
-      background: #faf9f6;
-    }
-
-    .opportunity-list {
-      margin-top: 70px;
-      border-top: 1px solid #dedcd8;
-    }
-
-    .opportunity {
-      padding: 35px 0;
-      border-bottom: 1px solid #dedcd8;
-      display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 30px;
+      transition: 0.25s;
+      background: white;
     }
 
-    .opportunity-title {
-      font-size: 28px;
-      letter-spacing: -2px;
-      font-weight: 400;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
     }
 
-    .opportunity-description {
-      max-width: 550px;
-      color: #666;
-      line-height: 1.7;
+    .emoji {
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .card-number {
+      font-size: 11px;
+      color: #999;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .card p {
       font-size: 14px;
+      color: #777;
     }
 
-    /* IMPACT */
-
-    .impact {
-      background: #faf9f6;
+    .card-link {
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .impact-number {
-      font-size: clamp(110px, 19vw, 230px);
-      line-height: 0.8;
-      letter-spacing: -14px;
-      font-weight: 400;
-      margin: 80px 0 25px;
-    }
-
-    .impact-label {
-      font-size: 10px;
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
-
-    .impact-grid {
+    /* FEATURE */
+    .feature {
+      background: #f8f8f8;
+      border-radius: 30px;
+      padding: 55px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 80px;
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
     }
 
-    .impact-box {
-      min-height: 210px;
-      padding: 40px;
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-    }
-
-    .impact-box-number {
-      font-size: 58px;
-      letter-spacing: -4px;
+    .feature h2 {
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -2.5px;
       margin: 15px 0;
     }
 
-    .impact-box-label {
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #666;
+    .feature p {
+      color: #707070;
+      max-width: 560px;
     }
 
-    /* DONATION */
-
-    .donation {
-      min-height: 75vh;
-      background:
-        radial-gradient(
-          circle at 80% 25%,
-          #e7dfd7,
-          transparent 38%
-        ),
-        #f4f1ec;
+    .feature-btn {
+      display: inline-block;
+      margin-top: 25px;
+      border: 1px solid #171717;
+      border-radius: 30px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .donation-content {
-      max-width: 800px;
+    .feature-btn:hover {
+      background: #171717;
+      color: white;
     }
 
-    /* JOIN */
-
-    .join {
-      text-align: center;
+    .feature-box {
+      background: white;
+      border-radius: 24px;
+      padding: 35px;
+      border: 1px solid #e7e7e7;
     }
 
-    .join .text {
-      margin-left: auto;
-      margin-right: auto;
+    .feature-box div {
+      padding: 16px 0;
+      border-bottom: 1px solid #eeeeee;
+      font-size: 14px;
     }
 
-    /* PHOTO SHOWCASE */
+    .feature-box div:last-child {
+      border-bottom: none;
+    }
 
-    .photo-showcase {
+    /* PHOTO LOOP */
+    .photo-section {
       overflow: hidden;
-      padding: 55px 0;
-      border-top: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-      background: #faf9f6;
+      padding: 30px 0 80px;
     }
 
     .photo-track {
       display: flex;
       width: max-content;
-      animation: photoLoop 32s linear infinite;
+      gap: 16px;
+      animation: scrollPhotos 32s linear infinite;
+    }
+
+    .photo-track:hover {
+      animation-play-state: paused;
     }
 
     .photo-track img {
-      width: 240px;
+      width: 270px;
       height: 150px;
       object-fit: cover;
-      margin-right: 18px;
-      filter: blur(0.5px);
-      opacity: 0.86;
+      border-radius: 16px;
+      opacity: 0.88;
+      filter: saturate(0.85);
     }
 
-    @keyframes photoLoop {
+    @keyframes scrollPhotos {
       from {
         transform: translateX(0);
       }
-
       to {
         transform: translateX(-50%);
       }
     }
 
-    /* FOOTER */
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      border-top: 1px solid #eeeeee;
+      padding-top: 100px;
+      padding-bottom: 30px;
+    }
+
+    .contact h2 {
+      font-size: clamp(40px, 6vw, 70px);
+      letter-spacing: -3px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 55px;
+    }
+
+    .socials a:hover {
+      opacity: 0.55;
+    }
 
     footer {
-      padding: 45px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid #dedcd8;
-    }
-
-    footer a {
-      text-decoration: none;
-      font-size: 9px;
-      letter-spacing: 2px;
-      margin-right: 25px;
-    }
-
-    footer a:hover {
-      opacity: 0.5;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      padding: 25px;
+      border-top: 1px solid #eeeeee;
     }
 
     /* MOBILE */
-
-    @media (max-width: 700px) {
-
-      nav {
-        padding: 18px 5%;
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: 1fr;
       }
 
-      .links a {
-        margin-left: 8px;
-        font-size: 8px;
+      .feature {
+        grid-template-columns: 1fr;
+        padding: 35px;
       }
 
-      .hero {
-        padding: 140px 8% 70px;
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a:not(.join-btn) {
+        display: none;
       }
 
       h1 {
-        letter-spacing: -5px;
-      }
-
-      h2 {
-        letter-spacing: -4px;
-      }
-
-      section {
-        padding: 90px 8%;
-      }
-
-      .lesson-card {
-        min-height: 420px;
-        padding: 30px;
-      }
-
-      .lesson-grid,
-      .medicine-grid,
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .impact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .opportunity {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .photo-track img {
-        width: 190px;
-        height: 120px;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
+        letter-spacing: -2.5px;
       }
     }
   </style>
@@ -576,894 +383,337 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
+  <!-- NAV -->
   <nav>
+    <a href="index.html" class="logo">Pre-Derm Society</a>
 
-    <a href="index.html" class="logo">
-      PRE-DERM SOCIETY
-    </a>
-
-    <div class="links">
-      <a href="#about">ABOUT</a>
-      <a href="#learning">LEARN</a>
-      <a href="#medicine">MEDICINE</a>
-      <a href="#research">RESEARCH</a>
-      <a href="#impact">IMPACT</a>
-      <a href="#donate">DONATE</a>
+    <div class="nav-links">
+      <a href="#lessons">Learn</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+      <a href="join.html" class="join-btn">Join Now</a>
     </div>
-
   </nav>
 
 
   <!-- HERO -->
-
-  <div class="hero">
-
-    <div class="hero-background"></div>
-
+  <header class="hero">
     <div class="hero-content">
+      <div class="eyebrow">Student-led • Medicine • Dermatology</div>
 
-      <div class="eyebrow">
-        SKIN SCIENCE · EDUCATION · COMMUNITY
-      </div>
+      <h1>Medicine starts<br>with curiosity.</h1>
 
-      <h1>
-        PRE-DERM<br>
-        SOCIETY
-      </h1>
-
-      <p class="hero-description">
-        A student-led space for exploring dermatology,
-        learning skin science, teaching others,
-        discovering medicine, and giving back.
+      <p>
+        Pre-Derm Society is a student-led space for exploring dermatology,
+        medicine, skincare, research, and healthcare.
       </p>
 
-      <a href="#learning" class="button">
-        START LEARNING →
+      <div class="hero-buttons">
+        <a href="#lessons" class="primary-btn">Explore Lessons</a>
+        <a href="skin101.html" class="secondary-btn">Skin 101</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- LESSONS -->
+  <section id="lessons">
+
+    <div class="section-heading">
+      <span>01 — Learn</span>
+      <h2>Explore medicine<br>one lesson at a time.</h2>
+      <p>
+        Short, student-friendly lessons and quizzes designed to make
+        medicine easier to explore.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <!-- SKIN 101 -->
+      <a href="skin101.html" class="card">
+        <div>
+          <div class="emoji">🔎</div>
+          <div class="card-number">01</div>
+          <h3>Skin 101</h3>
+          <p>
+            Learn the basics of skin, skin types, the skin barrier,
+            and everyday skin health.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
+      </a>
+
+
+      <!-- CLEANSING -->
+      <a href="cleansing.html" class="card">
+        <div>
+          <div class="emoji">🫧</div>
+          <div class="card-number">02</div>
+          <h3>Cleansing</h3>
+          <p>
+            Learn what cleansing does, how cleansers work,
+            and how to understand different cleanser types.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
+      </a>
+
+
+      <!-- MOISTURIZING -->
+      <a href="moisturizing.html" class="card">
+        <div>
+          <div class="emoji">💧</div>
+          <div class="card-number">03</div>
+          <h3>Moisturizing</h3>
+          <p>
+            Explore hydration, moisturizers, ingredients,
+            and the importance of the skin barrier.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
+      </a>
+
+
+      <!-- SUN PROTECTION -->
+      <a href="sun-protection.html" class="card">
+        <div>
+          <div class="emoji">☀️</div>
+          <div class="card-number">04</div>
+          <h3>Sun Protection</h3>
+          <p>
+            Understand UV radiation, sunscreen, SPF,
+            and why sun protection matters.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
+      </a>
+
+
+      <!-- ACNE -->
+      <a href="acne.html" class="card">
+        <div>
+          <div class="emoji">🧴</div>
+          <div class="card-number">05</div>
+          <h3>Acne</h3>
+          <p>
+            Learn the science behind acne, common triggers,
+            and evidence-based skincare basics.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
+      </a>
+
+
+      <!-- MEDICINE 101 -->
+      <a href="medicine101.html" class="card">
+        <div>
+          <div class="emoji">🩺</div>
+          <div class="card-number">06</div>
+          <h3>Medicine 101</h3>
+          <p>
+            Get introduced to healthcare, medical specialties,
+            clinical thinking, and the world of medicine.
+          </p>
+        </div>
+        <div class="card-link">START LESSON →</div>
       </a>
 
     </div>
-
-  </div>
-
-
-  <!-- ABOUT -->
-
-  <section class="about" id="about">
-
-    <div class="about-content">
-
-      <div class="label">
-        ABOUT
-      </div>
-
-      <h2>
-        Learn about<br>
-        skin differently.
-      </h2>
-
-      <p class="text">
-        Pre-Derm Society is a student-led educational
-        initiative created to make dermatology and
-        skin science easier to understand and explore.
-      </p>
-
-      <p class="text">
-        We believe knowledge becomes more meaningful
-        when it is shared. Our goal is to learn,
-        teach, and give back to our community.
-      </p>
-
-    </div>
-
   </section>
 
 
-  <!-- VISUAL SECTION -->
+  <!-- STUDENT RESOURCES -->
+  <section id="resources">
 
-  <section class="photo-section">
-
-    <div class="photo-overlay"></div>
-
-    <div class="photo-content">
-
-      <div class="label">
-        LEARN · TEACH · GIVE
-      </div>
-
-      <h2>
-        Knowledge<br>
-        should be shared.
-      </h2>
-
-    </div>
-
-  </section>
-
-
-  <!-- LEARNING -->
-
-  <section class="learn" id="learning">
-
-    <div class="label">
-      LEARNING
-    </div>
-
-    <h2>
-      Start with<br>
-      the basics.
-    </h2>
-
-    <p class="text">
-      Build your foundation in skin science before
-      exploring the deeper world of dermatology.
-    </p>
-
-
-    <!-- SKIN 101 -->
-
-    <div class="lesson-card">
-
-      <div class="label">
-        SKIN SCIENCE 01
-      </div>
-
-      <h3>
-        The Science of Skin
-      </h3>
-
-      <p class="text">
-        Explore the major layers of skin, what they do,
-        and why understanding the basics matters.
+    <div class="section-heading">
+      <span>02 — Student Resources</span>
+      <h2>Build your path<br>into medicine.</h2>
+      <p>
+        Explore research, careers, projects, and resources for students
+        interested in healthcare and science.
       </p>
+    </div>
 
-      <a href="skin101.html" class="button">
-        BEGIN LESSON →
+    <div class="cards">
+
+      <!-- MEDICAL CAREERS -->
+      <a href="medical-careers.html" class="card">
+        <div>
+          <div class="emoji">💻</div>
+          <div class="card-number">01</div>
+          <h3>Medical Careers</h3>
+          <p>
+            Explore different medical careers and specialties,
+            from dermatology to surgery and beyond.
+          </p>
+        </div>
+        <div class="card-link">EXPLORE →</div>
+      </a>
+
+
+      <!-- PROJECT IDEAS -->
+      <a href="project-ideas.html" class="card">
+        <div>
+          <div class="emoji">💡</div>
+          <div class="card-number">02</div>
+          <h3>Project Ideas</h3>
+          <p>
+            Find science and medicine project ideas you can
+            explore as a student.
+          </p>
+        </div>
+        <div class="card-link">EXPLORE →</div>
+      </a>
+
+
+      <!-- RESEARCH GUIDE -->
+      <a href="research-guide.html" class="card">
+        <div>
+          <div class="emoji">🧪</div>
+          <div class="card-number">03</div>
+          <h3>Research Guide</h3>
+          <p>
+            Learn how to read papers, understand research,
+            and begin exploring scientific questions.
+          </p>
+        </div>
+        <div class="card-link">EXPLORE →</div>
+      </a>
+
+
+      <!-- READ A PAPER -->
+      <a href="read-a-paper.html" class="card">
+        <div>
+          <div class="emoji">📄</div>
+          <div class="card-number">04</div>
+          <h3>Read a Paper</h3>
+          <p>
+            A beginner-friendly guide to understanding
+            scientific and medical research papers.
+          </p>
+        </div>
+        <div class="card-link">START GUIDE →</div>
+      </a>
+
+
+      <!-- RESEARCH OPPORTUNITIES -->
+      <a href="opportunities.html" class="card">
+        <div>
+          <div class="emoji">🔬</div>
+          <div class="card-number">05</div>
+          <h3>Research Opportunities</h3>
+          <p>
+            Learn how to search for legitimate opportunities
+            and prepare questions for researchers and programs.
+          </p>
+        </div>
+        <div class="card-link">EXPLORE →</div>
+      </a>
+
+
+      <!-- STUDENT RESOURCES -->
+      <a href="student-resources.html" class="card">
+        <div>
+          <div class="emoji">📚</div>
+          <div class="card-number">06</div>
+          <h3>Student Resources</h3>
+          <p>
+            Helpful resources for students interested in
+            medicine, science, dermatology, and healthcare.
+          </p>
+        </div>
+        <div class="card-link">EXPLORE →</div>
       </a>
 
     </div>
-
-
-    <!-- OTHER LESSONS -->
-
-    <div class="lesson-grid">
-
-      <div class="lesson-mini">
-
-        <div class="label">
-          LESSON 02
-        </div>
-
-        <h3>
-          Cleansing
-        </h3>
-
-        <p>
-          Learn what cleansing does, why the skin barrier
-          matters, and how to think about cleansers.
-        </p>
-
-        <a href="cleansing.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="lesson-mini">
-
-        <div class="label">
-          LESSON 03
-        </div>
-
-        <h3>
-          Moisturizing
-        </h3>
-
-        <p>
-          Understand hydration, moisturization,
-          ingredients, and the role of the skin barrier.
-        </p>
-
-        <a href="moisturizing.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="lesson-mini">
-
-        <div class="label">
-          LESSON 04
-        </div>
-
-        <h3>
-          Sun Protection
-        </h3>
-
-        <p>
-          Explore UV radiation, sunscreen, skin protection,
-          and why sun protection is an important part of
-          skin health.
-        </p>
-
-        <a href="sunprotection.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="lesson-mini">
-
-        <div class="label">
-          LESSON 05
-        </div>
-
-        <h3>
-          Acne
-        </h3>
-
-        <p>
-          Learn the basic science behind acne and how
-          dermatology approaches skin concerns.
-        </p>
-
-        <a href="acne.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-    </div>
-
   </section>
 
 
-  <!-- MEDICINE HUB -->
+  <!-- FEATURE -->
+  <section>
+    <div class="feature">
 
-  <section class="medicine" id="medicine">
+      <div>
+        <span class="eyebrow">03 — Research</span>
 
-    <div class="label">
-      MEDICINE
-    </div>
-
-    <h2>
-      Explore<br>
-      medicine.
-    </h2>
-
-    <p class="text">
-      Dermatology is part of a much bigger world.
-      Explore medicine, healthcare, research, and
-      the different paths students can take to learn
-      more about healthcare.
-    </p>
-
-
-    <div class="medicine-grid">
-
-
-      <div class="medicine-card">
-
-        <div class="label">
-          MEDICINE 01
-        </div>
-
-        <h3>
-          Medicine 101
-        </h3>
+        <h2>Start thinking<br>like a researcher.</h2>
 
         <p>
-          A beginner-friendly introduction to medicine,
-          healthcare careers, medical specialties,
-          and how healthcare teams work together.
+          Research doesn't have to feel intimidating. Learn how to find
+          questions, read scientific papers, understand evidence, and
+          explore medicine responsibly.
         </p>
 
-        <a href="medicine101.html" class="button">
-          EXPLORE MEDICINE →
+        <a href="research-guide.html" class="feature-btn">
+          Explore Research Guide →
         </a>
-
       </div>
 
-
-      <div class="medicine-card">
-
-        <div class="label">
-          MEDICINE 02
-        </div>
-
-        <h3>
-          Dermatology
-        </h3>
-
-        <p>
-          Discover what dermatologists study, the types
-          of conditions they treat, and how dermatology
-          connects science with patient care.
-        </p>
-
-        <a href="dermatology.html" class="button">
-          EXPLORE DERMATOLOGY →
-        </a>
-
-      </div>
-
-
-      <div class="medicine-card">
-
-        <div class="label">
-          MEDICINE 03
-        </div>
-
-        <h3>
-          Medical Careers
-        </h3>
-
-        <p>
-          Learn about different healthcare careers and
-          the education, skills, and interests connected
-          to each path.
-        </p>
-
-        <a href="medical-careers.html" class="button">
-          EXPLORE CAREERS →
-        </a>
-
-      </div>
-
-
-      <div class="medicine-card">
-
-        <div class="label">
-          MEDICINE 04
-        </div>
-
-        <h3>
-          Research
-        </h3>
-
-        <p>
-          Learn how scientific questions become research
-          projects and how students can begin exploring
-          research responsibly.
-        </p>
-
-        <a href="#research" class="button">
-          EXPLORE RESEARCH →
-        </a>
-
+      <div class="feature-box">
+        <div>🔎 Find a question</div>
+        <div>📄 Learn to read a paper</div>
+        <div>🧪 Understand research</div>
+        <div>💡 Develop project ideas</div>
+        <div>🌎 Explore opportunities</div>
       </div>
 
     </div>
-
-  </section>
-
-
-  <!-- RESEARCH -->
-
-  <section class="research" id="research">
-
-    <div class="research-intro">
-
-      <div class="label">
-        RESEARCH
-      </div>
-
-      <h2>
-        Start your<br>
-        research journey.
-      </h2>
-
-      <p class="text">
-        Research can begin with a question. This section
-        is designed to help students understand the
-        research process, explore medical science,
-        and learn how to think like a researcher.
-      </p>
-
-    </div>
-
-
-    <div class="research-grid">
-
-
-      <div class="research-card">
-
-        <div class="label">
-          RESEARCH 01
-        </div>
-
-        <h3>
-          Research Guide
-        </h3>
-
-        <p>
-          Learn how to turn an idea into a research question,
-          find reliable information, understand sources,
-          and build a responsible research project.
-        </p>
-
-        <a href="research-guide.html" class="button">
-          START GUIDE →
-        </a>
-
-      </div>
-
-
-      <div class="research-card">
-
-        <div class="label">
-          RESEARCH 02
-        </div>
-
-        <h3>
-          Project Ideas
-        </h3>
-
-        <p>
-          Explore beginner-friendly medical and skin-science
-          research questions that can inspire your own
-          learning journey.
-        </p>
-
-        <a href="research-ideas.html" class="button">
-          VIEW IDEAS →
-        </a>
-
-      </div>
-
-
-      <div class="research-card">
-
-        <div class="label">
-          RESEARCH 03
-        </div>
-
-        <h3>
-          Research Resources
-        </h3>
-
-        <p>
-          Find educational resources and trusted starting
-          points for learning about medicine, dermatology,
-          biology, and scientific research.
-        </p>
-
-        <a href="research-resources.html" class="button">
-          VIEW RESOURCES →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- OPPORTUNITIES -->
-
-  <section class="opportunities">
-
-    <div class="label">
-      OPPORTUNITIES
-    </div>
-
-    <h2>
-      Find your<br>
-      next step.
-    </h2>
-
-    <p class="text">
-      Explore different ways to learn about medicine
-      outside the classroom. Opportunities can include
-      research education, volunteering, student programs,
-      competitions, and other forms of academic exploration.
-    </p>
-
-
-    <div class="opportunity-list">
-
-
-      <div class="opportunity">
-
-        <div>
-
-          <div class="label">
-            01
-          </div>
-
-          <div class="opportunity-title">
-            Research Opportunities
-          </div>
-
-        </div>
-
-        <div class="opportunity-description">
-          Learn how to search for legitimate research
-          opportunities and prepare questions to ask
-          researchers, universities, and programs.
-        </div>
-
-        <a href="opportunities.html" class="button">
-          EXPLORE →
-        </a>
-
-      </div>
-
-
-      <div class="opportunity">
-
-        <div>
-
-          <div class="label">
-            02
-          </div>
-
-          <div class="opportunity-title">
-            Student Resources
-          </div>
-
-        </div>
-
-        <div class="opportunity-description">
-          Explore guides for students interested in
-          medicine, science, dermatology, and healthcare.
-        </div>
-
-        <a href="student-resources.html" class="button">
-          EXPLORE →
-        </a>
-
-      </div>
-
-
-      <div class="opportunity">
-
-        <div>
-
-          <div class="label">
-            03
-          </div>
-
-          <div class="opportunity-title">
-            Build Your Portfolio
-          </div>
-
-        </div>
-
-        <div class="opportunity-description">
-          Learn how meaningful projects, community
-          education, research, and service can become
-          part of a student's long-term academic journey.
-        </div>
-
-        <a href="student-portfolio.html" class="button">
-          EXPLORE →
-        </a>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- IMPACT -->
-
-  <section class="impact" id="impact">
-
-    <div class="label">
-      OUR IMPACT
-    </div>
-
-    <h2>
-      Learning becomes<br>
-      impact.
-    </h2>
-
-    <p class="text">
-      Pre-Derm Society has already begun creating
-      impact through skin-science education.
-    </p>
-
-
-    <div
-      class="impact-number"
-      id="peopleImpactedMain"
-    >
-      38
-    </div>
-
-    <div class="impact-label">
-      PEOPLE IMPACTED
-    </div>
-
-
-    <div class="impact-grid">
-
-
-      <div class="impact-box">
-
-        <div class="label">
-          PEOPLE IMPACTED
-        </div>
-
-        <div
-          class="impact-box-number"
-          id="peopleImpacted"
-        >
-          38
-        </div>
-
-        <div class="impact-box-label">
-          PEOPLE IMPACTED
-        </div>
-
-      </div>
-
-
-      <div class="impact-box">
-
-        <div class="label">
-          MEETINGS DONE
-        </div>
-
-        <div
-          class="impact-box-number"
-          id="meetingsDone"
-        >
-          10
-        </div>
-
-        <div class="impact-box-label">
-          MEETINGS DONE
-        </div>
-
-      </div>
-
-
-      <div class="impact-box">
-
-        <div class="label">
-          LESSONS TAUGHT
-        </div>
-
-        <div
-          class="impact-box-number"
-          id="lessonsTaught"
-        >
-          2
-        </div>
-
-        <div class="impact-box-label">
-          LESSONS TAUGHT
-        </div>
-
-      </div>
-
-
-      <div class="impact-box">
-
-        <div class="label">
-          CARE BOXES
-        </div>
-
-        <div class="impact-box-number">
-          0
-        </div>
-
-        <div class="impact-box-label">
-          CARE BOXES · COMING SOON
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- DONATION -->
-
-  <section class="donation" id="donate">
-
-    <div class="donation-content">
-
-      <div class="label">
-        GIVE BACK
-      </div>
-
-      <h2>
-        Make a<br>
-        difference.
-      </h2>
-
-      <p class="text">
-        Help support future educational programs,
-        community initiatives, and care-box projects.
-      </p>
-
-      <a
-        href="#"
-        class="button"
-        onclick="alert('Our donation program is coming soon!'); return false;"
-      >
-        MAKE A DONATION →
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- JOIN -->
-
-  <section class="join">
-
-    <div class="label">
-      JOIN
-    </div>
-
-    <h2>
-      Learn with us.
-    </h2>
-
-    <p class="text">
-      Interested in dermatology, skin science,
-      medicine, research, education, or community
-      service? We'd love to have you be part of
-      the journey.
-    </p>
-
-    <a
-      href="mailto:predermsociety@gmail.com"
-      class="button"
-    >
-      CONTACT PRE-DERM SOCIETY →
-    </a>
-
   </section>
 
 
   <!-- PHOTO SHOWCASE -->
-
-  <div class="photo-showcase">
+  <section class="photo-section">
 
     <div class="photo-track">
 
       <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
+      <!-- LOOP -->
       <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-
       <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
     </div>
 
-  </div>
+  </section>
 
 
-  <!-- FOOTER -->
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="eyebrow">Pre-Derm Society</div>
+
+    <h2>Let's learn together.</h2>
+
+    <p>
+      A student-led community exploring medicine, science, and dermatology.
+    </p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/prederm_society/" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://www.tiktok.com/@prederm_society" target="_blank">
+        TikTok
+      </a>
+
+      <a href="join.html">
+        Join Us
+      </a>
+    </div>
+
+  </section>
+
 
   <footer>
-
-    <div>
-
-      <a
-        href="https://www.instagram.com/prederm_society/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        INSTAGRAM
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@prederm_society"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        TIKTOK
-      </a>
-
-      <a href="mailto:predermsociety@gmail.com">
-        EMAIL
-      </a>
-
-    </div>
-
-    <div class="label">
-      PRE-DERM SOCIETY
-    </div>
-
+    © 2026 Pre-Derm Society · Student-led education
   </footer>
-
-
-  <!-- IMPACT COUNTERS -->
-
-  <script>
-
-    const defaultPeopleImpacted = 38;
-    const defaultMeetingsDone = 10;
-    const defaultLessonsTaught = 2;
-
-
-    let peopleImpacted =
-      Number(localStorage.getItem("peopleImpacted"));
-
-    let lessonsTaught =
-      Number(localStorage.getItem("lessonsTaught"));
-
-
-    if (
-      !localStorage.getItem("impactSystemInitialized")
-    ) {
-
-      peopleImpacted = defaultPeopleImpacted;
-
-      lessonsTaught = defaultLessonsTaught;
-
-      localStorage.setItem(
-        "peopleImpacted",
-        peopleImpacted
-      );
-
-      localStorage.setItem(
-        "lessonsTaught",
-        lessonsTaught
-      );
-
-      localStorage.setItem(
-        "meetingsDone",
-        defaultMeetingsDone
-      );
-
-      localStorage.setItem(
-        "impactSystemInitialized",
-        "true"
-      );
-
-    }
-
-
-    const meetingsDone =
-      Number(localStorage.getItem("meetingsDone"))
-      || defaultMeetingsDone;
-
-
-    document.getElementById(
-      "peopleImpacted"
-    ).textContent = peopleImpacted;
-
-
-    document.getElementById(
-      "peopleImpactedMain"
-    ).textContent = peopleImpacted;
-
-
-    document.getElementById(
-      "meetingsDone"
-    ).textContent = meetingsDone;
-
-
-    document.getElementById(
-      "lessonsTaught"
-    ).textContent = lessonsTaught;
-
-  </script>
 
 </body>
 </html>
