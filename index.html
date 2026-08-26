@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pre-Derm Society</title>
+  <title>Pre-Derm Society · Skin Journey</title>
 
   <style>
 
@@ -37,12 +37,16 @@
       left: 0;
       right: 0;
       z-index: 50;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       padding: 22px 6%;
+
       background: rgba(250, 249, 246, 0.88);
       backdrop-filter: blur(12px);
+
       border-bottom: 1px solid #e2e0dc;
     }
 
@@ -71,14 +75,17 @@
       min-height: 100vh;
       position: relative;
       overflow: hidden;
+
       display: flex;
       align-items: flex-end;
+
       padding: 160px 8% 90px;
     }
 
     .hero-background {
       position: absolute;
       inset: 0;
+
       background:
         radial-gradient(
           circle at 75% 25%,
@@ -125,9 +132,13 @@
     .button {
       display: inline-block;
       margin-top: 25px;
+
       padding-bottom: 7px;
+
       border-bottom: 1px solid #111;
+
       text-decoration: none;
+
       font-size: 9px;
       font-weight: bold;
       letter-spacing: 2px;
@@ -178,69 +189,16 @@
       max-width: 850px;
     }
 
-    /* SKIN JOURNEY */
-
-    .journey {
-      min-height: 75vh;
-      background: #faf9f6;
-    }
-
-    .journey-content {
-      max-width: 900px;
-    }
-
-    .journey-statement {
-      max-width: 750px;
-      margin-top: 55px;
-      font-size: 22px;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 80px;
-      border-top: 1px solid #dedcd8;
-      border-left: 1px solid #dedcd8;
-    }
-
-    .journey-box {
-      min-height: 230px;
-      padding: 35px;
-      border-right: 1px solid #dedcd8;
-      border-bottom: 1px solid #dedcd8;
-      background: #faf9f6;
-    }
-
-    .journey-box-number {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #777;
-    }
-
-    .journey-box h3 {
-      font-size: 32px;
-      line-height: 0.95;
-      letter-spacing: -2px;
-      font-weight: 400;
-      margin: 45px 0 20px;
-    }
-
-    .journey-box p {
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
     /* VISUAL SECTION */
 
     .photo-section {
       min-height: 70vh;
       position: relative;
       overflow: hidden;
+
       display: flex;
       align-items: flex-end;
+
       background:
         radial-gradient(
           circle at 70% 30%,
@@ -270,12 +228,16 @@
 
     .lesson-card {
       min-height: 460px;
+
       margin-top: 60px;
       padding: 55px;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
       background: #faf9f6;
+
       border: 1px solid #dedcd8;
     }
 
@@ -287,57 +249,277 @@
       margin: 10px 0 20px;
     }
 
-    /* LESSON ROADMAP */
+    /* SKIN JOURNEY */
 
-    .roadmap {
+    .journey {
       background: #faf9f6;
     }
 
-    .roadmap-grid {
+    .journey-intro {
+      max-width: 850px;
+    }
+
+    .journey-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
       margin-top: 70px;
+
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
-    .roadmap-card {
+    .journey-card {
       min-height: 300px;
+
       padding: 40px;
+
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
+
       background: #faf9f6;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
-    .roadmap-number {
+    .journey-number {
       font-size: 10px;
       letter-spacing: 3px;
       color: #777;
     }
 
-    .roadmap-card h3 {
+    .journey-card h3 {
       font-size: 42px;
       line-height: 0.95;
       letter-spacing: -3px;
       font-weight: 400;
-      margin: 45px 0 20px;
+
+      margin: 55px 0 20px;
     }
 
-    .roadmap-card p {
+    .journey-card p {
+      max-width: 500px;
       color: #666;
       line-height: 1.7;
       font-size: 14px;
-      max-width: 480px;
     }
 
-    .coming-soon {
-      font-size: 9px;
+    /* SKIN QUIZ */
+
+    .skin-quiz {
+      background: #efeee9;
+    }
+
+    .quiz-container {
+      max-width: 850px;
+      margin-top: 65px;
+    }
+
+    .quiz-card {
+      background: #faf9f6;
+      border: 1px solid #dedcd8;
+      padding: 50px;
+    }
+
+    .quiz-question {
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      font-weight: 300;
+
+      margin-bottom: 40px;
+    }
+
+    .quiz-answers {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .quiz-answer {
+      width: 100%;
+
+      padding: 18px 20px;
+
+      border: 1px solid #cfcac4;
+      border-radius: 14px;
+
+      background: #faf9f6;
+      color: #111;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+
+      text-align: left;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .quiz-answer:hover {
+      background: #f0eee9;
+      transform: translateY(-2px);
+    }
+
+    .quiz-answer.selected {
+      background: #e8eee8;
+      border-color: #aebbae;
+    }
+
+    .quiz-next {
+      display: none;
+
+      margin-top: 30px;
+
+      padding: 14px 22px;
+
+      background: #111;
+      border: 1px solid #111;
+      border-radius: 100px;
+
+      color: #fff;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
       letter-spacing: 2px;
+
+      cursor: pointer;
+    }
+
+    .quiz-next.show {
+      display: inline-block;
+    }
+
+    .skin-result {
+      display: none;
+
+      margin-top: 30px;
+
+      padding: 50px;
+
+      background: #faf9f6;
+
+      border: 1px solid #dedcd8;
+    }
+
+    .skin-result.show {
+      display: block;
+    }
+
+    .skin-result h3 {
+      font-size: 50px;
+      line-height: 0.9;
+      letter-spacing: -4px;
+      font-weight: 400;
+
+      margin: 15px 0 25px;
+    }
+
+    /* PRODUCT EXPLORER */
+
+    .products {
+      background: #faf9f6;
+    }
+
+    .product-intro {
+      max-width: 850px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 70px;
+
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
+    }
+
+    .product-card {
+      min-height: 330px;
+
+      padding: 35px;
+
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
+
+      background: #faf9f6;
+    }
+
+    .product-category {
+      font-size: 9px;
+      letter-spacing: 3px;
       color: #777;
-      margin-top: 25px;
+    }
+
+    .product-card h3 {
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: -2px;
+      font-weight: 400;
+
+      margin: 45px 0 20px;
+    }
+
+    .product-card p {
+      color: #666;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .product-note {
+      margin-top: 50px;
+
+      max-width: 750px;
+
+      color: #777;
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* RESOURCES */
+
+    .resources {
+      background: #efeee9;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      margin-top: 70px;
+
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
+    }
+
+    .resource-card {
+      min-height: 250px;
+
+      padding: 40px;
+
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
+
+      background: #faf9f6;
+    }
+
+    .resource-card h3 {
+      font-size: 35px;
+      line-height: 0.95;
+      letter-spacing: -3px;
+      font-weight: 400;
+
+      margin: 45px 0 20px;
+    }
+
+    .resource-card p {
+      color: #666;
+      line-height: 1.7;
+      font-size: 14px;
     }
 
     /* IMPACT */
@@ -351,6 +533,7 @@
       line-height: 0.8;
       letter-spacing: -14px;
       font-weight: 400;
+
       margin: 80px 0 25px;
     }
 
@@ -363,14 +546,18 @@
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
       margin-top: 80px;
+
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
     .impact-box {
       min-height: 210px;
+
       padding: 40px;
+
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
     }
@@ -378,6 +565,7 @@
     .impact-box-number {
       font-size: 58px;
       letter-spacing: -4px;
+
       margin: 15px 0;
     }
 
@@ -391,6 +579,7 @@
 
     .donation {
       min-height: 75vh;
+
       background:
         radial-gradient(
           circle at 80% 25%,
@@ -419,16 +608,20 @@
 
     footer {
       padding: 45px 8%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       border-top: 1px solid #dedcd8;
     }
 
     footer a {
       text-decoration: none;
+
       font-size: 9px;
       letter-spacing: 2px;
+
       margin-right: 25px;
     }
 
@@ -474,12 +667,24 @@
         grid-template-columns: 1fr;
       }
 
-      .roadmap-grid {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-grid {
         grid-template-columns: 1fr;
       }
 
       .impact-grid {
         grid-template-columns: 1fr;
+      }
+
+      .quiz-card {
+        padding: 30px;
+      }
+
+      .quiz-question {
+        font-size: 28px;
       }
 
       footer {
@@ -510,20 +715,16 @@
         ABOUT
       </a>
 
-      <a href="skin101.html">
-        LEARN
-      </a>
-
       <a href="#journey">
         JOURNEY
       </a>
 
-      <a href="#impact">
-        IMPACT
+      <a href="#learn">
+        LEARN
       </a>
 
-      <a href="#donate">
-        DONATE
+      <a href="#impact">
+        IMPACT
       </a>
 
     </div>
@@ -549,13 +750,15 @@
       </h1>
 
       <p class="hero-description">
+
         A student-led space for exploring dermatology,
-        learning skin science, teaching others,
-        and giving back.
+        understanding skin science, discovering
+        resources, and beginning your own skin journey.
+
       </p>
 
-      <a href="skin101.html" class="button">
-        START LEARNING →
+      <a href="#journey" class="button">
+        BEGIN YOUR SKIN JOURNEY →
       </a>
 
     </div>
@@ -579,107 +782,23 @@
       </h2>
 
       <p class="text">
+
         Pre-Derm Society is a student-led educational
         initiative created to make dermatology and
         skin science easier to understand and explore.
+
       </p>
 
       <p class="text">
-        We believe knowledge becomes more meaningful
-        when it is shared. Our goal is to learn,
-        teach, and give back to our community.
+
+        Our mission is simple:
+
+        make reliable skin education easier to access,
+        encourage curiosity about dermatology,
+        and help students share what they learn with
+        their communities.
+
       </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- SKIN JOURNEY -->
-
-  <section class="journey" id="journey">
-
-    <div class="journey-content">
-
-      <div class="label">
-        OUR MISSION · THE SKIN JOURNEY
-      </div>
-
-      <h2>
-        Everyone has<br>
-        a skin journey.
-      </h2>
-
-      <p class="journey-statement">
-        The Skin Journey is our mission to make
-        dermatology education accessible, understandable,
-        and meaningful — from the first questions about
-        healthy skin to discovering the science behind
-        dermatologic conditions and care.
-      </p>
-
-      <p class="text">
-        Pre-Derm Society is not about telling people
-        how they should look. It is about helping people
-        understand the organ they live in every day.
-      </p>
-
-      <div class="journey-grid">
-
-        <div class="journey-box">
-
-          <div class="journey-box-number">
-            01 · LEARN
-          </div>
-
-          <h3>
-            Understand
-          </h3>
-
-          <p>
-            Learn the science behind skin, its structures,
-            functions, and the biology that makes it unique.
-          </p>
-
-        </div>
-
-
-        <div class="journey-box">
-
-          <div class="journey-box-number">
-            02 · EXPLORE
-          </div>
-
-          <h3>
-            Discover
-          </h3>
-
-          <p>
-            Explore topics in dermatology and understand
-            how scientists and physicians study skin health.
-          </p>
-
-        </div>
-
-
-        <div class="journey-box">
-
-          <div class="journey-box-number">
-            03 · SHARE
-          </div>
-
-          <h3>
-            Teach
-          </h3>
-
-          <p>
-            Turn what you learn into educational resources
-            that can be shared with students and communities.
-          </p>
-
-        </div>
-
-      </div>
 
     </div>
 
@@ -699,8 +818,8 @@
       </div>
 
       <h2>
-        Knowledge<br>
-        should be shared.
+        Your skin<br>
+        has a story.
       </h2>
 
     </div>
@@ -710,7 +829,7 @@
 
   <!-- LEARNING -->
 
-  <section class="learn">
+  <section class="learn" id="learn">
 
     <div class="label">
       LEARNING
@@ -722,8 +841,10 @@
     </h2>
 
     <p class="text">
+
       Build your foundation in skin science before
       exploring the deeper world of dermatology.
+
     </p>
 
 
@@ -738,8 +859,10 @@
       </h3>
 
       <p class="text">
+
         Explore the major layers of skin, what they do,
         and why understanding the basics matters.
+
       </p>
 
       <a href="skin101.html" class="button">
@@ -751,208 +874,571 @@
   </section>
 
 
-  <!-- LESSON ROADMAP -->
+  <!-- SKIN JOURNEY -->
 
-  <section class="roadmap" id="lessons">
+  <section class="journey" id="journey">
 
-    <div class="label">
-      THE SKIN JOURNEY · LESSON ROADMAP
+    <div class="journey-intro">
+
+      <div class="label">
+        THE SKIN JOURNEY
+      </div>
+
+      <h2>
+        Understand<br>
+        your skin.
+      </h2>
+
+      <p class="text">
+
+        Skin is different for everyone. The Skin Journey
+        is an educational starting point designed to help
+        you learn about common skin characteristics,
+        explore resources, and become a more informed
+        skincare consumer.
+
+      </p>
+
     </div>
 
-    <h2>
-      Where the<br>
-      journey goes.
-    </h2>
 
-    <p class="text">
-      Pre-Derm Society is building a growing educational
-      series that takes students from the foundations
-      of skin science into the wider world of dermatology.
-    </p>
+    <div class="journey-grid">
 
+      <div class="journey-card">
 
-    <div class="roadmap-grid">
-
-
-      <!-- LESSON 01 -->
-
-      <div class="roadmap-card">
-
-        <div>
-
-          <div class="roadmap-number">
-            LESSON 01
-          </div>
-
-          <h3>
-            The Science<br>
-            of Skin
-          </h3>
-
-          <p>
-            Learn about the major layers of skin,
-            their functions, and why the skin
-            is such an important organ.
-          </p>
-
+        <div class="journey-number">
+          01 · DRY
         </div>
 
-        <a href="skin101.html" class="button">
-          BEGIN LESSON →
+        <h3>
+          Dry Skin
+        </h3>
+
+        <p>
+
+          Learn about the skin barrier, hydration,
+          common characteristics of dry skin, and
+          ingredients commonly discussed in skincare.
+
+        </p>
+
+        <a href="#resources" class="button">
+          EXPLORE →
         </a>
 
       </div>
 
 
-      <!-- LESSON 02 -->
+      <div class="journey-card">
 
-      <div class="roadmap-card">
-
-        <div>
-
-          <div class="roadmap-number">
-            LESSON 02
-          </div>
-
-          <h3>
-            Skin<br>
-            Barrier
-          </h3>
-
-          <p>
-            Explore the skin barrier and how it
-            helps protect the body from the
-            outside environment.
-          </p>
-
+        <div class="journey-number">
+          02 · OILY
         </div>
 
-        <div class="coming-soon">
-          COMING SOON
-        </div>
+        <h3>
+          Oily Skin
+        </h3>
+
+        <p>
+
+          Explore sebum, pores, acne education,
+          cleansing, and how different ingredients
+          are commonly used in skincare.
+
+        </p>
+
+        <a href="#resources" class="button">
+          EXPLORE →
+        </a>
 
       </div>
 
 
-      <!-- LESSON 03 -->
+      <div class="journey-card">
 
-      <div class="roadmap-card">
-
-        <div>
-
-          <div class="roadmap-number">
-            LESSON 03
-          </div>
-
-          <h3>
-            Acne<br>
-            Science
-          </h3>
-
-          <p>
-            Learn the biology behind acne and
-            why understanding the science matters
-            when discussing treatment and care.
-          </p>
-
+        <div class="journey-number">
+          03 · COMBINATION
         </div>
 
-        <div class="coming-soon">
-          COMING SOON
-        </div>
+        <h3>
+          Combination Skin
+        </h3>
+
+        <p>
+
+          Learn why different areas of the face can
+          have different characteristics and how
+          skincare education can be approached
+          thoughtfully.
+
+        </p>
+
+        <a href="#resources" class="button">
+          EXPLORE →
+        </a>
 
       </div>
 
 
-      <!-- LESSON 04 -->
+      <div class="journey-card">
 
-      <div class="roadmap-card">
+        <div class="journey-number">
+          04 · SENSITIVE
+        </div>
 
-        <div>
+        <h3>
+          Sensitive Skin
+        </h3>
 
-          <div class="roadmap-number">
-            LESSON 04
-          </div>
+        <p>
 
-          <h3>
-            Sun<br>
-            & Skin
-          </h3>
+          Explore common signs of sensitivity,
+          the importance of gentle skincare,
+          and why individual reactions can vary.
 
-          <p>
-            Explore ultraviolet radiation, skin
-            protection, and the science of how
-            sunlight interacts with skin.
-          </p>
+        </p>
+
+        <a href="#resources" class="button">
+          EXPLORE →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKIN QUIZ -->
+
+  <section class="skin-quiz" id="quiz">
+
+    <div class="label">
+      YOUR SKIN JOURNEY
+    </div>
+
+    <h2>
+      Start with<br>
+      a quiz.
+    </h2>
+
+    <p class="text">
+
+      Answer a few educational questions about
+      how your skin commonly behaves. Your result
+      is only a starting point and is not a medical
+      diagnosis.
+
+    </p>
+
+
+    <div class="quiz-container">
+
+      <div class="quiz-card">
+
+        <div class="label" id="quizProgress">
+          QUESTION 01 · 03
+        </div>
+
+        <div class="quiz-question" id="quizQuestion">
+
+          How does your skin usually feel
+          a few hours after cleansing?
 
         </div>
 
-        <div class="coming-soon">
-          COMING SOON
+
+        <div class="quiz-answers" id="quizAnswers">
+
+          <button
+            class="quiz-answer"
+            data-type="dry"
+          >
+            Tight or dry
+          </button>
+
+          <button
+            class="quiz-answer"
+            data-type="oily"
+          >
+            Shiny or oily
+          </button>
+
+          <button
+            class="quiz-answer"
+            data-type="combination"
+          >
+            Different in different areas
+          </button>
+
+          <button
+            class="quiz-answer"
+            data-type="sensitive"
+          >
+            Easily irritated or uncomfortable
+          </button>
+
         </div>
+
+
+        <button
+          class="quiz-next"
+          id="quizNext"
+        >
+          NEXT QUESTION →
+        </button>
 
       </div>
 
 
-      <!-- LESSON 05 -->
+      <div
+        class="skin-result"
+        id="skinResult"
+      >
 
-      <div class="roadmap-card">
-
-        <div>
-
-          <div class="roadmap-number">
-            LESSON 05
-          </div>
-
-          <h3>
-            Dermatology<br>
-            Conditions
-          </h3>
-
-          <p>
-            Begin exploring common dermatologic
-            conditions and the science behind
-            how they affect the skin.
-          </p>
-
+        <div class="label">
+          YOUR STARTING POINT
         </div>
 
-        <div class="coming-soon">
-          COMING SOON
+        <h3 id="resultTitle">
+          Your Skin Journey
+        </h3>
+
+        <p
+          class="text"
+          id="resultText"
+        >
+        </p>
+
+        <a
+          href="#resources"
+          class="button"
+        >
+          EXPLORE RESOURCES →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCT EXPLORER -->
+
+  <section class="products" id="products">
+
+    <div class="product-intro">
+
+      <div class="label">
+        PRODUCT EXPLORER
+      </div>
+
+      <h2>
+        Skincare,<br>
+        explained.
+      </h2>
+
+      <p class="text">
+
+        Instead of simply asking whether a product is
+        “good” or “bad,” learn how to look at ingredients,
+        product categories, skin concerns, and evidence.
+
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+      <div class="product-card">
+
+        <div class="product-category">
+          CATEGORY 01
         </div>
+
+        <h3>
+          Cleansers
+        </h3>
+
+        <p>
+
+          Explore what cleansers do, how cleansing
+          works, and how different formulations may
+          be designed for different skin needs.
+
+        </p>
+
+        <a href="#resources" class="button">
+          LEARN MORE →
+        </a>
 
       </div>
 
 
-      <!-- LESSON 06 -->
+      <div class="product-card">
 
-      <div class="roadmap-card">
-
-        <div>
-
-          <div class="roadmap-number">
-            LESSON 06
-          </div>
-
-          <h3>
-            A Career<br>
-            in Dermatology
-          </h3>
-
-          <p>
-            Discover what dermatologists study,
-            what their work involves, and the
-            different paths into the field.
-          </p>
-
+        <div class="product-category">
+          CATEGORY 02
         </div>
 
-        <div class="coming-soon">
-          COMING SOON
-        </div>
+        <h3>
+          Moisturizers
+        </h3>
+
+        <p>
+
+          Learn about hydration, the skin barrier,
+          and ingredients commonly found in
+          moisturizing products.
+
+        </p>
+
+        <a href="#resources" class="button">
+          LEARN MORE →
+        </a>
 
       </div>
 
+
+      <div class="product-card">
+
+        <div class="product-category">
+          CATEGORY 03
+        </div>
+
+        <h3>
+          Sunscreen
+        </h3>
+
+        <p>
+
+          Explore why sun protection matters and
+          learn the basics of sunscreen terminology,
+          including SPF and broad-spectrum protection.
+
+        </p>
+
+        <a href="#resources" class="button">
+          LEARN MORE →
+        </a>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-category">
+          CATEGORY 04
+        </div>
+
+        <h3>
+          Acne Care
+        </h3>
+
+        <p>
+
+          Learn the science behind common acne
+          terminology and explore educational
+          resources about acne management.
+
+        </p>
+
+        <a href="#resources" class="button">
+          LEARN MORE →
+        </a>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-category">
+          CATEGORY 05
+        </div>
+
+        <h3>
+          Ingredients
+        </h3>
+
+        <p>
+
+          Build ingredient literacy by learning what
+          common skincare ingredients are designed
+          to do.
+
+        </p>
+
+        <a href="#resources" class="button">
+          LEARN MORE →
+        </a>
+
+      </div>
+
+
+      <div class="product-card">
+
+        <div class="product-category">
+          CATEGORY 06
+        </div>
+
+        <h3>
+          Reviews
+        </h3>
+
+        <p>
+
+          A future community review system where
+          users can share experiences while keeping
+          reviews educational, respectful, and transparent.
+
+        </p>
+
+        <a href="#join" class="button">
+          COMING SOON →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <p class="product-note">
+
+      Product information on Pre-Derm Society is intended
+      for educational purposes. Individual experiences
+      vary, and product information should not be treated
+      as medical advice or a guarantee of results.
+
+    </p>
+
+  </section>
+
+
+  <!-- RESOURCES -->
+
+  <section class="resources" id="resources">
+
+    <div class="label">
+      RESOURCES
+    </div>
+
+    <h2>
+      Keep<br>
+      learning.
+    </h2>
+
+    <p class="text">
+
+      The Skin Journey is more than products.
+      Explore educational topics that help build
+      real understanding of dermatology and skin science.
+
+    </p>
+
+
+    <div class="resource-grid">
+
+
+      <div class="resource-card">
+
+        <div class="label">
+          RESOURCE 01
+        </div>
+
+        <h3>
+          Skin Science
+        </h3>
+
+        <p>
+
+          Learn about the structure and functions
+          of healthy skin.
+
+        </p>
+
+        <a href="skin101.html" class="button">
+          SKIN 101 →
+        </a>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <div class="label">
+          RESOURCE 02
+        </div>
+
+        <h3>
+          Ingredient Library
+        </h3>
+
+        <p>
+
+          A future searchable library explaining
+          common skincare ingredients in simple,
+          student-friendly language.
+
+        </p>
+
+        <a href="#products" class="button">
+          COMING SOON →
+        </a>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <div class="label">
+          RESOURCE 03
+        </div>
+
+        <h3>
+          Dermatology Basics
+        </h3>
+
+        <p>
+
+          Explore common dermatology concepts,
+          terminology, and conditions through
+          educational lessons.
+
+        </p>
+
+        <a href="#learn" class="button">
+          EXPLORE →
+        </a>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <div class="label">
+          RESOURCE 04
+        </div>
+
+        <h3>
+          Student Education
+        </h3>
+
+        <p>
+
+          Lesson materials designed to help students
+          teach skin science to their schools and
+          communities.
+
+        </p>
+
+        <a href="#join" class="button">
+          GET INVOLVED →
+        </a>
+
+      </div>
 
     </div>
 
@@ -973,14 +1459,17 @@
     </h2>
 
     <p class="text">
-      Pre-Derm Society has already begun creating
-      impact through skin-science education.
+
+      Pre-Derm Society is building a student-led
+      community around skin-science education.
+
     </p>
 
 
-    <!-- MAIN IMPACT NUMBER -->
-
-    <div class="impact-number" id="peopleImpactedMain">
+    <div
+      class="impact-number"
+      id="peopleImpactedMain"
+    >
       38
     </div>
 
@@ -989,12 +1478,8 @@
     </div>
 
 
-    <!-- IMPACT GRID -->
-
     <div class="impact-grid">
 
-
-      <!-- PEOPLE IMPACTED -->
 
       <div class="impact-box">
 
@@ -1004,7 +1489,8 @@
 
         <div
           class="impact-box-number"
-          id="peopleImpacted">
+          id="peopleImpacted"
+        >
           38
         </div>
 
@@ -1015,8 +1501,6 @@
       </div>
 
 
-      <!-- MEETINGS DONE -->
-
       <div class="impact-box">
 
         <div class="label">
@@ -1025,7 +1509,8 @@
 
         <div
           class="impact-box-number"
-          id="meetingsDone">
+          id="meetingsDone"
+        >
           10
         </div>
 
@@ -1036,8 +1521,6 @@
       </div>
 
 
-      <!-- LESSONS TAUGHT -->
-
       <div class="impact-box">
 
         <div class="label">
@@ -1046,7 +1529,8 @@
 
         <div
           class="impact-box-number"
-          id="lessonsTaught">
+          id="lessonsTaught"
+        >
           2
         </div>
 
@@ -1056,8 +1540,6 @@
 
       </div>
 
-
-      <!-- CARE BOXES -->
 
       <div class="impact-box">
 
@@ -1083,7 +1565,10 @@
 
   <!-- DONATION -->
 
-  <section class="donation" id="donate">
+  <section
+    class="donation"
+    id="donate"
+  >
 
     <div class="donation-content">
 
@@ -1097,14 +1582,20 @@
       </h2>
 
       <p class="text">
+
         Help support future educational programs,
         community initiatives, and care-box projects.
+
       </p>
 
       <a
         href="#"
         class="button"
-        onclick="alert('Our donation program is coming soon!'); return false;"
+
+        onclick="
+          alert('Our donation program is coming soon!');
+          return false;
+        "
       >
         MAKE A DONATION →
       </a>
@@ -1116,7 +1607,10 @@
 
   <!-- JOIN -->
 
-  <section class="join">
+  <section
+    class="join"
+    id="join"
+  >
 
     <div class="label">
       JOIN
@@ -1127,9 +1621,12 @@
     </h2>
 
     <p class="text">
+
       Interested in dermatology, skin science,
       education, or community service?
+
       We'd love to have you be part of the journey.
+
     </p>
 
     <a
@@ -1164,7 +1661,9 @@
         TIKTOK
       </a>
 
-      <a href="mailto:predermsociety@gmail.com">
+      <a
+        href="mailto:predermsociety@gmail.com"
+      >
         EMAIL
       </a>
 
@@ -1181,41 +1680,37 @@
 
   <script>
 
-    /*
-      These are the current official starting numbers.
-      Quiz completions from Skin 101 can update
-      PEOPLE IMPACTED and LESSONS TAUGHT.
-    */
-
     const defaultPeopleImpacted = 38;
     const defaultMeetingsDone = 10;
     const defaultLessonsTaught = 2;
 
 
-    /*
-      Keep the counters synchronized between
-      index.html and skin101.html.
-    */
-
     let peopleImpacted =
-      Number(localStorage.getItem("peopleImpacted"));
+      Number(
+        localStorage.getItem(
+          "peopleImpacted"
+        )
+      );
 
     let lessonsTaught =
-      Number(localStorage.getItem("lessonsTaught"));
+      Number(
+        localStorage.getItem(
+          "lessonsTaught"
+        )
+      );
 
-
-    /*
-      If this is the first time the updated system
-      is being used, start with the official numbers.
-    */
 
     if (
-      !localStorage.getItem("impactSystemInitialized")
+      !localStorage.getItem(
+        "impactSystemInitialized"
+      )
     ) {
 
-      peopleImpacted = defaultPeopleImpacted;
+      peopleImpacted =
+        defaultPeopleImpacted;
 
-      lessonsTaught = defaultLessonsTaught;
+      lessonsTaught =
+        defaultLessonsTaught;
 
       localStorage.setItem(
         "peopleImpacted",
@@ -1240,38 +1735,367 @@
     }
 
 
-    /*
-      Meetings stay at 10 unless you manually
-      change the number later.
-    */
-
     const meetingsDone =
-      Number(localStorage.getItem("meetingsDone"))
-      || defaultMeetingsDone;
+      Number(
+        localStorage.getItem(
+          "meetingsDone"
+        )
+      ) || defaultMeetingsDone;
 
-
-    /*
-      Display the numbers.
-    */
 
     document.getElementById(
       "peopleImpacted"
-    ).textContent = peopleImpacted;
+    ).textContent =
+      peopleImpacted;
 
 
     document.getElementById(
       "peopleImpactedMain"
-    ).textContent = peopleImpacted;
+    ).textContent =
+      peopleImpacted;
 
 
     document.getElementById(
       "meetingsDone"
-    ).textContent = meetingsDone;
+    ).textContent =
+      meetingsDone;
 
 
     document.getElementById(
       "lessonsTaught"
-    ).textContent = lessonsTaught;
+    ).textContent =
+      lessonsTaught;
+
+
+    /* =========================================
+       SKIN JOURNEY QUIZ
+       ========================================= */
+
+    const quizQuestions = [
+
+      {
+        question:
+          "How does your skin usually feel a few hours after cleansing?",
+
+        answers: [
+          ["Tight or dry", "dry"],
+          ["Shiny or oily", "oily"],
+          ["Different in different areas", "combination"],
+          ["Easily irritated or uncomfortable", "sensitive"]
+        ]
+      },
+
+      {
+        question:
+          "Which description sounds most familiar?",
+
+        answers: [
+          ["My skin often feels like it needs more moisture.", "dry"],
+          ["My skin tends to become shiny during the day.", "oily"],
+          ["Some areas are oily while others feel normal or dry.", "combination"],
+          ["My skin can react easily to products or environmental changes.", "sensitive"]
+        ]
+      },
+
+      {
+        question:
+          "What would you most like to learn about?",
+
+        answers: [
+          ["Hydration and the skin barrier", "dry"],
+          ["Oil, pores, and acne education", "oily"],
+          ["Balancing different areas of the face", "combination"],
+          ["Gentle skincare and sensitivity", "sensitive"]
+        ]
+      }
+
+    ];
+
+
+    let currentQuizQuestion = 0;
+
+    let quizScores = {
+      dry: 0,
+      oily: 0,
+      combination: 0,
+      sensitive: 0
+    };
+
+
+    const quizQuestion =
+      document.getElementById(
+        "quizQuestion"
+      );
+
+    const quizAnswers =
+      document.getElementById(
+        "quizAnswers"
+      );
+
+    const quizNext =
+      document.getElementById(
+        "quizNext"
+      );
+
+    const quizProgress =
+      document.getElementById(
+        "quizProgress"
+      );
+
+    const skinResult =
+      document.getElementById(
+        "skinResult"
+      );
+
+    const resultTitle =
+      document.getElementById(
+        "resultTitle"
+      );
+
+    const resultText =
+      document.getElementById(
+        "resultText"
+      );
+
+
+    function loadQuizQuestion() {
+
+      const question =
+        quizQuestions[
+          currentQuizQuestion
+        ];
+
+
+      quizProgress.textContent =
+        "QUESTION " +
+        String(
+          currentQuizQuestion + 1
+        ).padStart(2, "0") +
+        " · 03";
+
+
+      quizQuestion.textContent =
+        question.question;
+
+
+      quizAnswers.innerHTML = "";
+
+
+      question.answers.forEach(
+        answerData => {
+
+          const button =
+            document.createElement(
+              "button"
+            );
+
+          button.className =
+            "quiz-answer";
+
+          button.textContent =
+            answerData[0];
+
+          button.dataset.type =
+            answerData[1];
+
+
+          button.addEventListener(
+            "click",
+            function() {
+
+              document
+                .querySelectorAll(
+                  ".quiz-answer"
+                )
+                .forEach(
+                  b =>
+                    b.classList.remove(
+                      "selected"
+                    )
+                );
+
+
+              this.classList.add(
+                "selected"
+              );
+
+
+              quizNext.classList.add(
+                "show"
+              );
+
+              quizNext.dataset.type =
+                this.dataset.type;
+
+            }
+          );
+
+
+          quizAnswers.appendChild(
+            button
+          );
+
+        }
+      );
+
+
+      quizNext.classList.remove(
+        "show"
+      );
+
+    }
+
+
+    quizNext.addEventListener(
+      "click",
+      function() {
+
+        const selectedType =
+          this.dataset.type;
+
+
+        if (!selectedType) {
+          return;
+        }
+
+
+        quizScores[
+          selectedType
+        ]++;
+
+
+        currentQuizQuestion++;
+
+
+        if (
+          currentQuizQuestion <
+          quizQuestions.length
+        ) {
+
+          loadQuizQuestion();
+
+        } else {
+
+          showSkinResult();
+
+        }
+
+      }
+    );
+
+
+    function showSkinResult() {
+
+      quizAnswers.innerHTML = "";
+
+      quizQuestion.textContent =
+        "Your educational starting point";
+
+
+      quizProgress.textContent =
+        "RESULT";
+
+
+      quizNext.classList.remove(
+        "show"
+      );
+
+
+      let resultType =
+        "combination";
+
+
+      let highestScore = 0;
+
+
+      for (
+        const type in quizScores
+      ) {
+
+        if (
+          quizScores[type] >
+          highestScore
+        ) {
+
+          highestScore =
+            quizScores[type];
+
+          resultType =
+            type;
+
+        }
+
+      }
+
+
+      const resultData = {
+
+        dry: {
+
+          title:
+            "Explore Dry Skin",
+
+          text:
+            "Your answers suggest that hydration and skin-barrier education may be a useful place to begin. Explore how the skin barrier works, learn about moisturization, and compare skincare ingredients through an educational lens."
+
+        },
+
+
+        oily: {
+
+          title:
+            "Explore Oily Skin",
+
+          text:
+            "Your answers suggest that oil, pores, and acne education may be a useful place to begin. Learn how sebum works, explore acne science, and build ingredient literacy."
+
+        },
+
+
+        combination: {
+
+          title:
+            "Explore Combination Skin",
+
+          text:
+            "Your answers suggest that learning about different areas of the face may be a useful starting point. Explore how skin characteristics can vary and how routines can be approached thoughtfully."
+
+        },
+
+
+        sensitive: {
+
+          title:
+            "Explore Sensitive Skin",
+
+          text:
+            "Your answers suggest that gentle skincare and skin-barrier education may be a useful starting point. Learn why skin can react differently and why individual experiences vary."
+
+        }
+
+      };
+
+
+      resultTitle.textContent =
+        resultData[
+          resultType
+        ].title;
+
+
+      resultText.textContent =
+        resultData[
+          resultType
+        ].text;
+
+
+      skinResult.classList.add(
+        "show"
+      );
+
+    }
+
+
+    loadQuizQuestion();
 
   </script>
 
