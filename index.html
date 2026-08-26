@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Pre-Derm Society</title>
 
   <style>
@@ -34,16 +35,12 @@
       left: 0;
       right: 0;
       z-index: 50;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 22px 6%;
-
       background: rgba(250, 249, 246, 0.88);
       backdrop-filter: blur(12px);
-
       border-bottom: 1px solid #e2e0dc;
     }
 
@@ -72,17 +69,14 @@
       min-height: 100vh;
       position: relative;
       overflow: hidden;
-
       display: flex;
       align-items: flex-end;
-
       padding: 160px 8% 90px;
     }
 
     .hero-background {
       position: absolute;
       inset: 0;
-
       background:
         radial-gradient(
           circle at 75% 25%,
@@ -121,7 +115,6 @@
     .hero-description {
       max-width: 540px;
       margin-top: 42px;
-
       font-size: 15px;
       line-height: 1.8;
       color: #5f5f5f;
@@ -129,14 +122,10 @@
 
     .button {
       display: inline-block;
-
       margin-top: 25px;
       padding-bottom: 7px;
-
       border-bottom: 1px solid #111;
-
       text-decoration: none;
-
       font-size: 9px;
       font-weight: bold;
       letter-spacing: 2px;
@@ -193,10 +182,8 @@
       min-height: 70vh;
       position: relative;
       overflow: hidden;
-
       display: flex;
       align-items: flex-end;
-
       background:
         radial-gradient(
           circle at 70% 30%,
@@ -226,16 +213,12 @@
 
     .lesson-card {
       min-height: 460px;
-
       margin-top: 60px;
       padding: 55px;
-
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
       background: #faf9f6;
-
       border: 1px solid #dedcd8;
     }
 
@@ -245,6 +228,125 @@
       letter-spacing: -5px;
       font-weight: 400;
       margin: 10px 0 20px;
+    }
+
+    /* ================================
+       NEW: THE SKIN JOURNEY
+       SAME DESIGN LANGUAGE
+       ================================ */
+
+    .journey {
+      background: #faf9f6;
+    }
+
+    .journey-intro {
+      max-width: 850px;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 70px;
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
+    }
+
+    .journey-card {
+      min-height: 330px;
+      padding: 40px;
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
+      background: #faf9f6;
+    }
+
+    .journey-number {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #777;
+    }
+
+    .journey-card h3 {
+      font-size: 45px;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      font-weight: 400;
+      margin: 60px 0 20px;
+    }
+
+    .journey-card p {
+      max-width: 500px;
+      color: #666;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* ================================
+       NEW: MISSION
+       ================================ */
+
+    .mission {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 75% 30%,
+          #e7dfd7,
+          transparent 42%
+        ),
+        #f4f1ec;
+    }
+
+    .mission-content {
+      max-width: 900px;
+    }
+
+    .mission-statement {
+      font-size: clamp(30px, 5vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      font-weight: 300;
+      max-width: 900px;
+      margin: 40px 0;
+    }
+
+    /* ================================
+       NEW: PROGRAMS
+       ================================ */
+
+    .programs {
+      background: #efeee9;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 70px;
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
+    }
+
+    .program-box {
+      min-height: 300px;
+      padding: 40px;
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
+      background: #faf9f6;
+    }
+
+    .program-box h3 {
+      font-size: 40px;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      font-weight: 400;
+      margin: 55px 0 20px;
+    }
+
+    .program-box p {
+      color: #666;
+      line-height: 1.8;
+      font-size: 14px;
+      max-width: 500px;
     }
 
     /* IMPACT */
@@ -258,7 +360,6 @@
       line-height: 0.8;
       letter-spacing: -14px;
       font-weight: 400;
-
       margin: 80px 0 25px;
     }
 
@@ -271,18 +372,14 @@
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
       margin-top: 80px;
-
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
 
     .impact-box {
       min-height: 210px;
-
       padding: 40px;
-
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
     }
@@ -299,11 +396,22 @@
       color: #666;
     }
 
+    /* NEW IMPACT DETAILS */
+
+    .impact-note {
+      max-width: 700px;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #dedcd8;
+      color: #666;
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
     /* DONATION */
 
     .donation {
       min-height: 75vh;
-
       background:
         radial-gradient(
           circle at 80% 25%,
@@ -332,20 +440,16 @@
 
     footer {
       padding: 45px 8%;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       border-top: 1px solid #dedcd8;
     }
 
     footer a {
       text-decoration: none;
-
       font-size: 9px;
       letter-spacing: 2px;
-
       margin-right: 25px;
     }
 
@@ -391,6 +495,29 @@
         grid-template-columns: 1fr;
       }
 
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-card {
+        min-height: 280px;
+        padding: 30px;
+      }
+
+      .journey-card h3 {
+        font-size: 38px;
+        margin-top: 45px;
+      }
+
+      .program-box {
+        min-height: 280px;
+        padding: 30px;
+      }
+
       footer {
         flex-direction: column;
         align-items: flex-start;
@@ -412,13 +539,25 @@
 
     <div class="links">
 
-      <a href="#about">ABOUT</a>
+      <a href="#about">
+        ABOUT
+      </a>
 
-      <a href="skin101.html">LEARN</a>
+      <a href="skin101.html">
+        LEARN
+      </a>
 
-      <a href="#impact">IMPACT</a>
+      <a href="#journey">
+        JOURNEY
+      </a>
 
-      <a href="#donate">DONATE</a>
+      <a href="#impact">
+        IMPACT
+      </a>
+
+      <a href="#donate">
+        DONATE
+      </a>
 
     </div>
 
@@ -480,8 +619,10 @@
 
       <p class="text">
         We believe knowledge becomes more meaningful
-        when it is shared. Our goal is to learn,
-        teach, and give back to our community.
+        when it is shared. Our mission is to make
+        skin science accessible, encourage curiosity,
+        and help students become educators in their
+        own communities.
       </p>
 
     </div>
@@ -553,6 +694,294 @@
   </section>
 
 
+  <!-- ================================
+       THE SKIN JOURNEY
+       ================================ -->
+
+  <section class="journey" id="journey">
+
+    <div class="journey-intro">
+
+      <div class="label">
+        THE SKIN JOURNEY
+      </div>
+
+      <h2>
+        Learn.<br>
+        Understand.<br>
+        Teach.<br>
+        Impact.
+      </h2>
+
+      <p class="text">
+        The Skin Journey is the heart of Pre-Derm Society.
+        We believe learning about skin should not stop
+        with the person who learns it. Knowledge can
+        continue outward — from one student to another,
+        from classrooms to communities.
+      </p>
+
+    </div>
+
+
+    <div class="journey-grid">
+
+      <!-- DISCOVER -->
+
+      <div class="journey-card">
+
+        <div class="journey-number">
+          01 · DISCOVER
+        </div>
+
+        <h3>
+          Discover
+        </h3>
+
+        <p>
+          Start by learning the foundations of skin
+          science. Understand the structure and
+          functions of the skin before exploring
+          dermatology more deeply.
+        </p>
+
+      </div>
+
+
+      <!-- UNDERSTAND -->
+
+      <div class="journey-card">
+
+        <div class="journey-number">
+          02 · UNDERSTAND
+        </div>
+
+        <h3>
+          Understand
+        </h3>
+
+        <p>
+          Explore topics such as acne science,
+          the skin barrier, sun protection,
+          ingredients, common skin conditions,
+          and the science behind dermatology.
+        </p>
+
+      </div>
+
+
+      <!-- TEACH -->
+
+      <div class="journey-card">
+
+        <div class="journey-number">
+          03 · TEACH
+        </div>
+
+        <h3>
+          Teach
+        </h3>
+
+        <p>
+          Turn knowledge into education. Student
+          educators can use Pre-Derm Society resources
+          to help make basic skin science easier for
+          younger students and their communities.
+        </p>
+
+      </div>
+
+
+      <!-- IMPACT -->
+
+      <div class="journey-card">
+
+        <div class="journey-number">
+          04 · IMPACT
+        </div>
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          Track real educational outreach, lessons
+          completed, lessons taught, student educators,
+          community programs, and future partnerships.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================================
+       MISSION
+       ================================ -->
+
+  <section class="mission">
+
+    <div class="mission-content">
+
+      <div class="label">
+        OUR MISSION
+      </div>
+
+      <h2>
+        Make skin science<br>
+        easier to understand.
+      </h2>
+
+      <p class="mission-statement">
+        Pre-Derm Society exists to make dermatology
+        education more accessible, understandable,
+        and shareable — starting with students.
+      </p>
+
+      <p class="text">
+        Through interactive lessons, educational
+        resources, student-led teaching, and
+        community outreach, we hope to create
+        a growing journey of skin-science education.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================================
+       PROGRAMS
+       ================================ -->
+
+  <section class="programs">
+
+    <div class="label">
+      WHAT WE'RE BUILDING
+    </div>
+
+    <h2>
+      From learning<br>
+      to action.
+    </h2>
+
+    <p class="text">
+      Pre-Derm Society is growing beyond a single
+      website. These programs are designed to turn
+      dermatology education into something students
+      can share with others.
+    </p>
+
+
+    <div class="program-grid">
+
+      <!-- SKIN 101 -->
+
+      <div class="program-box">
+
+        <div class="label">
+          PROGRAM 01
+        </div>
+
+        <h3>
+          Skin 101
+        </h3>
+
+        <p>
+          Short, interactive lessons introducing
+          students to the science of skin and
+          foundational dermatology concepts.
+        </p>
+
+        <a href="skin101.html" class="button">
+          EXPLORE SKIN 101 →
+        </a>
+
+      </div>
+
+
+      <!-- GOOD SKIN KNOWLEDGE -->
+
+      <div class="program-box">
+
+        <div class="label">
+          PROGRAM 02
+        </div>
+
+        <h3>
+          Good Skin Knowledge
+        </h3>
+
+        <p>
+          An educational outreach initiative focused
+          on making basic skin-health science easier
+          for younger students to understand.
+        </p>
+
+        <a href="#join" class="button">
+          COMING SOON →
+        </a>
+
+      </div>
+
+
+      <!-- STUDENT EDUCATORS -->
+
+      <div class="program-box">
+
+        <div class="label">
+          PROGRAM 03
+        </div>
+
+        <h3>
+          Student Educators
+        </h3>
+
+        <p>
+          A future pathway for students who want to
+          use Pre-Derm Society lessons and resources
+          to teach skin science in their communities.
+        </p>
+
+        <a href="#join" class="button">
+          LEARN MORE →
+        </a>
+
+      </div>
+
+
+      <!-- COMMUNITY -->
+
+      <div class="program-box">
+
+        <div class="label">
+          PROGRAM 04
+        </div>
+
+        <h3>
+          Community Impact
+        </h3>
+
+        <p>
+          Future workshops, school partnerships,
+          educational events, and community projects
+          designed to bring skin science beyond
+          the screen.
+        </p>
+
+        <a href="#join" class="button">
+          JOIN THE JOURNEY →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- IMPACT -->
 
   <section class="impact" id="impact">
@@ -567,8 +996,9 @@
     </h2>
 
     <p class="text">
-      Pre-Derm Society has already begun creating
-      impact through skin-science education.
+      Pre-Derm Society tracks educational activity
+      so our mission can grow from an idea into
+      measurable community impact.
     </p>
 
 
@@ -651,6 +1081,27 @@
       </div>
 
 
+      <!-- STUDENT EDUCATORS -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          STUDENT EDUCATORS
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="studentEducators">
+          0
+        </div>
+
+        <div class="impact-box-label">
+          COMING SOON
+        </div>
+
+      </div>
+
+
       <!-- CARE BOXES -->
 
       <div class="impact-box">
@@ -659,7 +1110,9 @@
           CARE BOXES
         </div>
 
-        <div class="impact-box-number">
+        <div
+          class="impact-box-number"
+          id="careBoxes">
           0
         </div>
 
@@ -670,7 +1123,37 @@
       </div>
 
 
+      <!-- SCHOOLS REACHED -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          SCHOOLS REACHED
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="schoolsReached">
+          0
+        </div>
+
+        <div class="impact-box-label">
+          COMING SOON
+        </div>
+
+      </div>
+
     </div>
+
+
+    <p class="impact-note">
+      Our impact numbers are intended to represent
+      real educational participation and outreach.
+      As Pre-Derm Society grows, these counters can
+      be connected to a centralized system so that
+      completed lessons and community activities
+      can be tracked more accurately.
+    </p>
 
   </section>
 
@@ -710,7 +1193,7 @@
 
   <!-- JOIN -->
 
-  <section class="join">
+  <section class="join" id="join">
 
     <div class="label">
       JOIN
@@ -776,9 +1259,7 @@
   <script>
 
     /*
-      These are the current official starting numbers.
-      Quiz completions from Skin 101 can update
-      PEOPLE IMPACTED and LESSONS TAUGHT.
+      CURRENT OFFICIAL STARTING NUMBERS
     */
 
     const defaultPeopleImpacted = 38;
@@ -787,8 +1268,7 @@
 
 
     /*
-      Keep the counters synchronized between
-      index.html and skin101.html.
+      READ EXISTING IMPACT DATA
     */
 
     let peopleImpacted =
@@ -799,14 +1279,15 @@
 
 
     /*
-      If this is the first time the updated system
-      is being used, start with the official numbers.
+      INITIALIZE SYSTEM
     */
 
     if (
       !localStorage.getItem("impactSystemInitialized")
     ) {
+
       peopleImpacted = defaultPeopleImpacted;
+
       lessonsTaught = defaultLessonsTaught;
 
       localStorage.setItem(
@@ -825,6 +1306,21 @@
       );
 
       localStorage.setItem(
+        "studentEducators",
+        "0"
+      );
+
+      localStorage.setItem(
+        "careBoxes",
+        "0"
+      );
+
+      localStorage.setItem(
+        "schoolsReached",
+        "0"
+      );
+
+      localStorage.setItem(
         "impactSystemInitialized",
         "true"
       );
@@ -832,8 +1328,7 @@
 
 
     /*
-      Meetings stay at 10 unless you manually
-      change the number later.
+      MEETINGS
     */
 
     const meetingsDone =
@@ -842,7 +1337,24 @@
 
 
     /*
-      Display the numbers.
+      ADDITIONAL IMPACT CATEGORIES
+    */
+
+    const studentEducators =
+      Number(localStorage.getItem("studentEducators"))
+      || 0;
+
+    const careBoxes =
+      Number(localStorage.getItem("careBoxes"))
+      || 0;
+
+    const schoolsReached =
+      Number(localStorage.getItem("schoolsReached"))
+      || 0;
+
+
+    /*
+      DISPLAY IMPACT
     */
 
     document.getElementById(
@@ -864,7 +1376,23 @@
       "lessonsTaught"
     ).textContent = lessonsTaught;
 
+
+    document.getElementById(
+      "studentEducators"
+    ).textContent = studentEducators;
+
+
+    document.getElementById(
+      "careBoxes"
+    ).textContent = careBoxes;
+
+
+    document.getElementById(
+      "schoolsReached"
+    ).textContent = schoolsReached;
+
   </script>
 
 </body>
+
 </html>
