@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Pre-Derm Society</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -75,17 +79,20 @@
     .hero-background {
       position: absolute;
       inset: 0;
+
       background:
         radial-gradient(
           circle at 75% 25%,
           #e8e2dc 0%,
           transparent 35%
         ),
+
         radial-gradient(
           circle at 20% 70%,
           #eee9e3 0%,
           transparent 40%
         ),
+
         #faf9f6;
     }
 
@@ -182,12 +189,14 @@
       overflow: hidden;
       display: flex;
       align-items: flex-end;
+
       background:
         radial-gradient(
           circle at 70% 30%,
           #e7dfd7,
           transparent 42%
         ),
+
         #f1eee9;
     }
 
@@ -213,9 +222,11 @@
       min-height: 460px;
       margin-top: 60px;
       padding: 55px;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
       background: #faf9f6;
       border: 1px solid #dedcd8;
     }
@@ -226,76 +237,6 @@
       letter-spacing: -5px;
       font-weight: 400;
       margin: 10px 0 20px;
-    }
-
-    /* NEW LESSON GRID */
-
-    .lesson-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      margin-top: 60px;
-      background: #dedcd8;
-      border: 1px solid #dedcd8;
-    }
-
-    .mini-lesson {
-      min-height: 300px;
-      padding: 40px;
-      background: #faf9f6;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .mini-lesson h3 {
-      font-size: 38px;
-      line-height: 0.95;
-      letter-spacing: -3px;
-      font-weight: 400;
-      margin: 20px 0;
-    }
-
-    .mini-lesson p {
-      max-width: 480px;
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    /* SKIN JOURNEY */
-
-    .journey {
-      background: #faf9f6;
-    }
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      margin-top: 70px;
-      background: #dedcd8;
-      border: 1px solid #dedcd8;
-    }
-
-    .journey-card {
-      min-height: 260px;
-      padding: 35px;
-      background: #faf9f6;
-    }
-
-    .journey-card h3 {
-      font-size: 32px;
-      line-height: 1;
-      letter-spacing: -2px;
-      font-weight: 400;
-      margin: 35px 0 18px;
-    }
-
-    .journey-card p {
-      color: #666;
-      line-height: 1.7;
-      font-size: 14px;
     }
 
     /* IMPACT */
@@ -322,6 +263,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin-top: 80px;
+
       border-top: 1px solid #dedcd8;
       border-left: 1px solid #dedcd8;
     }
@@ -329,6 +271,7 @@
     .impact-box {
       min-height: 210px;
       padding: 40px;
+
       border-right: 1px solid #dedcd8;
       border-bottom: 1px solid #dedcd8;
     }
@@ -349,12 +292,14 @@
 
     .donation {
       min-height: 75vh;
+
       background:
         radial-gradient(
           circle at 80% 25%,
           #e7dfd7,
           transparent 38%
         ),
+
         #f4f1ec;
     }
 
@@ -371,6 +316,73 @@
     .join .text {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    /* PHOTO SHOWCASE */
+
+    .photo-gallery {
+      padding: 35px 0 70px;
+      background: #faf9f6;
+      overflow: hidden;
+      border-top: 1px solid #dedcd8;
+    }
+
+    .photo-gallery-label {
+      text-align: center;
+      font-size: 8px;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 28px;
+    }
+
+    .photo-track-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-track {
+      display: flex;
+      width: max-content;
+      gap: 18px;
+      animation: photoScroll 28s linear infinite;
+    }
+
+    .photo-track:hover {
+      animation-play-state: paused;
+    }
+
+    .gallery-photo {
+      width: 190px;
+      height: 125px;
+      object-fit: cover;
+      border-radius: 3px;
+
+      opacity: 0.72;
+      filter: blur(0.7px) saturate(0.65);
+
+      transition:
+        opacity 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .gallery-photo:hover {
+      opacity: 1;
+      filter: blur(0) saturate(0.9);
+      transform: scale(1.02);
+    }
+
+    @keyframes photoScroll {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
     }
 
     /* FOOTER */
@@ -428,13 +440,22 @@
         padding: 30px;
       }
 
-      .lesson-grid,
-      .journey-grid {
+      .impact-grid {
         grid-template-columns: 1fr;
       }
 
-      .impact-grid {
-        grid-template-columns: 1fr;
+      .photo-gallery {
+        padding: 30px 0 55px;
+      }
+
+      .gallery-photo {
+        width: 145px;
+        height: 100px;
+      }
+
+      .photo-track {
+        gap: 10px;
+        animation-duration: 22s;
       }
 
       footer {
@@ -442,11 +463,15 @@
         align-items: flex-start;
         gap: 25px;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
+
 
   <!-- NAVIGATION -->
 
@@ -458,15 +483,21 @@
 
     <div class="links">
 
-      <a href="#about">ABOUT</a>
+      <a href="#about">
+        ABOUT
+      </a>
 
-      <a href="#learn">LEARN</a>
+      <a href="skin101.html">
+        LEARN
+      </a>
 
-      <a href="#journey">SKIN JOURNEY</a>
+      <a href="#impact">
+        IMPACT
+      </a>
 
-      <a href="#impact">IMPACT</a>
-
-      <a href="#donate">DONATE</a>
+      <a href="#donate">
+        DONATE
+      </a>
 
     </div>
 
@@ -496,8 +527,8 @@
         and giving back.
       </p>
 
-      <a href="#learn" class="button">
-        START YOUR SKIN JOURNEY →
+      <a href="skin101.html" class="button">
+        START LEARNING →
       </a>
 
     </div>
@@ -528,10 +559,8 @@
 
       <p class="text">
         We believe knowledge becomes more meaningful
-        when it is shared. Our mission is to make
-        reliable skin education accessible to students
-        and young people while inspiring curiosity
-        about dermatology.
+        when it is shared. Our goal is to learn,
+        teach, and give back to our community.
       </p>
 
     </div>
@@ -563,7 +592,7 @@
 
   <!-- LEARNING -->
 
-  <section class="learn" id="learn">
+  <section class="learn">
 
     <div class="label">
       LEARNING
@@ -575,13 +604,9 @@
     </h2>
 
     <p class="text">
-      Follow the Skin Journey and build your foundation
-      in skin science before exploring the deeper world
-      of dermatology.
+      Build your foundation in skin science before
+      exploring the deeper world of dermatology.
     </p>
-
-
-    <!-- LESSON 01 -->
 
     <div class="lesson-card">
 
@@ -604,195 +629,6 @@
 
     </div>
 
-
-    <!-- ADDITIONAL LESSONS -->
-
-    <div class="lesson-grid">
-
-      <div class="mini-lesson">
-
-        <div class="label">
-          SKIN SCIENCE 02
-        </div>
-
-        <h3>
-          Cleansing
-        </h3>
-
-        <p>
-          Learn what cleansers do, why the skin barrier
-          matters, and how cleansing fits into basic
-          skin care.
-        </p>
-
-        <a href="cleansing.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="mini-lesson">
-
-        <div class="label">
-          SKIN SCIENCE 03
-        </div>
-
-        <h3>
-          Moisturizers
-        </h3>
-
-        <p>
-          Discover how moisturizers support the skin
-          barrier and the different ingredients used
-          in moisturizing products.
-        </p>
-
-        <a href="moisturizers.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="mini-lesson">
-
-        <div class="label">
-          SKIN SCIENCE 04
-        </div>
-
-        <h3>
-          Sun Protection
-        </h3>
-
-        <p>
-          Learn why ultraviolet radiation matters and
-          how sun protection helps protect skin.
-        </p>
-
-        <a href="sunprotection.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-
-      <div class="mini-lesson">
-
-        <div class="label">
-          SKIN SCIENCE 05
-        </div>
-
-        <h3>
-          Acne
-        </h3>
-
-        <p>
-          Explore the science behind acne, including
-          pores, oil, inflammation, and why acne can
-          develop.
-        </p>
-
-        <a href="acne.html" class="button">
-          EXPLORE LESSON →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SKIN JOURNEY -->
-
-  <section class="journey" id="journey">
-
-    <div class="label">
-      THE SKIN JOURNEY
-    </div>
-
-    <h2>
-      Understand<br>
-      your skin.
-    </h2>
-
-    <p class="text">
-      Dermatology starts with understanding the skin.
-      Explore each part of the journey at your own pace.
-    </p>
-
-
-    <div class="journey-grid">
-
-
-      <div class="journey-card">
-
-        <div class="label">
-          STEP 01
-        </div>
-
-        <h3>
-          Know Your Skin
-        </h3>
-
-        <p>
-          Learn about skin structure, the skin barrier,
-          and the science behind healthy skin.
-        </p>
-
-        <a href="skin101.html" class="button">
-          START →
-        </a>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="label">
-          STEP 02
-        </div>
-
-        <h3>
-          Build a Routine
-        </h3>
-
-        <p>
-          Learn the purpose of cleansing, moisturizing,
-          and sun protection.
-        </p>
-
-        <a href="#learn" class="button">
-          LEARN →
-        </a>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="label">
-          STEP 03
-        </div>
-
-        <h3>
-          Explore Dermatology
-        </h3>
-
-        <p>
-          Continue learning about common skin conditions,
-          treatments, prevention, and dermatology careers.
-        </p>
-
-        <a href="#learn" class="button">
-          EXPLORE →
-        </a>
-
-      </div>
-
-    </div>
-
   </section>
 
 
@@ -810,11 +646,9 @@
     </h2>
 
     <p class="text">
-      Pre-Derm Society creates impact by turning
-      dermatology education into something students
-      can understand, share, and use.
+      Pre-Derm Society has already begun creating
+      impact through skin-science education.
     </p>
-
 
     <div class="impact-number" id="peopleImpactedMain">
       38
@@ -824,9 +658,7 @@
       PEOPLE IMPACTED
     </div>
 
-
     <div class="impact-grid">
-
 
       <div class="impact-box">
 
@@ -837,7 +669,9 @@
         <div
           class="impact-box-number"
           id="peopleImpacted">
+
           38
+
         </div>
 
         <div class="impact-box-label">
@@ -856,7 +690,9 @@
         <div
           class="impact-box-number"
           id="meetingsDone">
+
           10
+
         </div>
 
         <div class="impact-box-label">
@@ -875,7 +711,9 @@
         <div
           class="impact-box-number"
           id="lessonsTaught">
+
           2
+
         </div>
 
         <div class="impact-box-label">
@@ -891,8 +729,7 @@
           CARE BOXES
         </div>
 
-        <div
-          class="impact-box-number">
+        <div class="impact-box-number">
           0
         </div>
 
@@ -968,6 +805,78 @@
   </section>
 
 
+  <!-- MOVING PHOTO SHOWCASE -->
+
+  <div class="photo-gallery">
+
+    <div class="photo-gallery-label">
+      PRE-DERM SOCIETY · OUR JOURNEY
+    </div>
+
+    <div class="photo-track-wrapper">
+
+      <div class="photo-track">
+
+        <!-- FIRST SET -->
+
+        <img
+          src="IMG_5085.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_8766.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_5125.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_5126.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+
+        <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+
+        <img
+          src="IMG_5085.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_8766.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_5125.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+        <img
+          src="IMG_5126.jpeg"
+          alt="Pre-Derm Society"
+          class="gallery-photo"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+
   <!-- FOOTER -->
 
   <footer>
@@ -1011,13 +920,11 @@
     const defaultMeetingsDone = 10;
     const defaultLessonsTaught = 2;
 
-
     let peopleImpacted =
       Number(localStorage.getItem("peopleImpacted"));
 
     let lessonsTaught =
       Number(localStorage.getItem("lessonsTaught"));
-
 
     if (
       !localStorage.getItem("impactSystemInitialized")
@@ -1048,26 +955,21 @@
 
     }
 
-
     const meetingsDone =
       Number(localStorage.getItem("meetingsDone"))
       || defaultMeetingsDone;
-
 
     document.getElementById(
       "peopleImpacted"
     ).textContent = peopleImpacted;
 
-
     document.getElementById(
       "peopleImpactedMain"
     ).textContent = peopleImpacted;
 
-
     document.getElementById(
       "meetingsDone"
     ).textContent = meetingsDone;
-
 
     document.getElementById(
       "lessonsTaught"
@@ -1076,4 +978,5 @@
   </script>
 
 </body>
+
 </html>
