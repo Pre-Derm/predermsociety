@@ -1,54 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join | Pre-Derm Society</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Join | Pre-Derm Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #ffffff;
+  color: #171717;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* NAV */
+
+nav {
+  width: 100%;
+  padding: 24px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  background: rgba(255,255,255,0.97);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 0.55;
+}
+
+.join-btn {
+  border: 1px solid #171717;
+  padding: 9px 18px;
+  border-radius: 30px;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 7%;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 82px);
+  line-height: 1;
+  letter-spacing: -4px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #666;
+  font-size: 17px;
+}
+
+
+/* JOIN SECTION */
+
+section {
+  padding: 80px 7%;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.section-heading h2 {
+  font-size: clamp(34px, 5vw, 55px);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-top: 10px;
+}
+
+
+/* FORM CARD */
+
+.join-card {
+  border: 1px solid #e9e9e9;
+  border-radius: 22px;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.field {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #171717;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  border: none;
+  background: #171717;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding: 25px;
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .nav-links a:not(.join-btn) {
+    display: none;
+  }
+
+  h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .join-card {
+    padding: 25px;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
-  <nav>
-    <a href="index.html">About</a>
-    <a href="learn.html">Learn</a>
-    <a href="impact.html">Impact</a>
-    <a href="donate.html">Donate</a>
-  </nav>
-  <a href="join.html" class="join-btn">Join Us</a>
-</header>
 
-<section class="page-hero">
-  <p class="eyebrow">JOIN THE SOCIETY</p>
-  <h1>Be part of<br><em>something meaningful.</em></h1>
-</section>
+<nav>
 
-<section class="content">
+  <a href="index.html" class="logo">
+    Pre-Derm Society
+  </a>
 
-  <div class="content-card">
-    <h2>Interested in Pre-Derm Society?</h2>
+  <div class="nav-links">
+
+    <a href="index.html#lessons">
+      Learn
+    </a>
+
+    <a href="index.html#resources">
+      Resources
+    </a>
+
+    <a href="index.html#contact">
+      Contact
+    </a>
+
+    <a href="join.html" class="join-btn">
+      Join Now
+    </a>
+
+  </div>
+
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Pre-Derm Society
+    </div>
+
+    <h1>
+      Join the society.
+    </h1>
+
     <p>
-      Join us to learn about dermatology, participate in educational
-      projects, and help create meaningful community initiatives.
+      Become part of a student-led community exploring dermatology,
+      medicine, science, research, and healthcare.
     </p>
 
-    <br>
+  </div>
 
-    <a href="mailto:predermsociety@gmail.com" class="primary-btn">
-      Contact Us →
-    </a>
+</header>
+
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>
+        01 — Join
+      </span>
+
+      <h2>
+        Let's learn<br>
+        together.
+      </h2>
+
+    </div>
+
+
+    <div class="join-card">
+
+      <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+
+        <div class="field">
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="interest">
+            What are you interested in?
+          </label>
+
+          <select id="interest" name="interest">
+
+            <option>Dermatology</option>
+            <option>Medicine</option>
+            <option>Research</option>
+            <option>Skincare</option>
+            <option>All of the above</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="message">
+            Why do you want to join?
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us a little about yourself..."
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-btn"
+        >
+          Submit Application →
+        </button>
+
+      </form>
+
+    </div>
+
   </div>
 
 </section>
 
+
 <footer>
-  <div>PRE-DERM SOCIETY</div>
-  <div>
-    <a href="#">Instagram</a>
-    <a href="#">TikTok</a>
-  </div>
+
+  © 2026 Pre-Derm Society · Student-led education
+
 </footer>
 
 </body>
