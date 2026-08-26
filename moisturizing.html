@@ -1,64 +1,44 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moisturizing · Pre-Derm Society</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Moisturizing | Pre-Derm Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#faf9f6;color:#111;font-family:Arial,Helvetica,sans-serif}
-a,a:visited,a:hover,a:active{color:#111}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 6%;background:rgba(250,249,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid #dedcd8}
-.logo{text-decoration:none;font-size:11px;font-weight:600;letter-spacing:3px;line-height:1.5}.links{display:flex;align-items:center;gap:25px}.links a{text-decoration:none;font-size:9px;letter-spacing:2px}
-.hero{min-height:75vh;display:flex;align-items:flex-end;padding:180px 8% 100px;background:radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),#faf9f6}
-.hero-content{max-width:1050px}.eyebrow,.label{font-size:9px;letter-spacing:3px;color:#777;margin-bottom:30px}.emoji{font-size:38px;margin-bottom:25px}
-h1{font-size:clamp(65px,13vw,155px);line-height:.8;letter-spacing:-9px;font-weight:300;margin:0}.hero-description,.text{max-width:650px;margin-top:45px;font-size:16px;line-height:1.8;color:#666}
-section{padding:120px 8%;border-top:1px solid #dedcd8}h2{font-size:clamp(50px,8vw,100px);line-height:.86;letter-spacing:-6px;font-weight:300;margin:0 0 35px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);margin-top:70px;border-top:1px solid #dedcd8;border-left:1px solid #dedcd8}.card{min-height:260px;padding:40px;border-right:1px solid #dedcd8;border-bottom:1px solid #dedcd8}.card-emoji{font-size:32px}.card-number{font-size:9px;letter-spacing:3px;color:#777;margin-top:25px}.card h3{font-size:38px;line-height:.95;letter-spacing:-3px;font-weight:300;margin:25px 0 20px}.card p{color:#666;line-height:1.7;font-size:14px}
-.button{display:inline-block;margin-top:20px;padding-bottom:7px;border-bottom:1px solid #111;text-decoration:none;font-size:9px;font-weight:600;letter-spacing:2px}
-footer{padding:45px 8%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #dedcd8}footer a{text-decoration:none;font-size:9px;letter-spacing:2px;margin-right:25px}
-@media(max-width:700px){nav{padding:18px 5%}.links{gap:13px;flex-wrap:wrap;justify-content:flex-end;max-width:230px}.links a{font-size:8px}.hero{min-height:80vh;padding:150px 8% 80px}h1{letter-spacing:-5px}h2{letter-spacing:-4px}section{padding:90px 8%}.cards{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start;gap:25px}}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}a{color:inherit;text-decoration:none}
+nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:100}.logo{font-size:18px;font-weight:700}.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}.nav-links a:hover{opacity:.55}.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px}.join-btn:hover{background:#171717;color:#fff}
+.hero{text-align:center;padding:100px 7% 80px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}h1{font-size:clamp(48px,8vw,82px);line-height:1;letter-spacing:-4px;margin-bottom:25px}.hero p{max-width:650px;margin:auto;color:#666;font-size:17px}
+section{padding:70px 7%}.container{max-width:950px;margin:auto}.section-heading{margin-bottom:35px}.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-top:10px}p{color:#666}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px}.card h3{font-size:22px;margin-bottom:10px}.number{font-size:11px;color:#999;margin-bottom:8px}
+.quiz{background:#f8f8f8;border-radius:30px;padding:45px}.question{background:#fff;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}.question h3{font-size:17px;margin-bottom:15px}label{display:block;padding:11px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}label:hover{background:#f7f7f7}input{margin-right:8px}button{border:0;background:#171717;color:#fff;padding:13px 23px;border-radius:30px;font-family:inherit;font-weight:600;cursor:pointer}#result{margin-top:20px;font-weight:700}.back{text-align:center;padding-top:20px}.back a{border:1px solid #ddd;padding:12px 20px;border-radius:30px;font-size:14px}footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+@media(max-width:700px){.nav-links{gap:12px}.nav-links a:not(.join-btn){display:none}.cards{grid-template-columns:1fr}h1{letter-spacing:-2.5px}.quiz{padding:25px}}
 </style>
 </head>
 <body>
+<nav><a href="index.html" class="logo">Pre-Derm Society</a><div class="nav-links"><a href="index.html#lessons">Learn</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a><a href="join.html" class="join-btn">Join Now</a></div></nav>
 
-<nav>
-<a href="index.html" class="logo">PRE-DERM<br>SOCIETY</a>
-<div class="links"><a href="index.html#about">ABOUT</a><a href="index.html#hub">LEARN</a><a href="index.html#impact">IMPACT</a><a href="index.html#donate">DONATE</a></div>
-</nav>
+<header class="hero"><div class="eyebrow">Lesson 03 · Skin Health</div><h1>Moisturizing</h1><p>Explore hydration, moisturizers, and how these products support the skin barrier.</p></header>
 
-<div class="hero">
-<div class="hero-content">
-<div class="eyebrow">DERMATOLOGY · LESSON 02</div>
-<div class="emoji">💧</div>
-<h1>MOISTURIZING</h1>
-<p class="hero-description">Learn why moisturizers matter and how they support the skin barrier.</p>
-</div>
-</div>
+<section><div class="container"><div class="section-heading"><span>01 — Learn</span><h2>Understanding moisturizers.</h2></div><div class="cards">
+<div class="card"><div class="number">01</div><h3>Why moisturize?</h3><p>Moisturizers can help reduce dryness and support the skin's protective barrier.</p></div>
+<div class="card"><div class="number">02</div><h3>Humectants</h3><p>Humectants attract and hold water. Examples include ingredients such as glycerin and hyaluronic acid.</p></div>
+<div class="card"><div class="number">03</div><h3>Emollients</h3><p>Emollients help smooth the skin by filling spaces between skin cells.</p></div>
+<div class="card"><div class="number">04</div><h3>Occlusives</h3><p>Occlusives form a layer that helps reduce water loss from the skin's surface.</p></div>
+</div></div></section>
 
-<section>
-<div class="label">01 · THE BASICS</div>
-<h2>Support<br>the barrier.</h2>
-<p class="text">Moisturizers can help reduce water loss from the skin and support the skin barrier. Different formulas are designed for different skin needs.</p>
-</section>
-
-<section>
-<div class="label">02 · WHAT TO KNOW</div>
-<div class="cards">
-<div class="card"><div class="card-emoji">💧</div><div class="card-number">01</div><h3>Humectants</h3><p>Ingredients that help attract and hold water in the outer layers of skin.</p></div>
-<div class="card"><div class="card-emoji">🧴</div><div class="card-number">02</div><h3>Emollients</h3><p>Ingredients that help smooth and soften the skin surface.</p></div>
-<div class="card"><div class="card-emoji">🛡️</div><div class="card-number">03</div><h3>Occlusives</h3><p>Ingredients that help reduce water loss by forming a protective layer.</p></div>
-<div class="card"><div class="card-emoji">🔎</div><div class="card-number">04</div><h3>Choose Wisely</h3><p>Look for products that match your skin's needs and avoid ingredients that irritate you.</p></div>
-</div>
-</section>
-
-<section>
-<div class="label">03 · KEEP LEARNING</div>
-<h2>Continue your<br>skin journey.</h2>
-<a href="index.html" class="button">RETURN HOME →</a>
-</section>
-
-<footer><div><a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a><a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a><a href="mailto:predermsociety@gmail.com">EMAIL</a></div><div class="label">PRE-DERM SOCIETY</div></footer>
-
+<section><div class="container quiz"><div class="section-heading"><span>02 — Knowledge Check</span><h2>Quick quiz</h2></div>
+<form>
+<div class="question"><h3>1. What can moisturizers help with?</h3><label><input type="radio" name="q1" value="a"> Reducing dryness</label><label><input type="radio" name="q1" value="b"> Changing DNA</label><label><input type="radio" name="q1" value="c"> Producing bones</label></div>
+<div class="question"><h3>2. What do humectants do?</h3><label><input type="radio" name="q2" value="a"> Remove all skin cells</label><label><input type="radio" name="q2" value="b"> Attract and hold water</label><label><input type="radio" name="q2" value="c"> Block UV radiation completely</label></div>
+<div class="question"><h3>3. What is one function of an occlusive?</h3><label><input type="radio" name="q3" value="a"> Increase water loss</label><label><input type="radio" name="q3" value="b"> Produce collagen instantly</label><label><input type="radio" name="q3" value="c"> Help reduce water loss</label></div>
+<button type="button" onclick="checkQuiz()">Check Answers</button><div id="result"></div>
+</form></div></section>
+<div class="back"><a href="index.html">← Back to Lessons</a></div><footer>© 2026 Pre-Derm Society · Student-led education</footer>
+<script>function checkQuiz(){let s=0;if(document.querySelector('input[name="q1"]:checked')?.value==="a")s++;if(document.querySelector('input[name="q2"]:checked')?.value==="b")s++;if(document.querySelector('input[name="q3"]:checked')?.value==="c")s++;document.getElementById("result").textContent="You scored "+s+"/3!";}</script>
 </body>
 </html>
+```
