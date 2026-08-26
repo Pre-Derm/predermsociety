@@ -1,108 +1,172 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skin 101 | Pre-Derm Society</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin 101 | Pre-Derm Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;letter-spacing:-.5px}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
+.nav-links a:hover{opacity:.55}
+.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px;transition:.2s}
+.join-btn:hover{background:#171717;color:white}
+
+.hero{padding:100px 7% 80px;text-align:center}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
+h1{font-size:clamp(48px,8vw,82px);line-height:1;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
+.hero p{max-width:650px;margin:auto;color:#666;font-size:17px}
+
+section{padding:70px 7%}
+.container{max-width:950px;margin:auto}
+.section-heading{margin-bottom:35px}
+.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
+h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-top:10px}
+p{color:#666}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;background:white}
+.card h3{font-size:22px;margin-bottom:10px}
+.number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:8px}
+
+.quiz{background:#f8f8f8;border-radius:30px;padding:45px}
+.question{background:white;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}
+.question h3{font-size:17px;margin-bottom:15px}
+label{display:block;padding:11px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}
+label:hover{background:#f7f7f7}
+input{margin-right:8px}
+button{border:0;background:#171717;color:white;padding:13px 23px;border-radius:30px;font-family:inherit;font-weight:600;cursor:pointer}
+#result{margin-top:20px;font-weight:700}
+
+.back{text-align:center;padding-top:20px}
+.back a{border:1px solid #ddd;padding:12px 20px;border-radius:30px;font-size:14px}
+
+footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+
+@media(max-width:700px){
+.nav-links{gap:12px}
+.nav-links a:not(.join-btn){display:none}
+.cards{grid-template-columns:1fr}
+h1{letter-spacing:-2.5px}
+.quiz{padding:25px}
+}
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
+<nav>
+<a href="index.html" class="logo">Pre-Derm Society</a>
+<div class="nav-links">
+<a href="index.html#lessons">Learn</a>
+<a href="index.html#resources">Resources</a>
+<a href="index.html#contact">Contact</a>
+<a href="join.html" class="join-btn">Join Now</a>
+</div>
+</nav>
 
-  <nav>
-    <a href="index.html">About</a>
-    <a href="learn.html">Learn</a>
-    <a href="impact.html">Impact</a>
-    <a href="donate.html">Donate</a>
-  </nav>
-
-  <a href="join.html" class="join-btn">Join Us</a>
+<header class="hero">
+<div class="eyebrow">Lesson 01 · Dermatology</div>
+<h1>Skin 101</h1>
+<p>Discover the basics of the body's largest organ and how its different structures work together.</p>
 </header>
 
+<section>
+<div class="container">
+<div class="section-heading">
+<span>01 — The Basics</span>
+<h2>What is skin?</h2>
+</div>
 
-<section class="page-hero">
-  <p class="eyebrow">LESSON 01</p>
-  <h1>Skin <em>101.</em></h1>
-  <p class="hero-text">
-    Your introduction to the science of skin.
-  </p>
+<div class="cards">
+<div class="card">
+<div class="number">01</div>
+<h3>The epidermis</h3>
+<p>The epidermis is the outermost layer of skin. It helps protect the body from the environment and contains cells involved in producing melanin.</p>
+</div>
+
+<div class="card">
+<div class="number">02</div>
+<h3>The dermis</h3>
+<p>The dermis lies underneath the epidermis. It contains structures such as blood vessels, nerves, hair follicles and sweat glands.</p>
+</div>
+
+<div class="card">
+<div class="number">03</div>
+<h3>The hypodermis</h3>
+<p>The hypodermis is the deeper layer beneath the dermis. It contains connective tissue and fat that help cushion and insulate the body.</p>
+</div>
+
+<div class="card">
+<div class="number">04</div>
+<h3>The skin barrier</h3>
+<p>The outer skin barrier helps limit water loss and protects the body from outside irritants and microorganisms.</p>
+</div>
+</div>
+</div>
 </section>
 
+<section>
+<div class="container quiz">
+<div class="section-heading">
+<span>02 — Knowledge Check</span>
+<h2>Quick quiz</h2>
+</div>
 
-<section class="content">
+<form id="quiz">
+<div class="question">
+<h3>1. Which layer is the outermost layer of skin?</h3>
+<label><input type="radio" name="q1" value="a"> Dermis</label>
+<label><input type="radio" name="q1" value="b"> Epidermis</label>
+<label><input type="radio" name="q1" value="c"> Hypodermis</label>
+</div>
 
-  <div class="content-grid">
+<div class="question">
+<h3>2. Where are many blood vessels and nerves found?</h3>
+<label><input type="radio" name="q2" value="a"> Dermis</label>
+<label><input type="radio" name="q2" value="b"> Epidermis</label>
+<label><input type="radio" name="q2" value="c"> Hair shaft</label>
+</div>
 
-    <div class="content-card">
-      <h2>🔎 What is skin?</h2>
-      <p>
-        Skin is the body's largest organ. It acts as a protective
-        barrier between your body and the outside environment.
-      </p>
-    </div>
+<div class="question">
+<h3>3. What is one major job of the skin barrier?</h3>
+<label><input type="radio" name="q3" value="a"> Produce bones</label>
+<label><input type="radio" name="q3" value="b"> Pump blood</label>
+<label><input type="radio" name="q3" value="c"> Help protect the body and reduce water loss</label>
+</div>
 
-    <div class="content-card">
-      <h2>🧬 The layers of skin</h2>
-      <p>
-        Skin has three main layers: the epidermis, dermis, and
-        subcutaneous tissue. Each layer has different jobs.
-      </p>
-    </div>
-
-    <div class="content-card">
-      <h2>🛡️ Your skin barrier</h2>
-      <p>
-        The skin barrier is part of the outermost layer of your skin.
-        It helps keep moisture in and helps protect your body from
-        outside irritants.
-      </p>
-    </div>
-
-    <div class="content-card">
-      <h2>💧 Hydration</h2>
-      <p>
-        Keeping skin hydrated supports the skin barrier. Moisturizers
-        can help reduce water loss from the skin.
-      </p>
-    </div>
-
-    <div class="content-card">
-      <h2>☀️ Sun protection</h2>
-      <p>
-        UV radiation can damage skin. Sun-protective habits are an
-        important part of taking care of your skin.
-      </p>
-    </div>
-
-    <div class="content-card">
-      <h2>🧴 Skincare basics</h2>
-      <p>
-        A simple routine can include gentle cleansing, moisturizing,
-        and sun protection. More products are not always necessary.
-      </p>
-    </div>
-
-  </div>
-
-
-  <div style="margin-top: 45px; text-align: center;">
-    <a href="learn.html" class="secondary-btn">← Back to Learn</a>
-  </div>
-
+<button type="button" onclick="checkQuiz()">Check Answers</button>
+<div id="result"></div>
+</form>
+</div>
 </section>
 
+<div class="back">
+<a href="index.html">← Back to Lessons</a>
+</div>
 
-<footer>
-  <div>PRE-DERM SOCIETY</div>
+<footer>© 2026 Pre-Derm Society · Student-led education</footer>
 
-  <div>
-    <a href="#">Instagram</a>
-    <a href="#">TikTok</a>
-  </div>
-</footer>
+<script>
+function checkQuiz(){
+let score=0;
+if(document.querySelector('input[name="q1"]:checked')?.value==="b")score++;
+if(document.querySelector('input[name="q2"]:checked')?.value==="a")score++;
+if(document.querySelector('input[name="q3"]:checked')?.value==="c")score++;
+document.getElementById("result").textContent="You scored "+score+"/3!";
+}
+</script>
 
 </body>
 </html>
+```
