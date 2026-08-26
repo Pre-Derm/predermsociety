@@ -11,160 +11,630 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
-a{color:inherit;text-decoration:none}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-nav{width:100%;padding:24px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:100}
-.logo{font-size:18px;font-weight:700;letter-spacing:-.5px}
-.nav-links{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}
-.nav-links a:hover{opacity:.55}
-.join-btn{border:1px solid #171717;padding:9px 18px;border-radius:30px;transition:.2s}
-.join-btn:hover{background:#171717;color:white}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #ffffff;
+  color: #171717;
+  line-height: 1.6;
+}
 
-.hero{padding:100px 7% 80px;text-align:center}
-.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:20px}
-h1{font-size:clamp(48px,8vw,82px);line-height:1;letter-spacing:-4px;font-weight:600;margin-bottom:25px}
-.hero p{max-width:650px;margin:auto;color:#666;font-size:17px}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-section{padding:70px 7%}
-.container{max-width:950px;margin:auto}
-.section-heading{margin-bottom:35px}
-.section-heading span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888}
-h2{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.05;margin-top:10px}
-p{color:#666}
+/* NAVIGATION */
 
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{border:1px solid #e9e9e9;border-radius:22px;padding:30px;background:white}
-.card h3{font-size:22px;margin-bottom:10px}
-.number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:8px}
+nav {
+  width: 100%;
+  padding: 24px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  background: rgba(255,255,255,0.96);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-.quiz{background:#f8f8f8;border-radius:30px;padding:45px}
-.question{background:white;border:1px solid #e7e7e7;border-radius:20px;padding:25px;margin-bottom:18px}
-.question h3{font-size:17px;margin-bottom:15px}
-label{display:block;padding:11px 14px;border:1px solid #eee;border-radius:12px;margin:8px 0;cursor:pointer}
-label:hover{background:#f7f7f7}
-input{margin-right:8px}
-button{border:0;background:#171717;color:white;padding:13px 23px;border-radius:30px;font-family:inherit;font-weight:600;cursor:pointer}
-#result{margin-top:20px;font-weight:700}
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
 
-.back{text-align:center;padding-top:20px}
-.back a{border:1px solid #ddd;padding:12px 20px;border-radius:30px;font-size:14px}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-footer{text-align:center;font-size:12px;color:#999;padding:25px;border-top:1px solid #eee}
+.nav-links a:hover {
+  opacity: 0.55;
+}
 
-@media(max-width:700px){
-.nav-links{gap:12px}
-.nav-links a:not(.join-btn){display:none}
-.cards{grid-template-columns:1fr}
-h1{letter-spacing:-2.5px}
-.quiz{padding:25px}
+.join-btn {
+  border: 1px solid #171717;
+  padding: 9px 18px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.join-btn:hover {
+  background: #171717;
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 7%;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 17px;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 90px 7%;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-heading span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.section-heading h2 {
+  font-size: clamp(34px, 5vw, 55px);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.section-heading p {
+  margin-top: 15px;
+  color: #777;
+}
+
+/* LESSON CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid #e9e9e9;
+  border-radius: 22px;
+  padding: 30px;
+  min-height: 210px;
+  background: white;
+}
+
+.card-number {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* QUIZ */
+
+.quiz {
+  background: #f8f8f8;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.question {
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 18px;
+}
+
+.question h3 {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.answer {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.answer:hover {
+  background: #f7f7f7;
+}
+
+.answer input {
+  margin-right: 8px;
+}
+
+.correct {
+  border-color: #171717 !important;
+  background: #f3f3f3 !important;
+}
+
+.incorrect {
+  border-color: #999 !important;
+  background: #fafafa !important;
+}
+
+.feedback {
+  display: none;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  border: none;
+  background: #171717;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* BACK */
+
+.back {
+  text-align: center;
+  padding: 20px 7% 70px;
+}
+
+.back a {
+  display: inline-block;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back a:hover {
+  background: #f7f7f7;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding: 25px;
+  border-top: 1px solid #eeeeee;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a:not(.join-btn) {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz {
+    padding: 25px;
+  }
+
+  h1 {
+    letter-spacing: -2.5px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-<a href="index.html" class="logo">Pre-Derm Society</a>
-<div class="nav-links">
-<a href="index.html#lessons">Learn</a>
-<a href="index.html#resources">Resources</a>
-<a href="index.html#contact">Contact</a>
-<a href="join.html" class="join-btn">Join Now</a>
-</div>
+  <a href="index.html" class="logo">Pre-Derm Society</a>
+
+  <div class="nav-links">
+    <a href="index.html#lessons">Learn</a>
+    <a href="index.html#resources">Resources</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="join.html" class="join-btn">Join Now</a>
+  </div>
 </nav>
 
+
+<!-- HERO -->
+
 <header class="hero">
-<div class="eyebrow">Lesson 01 · Dermatology</div>
-<h1>Skin 101</h1>
-<p>Discover the basics of the body's largest organ and how its different structures work together.</p>
+  <div class="hero-content">
+
+    <div class="eyebrow">Lesson 01 · Dermatology</div>
+
+    <h1>Skin 101</h1>
+
+    <p>
+      Discover the basics of the body's largest organ and how
+      its different structures work together.
+    </p>
+
+  </div>
 </header>
 
-<section>
-<div class="container">
-<div class="section-heading">
-<span>01 — The Basics</span>
-<h2>What is skin?</h2>
-</div>
 
-<div class="cards">
-<div class="card">
-<div class="number">01</div>
-<h3>The epidermis</h3>
-<p>The epidermis is the outermost layer of skin. It helps protect the body from the environment and contains cells involved in producing melanin.</p>
-</div>
-
-<div class="card">
-<div class="number">02</div>
-<h3>The dermis</h3>
-<p>The dermis lies underneath the epidermis. It contains structures such as blood vessels, nerves, hair follicles and sweat glands.</p>
-</div>
-
-<div class="card">
-<div class="number">03</div>
-<h3>The hypodermis</h3>
-<p>The hypodermis is the deeper layer beneath the dermis. It contains connective tissue and fat that help cushion and insulate the body.</p>
-</div>
-
-<div class="card">
-<div class="number">04</div>
-<h3>The skin barrier</h3>
-<p>The outer skin barrier helps limit water loss and protects the body from outside irritants and microorganisms.</p>
-</div>
-</div>
-</div>
-</section>
+<!-- LESSON -->
 
 <section>
-<div class="container quiz">
-<div class="section-heading">
-<span>02 — Knowledge Check</span>
-<h2>Quick quiz</h2>
-</div>
 
-<form id="quiz">
-<div class="question">
-<h3>1. Which layer is the outermost layer of skin?</h3>
-<label><input type="radio" name="q1" value="a"> Dermis</label>
-<label><input type="radio" name="q1" value="b"> Epidermis</label>
-<label><input type="radio" name="q1" value="c"> Hypodermis</label>
-</div>
+  <div class="container">
 
-<div class="question">
-<h3>2. Where are many blood vessels and nerves found?</h3>
-<label><input type="radio" name="q2" value="a"> Dermis</label>
-<label><input type="radio" name="q2" value="b"> Epidermis</label>
-<label><input type="radio" name="q2" value="c"> Hair shaft</label>
-</div>
+    <div class="section-heading">
+      <span>01 — The Basics</span>
 
-<div class="question">
-<h3>3. What is one major job of the skin barrier?</h3>
-<label><input type="radio" name="q3" value="a"> Produce bones</label>
-<label><input type="radio" name="q3" value="b"> Pump blood</label>
-<label><input type="radio" name="q3" value="c"> Help protect the body and reduce water loss</label>
-</div>
+      <h2>Understanding your skin.</h2>
 
-<button type="button" onclick="checkQuiz()">Check Answers</button>
-<div id="result"></div>
-</form>
-</div>
+      <p>
+        Skin is much more than an outer covering. It is a complex organ
+        that protects the body, helps regulate temperature, and allows
+        us to sense our environment.
+      </p>
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-number">01</div>
+        <h3>The Epidermis</h3>
+        <p>
+          The epidermis is the outermost layer of skin. It provides
+          much of the skin's protective barrier and contains cells
+          involved in producing melanin.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="card-number">02</div>
+        <h3>The Dermis</h3>
+        <p>
+          The dermis lies beneath the epidermis. It contains blood
+          vessels, nerves, hair follicles, sweat glands and other
+          important structures.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="card-number">03</div>
+        <h3>The Hypodermis</h3>
+        <p>
+          The hypodermis is located underneath the dermis. It contains
+          connective tissue and fat that help cushion and insulate
+          the body.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="card-number">04</div>
+        <h3>The Skin Barrier</h3>
+        <p>
+          The skin barrier helps protect the body from the outside
+          environment while also helping reduce water loss.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- QUIZ -->
+
+<section>
+
+  <div class="container">
+
+    <div class="quiz">
+
+      <div class="section-heading">
+
+        <span>02 — Knowledge Check</span>
+
+        <h2>Test your knowledge.</h2>
+
+        <p>
+          Choose an answer for each question, then submit your quiz.
+          Your answers will be locked after submission.
+        </p>
+
+      </div>
+
+
+      <form id="quizForm">
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+          <h3>1. Which layer is the outermost layer of skin?</h3>
+
+          <label class="answer">
+            <input type="radio" name="q1" value="a">
+            Dermis
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q1" value="b">
+            Epidermis
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q1" value="c">
+            Hypodermis
+          </label>
+
+          <div class="feedback" id="feedback1"></div>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+          <h3>2. Which layer contains many blood vessels and nerves?</h3>
+
+          <label class="answer">
+            <input type="radio" name="q2" value="a">
+            Epidermis
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q2" value="b">
+            Dermis
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q2" value="c">
+            Nail plate
+          </label>
+
+          <div class="feedback" id="feedback2"></div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+          <h3>3. What is one important job of the skin barrier?</h3>
+
+          <label class="answer">
+            <input type="radio" name="q3" value="a">
+            Pump blood around the body
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q3" value="b">
+            Produce bones
+          </label>
+
+          <label class="answer">
+            <input type="radio" name="q3" value="c">
+            Help protect the body and reduce water loss
+          </label>
+
+          <div class="feedback" id="feedback3"></div>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="submit-btn"
+          id="submitBtn"
+          onclick="submitQuiz()">
+          Submit Quiz
+        </button>
+
+        <div id="result"></div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <div class="back">
-<a href="index.html">← Back to Lessons</a>
+  <a href="index.html">← Back to Lessons</a>
 </div>
 
-<footer>© 2026 Pre-Derm Society · Student-led education</footer>
+
+<footer>
+  © 2026 Pre-Derm Society · Student-led education
+</footer>
+
 
 <script>
-function checkQuiz(){
-let score=0;
-if(document.querySelector('input[name="q1"]:checked')?.value==="b")score++;
-if(document.querySelector('input[name="q2"]:checked')?.value==="a")score++;
-if(document.querySelector('input[name="q3"]:checked')?.value==="c")score++;
-document.getElementById("result").textContent="You scored "+score+"/3!";
+
+function submitQuiz() {
+
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "c"
+  };
+
+  let score = 0;
+
+  Object.keys(answers).forEach(function(questionName, index) {
+
+    const selected = document.querySelector(
+      'input[name="' + questionName + '"]:checked'
+    );
+
+    const questionNumber = index + 1;
+    const feedback = document.getElementById(
+      "feedback" + questionNumber
+    );
+
+    const labels = document.querySelectorAll(
+      'input[name="' + questionName + '"]'
+    );
+
+    labels.forEach(function(input) {
+
+      input.disabled = true;
+
+      const label = input.parentElement;
+
+      if (input.value === answers[questionName]) {
+        label.classList.add("correct");
+      }
+
+      if (
+        selected &&
+        input.value === selected.value &&
+        selected.value !== answers[questionName]
+      ) {
+        label.classList.add("incorrect");
+      }
+
+    });
+
+    feedback.style.display = "block";
+
+    if (selected && selected.value === answers[questionName]) {
+
+      score++;
+
+      feedback.textContent = "✓ Correct!";
+
+    } else if (selected) {
+
+      feedback.textContent =
+        "✕ Incorrect. The correct answer is shown above.";
+
+    } else {
+
+      feedback.textContent =
+        "No answer selected. The correct answer is shown above.";
+
+    }
+
+  });
+
+
+  document.getElementById("result").textContent =
+    "Your score: " + score + "/3";
+
+  document.getElementById("submitBtn").disabled = true;
+
 }
+
 </script>
 
 </body>
