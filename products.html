@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products · Pre-Derm Society</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf9f6;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #111;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 6%;
+  background: rgba(250, 249, 246, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #dedcd8;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.links a:hover,
+.logo:hover {
+  opacity: 0.5;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 180px 8% 100px;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      #e8e2dc 0%,
+      transparent 35%
+    ),
+    #faf9f6;
+}
+
+.hero-content {
+  max-width: 1050px;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: clamp(65px, 13vw, 155px);
+  line-height: 0.8;
+  letter-spacing: -9px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin-top: 45px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* GENERAL */
+
+section {
+  padding: 120px 8%;
+  border-top: 1px solid #dedcd8;
+}
+
+.label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.86;
+  letter-spacing: -6px;
+  font-weight: 300;
+  margin: 0 0 35px;
+}
+
+.text {
+  max-width: 650px;
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* SEARCH */
+
+.search-area {
+  background: #efeee9;
+}
+
+.search-box {
+  max-width: 900px;
+  margin-top: 60px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #cfcac4;
+  background: #faf9f6;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  outline: none;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filter {
+  padding: 12px 18px;
+  border: 1px solid #cfcac4;
+  border-radius: 100px;
+  background: #faf9f6;
+  cursor: pointer;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.filter.active {
+  background: #111;
+  color: #fff;
+}
+
+/* PRODUCTS */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 70px;
+  border-top: 1px solid #dedcd8;
+  border-left: 1px solid #dedcd8;
+}
+
+.product-card {
+  padding: 40px;
+  min-height: 360px;
+  border-right: 1px solid #dedcd8;
+  border-bottom: 1px solid #dedcd8;
+  background: #faf9f6;
+}
+
+.product-brand {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+.product-name {
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: 35px 0 15px;
+}
+
+.rating {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.product-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.tag {
+  border: 1px solid #dedcd8;
+  padding: 8px 10px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+/* REVIEW */
+
+.review {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #dedcd8;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* SUBMIT */
+
+.submit {
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      #e7dfd7,
+      transparent 38%
+    ),
+    #f4f1ec;
+}
+
+.form-box {
+  max-width: 800px;
+  margin-top: 60px;
+  padding: 50px;
+  border: 1px solid #dedcd8;
+  background: #faf9f6;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #cfcac4;
+  background: #faf9f6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 15px 22px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 45px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dedcd8;
+}
+
+footer a {
+  text-decoration: none;
+  color: #111 !important;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-right: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  nav {
+    padding: 18px 5%;
+  }
+
+  .links {
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 230px;
+  }
+
+  .links a {
+    font-size: 8px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 150px 8% 80px;
+  }
+
+  h1 {
+    letter-spacing: -5px;
+  }
+
+  h2 {
+    letter-spacing: -4px;
+  }
+
+  section {
+    padding: 90px 8%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-box {
+    padding: 30px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html" class="logo">
+PRE-DERM<br>
+SOCIETY
+</a>
+
+<div class="links">
+
+<a href="index.html#about">
+ABOUT
+</a>
+
+<a href="skin101.html">
+LEARN
+</a>
+
+<a href="skinjourney.html">
+SKIN JOURNEY
+</a>
+
+<a href="products.html">
+PRODUCTS
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+SKIN SCIENCE · PRODUCTS · COMMUNITY
+</div>
+
+<h1>
+PRODUCT<br>
+LIBRARY
+</h1>
+
+<p class="hero-description">
+Explore skincare products through an educational
+lens. Learn what products contain, explore skin
+profiles, and read community experiences.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<section class="search-area">
+
+<div class="label">
+01 · EXPLORE
+</div>
+
+<h2>
+Find your<br>
+product.
+</h2>
+
+<p class="text">
+Search the Pre-Derm Society product library.
+Our database is designed for education and
+community discussion — not medical diagnosis
+or treatment.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search products or brands..."
+>
+
+<div class="filters">
+
+<button class="filter active" data-filter="all">
+ALL
+</button>
+
+<button class="filter" data-filter="dry">
+DRY
+</button>
+
+<button class="filter" data-filter="oily">
+OILY
+</button>
+
+<button class="filter" data-filter="combination">
+COMBINATION
+</button>
+
+<button class="filter" data-filter="sensitive">
+SENSITIVE
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCT LIBRARY -->
+
+<section>
+
+<div class="label">
+02 · PRODUCT LIBRARY
+</div>
+
+<h2>
+Explore.
+</h2>
+
+<div class="product-grid" id="productGrid">
+
+<!-- PRODUCTS GENERATED BY JAVASCRIPT -->
+
+</div>
+
+</section>
+
+
+<!-- SUBMIT REVIEW -->
+
+<section class="submit">
+
+<div class="label">
+03 · COMMUNITY
+</div>
+
+<h2>
+Share your<br>
+experience.
+</h2>
+
+<p class="text">
+Reviews should describe your personal experience
+honestly. Please do not include medical diagnoses,
+private information, or claims that a product cures
+a condition.
+</p>
+
+
+<div class="form-box">
+
+<select id="reviewProduct">
+
+<option value="">
+Choose a product
+</option>
+
+</select>
+
+<select id="reviewProfile">
+
+<option value="">
+Your skin profile
+</option>
+
+<option>
+Dry
+</option>
+
+<option>
+Oily
+</option>
+
+<option>
+Combination
+</option>
+
+<option>
+Sensitive
+</option>
+
+</select>
+
+<select id="reviewRating">
+
+<option value="">
+Rating
+</option>
+
+<option value="5">
+★★★★★
+</option>
+
+<option value="4">
+★★★★☆
+</option>
+
+<option value="3">
+★★★☆☆
+</option>
+
+<option value="2">
+★★☆☆☆
+</option>
+
+<option value="1">
+★☆☆☆☆
+</option>
+
+</select>
+
+<textarea
+id="reviewText"
+placeholder="What was your experience?"
+></textarea>
+
+<button
+class="submit-button"
+onclick="submitReview()"
+>
+SUBMIT REVIEW →
+</button>
+
+<p
+id="reviewMessage"
+class="text"
+style="display:none;"
+>
+Thank you. Your review has been added to
+this browser's local demo library.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div>
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="skinjourney.html">
+SKIN JOURNEY
+</a>
+
+<a href="skin101.html">
+SKIN 101
+</a>
+
+<a href="mailto:predermsociety@gmail.com">
+EMAIL
+</a>
+
+</div>
+
+<div class="label">
+PRE-DERM SOCIETY
+</div>
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   PRODUCT DATABASE
+   ========================================= */
+
+const products = [
+
+{
+brand: "RHODE",
+name: "Peptide Lip Treatment",
+profiles: ["dry", "sensitive"],
+rating: 4.6,
+description:
+"A lip-care product frequently discussed for its moisturizing feel and peptide-focused formula.",
+tags: ["HYDRATION", "LIPS", "PEPTIDES"]
+},
+
+{
+brand: "OLIVE YOUNG",
+name: "Skincare Discovery",
+profiles: ["dry", "oily", "combination", "sensitive"],
+rating: 4.5,
+description:
+"Explore Korean skincare products and educational resources through the Pre-Derm Society library.",
+tags: ["K-BEAUTY", "SKINCARE", "DISCOVERY"]
+},
+
+{
+brand: "PRE-DERM SOCIETY",
+name: "Skin 101",
+profiles: ["dry", "oily", "combination", "sensitive"],
+rating: 5.0,
+description:
+"Our introductory educational lesson covering the major layers of skin and the skin barrier.",
+tags: ["EDUCATION", "SKIN SCIENCE"]
+},
+
+{
+brand: "PRE-DERM SOCIETY",
+name: "Skin Barrier Basics",
+profiles: ["dry", "sensitive"],
+rating: 5.0,
+description:
+"An educational resource exploring the role of the skin barrier and hydration.",
+tags: ["BARRIER", "EDUCATION", "HYDRATION"]
+}
+
+];
+
+
+/* =========================================
+   DISPLAY PRODUCTS
+   ========================================= */
+
+const grid =
+document.getElementById("productGrid");
+
+const searchInput =
+document.getElementById("searchInput");
+
+const productSelect =
+document.getElementById("reviewProduct");
+
+let currentFilter = "all";
+
+
+function displayProducts() {
+
+  const search =
+    searchInput.value.toLowerCase();
+
+  grid.innerHTML = "";
+
+
+  const filtered =
+    products.filter(product => {
+
+      const matchesSearch =
+        product.name
+        .toLowerCase()
+        .includes(search) ||
+
+        product.brand
+        .toLowerCase()
+        .includes(search);
+
+
+      const matchesFilter =
+        currentFilter === "all" ||
+
+        product.profiles
+        .includes(currentFilter);
+
+
+      return matchesSearch &&
+             matchesFilter;
+
+    });
+
+
+  if (filtered.length === 0) {
+
+    grid.innerHTML = `
+      <div class="product-card">
+        <div class="label">
+          NO RESULTS
+        </div>
+
+        <div class="product-name">
+          Nothing found.
+        </div>
+
+        <p class="product-description">
+          Try another product name, brand, or skin profile.
+        </p>
+      </div>
+    `;
+
+    return;
+  }
+
+
+  filtered.forEach(product => {
+
+    const card =
+    document.createElement("div");
+
+    card.className =
+    "product-card";
+
+
+    const stars =
+    "★".repeat(
+      Math.round(product.rating)
+    );
+
+
+    card.innerHTML = `
+
+      <div class="product-brand">
+        ${product.brand}
+      </div>
+
+      <div class="product-name">
+        ${product.name}
+      </div>
+
+      <div class="rating">
+        ${stars}
+        <span style="color:#777;">
+          ${product.rating.toFixed(1)}
+        </span>
+      </div>
+
+      <p class="product-description">
+        ${product.description}
+      </p>
+
+      <div class="tags">
+
+        ${product.tags.map(tag => `
+          <span class="tag">
+            ${tag}
+          </span>
+        `).join("")}
+
+      </div>
+
+      <div class="review">
+
+        Community reviews will appear here
+        as the Pre-Derm Society review system grows.
+
+      </div>
+
+    `;
+
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* =========================================
+   FILTERS
+   ========================================= */
+
+document.querySelectorAll(".filter")
+.forEach(button => {
+
+  button.addEventListener("click", function() {
+
+    document
+      .querySelectorAll(".filter")
+      .forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+    this.classList.add("active");
+
+    currentFilter =
+      this.dataset.filter;
+
+    displayProducts();
+
+  });
+
+});
+
+
+searchInput.addEventListener(
+  "input",
+  displayProducts
+);
+
+
+/* =========================================
+   PRODUCT DROPDOWN
+   ========================================= */
+
+products.forEach(product => {
+
+  const option =
+  document.createElement("option");
+
+  option.value =
+  product.name;
+
+  option.textContent =
+  product.brand +
+  " · " +
+  product.name;
+
+  productSelect.appendChild(option);
+
+});
+
+
+/* =========================================
+   REVIEWS
+   ========================================= */
+
+function submitReview() {
+
+  const product =
+    document.getElementById(
+      "reviewProduct"
+    ).value;
+
+  const profile =
+    document.getElementById(
+      "reviewProfile"
+    ).value;
+
+  const rating =
+    document.getElementById(
+      "reviewRating"
+    ).value;
+
+  const text =
+    document.getElementById(
+      "reviewText"
+    ).value.trim();
+
+
+  if (
+    !product ||
+    !profile ||
+    !rating ||
+    !text
+  ) {
+
+    alert(
+      "Please complete every field before submitting."
+    );
+
+    return;
+
+  }
+
+
+  const reviews =
+    JSON.parse(
+      localStorage.getItem(
+        "preDermReviews"
+      )
+    ) || [];
+
+
+  reviews.push({
+
+    product: product,
+
+    profile: profile,
+
+    rating: rating,
+
+    text: text,
+
+    date:
+      new Date().toLocaleDateString()
+
+  });
+
+
+  localStorage.setItem(
+    "preDermReviews",
+    JSON.stringify(reviews)
+  );
+
+
+  document.getElementById(
+    "reviewMessage"
+  ).style.display = "block";
+
+
+  document.getElementById(
+    "reviewText"
+  ).value = "";
+
+}
+
+
+/* =========================================
+   INITIAL DISPLAY
+   ========================================= */
+
+displayProducts();
+
+</script>
+
+</body>
+</html>
