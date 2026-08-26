@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moisturizers · Pre-Derm Society</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf9f6;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #111;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 6%;
+  background: rgba(250, 249, 246, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #dedcd8;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.links a:hover,
+.logo:hover {
+  opacity: 0.5;
+}
+
+/* HERO */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 180px 8% 100px;
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      #e8e2dc 0%,
+      transparent 35%
+    ),
+    #faf9f6;
+}
+
+.hero-content {
+  max-width: 1050px;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: clamp(65px, 13vw, 155px);
+  line-height: 0.8;
+  letter-spacing: -9px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin-top: 45px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* GENERAL */
+section {
+  padding: 120px 8%;
+  border-top: 1px solid #dedcd8;
+}
+
+.label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.86;
+  letter-spacing: -6px;
+  font-weight: 300;
+  margin: 0 0 35px;
+}
+
+h3 {
+  font-size: clamp(40px, 6vw, 75px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  font-weight: 300;
+  margin: 15px 0 25px;
+}
+
+.text {
+  max-width: 650px;
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* LESSON */
+.lesson {
+  background: #efeee9;
+}
+
+.lesson-box {
+  max-width: 1000px;
+  background: #faf9f6;
+  border: 1px solid #dedcd8;
+  padding: 60px;
+}
+
+.lesson-box p {
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* MOISTURIZER TYPES */
+.types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 70px;
+  border-top: 1px solid #dedcd8;
+  border-left: 1px solid #dedcd8;
+}
+
+.type {
+  min-height: 300px;
+  padding: 35px;
+  border-right: 1px solid #dedcd8;
+  border-bottom: 1px solid #dedcd8;
+  background: #faf9f6;
+}
+
+.type-number {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+.type h4 {
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: 45px 0 20px;
+}
+
+.type p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* KEY IDEA */
+.key {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      #e7dfd7,
+      transparent 42%
+    ),
+    #f4f1ec;
+}
+
+.key-content {
+  max-width: 900px;
+}
+
+/* QUIZ */
+.quiz {
+  background: #faf9f6;
+}
+
+.quiz-header {
+  max-width: 850px;
+}
+
+.quiz-container {
+  max-width: 850px;
+  margin-top: 70px;
+}
+
+.question-card {
+  display: none;
+  border: 1px solid #dedcd8;
+  padding: 50px;
+  background: #faf9f6;
+}
+
+.question-card.active {
+  display: block;
+}
+
+.question-number {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.question {
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* ANSWERS */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #cfcac4;
+  border-radius: 14px;
+  background: #faf9f6;
+  color: #111 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  appearance: none;
+}
+
+.answer:hover:not(.locked) {
+  background: #f0eee9;
+  transform: translateY(-2px);
+}
+
+.answer.correct {
+  background: #e8eee8;
+  border-color: #aebbae;
+}
+
+.answer.incorrect {
+  background: #eee8e6;
+  border-color: #c4aaa4;
+}
+
+.answer.locked {
+  cursor: default;
+}
+
+/* FEEDBACK */
+.feedback {
+  display: none;
+  margin-top: 25px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.feedback.show {
+  display: block;
+}
+
+.feedback.correct-text {
+  color: #536653;
+}
+
+.feedback.incorrect-text {
+  color: #765752;
+}
+
+/* NEXT */
+.next-button {
+  display: none;
+  margin-top: 30px;
+  padding: 14px 22px;
+  background: #111;
+  border: 1px solid #111;
+  border-radius: 100px;
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.next-button.show {
+  display: inline-block;
+}
+
+.next-button:hover {
+  background: #fff;
+  color: #111 !important;
+}
+
+/* RESULT */
+.quiz-result {
+  display: none;
+  max-width: 850px;
+  padding: 70px 50px;
+  border: 1px solid #dedcd8;
+  text-align: center;
+}
+
+.quiz-result.show {
+  display: block;
+}
+
+.quiz-result-number {
+  font-size: clamp(90px, 15vw, 180px);
+  line-height: 0.8;
+  letter-spacing: -10px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.quiz-result h3 {
+  font-size: 45px;
+  letter-spacing: -3px;
+}
+
+.quiz-result p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* RETURN */
+.return {
+  text-align: center;
+}
+
+.return-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #111;
+  text-decoration: none;
+  color: #111 !important;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  padding: 45px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dedcd8;
+}
+
+footer a {
+  text-decoration: none;
+  color: #111 !important;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-right: 25px;
+}
+
+footer a:hover {
+  opacity: 0.5;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  nav {
+    padding: 18px 5%;
+  }
+
+  .links {
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 230px;
+  }
+
+  .links a {
+    font-size: 8px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 150px 8% 80px;
+  }
+
+  h1 {
+    letter-spacing: -5px;
+  }
+
+  h2 {
+    letter-spacing: -4px;
+  }
+
+  section {
+    padding: 90px 8%;
+  }
+
+  .lesson-box {
+    padding: 30px;
+  }
+
+  .types {
+    grid-template-columns: 1fr;
+  }
+
+  .question-card {
+    padding: 30px;
+  }
+
+  .question {
+    font-size: 28px;
+  }
+
+  .quiz-result {
+    padding: 50px 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="logo">
+    PRE-DERM<br>
+    SOCIETY
+  </a>
+
+  <div class="links">
+    <a href="index.html#about">ABOUT</a>
+    <a href="index.html#learn">LEARN</a>
+    <a href="index.html#impact">IMPACT</a>
+    <a href="index.html#donate">DONATE</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      SKIN SCIENCE · LESSON 02
+    </div>
+
+    <h1>
+      MOISTURIZE<br>
+      101
+    </h1>
+
+    <p class="hero-description">
+      Learn what moisturizers do, how different
+      formulas work, and how to understand
+      skincare labels through science.
+    </p>
+
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+
+  <div class="intro-content">
+
+    <div class="label">
+      01 · THE FOUNDATION
+    </div>
+
+    <h2>
+      Why does<br>
+      skin need moisture?
+    </h2>
+
+    <p class="text">
+      Your skin naturally contains water and oils that
+      help maintain its protective barrier. Environmental
+      conditions, cleansing, and other factors can affect
+      how comfortable and hydrated skin feels.
+    </p>
+
+    <p class="text">
+      Moisturizers are products designed to help support
+      the skin barrier and reduce water loss from the
+      outermost layer of skin.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- LESSON -->
+<section class="lesson">
+
+  <div class="lesson-box">
+
+    <div class="label">
+      02 · HOW MOISTURIZERS WORK
+    </div>
+
+    <h3>
+      Three ideas<br>
+      to remember.
+    </h3>
+
+    <p>
+      Moisturizers can contain different types of
+      ingredients that work in different ways.
+      Understanding these categories is more useful
+      than simply memorizing product names.
+    </p>
+
+  </div>
+
+  <div class="types">
+
+    <div class="type">
+
+      <div class="type-number">
+        01
+      </div>
+
+      <h4>
+        Humectants
+      </h4>
+
+      <p>
+        Humectants help attract and hold water.
+        Examples include ingredients such as
+        glycerin and hyaluronic acid.
+      </p>
+
+    </div>
+
+    <div class="type">
+
+      <div class="type-number">
+        02
+      </div>
+
+      <h4>
+        Emollients
+      </h4>
+
+      <p>
+        Emollients help smooth the skin surface
+        by filling spaces between skin cells.
+      </p>
+
+    </div>
+
+    <div class="type">
+
+      <div class="type-number">
+        03
+      </div>
+
+      <h4>
+        Occlusives
+      </h4>
+
+      <p>
+        Occlusives help reduce water loss by
+        forming a protective layer on the skin.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- KEY IDEA -->
+<section class="key">
+
+  <div class="key-content">
+
+    <div class="label">
+      03 · KEY IDEA
+    </div>
+
+    <h2>
+      Read the<br>
+      ingredients.
+    </h2>
+
+    <p class="text">
+      A moisturizer is more than its packaging.
+      Learning about ingredient functions can help
+      you understand what a product is designed to do.
+    </p>
+
+    <p class="text">
+      Remember: skincare is personal. A product that
+      works well for one person may not work the same
+      way for another.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+
+  <div class="quiz-header">
+
+    <div class="label">
+      04 · CHECK YOUR KNOWLEDGE
+    </div>
+
+    <h2>
+      Quick<br>
+      quiz.
+    </h2>
+
+    <p class="text">
+      Test what you learned about moisturizers
+      and their ingredients.
+    </p>
+
+  </div>
+
+  <div class="quiz-container">
+
+    <!-- QUESTION 1 -->
+
+    <div class="question-card active">
+
+      <div class="question-number">
+        QUESTION 01 · 04
+      </div>
+
+      <div class="question">
+        What is one major purpose of a moisturizer?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="true">
+          Support the skin barrier and reduce water loss
+        </button>
+
+        <button class="answer" data-correct="false">
+          Remove all bacteria from the skin
+        </button>
+
+        <button class="answer" data-correct="false">
+          Permanently change your skin type
+        </button>
+
+        <button class="answer" data-correct="false">
+          Replace sunscreen
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+    <!-- QUESTION 2 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 02 · 04
+      </div>
+
+      <div class="question">
+        Which type of ingredient helps attract and hold water?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="false">
+          Occlusives
+        </button>
+
+        <button class="answer" data-correct="true">
+          Humectants
+        </button>
+
+        <button class="answer" data-correct="false">
+          Emollients
+        </button>
+
+        <button class="answer" data-correct="false">
+          Exfoliants
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+    <!-- QUESTION 3 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 03 · 04
+      </div>
+
+      <div class="question">
+        What do occlusives primarily help with?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="true">
+          Reducing water loss from the skin
+        </button>
+
+        <button class="answer" data-correct="false">
+          Removing dead skin cells
+        </button>
+
+        <button class="answer" data-correct="false">
+          Producing collagen instantly
+        </button>
+
+        <button class="answer" data-correct="false">
+          Changing your natural skin type
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        NEXT QUESTION →
+      </button>
+
+    </div>
+
+    <!-- QUESTION 4 -->
+
+    <div class="question-card">
+
+      <div class="question-number">
+        QUESTION 04 · 04
+      </div>
+
+      <div class="question">
+        Why is learning about ingredients useful?
+      </div>
+
+      <div class="answers">
+
+        <button class="answer" data-correct="true">
+          It helps you understand what a product is designed to do
+        </button>
+
+        <button class="answer" data-correct="false">
+          It guarantees a product will work for everyone
+        </button>
+
+        <button class="answer" data-correct="false">
+          It means you never need sunscreen
+        </button>
+
+        <button class="answer" data-correct="false">
+          It permanently changes your skin
+        </button>
+
+      </div>
+
+      <div class="feedback"></div>
+
+      <button class="next-button">
+        FINISH QUIZ →
+      </button>
+
+    </div>
+
+    <!-- RESULT -->
+
+    <div class="quiz-result">
+
+      <div class="quiz-result-number">
+        <span id="score">0</span>/4
+      </div>
+
+      <h3>
+        Lesson complete.
+      </h3>
+
+      <p>
+        You completed Moisturize 101.
+        Keep exploring the science behind skincare.
+      </p>
+
+      <a
+        href="index.html#impact"
+        class="return-button"
+      >
+        VIEW OUR IMPACT →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- RETURN -->
+
+<section class="return">
+
+  <div class="label">
+    PRE-DERM SOCIETY
+  </div>
+
+  <h2>
+    Keep learning.
+  </h2>
+
+  <a
+    href="index.html"
+    class="return-button"
+  >
+    RETURN HOME →
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div>
+
+    <a
+      href="https://www.instagram.com/prederm_society/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      INSTAGRAM
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@prederm_society"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TIKTOK
+    </a>
+
+    <a href="mailto:predermsociety@gmail.com">
+      EMAIL
+    </a>
+
+  </div>
+
+  <div class="label">
+    PRE-DERM SOCIETY
+  </div>
+
+</footer>
+
+<script>
+
+const questions =
+  document.querySelectorAll(".question-card");
+
+const result =
+  document.querySelector(".quiz-result");
+
+let currentQuestion = 0;
+let score = 0;
+
+questions.forEach((questionCard) => {
+
+  const answers =
+    questionCard.querySelectorAll(".answer");
+
+  const feedback =
+    questionCard.querySelector(".feedback");
+
+  const nextButton =
+    questionCard.querySelector(".next-button");
+
+  answers.forEach(answer => {
+
+    answer.addEventListener("click", function() {
+
+      if (
+        questionCard.classList.contains("answered")
+      ) {
+        return;
+      }
+
+      questionCard.classList.add("answered");
+
+      answers.forEach(button => {
+        button.classList.add("locked");
+      });
+
+      const isCorrect =
+        this.dataset.correct === "true";
+
+      if (isCorrect) {
+
+        this.classList.add("correct");
+
+        feedback.textContent =
+          "CORRECT ✓";
+
+        feedback.classList.add(
+          "show",
+          "correct-text"
+        );
+
+        score++;
+
+      } else {
+
+        this.classList.add("incorrect");
+
+        feedback.textContent =
+          "INCORRECT";
+
+        feedback.classList.add(
+          "show",
+          "incorrect-text"
+        );
+
+        answers.forEach(button => {
+
+          if (
+            button.dataset.correct === "true"
+          ) {
+
+            button.classList.add("correct");
+
+          }
+
+        });
+
+      }
+
+      nextButton.classList.add("show");
+
+    });
+
+  });
+
+  nextButton.addEventListener("click", function() {
+
+    questionCard.classList.remove("active");
+
+    currentQuestion++;
+
+    if (
+      currentQuestion < questions.length
+    ) {
+
+      questions[
+        currentQuestion
+      ].classList.add("active");
+
+      window.scrollTo({
+        top:
+          document.querySelector(".quiz")
+            .offsetTop - 80,
+        behavior: "smooth"
+      });
+
+    } else {
+
+      document.getElementById(
+        "score"
+      ).textContent = score;
+
+      result.classList.add("show");
+
+      updateImpact();
+
+      window.scrollTo({
+        top:
+          result.offsetTop - 80,
+        behavior: "smooth"
+      });
+
+    }
+
+  });
+
+});
+
+/* IMPACT */
+
+function updateImpact() {
+
+  let peopleImpacted =
+    Number(
+      localStorage.getItem("peopleImpacted")
+    ) || 38;
+
+  let lessonsTaught =
+    Number(
+      localStorage.getItem("lessonsTaught")
+    ) || 2;
+
+  peopleImpacted++;
+  lessonsTaught++;
+
+  localStorage.setItem(
+    "peopleImpacted",
+    peopleImpacted
+  );
+
+  localStorage.setItem(
+    "lessonsTaught",
+    lessonsTaught
+  );
+
+}
+
+</script>
+
+</body>
+</html>
