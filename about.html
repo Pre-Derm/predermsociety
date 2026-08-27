@@ -16,209 +16,227 @@
 *{
 box-sizing:border-box;
 margin:0;
-padding:0
+padding:0;
 }
 
 body{
 font-family:'DM Sans',sans-serif;
 background:#fff;
 color:#171717;
-line-height:1.6
+line-height:1.6;
 }
 
 a{
 color:inherit;
-text-decoration:none
+text-decoration:none;
 }
 
 nav{
-width:100%;
-padding:24px 7%;
+padding:22px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:1px solid #eee;
-background:rgba(255,255,255,.97);
 position:sticky;
 top:0;
-z-index:100
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+z-index:10;
 }
 
 .logo{
-font-size:18px;
+font-size:16px;
 font-weight:700;
-letter-spacing:-.5px
 }
 
 .nav-links{
 display:flex;
-gap:12px;
+gap:28px;
 align-items:center;
-font-size:14px;
-font-weight:500
-}
-
-.nav-links a{
-padding:9px 15px;
-border-radius:30px
+font-size:13px;
 }
 
 .nav-links a:hover{
-background:#f6f6f6
+opacity:.5;
 }
 
 .join-btn{
-border:1px solid #171717
-}
-
-.join-btn:hover{
-background:#171717!important;
-color:#fff
+border:1px solid #171717;
+padding:9px 18px;
+border-radius:30px;
 }
 
 .hero{
-padding:110px 7% 90px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center
+padding:110px 7% 70px;
+text-align:center;
 }
 
 .eyebrow{
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#777;
-margin-bottom:20px
+margin-bottom:20px;
 }
 
 h1{
-font-size:clamp(50px,7vw,85px);
+font-size:clamp(55px,9vw,95px);
 line-height:.95;
-letter-spacing:-4px;
+letter-spacing:-5px;
 font-weight:600;
-margin-bottom:25px
 }
 
 .hero p{
+max-width:650px;
+margin:30px auto 0;
 color:#777;
-max-width:600px;
-font-size:17px
+font-size:17px;
 }
 
-.hero-image{
-width:100%;
-height:500px;
-object-fit:cover;
+/* PHOTO */
+
+.about-photo{
+padding:30px 7% 90px;
+}
+
+.photo-wrapper{
+max-width:1000px;
+margin:auto;
 border-radius:28px;
-filter:saturate(.85) blur(.4px);
-opacity:.9
+overflow:hidden;
 }
 
-section{
+.photo-wrapper img{
+width:100%;
+height:520px;
+object-fit:cover;
+display:block;
+filter:saturate(.85) contrast(.98);
+}
+
+/* ABOUT */
+
+.about-section{
 padding:90px 7%;
-border-top:1px solid #eee
+border-top:1px solid #eee;
 }
 
-.section-heading{
+.about-content{
+max-width:800px;
+}
+
+.about-content h2{
+font-size:clamp(40px,6vw,65px);
+letter-spacing:-3px;
+line-height:1;
+margin-bottom:25px;
+}
+
+.about-content p{
+color:#666;
+font-size:16px;
 max-width:700px;
-margin-bottom:50px
+margin-bottom:18px;
 }
 
-.section-heading h2{
-font-size:clamp(35px,5vw,55px);
-letter-spacing:-2px;
-line-height:1.05;
-margin-top:10px
+/* IMPACT */
+
+.impact{
+padding:90px 7%;
+border-top:1px solid #eee;
+text-align:center;
 }
 
-.section-heading p{
-color:#777;
-margin-top:15px
+.impact h2{
+font-size:clamp(40px,6vw,65px);
+letter-spacing:-3px;
+margin-bottom:55px;
 }
 
 .stats{
+max-width:850px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:18px
+gap:20px;
 }
 
 .stat{
 border:1px solid #e9e9e9;
 border-radius:24px;
-padding:50px 30px;
-text-align:center
+padding:45px 20px;
 }
 
-.stat-number{
-font-size:clamp(60px,9vw,100px);
+.number{
+font-size:clamp(55px,9vw,90px);
 font-weight:600;
-letter-spacing:-5px;
-line-height:1
+line-height:1;
+letter-spacing:-4px;
 }
 
-.stat-label{
-margin-top:15px;
+.label{
 font-size:12px;
 letter-spacing:2px;
 text-transform:uppercase;
-color:#888
+color:#777;
+margin-top:15px;
 }
+
+/* MISSION */
 
 .mission{
+padding:100px 7%;
 background:#f8f8f8;
-border-radius:30px;
-margin:30px 7%;
-border-top:none
 }
 
-.mission-content{
-max-width:850px
+.mission-inner{
+max-width:850px;
+margin:auto;
+text-align:center;
 }
 
 .mission h2{
 font-size:clamp(40px,6vw,65px);
 letter-spacing:-3px;
 line-height:1;
-margin-bottom:25px
+margin-bottom:25px;
 }
 
 .mission p{
 color:#777;
-max-width:700px;
-font-size:16px
+font-size:16px;
 }
 
+/* FOOTER */
+
 footer{
+border-top:1px solid #eee;
+padding:30px 7%;
 text-align:center;
 font-size:12px;
 color:#999;
-padding:25px;
-border-top:1px solid #eee
 }
 
 @media(max-width:800px){
 
-.hero{
-grid-template-columns:1fr;
-gap:40px
+.nav-links{
+gap:12px;
 }
 
-.hero-image{
-height:350px
+.nav-links a:not(.join-btn){
+display:none;
+}
+
+.photo-wrapper img{
+height:350px;
 }
 
 .stats{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
-.nav-links{
-gap:4px
-}
-
-.nav-links a{
-font-size:11px;
-padding:8px 9px
+h1{
+letter-spacing:-3px;
 }
 
 }
@@ -236,25 +254,11 @@ Pre-Derm Society
 
 <div class="nav-links">
 
-<a href="index.html">
-Home
-</a>
-
-<a href="learn.html">
-Learn
-</a>
-
-<a href="opportunities.html">
-Opportunities
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="join.html" class="join-btn">
-Join Now
-</a>
+<a href="index.html">Home</a>
+<a href="learn.html">Learn</a>
+<a href="opportunities.html">Opportunities</a>
+<a href="about.html">About</a>
+<a href="join.html" class="join-btn">Join Now</a>
 
 </div>
 
@@ -263,69 +267,79 @@ Join Now
 
 <header class="hero">
 
-<div>
-
 <div class="eyebrow">
-About Pre-Derm Society
+Pre-Derm Society • About Us
 </div>
 
 <h1>
-Medicine starts<br>
-with curiosity.
+Why we<br>
+started.
 </h1>
 
 <p>
-Pre-Derm Society is a student-led educational community
-created to make dermatology, medicine, skincare, science,
-and healthcare easier for students to explore.
+A student-led community making dermatology,
+medicine, science, and healthcare easier to explore.
 </p>
-
-</div>
-
-
-<img
-src="IMG_5145.jpeg"
-alt="Pre-Derm Society"
-class="hero-image"
->
 
 </header>
 
 
-<section>
+<section class="about-photo">
 
-<div class="section-heading">
+<div class="photo-wrapper">
+
+<img src="IMG_5145.jpeg" alt="Pre-Derm Society">
+
+</div>
+
+</section>
+
+
+<section class="about-section">
+
+<div class="about-content">
 
 <div class="eyebrow">
-Our Impact
+Our Mission
 </div>
 
 <h2>
-Learning can<br>
-create impact.
+Medicine should<br>
+start with curiosity.
 </h2>
 
 <p>
-Every lesson represents an opportunity to make science
-and healthcare education more accessible to students.
+Pre-Derm Society was created to give students a
+welcoming place to explore dermatology, skincare,
+medicine, research, and healthcare.
+</p>
+
+<p>
+Through educational lessons, research resources,
+and opportunities, we want to make science and
+medicine feel more accessible to students.
 </p>
 
 </div>
 
+</section>
+
+
+<section class="impact">
+
+<h2>
+Our impact
+</h2>
 
 <div class="stats">
 
 <div class="stat">
 
-<div
-class="stat-number"
-data-target="100"
-data-plus="true"
->
-0
+<div class="number">
+<span class="counter" data-target="100">0</span>+
 </div>
 
-<div class="stat-label">
+<div class="label">
 People Reached
 </div>
 
@@ -334,14 +348,11 @@ People Reached
 
 <div class="stat">
 
-<div
-class="stat-number"
-data-target="38"
->
-0
+<div class="number">
+<span class="counter" data-target="38">0</span>
 </div>
 
-<div class="stat-label">
+<div class="label">
 Lessons Taught
 </div>
 
@@ -354,21 +365,20 @@ Lessons Taught
 
 <section class="mission">
 
-<div class="mission-content">
+<div class="mission-inner">
 
 <div class="eyebrow">
-Our Mission
+What We Believe
 </div>
 
 <h2>
-Make medicine<br>
-feel possible.
+Learn. Explore. Make an impact.
 </h2>
 
 <p>
-We believe students should have opportunities to ask questions,
-learn about science, discover healthcare careers, explore research,
-and understand their skin through reliable educational information.
+We believe students don't have to wait until medical
+school to start asking questions about medicine.
+Curiosity is where it begins.
 </p>
 
 </div>
@@ -377,46 +387,56 @@ and understand their skin through reliable educational information.
 
 
 <footer>
-© 2026 Pre-Derm Society · Student-led education
+
+© 2026 Pre-Derm Society
+
 </footer>
 
 
 <script>
 
-function animateNumbers(){
+const counters =
+document.querySelectorAll(".counter");
 
-const numbers=document.querySelectorAll(".stat-number");
+counters.forEach(counter => {
 
-numbers.forEach(number=>{
+const target =
+Number(counter.dataset.target);
 
-const target=parseInt(number.dataset.target);
-const plus=number.dataset.plus==="true";
+const duration = 1400;
 
-let current=0;
+const start =
+performance.now();
 
-const duration=1200;
-const increment=Math.max(1,Math.ceil(target/60));
+function update(time){
 
-const timer=setInterval(()=>{
+const progress =
+Math.min(
+(time - start) / duration,
+1
+);
 
-current+=increment;
+const eased =
+1 - Math.pow(1 - progress, 3);
 
-if(current>=target){
+counter.textContent =
+Math.floor(target * eased);
 
-current=target;
-clearInterval(timer);
+if(progress < 1){
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.textContent = target;
 
 }
 
-number.textContent=current+(plus ? "+" : "");
+}
 
-},duration/60);
+requestAnimationFrame(update);
 
 });
-
-}
-
-window.addEventListener("load",animateNumbers);
 
 </script>
 
