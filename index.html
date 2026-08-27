@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pre-Derm Society | Dermatology Education & Opportunities</title>
+  <title>Pre-Derm Society</title>
 
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,493 +15,530 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <a href="index.html" class="logo">
-      <span>PRE-DERM</span>
-      <small>SOCIETY</small>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    <span>PRE-DERM</span>
+    <small>SOCIETY</small>
+  </a>
+
+  <nav class="nav-links">
+
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <button class="drop-button">
+        About <span>⌄</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="#mission">Our Mission</a>
+        <a href="#impact">Our Impact</a>
+        <a href="#community">Our Community</a>
+      </div>
+    </div>
+
+    <a href="#opportunities">Opportunities</a>
+
+    <div class="dropdown">
+      <button class="drop-button">
+        Learn <span>⌄</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="skin101.html">Skin 101</a>
+        <a href="#resources">Resources</a>
+      </div>
+    </div>
+
+    <a href="#impact">Impact</a>
+
+    <a href="#join" class="join-button">
+      Join
     </a>
 
-    <nav class="nav-links">
+  </nav>
 
-      <a href="index.html">Home</a>
+  <button class="mobile-menu" id="mobileMenu">
+    ☰
+  </button>
 
-      <div class="dropdown">
-        <button class="drop-button">About <span>⌄</span></button>
-
-        <div class="dropdown-menu">
-          <a href="#about">Our Mission</a>
-          <a href="#impact">Our Impact</a>
-          <a href="#team">Our Community</a>
-        </div>
-      </div>
-
-      <a href="#opportunities">Opportunities</a>
-
-      <div class="dropdown">
-        <button class="drop-button">Learn <span>⌄</span></button>
-
-        <div class="dropdown-menu">
-          <a href="skin101.html">Skin 101</a>
-          <a href="#resources">Resources</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-
-      <a href="#impact">Impact</a>
-
-      <a href="#join" class="nav-join">Join</a>
-
-    </nav>
-
-    <button class="mobile-menu" id="mobileMenu">☰</button>
-  </header>
+</header>
 
 
-  <!-- HERO -->
-  <main>
+<!-- ================= HERO ================= -->
 
-    <section class="hero">
+<main>
 
-      <div class="hero-text">
+<section class="hero">
 
-        <p class="eyebrow">PRE-DERM SOCIETY</p>
+  <div class="hero-left">
 
-        <h1>
-          Learn about skin.
-          <br>
-          <em>Build your future.</em>
-        </h1>
+    <p class="eyebrow">
+      PRE-DERM SOCIETY
+    </p>
 
-        <p class="hero-description">
-          A student-led dermatology education community helping
-          students explore skincare, medicine, research, and
-          opportunities in dermatology.
-        </p>
+    <h1>
+      Discover skin.
+      <br>
+      <span>Discover your future.</span>
+    </h1>
 
-        <div class="hero-buttons">
-          <a href="#opportunities" class="button primary">
-            Explore Opportunities
-          </a>
+    <p class="hero-description">
+      A student-led community making dermatology,
+      skincare science, research, and medical
+      opportunities easier to explore.
+    </p>
 
-          <a href="#about" class="button secondary">
-            About Us
-          </a>
-        </div>
+    <div class="hero-buttons">
 
-      </div>
+      <a href="#opportunities" class="button dark">
+        Explore Opportunities
+      </a>
 
-      <div class="hero-image">
-        <img src="images/hero-skin.jpg" alt="Dermatology and skincare">
-      </div>
+      <a href="#mission" class="button outline">
+        About Us
+      </a>
 
-    </section>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <!-- QUICK INTRO -->
-    <section class="intro" id="about">
+<!-- ================= MISSION ================= -->
 
-      <p class="eyebrow">ABOUT PRE-DERM</p>
+<section class="mission" id="mission">
 
-      <h2>
-        Making dermatology
-        <br>
-        <span>more accessible.</span>
-      </h2>
+  <p class="eyebrow">
+    WHY WE EXIST
+  </p>
 
-      <p class="intro-text">
-        Pre-Derm Society was created to make dermatology education,
-        opportunities, and mentorship easier for students to discover.
-        Whether you're curious about medicine or already interested in
-        dermatology, there's something here for you.
+  <h2>
+    Dermatology education
+    <br>
+    should be <span>accessible.</span>
+  </h2>
+
+  <p class="mission-text">
+    Pre-Derm Society helps students learn about skin health,
+    explore dermatology, discover opportunities, and connect
+    with a growing community of future healthcare professionals.
+  </p>
+
+</section>
+
+
+<!-- ================= THREE AREAS ================= -->
+
+<section class="three-cards">
+
+  <article class="info-card">
+
+    <span class="number">01</span>
+
+    <h3>Learn</h3>
+
+    <p>
+      Understand the science behind skin,
+      skincare, acne, sunscreen, and more.
+    </p>
+
+    <a href="skin101.html">
+      Explore Skin 101 →
+    </a>
+
+  </article>
+
+
+  <article class="info-card">
+
+    <span class="number">02</span>
+
+    <h3>Explore</h3>
+
+    <p>
+      Find research, internships, volunteering,
+      shadowing, and other student opportunities.
+    </p>
+
+    <a href="#opportunities">
+      Find opportunities →
+    </a>
+
+  </article>
+
+
+  <article class="info-card">
+
+    <span class="number">03</span>
+
+    <h3>Connect</h3>
+
+    <p>
+      Build connections with students,
+      educators, researchers, and mentors.
+    </p>
+
+    <a href="#join">
+      Join the community →
+    </a>
+
+  </article>
+
+</section>
+
+
+<!-- ================= OPPORTUNITIES ================= -->
+
+<section class="opportunities" id="opportunities">
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="eyebrow">
+        EXPLORE
       </p>
 
-    </section>
-
-
-    <!-- THREE FEATURE CARDS -->
-    <section class="feature-section">
-
-      <div class="feature-card">
-        <div class="feature-image">
-          <img src="images/learning.jpg" alt="Students learning">
-        </div>
-
-        <div class="feature-content">
-          <p class="card-number">01</p>
-          <h3>Learn</h3>
-
-          <p>
-            Explore beginner-friendly dermatology lessons,
-            skincare science, and Mini Skin 101.
-          </p>
-
-          <a href="skin101.html" class="text-link">
-            Start Skin 101 →
-          </a>
-        </div>
-      </div>
-
-
-      <div class="feature-card">
-        <div class="feature-image">
-          <img src="images/opportunities.jpg" alt="Students exploring opportunities">
-        </div>
-
-        <div class="feature-content">
-          <p class="card-number">02</p>
-          <h3>Explore</h3>
-
-          <p>
-            Discover research, internships, volunteering,
-            shadowing, and student opportunities.
-          </p>
-
-          <a href="#opportunities" class="text-link">
-            Find opportunities →
-          </a>
-        </div>
-      </div>
-
-
-      <div class="feature-card">
-        <div class="feature-image">
-          <img src="images/community.jpg" alt="Student community">
-        </div>
-
-        <div class="feature-content">
-          <p class="card-number">03</p>
-          <h3>Connect</h3>
-
-          <p>
-            Meet students, mentors, educators, and people
-            interested in the future of dermatology.
-          </p>
-
-          <a href="#join" class="text-link">
-            Join the community →
-          </a>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- OPPORTUNITIES -->
-    <section class="opportunities-section" id="opportunities">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="eyebrow">EXPLORE</p>
-
-          <h2>
-            Opportunities
-            <br>
-            <span>worth discovering.</span>
-          </h2>
-        </div>
-
-        <p>
-          Find ways to learn outside the classroom and
-          start building experience early.
-        </p>
-
-      </div>
-
-
-      <div class="opportunity-grid">
-
-        <a href="#research" class="opportunity-card">
-          <span class="opportunity-icon">01</span>
-          <h3>Research</h3>
-          <p>
-            Explore dermatology and medical research
-            opportunities for students.
-          </p>
-          <span class="arrow">→</span>
-        </a>
-
-
-        <a href="#internships" class="opportunity-card">
-          <span class="opportunity-icon">02</span>
-          <h3>Internships</h3>
-          <p>
-            Discover experiences that can help you
-            explore healthcare and medicine.
-          </p>
-          <span class="arrow">→</span>
-        </a>
-
-
-        <a href="#volunteering" class="opportunity-card">
-          <span class="opportunity-icon">03</span>
-          <h3>Volunteering</h3>
-          <p>
-            Find ways to serve your community through
-            health and education.
-          </p>
-          <span class="arrow">→</span>
-        </a>
-
-
-        <a href="#mentorship" class="opportunity-card">
-          <span class="opportunity-icon">04</span>
-          <h3>Mentorship</h3>
-          <p>
-            Learn from students and professionals
-            interested in dermatology.
-          </p>
-          <span class="arrow">→</span>
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- LEARN & GROW -->
-    <section class="learn-section" id="resources">
-
-      <div class="learn-image">
-        <img src="images/skin-education.jpg" alt="Skin education">
-      </div>
-
-      <div class="learn-content">
-
-        <p class="eyebrow">LEARN & GROW</p>
-
-        <h2>
-          Your skin.
-          <br>
-          Your science.
-          <br>
-          <span>Your future.</span>
-        </h2>
-
-        <p>
-          From understanding acne and sunscreen to exploring
-          dermatology as a career, our educational resources
-          are designed to make complicated science easier to understand.
-        </p>
-
-        <a href="skin101.html" class="button primary">
-          Explore Skin 101
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- IMPACT -->
-    <section class="impact-section" id="impact">
-
-      <div class="impact-content">
-
-        <p class="eyebrow">OUR IMPACT</p>
-
-        <h2>
-          Education can
-          <br>
-          <span>create change.</span>
-        </h2>
-
-        <p>
-          Pre-Derm Society aims to bring dermatology education
-          beyond our website and into schools and communities.
-        </p>
-
-      </div>
-
-
-      <div class="impact-stats">
-
-        <div>
-          <strong>01</strong>
-          <span>Student education</span>
-        </div>
-
-        <div>
-          <strong>02</strong>
-          <span>Community outreach</span>
-        </div>
-
-        <div>
-          <strong>03</strong>
-          <span>Future physicians</span>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- COMMUNITY -->
-    <section class="community-section" id="team">
-
-      <div class="community-text">
-
-        <p class="eyebrow">CONNECT & GET INSPIRED</p>
-
-        <h2>
-          Find your place
-          <br>
-          in the community.
-        </h2>
-
-        <p>
-          Connect with students who are curious about
-          dermatology, medicine, science, and healthcare.
-        </p>
-
-        <a href="#join" class="button secondary">
-          Join Pre-Derm Society
-        </a>
-
-      </div>
-
-      <div class="community-image">
-        <img src="images/community-main.jpg" alt="Pre-Derm Society community">
-      </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-
-      <p class="eyebrow">QUESTIONS</p>
-
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-list">
-
-        <details>
-          <summary>Who can join Pre-Derm Society?</summary>
-          <p>
-            Students interested in dermatology, skincare science,
-            medicine, research, or healthcare are welcome.
-          </p>
-        </details>
-
-        <details>
-          <summary>Do I need to want to become a dermatologist?</summary>
-          <p>
-            No. You can explore dermatology simply because you're
-            interested in skin science and healthcare.
-          </p>
-        </details>
-
-        <details>
-          <summary>Where can I learn about dermatology?</summary>
-          <p>
-            Start with our Skin 101 lessons and explore our
-            student resources.
-          </p>
-        </details>
-
-      </div>
-
-    </section>
-
-
-    <!-- JOIN -->
-    <section class="join-section" id="join">
-
-      <p class="eyebrow">JOIN US</p>
-
       <h2>
-        Interested in
+        Opportunities
         <br>
-        <span>dermatology?</span>
+        <span>for your future.</span>
       </h2>
+
+    </div>
+
+    <p>
+      Start exploring the experiences that can
+      help you learn more about medicine and
+      dermatology.
+    </p>
+
+  </div>
+
+
+  <div class="opportunity-grid">
+
+    <a href="#research" class="opportunity">
+
+      <span>01</span>
+
+      <h3>Research</h3>
 
       <p>
-        Follow Pre-Derm Society and stay connected
-        with new lessons, opportunities, and projects.
+        Explore research and science opportunities.
       </p>
 
-      <div class="join-buttons">
+      <b>→</b>
 
-        <a
-          href="https://www.instagram.com/prederm_society/"
-          target="_blank"
-          class="button primary"
-        >
-          Instagram
-        </a>
+    </a>
 
-        <a
-          href="https://www.tiktok.com/@prederm_society"
-          target="_blank"
-          class="button secondary"
-        >
-          TikTok
-        </a>
 
+    <a href="#internships" class="opportunity">
+
+      <span>02</span>
+
+      <h3>Internships</h3>
+
+      <p>
+        Discover healthcare and medical experiences.
+      </p>
+
+      <b>→</b>
+
+    </a>
+
+
+    <a href="#volunteering" class="opportunity">
+
+      <span>03</span>
+
+      <h3>Volunteering</h3>
+
+      <p>
+        Find meaningful ways to serve your community.
+      </p>
+
+      <b>→</b>
+
+    </a>
+
+
+    <a href="#mentorship" class="opportunity">
+
+      <span>04</span>
+
+      <h3>Mentorship</h3>
+
+      <p>
+        Learn from people already exploring medicine.
+      </p>
+
+      <b>→</b>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LEARN ================= -->
+
+<section class="learn" id="resources">
+
+  <div class="learn-text">
+
+    <p class="eyebrow">
+      LEARN & GROW
+    </p>
+
+    <h2>
+      Start with
+      <br>
+      <span>Skin 101.</span>
+    </h2>
+
+    <p>
+      Beginner-friendly lessons designed to make
+      dermatology and skin science easier to understand.
+    </p>
+
+    <a href="skin101.html" class="button dark">
+      Start Skin 101
+    </a>
+
+  </div>
+
+  <div class="learn-shape">
+    <div class="circle-text">
+      SKIN • SCIENCE • FUTURE •
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ================= IMPACT ================= -->
+
+<section class="impact" id="impact">
+
+  <div>
+
+    <p class="eyebrow">
+      OUR IMPACT
+    </p>
+
+    <h2>
+      Learn something.
+      <br>
+      <span>Share something.</span>
+    </h2>
+
+  </div>
+
+  <div class="impact-copy">
+
+    <p>
+      Our goal is to bring accessible skin-health
+      education into schools and communities while
+      helping students discover the world of dermatology.
+    </p>
+
+    <div class="impact-list">
+
+      <div>
+        <strong>01</strong>
+        <span>Student education</span>
       </div>
 
-    </section>
-
-
-    <!-- RESTORED LOOPING IMAGE STRIP -->
-    <section class="image-loop-section">
-
-      <div class="image-loop">
-
-        <div class="image-track">
-
-          <img src="images/loop1.jpg" alt="">
-          <img src="images/loop2.jpg" alt="">
-          <img src="images/loop3.jpg" alt="">
-          <img src="images/loop4.jpg" alt="">
-          <img src="images/loop5.jpg" alt="">
-          <img src="images/loop6.jpg" alt="">
-
-          <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
-
-          <img src="images/loop1.jpg" alt="">
-          <img src="images/loop2.jpg" alt="">
-          <img src="images/loop3.jpg" alt="">
-          <img src="images/loop4.jpg" alt="">
-          <img src="images/loop5.jpg" alt="">
-          <img src="images/loop6.jpg" alt="">
-
-        </div>
-
+      <div>
+        <strong>02</strong>
+        <span>Community outreach</span>
       </div>
 
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-top">
-
-      <div class="footer-brand">
-
-        <a href="index.html" class="logo">
-          <span>PRE-DERM</span>
-          <small>SOCIETY</small>
-        </a>
-
-        <p>
-          Making dermatology education more accessible
-          to the next generation.
-        </p>
-
+      <div>
+        <strong>03</strong>
+        <span>Future healthcare leaders</span>
       </div>
 
+    </div>
 
-      <div class="footer-column">
+  </div>
 
+</section>
+
+
+<!-- ================= COMMUNITY ================= -->
+
+<section class="community" id="community">
+
+  <p class="eyebrow">
+    THE COMMUNITY
+  </p>
+
+  <h2>
+    Curious about
+    <br>
+    <span>dermatology?</span>
+  </h2>
+
+  <p>
+    You're in the right place.
+  </p>
+
+  <a href="#join" class="button outline">
+    Join Pre-Derm Society
+  </a>
+
+</section>
+
+
+<!-- ================= JOIN ================= -->
+
+<section class="join" id="join">
+
+  <p class="eyebrow">
+    STAY CONNECTED
+  </p>
+
+  <h2>
+    Be part of
+    <br>
+    <span>what comes next.</span>
+  </h2>
+
+  <p>
+    Follow Pre-Derm Society for new lessons,
+    opportunities, projects, and updates.
+  </p>
+
+  <div class="social-buttons">
+
+    <a
+      href="https://www.instagram.com/prederm_society/"
+      target="_blank"
+      class="button dark"
+    >
+      Instagram
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@prederm_society"
+      target="_blank"
+      class="button outline"
+    >
+      TikTok
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!--             BOTTOM MOVING PHOTO STRIP             -->
+<!-- ================================================= -->
+
+<section class="photo-strip">
+
+  <div class="photo-track">
+
+    <!-- FIRST SET -->
+
+    <div class="photo">
+      <img src="IMG_5085.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5125.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5126.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_8766.jpg" alt="">
+    </div>
+
+
+    <!-- SECOND SET -->
+    <!-- DUPLICATED SO THE LOOP NEVER HAS A GAP -->
+
+    <div class="photo">
+      <img src="IMG_5085.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5125.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5126.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_8766.jpg" alt="">
+    </div>
+
+
+    <!-- THIRD SET -->
+
+    <div class="photo">
+      <img src="IMG_5085.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5125.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_5126.jpg" alt="">
+    </div>
+
+    <div class="photo">
+      <img src="IMG_8766.jpg" alt="">
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+
+      <a href="index.html" class="logo footer-logo">
+        <span>PRE-DERM</span>
+        <small>SOCIETY</small>
+      </a>
+
+      <p>
+        Making dermatology education
+        more accessible.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <div>
         <h4>Explore</h4>
 
-        <a href="#about">About</a>
+        <a href="#mission">About</a>
         <a href="#opportunities">Opportunities</a>
         <a href="skin101.html">Skin 101</a>
         <a href="#impact">Impact</a>
@@ -508,8 +546,7 @@
       </div>
 
 
-      <div class="footer-column">
-
+      <div>
         <h4>Connect</h4>
 
         <a
@@ -526,36 +563,33 @@
           TikTok
         </a>
 
-        <a href="#join">Join Us</a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>Contact</h4>
-
-        <a href="mailto:predermsociety@gmail.com">
-          Email Us
+        <a href="#join">
+          Join
         </a>
 
       </div>
 
     </div>
 
-
-    <div class="footer-bottom">
-
-      <span>© 2026 Pre-Derm Society</span>
-
-      <span>Student-led dermatology education</span>
-
-    </div>
-
-  </footer>
+  </div>
 
 
-  <script src="script.js"></script>
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 Pre-Derm Society
+    </span>
+
+    <span>
+      Student-led dermatology education
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
