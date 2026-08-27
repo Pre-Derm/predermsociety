@@ -1,950 +1,8 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Skin 101 · Pre-Derm Society</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0
-}
-
-html{
-scroll-behavior:smooth
-}
-
-body{
-font-family:'DM Sans',sans-serif;
-background:#fff;
-color:#171717;
-line-height:1.6
-}
-
-a{
-color:inherit;
-text-decoration:none
-}
-
-
-/* NAV */
-
-nav{
-width:100%;
-padding:24px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #eee;
-background:rgba(255,255,255,.97);
-position:sticky;
-top:0;
-z-index:100
-}
-
-.logo{
-font-size:18px;
-font-weight:700;
-letter-spacing:-.5px
-}
-
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
-font-size:14px;
-font-weight:500
-}
-
-.nav-links a:hover{
-opacity:.55
-}
-
-.join-btn{
-border:1px solid #171717;
-padding:9px 18px;
-border-radius:30px
-}
-
-.join-btn:hover{
-background:#171717;
-color:#fff;
-opacity:1!important
-}
-
-
-/* HERO */
-
-.hero{
-min-height:75vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:90px 7%
-}
-
-.hero-content{
-max-width:850px
-}
-
-.eyebrow{
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#777;
-margin-bottom:20px
-}
-
-h1{
-font-size:clamp(52px,8vw,88px);
-line-height:.98;
-letter-spacing:-4px;
-font-weight:600;
-margin-bottom:28px
-}
-
-.hero-description{
-max-width:650px;
-margin:0 auto;
-color:#666;
-font-size:17px;
-line-height:1.7
-}
-
-
-/* GENERAL */
-
-section{
-padding:90px 7%;
-border-top:1px solid #eee
-}
-
-.label{
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#888;
-margin-bottom:18px
-}
-
-h2{
-font-size:clamp(36px,5vw,55px);
-line-height:1.05;
-letter-spacing:-2px;
-font-weight:600;
-margin-bottom:25px
-}
-
-h3{
-font-size:32px;
-line-height:1.1;
-letter-spacing:-1px;
-font-weight:600;
-margin-bottom:20px
-}
-
-.text{
-max-width:650px;
-color:#777;
-line-height:1.8;
-font-size:15px;
-margin-bottom:18px
-}
-
-
-/* INTRO */
-
-.intro{
-min-height:65vh;
-display:flex;
-align-items:center
-}
-
-.intro-content{
-max-width:850px
-}
-
-
-/* LESSON */
-
-.lesson{
-background:#f8f8f8
-}
-
-.lesson-intro{
-max-width:800px;
-margin-bottom:50px
-}
-
-.layers{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.layer{
-border:1px solid #e9e9e9;
-border-radius:22px;
-padding:30px;
-min-height:260px;
-background:#fff;
-transition:.25s
-}
-
-.layer:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(0,0,0,.06)
-}
-
-.layer-number{
-font-size:11px;
-color:#999;
-letter-spacing:1px
-}
-
-.layer h4{
-font-size:28px;
-font-weight:600;
-letter-spacing:-1px;
-margin:40px 0 15px
-}
-
-.layer p{
-color:#777;
-line-height:1.7;
-font-size:14px
-}
-
-
-/* KEY IDEA */
-
-.key{
-background:#f8f8f8
-}
-
-.key-content{
-max-width:850px
-}
-
-
-/* QUIZ */
-
-.quiz{
-background:#fff
-}
-
-.quiz-header{
-max-width:800px
-}
-
-.quiz-container{
-max-width:850px;
-margin-top:50px
-}
-
-.question-card{
-display:none;
-border:1px solid #e9e9e9;
-border-radius:22px;
-padding:40px;
-background:#fff;
-box-shadow:0 10px 35px rgba(0,0,0,.035)
-}
-
-.question-card.active{
-display:block
-}
-
-.question-number{
-font-size:11px;
-letter-spacing:2px;
-color:#999;
-margin-bottom:20px
-}
-
-.question{
-font-size:28px;
-line-height:1.15;
-letter-spacing:-1px;
-font-weight:600;
-margin-bottom:30px
-}
-
-
-/* ANSWERS */
-
-.answers{
-display:flex;
-flex-direction:column;
-gap:12px
-}
-
-.answer{
-width:100%;
-padding:16px 20px;
-border:1px solid #ddd;
-border-radius:14px;
-background:#fff;
-color:#171717!important;
-font-family:'DM Sans',sans-serif;
-font-size:14px;
-font-weight:500;
-text-align:left;
-cursor:pointer;
-transition:.2s;
-appearance:none
-}
-
-.answer:hover:not(.locked){
-background:#f7f7f7;
-transform:translateY(-2px)
-}
-
-.answer.correct{
-background:#eef3ee;
-border-color:#b8c8b8
-}
-
-.answer.incorrect{
-background:#f4eeee;
-border-color:#d0baba
-}
-
-.answer.locked{
-cursor:default
-}
-
-.answer.locked:not(.correct):not(.incorrect){
-opacity:.5
-}
-
-
-/* FEEDBACK */
-
-.feedback{
-display:none;
-margin-top:20px;
-font-size:12px;
-letter-spacing:1.5px;
-font-weight:700
-}
-
-.feedback.show{
-display:block
-}
-
-.feedback.correct-text{
-color:#526653
-}
-
-.feedback.incorrect-text{
-color:#765752
-}
-
-
-/* NEXT */
-
-.next-button{
-display:none;
-margin-top:25px;
-padding:13px 22px;
-background:#171717;
-border:1px solid #171717;
-border-radius:30px;
-color:#fff!important;
-font-family:'DM Sans',sans-serif;
-font-size:12px;
-font-weight:600;
-cursor:pointer
-}
-
-.next-button.show{
-display:inline-block
-}
-
-.next-button:hover{
-background:#fff;
-color:#171717!important
-}
-
-
-/* RESULT */
-
-.quiz-result{
-display:none;
-max-width:850px;
-padding:55px 40px;
-border:1px solid #e9e9e9;
-border-radius:22px;
-text-align:center;
-background:#fff
-}
-
-.quiz-result.show{
-display:block
-}
-
-.quiz-result-number{
-font-size:clamp(70px,12vw,140px);
-line-height:.85;
-letter-spacing:-7px;
-font-weight:600;
-margin-bottom:30px
-}
-
-.quiz-result h3{
-font-size:36px;
-letter-spacing:-1.5px
-}
-
-.quiz-result p{
-color:#777;
-line-height:1.7;
-max-width:550px;
-margin:0 auto
-}
-
-
-/* RETURN */
-
-.return{
-text-align:center
-}
-
-.return-button{
-display:inline-block;
-margin-top:20px;
-border:1px solid #171717;
-border-radius:30px;
-padding:12px 20px;
-font-size:13px;
-font-weight:600
-}
-
-.return-button:hover{
-background:#171717;
-color:#fff
-}
-
-
-/* FOOTER */
-
-footer{
-text-align:center;
-font-size:12px;
-color:#999;
-padding:25px;
-border-top:1px solid #eee
-}
-
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-.layers{
-grid-template-columns:1fr
-}
-
-.nav-links{
-gap:12px
-}
-
-.nav-links a:not(.join-btn){
-display:none
-}
-
-.question-card{
-padding:30px
-}
-
-.question{
-font-size:24px
-}
-
-h1{
-letter-spacing:-2.5px
-}
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<a href="index.html" class="logo">
-Pre-Derm Society
-</a>
-
-<div class="nav-links">
-
-<a href="index.html#lessons">
-Learn
-</a>
-
-<a href="index.html#resources">
-Resources
-</a>
-
-<a href="index.html#trusted">
-Health
-</a>
-
-<a href="index.html#contact">
-Contact
-</a>
-
-<a href="join.html" class="join-btn">
-Join Now
-</a>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
-<div class="hero-content">
-
-<div class="eyebrow">
-Skin Science • Lesson 01
-</div>
-
-<h1>
-Skin 101
-</h1>
-
-<p class="hero-description">
-A simple introduction to the science of skin,
-created to make dermatology easier to understand,
-explore, and share.
-</p>
-
-</div>
-
-</header>
-
-
-<!-- INTRO -->
-
-<section class="intro">
-
-<div class="intro-content">
-
-<div class="label">
-01 — The Foundation
-</div>
-
-<h2>
-Start with<br>
-the skin.
-</h2>
-
-<p class="text">
-Your skin is the body's largest organ. It protects
-what is underneath, helps regulate temperature,
-and allows you to sense the world around you.
-</p>
-
-<p class="text">
-Before learning about acne, treatments, or
-dermatology, it helps to understand how healthy
-skin is structured.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- LESSON -->
-
-<section class="lesson">
-
-<div class="lesson-intro">
-
-<div class="label">
-02 — Skin Science
-</div>
-
-<h2>
-Three layers.<br>
-One system.
-</h2>
-
-<p class="text">
-Skin is organized into three major layers.
-Each has a different job, but they work together
-to protect and support your body.
-</p>
-
-</div>
-
-
-<div class="layers">
-
-
-<div class="layer">
-
-<div class="layer-number">
-01
-</div>
-
-<h4>
-Epidermis
-</h4>
-
-<p>
-The outermost layer of the skin. It acts as
-a protective barrier and contains cells that
-help protect the body from the environment.
-</p>
-
-</div>
-
-
-<div class="layer">
-
-<div class="layer-number">
-02
-</div>
-
-<h4>
-Dermis
-</h4>
-
-<p>
-The middle layer. It contains structures such
-as blood vessels, nerves, sweat glands, and
-hair follicles.
-</p>
-
-</div>
-
-
-<div class="layer">
-
-<div class="layer-number">
-03
-</div>
-
-<h4>
-Hypodermis
-</h4>
-
-<p>
-The deepest layer. It contains connective
-tissue and fat that help cushion the body
-and provide insulation.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- KEY IDEA -->
-
-<section class="key">
-
-<div class="key-content">
-
-<div class="label">
-03 — Key Idea
-</div>
-
-<h2>
-Healthy skin<br>
-is a barrier.
-</h2>
-
-<p class="text">
-One of the skin's most important jobs is creating
-a barrier between your body and the outside world.
-That barrier helps keep useful substances in while
-helping protect the body from environmental factors.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- QUIZ -->
-
-<section class="quiz" id="quiz">
-
-<div class="quiz-header">
-
-<div class="label">
-04 — Check Your Knowledge
-</div>
-
-<h2>
-Quick quiz.
-</h2>
-
-<p class="text">
-Test what you learned. Choose an answer to
-see whether you got it right.
-</p>
-
-</div>
-
-
-<div class="quiz-container">
-
-
-<!-- QUESTION 1 -->
-
-<div class="question-card active">
-
-<div class="question-number">
-QUESTION 01 · 04
-</div>
-
-<div class="question">
-Which layer is the outermost layer of skin?
-</div>
-
-<div class="answers">
-
-<button class="answer" data-correct="true">
-Epidermis
-</button>
-
-<button class="answer" data-correct="false">
-Dermis
-</button>
-
-<button class="answer" data-correct="false">
-Hypodermis
-</button>
-
-<button class="answer" data-correct="false">
-Muscle
-</button>
-
-</div>
-
-<div class="feedback"></div>
-
-<button class="next-button">
-NEXT QUESTION →
-</button>
-
-</div>
-
-
-<!-- QUESTION 2 -->
-
-<div class="question-card">
-
-<div class="question-number">
-QUESTION 02 · 04
-</div>
-
-<div class="question">
-Which layer contains blood vessels, nerves, and hair follicles?
-</div>
-
-<div class="answers">
-
-<button class="answer" data-correct="false">
-Epidermis
-</button>
-
-<button class="answer" data-correct="true">
-Dermis
-</button>
-
-<button class="answer" data-correct="false">
-Hypodermis
-</button>
-
-<button class="answer" data-correct="false">
-Surface layer
-</button>
-
-</div>
-
-<div class="feedback"></div>
-
-<button class="next-button">
-NEXT QUESTION →
-</button>
-
-</div>
-
-
-<!-- QUESTION 3 -->
-
-<div class="question-card">
-
-<div class="question-number">
-QUESTION 03 · 04
-</div>
-
-<div class="question">
-What is one major job of the skin?
-</div>
-
-<div class="answers">
-
-<button class="answer" data-correct="true">
-Protect the body
-</button>
-
-<button class="answer" data-correct="false">
-Produce bones
-</button>
-
-<button class="answer" data-correct="false">
-Digest food
-</button>
-
-<button class="answer" data-correct="false">
-Pump blood
-</button>
-
-</div>
-
-<div class="feedback"></div>
-
-<button class="next-button">
-NEXT QUESTION →
-</button>
-
-</div>
-
-
-<!-- QUESTION 4 -->
-
-<div class="question-card">
-
-<div class="question-number">
-QUESTION 04 · 04
-</div>
-
-<div class="question">
-Which layer is the deepest of the three major skin layers?
-</div>
-
-<div class="answers">
-
-<button class="answer" data-correct="false">
-Epidermis
-</button>
-
-<button class="answer" data-correct="false">
-Dermis
-</button>
-
-<button class="answer" data-correct="true">
-Hypodermis
-</button>
-
-<button class="answer" data-correct="false">
-Hair follicle
-</button>
-
-</div>
-
-<div class="feedback"></div>
-
-<button class="next-button">
-FINISH QUIZ →
-</button>
-
-</div>
-
-
-<!-- RESULT -->
-
-<div class="quiz-result">
-
-<div class="quiz-result-number">
-<span id="score">0</span>/4
-</div>
-
-<h3>
-Lesson complete.
-</h3>
-
-<p>
-You finished Skin 101. Keep exploring
-Pre-Derm Society's other lessons and
-trusted health resources.
-</p>
-
-<a
-href="index.html#lessons"
-class="return-button"
->
-EXPLORE MORE LESSONS →
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- RETURN -->
-
-<section class="return">
-
-<div class="label">
-PRE-DERM SOCIETY
-</div>
-
-<h2>
-Keep learning.
-</h2>
-
-<a
-href="index.html"
-class="return-button"
->
-RETURN HOME →
-</a>
-
-</section>
-
-
-<footer>
-
-© 2026 Pre-Derm Society · Student-led education
-
-</footer>
-
-
 <script>
+
+/* =========================================
+   QUIZ
+========================================= */
 
 const questions =
 document.querySelectorAll(".question-card");
@@ -953,8 +11,8 @@ const result =
 document.querySelector(".quiz-result");
 
 let currentQuestion = 0;
-
 let score = 0;
+let quizCompleted = false;
 
 
 questions.forEach((questionCard) => {
@@ -979,9 +37,10 @@ return;
 
 questionCard.classList.add("answered");
 
-answers.forEach(button => {
+answers.forEach(button=>{
 button.classList.add("locked");
 });
+
 
 const isCorrect =
 this.dataset.correct === "true";
@@ -991,7 +50,7 @@ if(isCorrect){
 
 this.classList.add("correct");
 
-feedback.textContent = "CORRECT ✓";
+feedback.textContent="CORRECT ✓";
 
 feedback.classList.add(
 "show",
@@ -1004,16 +63,17 @@ score++;
 
 this.classList.add("incorrect");
 
-feedback.textContent = "INCORRECT";
+feedback.textContent="INCORRECT";
 
 feedback.classList.add(
 "show",
 "incorrect-text"
 );
 
-answers.forEach(button => {
 
-if(button.dataset.correct === "true"){
+answers.forEach(button=>{
+
+if(button.dataset.correct==="true"){
 button.classList.add("correct");
 }
 
@@ -1028,7 +88,7 @@ nextButton.classList.add("show");
 });
 
 
-nextButton.addEventListener("click", function(){
+nextButton.addEventListener("click",function(){
 
 questionCard.classList.remove("active");
 
@@ -1043,8 +103,7 @@ questions[currentQuestion]
 window.scrollTo({
 
 top:
-document.querySelector(".quiz")
-.offsetTop - 80,
+document.querySelector(".quiz").offsetTop - 80,
 
 behavior:"smooth"
 
@@ -1053,9 +112,21 @@ behavior:"smooth"
 }else{
 
 document.getElementById("score")
-.textContent = score;
+.textContent=score;
 
 result.classList.add("show");
+
+
+/* COUNT COMPLETED LESSON */
+
+if(!quizCompleted){
+
+completeLesson();
+
+quizCompleted=true;
+
+}
+
 
 window.scrollTo({
 
@@ -1073,8 +144,80 @@ behavior:"smooth"
 });
 
 
-</script>
+/* =========================================
+   COMPLETED LESSON
+========================================= */
 
-</body>
-</html>
-```
+function completeLesson(){
+
+let peopleReached =
+parseInt(
+localStorage.getItem("peopleReached")
+);
+
+let lessonsDone =
+parseInt(
+localStorage.getItem("lessonsDone")
+);
+
+
+/* Starting values */
+
+if(isNaN(peopleReached)){
+peopleReached=100;
+}
+
+if(isNaN(lessonsDone)){
+lessonsDone=38;
+}
+
+
+/* ADD ONE */
+
+peopleReached++;
+lessonsDone++;
+
+
+/* SAVE */
+
+localStorage.setItem(
+"peopleReached",
+peopleReached
+);
+
+localStorage.setItem(
+"lessonsDone",
+lessonsDone
+);
+
+}
+
+
+/* =========================================
+   INITIAL VALUES
+========================================= */
+
+if(
+localStorage.getItem("peopleReached") === null
+){
+
+localStorage.setItem(
+"peopleReached",
+"100"
+);
+
+}
+
+
+if(
+localStorage.getItem("lessonsDone") === null
+){
+
+localStorage.setItem(
+"lessonsDone",
+"38"
+);
+
+}
+
+</script>
