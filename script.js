@@ -1,34 +1,36 @@
 const mobileMenu = document.getElementById("mobileMenu");
 const navLinks = document.querySelector(".nav-links");
 
-mobileMenu.addEventListener("click", () => {
-  navLinks.classList.toggle("mobile-open");
-});
+if (mobileMenu && navLinks) {
 
+  mobileMenu.addEventListener("click", () => {
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("mobile-open");
+    navLinks.classList.toggle("mobile-open");
+
   });
-});
+
+}
 
 
-document.querySelectorAll(".opportunity-card").forEach(card => {
-  card.addEventListener("click", function(event) {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    const target = this.getAttribute("href");
+  link.addEventListener("click", function(event) {
 
-    if (target.startsWith("#")) {
-      const section = document.querySelector(target);
+    const targetID = this.getAttribute("href");
 
-      if (section) {
-        event.preventDefault();
+    const target = document.querySelector(targetID);
 
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
+    if (target) {
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
     }
 
   });
+
 });
