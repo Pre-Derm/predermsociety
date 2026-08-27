@@ -13,117 +13,113 @@
 
 <style>
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 font-family:'DM Sans',sans-serif;
 background:#fff;
 color:#171717;
-line-height:1.6
+line-height:1.6;
 }
 
 a{
 color:inherit;
-text-decoration:none
+text-decoration:none;
 }
 
 nav{
-width:100%;
-padding:24px 7%;
+padding:22px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:1px solid #eee;
-background:rgba(255,255,255,.97);
 position:sticky;
 top:0;
-z-index:100
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+z-index:10;
 }
 
 .logo{
-font-size:18px;
+font-size:16px;
 font-weight:700;
-letter-spacing:-.5px
 }
 
 .nav-links{
 display:flex;
-gap:12px;
+gap:28px;
 align-items:center;
-font-size:14px;
-font-weight:500
-}
-
-.nav-links a{
-padding:9px 15px;
-border-radius:30px
+font-size:13px;
 }
 
 .nav-links a:hover{
-background:#f6f6f6
+opacity:.5;
 }
 
 .join-btn{
-border:1px solid #171717
-}
-
-.join-btn:hover{
-background:#171717!important;
-color:#fff
+border:1px solid #171717;
+padding:9px 18px;
+border-radius:30px;
 }
 
 .hero{
 padding:120px 7% 90px;
-background:#f8f8f8
+border-bottom:1px solid #eee;
 }
 
 .eyebrow{
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#777;
-margin-bottom:20px
+margin-bottom:20px;
 }
 
 h1{
-font-size:clamp(50px,8vw,90px);
+font-size:clamp(55px,9vw,95px);
 line-height:.95;
-letter-spacing:-4px;
+letter-spacing:-5px;
 font-weight:600;
-margin-bottom:25px
 }
 
 .hero p{
 max-width:650px;
+margin-top:30px;
 color:#777;
-font-size:17px
+font-size:17px;
 }
 
 section{
-padding:90px 7%
+padding:90px 7%;
 }
 
 .section-heading{
 max-width:700px;
-margin-bottom:45px
+margin-bottom:45px;
+}
+
+.section-heading span{
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#888;
 }
 
 .section-heading h2{
-font-size:clamp(35px,5vw,55px);
+font-size:clamp(38px,5vw,58px);
 letter-spacing:-2px;
 line-height:1.05;
-margin-top:10px
-}
-
-.section-heading p{
-color:#777;
-margin-top:15px
+margin-top:10px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .card{
@@ -134,58 +130,65 @@ min-height:250px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-transition:.25s
+transition:.25s;
 }
 
 .card:hover{
 transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(0,0,0,.06)
+box-shadow:0 15px 40px rgba(0,0,0,.06);
 }
 
 .emoji{
 font-size:27px;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
-.number{
+.card-number{
 font-size:11px;
 color:#999;
-letter-spacing:1px
+letter-spacing:1px;
 }
 
 .card h3{
 font-size:22px;
-margin:8px 0;
-letter-spacing:-.5px
+margin:7px 0;
 }
 
 .card p{
 font-size:14px;
-color:#777
+color:#777;
 }
 
 .card-link{
+margin-top:20px;
 font-size:13px;
-font-weight:700
+font-weight:700;
 }
 
 footer{
+border-top:1px solid #eee;
+padding:30px 7%;
 text-align:center;
-font-size:12px;
 color:#999;
-padding:25px;
-border-top:1px solid #eee
+font-size:12px;
 }
 
-@media(max-width:850px){
+@media(max-width:800px){
+
+.nav-links{
+gap:12px;
+}
+
+.nav-links a:not(.join-btn){
+display:none;
+}
 
 .cards{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
-.nav-links a{
-font-size:11px;
-padding:8px 9px
+h1{
+letter-spacing:-3px;
 }
 
 }
@@ -197,14 +200,18 @@ padding:8px 9px
 
 <nav>
 
-<a href="index.html" class="logo">Pre-Derm Society</a>
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
 <a href="learn.html">Learn</a>
 <a href="opportunities.html">Opportunities</a>
 <a href="about.html">About</a>
 <a href="join.html" class="join-btn">Join Now</a>
+
 </div>
 
 </nav>
@@ -213,7 +220,7 @@ padding:8px 9px
 <header class="hero">
 
 <div class="eyebrow">
-Student Education
+Pre-Derm Society • Education
 </div>
 
 <h1>
@@ -222,8 +229,8 @@ one lesson at a time.
 </h1>
 
 <p>
-Short, student-friendly lessons designed to make
-dermatology, skincare, biology, and medicine easier to explore.
+Student-friendly lessons designed to make dermatology,
+skincare, research, and medicine easier to understand.
 </p>
 
 </header>
@@ -233,19 +240,13 @@ dermatology, skincare, biology, and medicine easier to explore.
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<span>
 01 — Dermatology
-</div>
+</span>
 
 <h2>
-Start with<br>
-the skin.
+Learn about skin.
 </h2>
-
-<p>
-Build your foundation with lessons about skin science
-and evidence-based skincare.
-</p>
 
 </div>
 
@@ -256,14 +257,17 @@ and evidence-based skincare.
 
 <div>
 <div class="emoji">🔎</div>
-<div class="number">01</div>
+<div class="card-number">01</div>
 <h3>Skin 101</h3>
 <p>
-Learn about the structure and functions of the skin.
+Learn about the skin, its layers, the skin barrier,
+and everyday skin health.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
 
 </a>
 
@@ -272,14 +276,17 @@ Learn about the structure and functions of the skin.
 
 <div>
 <div class="emoji">🫧</div>
-<div class="number">02</div>
+<div class="card-number">02</div>
 <h3>Cleansing</h3>
 <p>
-Explore what cleansing does and how cleansers work.
+Learn what cleansing does and how cleansers interact
+with the skin.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
 
 </a>
 
@@ -288,14 +295,17 @@ Explore what cleansing does and how cleansers work.
 
 <div>
 <div class="emoji">💧</div>
-<div class="number">03</div>
+<div class="card-number">03</div>
 <h3>Moisturizing</h3>
 <p>
-Learn about hydration, moisturizers, and the skin barrier.
+Explore hydration, moisturizers, ingredients,
+and the skin barrier.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
 
 </a>
 
@@ -304,14 +314,17 @@ Learn about hydration, moisturizers, and the skin barrier.
 
 <div>
 <div class="emoji">☀️</div>
-<div class="number">04</div>
+<div class="card-number">04</div>
 <h3>Sun Protection</h3>
 <p>
-Understand UV radiation, sunscreen, SPF, and sun safety.
+Understand UV radiation, sunscreen, SPF,
+and sun-safe habits.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
 
 </a>
 
@@ -320,14 +333,17 @@ Understand UV radiation, sunscreen, SPF, and sun safety.
 
 <div>
 <div class="emoji">🧴</div>
-<div class="number">05</div>
+<div class="card-number">05</div>
 <h3>Acne</h3>
 <p>
-Learn the science behind acne and evidence-based basics.
+Explore the science behind acne and
+evidence-based skincare basics.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
 
 </a>
 
@@ -336,14 +352,101 @@ Learn the science behind acne and evidence-based basics.
 
 <div>
 <div class="emoji">🩺</div>
-<div class="number">06</div>
+<div class="card-number">06</div>
 <h3>Medicine 101</h3>
 <p>
-Get introduced to healthcare, specialties, and medicine.
+Get introduced to healthcare, medical specialties,
+and clinical thinking.
 </p>
 </div>
 
-<div class="card-link">START LESSON →</div>
+<div class="card-link">
+START LESSON →
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-heading">
+
+<span>
+02 — Science
+</span>
+
+<h2>
+Think like a researcher.
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+<a href="research-guide.html" class="card">
+
+<div>
+<div class="emoji">🧪</div>
+<div class="card-number">01</div>
+<h3>Research Guide</h3>
+<p>
+Learn how to find scientific questions,
+understand evidence, and explore research.
+</p>
+</div>
+
+<div class="card-link">
+START GUIDE →
+</div>
+
+</a>
+
+
+<a href="https://hms.harvard.edu/research/examples-current-research"
+target="_blank"
+rel="noopener noreferrer"
+class="card">
+
+<div>
+<div class="emoji">🔬</div>
+<div class="card-number">02</div>
+<h3>Current Research</h3>
+<p>
+Explore examples of biomedical research
+from Harvard Medical School.
+</p>
+</div>
+
+<div class="card-link">
+EXPLORE RESEARCH →
+</div>
+
+</a>
+
+
+<a href="https://www.girlsinresearchglobal.org/opportunities"
+target="_blank"
+rel="noopener noreferrer"
+class="card">
+
+<div>
+<div class="emoji">🌎</div>
+<div class="card-number">03</div>
+<h3>Research Opportunities</h3>
+<p>
+Explore STEM and research opportunities
+for students.
+</p>
+</div>
+
+<div class="card-link">
+EXPLORE →
+</div>
 
 </a>
 
@@ -353,7 +456,7 @@ Get introduced to healthcare, specialties, and medicine.
 
 
 <footer>
-© 2026 Pre-Derm Society · Student-led education
+© 2026 Pre-Derm Society
 </footer>
 
 </body>
