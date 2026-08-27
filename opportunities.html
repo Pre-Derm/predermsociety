@@ -13,204 +13,183 @@
 
 <style>
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 font-family:'DM Sans',sans-serif;
 background:#fff;
 color:#171717;
-line-height:1.6
+line-height:1.6;
 }
 
 a{
 color:inherit;
-text-decoration:none
+text-decoration:none;
 }
 
 nav{
-width:100%;
-padding:24px 7%;
+padding:22px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:1px solid #eee;
-background:rgba(255,255,255,.97);
 position:sticky;
 top:0;
-z-index:100
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+z-index:10;
 }
 
 .logo{
-font-size:18px;
+font-size:16px;
 font-weight:700;
-letter-spacing:-.5px
 }
 
 .nav-links{
 display:flex;
-gap:12px;
+gap:28px;
 align-items:center;
-font-size:14px;
-font-weight:500
-}
-
-.nav-links a{
-padding:9px 15px;
-border-radius:30px
+font-size:13px;
 }
 
 .nav-links a:hover{
-background:#f6f6f6
+opacity:.5;
 }
 
 .join-btn{
-border:1px solid #171717
-}
-
-.join-btn:hover{
-background:#171717!important;
-color:#fff
+border:1px solid #171717;
+padding:9px 18px;
+border-radius:30px;
 }
 
 .hero{
 padding:120px 7% 90px;
-background:#f8f8f8
+border-bottom:1px solid #eee;
 }
 
 .eyebrow{
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#777;
-margin-bottom:20px
+margin-bottom:20px;
 }
 
 h1{
-font-size:clamp(50px,8vw,90px);
+font-size:clamp(55px,9vw,95px);
 line-height:.95;
-letter-spacing:-4px;
+letter-spacing:-5px;
 font-weight:600;
-margin-bottom:25px
 }
 
 .hero p{
-max-width:700px;
+max-width:650px;
+margin-top:30px;
 color:#777;
-font-size:17px
+font-size:17px;
 }
 
 section{
-padding:90px 7%
+padding:90px 7%;
 }
 
 .section-heading{
 max-width:700px;
-margin-bottom:45px
+margin-bottom:45px;
+}
+
+.section-heading span{
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#888;
 }
 
 .section-heading h2{
-font-size:clamp(35px,5vw,55px);
+font-size:clamp(38px,5vw,58px);
 letter-spacing:-2px;
 line-height:1.05;
-margin-top:10px
-}
-
-.section-heading p{
-color:#777;
-margin-top:15px
+margin-top:10px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:18px
+gap:18px;
 }
 
 .card{
 border:1px solid #e9e9e9;
 border-radius:22px;
-padding:32px;
+padding:35px;
 min-height:270px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-transition:.25s
+transition:.25s;
 }
 
 .card:hover{
 transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(0,0,0,.06)
+box-shadow:0 15px 40px rgba(0,0,0,.06);
 }
 
 .emoji{
 font-size:27px;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
-.number{
+.card-number{
 font-size:11px;
 color:#999;
-letter-spacing:1px
+letter-spacing:1px;
 }
 
 .card h3{
 font-size:24px;
-margin:8px 0;
-letter-spacing:-.5px
+margin:7px 0;
 }
 
 .card p{
 font-size:14px;
 color:#777;
-max-width:500px
-}
-
-.eligibility{
-display:inline-block;
-margin-top:15px;
-font-size:11px;
-letter-spacing:1px;
-text-transform:uppercase;
-color:#888
+max-width:500px;
 }
 
 .card-link{
 margin-top:20px;
 font-size:13px;
-font-weight:700
-}
-
-.note{
-margin-top:40px;
-padding:25px;
-border:1px solid #eee;
-border-radius:18px;
-background:#fafafa;
-color:#777;
-font-size:13px
+font-weight:700;
 }
 
 footer{
+border-top:1px solid #eee;
+padding:30px 7%;
 text-align:center;
-font-size:12px;
 color:#999;
-padding:25px;
-border-top:1px solid #eee
+font-size:12px;
 }
 
-@media(max-width:750px){
-
-.cards{
-grid-template-columns:1fr
-}
+@media(max-width:800px){
 
 .nav-links{
-gap:4px
+gap:12px;
 }
 
-.nav-links a{
-font-size:11px;
-padding:8px 9px
+.nav-links a:not(.join-btn){
+display:none;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+h1{
+letter-spacing:-3px;
 }
 
 }
@@ -222,14 +201,18 @@ padding:8px 9px
 
 <nav>
 
-<a href="index.html" class="logo">Pre-Derm Society</a>
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
 <a href="learn.html">Learn</a>
 <a href="opportunities.html">Opportunities</a>
 <a href="about.html">About</a>
 <a href="join.html" class="join-btn">Join Now</a>
+
 </div>
 
 </nav>
@@ -238,18 +221,17 @@ padding:8px 9px
 <header class="hero">
 
 <div class="eyebrow">
-Research • Medicine • STEM
+Pre-Derm Society • Student Opportunities
 </div>
 
 <h1>
 Find your<br>
-opportunity.
+next opportunity.
 </h1>
 
 <p>
-Explore official programs, research resources, and STEM opportunities.
-Always check each organization's website for current eligibility,
-deadlines, and application requirements.
+Explore legitimate research, medicine, STEM, and
+healthcare opportunities from established organizations.
 </p>
 
 </header>
@@ -259,19 +241,13 @@ deadlines, and application requirements.
 
 <div class="section-heading">
 
-<div class="eyebrow">
-01 — High School Programs
-</div>
+<span>
+01 — Research
+</span>
 
 <h2>
-Research starts<br>
-with experience.
+Explore research.
 </h2>
-
-<p>
-Programs below are linked directly to their official websites.
-Eligibility can change from year to year.
-</p>
 
 </div>
 
@@ -279,139 +255,27 @@ Eligibility can change from year to year.
 <div class="cards">
 
 
-<a
-href="https://med.stanford.edu/content/sm/pediatrics/education/pediatrics-internship-program.html/"
+<a href="https://hms.harvard.edu/research/examples-current-research"
 target="_blank"
 rel="noopener noreferrer"
-class="card"
->
-
-<div>
-
-<div class="emoji">🩺</div>
-
-<div class="number">01</div>
-
-<h3>
-Stanford PIPS
-</h3>
-
-<p>
-The Pediatrics Internship Program at Stanford introduces
-high school students to science, medicine, and research
-through a mentored research project.
-</p>
-
-<span class="eligibility">
-Rising juniors & seniors • Northern California • 16+
-</span>
-
-</div>
-
-<div class="card-link">
-VISIT OFFICIAL PROGRAM →
-</div>
-
-</a>
-
-
-<a
-href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html"
-target="_blank"
-rel="noopener noreferrer"
-class="card"
->
+class="card">
 
 <div>
 
 <div class="emoji">🔬</div>
 
-<div class="number">02</div>
+<div class="card-number">
+01 — HARVARD MEDICAL SCHOOL
+</div>
 
 <h3>
-Stanford Medicine Programs
+Current Research
 </h3>
 
 <p>
-Stanford Medicine's official directory of programs for
-high school and undergraduate students interested in
-medicine and science.
+Explore examples of current biomedical research
+at Harvard Medical School.
 </p>
-
-<span class="eligibility">
-Eligibility varies by program
-</span>
-
-</div>
-
-<div class="card-link">
-EXPLORE PROGRAMS →
-</div>
-
-</a>
-
-
-<a
-href="https://www.girlsinresearchglobal.org/opportunities"
-target="_blank"
-rel="noopener noreferrer"
-class="card"
->
-
-<div>
-
-<div class="emoji">🌎</div>
-
-<div class="number">03</div>
-
-<h3>
-Girls in Research
-</h3>
-
-<p>
-Explore a collection of STEM and research opportunities,
-along with tools and resources for students interested
-in research.
-</p>
-
-<span class="eligibility">
-Opportunities vary
-</span>
-
-</div>
-
-<div class="card-link">
-EXPLORE OPPORTUNITIES →
-</div>
-
-</a>
-
-
-<a
-href="https://hms.harvard.edu/research/examples-current-research"
-target="_blank"
-rel="noopener noreferrer"
-class="card"
->
-
-<div>
-
-<div class="emoji">🧪</div>
-
-<div class="number">04</div>
-
-<h3>
-Harvard Medical School Research
-</h3>
-
-<p>
-Explore examples of medical research and discover the
-questions scientists are working to answer.
-</p>
-
-<span class="eligibility">
-Research exploration
-</span>
 
 </div>
 
@@ -422,91 +286,159 @@ EXPLORE RESEARCH →
 </a>
 
 
-<a
-href="https://researchadmin.hms.harvard.edu/news/research-harvard-medical-school"
+<a href="https://www.girlsinresearchglobal.org/opportunities"
 target="_blank"
 rel="noopener noreferrer"
-class="card"
->
+class="card">
 
 <div>
 
-<div class="emoji">📊</div>
+<div class="emoji">🌎</div>
 
-<div class="number">05</div>
+<div class="card-number">
+02 — GIRLS IN RESEARCH
+</div>
 
 <h3>
-HMS Research
+Research Opportunities
 </h3>
 
 <p>
-Learn about current research across Harvard Medical School,
-including biomedical science, healthcare, and health equity.
+Explore research and STEM opportunities
+for students through Girls in Research.
 </p>
-
-<span class="eligibility">
-Research exploration
-</span>
 
 </div>
 
 <div class="card-link">
-READ MORE →
+EXPLORE OPPORTUNITIES →
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-heading">
+
+<span>
+02 — Medicine
+</span>
+
+<h2>
+Explore medicine.
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+
+<a href="https://med.stanford.edu/medcsi/about.html"
+target="_blank"
+rel="noopener noreferrer"
+class="card">
+
+<div>
+
+<div class="emoji">🩺</div>
+
+<div class="card-number">
+01 — STANFORD MEDICINE
+</div>
+
+<h3>
+Clinical Summer Internship
+</h3>
+
+<p>
+Learn about Stanford Medicine's Clinical Summer
+Internship for high school and undergraduate students.
+</p>
+
+</div>
+
+<div class="card-link">
+VIEW PROGRAM →
 </div>
 
 </a>
 
 
-<a
-href="https://www.girlsinresearchglobal.org/"
+<a href="https://med.stanford.edu/content/sm/pediatrics/education/pediatrics-internship-program.html/"
 target="_blank"
 rel="noopener noreferrer"
-class="card"
->
+class="card">
 
 <div>
 
-<div class="emoji">💡</div>
+<div class="emoji">🧬</div>
 
-<div class="number">06</div>
+<div class="card-number">
+02 — STANFORD PEDIATRICS
+</div>
 
 <h3>
-Research Learning Resources
+Pediatrics Internship
 </h3>
 
 <p>
-Access research guides, tools, and community resources
-designed to help students learn about research.
+Explore Stanford's Pediatrics Internship Program,
+which introduces high school students to medicine,
+science, and research.
 </p>
-
-<span class="eligibility">
-Student resources
-</span>
 
 </div>
 
 <div class="card-link">
-LEARN MORE →
+VIEW PROGRAM →
 </div>
 
 </a>
 
 
+<a href="https://med.stanford.edu/education/high-school-and-undergraduate-programs.html"
+target="_blank"
+rel="noopener noreferrer"
+class="card">
+
+<div>
+
+<div class="emoji">🎓</div>
+
+<div class="card-number">
+03 — STANFORD MEDICINE
 </div>
 
+<h3>
+High School Programs
+</h3>
 
-<div class="note">
-<strong>Important:</strong> Pre-Derm Society does not guarantee
-admission to any program. Always use the official program website
-to verify age, grade, location, deadlines, costs, and eligibility
-before applying.
+<p>
+Explore Stanford Medicine programs and educational
+opportunities for high school students.
+</p>
+
+</div>
+
+<div class="card-link">
+EXPLORE PROGRAMS →
+</div>
+
+</a>
+
 </div>
 
 </section>
 
 
 <footer>
-© 2026 Pre-Derm Society · Student-led education
+© 2026 Pre-Derm Society
 </footer>
 
 </body>
