@@ -1,74 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impact | Pre-Derm Society</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Derm Society</title>
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#faf9f6;
+  color:#111;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+  color:#111;
+  text-decoration:none;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 6%;
+  background:rgba(250,249,246,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #dedcd8;
+}
+
+.logo{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:3px;
+  line-height:1.5;
+}
+
+.links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.links a{
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.links a:hover,
+.logo:hover{
+  opacity:.5;
+}
+
+.hero{
+  min-height:80vh;
+  display:flex;
+  align-items:flex-end;
+  padding:170px 8% 100px;
+  background:
+    radial-gradient(circle at 75% 25%,#e8e2dc 0%,transparent 35%),
+    #faf9f6;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.eyebrow,
+.label{
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
+  margin-bottom:28px;
+}
+
+h1{
+  font-size:clamp(65px,13vw,155px);
+  line-height:.8;
+  letter-spacing:-9px;
+  font-weight:300;
+  margin:0;
+}
+
+.hero-description{
+  max-width:620px;
+  margin-top:45px;
+  font-size:16px;
+  line-height:1.8;
+  color:#666;
+}
+
+section{
+  padding:110px 8%;
+  border-top:1px solid #dedcd8;
+}
+
+h2{
+  font-size:clamp(48px,8vw,100px);
+  line-height:.88;
+  letter-spacing:-6px;
+  font-weight:300;
+  margin:0 0 35px;
+}
+
+.text{
+  max-width:650px;
+  color:#666;
+  line-height:1.8;
+  font-size:15px;
+}
+
+.lesson-section{
+  background:#efeee9;
+}
+
+.lesson-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid #dedcd8;
+  border-left:1px solid #dedcd8;
+}
+
+.lesson-card{
+  min-height:230px;
+  padding:32px;
+  background:#faf9f6;
+  border-right:1px solid #dedcd8;
+  border-bottom:1px solid #dedcd8;
+  transition:.2s;
+}
+
+.lesson-card:hover{
+  background:#f3f1ed;
+  transform:translateY(-3px);
+}
+
+.lesson-number{
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
+}
+
+.lesson-card h3{
+  font-size:30px;
+  font-weight:300;
+  letter-spacing:-2px;
+  margin:45px 0 15px;
+}
+
+.lesson-card p{
+  color:#666;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.action{
+  display:inline-block;
+  margin-top:12px;
+  padding-bottom:7px;
+  border-bottom:1px solid #111;
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.photo-loop{
+  position:relative;
+  width:100%;
+  height:420px;
+  overflow:hidden;
+  background:#eeeae4;
+}
+
+.photo{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 16s infinite;
+}
+
+.photo:nth-child(1){
+  background-image:url("https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1800&q=85");
+  animation-delay:0s;
+}
+
+.photo:nth-child(2){
+  background-image:url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1800&q=85");
+  animation-delay:4s;
+}
+
+.photo:nth-child(3){
+  background-image:url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1800&q=85");
+  animation-delay:8s;
+}
+
+.photo:nth-child(4){
+  background-image:url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=85");
+  animation-delay:12s;
+}
+
+@keyframes fade{
+  0%,20%{opacity:1}
+  25%,95%{opacity:0}
+  100%{opacity:1}
+}
+
+footer{
+  padding:45px 8%;
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid #dedcd8;
+}
+
+footer a{
+  font-size:9px;
+  letter-spacing:2px;
+  margin-right:25px;
+}
+
+@media(max-width:700px){
+  nav{padding:18px 5%}
+
+  .links{
+    gap:13px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    max-width:250px;
+  }
+
+  .links a{font-size:8px}
+
+  .hero{
+    min-height:75vh;
+    padding:150px 8% 80px;
+  }
+
+  h1{letter-spacing:-5px}
+
+  section{padding:85px 8%}
+
+  .lesson-grid{
+    grid-template-columns:1fr;
+  }
+
+  .photo-loop{height:300px}
+
+  footer{
+    flex-direction:column;
+    gap:25px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
-  <nav>
-    <a href="index.html">About</a>
-    <a href="learn.html">Learn</a>
-    <a href="impact.html">Impact</a>
-    <a href="donate.html">Donate</a>
-  </nav>
-  <a href="join.html" class="join-btn">Join Us</a>
-</header>
+<nav>
+  <a href="index.html" class="logo">
+    PRE-DERM<br>SOCIETY
+  </a>
 
-<section class="page-hero">
-  <p class="eyebrow">OUR IMPACT</p>
-  <h1>Education can<br><em>change lives.</em></h1>
+  <div class="links">
+    <a href="about.html">ABOUT</a>
+    <a href="opportunities.html">OPPORTUNITIES</a>
+    <a href="skin101.html">LEARN</a>
+    <a href="about.html#impact">IMPACT</a>
+    <a href="mailto:predermsociety@gmail.com">JOIN</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      SKIN SCIENCE · EDUCATION · COMMUNITY
+    </div>
+
+    <h1>
+      PRE-DERM<br>
+      SOCIETY
+    </h1>
+
+    <p class="hero-description">
+      A student-led space for exploring dermatology,
+      learning skin science, teaching others,
+      and finding meaningful opportunities in medicine.
+    </p>
+
+    <a href="opportunities.html" class="action">
+      EXPLORE OPPORTUNITIES →
+    </a>
+
+  </div>
+</div>
+
+<section>
+  <div class="label">01 · EXPLORE</div>
+
+  <h2>
+    Find your<br>
+    direction.
+  </h2>
+
+  <p class="text">
+    Interested in dermatology, pediatrics, research,
+    surgery, or another medical field? Explore programs,
+    internships, research resources, and career information
+    organized around what you actually want to learn.
+  </p>
+
+  <a href="opportunities.html" class="action">
+    FIND OPPORTUNITIES →
+  </a>
 </section>
 
-<section class="content">
-  <div class="content-grid">
+<section class="lesson-section">
 
-    <div class="content-card">
-      <h2>🤍 Student Education</h2>
-      <p>
-        We create approachable dermatology lessons that help students
-        understand their skin and make informed choices.
-      </p>
-    </div>
+  <div class="label">02 · LEARN</div>
 
-    <div class="content-card">
-      <h2>🏫 School Outreach</h2>
-      <p>
-        We aim to bring accessible skin-health education into schools
-        and student communities.
-      </p>
-    </div>
+  <h2>
+    Learn about<br>
+    skin differently.
+  </h2>
 
-    <div class="content-card">
-      <h2>🌎 Community</h2>
-      <p>
-        Our goal is to make reliable skin-health knowledge easier for
-        young people to access.
-      </p>
-    </div>
+  <div class="lesson-grid">
 
-    <div class="content-card">
-      <h2>🎗️ Giving Back</h2>
+    <a href="skin101.html" class="lesson-card">
+      <div class="lesson-number">LESSON 01</div>
+      <h3>Skin 101</h3>
       <p>
-        Future initiatives will support organizations and programs
-        connected to health and dermatology education.
+        Start with the science behind the skin,
+        its layers, functions, and barrier.
       </p>
-    </div>
+      <span class="action">START LESSON →</span>
+    </a>
+
+    <a href="cleansing.html" class="lesson-card">
+      <div class="lesson-number">LESSON 02</div>
+      <h3>Cleansing</h3>
+      <p>
+        Learn the basics of cleansing and
+        why skin care starts with the barrier.
+      </p>
+      <span class="action">START LESSON →</span>
+    </a>
+
+    <a href="moisturizing.html" class="lesson-card">
+      <div class="lesson-number">LESSON 03</div>
+      <h3>Moisturizing</h3>
+      <p>
+        Understand hydration, moisturizers,
+        and how the skin barrier works.
+      </p>
+      <span class="action">START LESSON →</span>
+    </a>
 
   </div>
 </section>
+
+<section>
+  <div class="label">03 · OUR WORK</div>
+
+  <h2>
+    Learn.<br>
+    Teach.<br>
+    Give back.
+  </h2>
+
+  <p class="text">
+    Pre-Derm Society creates accessible skin-health
+    education and connects students with resources
+    that can help them explore medicine and science.
+  </p>
+
+  <a href="about.html" class="action">
+    ABOUT PRE-DERM SOCIETY →
+  </a>
+</section>
+
+<div class="photo-loop">
+  <div class="photo"></div>
+  <div class="photo"></div>
+  <div class="photo"></div>
+  <div class="photo"></div>
+</div>
 
 <footer>
-  <div>PRE-DERM SOCIETY</div>
   <div>
-    <a href="#">Instagram</a>
-    <a href="#">TikTok</a>
+    <a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a>
+    <a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a>
+    <a href="mailto:predermsociety@gmail.com">EMAIL</a>
   </div>
+
+  <div class="label">PRE-DERM SOCIETY</div>
 </footer>
 
 </body>
