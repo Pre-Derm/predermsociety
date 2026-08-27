@@ -1,54 +1,602 @@
-<section class="opportunities" id="opportunities">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="section-heading">
+  <title>Pre-Derm Society</title>
 
-    <div>
-      <p class="eyebrow">EXPLORE</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-      <h2>
-        Opportunities
-        <br>
-        <span>for your future.</span>
-      </h2>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: #111;
+      background: #fff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+    nav {
+      height: 76px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      border-bottom: 1px solid #e8e8e8;
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.7px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      transition: opacity .2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: .5;
+    }
+
+    .join-btn {
+      border: 1px solid #111;
+      padding: 11px 19px;
+      border-radius: 999px;
+      transition: .25s ease;
+    }
+
+    .join-btn:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 80px 7%;
+      gap: 70px;
+    }
+
+    .hero-text {
+      max-width: 590px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      color: #777;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(55px, 7vw, 94px);
+      line-height: .94;
+      font-weight: 500;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 490px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .primary-btn {
+      background: #111;
+      color: #fff;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #333;
+    }
+
+    .secondary-btn {
+      border: 1px solid #d8d8d8;
+    }
+
+    .secondary-btn:hover {
+      border-color: #111;
+    }
+
+    /* PHOTO LOOP */
+    .photo-loop {
+      height: 570px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 3px;
+      background: #f4f4f4;
+    }
+
+    .photo-track {
+      display: flex;
+      width: max-content;
+      height: 100%;
+      animation: photoScroll 28s linear infinite;
+    }
+
+    .photo {
+      width: 390px;
+      height: 100%;
+      flex-shrink: 0;
+      margin-right: 12px;
+      object-fit: cover;
+      filter: saturate(.88);
+    }
+
+    @keyframes photoScroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .photo-loop:hover .photo-track {
+      animation-play-state: paused;
+    }
+
+    /* INTRO */
+    .intro {
+      padding: 125px 8%;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin: 0 auto 30px;
+    }
+
+    .intro p {
+      max-width: 620px;
+      margin: auto;
+      color: #666;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* THREE AREAS */
+    .areas {
+      padding: 110px 7%;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .areas-title {
+      font-family: "Playfair Display", serif;
+      font-size: 54px;
+      font-weight: 500;
+      letter-spacing: -2px;
+      margin-bottom: 55px;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #ddd;
+      border: 1px solid #ddd;
+    }
+
+    .area {
+      background: #fff;
+      padding: 45px 38px;
+      min-height: 280px;
+      transition: .25s ease;
+    }
+
+    .area:hover {
+      background: #f7f7f7;
+    }
+
+    .area-number {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 55px;
+    }
+
+    .area h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .area p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+    .cta {
+      background: #111;
+      color: #fff;
+      padding: 110px 8%;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 6vw, 78px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+
+    .cta p {
+      color: #bdbdbd;
+      max-width: 530px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #fff;
+      color: #111;
+      padding: 14px 25px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      background: #eaeaea;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #fff;
+      border-top: 1px solid #333;
+      padding: 28px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    footer .socials {
+      display: flex;
+      gap: 22px;
+    }
+
+    footer a:hover {
+      opacity: .55;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      nav {
+        padding: 0 5%;
+      }
+
+      .nav-links {
+        gap: 15px;
+        font-size: 11px;
+      }
+
+      .join-btn {
+        padding: 9px 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 45px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .photo-loop {
+        height: 420px;
+      }
+
+      .photo {
+        width: 300px;
+      }
+
+      .area-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .areas {
+        padding: 80px 6%;
+      }
+
+      .areas-title {
+        font-size: 44px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav-links a:not(.join-btn) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+      }
+
+      .photo-loop {
+        height: 350px;
+      }
+
+      .photo {
+        width: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
+
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="skin101.html">Learn</a>
+      <a href="impact.html">Impact</a>
+      <a href="donate.html">Donate</a>
+      <a href="join.html" class="join-btn">Join Us</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <main class="hero">
+
+    <div class="hero-text">
+      <div class="eyebrow">Student-led dermatology education</div>
+
+      <h1>
+        The future of<br>
+        <span>skin health.</span>
+      </h1>
+
+      <p>
+        Pre-Derm Society is a student-led community making dermatology,
+        skincare education, research opportunities, and meaningful impact
+        more accessible to students.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="skin101.html" class="primary-btn">Explore Skin 101 →</a>
+        <a href="about.html" class="secondary-btn">About us</a>
+      </div>
     </div>
 
+
+    <!--
+      PHOTO LOOP
+
+      Put your photos inside a folder named "images".
+
+      Rename your photos:
+      photo1.jpg
+      photo2.jpg
+      photo3.jpg
+      photo4.jpg
+
+      Then the loop below will automatically cycle through them.
+    -->
+
+    <div class="photo-loop">
+      <div class="photo-track">
+
+        <img src="images/photo1.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo2.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo3.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo4.jpg" class="photo" alt="Pre-Derm Society">
+
+
+        <!-- DUPLICATE SET = SMOOTH INFINITE LOOP -->
+
+        <img src="images/photo1.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo2.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo3.jpg" class="photo" alt="Pre-Derm Society">
+
+        <img src="images/photo4.jpg" class="photo" alt="Pre-Derm Society">
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- INTRO -->
+  <section class="intro">
+
+    <div class="section-label">Why Pre-Derm Society</div>
+
+    <h2>
+      Learn. Connect. Create impact.
+    </h2>
+
     <p>
-      Find internships, research, volunteering,
-      and shadowing experiences.
+      We believe students should have opportunities to explore dermatology
+      before medical school while helping make reliable skin-health education
+      accessible to their communities.
     </p>
 
-  </div>
+  </section>
 
-  <div class="opportunity-grid">
 
-    <a href="opportunities.html" class="opportunity">
-      <span>01</span>
-      <h3>Research</h3>
-      <p>Explore research opportunities.</p>
-      <b>→</b>
-    </a>
+  <!-- THREE AREAS -->
+  <section class="areas">
 
-    <a href="opportunities.html" class="opportunity">
-      <span>02</span>
-      <h3>Internships</h3>
-      <p>Discover healthcare experiences.</p>
-      <b>→</b>
-    </a>
+    <div class="section-label">What we do</div>
 
-    <a href="opportunities.html" class="opportunity">
-      <span>03</span>
-      <h3>Volunteering</h3>
-      <p>Find ways to serve your community.</p>
-      <b>→</b>
-    </a>
+    <h2 class="areas-title">More than a club.</h2>
 
-    <a href="opportunities.html" class="opportunity">
-      <span>04</span>
-      <h3>Shadowing</h3>
-      <p>Explore clinical experiences.</p>
-      <b>→</b>
-    </a>
+    <div class="area-grid">
 
-  </div>
+      <a href="skin101.html" class="area">
+        <div class="area-number">01</div>
+        <h3>Learn</h3>
+        <p>
+          Interactive Skin 101 lessons designed to make dermatology
+          understandable, interesting, and accessible.
+        </p>
+      </a>
 
-</section>
+      <a href="opportunities.html" class="area">
+        <div class="area-number">02</div>
+        <h3>Explore</h3>
+        <p>
+          Discover research, internships, volunteering, mentorship,
+          and other opportunities related to dermatology and medicine.
+        </p>
+      </a>
+
+      <a href="impact.html" class="area">
+        <div class="area-number">03</div>
+        <h3>Impact</h3>
+        <p>
+          Help us bring skin-health education to schools and younger
+          students while supporting meaningful community initiatives.
+        </p>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Build the future<br>of dermatology.</h2>
+
+    <p>
+      Whether you want to learn about skin science, explore medicine,
+      find opportunities, or make an impact, there is a place for you here.
+    </p>
+
+    <a href="join.html" class="cta-button">Join Pre-Derm Society →</a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div>© 2026 Pre-Derm Society</div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/prederm_society/" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@prederm_society" target="_blank">TikTok</a>
+    </div>
+
+  </footer>
+
+
+  <script>
+    // Keeps the photo loop smooth if the browser is resized.
+    window.addEventListener("resize", () => {
+      document.querySelector(".photo-track").style.animationPlayState = "running";
+    });
+  </script>
+
+</body>
+</html>
