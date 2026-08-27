@@ -6,15 +6,9 @@
 
   <title>Pre-Derm Society</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
@@ -22,401 +16,385 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
+      margin: 0;
+      background: #faf9f6;
       color: #111;
-      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
-      color: inherit;
-      text-decoration: none;
+      color: #111;
     }
 
     /* NAVIGATION */
+
     nav {
-      height: 76px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      border-bottom: 1px solid #e8e8e8;
-      background: rgba(255,255,255,.96);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 1000;
+      left: 0;
+      right: 0;
+      z-index: 50;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 22px 6%;
+
+      background: rgba(250, 249, 246, 0.88);
       backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid #e2e0dc;
     }
 
     .logo {
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: -0.7px;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      font-size: 13px;
-      font-weight: 500;
+    .links a {
+      text-decoration: none;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-left: 24px;
     }
 
-    .nav-links a {
-      transition: opacity .2s ease;
-    }
-
-    .nav-links a:hover {
-      opacity: .5;
-    }
-
-    .join-btn {
-      border: 1px solid #111;
-      padding: 11px 19px;
-      border-radius: 999px;
-      transition: .25s ease;
-    }
-
-    .join-btn:hover {
-      background: #111;
-      color: #fff;
+    .links a:hover,
+    .logo:hover {
+      opacity: 0.5;
     }
 
     /* HERO */
+
     .hero {
-      min-height: 650px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 80px 7%;
-      gap: 70px;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: flex-end;
+
+      padding: 160px 8% 90px;
     }
 
-    .hero-text {
-      max-width: 590px;
+    .hero-background {
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 75% 25%,
+          #e8e2dc 0%,
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 20% 70%,
+          #eee9e3 0%,
+          transparent 40%
+        ),
+        #faf9f6;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
     }
 
     .eyebrow {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 24px;
+      font-size: 9px;
+      letter-spacing: 3px;
       color: #777;
+      margin-bottom: 28px;
     }
 
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(55px, 7vw, 94px);
-      line-height: .94;
-      font-weight: 500;
-      letter-spacing: -4px;
+    h1 {
+      font-size: clamp(68px, 13vw, 160px);
+      line-height: 0.78;
+      letter-spacing: -9px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      margin-top: 42px;
+
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5f5f5f;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 25px;
+      padding-bottom: 7px;
+
+      border-bottom: 1px solid #111;
+
+      text-decoration: none;
+
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .button:hover {
+      opacity: 0.5;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 130px 8%;
+      border-top: 1px solid #dedcd8;
+    }
+
+    .label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #777;
       margin-bottom: 30px;
     }
 
-    .hero h1 span {
-      font-style: italic;
+    h2 {
+      font-size: clamp(52px, 8vw, 100px);
+      line-height: 0.86;
+      letter-spacing: -6px;
+      font-weight: 400;
+      margin: 0 0 35px;
     }
 
-    .hero p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #555;
-      max-width: 490px;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 23px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: .25s ease;
-    }
-
-    .primary-btn {
-      background: #111;
-      color: #fff;
-    }
-
-    .primary-btn:hover {
-      transform: translateY(-2px);
-      background: #333;
-    }
-
-    .secondary-btn {
-      border: 1px solid #d8d8d8;
-    }
-
-    .secondary-btn:hover {
-      border-color: #111;
-    }
-
-    /* PHOTO LOOP */
-    .photo-loop {
-      height: 570px;
-      overflow: hidden;
-      position: relative;
-      border-radius: 3px;
-      background: #f4f4f4;
-    }
-
-    .photo-track {
-      display: flex;
-      width: max-content;
-      height: 100%;
-      animation: photoScroll 28s linear infinite;
-    }
-
-    .photo {
-      width: 390px;
-      height: 100%;
-      flex-shrink: 0;
-      margin-right: 12px;
-      object-fit: cover;
-      filter: saturate(.88);
-    }
-
-    @keyframes photoScroll {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    .photo-loop:hover .photo-track {
-      animation-play-state: paused;
-    }
-
-    /* INTRO */
-    .intro {
-      padding: 125px 8%;
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
-      text-align: center;
-    }
-
-    .intro h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(40px, 5vw, 68px);
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -2px;
-      max-width: 850px;
-      margin: 0 auto 30px;
-    }
-
-    .intro p {
-      max-width: 620px;
-      margin: auto;
+    .text {
+      max-width: 600px;
       color: #666;
       line-height: 1.8;
       font-size: 15px;
     }
 
-    /* THREE AREAS */
-    .areas {
-      padding: 110px 7%;
+    /* ABOUT */
+
+    .about {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
     }
 
-    .section-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #777;
-      margin-bottom: 18px;
+    .about-content {
+      max-width: 850px;
     }
 
-    .areas-title {
-      font-family: "Playfair Display", serif;
-      font-size: 54px;
-      font-weight: 500;
-      letter-spacing: -2px;
-      margin-bottom: 55px;
+    /* VISUAL SECTION */
+
+    .photo-section {
+      min-height: 70vh;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: flex-end;
+
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          #e7dfd7,
+          transparent 42%
+        ),
+        #f1eee9;
     }
 
-    .area-grid {
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(250, 249, 246, 0.18);
+    }
+
+    .photo-content {
+      position: relative;
+      z-index: 2;
+      padding: 90px 8%;
+    }
+
+    /* LEARNING */
+
+    .learn {
+      background: #efeee9;
+    }
+
+    .lesson-card {
+      min-height: 460px;
+
+      margin-top: 60px;
+      padding: 55px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background: #faf9f6;
+
+      border: 1px solid #dedcd8;
+    }
+
+    .lesson-card h3 {
+      font-size: clamp(45px, 6vw, 75px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+      font-weight: 400;
+      margin: 10px 0 20px;
+    }
+
+    /* IMPACT */
+
+    .impact {
+      background: #faf9f6;
+    }
+
+    .impact-number {
+      font-size: clamp(110px, 19vw, 230px);
+      line-height: 0.8;
+      letter-spacing: -14px;
+      font-weight: 400;
+
+      margin: 80px 0 25px;
+    }
+
+    .impact-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .impact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: #ddd;
-      border: 1px solid #ddd;
+      grid-template-columns: repeat(2, 1fr);
+
+      margin-top: 80px;
+
+      border-top: 1px solid #dedcd8;
+      border-left: 1px solid #dedcd8;
     }
 
-    .area {
-      background: #fff;
-      padding: 45px 38px;
-      min-height: 280px;
-      transition: .25s ease;
+    .impact-box {
+      min-height: 210px;
+
+      padding: 40px;
+
+      border-right: 1px solid #dedcd8;
+      border-bottom: 1px solid #dedcd8;
     }
 
-    .area:hover {
-      background: #f7f7f7;
+    .impact-box-number {
+      font-size: 58px;
+      letter-spacing: -4px;
+      margin: 15px 0;
     }
 
-    .area-number {
-      font-size: 12px;
-      color: #888;
-      margin-bottom: 55px;
-    }
-
-    .area h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 31px;
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-
-    .area p {
+    .impact-box-label {
+      font-size: 9px;
+      letter-spacing: 2px;
       color: #666;
-      font-size: 14px;
-      line-height: 1.7;
     }
 
-    /* CTA */
-    .cta {
-      background: #111;
-      color: #fff;
-      padding: 110px 8%;
+    /* DONATION */
+
+    .donation {
+      min-height: 75vh;
+
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          #e7dfd7,
+          transparent 38%
+        ),
+        #f4f1ec;
+    }
+
+    .donation-content {
+      max-width: 800px;
+    }
+
+    /* JOIN */
+
+    .join {
       text-align: center;
     }
 
-    .cta h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(45px, 6vw, 78px);
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -3px;
-      margin-bottom: 28px;
-    }
-
-    .cta p {
-      color: #bdbdbd;
-      max-width: 530px;
-      margin: 0 auto 35px;
-      line-height: 1.7;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: #fff;
-      color: #111;
-      padding: 14px 25px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: .25s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      background: #eaeaea;
+    .join .text {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* FOOTER */
+
     footer {
-      background: #111;
-      color: #fff;
-      border-top: 1px solid #333;
-      padding: 28px 7%;
+      padding: 45px 8%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 12px;
+
+      border-top: 1px solid #dedcd8;
     }
 
-    footer .socials {
-      display: flex;
-      gap: 22px;
+    footer a {
+      text-decoration: none;
+
+      font-size: 9px;
+      letter-spacing: 2px;
+
+      margin-right: 25px;
     }
 
     footer a:hover {
-      opacity: .55;
+      opacity: 0.5;
     }
 
     /* MOBILE */
-    @media (max-width: 850px) {
+
+    @media (max-width: 700px) {
+
       nav {
-        padding: 0 5%;
+        padding: 18px 5%;
       }
 
-      .nav-links {
-        gap: 15px;
-        font-size: 11px;
-      }
-
-      .join-btn {
-        padding: 9px 13px;
+      .links a {
+        margin-left: 8px;
+        font-size: 8px;
       }
 
       .hero {
+        padding: 140px 8% 70px;
+      }
+
+      h1 {
+        letter-spacing: -5px;
+      }
+
+      h2 {
+        letter-spacing: -4px;
+      }
+
+      section {
+        padding: 90px 8%;
+      }
+
+      .lesson-card {
+        min-height: 420px;
+        padding: 30px;
+      }
+
+      .impact-grid {
         grid-template-columns: 1fr;
-        padding: 65px 6%;
-        gap: 45px;
-      }
-
-      .hero h1 {
-        letter-spacing: -2px;
-      }
-
-      .photo-loop {
-        height: 420px;
-      }
-
-      .photo {
-        width: 300px;
-      }
-
-      .area-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .areas {
-        padding: 80px 6%;
-      }
-
-      .areas-title {
-        font-size: 44px;
       }
 
       footer {
         flex-direction: column;
-        gap: 18px;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .nav-links a:not(.join-btn) {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero h1 {
-        font-size: 56px;
-      }
-
-      .photo-loop {
-        height: 350px;
-      }
-
-      .photo {
-        width: 260px;
+        align-items: flex-start;
+        gap: 25px;
       }
     }
   </style>
@@ -425,137 +403,149 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html" class="logo">PRE-DERM SOCIETY</a>
 
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="skin101.html">Learn</a>
-      <a href="impact.html">Impact</a>
-      <a href="donate.html">Donate</a>
-      <a href="join.html" class="join-btn">Join Us</a>
+  <nav>
+
+    <a href="index.html" class="logo">
+      PRE-DERM SOCIETY
+    </a>
+
+    <div class="links">
+
+      <a href="#about">ABOUT</a>
+
+      <a href="skin101.html">LEARN</a>
+
+      <a href="#impact">IMPACT</a>
+
+      <a href="#donate">DONATE</a>
+
     </div>
+
   </nav>
 
 
   <!-- HERO -->
-  <main class="hero">
 
-    <div class="hero-text">
-      <div class="eyebrow">Student-led dermatology education</div>
+  <div class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        SKIN SCIENCE · EDUCATION · COMMUNITY
+      </div>
 
       <h1>
-        The future of<br>
-        <span>skin health.</span>
+        PRE-DERM<br>
+        SOCIETY
       </h1>
 
-      <p>
-        Pre-Derm Society is a student-led community making dermatology,
-        skincare education, research opportunities, and meaningful impact
-        more accessible to students.
+      <p class="hero-description">
+        A student-led space for exploring dermatology,
+        learning skin science, teaching others,
+        and giving back.
       </p>
 
-      <div class="hero-buttons">
-        <a href="skin101.html" class="primary-btn">Explore Skin 101 →</a>
-        <a href="about.html" class="secondary-btn">About us</a>
-      </div>
+      <a href="skin101.html" class="button">
+        START LEARNING →
+      </a>
+
     </div>
 
-
-    <!--
-      PHOTO LOOP
-
-      Put your photos inside a folder named "images".
-
-      Rename your photos:
-      photo1.jpg
-      photo2.jpg
-      photo3.jpg
-      photo4.jpg
-
-      Then the loop below will automatically cycle through them.
-    -->
-
-    <div class="photo-loop">
-      <div class="photo-track">
-
-        <img src="images/photo1.jpg" class="photo" alt="Pre-Derm Society">
-
-        <img src="images/photo2.jpg" class="photo" alt="Pre-Derm Society">
-
-        <img src="images/photo3.jpg" class="photo" alt="Pre-Derm Society">
-
-        <img src="images/photo4.jpg" class="photo" alt="Pre-Derm Society">
+  </div>
 
 
-        <!-- DUPLICATE SET = SMOOTH INFINITE LOOP -->
+  <!-- ABOUT -->
 
-        <img src="images/photo1.jpg" class="photo" alt="Pre-Derm Society">
+  <section class="about" id="about">
 
-        <img src="images/photo2.jpg" class="photo" alt="Pre-Derm Society">
+    <div class="about-content">
 
-        <img src="images/photo3.jpg" class="photo" alt="Pre-Derm Society">
-
-        <img src="images/photo4.jpg" class="photo" alt="Pre-Derm Society">
-
+      <div class="label">
+        ABOUT
       </div>
+
+      <h2>
+        Learn about<br>
+        skin differently.
+      </h2>
+
+      <p class="text">
+        Pre-Derm Society is a student-led educational
+        initiative created to make dermatology and
+        skin science easier to understand and explore.
+      </p>
+
+      <p class="text">
+        We believe knowledge becomes more meaningful
+        when it is shared. Our goal is to learn,
+        teach, and give back to our community.
+      </p>
+
     </div>
 
-  </main>
+  </section>
 
 
-  <!-- INTRO -->
-  <section class="intro">
+  <!-- VISUAL SECTION -->
 
-    <div class="section-label">Why Pre-Derm Society</div>
+  <section class="photo-section">
+
+    <div class="photo-overlay"></div>
+
+    <div class="photo-content">
+
+      <div class="label">
+        LEARN · TEACH · GIVE
+      </div>
+
+      <h2>
+        Knowledge<br>
+        should be shared.
+      </h2>
+
+    </div>
+
+  </section>
+
+
+  <!-- LEARNING -->
+
+  <section class="learn">
+
+    <div class="label">
+      LEARNING
+    </div>
 
     <h2>
-      Learn. Connect. Create impact.
+      Start with<br>
+      the basics.
     </h2>
 
-    <p>
-      We believe students should have opportunities to explore dermatology
-      before medical school while helping make reliable skin-health education
-      accessible to their communities.
+    <p class="text">
+      Build your foundation in skin science before
+      exploring the deeper world of dermatology.
     </p>
 
-  </section>
+    <div class="lesson-card">
 
+      <div class="label">
+        SKIN SCIENCE 01
+      </div>
 
-  <!-- THREE AREAS -->
-  <section class="areas">
+      <h3>
+        The Science of Skin
+      </h3>
 
-    <div class="section-label">What we do</div>
+      <p class="text">
+        Explore the major layers of skin, what they do,
+        and why understanding the basics matters.
+      </p>
 
-    <h2 class="areas-title">More than a club.</h2>
-
-    <div class="area-grid">
-
-      <a href="skin101.html" class="area">
-        <div class="area-number">01</div>
-        <h3>Learn</h3>
-        <p>
-          Interactive Skin 101 lessons designed to make dermatology
-          understandable, interesting, and accessible.
-        </p>
-      </a>
-
-      <a href="opportunities.html" class="area">
-        <div class="area-number">02</div>
-        <h3>Explore</h3>
-        <p>
-          Discover research, internships, volunteering, mentorship,
-          and other opportunities related to dermatology and medicine.
-        </p>
-      </a>
-
-      <a href="impact.html" class="area">
-        <div class="area-number">03</div>
-        <h3>Impact</h3>
-        <p>
-          Help us bring skin-health education to schools and younger
-          students while supporting meaningful community initiatives.
-        </p>
+      <a href="skin101.html" class="button">
+        BEGIN LESSON →
       </a>
 
     </div>
@@ -563,39 +553,317 @@
   </section>
 
 
-  <!-- CTA -->
-  <section class="cta">
+  <!-- IMPACT -->
 
-    <h2>Build the future<br>of dermatology.</h2>
+  <section class="impact" id="impact">
 
-    <p>
-      Whether you want to learn about skin science, explore medicine,
-      find opportunities, or make an impact, there is a place for you here.
+    <div class="label">
+      OUR IMPACT
+    </div>
+
+    <h2>
+      Learning becomes<br>
+      impact.
+    </h2>
+
+    <p class="text">
+      Pre-Derm Society has already begun creating
+      impact through skin-science education.
     </p>
 
-    <a href="join.html" class="cta-button">Join Pre-Derm Society →</a>
+
+    <!-- MAIN IMPACT NUMBER -->
+
+    <div class="impact-number" id="peopleImpactedMain">
+      38
+    </div>
+
+    <div class="impact-label">
+      PEOPLE IMPACTED
+    </div>
+
+
+    <!-- IMPACT GRID -->
+
+    <div class="impact-grid">
+
+
+      <!-- PEOPLE IMPACTED -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          PEOPLE IMPACTED
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="peopleImpacted">
+          38
+        </div>
+
+        <div class="impact-box-label">
+          PEOPLE IMPACTED
+        </div>
+
+      </div>
+
+
+      <!-- MEETINGS DONE -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          MEETINGS DONE
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="meetingsDone">
+          10
+        </div>
+
+        <div class="impact-box-label">
+          MEETINGS DONE
+        </div>
+
+      </div>
+
+
+      <!-- LESSONS TAUGHT -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          LESSONS TAUGHT
+        </div>
+
+        <div
+          class="impact-box-number"
+          id="lessonsTaught">
+          2
+        </div>
+
+        <div class="impact-box-label">
+          LESSONS TAUGHT
+        </div>
+
+      </div>
+
+
+      <!-- CARE BOXES -->
+
+      <div class="impact-box">
+
+        <div class="label">
+          CARE BOXES
+        </div>
+
+        <div class="impact-box-number">
+          0
+        </div>
+
+        <div class="impact-box-label">
+          CARE BOXES · COMING SOON
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- DONATION -->
+
+  <section class="donation" id="donate">
+
+    <div class="donation-content">
+
+      <div class="label">
+        GIVE BACK
+      </div>
+
+      <h2>
+        Make a<br>
+        difference.
+      </h2>
+
+      <p class="text">
+        Help support future educational programs,
+        community initiatives, and care-box projects.
+      </p>
+
+      <a
+        href="#"
+        class="button"
+        onclick="alert('Our donation program is coming soon!'); return false;"
+      >
+        MAKE A DONATION →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOIN -->
+
+  <section class="join">
+
+    <div class="label">
+      JOIN
+    </div>
+
+    <h2>
+      Learn with us.
+    </h2>
+
+    <p class="text">
+      Interested in dermatology, skin science,
+      education, or community service?
+      We'd love to have you be part of the journey.
+    </p>
+
+    <a
+      href="mailto:predermsociety@gmail.com"
+      class="button"
+    >
+      CONTACT PRE-DERM SOCIETY →
+    </a>
 
   </section>
 
 
   <!-- FOOTER -->
+
   <footer>
 
-    <div>© 2026 Pre-Derm Society</div>
+    <div>
 
-    <div class="socials">
-      <a href="https://www.instagram.com/prederm_society/" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@prederm_society" target="_blank">TikTok</a>
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TIKTOK
+      </a>
+
+      <a href="mailto:predermsociety@gmail.com">
+        EMAIL
+      </a>
+
+    </div>
+
+    <div class="label">
+      PRE-DERM SOCIETY
     </div>
 
   </footer>
 
 
+  <!-- IMPACT COUNTERS -->
+
   <script>
-    // Keeps the photo loop smooth if the browser is resized.
-    window.addEventListener("resize", () => {
-      document.querySelector(".photo-track").style.animationPlayState = "running";
-    });
+
+    /*
+      These are the current official starting numbers.
+      Quiz completions from Skin 101 can update
+      PEOPLE IMPACTED and LESSONS TAUGHT.
+    */
+
+    const defaultPeopleImpacted = 38;
+    const defaultMeetingsDone = 10;
+    const defaultLessonsTaught = 2;
+
+
+    /*
+      Keep the counters synchronized between
+      index.html and skin101.html.
+    */
+
+    let peopleImpacted =
+      Number(localStorage.getItem("peopleImpacted"));
+
+    let lessonsTaught =
+      Number(localStorage.getItem("lessonsTaught"));
+
+
+    /*
+      If this is the first time the updated system
+      is being used, start with the official numbers.
+    */
+
+    if (
+      !localStorage.getItem("impactSystemInitialized")
+    ) {
+      peopleImpacted = defaultPeopleImpacted;
+      lessonsTaught = defaultLessonsTaught;
+
+      localStorage.setItem(
+        "peopleImpacted",
+        peopleImpacted
+      );
+
+      localStorage.setItem(
+        "lessonsTaught",
+        lessonsTaught
+      );
+
+      localStorage.setItem(
+        "meetingsDone",
+        defaultMeetingsDone
+      );
+
+      localStorage.setItem(
+        "impactSystemInitialized",
+        "true"
+      );
+    }
+
+
+    /*
+      Meetings stay at 10 unless you manually
+      change the number later.
+    */
+
+    const meetingsDone =
+      Number(localStorage.getItem("meetingsDone"))
+      || defaultMeetingsDone;
+
+
+    /*
+      Display the numbers.
+    */
+
+    document.getElementById(
+      "peopleImpacted"
+    ).textContent = peopleImpacted;
+
+
+    document.getElementById(
+      "peopleImpactedMain"
+    ).textContent = peopleImpacted;
+
+
+    document.getElementById(
+      "meetingsDone"
+    ).textContent = meetingsDone;
+
+
+    document.getElementById(
+      "lessonsTaught"
+    ).textContent = lessonsTaught;
+
   </script>
 
 </body>
