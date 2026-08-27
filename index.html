@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,15 +8,391 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link
-href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-rel="stylesheet">
+<style>
 
-<link rel="stylesheet" href="styles.css">
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:#fff;
+color:#171717;
+line-height:1.6;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+
+/* NAV */
+
+nav{
+width:100%;
+padding:24px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+background:rgba(255,255,255,.97);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:18px;
+font-weight:700;
+letter-spacing:-.5px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+align-items:center;
+font-size:14px;
+font-weight:500;
+}
+
+.nav-links a:hover{
+opacity:.55;
+}
+
+.join-btn{
+border:1px solid #171717;
+padding:9px 18px;
+border-radius:30px;
+}
+
+.join-btn:hover{
+background:#171717;
+color:#fff;
+opacity:1!important;
+}
+
+
+/* HERO */
+
+.hero{
+min-height:75vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:80px 7%;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.eyebrow{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#777;
+margin-bottom:20px;
+}
+
+h1{
+font-size:clamp(48px,8vw,88px);
+line-height:.98;
+letter-spacing:-4px;
+font-weight:600;
+margin-bottom:28px;
+}
+
+.hero p{
+max-width:620px;
+margin:0 auto 35px;
+color:#666;
+font-size:17px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+padding:13px 23px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+}
+
+.primary-btn{
+background:#171717;
+color:#fff;
+}
+
+.secondary-btn{
+border:1px solid #ddd;
+}
+
+.primary-btn:hover{
+opacity:.8;
+}
+
+.secondary-btn:hover{
+background:#f7f7f7;
+}
+
+
+/* SOCIAL STRIP */
+
+.social-strip{
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
+padding:22px 7%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+font-size:13px;
+}
+
+.social-strip a{
+font-weight:600;
+}
+
+.social-strip a:hover{
+opacity:.55;
+}
+
+
+/* IMPACT COUNTERS */
+
+.stats{
+padding:55px 7%;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1px;
+background:#eee;
+}
+
+.stat{
+background:#fff;
+text-align:center;
+padding:35px 20px;
+}
+
+.stat-number{
+font-size:48px;
+font-weight:600;
+letter-spacing:-3px;
+}
+
+.stat-label{
+font-size:12px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#777;
+margin-top:5px;
+}
+
+
+/* INSTAGRAM */
+
+.instagram{
+padding:90px 7%;
+}
+
+.section-heading{
+max-width:700px;
+margin-bottom:45px;
+}
+
+.section-heading span{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#888;
+}
+
+.section-heading h2{
+font-size:clamp(34px,5vw,55px);
+letter-spacing:-2px;
+line-height:1.05;
+margin-top:10px;
+font-weight:600;
+}
+
+.section-heading p{
+margin-top:15px;
+color:#777;
+}
+
+.instagram-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:900px;
+margin:auto;
+}
+
+.instagram-card{
+border:1px solid #e9e9e9;
+border-radius:22px;
+overflow:hidden;
+background:#fff;
+transition:.25s;
+}
+
+.instagram-card:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.instagram-card img{
+width:100%;
+height:400px;
+object-fit:cover;
+display:block;
+}
+
+.instagram-info{
+padding:22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:13px;
+font-weight:600;
+}
+
+.instagram-info span:last-child{
+color:#888;
+font-weight:500;
+}
+
+
+/* PHOTO LOOP */
+
+.photo-section{
+overflow:hidden;
+padding:30px 0 80px;
+}
+
+.photo-track{
+display:flex;
+width:max-content;
+gap:16px;
+animation:scrollPhotos 32s linear infinite;
+}
+
+.photo-track:hover{
+animation-play-state:paused;
+}
+
+.photo-track img{
+width:270px;
+height:150px;
+object-fit:cover;
+border-radius:16px;
+opacity:.88;
+filter:saturate(.85);
+}
+
+@keyframes scrollPhotos{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(-50%);
+}
+}
+
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+border-top:1px solid #eee;
+padding-top:100px;
+padding-bottom:30px;
+}
+
+.contact h2{
+font-size:clamp(40px,6vw,70px);
+letter-spacing:-3px;
+margin-bottom:15px;
+}
+
+.contact p{
+color:#777;
+margin-bottom:25px;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:25px;
+font-size:14px;
+font-weight:600;
+margin-bottom:55px;
+}
+
+.socials a:hover{
+opacity:.55;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+font-size:12px;
+color:#999;
+padding:25px;
+border-top:1px solid #eee;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.nav-links{
+gap:12px;
+}
+
+.nav-links a:not(.join-btn){
+display:none;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.instagram-grid{
+grid-template-columns:1fr;
+}
+
+.instagram-card img{
+height:350px;
+}
+
+h1{
+letter-spacing:-2.5px;
+}
+
+}
+
+</style>
 </head>
-
 
 <body>
 
@@ -31,28 +405,15 @@ rel="stylesheet">
 Pre-Derm Society
 </a>
 
-
 <div class="nav-links">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="learn.html">
-Learn
-</a>
+<a href="learn.html">Learn</a>
 
-<a href="resources.html">
-Resources
-</a>
+<a href="resources.html">Resources</a>
 
-<a href="opportunities.html">
-Opportunities
-</a>
-
-<a href="research.html">
-Research
-</a>
+<a href="impact.html">Impact</a>
 
 <a href="join.html" class="join-btn">
 Join Now
@@ -73,20 +434,15 @@ Join Now
 Student-led • Medicine • Dermatology
 </div>
 
-
 <h1>
 Medicine starts<br>
 with curiosity.
 </h1>
 
-
 <p>
-
-Pre-Derm Society is a student-led space for exploring dermatology,
-medicine, skincare, research, and healthcare.
-
+Pre-Derm Society is a student-led space for exploring
+dermatology, medicine, skincare, research, and healthcare.
 </p>
-
 
 <div class="hero-buttons">
 
@@ -105,120 +461,147 @@ Skin 101
 </header>
 
 
-<!-- IMPACT -->
+<!-- INSTAGRAM FOLLOW -->
 
-<section class="impact">
+<div class="social-strip">
 
-<div class="section-heading">
+<span>Follow us</span>
 
-<span>
-Our Impact
-</span>
+<a
+href="https://www.instagram.com/prederm_society/"
+target="_blank"
+rel="noopener noreferrer"
+>
+@prederm_society
+</a>
 
-<h2>
-Learning can create impact.
-</h2>
+<span>·</span>
 
-<p>
-Every lesson completed helps us grow our student-led
-education community.
-</p>
+<a
+href="https://www.instagram.com/p/DVCQc5Aksk4/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+target="_blank"
+rel="noopener noreferrer"
+>
+Instagram
+</a>
 
 </div>
 
 
-<div class="impact-grid">
+<!-- COUNTERS -->
 
+<section class="stats">
 
-<div class="impact-card">
+<div class="stat">
 
-<div
-class="impact-number"
-data-target="100"
-data-suffix="+"
->
+<div class="stat-number" data-target="100">
 0
 </div>
 
-<div class="impact-label">
+<div class="stat-label">
 People Reached
 </div>
 
 </div>
 
 
-<div class="impact-card">
+<div class="stat">
 
-<div
-class="impact-number"
-data-target="20"
-data-suffix=""
->
+<div class="stat-number" data-target="20">
 0
 </div>
 
-<div class="impact-label">
+<div class="stat-label">
 Lessons Completed
 </div>
 
 </div>
 
 
+<div class="stat">
+
+<div class="stat-number" data-target="3">
+0
+</div>
+
+<div class="stat-label">
+Student Projects
+</div>
+
 </div>
 
 </section>
 
 
-<!-- INSTAGRAM -->
+<!-- INSTAGRAM POSTS -->
 
-<section class="instagram-section">
+<section class="instagram">
 
-<div class="instagram-heading">
+<div class="section-heading">
 
-<div class="eyebrow">
-Follow Us
-</div>
+<span>
+Follow Along
+</span>
 
 <h2>
-@prederm_society
+What we're sharing.
 </h2>
 
 <p>
-Follow along with Pre-Derm Society on Instagram.
+Follow Pre-Derm Society as we explore dermatology,
+medicine, science, and student-led education.
 </p>
 
 </div>
 
 
-<div class="instagram-posts">
+<div class="instagram-grid">
 
 
-<div class="instagram-card">
-
-<blockquote
-class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
-data-instgrm-version="14"
-style="background:#FFF;border:0;margin:0 auto;max-width:540px;width:100%;"
+<a
+class="instagram-card"
+href="https://www.instagram.com/p/DVCQc5Aksk4/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+target="_blank"
+rel="noopener noreferrer"
 >
 
-</blockquote>
+<img
+src="IMG_5085.jpeg"
+alt="Pre-Derm Society Instagram post"
+>
+
+<div class="instagram-info">
+
+<span>Instagram Post</span>
+
+<span>VIEW POST →</span>
 
 </div>
 
+</a>
 
-<div class="instagram-card">
 
-<blockquote
-class="instagram-media"
-data-instgrm-permalink="https://www.instagram.com/p/DWMkQ6TCcM3/"
-data-instgrm-version="14"
-style="background:#FFF;border:0;margin:0 auto;max-width:540px;width:100%;"
+<a
+class="instagram-card"
+href="https://www.instagram.com/p/DWMkQ6TCcM3/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+target="_blank"
+rel="noopener noreferrer"
 >
 
-</blockquote>
+<img
+src="IMG_8766.jpeg"
+alt="Pre-Derm Society Instagram post"
+>
+
+<div class="instagram-info">
+
+<span>Instagram Post</span>
+
+<span>VIEW POST →</span>
 
 </div>
+
+</a>
 
 
 </div>
@@ -232,48 +615,21 @@ style="background:#FFF;border:0;margin:0 auto;max-width:540px;width:100%;"
 
 <div class="photo-track">
 
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_5085.jpeg"
-alt="Pre-Derm Society"
->
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_8766.jpeg"
-alt="Pre-Derm Society"
->
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_5125.jpeg"
-alt="Pre-Derm Society"
->
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_5126.jpeg"
-alt="Pre-Derm Society"
->
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
 
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_5085.jpeg"
-alt="Pre-Derm Society"
->
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
 
-<img
-src="IMG_8766.jpeg"
-alt="Pre-Derm Society"
->
-
-<img
-src="IMG_5125.jpeg"
-alt="Pre-Derm Society"
->
-
-<img
-src="IMG_5126.jpeg"
-alt="Pre-Derm Society"
->
-
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
 </div>
 
@@ -297,26 +653,21 @@ A student-led community exploring medicine,
 science, and dermatology.
 </p>
 
-
 <div class="socials">
 
 <a
 href="https://www.instagram.com/prederm_society/"
 target="_blank"
-rel="noopener noreferrer"
 >
-Instagram ↗
+Instagram
 </a>
-
 
 <a
 href="https://www.tiktok.com/@prederm_society"
 target="_blank"
-rel="noopener noreferrer"
 >
-TikTok ↗
+TikTok
 </a>
-
 
 <a href="join.html">
 Join Us
@@ -328,94 +679,54 @@ Join Us
 
 
 <footer>
-
 © 2026 Pre-Derm Society · Student-led education
-
 </footer>
 
 
-<!-- INSTAGRAM SCRIPT -->
-
-<script async src="https://www.instagram.com/embed.js"></script>
-
-
-<!-- NUMBER ANIMATION -->
-
 <script>
 
-const numbers =
-document.querySelectorAll(".impact-number");
+/* COUNT-UP ANIMATION */
 
+const counters =
+document.querySelectorAll(".stat-number");
 
-numbers.forEach(number => {
+const speed = 45;
+
+counters.forEach(counter => {
 
 const target =
-parseInt(number.dataset.target);
-
-const suffix =
-number.dataset.suffix || "";
-
+Number(counter.dataset.target);
 
 let current = 0;
 
+const updateCounter = () => {
 
-/*
-Fast animation:
-starts at 0 and rapidly reaches
-the final number.
-*/
+const increment =
+Math.max(1, Math.ceil(target / speed));
 
-const duration = 1100;
+current += increment;
 
-const startTime = performance.now();
+if(current >= target){
 
+counter.textContent =
+target + "+";
 
-function animate(currentTime){
-
-const elapsed =
-currentTime - startTime;
-
-const progress =
-Math.min(elapsed / duration, 1);
-
-
-/*
-Ease-out effect:
-fast at first, slower near the end.
-*/
-
-const eased =
-1 - Math.pow(1 - progress, 3);
-
-
-current =
-Math.floor(eased * target);
-
-
-number.textContent =
-current + suffix;
-
-
-if(progress < 1){
-
-requestAnimationFrame(animate);
-
-}else{
-
-number.textContent =
-target + suffix;
+return;
 
 }
 
-}
+counter.textContent =
+current;
 
+setTimeout(updateCounter, 25);
 
-requestAnimationFrame(animate);
+};
+
+updateCounter();
 
 });
 
 </script>
-
 
 </body>
 </html>
