@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pre-Derm Society</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,238 +11,358 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#fff;color:#171717;line-height:1.6}
-a{color:inherit;text-decoration:none}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#fff;
+  color:#171717;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NAV */
 
 nav{
-width:100%;padding:24px 7%;display:flex;justify-content:space-between;
-align-items:center;border-bottom:1px solid #eee;background:rgba(255,255,255,.97);
-position:sticky;top:0;z-index:100
+  width:100%;
+  padding:22px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eee;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.logo{font-size:18px;font-weight:700;letter-spacing:-.5px}
+.logo{
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:-.5px;
+}
 
 .nav-links{
-display:flex;gap:12px;align-items:center;font-size:14px;font-weight:500
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:13px;
+  font-weight:500;
 }
 
-.nav-links a{
-padding:9px 15px;border-radius:30px
+.nav-links a:hover{
+  opacity:.5;
 }
-
-.nav-links a:hover{background:#f6f6f6}
 
 .join-btn{
-border:1px solid #171717!important
+  border:1px solid #171717;
+  padding:9px 18px;
+  border-radius:30px;
 }
 
 .join-btn:hover{
-background:#171717!important;color:#fff
+  background:#171717;
+  color:#fff;
+  opacity:1!important;
 }
+
+/* SOCIAL TOP */
+
+.social-strip{
+  text-align:center;
+  padding:12px 20px;
+  border-bottom:1px solid #eee;
+  font-size:12px;
+  letter-spacing:.5px;
+  color:#777;
+}
+
+.social-strip a{
+  color:#171717;
+  font-weight:600;
+}
+
+.social-strip a:hover{
+  opacity:.5;
+}
+
+/* HERO */
 
 .hero{
-min-height:78vh;display:flex;align-items:center;justify-content:center;
-text-align:center;padding:80px 7%
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 7% 70px;
 }
 
-.hero-content{max-width:850px}
+.hero-content{
+  max-width:900px;
+}
 
 .eyebrow{
-font-size:12px;letter-spacing:2px;text-transform:uppercase;
-color:#777;margin-bottom:20px
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:20px;
 }
 
 h1{
-font-size:clamp(48px,8vw,88px);line-height:.98;
-letter-spacing:-4px;font-weight:600;margin-bottom:28px
+  font-size:clamp(50px,8vw,88px);
+  line-height:.98;
+  letter-spacing:-4px;
+  font-weight:600;
+  margin-bottom:28px;
 }
 
 .hero p{
-max-width:620px;margin:0 auto 35px;color:#666;font-size:17px
+  max-width:650px;
+  margin:0 auto;
+  color:#666;
+  font-size:17px;
 }
 
 .hero-buttons{
-display:flex;justify-content:center;gap:12px;flex-wrap:wrap
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:35px;
 }
 
-.primary-btn,.secondary-btn{
-padding:13px 23px;border-radius:30px;font-size:14px;font-weight:600
+.primary-btn,
+.secondary-btn{
+  padding:13px 23px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
 }
 
-.primary-btn{background:#171717;color:#fff}
-.secondary-btn{border:1px solid #ddd}
-
-.primary-btn:hover{opacity:.8}
-.secondary-btn:hover{background:#f7f7f7}
-
-section{padding:90px 7%}
-
-.section-heading{
-max-width:700px;margin-bottom:45px
+.primary-btn{
+  background:#171717;
+  color:#fff;
 }
 
-.section-heading span{
-font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888
+.secondary-btn{
+  border:1px solid #ddd;
 }
 
-.section-heading h2{
-font-size:clamp(34px,5vw,55px);letter-spacing:-2px;
-line-height:1.05;margin-top:10px;font-weight:600
+.primary-btn:hover{
+  opacity:.8;
 }
 
-.section-heading p{
-margin-top:15px;color:#777
+.secondary-btn:hover{
+  background:#f7f7f7;
 }
 
-.cards{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+/* FEATURE IMAGE */
+
+.home-photo{
+  padding:20px 7% 90px;
 }
 
-.card{
-border:1px solid #e9e9e9;border-radius:22px;padding:30px;
-min-height:245px;display:flex;flex-direction:column;
-justify-content:space-between;transition:.25s;background:#fff
+.photo-card{
+  max-width:1050px;
+  margin:auto;
+  border-radius:28px;
+  overflow:hidden;
+  background:#f7f7f7;
 }
 
-.card:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(0,0,0,.06)
+.photo-card img{
+  width:100%;
+  display:block;
+  height:500px;
+  object-fit:cover;
+  filter:saturate(.85) contrast(.98);
 }
 
-.emoji{font-size:27px;margin-bottom:18px}
-.card-number{font-size:11px;color:#999;letter-spacing:1px;margin-bottom:7px}
-.card h3{font-size:22px;margin-bottom:8px;letter-spacing:-.5px}
-.card p{font-size:14px;color:#777}
-.card-link{margin-top:20px;font-size:13px;font-weight:700}
-.card-link:hover{opacity:.55}
+/* IMPACT */
 
-.instagram-section{
-background:#f8f8f8;
-text-align:center;
-border-radius:30px;
-margin:20px 7%;
-padding:65px 7%;
+.impact{
+  padding:90px 7%;
+  text-align:center;
+  border-top:1px solid #eee;
 }
 
-.instagram-section h2{
-font-size:clamp(35px,5vw,55px);
-letter-spacing:-2px;
-margin:10px 0;
-}
-
-.instagram-section p{color:#777;margin-bottom:25px}
-
-.instagram-btn{
-display:inline-block;
-border:1px solid #171717;
-padding:12px 22px;
-border-radius:30px;
-font-size:14px;
-font-weight:600;
-}
-
-.instagram-btn:hover{
-background:#171717;color:#fff
-}
-
-.photo-section{
-overflow:hidden;
-padding:30px 0 80px
-}
-
-.photo-track{
-display:flex;width:max-content;gap:16px;
-animation:scrollPhotos 32s linear infinite
-}
-
-.photo-track:hover{animation-play-state:paused}
-
-.photo-track img{
-width:270px;height:150px;object-fit:cover;border-radius:16px;
-opacity:.88;filter:saturate(.85) blur(.35px)
-}
-
-@keyframes scrollPhotos{
-from{transform:translateX(0)}
-to{transform:translateX(-50%)}
+.impact-heading{
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-2.5px;
+  line-height:1;
+  margin-bottom:60px;
+  font-weight:600;
 }
 
 .stats{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-margin-top:50px;
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
 
 .stat{
-border:1px solid #e9e9e9;
-border-radius:22px;
-padding:35px;
-text-align:center;
+  padding:45px 25px;
+  border:1px solid #e9e9e9;
+  border-radius:24px;
 }
 
 .stat-number{
-font-size:clamp(50px,7vw,80px);
-font-weight:600;
-letter-spacing:-4px;
-line-height:1;
+  font-size:clamp(50px,8vw,85px);
+  line-height:1;
+  letter-spacing:-4px;
+  font-weight:600;
 }
 
 .stat-label{
-margin-top:12px;
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#888;
+  margin-top:14px;
+  font-size:12px;
+  letter-spacing:2px;
+  color:#777;
+  text-transform:uppercase;
 }
 
-.contact{
-text-align:center;
-border-top:1px solid #eee;
-padding-top:100px;
-padding-bottom:30px
+/* QUICK ACCESS */
+
+.quick{
+  padding:100px 7%;
+  border-top:1px solid #eee;
 }
 
-.contact h2{
-font-size:clamp(40px,6vw,70px);
-letter-spacing:-3px;margin-bottom:15px
+.quick-heading{
+  max-width:700px;
+  margin-bottom:45px;
 }
 
-.contact p{color:#777;margin-bottom:25px}
-
-.socials{
-display:flex;justify-content:center;gap:25px;
-font-size:14px;font-weight:600;margin-bottom:55px
+.quick-heading span{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#888;
 }
 
-.socials a:hover{opacity:.55}
+.quick-heading h2{
+  font-size:clamp(38px,5vw,58px);
+  letter-spacing:-2px;
+  line-height:1.05;
+  margin-top:10px;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.quick-card{
+  border:1px solid #e9e9e9;
+  border-radius:22px;
+  padding:30px;
+  min-height:230px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.25s;
+}
+
+.quick-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.quick-icon{
+  font-size:27px;
+  margin-bottom:15px;
+}
+
+.quick-card h3{
+  font-size:23px;
+  margin-bottom:8px;
+}
+
+.quick-card p{
+  color:#777;
+  font-size:14px;
+}
+
+.quick-link{
+  margin-top:20px;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* FOOTER */
 
 footer{
-text-align:center;font-size:12px;color:#999;
-padding:25px;border-top:1px solid #eee
+  border-top:1px solid #eee;
+  padding:30px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  color:#999;
 }
 
-@media(max-width:850px){
-
-.cards{grid-template-columns:1fr}
-
-.stats{grid-template-columns:1fr}
-
-.nav-links{gap:4px}
-
-.nav-links a{
-font-size:11px;
-padding:8px 9px
+.footer-links{
+  display:flex;
+  gap:22px;
 }
 
-h1{letter-spacing:-2.5px}
-
-.instagram-section{
-margin:20px 4%;
+.footer-links a:hover{
+  color:#171717;
 }
 
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .nav-links{
+    gap:12px;
+  }
+
+  .nav-links a:not(.join-btn){
+    display:none;
+  }
+
+  .hero{
+    min-height:65vh;
+  }
+
+  h1{
+    letter-spacing:-2.5px;
+  }
+
+  .photo-card img{
+    height:330px;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:20px;
+  }
 }
 </style>
 </head>
@@ -250,17 +371,36 @@ margin:20px 4%;
 
 <nav>
 
-<a href="index.html" class="logo">Pre-Derm Society</a>
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
+
 <a href="learn.html">Learn</a>
+
 <a href="opportunities.html">Opportunities</a>
+
 <a href="about.html">About</a>
+
 <a href="join.html" class="join-btn">Join Now</a>
+
 </div>
 
 </nav>
+
+
+<div class="social-strip">
+
+Follow us
+<a href="https://www.instagram.com/prederm_society/" target="_blank" rel="noopener noreferrer">
+@prederm_society
+</a>
+
+</div>
+
 
 <header class="hero">
 
@@ -281,8 +421,15 @@ dermatology, medicine, skincare, research, and healthcare.
 </p>
 
 <div class="hero-buttons">
-<a href="learn.html" class="primary-btn">Explore Lessons</a>
-<a href="skin101.html" class="secondary-btn">Skin 101</a>
+
+<a href="learn.html" class="primary-btn">
+Explore Lessons
+</a>
+
+<a href="opportunities.html" class="secondary-btn">
+Explore Opportunities
+</a>
+
 </div>
 
 </div>
@@ -290,35 +437,48 @@ dermatology, medicine, skincare, research, and healthcare.
 </header>
 
 
-<section>
+<section class="home-photo">
 
-<div class="section-heading">
+<div class="photo-card">
 
-<span>01 — Our Community</span>
-
-<h2>
-Learning medicine<br>
-starts here.
-</h2>
-
-<p>
-Explore student-friendly dermatology lessons, research resources,
-and opportunities designed to help students become curious about
-science and healthcare.
-</p>
+<img src="IMG_5145.jpeg" alt="Pre-Derm Society">
 
 </div>
+
+</section>
+
+
+<section class="impact">
+
+<h2 class="impact-heading">
+Our impact
+</h2>
 
 <div class="stats">
 
 <div class="stat">
-<div class="stat-number" data-target="100" data-plus="true">0</div>
-<div class="stat-label">People Reached</div>
+
+<div class="stat-number">
+<span class="counter" data-target="100">0</span>+
 </div>
+
+<div class="stat-label">
+People Reached
+</div>
+
+</div>
+
 
 <div class="stat">
-<div class="stat-number" data-target="38">0</div>
-<div class="stat-label">Lessons Taught</div>
+
+<div class="stat-number">
+<span class="counter" data-target="38">0</span>
+</div>
+
+<div class="stat-label">
+Lessons Taught
+</div>
+
 </div>
 
 </div>
@@ -326,58 +486,100 @@ science and healthcare.
 </section>
 
 
-<section class="instagram-section">
+<section class="quick">
 
-<div class="eyebrow">Follow Us</div>
+<div class="quick-heading">
 
-<h2>@prederm_society</h2>
+<span>
+Explore Pre-Derm Society
+</span>
+
+<h2>
+Learn. Research. Explore.
+</h2>
+
+</div>
+
+
+<div class="quick-grid">
+
+<a href="learn.html" class="quick-card">
+
+<div>
+
+<div class="quick-icon">🔎</div>
+
+<h3>Learn</h3>
 
 <p>
-Follow Pre-Derm Society for updates, education, and community projects.
+Explore student-friendly dermatology,
+skincare, and medicine lessons.
 </p>
 
-<a
-href="https://www.instagram.com/prederm_society/"
-target="_blank"
-rel="noopener noreferrer"
-class="instagram-btn"
->
-Visit Instagram →
+</div>
+
+<div class="quick-link">
+EXPLORE LEARNING →
+</div>
+
 </a>
 
-</section>
+
+<a href="opportunities.html" class="quick-card">
+
+<div>
+
+<div class="quick-icon">🧪</div>
+
+<h3>Opportunities</h3>
+
+<p>
+Find research, internships, medicine,
+and STEM opportunities.
+</p>
+
+</div>
+
+<div class="quick-link">
+EXPLORE OPPORTUNITIES →
+</div>
+
+</a>
 
 
-<section class="photo-section">
+<a href="about.html" class="quick-card">
 
-<div class="photo-track">
+<div>
 
-<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+<div class="quick-icon">♡</div>
 
-<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+<h3>About Us</h3>
+
+<p>
+Learn about our mission, education,
+and impact.
+</p>
+
+</div>
+
+<div class="quick-link">
+LEARN ABOUT US →
+</div>
+
+</a>
 
 </div>
 
 </section>
 
 
-<section class="contact">
+<footer>
 
-<div class="eyebrow">Pre-Derm Society</div>
+<div>
+© 2026 Pre-Derm Society
+</div>
 
-<h2>Let's learn together.</h2>
-
-<p>
-A student-led community exploring medicine, science, and dermatology.
-</p>
-
-<div class="socials">
+<div class="footer-links">
 
 <a href="https://www.instagram.com/prederm_society/" target="_blank">
 Instagram
@@ -388,52 +590,57 @@ TikTok
 </a>
 
 <a href="about.html">
-About Us
+About
 </a>
 
 </div>
 
-</section>
-
-<footer>
-© 2026 Pre-Derm Society · Student-led education
 </footer>
 
 
 <script>
 
-function animateNumbers(){
+const counters = document.querySelectorAll(".counter");
 
-const numbers=document.querySelectorAll(".stat-number");
+counters.forEach(counter => {
 
-numbers.forEach(number=>{
+const target = Number(counter.dataset.target);
 
-const target=parseInt(number.dataset.target);
-const plus=number.dataset.plus==="true";
+let current = 0;
 
-let current=0;
+const duration = 1400;
 
-const duration=1200;
-const increment=Math.max(1,Math.ceil(target/60));
+const start = performance.now();
 
-const timer=setInterval(()=>{
+function update(time){
 
-current+=increment;
+const progress = Math.min(
+(time - start) / duration,
+1
+);
 
-if(current>=target){
-current=target;
-clearInterval(timer);
+const eased =
+1 - Math.pow(1 - progress, 3);
+
+current = Math.floor(target * eased);
+
+counter.textContent = current;
+
+if(progress < 1){
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.textContent = target;
+
 }
 
-number.textContent=current+(plus ? "+" : "");
+}
 
-},duration/60);
+requestAnimationFrame(update);
 
 });
-
-}
-
-window.addEventListener("load",animateNumbers);
 
 </script>
 
