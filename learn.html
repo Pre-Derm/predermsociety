@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learn · Pre-Derm Society</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:#fff;
+color:#171717;
+line-height:1.6
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+nav{
+padding:24px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+background:rgba(255,255,255,.97);
+z-index:10
+}
+
+.logo{
+font-size:18px;
+font-weight:700
+}
+
+.links{
+display:flex;
+gap:28px;
+font-size:14px
+}
+
+.links a:hover{
+opacity:.55
+}
+
+.hero{
+padding:120px 7% 90px;
+border-bottom:1px solid #eee
+}
+
+.eyebrow{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#777
+}
+
+h1{
+font-size:clamp(55px,9vw,100px);
+line-height:.95;
+letter-spacing:-5px;
+font-weight:600;
+margin:20px 0
+}
+
+.hero p{
+max-width:650px;
+color:#777;
+font-size:17px
+}
+
+section{
+padding:90px 7%
+}
+
+.section-title{
+font-size:clamp(35px,5vw,55px);
+letter-spacing:-2px;
+margin-bottom:40px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.card{
+border:1px solid #e9e9e9;
+border-radius:22px;
+padding:30px;
+min-height:250px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+transition:.25s
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 40px rgba(0,0,0,.06)
+}
+
+.emoji{
+font-size:28px
+}
+
+.card h2{
+font-size:25px;
+margin-top:15px
+}
+
+.card p{
+font-size:14px;
+color:#777;
+margin-top:8px
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+font-size:13px;
+font-weight:700
+}
+
+.resources{
+background:#f8f8f8;
+border-radius:30px;
+margin:20px 7%;
+padding:60px
+}
+
+.resource{
+padding:22px 0;
+border-bottom:1px solid #ddd
+}
+
+.resource:last-child{
+border-bottom:none
+}
+
+.resource a{
+font-weight:600
+}
+
+.resource a:hover{
+opacity:.55
+}
+
+.back{
+text-align:center;
+padding:80px 7%
+}
+
+.back a{
+border:1px solid #171717;
+border-radius:30px;
+padding:12px 22px;
+font-size:14px;
+font-weight:600
+}
+
+footer{
+text-align:center;
+padding:25px;
+border-top:1px solid #eee;
+font-size:12px;
+color:#999
+}
+
+@media(max-width:800px){
+
+.cards{
+grid-template-columns:1fr
+}
+
+.links{
+gap:12px
+}
+
+.links a:not(:last-child){
+display:none
+}
+
+.resources{
+margin:20px 5%;
+padding:35px
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
+
+<div class="links">
+
+<a href="index.html">Home</a>
+
+<a href="learn.html">Learn</a>
+
+<a href="opportunities.html">Opportunities</a>
+
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="eyebrow">
+01 · Learn
+</div>
+
+<h1>
+Explore medicine<br>
+one lesson at a time.
+</h1>
+
+<p>
+Student-friendly lessons designed to make dermatology,
+skincare, science, and medicine easier to understand.
+</p>
+
+</header>
+
+
+<section>
+
+<h2 class="section-title">
+Lessons
+</h2>
+
+<div class="cards">
+
+
+<a href="skin101.html" class="card">
+
+<div>
+
+<div class="emoji">🔎</div>
+
+<h2>
+Skin 101
+</h2>
+
+<p>
+Learn the basics of skin, its layers, the skin barrier,
+and everyday skin health.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+<a href="cleansing.html" class="card">
+
+<div>
+
+<div class="emoji">🫧</div>
+
+<h2>
+Cleansing
+</h2>
+
+<p>
+Explore what cleansing does and how cleansers interact
+with the skin.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+<a href="moisturizing.html" class="card">
+
+<div>
+
+<div class="emoji">💧</div>
+
+<h2>
+Moisturizing
+</h2>
+
+<p>
+Learn about hydration, moisturizers, and the skin barrier.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+<a href="sunprotection.html" class="card">
+
+<div>
+
+<div class="emoji">☀️</div>
+
+<h2>
+Sun Protection
+</h2>
+
+<p>
+Understand UV radiation, SPF, and why sun protection matters.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+<a href="acne.html" class="card">
+
+<div>
+
+<div class="emoji">🧴</div>
+
+<h2>
+Acne
+</h2>
+
+<p>
+Learn about the biology of acne and evidence-based skincare.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+<a href="medicine101.html" class="card">
+
+<div>
+
+<div class="emoji">🩺</div>
+
+<h2>
+Medicine 101
+</h2>
+
+<p>
+Get introduced to healthcare, medical specialties,
+and clinical thinking.
+</p>
+
+</div>
+
+<div class="button">
+START LESSON →
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<section class="resources">
+
+<div class="eyebrow">
+SAFE LEARNING RESOURCES
+</div>
+
+<h2 class="section-title">
+Keep exploring.
+</h2>
+
+
+<div class="resource">
+
+<a
+href="https://www.aad.org/public"
+target="_blank"
+rel="noopener noreferrer"
+>
+American Academy of Dermatology →
+</a>
+
+<p>
+Reliable dermatology and skin-health information.
+</p>
+
+</div>
+
+
+<div class="resource">
+
+<a
+href="https://www.niams.nih.gov/health-topics/skin-diseases"
+target="_blank"
+rel="noopener noreferrer"
+>
+NIAMS · Skin Diseases →
+</a>
+
+<p>
+Information about skin conditions from the National Institutes of Health.
+</p>
+
+</div>
+
+
+<div class="resource">
+
+<a
+href="https://medlineplus.gov/skindiseases.html"
+target="_blank"
+rel="noopener noreferrer"
+>
+MedlinePlus · Skin Diseases →
+</a>
+
+<p>
+Trusted health information from the U.S. National Library of Medicine.
+</p>
+
+</div>
+
+</section>
+
+
+<div class="back">
+
+<a href="index.html">
+← BACK HOME
+</a>
+
+</div>
+
+
+<footer>
+© 2026 Pre-Derm Society · Student-led education
+</footer>
+
+</body>
+</html>
