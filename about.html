@@ -9,11 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,10 +17,6 @@ rel="stylesheet"
 box-sizing:border-box;
 margin:0;
 padding:0
-}
-
-html{
-scroll-behavior:smooth
 }
 
 body{
@@ -39,21 +31,14 @@ color:inherit;
 text-decoration:none
 }
 
-
-/* NAVIGATION */
-
 nav{
 width:100%;
 padding:24px 7%;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 border-bottom:1px solid #eee;
-
 background:rgba(255,255,255,.97);
-
 position:sticky;
 top:0;
 z-index:100
@@ -67,43 +52,36 @@ letter-spacing:-.5px
 
 .nav-links{
 display:flex;
-gap:28px;
+gap:12px;
 align-items:center;
-
 font-size:14px;
 font-weight:500
 }
 
-.nav-links a:hover{
-opacity:.55
-}
-
-.join-btn{
-border:1px solid #171717;
-padding:9px 18px;
+.nav-links a{
+padding:9px 15px;
 border-radius:30px
 }
 
-.join-btn:hover{
-background:#171717;
-color:#fff;
-opacity:1!important
+.nav-links a:hover{
+background:#f6f6f6
 }
 
+.join-btn{
+border:1px solid #171717
+}
 
-/* HERO */
+.join-btn:hover{
+background:#171717!important;
+color:#fff
+}
 
 .hero{
-min-height:70vh;
-
-display:flex;
-align-items:center;
-
-padding:100px 7%
-}
-
-.hero-content{
-max-width:900px
+padding:110px 7% 90px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center
 }
 
 .eyebrow{
@@ -111,87 +89,87 @@ font-size:12px;
 letter-spacing:2px;
 text-transform:uppercase;
 color:#777;
-margin-bottom:22px
+margin-bottom:20px
 }
 
 h1{
-font-size:clamp(55px,9vw,105px);
+font-size:clamp(50px,7vw,85px);
 line-height:.95;
-letter-spacing:-5px;
-font-weight:600;
-margin-bottom:30px
-}
-
-.hero p{
-max-width:650px;
-font-size:17px;
-color:#666;
-line-height:1.8
-}
-
-
-/* ABOUT */
-
-.about{
-padding:100px 7%;
-border-top:1px solid #eee
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center
-}
-
-.about-image{
-width:100%;
-height:560px;
-object-fit:cover;
-border-radius:28px;
-
-filter:saturate(.8) blur(.25px);
-
-opacity:.92;
-
-box-shadow:0 20px 60px rgba(0,0,0,.06)
-}
-
-.about-text{
-max-width:600px
-}
-
-.label{
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#888;
-margin-bottom:18px
-}
-
-h2{
-font-size:clamp(40px,6vw,65px);
-line-height:1;
-letter-spacing:-3px;
+letter-spacing:-4px;
 font-weight:600;
 margin-bottom:25px
 }
 
-.text{
-color:#707070;
-font-size:16px;
-line-height:1.8;
-margin-bottom:20px
+.hero p{
+color:#777;
+max-width:600px;
+font-size:17px
 }
 
+.hero-image{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:28px;
+filter:saturate(.85) blur(.4px);
+opacity:.9
+}
 
-/* MISSION */
+section{
+padding:90px 7%;
+border-top:1px solid #eee
+}
+
+.section-heading{
+max-width:700px;
+margin-bottom:50px
+}
+
+.section-heading h2{
+font-size:clamp(35px,5vw,55px);
+letter-spacing:-2px;
+line-height:1.05;
+margin-top:10px
+}
+
+.section-heading p{
+color:#777;
+margin-top:15px
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px
+}
+
+.stat{
+border:1px solid #e9e9e9;
+border-radius:24px;
+padding:50px 30px;
+text-align:center
+}
+
+.stat-number{
+font-size:clamp(60px,9vw,100px);
+font-weight:600;
+letter-spacing:-5px;
+line-height:1
+}
+
+.stat-label{
+margin-top:15px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#888
+}
 
 .mission{
-padding:110px 7%;
 background:#f8f8f8;
-border-radius:35px;
-margin:0 7%
+border-radius:30px;
+margin:30px 7%;
+border-top:none
 }
 
 .mission-content{
@@ -199,182 +177,56 @@ max-width:850px
 }
 
 .mission h2{
-font-size:clamp(45px,7vw,80px)
-}
-
-
-/* IMPACT */
-
-.impact{
-padding:110px 7%;
-text-align:center
-}
-
-.impact-heading{
-max-width:700px;
-margin:0 auto
-}
-
-.impact-heading p{
-color:#777;
-margin-top:15px
-}
-
-.impact-grid{
-max-width:950px;
-margin:55px auto 0;
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-
-gap:18px
-}
-
-.impact-card{
-border:1px solid #e9e9e9;
-border-radius:22px;
-padding:40px 20px;
-background:#fff
-}
-
-.number{
-font-size:clamp(50px,7vw,80px);
-font-weight:600;
-letter-spacing:-4px;
+font-size:clamp(40px,6vw,65px);
+letter-spacing:-3px;
 line-height:1;
-margin-bottom:15px
+margin-bottom:25px
 }
 
-.number-label{
-font-size:12px;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:#888
-}
-
-
-/* PHOTO */
-
-.photo-section{
-padding:40px 7% 100px
-}
-
-.photo{
-width:100%;
-height:430px;
-
-object-fit:cover;
-
-border-radius:28px;
-
-filter:saturate(.8) blur(.25px);
-
-opacity:.9
-}
-
-
-/* CTA */
-
-.cta{
-padding:110px 7%;
-text-align:center;
-border-top:1px solid #eee
-}
-
-.cta h2{
-font-size:clamp(45px,7vw,80px)
-}
-
-.cta p{
+.mission p{
 color:#777;
-margin:15px auto 30px;
-max-width:550px
+max-width:700px;
+font-size:16px
 }
-
-.cta-button{
-display:inline-block;
-
-padding:13px 23px;
-
-border-radius:30px;
-
-background:#171717;
-
-color:#fff;
-
-font-size:14px;
-
-font-weight:600
-}
-
-.cta-button:hover{
-opacity:.8
-}
-
-
-/* FOOTER */
 
 footer{
 text-align:center;
-
 font-size:12px;
-
 color:#999;
-
 padding:25px;
-
 border-top:1px solid #eee
 }
 
-
-/* MOBILE */
-
 @media(max-width:800px){
 
+.hero{
+grid-template-columns:1fr;
+gap:40px
+}
+
+.hero-image{
+height:350px
+}
+
+.stats{
+grid-template-columns:1fr
+}
+
 .nav-links{
-gap:12px
+gap:4px
 }
 
-.nav-links a:not(.join-btn){
-display:none
-}
-
-.about-grid{
-grid-template-columns:1fr
-}
-
-.about-image{
-height:400px
-}
-
-.mission{
-margin:0 5%;
-padding:70px 8%
-}
-
-.impact-grid{
-grid-template-columns:1fr
-}
-
-.photo{
-height:300px
-}
-
-h1{
-letter-spacing:-3px
+.nav-links a{
+font-size:11px;
+padding:8px 9px
 }
 
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- NAV -->
 
 <nav>
 
@@ -382,23 +234,22 @@ letter-spacing:-3px
 Pre-Derm Society
 </a>
 
-
 <div class="nav-links">
 
 <a href="index.html">
 Home
 </a>
 
-<a href="about.html">
-About
+<a href="learn.html">
+Learn
 </a>
 
-<a href="index.html#opportunities">
+<a href="opportunities.html">
 Opportunities
 </a>
 
-<a href="index.html#contact">
-Contact
+<a href="about.html">
+About
 </a>
 
 <a href="join.html" class="join-btn">
@@ -410,310 +261,164 @@ Join Now
 </nav>
 
 
-<!-- HERO -->
-
 <header class="hero">
 
-<div class="hero-content">
+<div>
 
 <div class="eyebrow">
 About Pre-Derm Society
 </div>
 
 <h1>
-Medicine begins<br>
+Medicine starts<br>
 with curiosity.
 </h1>
 
 <p>
-Pre-Derm Society is a student-led community created to make
-dermatology, medicine, skincare, research, and healthcare
-more approachable for students.
+Pre-Derm Society is a student-led educational community
+created to make dermatology, medicine, skincare, science,
+and healthcare easier for students to explore.
 </p>
 
 </div>
 
-</header>
-
-
-<!-- ABOUT -->
-
-<section class="about">
-
-<div class="about-grid">
-
-
-<div>
 
 <img
 src="IMG_5145.jpeg"
 alt="Pre-Derm Society"
-class="about-image"
+class="hero-image"
 >
 
-</div>
+</header>
 
 
-<div class="about-text">
+<section>
 
-<div class="label">
-01 — Who We Are
-</div>
+<div class="section-heading">
 
-<h2>
-A place to<br>
-learn & explore.
-</h2>
-
-<p class="text">
-Pre-Derm Society was created around one simple idea:
-students should have a place where they can be curious
-about medicine before they ever enter a medical classroom.
-</p>
-
-<p class="text">
-Through student-friendly lessons, research exploration,
-projects, opportunities, and educational resources,
-we hope to make the world of medicine easier to discover.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- MISSION -->
-
-<section class="mission">
-
-<div class="mission-content">
-
-<div class="label">
-02 — Our Mission
+<div class="eyebrow">
+Our Impact
 </div>
 
 <h2>
-Learn. Explore.<br>
-Make an impact.
-</h2>
-
-<p class="text">
-Our goal is to encourage students to explore healthcare
-and science responsibly while developing curiosity,
-critical thinking, and a stronger understanding of
-dermatology and medicine.
-</p>
-
-<p class="text">
-We believe learning becomes more meaningful when it
-can be shared with others. That's why Pre-Derm Society
-focuses on accessible education and student-led impact.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- IMPACT -->
-
-<section class="impact">
-
-<div class="impact-heading">
-
-<div class="label">
-03 — Our Impact
-</div>
-
-<h2>
-Growing together.
+Learning can<br>
+create impact.
 </h2>
 
 <p>
-Every lesson, project, and educational activity helps us
-build a community that is curious about medicine.
+Every lesson represents an opportunity to make science
+and healthcare education more accessible to students.
 </p>
 
 </div>
 
 
-<div class="impact-grid">
+<div class="stats">
 
+<div class="stat">
 
-<div class="impact-card">
-
-<div class="number">
-<span class="counter" data-target="100">0</span>+
+<div
+class="stat-number"
+data-target="100"
+data-plus="true"
+>
+0
 </div>
 
-<div class="number-label">
+<div class="stat-label">
 People Reached
 </div>
 
 </div>
 
 
-<div class="impact-card">
+<div class="stat">
 
-<div class="number">
-<span class="counter" data-target="38">0</span>
+<div
+class="stat-number"
+data-target="38"
+>
+0
 </div>
 
-<div class="number-label">
+<div class="stat-label">
 Lessons Taught
 </div>
 
 </div>
 
-
-<div class="impact-card">
-
-<div class="number">
-<span class="counter" data-target="20">0</span>
-</div>
-
-<div class="number-label">
-Lessons Done
-</div>
-
-</div>
-
-
 </div>
 
 </section>
 
 
-<!-- PHOTO -->
+<section class="mission">
 
-<section class="photo-section">
+<div class="mission-content">
 
-<img
-src="IMG_5145.jpeg"
-alt="Pre-Derm Society"
-class="photo"
->
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-<div class="label">
-Pre-Derm Society
+<div class="eyebrow">
+Our Mission
 </div>
 
 <h2>
-Keep being curious.
+Make medicine<br>
+feel possible.
 </h2>
 
 <p>
-Explore our lessons, research opportunities,
-and student resources.
+We believe students should have opportunities to ask questions,
+learn about science, discover healthcare careers, explore research,
+and understand their skin through reliable educational information.
 </p>
 
-<a
-href="index.html"
-class="cta-button"
->
-Explore Pre-Derm Society →
-</a>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
-
 © 2026 Pre-Derm Society · Student-led education
-
 </footer>
 
 
 <script>
 
-/* =========================================
-   ANIMATED NUMBERS
-   ========================================= */
+function animateNumbers(){
 
-const counters =
-document.querySelectorAll(".counter");
+const numbers=document.querySelectorAll(".stat-number");
 
+numbers.forEach(number=>{
 
-const observer =
-new IntersectionObserver((entries) => {
+const target=parseInt(number.dataset.target);
+const plus=number.dataset.plus==="true";
 
-entries.forEach(entry => {
+let current=0;
 
-if(entry.isIntersecting){
+const duration=1200;
+const increment=Math.max(1,Math.ceil(target/60));
 
-const counter =
-entry.target;
+const timer=setInterval(()=>{
 
-const target =
-Number(counter.dataset.target);
+current+=increment;
 
-const duration = 1400;
+if(current>=target){
 
-const start =
-performance.now();
-
-
-function animate(time){
-
-const elapsed =
-time - start;
-
-const progress =
-Math.min(elapsed / duration,1);
-
-const eased =
-1 - Math.pow(1-progress,3);
-
-counter.textContent =
-Math.floor(target * eased);
-
-
-if(progress < 1){
-
-requestAnimationFrame(animate);
-
-}else{
-
-counter.textContent =
-target;
+current=target;
+clearInterval(timer);
 
 }
 
+number.textContent=current+(plus ? "+" : "");
+
+},duration/60);
+
+});
+
 }
 
-
-requestAnimationFrame(animate);
-
-observer.unobserve(counter);
-
-}
-
-});
-
-},{
-threshold:.5
-});
-
-
-counters.forEach(counter => {
-
-observer.observe(counter);
-
-});
+window.addEventListener("load",animateNumbers);
 
 </script>
-
 
 </body>
 </html>
