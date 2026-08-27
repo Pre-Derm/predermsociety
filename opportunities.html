@@ -1,140 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Opportunities | Pre-Derm Society</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"DM Sans",sans-serif;background:#faf8f9;color:#292329}
-a{text-decoration:none;color:inherit}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:"DM Sans",sans-serif;
+color:#242424;
+background:#fff;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
 
 nav{
-padding:20px 6%;
+position:sticky;
+top:0;
+z-index:10;
 background:#fff;
 border-bottom:1px solid #eee;
+padding:20px 6%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:10
 }
 
-.logo{font-weight:700;font-size:15px;letter-spacing:.1em}
+.logo{
+font-size:15px;
+font-weight:700;
+letter-spacing:.1em;
+}
 
-.nav{display:flex;gap:25px;font-size:13px;font-weight:600}
+nav a{
+font-size:12px;
+font-weight:600;
+}
 
 .hero{
-padding:75px 7% 40px;
-background:#fff
+padding:85px 7% 50px;
 }
 
 .hero small{
+font-size:11px;
+letter-spacing:.2em;
 color:#999;
-letter-spacing:.15em
 }
 
-h1{
-font-size:clamp(50px,8vw,90px);
-letter-spacing:-.06em;
-margin-top:15px
+.hero h1{
+font-size:clamp(55px,9vw,95px);
+letter-spacing:-.07em;
+margin-top:20px;
 }
 
 .hero p{
 max-width:650px;
 color:#777;
 line-height:1.7;
-margin-top:18px
+margin-top:20px;
 }
 
-.layout{
-padding:30px 5%;
+.content{
+padding:30px 7% 100px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:35px;
+font-size:12px;
+font-weight:600;
+}
+
+.field-title{
+font-size:35px;
+letter-spacing:-.04em;
+margin-bottom:20px;
+}
+
+.fields{
 display:grid;
-grid-template-columns:260px 1fr;
-gap:25px
+grid-template-columns:repeat(3,1fr);
+gap:15px;
 }
 
-.filters{
-background:#fff;
-border:1px solid #eadfe5;
-border-radius:24px;
-padding:25px;
-height:max-content;
-position:sticky;
-top:90px
-}
-
-.filters h2{
-font-size:25px;
-margin-bottom:20px
-}
-
-.filter{
-display:block;
-padding:11px 0;
-font-size:14px;
-color:#6f626d;
-cursor:pointer
-}
-
-.filter:hover{
-color:#222
-}
-
-.results{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:16px
-}
-
-.result{
-background:#fff;
-border:1px solid #eadfe5;
+.field{
+border:1px solid #e7e7e7;
 border-radius:22px;
 padding:27px;
-min-height:220px
+transition:.25s;
 }
 
-.result-type{
-font-size:10px;
-letter-spacing:.15em;
-color:#999;
-margin-bottom:15px
+.field:hover{
+transform:translateY(-4px);
+border-color:#aaa;
 }
 
-.result h3{
-font-size:22px;
-margin-bottom:10px
+.field-icon{
+font-size:28px;
+margin-bottom:15px;
 }
 
-.result p{
+.field h2{
+font-size:21px;
+margin-bottom:8px;
+}
+
+.field p{
 font-size:14px;
+color:#777;
 line-height:1.6;
-color:#777
+margin-bottom:20px;
 }
 
-.visit{
-display:inline-block;
-margin-top:20px;
+.buttons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.buttons a{
 border:1px solid #ddd;
 border-radius:25px;
-padding:10px 15px;
-font-size:11px;
-font-weight:700
+padding:10px 13px;
+font-size:10px;
+font-weight:700;
 }
 
-@media(max-width:850px){
-.layout{grid-template-columns:1fr}
-.filters{position:static}
-.results{grid-template-columns:1fr}
-.nav a{display:none}
+.buttons a:hover{
+background:#222;
+color:#fff;
+}
+
+@media(max-width:800px){
+
+.fields{
+grid-template-columns:1fr;
+}
+
+nav div{
+display:none;
+}
+
 }
 </style>
 </head>
@@ -142,277 +163,324 @@ font-weight:700
 <body>
 
 <nav>
-<a class="logo" href="index.html">PRE-DERM SOCIETY</a>
 
-<div class="nav">
-<a href="about.html">ABOUT</a>
-<a href="index.html#learn">LEARN</a>
-<a href="opportunities.html">OPPORTUNITIES</a>
-<a href="research.html">RESEARCH</a>
+<a href="index.html" class="logo">
+PRE-DERM SOCIETY
+</a>
+
+<div>
+<a href="index.html">HOME</a>
 </div>
+
 </nav>
 
 
 <section class="hero">
 
-<small>OPPORTUNITY HUB</small>
+<small>OPPORTUNITIES</small>
 
-<h1>Find your next step.</h1>
+<h1>Choose your field.</h1>
 
 <p>
-Choose an opportunity type and then explore a medical field.
-The page will organize resources around what you're actually
-looking for.
+Choose the medical field you're interested in, then choose
+the type of opportunity you want.
 </p>
 
 </section>
 
 
-<div class="layout">
+<section class="content">
 
-<aside class="filters">
-
-<h2>Filter by</h2>
-
-<a class="filter" href="opportunities.html">
-✦ All opportunities
+<a href="index.html" class="back">
+← BACK HOME
 </a>
 
-<a class="filter" href="opportunities.html?type=internships">
-□ Internships
+<h2 class="field-title">
+Medical fields
+</h2>
+
+
+<div class="fields">
+
+
+<div class="field">
+
+<div class="field-icon">🧴</div>
+
+<h2>Dermatology</h2>
+
+<p>
+Interested in skin, hair, nails, cosmetic dermatology,
+or dermatologic research?
+</p>
+
+<div class="buttons">
+
+<a href="#dermatology-internships">
+INTERNSHIPS
 </a>
 
-<a class="filter" href="opportunities.html?type=research">
-□ Research programs
+<a href="#dermatology-research">
+RESEARCH
 </a>
 
-<a class="filter" href="opportunities.html?type=summer">
-□ Summer programs
+<a href="#dermatology-summer">
+SUMMER PROGRAMS
 </a>
 
-<a class="filter" href="opportunities.html?type=volunteering">
-□ Volunteering
-</a>
-
-<a class="filter" href="opportunities.html?type=scholarships">
-□ Scholarships
-</a>
-
-<br>
-
-<h2>Field</h2>
-
-<a class="filter" href="opportunities.html?field=dermatology">
-Dermatology
-</a>
-
-<a class="filter" href="opportunities.html?field=pediatrics">
-Pediatrics
-</a>
-
-<a class="filter" href="opportunities.html?field=orthopedics">
-Orthopedics
-</a>
-
-<a class="filter" href="opportunities.html?field=surgery">
-Surgery
-</a>
-
-<a class="filter" href="opportunities.html?field=pharmacy">
-Pharmacy
-</a>
-
-<a class="filter" href="opportunities.html?field=cardiology">
-Cardiology
-</a>
-
-<a class="filter" href="opportunities.html?field=neurology">
-Neurology
-</a>
-
-</aside>
-
-
-<main>
-
-<div class="results" id="results"></div>
-
-</main>
+</div>
 
 </div>
 
 
-<script>
+<div class="field">
 
-const programs=[
+<div class="field-icon">🧸</div>
 
-{
-name:"Dermatology Research",
-field:"dermatology",
-type:"research",
-description:"Explore dermatology research opportunities and learn how to locate current programs through universities and research institutions."
-},
+<h2>Pediatrics</h2>
 
-{
-name:"Dermatology Internships",
-field:"dermatology",
-type:"internships",
-description:"Explore current dermatology-related experiences and use official institution pages to check eligibility and applications."
-},
+<p>
+Interested in healthcare focused on children and adolescents?
+</p>
 
-{
-name:"Pediatrics Research",
-field:"pediatrics",
-type:"research",
-description:"Explore pediatric research and learn how to look for opportunities through children's hospitals and universities."
-},
+<div class="buttons">
 
-{
-name:"Pediatrics Internships",
-field:"pediatrics",
-type:"internships",
-description:"Find starting points for exploring pediatric healthcare experiences and student programs."
-},
-
-{
-name:"Orthopedics Research",
-field:"orthopedics",
-type:"research",
-description:"Explore research related to bones, joints, movement, sports medicine, and orthopedic science."
-},
-
-{
-name:"Orthopedics Internships",
-field:"orthopedics",
-type:"internships",
-description:"Explore ways to investigate orthopedic medicine and related student experiences."
-},
-
-{
-name:"Surgery Research",
-field:"surgery",
-type:"research",
-description:"Explore surgical research and learn how to find university and hospital research opportunities."
-},
-
-{
-name:"Surgery Internships",
-field:"surgery",
-type:"internships",
-description:"Explore surgical medicine and student opportunities through healthcare institutions."
-},
-
-{
-name:"Pharmacy Research",
-field:"pharmacy",
-type:"research",
-description:"Explore pharmacology, medications, pharmaceutical science, and research."
-},
-
-{
-name:"Pharmacy Internships",
-field:"pharmacy",
-type:"internships",
-description:"Explore pharmacy-related experiences and student programs."
-},
-
-{
-name:"Cardiology Research",
-field:"cardiology",
-type:"research",
-description:"Explore cardiovascular research and university-based science opportunities."
-},
-
-{
-name:"Neurology Research",
-field:"neurology",
-type:"research",
-description:"Explore neuroscience and neurological research opportunities."
-},
-
-{
-name:"Summer Medicine Programs",
-field:"all",
-type:"summer",
-description:"Explore summer educational experiences related to medicine, science, healthcare, and research."
-},
-
-{
-name:"Medical Volunteering",
-field:"all",
-type:"volunteering",
-description:"Explore volunteering pathways and learn how to find legitimate opportunities in your community."
-},
-
-{
-name:"Student Scholarships",
-field:"all",
-type:"scholarships",
-description:"Explore scholarship and award opportunities connected to STEM, healthcare, leadership, and service."
-}
-
-];
-
-
-const params=new URLSearchParams(window.location.search);
-
-const selectedType=params.get("type");
-const selectedField=params.get("field");
-
-let filtered=programs.filter(item=>{
-
-const typeMatch=!selectedType || item.type===selectedType;
-
-const fieldMatch=
-!selectedField ||
-item.field===selectedField ||
-item.field==="all";
-
-return typeMatch && fieldMatch;
-
-});
-
-
-if(filtered.length===0){
-
-filtered=programs;
-
-}
-
-
-const results=document.getElementById("results");
-
-
-filtered.forEach(item=>{
-
-const card=document.createElement("article");
-
-card.className="result";
-
-card.innerHTML=`
-
-<div class="result-type">
-${item.type.toUpperCase()} • ${item.field.toUpperCase()}
-</div>
-
-<h3>${item.name}</h3>
-
-<p>${item.description}</p>
-
-<a
-class="visit"
-href="research.html"
->
-LEARN HOW TO FIND IT →
+<a href="#pediatrics-internships">
+INTERNSHIPS
 </a>
 
-`;
+<a href="#pediatrics-research">
+RESEARCH
+</a>
 
-results.appendChild(card);
+<a href="#pediatrics-summer">
+SUMMER PROGRAMS
+</a>
 
-});
+</div>
 
-</script>
+</div>
+
+
+<div class="field">
+
+<div class="field-icon">🦴</div>
+
+<h2>Orthopedics</h2>
+
+<p>
+Interested in bones, joints, sports medicine, and movement?
+</p>
+
+<div class="buttons">
+
+<a href="#orthopedics-internships">
+INTERNSHIPS
+</a>
+
+<a href="#orthopedics-research">
+RESEARCH
+</a>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<div class="field-icon">🏥</div>
+
+<h2>Surgery</h2>
+
+<p>
+Interested in surgical medicine and healthcare?
+</p>
+
+<div class="buttons">
+
+<a href="#surgery-internships">
+INTERNSHIPS
+</a>
+
+<a href="#surgery-research">
+RESEARCH
+</a>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<div class="field-icon">💊</div>
+
+<h2>Pharmacy</h2>
+
+<p>
+Interested in medications, pharmacology, and pharmaceutical science?
+</p>
+
+<div class="buttons">
+
+<a href="#pharmacy-internships">
+INTERNSHIPS
+</a>
+
+<a href="#pharmacy-research">
+RESEARCH
+</a>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<div class="field-icon">🫀</div>
+
+<h2>Cardiology</h2>
+
+<p>
+Interested in the heart and cardiovascular science?
+</p>
+
+<div class="buttons">
+
+<a href="#cardiology-internships">
+INTERNSHIPS
+</a>
+
+<a href="#cardiology-research">
+RESEARCH
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- These are the actual destination sections for every button -->
+
+<section class="content" id="dermatology-internships">
+<h2 class="field-title">Dermatology Internships</h2>
+<p style="color:#777;line-height:1.7">
+Use this page section to find verified dermatology internship
+programs. Program availability and age requirements vary.
+</p>
+</section>
+
+
+<section class="content" id="dermatology-research">
+<h2 class="field-title">Dermatology Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore dermatology research opportunities and scientific
+projects.
+</p>
+</section>
+
+
+<section class="content" id="dermatology-summer">
+<h2 class="field-title">Dermatology Summer Programs</h2>
+<p style="color:#777;line-height:1.7">
+Explore summer learning opportunities connected to dermatology.
+</p>
+</section>
+
+
+<section class="content" id="pediatrics-internships">
+<h2 class="field-title">Pediatrics Internships</h2>
+<p style="color:#777;line-height:1.7">
+Explore pediatric healthcare experiences and internship programs.
+</p>
+</section>
+
+
+<section class="content" id="pediatrics-research">
+<h2 class="field-title">Pediatrics Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore pediatric research and children's-health science.
+</p>
+</section>
+
+
+<section class="content" id="pediatrics-summer">
+<h2 class="field-title">Pediatrics Summer Programs</h2>
+<p style="color:#777;line-height:1.7">
+Explore summer educational programs related to pediatrics.
+</p>
+</section>
+
+
+<section class="content" id="orthopedics-internships">
+<h2 class="field-title">Orthopedics Internships</h2>
+<p style="color:#777;line-height:1.7">
+Explore orthopedic medicine experiences.
+</p>
+</section>
+
+
+<section class="content" id="orthopedics-research">
+<h2 class="field-title">Orthopedics Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore research involving bones, joints, sports medicine,
+and movement.
+</p>
+</section>
+
+
+<section class="content" id="surgery-internships">
+<h2 class="field-title">Surgery Internships</h2>
+<p style="color:#777;line-height:1.7">
+Explore surgical medicine experiences.
+</p>
+</section>
+
+
+<section class="content" id="surgery-research">
+<h2 class="field-title">Surgery Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore surgical research.
+</p>
+</section>
+
+
+<section class="content" id="pharmacy-internships">
+<h2 class="field-title">Pharmacy Internships</h2>
+<p style="color:#777;line-height:1.7">
+Explore pharmacy-related experiences.
+</p>
+</section>
+
+
+<section class="content" id="pharmacy-research">
+<h2 class="field-title">Pharmacy Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore pharmacology and pharmaceutical research.
+</p>
+</section>
+
+
+<section class="content" id="cardiology-internships">
+<h2 class="field-title">Cardiology Internships</h2>
+<p style="color:#777;line-height:1.7">
+Explore cardiovascular healthcare experiences.
+</p>
+</section>
+
+
+<section class="content" id="cardiology-research">
+<h2 class="field-title">Cardiology Research</h2>
+<p style="color:#777;line-height:1.7">
+Explore cardiovascular research.
+</p>
+</section>
 
 </body>
 </html>
