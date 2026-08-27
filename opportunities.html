@@ -2,160 +2,298 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Opportunities | Pre-Derm Society</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Opportunities · Pre-Derm Society</title>
 
 <style>
+*{box-sizing:border-box}
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+html{scroll-behavior:smooth}
 
 body{
-font-family:"DM Sans",sans-serif;
-color:#242424;
-background:#fff;
+  margin:0;
+  background:#faf9f6;
+  color:#111;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+  color:#111;
+  text-decoration:none;
 }
 
 nav{
-position:sticky;
-top:0;
-z-index:10;
-background:#fff;
-border-bottom:1px solid #eee;
-padding:20px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 6%;
+  background:rgba(250,249,246,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #dedcd8;
 }
 
 .logo{
-font-size:15px;
-font-weight:700;
-letter-spacing:.1em;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:3px;
+  line-height:1.5;
 }
 
-nav a{
-font-size:12px;
-font-weight:600;
+.links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.links a{
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.links a:hover,
+.logo:hover{
+  opacity:.5;
 }
 
 .hero{
-padding:85px 7% 50px;
+  padding:160px 8% 80px;
+  background:
+    radial-gradient(circle at 75% 25%,#e8e2dc,transparent 35%),
+    #faf9f6;
 }
 
-.hero small{
-font-size:11px;
-letter-spacing:.2em;
-color:#999;
+.label{
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
+  margin-bottom:28px;
 }
 
-.hero h1{
-font-size:clamp(55px,9vw,95px);
-letter-spacing:-.07em;
-margin-top:20px;
+h1{
+  font-size:clamp(55px,10vw,120px);
+  line-height:.88;
+  letter-spacing:-7px;
+  font-weight:300;
+  margin:0 0 35px;
 }
 
-.hero p{
-max-width:650px;
-color:#777;
-line-height:1.7;
-margin-top:20px;
+.text{
+  max-width:650px;
+  color:#666;
+  line-height:1.8;
+  font-size:16px;
 }
 
-.content{
-padding:30px 7% 100px;
+section{
+  padding:80px 8%;
+  border-top:1px solid #dedcd8;
 }
 
-.back{
-display:inline-block;
-margin-bottom:35px;
-font-size:12px;
-font-weight:600;
+.filter-area{
+  background:#efeee9;
 }
 
-.field-title{
-font-size:35px;
-letter-spacing:-.04em;
-margin-bottom:20px;
+.filter-box{
+  max-width:1050px;
+  background:#faf9f6;
+  border:1px solid #dedcd8;
+  padding:40px;
 }
 
-.fields{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
+.filter-title{
+  font-size:12px;
+  letter-spacing:2px;
+  color:#555;
+  margin-bottom:18px;
 }
 
-.field{
-border:1px solid #e7e7e7;
-border-radius:22px;
-padding:27px;
-transition:.25s;
+.specialties{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:45px;
 }
 
-.field:hover{
-transform:translateY(-4px);
-border-color:#aaa;
+.specialty{
+  border:1px solid #cfcac4;
+  background:#faf9f6;
+  padding:13px 17px;
+  border-radius:3px;
+  font-size:11px;
+  letter-spacing:1px;
+  cursor:pointer;
 }
 
-.field-icon{
-font-size:28px;
-margin-bottom:15px;
+.specialty:hover{
+  background:#f0eee9;
 }
 
-.field h2{
-font-size:21px;
-margin-bottom:8px;
+.specialty.active{
+  background:#111;
+  color:#fff;
+  border-color:#111;
 }
 
-.field p{
-font-size:14px;
-color:#777;
-line-height:1.6;
-margin-bottom:20px;
+.types{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
 
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
+.type-label{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border:1px solid #dedcd8;
+  cursor:pointer;
+  font-size:13px;
+  color:#555;
 }
 
-.buttons a{
-border:1px solid #ddd;
-border-radius:25px;
-padding:10px 13px;
-font-size:10px;
-font-weight:700;
+.type-label input{
+  width:17px;
+  height:17px;
+  accent-color:#111;
 }
 
-.buttons a:hover{
-background:#222;
-color:#fff;
+.clear{
+  margin-top:25px;
+  border:0;
+  border-bottom:1px solid #111;
+  background:none;
+  padding:0 0 7px;
+  font-size:9px;
+  letter-spacing:2px;
+  cursor:pointer;
 }
 
-@media(max-width:800px){
-
-.fields{
-grid-template-columns:1fr;
+.results-section{
+  background:#faf9f6;
 }
 
-nav div{
-display:none;
+.results-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:45px;
 }
 
+.results-count{
+  font-size:9px;
+  letter-spacing:2px;
+  color:#777;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  border:1px solid #dedcd8;
+  background:#faf9f6;
+  padding:32px;
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  background:#f4f2ee;
+}
+
+.card-tag{
+  font-size:8px;
+  letter-spacing:2px;
+  color:#777;
+  margin-bottom:25px;
+}
+
+.card h3{
+  font-size:28px;
+  font-weight:300;
+  letter-spacing:-2px;
+  margin:0 0 14px;
+}
+
+.card p{
+  color:#666;
+  font-size:14px;
+  line-height:1.65;
+  margin:0 0 25px;
+}
+
+.card-link{
+  margin-top:auto;
+  display:inline-block;
+  width:max-content;
+  padding-bottom:7px;
+  border-bottom:1px solid #111;
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.no-results{
+  display:none;
+  padding:50px;
+  border:1px solid #dedcd8;
+  text-align:center;
+  color:#777;
+}
+
+footer{
+  padding:45px 8%;
+  border-top:1px solid #dedcd8;
+  display:flex;
+  justify-content:space-between;
+}
+
+footer a{
+  font-size:9px;
+  letter-spacing:2px;
+  margin-right:25px;
+}
+
+@media(max-width:700px){
+
+  nav{padding:18px 5%}
+
+  .links{
+    gap:13px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    max-width:250px;
+  }
+
+  .links a{font-size:8px}
+
+  .hero{padding:150px 8% 70px}
+
+  .filter-box{padding:25px}
+
+  .types{
+    grid-template-columns:1fr;
+  }
+
+  .results{
+    grid-template-columns:1fr;
+  }
+
+  .results-header{
+    display:block;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:25px;
+  }
 }
 </style>
 </head>
@@ -164,323 +302,676 @@ display:none;
 
 <nav>
 
-<a href="index.html" class="logo">
-PRE-DERM SOCIETY
-</a>
+  <a href="index.html" class="logo">
+    PRE-DERM<br>SOCIETY
+  </a>
 
-<div>
-<a href="index.html">HOME</a>
-</div>
+  <div class="links">
+    <a href="about.html">ABOUT</a>
+    <a href="opportunities.html">OPPORTUNITIES</a>
+    <a href="skin101.html">LEARN</a>
+    <a href="about.html#impact">IMPACT</a>
+    <a href="mailto:predermsociety@gmail.com">JOIN</a>
+  </div>
 
 </nav>
 
+<header class="hero">
 
-<section class="hero">
+  <div class="label">PRE-DERM SOCIETY · OPPORTUNITIES</div>
 
-<small>OPPORTUNITIES</small>
+  <h1>
+    FIND YOUR<br>
+    FIELD.
+  </h1>
 
-<h1>Choose your field.</h1>
+  <p class="text">
+    Choose a medical field and the type of opportunity
+    you're looking for. We'll show you resources that
+    match what you selected.
+  </p>
 
-<p>
-Choose the medical field you're interested in, then choose
-the type of opportunity you want.
-</p>
+</header>
+
+<section class="filter-area">
+
+  <div class="filter-box">
+
+    <div class="filter-title">FIELD OF INTEREST</div>
+
+    <div class="specialties">
+
+      <button type="button" class="specialty active" data-specialty="all">
+        ALL
+      </button>
+
+      <button type="button" class="specialty" data-specialty="dermatology">
+        DERMATOLOGY
+      </button>
+
+      <button type="button" class="specialty" data-specialty="pediatrics">
+        PEDIATRICS
+      </button>
+
+      <button type="button" class="specialty" data-specialty="orthopedics">
+        ORTHOPEDICS
+      </button>
+
+      <button type="button" class="specialty" data-specialty="cardiology">
+        CARDIOLOGY
+      </button>
+
+      <button type="button" class="specialty" data-specialty="neurology">
+        NEUROLOGY
+      </button>
+
+      <button type="button" class="specialty" data-specialty="surgery">
+        SURGERY
+      </button>
+
+      <button type="button" class="specialty" data-specialty="general">
+        MEDICINE
+      </button>
+
+    </div>
+
+    <div class="filter-title">OPPORTUNITY TYPE</div>
+
+    <div class="types">
+
+      <label class="type-label">
+        <input type="checkbox" value="internship">
+        internships
+      </label>
+
+      <label class="type-label">
+        <input type="checkbox" value="research">
+        research
+      </label>
+
+      <label class="type-label">
+        <input type="checkbox" value="summer">
+        summer programs
+      </label>
+
+      <label class="type-label">
+        <input type="checkbox" value="career">
+        career exploration
+      </label>
+
+    </div>
+
+    <button type="button" class="clear" id="clear">
+      CLEAR FILTERS
+    </button>
+
+  </div>
 
 </section>
 
+<section class="results-section">
 
-<section class="content">
+  <div class="results-header">
 
-<a href="index.html" class="back">
-← BACK HOME
-</a>
+    <div>
+      <div class="label">01 · MATCHED RESOURCES</div>
+      <h2>Explore.</h2>
+    </div>
 
-<h2 class="field-title">
-Medical fields
-</h2>
+    <div class="results-count" id="count"></div>
 
+  </div>
 
-<div class="fields">
+  <div class="results" id="results">
 
+    <!-- DERMATOLOGY -->
 
-<div class="field">
+    <article class="card"
+      data-specialty="dermatology"
+      data-types="career research">
 
-<div class="field-icon">🧴</div>
+      <div class="card-tag">DERMATOLOGY · CAREER</div>
 
-<h2>Dermatology</h2>
+      <h3>Why Dermatology?</h3>
 
-<p>
-Interested in skin, hair, nails, cosmetic dermatology,
-or dermatologic research?
-</p>
+      <p>
+        Explore what dermatologists do and the different
+        directions a career in dermatology can take.
+      </p>
 
-<div class="buttons">
+      <a class="card-link"
+        href="https://www.aad.org/member/career/diversity/pathways"
+        target="_blank"
+        rel="noopener">
+        EXPLORE DERMATOLOGY →
+      </a>
 
-<a href="#dermatology-internships">
-INTERNSHIPS
-</a>
+    </article>
 
-<a href="#dermatology-research">
-RESEARCH
-</a>
+    <article class="card"
+      data-specialty="dermatology"
+      data-types="internship summer">
 
-<a href="#dermatology-summer">
-SUMMER PROGRAMS
-</a>
+      <div class="card-tag">DERMATOLOGY · PROGRAM</div>
 
-</div>
+      <h3>AAD Pathways</h3>
 
-</div>
+      <p>
+        Explore the American Academy of Dermatology's
+        pathway resources for students interested in dermatology.
+      </p>
 
+      <a class="card-link"
+        href="https://www.aad.org/member/career/diversity/pathways"
+        target="_blank"
+        rel="noopener">
+        VIEW PROGRAMS →
+      </a>
 
-<div class="field">
+    </article>
 
-<div class="field-icon">🧸</div>
+    <article class="card"
+      data-specialty="dermatology"
+      data-types="research">
 
-<h2>Pediatrics</h2>
+      <div class="card-tag">DERMATOLOGY · RESEARCH</div>
 
-<p>
-Interested in healthcare focused on children and adolescents?
-</p>
+      <h3>Dermatology Research</h3>
 
-<div class="buttons">
+      <p>
+        Find published dermatology research and scientific
+        papers through PubMed.
+      </p>
 
-<a href="#pediatrics-internships">
-INTERNSHIPS
-</a>
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=dermatology"
+        target="_blank"
+        rel="noopener">
+        FIND PAPERS →
+      </a>
 
-<a href="#pediatrics-research">
-RESEARCH
-</a>
+    </article>
 
-<a href="#pediatrics-summer">
-SUMMER PROGRAMS
-</a>
 
-</div>
+    <!-- PEDIATRICS -->
 
-</div>
+    <article class="card"
+      data-specialty="pediatrics"
+      data-types="internship research summer">
 
+      <div class="card-tag">PEDIATRICS · RESEARCH</div>
 
-<div class="field">
+      <h3>Stanford PIPS</h3>
 
-<div class="field-icon">🦴</div>
+      <p>
+        A Stanford program introducing high school students
+        to science, medicine, research, and pediatrics.
+      </p>
 
-<h2>Orthopedics</h2>
+      <a class="card-link"
+        href="https://med.stanford.edu/content/sm/pediatrics/education/pediatrics-internship-program.html"
+        target="_blank"
+        rel="noopener">
+        VIEW PROGRAM →
+      </a>
 
-<p>
-Interested in bones, joints, sports medicine, and movement?
-</p>
+    </article>
 
-<div class="buttons">
+    <article class="card"
+      data-specialty="pediatrics"
+      data-types="career research">
 
-<a href="#orthopedics-internships">
-INTERNSHIPS
-</a>
+      <div class="card-tag">PEDIATRICS · CAREER</div>
 
-<a href="#orthopedics-research">
-RESEARCH
-</a>
+      <h3>Pediatric Medicine</h3>
 
-</div>
+      <p>
+        Learn what pediatricians study, how they train,
+        and what a career in pediatrics looks like.
+      </p>
 
-</div>
+      <a class="card-link"
+        href="https://www.healthychildren.org/English/ages-stages/prenatal/decisions-to-make/Pages/A-Pediatricians-Training.aspx"
+        target="_blank"
+        rel="noopener">
+        EXPLORE PEDIATRICS →
+      </a>
 
+    </article>
 
-<div class="field">
+    <article class="card"
+      data-specialty="pediatrics"
+      data-types="research">
 
-<div class="field-icon">🏥</div>
+      <div class="card-tag">PEDIATRICS · RESEARCH</div>
 
-<h2>Surgery</h2>
+      <h3>Pediatric Research</h3>
 
-<p>
-Interested in surgical medicine and healthcare?
-</p>
+      <p>
+        Search published pediatric research and medical
+        studies through PubMed.
+      </p>
 
-<div class="buttons">
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=pediatrics"
+        target="_blank"
+        rel="noopener">
+        FIND PAPERS →
+      </a>
 
-<a href="#surgery-internships">
-INTERNSHIPS
-</a>
+    </article>
 
-<a href="#surgery-research">
-RESEARCH
-</a>
 
-</div>
+    <!-- ORTHOPEDICS -->
 
-</div>
+    <article class="card"
+      data-specialty="orthopedics"
+      data-types="career research">
 
+      <div class="card-tag">ORTHOPEDICS · CAREER</div>
 
-<div class="field">
+      <h3>Explore Orthopaedics</h3>
 
-<div class="field-icon">💊</div>
+      <p>
+        Learn about orthopedic surgery, subspecialties,
+        and possible career directions.
+      </p>
 
-<h2>Pharmacy</h2>
+      <a class="card-link"
+        href="https://www.aaos.org/about/diversity-in-orthopaedics/consider-orthopaedics/"
+        target="_blank"
+        rel="noopener">
+        EXPLORE ORTHOPEDICS →
+      </a>
 
-<p>
-Interested in medications, pharmacology, and pharmaceutical science?
-</p>
+    </article>
 
-<div class="buttons">
+    <article class="card"
+      data-specialty="orthopedics"
+      data-types="internship summer">
 
-<a href="#pharmacy-internships">
-INTERNSHIPS
-</a>
+      <div class="card-tag">ORTHOPEDICS · PROGRAM</div>
 
-<a href="#pharmacy-research">
-RESEARCH
-</a>
+      <h3>AAOS Student Resources</h3>
 
-</div>
+      <p>
+        Explore educational and career resources from
+        the American Academy of Orthopaedic Surgeons.
+      </p>
 
-</div>
+      <a class="card-link"
+        href="https://new.aaos.org/annual/explore-the-program/medical-student-program/"
+        target="_blank"
+        rel="noopener">
+        VIEW RESOURCES →
+      </a>
 
+    </article>
 
-<div class="field">
+    <article class="card"
+      data-specialty="orthopedics"
+      data-types="research">
 
-<div class="field-icon">🫀</div>
+      <div class="card-tag">ORTHOPEDICS · RESEARCH</div>
 
-<h2>Cardiology</h2>
+      <h3>Orthopedic Research</h3>
 
-<p>
-Interested in the heart and cardiovascular science?
-</p>
+      <p>
+        Search orthopedic and musculoskeletal research
+        through PubMed.
+      </p>
 
-<div class="buttons">
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=orthopedics"
+        target="_blank"
+        rel="noopener">
+        FIND PAPERS →
+      </a>
 
-<a href="#cardiology-internships">
-INTERNSHIPS
-</a>
+    </article>
 
-<a href="#cardiology-research">
-RESEARCH
-</a>
 
-</div>
+    <!-- CARDIOLOGY -->
 
-</div>
+    <article class="card"
+      data-specialty="cardiology"
+      data-types="career research">
 
-</div>
+      <div class="card-tag">CARDIOLOGY · RESEARCH</div>
+
+      <h3>Cardiovascular Research</h3>
+
+      <p>
+        Explore research, science, and educational resources
+        related to cardiovascular medicine.
+      </p>
+
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=cardiology"
+        target="_blank"
+        rel="noopener">
+        FIND RESEARCH →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="cardiology"
+      data-types="research">
+
+      <div class="card-tag">CARDIOLOGY · STUDENTS</div>
+
+      <h3>AHA Student Resources</h3>
+
+      <p>
+        Explore American Heart Association student,
+        research, and early-career resources.
+      </p>
+
+      <a class="card-link"
+        href="https://professional.heart.org/en/professional-membership/awards-and-lectures/student-scholarships"
+        target="_blank"
+        rel="noopener">
+        VIEW RESOURCES →
+      </a>
+
+    </article>
+
+
+    <!-- NEUROLOGY -->
+
+    <article class="card"
+      data-specialty="neurology"
+      data-types="career">
+
+      <div class="card-tag">NEUROLOGY · CAREER</div>
+
+      <h3>Why Neurology?</h3>
+
+      <p>
+        Explore neurology, neuroscience, and the path
+        toward becoming a neurologist.
+      </p>
+
+      <a class="card-link"
+        href="https://www.aan.com/tools-resources/why-choose-neurology"
+        target="_blank"
+        rel="noopener">
+        EXPLORE NEUROLOGY →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="neurology"
+      data-types="research">
+
+      <div class="card-tag">NEUROLOGY · RESEARCH</div>
+
+      <h3>Neurology Research</h3>
+
+      <p>
+        Find published neuroscience and neurology research
+        through PubMed.
+      </p>
+
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=neurology"
+        target="_blank"
+        rel="noopener">
+        FIND PAPERS →
+      </a>
+
+    </article>
+
+
+    <!-- SURGERY -->
+
+    <article class="card"
+      data-specialty="surgery"
+      data-types="career">
+
+      <div class="card-tag">SURGERY · CAREER</div>
+
+      <h3>Surgical Careers</h3>
+
+      <p>
+        Explore surgical specialties, medical careers,
+        and resources for students interested in surgery.
+      </p>
+
+      <a class="card-link"
+        href="https://www.facs.org/for-medical-professionals/education/"
+        target="_blank"
+        rel="noopener">
+        EXPLORE SURGERY →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="surgery"
+      data-types="research">
+
+      <div class="card-tag">SURGERY · RESEARCH</div>
+
+      <h3>Surgical Research</h3>
+
+      <p>
+        Search published surgical research and scientific
+        papers through PubMed.
+      </p>
+
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/?term=surgery"
+        target="_blank"
+        rel="noopener">
+        FIND PAPERS →
+      </a>
+
+    </article>
+
+
+    <!-- GENERAL MEDICINE -->
+
+    <article class="card"
+      data-specialty="general"
+      data-types="internship summer research">
+
+      <div class="card-tag">MEDICINE · SUMMER RESEARCH</div>
+
+      <h3>Stanford SIMR</h3>
+
+      <p>
+        An eight-week medically oriented research program
+        for eligible high school students.
+      </p>
+
+      <a class="card-link"
+        href="https://med.stanford.edu/simr"
+        target="_blank"
+        rel="noopener">
+        VIEW SIMR →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="general"
+      data-types="internship summer research">
+
+      <div class="card-tag">MEDICINE · RESEARCH</div>
+
+      <h3>NIH Summer Internship Program</h3>
+
+      <p>
+        Explore biomedical research opportunities through
+        the NIH. Eligibility requirements vary.
+      </p>
+
+      <a class="card-link"
+        href="https://www.nia.nih.gov/nia-summer-internship"
+        target="_blank"
+        rel="noopener">
+        VIEW NIH PROGRAM →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="general"
+      data-types="internship summer research">
+
+      <div class="card-tag">MEDICINE · RESEARCH</div>
+
+      <h3>Stanford GRIPS</h3>
+
+      <p>
+        A research-intensive summer experience for
+        eligible Bay Area high school students.
+      </p>
+
+      <a class="card-link"
+        href="https://med.stanford.edu/genetics/education/GRIPS.html"
+        target="_blank"
+        rel="noopener">
+        VIEW GRIPS →
+      </a>
+
+    </article>
+
+    <article class="card"
+      data-specialty="general"
+      data-types="research">
+
+      <div class="card-tag">MEDICINE · RESEARCH PAPERS</div>
+
+      <h3>PubMed</h3>
+
+      <p>
+        Search millions of biomedical research papers
+        by specialty, topic, or keyword.
+      </p>
+
+      <a class="card-link"
+        href="https://pubmed.ncbi.nlm.nih.gov/"
+        target="_blank"
+        rel="noopener">
+        SEARCH RESEARCH →
+      </a>
+
+    </article>
+
+  </div>
+
+  <div class="no-results" id="none">
+    No resources match those filters yet.
+  </div>
 
 </section>
 
+<footer>
 
-<!-- These are the actual destination sections for every button -->
+  <div>
+    <a href="https://www.instagram.com/prederm_society/" target="_blank">INSTAGRAM</a>
+    <a href="https://www.tiktok.com/@prederm_society" target="_blank">TIKTOK</a>
+    <a href="mailto:predermsociety@gmail.com">EMAIL</a>
+  </div>
 
-<section class="content" id="dermatology-internships">
-<h2 class="field-title">Dermatology Internships</h2>
-<p style="color:#777;line-height:1.7">
-Use this page section to find verified dermatology internship
-programs. Program availability and age requirements vary.
-</p>
-</section>
+  <div class="label">PRE-DERM SOCIETY</div>
 
+</footer>
 
-<section class="content" id="dermatology-research">
-<h2 class="field-title">Dermatology Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore dermatology research opportunities and scientific
-projects.
-</p>
-</section>
+<script>
 
+const specialtyButtons=document.querySelectorAll(".specialty");
+const checkboxes=document.querySelectorAll(".type-label input");
+const cards=document.querySelectorAll(".card");
+const count=document.getElementById("count");
+const none=document.getElementById("none");
+const clear=document.getElementById("clear");
 
-<section class="content" id="dermatology-summer">
-<h2 class="field-title">Dermatology Summer Programs</h2>
-<p style="color:#777;line-height:1.7">
-Explore summer learning opportunities connected to dermatology.
-</p>
-</section>
+let selectedSpecialty="all";
 
+function filterCards(){
 
-<section class="content" id="pediatrics-internships">
-<h2 class="field-title">Pediatrics Internships</h2>
-<p style="color:#777;line-height:1.7">
-Explore pediatric healthcare experiences and internship programs.
-</p>
-</section>
+  const selectedTypes=
+    [...checkboxes]
+    .filter(box=>box.checked)
+    .map(box=>box.value);
 
+  let visible=0;
 
-<section class="content" id="pediatrics-research">
-<h2 class="field-title">Pediatrics Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore pediatric research and children's-health science.
-</p>
-</section>
+  cards.forEach(card=>{
 
+    const specialty=card.dataset.specialty;
+    const types=card.dataset.types.split(" ");
 
-<section class="content" id="pediatrics-summer">
-<h2 class="field-title">Pediatrics Summer Programs</h2>
-<p style="color:#777;line-height:1.7">
-Explore summer educational programs related to pediatrics.
-</p>
-</section>
+    const specialtyMatch=
+      selectedSpecialty==="all" ||
+      specialty===selectedSpecialty;
 
+    const typeMatch=
+      selectedTypes.length===0 ||
+      selectedTypes.some(type=>types.includes(type));
 
-<section class="content" id="orthopedics-internships">
-<h2 class="field-title">Orthopedics Internships</h2>
-<p style="color:#777;line-height:1.7">
-Explore orthopedic medicine experiences.
-</p>
-</section>
+    if(specialtyMatch && typeMatch){
+      card.style.display="flex";
+      visible++;
+    }else{
+      card.style.display="none";
+    }
 
+  });
 
-<section class="content" id="orthopedics-research">
-<h2 class="field-title">Orthopedics Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore research involving bones, joints, sports medicine,
-and movement.
-</p>
-</section>
+  count.textContent=visible+" RESOURCES";
+  none.style.display=visible===0 ? "block" : "none";
+}
 
+specialtyButtons.forEach(button=>{
 
-<section class="content" id="surgery-internships">
-<h2 class="field-title">Surgery Internships</h2>
-<p style="color:#777;line-height:1.7">
-Explore surgical medicine experiences.
-</p>
-</section>
+  button.addEventListener("click",function(){
 
+    specialtyButtons.forEach(btn=>{
+      btn.classList.remove("active");
+    });
 
-<section class="content" id="surgery-research">
-<h2 class="field-title">Surgery Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore surgical research.
-</p>
-</section>
+    this.classList.add("active");
 
+    selectedSpecialty=this.dataset.specialty;
 
-<section class="content" id="pharmacy-internships">
-<h2 class="field-title">Pharmacy Internships</h2>
-<p style="color:#777;line-height:1.7">
-Explore pharmacy-related experiences.
-</p>
-</section>
+    filterCards();
+  });
 
+});
 
-<section class="content" id="pharmacy-research">
-<h2 class="field-title">Pharmacy Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore pharmacology and pharmaceutical research.
-</p>
-</section>
+checkboxes.forEach(box=>{
+  box.addEventListener("change",filterCards);
+});
 
+clear.addEventListener("click",function(){
 
-<section class="content" id="cardiology-internships">
-<h2 class="field-title">Cardiology Internships</h2>
-<p style="color:#777;line-height:1.7">
-Explore cardiovascular healthcare experiences.
-</p>
-</section>
+  selectedSpecialty="all";
 
+  specialtyButtons.forEach(btn=>{
+    btn.classList.remove("active");
+  });
 
-<section class="content" id="cardiology-research">
-<h2 class="field-title">Cardiology Research</h2>
-<p style="color:#777;line-height:1.7">
-Explore cardiovascular research.
-</p>
-</section>
+  document
+    .querySelector('[data-specialty="all"]')
+    .classList.add("active");
+
+  checkboxes.forEach(box=>{
+    box.checked=false;
+  });
+
+  filterCards();
+
+});
+
+filterCards();
+
+</script>
 
 </body>
 </html>
