@@ -8,31 +8,30 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
-  background: #faf9f6;
-  color: #111;
-  font-family: "DM Sans", sans-serif;
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#fff;
+  color:#171717;
+  line-height:1.6;
 }
 
-a {
-  color: #111;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
 
@@ -40,48 +39,52 @@ a {
    NAVIGATION
 ========================= */
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+nav{
+  width:100%;
+  padding:24px 7%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-  padding: 22px 6%;
+  border-bottom:1px solid #eee;
 
-  background: rgba(250, 249, 246, 0.94);
-  backdrop-filter: blur(14px);
+  background:rgba(255,255,255,.97);
 
-  border-bottom: 1px solid #dedcd8;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.logo {
-  text-decoration: none;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  line-height: 1.5;
+.logo{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.5px;
 }
 
-.links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+
+  font-size:14px;
+  font-weight:500;
 }
 
-.links a {
-  text-decoration: none;
-  font-size: 9px;
-  letter-spacing: 2px;
-  transition: opacity 0.2s ease;
+.nav-links a:hover{
+  opacity:.55;
 }
 
-.links a:hover {
-  opacity: 0.5;
+.join-btn{
+  border:1px solid #171717;
+  padding:9px 18px;
+  border-radius:30px;
+}
+
+.join-btn:hover{
+  background:#171717;
+  color:#fff;
+  opacity:1!important;
 }
 
 
@@ -89,346 +92,139 @@ nav {
    HERO
 ========================= */
 
-.hero {
-  min-height: 78vh;
+.hero{
+  min-height:70vh;
 
-  display: flex;
-  align-items: flex-end;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-  padding: 180px 8% 100px;
+  text-align:center;
 
-  background:
-    radial-gradient(
-      circle at 78% 25%,
-      #e8e2dc 0%,
-      transparent 38%
-    ),
-    #faf9f6;
+  padding:100px 7%;
 }
 
-.hero-content {
-  max-width: 1000px;
+.hero-content{
+  max-width:850px;
 }
 
-.eyebrow {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #777;
-  margin-bottom: 30px;
+.eyebrow{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:20px;
 }
 
-h1 {
-  font-size: clamp(65px, 13vw, 155px);
-  line-height: 0.82;
-  letter-spacing: -9px;
-  font-weight: 300;
-  margin: 0;
+h1{
+  font-size:clamp(55px,9vw,100px);
+  line-height:.95;
+  letter-spacing:-5px;
+  font-weight:600;
+  margin-bottom:30px;
 }
 
-.hero-description {
-  max-width: 650px;
-  margin-top: 45px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #666;
+.hero p{
+  max-width:650px;
+  margin:0 auto;
+
+  color:#666;
+  font-size:17px;
 }
 
 
 /* =========================
-   GENERAL
+   GENERAL SECTIONS
 ========================= */
 
-section {
-  padding: 120px 8%;
-  border-top: 1px solid #dedcd8;
+section{
+  padding:100px 7%;
+  border-top:1px solid #eee;
 }
 
-.label {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #777;
-  margin-bottom: 30px;
+.section-heading{
+  max-width:750px;
+  margin-bottom:55px;
 }
 
-h2 {
-  font-size: clamp(50px, 8vw, 100px);
-  line-height: 0.86;
-  letter-spacing: -6px;
-  font-weight: 300;
-  margin: 0 0 35px;
+.section-heading span{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#888;
 }
 
-.text {
-  max-width: 650px;
-  color: #666;
-  line-height: 1.8;
-  font-size: 15px;
+.section-heading h2{
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-3px;
+  line-height:1.02;
+  margin-top:12px;
+  font-weight:600;
+}
+
+.section-heading p{
+  margin-top:18px;
+  color:#777;
+  max-width:650px;
 }
 
 
 /* =========================
-   OUR STORY
+   ABOUT
 ========================= */
 
-.about-section {
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
+.about-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
 }
 
-.about-content {
-  max-width: 900px;
+.about-text{
+  max-width:650px;
 }
 
-.about-content .text {
-  margin-bottom: 20px;
+.about-text h2{
+  font-size:clamp(40px,6vw,65px);
+  letter-spacing:-3px;
+  line-height:1;
+  font-weight:600;
+
+  margin-bottom:25px;
 }
 
+.about-text p{
+  color:#707070;
+  font-size:16px;
+  line-height:1.8;
 
-/* =========================
-   INSTAGRAM SECTION
-========================= */
-
-.instagram-section {
-  background: #efeee9;
-  overflow: hidden;
+  margin-bottom:18px;
 }
 
-.instagram-header {
-  max-width: 850px;
+.about-image{
+  width:100%;
+  height:520px;
+
+  overflow:hidden;
+
+  border-radius:26px;
+
+  background:#f5f5f5;
 }
 
-.instagram-header h2 {
-  margin-bottom: 25px;
-}
+.about-image img{
+  width:100%;
+  height:100%;
 
+  object-fit:cover;
 
-/* =========================
-   INSTAGRAM CAROUSEL
-========================= */
+  filter:blur(.7px) saturate(.85);
 
-.instagram-carousel-wrapper {
-  position: relative;
-  margin-top: 65px;
-}
+  transform:scale(1.02);
 
-
-/* The actual horizontal scrolling area */
-
-.instagram-carousel {
-  display: flex;
-
-  gap: 28px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scroll-behavior: smooth;
-
-  scroll-snap-type: x mandatory;
-
-  padding: 10px 5px 35px;
-
-  -webkit-overflow-scrolling: touch;
-
-  scrollbar-width: none;
-}
-
-.instagram-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* Each post */
-
-.instagram-slide {
-  flex: 0 0 540px;
-
-  scroll-snap-align: center;
-
-  background: #faf9f6;
-
-  border: 1px solid #dedcd8;
-
-  padding: 14px;
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.06);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.instagram-slide:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,0.09);
-}
-
-
-/* Embed container */
-
-.instagram-embed {
-  width: 100%;
-  min-height: 620px;
-
-  display: flex;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-
-/* Instagram official embed */
-
-.instagram-media {
-  width: 100% !important;
-
-  min-width: 0 !important;
-
-  margin: 0 auto !important;
-}
-
-
-/* =========================
-   ARROWS
-========================= */
-
-.carousel-arrow {
-  position: absolute;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  width: 48px;
-  height: 48px;
-
-  border-radius: 50%;
-
-  border: 1px solid #cfcac4;
-
-  background: rgba(250,249,246,0.95);
-
-  color: #111;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 20px;
-
-  cursor: pointer;
-
-  z-index: 10;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.carousel-arrow:hover {
-  background: #111;
-  color: #fff;
-
-  transform:
-    translateY(-50%)
-    scale(1.05);
-}
-
-.carousel-arrow.left {
-  left: 10px;
-}
-
-.carousel-arrow.right {
-  right: 10px;
-}
-
-
-/* =========================
-   POST LABEL
-========================= */
-
-.post-label {
-  text-align: center;
-
-  margin-top: 22px;
-
-  font-size: 9px;
-
-  letter-spacing: 3px;
-
-  color: #777;
-}
-
-
-/* =========================
-   INSTAGRAM LINK
-========================= */
-
-.instagram-link {
-  display: block;
-
-  width: fit-content;
-
-  margin: 25px auto 0;
-
-  padding: 14px 23px;
-
-  border: 1px solid #111;
-
-  border-radius: 100px;
-
-  text-decoration: none;
-
-  color: #111;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 2px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.instagram-link:hover {
-  background: #111;
-  color: #fff;
-}
-
-
-/* =========================
-   MISSION
-========================= */
-
-.mission {
-  min-height: 60vh;
-
-  display: flex;
-
-  align-items: center;
-
-  background:
-    radial-gradient(
-      circle at 75% 30%,
-      #e7dfd7,
-      transparent 42%
-    ),
-    #f4f1ec;
-}
-
-.mission-content {
-  max-width: 900px;
+  opacity:.92;
 }
 
 
@@ -436,117 +232,125 @@ h2 {
    IMPACT
 ========================= */
 
-.impact {
-  background: #faf9f6;
+.impact{
+  background:#f8f8f8;
 }
 
-.impact-header {
-  max-width: 800px;
+.impact-heading{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 65px;
 }
 
-.impact-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  margin-top: 80px;
-
-  border-top: 1px solid #dedcd8;
-
-  border-left: 1px solid #dedcd8;
+.impact-heading span{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#888;
 }
 
-.impact-card {
-  min-height: 300px;
-
-  padding: 45px 35px;
-
-  border-right: 1px solid #dedcd8;
-
-  border-bottom: 1px solid #dedcd8;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  background: #faf9f6;
+.impact-heading h2{
+  font-size:clamp(40px,6vw,65px);
+  letter-spacing:-3px;
+  line-height:1;
+  margin-top:12px;
+  font-weight:600;
 }
 
-.impact-number {
-  font-size: clamp(60px, 8vw, 105px);
-
-  line-height: 0.85;
-
-  letter-spacing: -6px;
-
-  font-weight: 300;
+.impact-heading p{
+  color:#777;
+  margin-top:18px;
 }
 
-.impact-title {
-  font-size: 10px;
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
 
-  letter-spacing: 3px;
+  border-top:1px solid #ddd;
+  border-left:1px solid #ddd;
+}
 
-  color: #777;
+.impact-card{
+  padding:55px 35px;
+
+  text-align:center;
+
+  background:#fff;
+
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+}
+
+.impact-number{
+  font-size:clamp(55px,7vw,90px);
+
+  line-height:1;
+
+  letter-spacing:-5px;
+
+  font-weight:600;
+
+  margin-bottom:18px;
+}
+
+.impact-card h3{
+  font-size:17px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.impact-card p{
+  font-size:13px;
+  color:#777;
 }
 
 
 /* =========================
-   WHAT WE DO
+   MISSION
 ========================= */
 
-.help {
-  background: #efeee9;
+.mission{
+  background:#fff;
 }
 
-.help-grid {
-  display: grid;
+.mission-box{
+  max-width:1000px;
 
-  grid-template-columns: repeat(3, 1fr);
+  margin:0 auto;
 
-  margin-top: 70px;
+  padding:65px;
 
-  gap: 14px;
+  border:1px solid #e7e7e7;
+
+  border-radius:28px;
+
+  background:#fafafa;
+
+  text-align:center;
 }
 
-.help-card {
-  padding: 40px;
+.mission-box h2{
+  font-size:clamp(40px,6vw,65px);
 
-  min-height: 240px;
+  line-height:1;
 
-  border: 1px solid #dedcd8;
+  letter-spacing:-3px;
 
-  background: #faf9f6;
+  font-weight:600;
+
+  margin-bottom:25px;
 }
 
-.help-number {
-  font-size: 9px;
+.mission-box p{
+  max-width:700px;
 
-  letter-spacing: 3px;
+  margin:0 auto;
 
-  color: #777;
-}
+  color:#707070;
 
-.help-card h3 {
-  font-size: 34px;
+  font-size:16px;
 
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-
-  font-weight: 300;
-
-  margin: 45px 0 20px;
-}
-
-.help-card p {
-  color: #666;
-
-  line-height: 1.7;
-
-  font-size: 14px;
+  line-height:1.8;
 }
 
 
@@ -554,39 +358,44 @@ h2 {
    RETURN
 ========================= */
 
-.return {
-  text-align: center;
+.return{
+  text-align:center;
+  padding:110px 7%;
 }
 
-.return-button {
-  display: inline-block;
-
-  margin-top: 20px;
-
-  padding: 14px 24px;
-
-  border: 1px solid #111;
-
-  border-radius: 100px;
-
-  text-decoration: none;
-
-  color: #111;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  font-weight: 600;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+.return .eyebrow{
+  margin-bottom:18px;
 }
 
-.return-button:hover {
-  background: #111;
-  color: #fff;
+.return h2{
+  font-size:clamp(45px,7vw,75px);
+
+  letter-spacing:-4px;
+
+  line-height:1;
+
+  font-weight:600;
+
+  margin-bottom:30px;
+}
+
+.return-button{
+  display:inline-block;
+
+  padding:13px 22px;
+
+  border:1px solid #171717;
+
+  border-radius:30px;
+
+  font-size:13px;
+
+  font-weight:600;
+}
+
+.return-button:hover{
+  background:#171717;
+  color:#fff;
 }
 
 
@@ -594,40 +403,29 @@ h2 {
    FOOTER
 ========================= */
 
-footer {
-  padding: 45px 8%;
+footer{
+  padding:30px 7%;
 
-  display: flex;
+  display:flex;
 
-  justify-content: space-between;
+  justify-content:space-between;
 
-  align-items: center;
+  align-items:center;
 
-  border-top: 1px solid #dedcd8;
+  border-top:1px solid #eee;
+
+  font-size:12px;
+
+  color:#999;
 }
 
-footer a {
-  text-decoration: none;
-
-  color: #111;
-
-  font-size: 9px;
-
-  letter-spacing: 2px;
-
-  margin-right: 25px;
+.footer-links{
+  display:flex;
+  gap:25px;
 }
 
-footer a:hover {
-  opacity: 0.5;
-}
-
-.footer-name {
-  font-size: 9px;
-
-  letter-spacing: 3px;
-
-  color: #777;
+.footer-links a:hover{
+  opacity:.55;
 }
 
 
@@ -635,103 +433,36 @@ footer a:hover {
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media(max-width:850px){
 
-  nav {
-    padding: 18px 5%;
+  .nav-links{
+    gap:12px;
   }
 
-  .links {
-    gap: 13px;
-
-    flex-wrap: wrap;
-
-    justify-content: flex-end;
-
-    max-width: 230px;
+  .nav-links a:not(.join-btn){
+    display:none;
   }
 
-  .links a {
-    font-size: 8px;
+  .about-content{
+    grid-template-columns:1fr;
+    gap:40px;
   }
 
-  .hero {
-    min-height: 80vh;
-
-    padding: 150px 8% 80px;
+  .about-image{
+    height:400px;
   }
 
-  h1 {
-    letter-spacing: -5px;
+  .impact-grid{
+    grid-template-columns:1fr;
   }
 
-  h2 {
-    letter-spacing: -4px;
+  .mission-box{
+    padding:40px 25px;
   }
 
-  section {
-    padding: 90px 8%;
-  }
-
-
-  /* Mobile carousel */
-
-  .instagram-carousel {
-    gap: 18px;
-
-    padding-left: 0;
-
-    padding-right: 0;
-
-    scroll-snap-type: x mandatory;
-  }
-
-  .instagram-slide {
-    flex: 0 0 88vw;
-
-    padding: 8px;
-  }
-
-  .instagram-embed {
-    min-height: 500px;
-  }
-
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-
-    font-size: 16px;
-  }
-
-  .carousel-arrow.left {
-    left: 4px;
-  }
-
-  .carousel-arrow.right {
-    right: 4px;
-  }
-
-
-  .impact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .impact-card {
-    min-height: 230px;
-  }
-
-
-  .help-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  footer {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 25px;
+  footer{
+    flex-direction:column;
+    gap:20px;
   }
 
 }
@@ -750,26 +481,25 @@ footer a:hover {
 <nav>
 
   <a href="index.html" class="logo">
-    PRE-DERM<br>
-    SOCIETY
+    Pre-Derm Society
   </a>
 
-  <div class="links">
+  <div class="nav-links">
 
     <a href="index.html">
-      HOME
+      Home
     </a>
 
     <a href="about.html">
-      ABOUT
+      About
     </a>
 
-    <a
-      href="https://www.instagram.com/prederm_society/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      INSTAGRAM
+    <a href="opportunities.html">
+      Opportunities
+    </a>
+
+    <a href="join.html" class="join-btn">
+      Join Now
     </a>
 
   </div>
@@ -786,19 +516,18 @@ footer a:hover {
   <div class="hero-content">
 
     <div class="eyebrow">
-      ABOUT · PRE-DERM SOCIETY
+      Student-led · Medicine · Dermatology
     </div>
 
     <h1>
-      WHY<br>
-      WE'RE<br>
-      HERE.
+      About<br>
+      Pre-Derm Society.
     </h1>
 
-    <p class="hero-description">
-      A student-led space created to make dermatology,
-      medicine, research, skincare, and healthcare
-      more accessible to students.
+    <p>
+      A student-led community created to make
+      dermatology, medicine, skincare, science,
+      and healthcare easier to explore.
     </p>
 
   </div>
@@ -807,230 +536,70 @@ footer a:hover {
 
 
 <!-- =========================
-     OUR STORY
+     ABOUT
 ========================= -->
 
-<section class="about-section">
+<section>
+
+  <div class="section-heading">
+
+    <span>
+      01 — Who We Are
+    </span>
+
+    <h2>
+      Curiosity can<br>
+      start anywhere.
+    </h2>
+
+    <p>
+      Pre-Derm Society was created to give students
+      a place to learn about dermatology and medicine
+      in a simple, accessible, and student-friendly way.
+    </p>
+
+  </div>
+
 
   <div class="about-content">
 
-    <div class="label">
-      01 · OUR STORY
-    </div>
+    <div class="about-text">
 
-    <h2>
-      Medicine starts<br>
-      with curiosity.
-    </h2>
+      <h2>
+        Learn.<br>
+        Explore.<br>
+        Make an impact.
+      </h2>
 
-    <p class="text">
-      Pre-Derm Society is a student-led community
-      focused on exploring dermatology and the
-      science behind skin health.
-    </p>
+      <p>
+        We believe students should be able to explore
+        healthcare and science before they ever step
+        into a medical school classroom.
+      </p>
 
-    <p class="text">
-      We create educational resources, introduce
-      students to research, share opportunities,
-      and encourage students to ask questions
-      about medicine and healthcare.
-    </p>
+      <p>
+        Through educational lessons, research resources,
+        medical opportunities, and student projects,
+        Pre-Derm Society encourages curiosity and
+        evidence-based learning.
+      </p>
 
-  </div>
-
-</section>
-
-
-<!-- =========================
-     INSTAGRAM POSTS
-========================= -->
-
-<section class="instagram-section">
-
-  <div class="instagram-header">
-
-    <div class="label">
-      02 · FOLLOW OUR JOURNEY
-    </div>
-
-    <h2>
-      @prederm_society
-    </h2>
-
-    <p class="text">
-      Follow along as we share what we're learning,
-      creating, and exploring in dermatology,
-      medicine, and research.
-    </p>
-
-  </div>
-
-
-  <div class="instagram-carousel-wrapper">
-
-
-    <!-- LEFT ARROW -->
-
-    <button
-      class="carousel-arrow left"
-      id="instagramLeft"
-      aria-label="Previous Instagram post"
-    >
-      ←
-    </button>
-
-
-    <!-- CAROUSEL -->
-
-    <div
-      class="instagram-carousel"
-      id="instagramCarousel"
-    >
-
-
-      <!-- POST 1 · MAIN POST -->
-
-      <div class="instagram-slide">
-
-        <div class="instagram-embed">
-
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DckYfK6FFQ9/"
-            data-instgrm-version="14"
-          >
-
-          </blockquote>
-
-        </div>
-
-        <div class="post-label">
-          FEATURED POST · PRE-DERM SOCIETY
-        </div>
-
-        <a
-          class="instagram-link"
-          href="https://www.instagram.com/p/DckYfK6FFQ9/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VIEW ON INSTAGRAM →
-        </a>
-
-      </div>
-
-
-      <!-- POST 2 -->
-
-      <div class="instagram-slide">
-
-        <div class="instagram-embed">
-
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
-            data-instgrm-version="14"
-          >
-
-          </blockquote>
-
-        </div>
-
-        <div class="post-label">
-          PRE-DERM SOCIETY · INSTAGRAM
-        </div>
-
-        <a
-          class="instagram-link"
-          href="https://www.instagram.com/p/DVCQc5Aksk4/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VIEW ON INSTAGRAM →
-        </a>
-
-      </div>
-
-
-      <!-- POST 3 -->
-
-      <div class="instagram-slide">
-
-        <div class="instagram-embed">
-
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
-            data-instgrm-version="14"
-          >
-
-          </blockquote>
-
-        </div>
-
-        <div class="post-label">
-          PRE-DERM SOCIETY · INSTAGRAM
-        </div>
-
-        <a
-          class="instagram-link"
-          href="https://www.instagram.com/p/DWMpub7D-ep/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VIEW ON INSTAGRAM →
-        </a>
-
-      </div>
-
+      <p>
+        Our goal is simple: make learning about medicine
+        feel exciting, approachable, and meaningful.
+      </p>
 
     </div>
 
 
-    <!-- RIGHT ARROW -->
+    <div class="about-image">
 
-    <button
-      class="carousel-arrow right"
-      id="instagramRight"
-      aria-label="Next Instagram post"
-    >
-      →
-    </button>
+      <img
+        src="IMG_5145.jpeg"
+        alt="Pre-Derm Society"
+      >
 
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     MISSION
-========================= -->
-
-<section class="mission">
-
-  <div class="mission-content">
-
-    <div class="label">
-      03 · OUR MISSION
     </div>
-
-    <h2>
-      Make medicine<br>
-      feel possible.
-    </h2>
-
-    <p class="text">
-      We believe students should be able to explore
-      medicine before they ever have to decide what
-      their future should look like.
-    </p>
-
-    <p class="text">
-      Through lessons, research resources,
-      opportunities, and student-led education,
-      Pre-Derm Society turns curiosity into action.
-    </p>
 
   </div>
 
@@ -1041,24 +610,22 @@ footer a:hover {
      IMPACT
 ========================= -->
 
-<section class="impact">
+<section class="impact" id="impact">
 
-  <div class="impact-header">
+  <div class="impact-heading">
 
-    <div class="label">
-      04 · OUR IMPACT
-    </div>
+    <span>
+      02 — Our Impact
+    </span>
 
     <h2>
-      Small actions.<br>
-      Real impact.
+      Small lessons.<br>
+      Bigger impact.
     </h2>
 
-    <p class="text">
-      Every lesson completed and every student
-      reached helps us build a stronger community
-      of future researchers, healthcare professionals,
-      and curious learners.
+    <p>
+      Every lesson completed helps grow our
+      student-led educational community.
     </p>
 
   </div>
@@ -1077,9 +644,14 @@ footer a:hover {
         0
       </div>
 
-      <div class="impact-title">
-        PEOPLE REACHED
-      </div>
+      <h3>
+        People Reached
+      </h3>
+
+      <p>
+        Students and community members reached
+        through our educational work.
+      </p>
 
     </div>
 
@@ -1094,9 +666,14 @@ footer a:hover {
         0
       </div>
 
-      <div class="impact-title">
-        LESSONS TAUGHT
-      </div>
+      <h3>
+        Lessons Taught
+      </h3>
+
+      <p>
+        Educational lessons completed through
+        Pre-Derm Society.
+      </p>
 
     </div>
 
@@ -1105,15 +682,20 @@ footer a:hover {
 
       <div
         class="impact-number"
-        data-target="3"
+        data-target="20"
         data-suffix=""
       >
         0
       </div>
 
-      <div class="impact-title">
-        AREAS OF EXPLORATION
-      </div>
+      <h3>
+        Lessons Available
+      </h3>
+
+      <p>
+        Student-friendly topics designed to
+        make medicine easier to explore.
+      </p>
 
     </div>
 
@@ -1124,81 +706,29 @@ footer a:hover {
 
 
 <!-- =========================
-     WHAT WE DO
+     MISSION
 ========================= -->
 
-<section class="help">
+<section class="mission">
 
-  <div class="label">
-    05 · WHAT WE DO
-  </div>
+  <div class="mission-box">
 
-  <h2>
-    Explore.<br>
-    Learn.<br>
-    Discover.
-  </h2>
-
-
-  <div class="help-grid">
-
-
-    <div class="help-card">
-
-      <div class="help-number">
-        01
-      </div>
-
-      <h3>
-        Education
-      </h3>
-
-      <p>
-        Student-friendly lessons that make
-        dermatology and skin science easier
-        to understand.
-      </p>
-
+    <div class="eyebrow">
+      03 — Our Mission
     </div>
 
+    <h2>
+      Medicine starts<br>
+      with curiosity.
+    </h2>
 
-    <div class="help-card">
-
-      <div class="help-number">
-        02
-      </div>
-
-      <h3>
-        Research
-      </h3>
-
-      <p>
-        Resources that help students discover
-        scientific research and begin thinking
-        like researchers.
-      </p>
-
-    </div>
-
-
-    <div class="help-card">
-
-      <div class="help-number">
-        03
-      </div>
-
-      <h3>
-        Opportunities
-      </h3>
-
-      <p>
-        A growing collection of research,
-        education, and healthcare opportunities
-        for students to explore.
-      </p>
-
-    </div>
-
+    <p>
+      We want to inspire students to ask questions,
+      explore science, understand healthcare, and
+      discover where their curiosity can take them.
+      Pre-Derm Society is a starting point — not an
+      endpoint.
+    </p>
 
   </div>
 
@@ -1206,12 +736,12 @@ footer a:hover {
 
 
 <!-- =========================
-     RETURN HOME
+     RETURN
 ========================= -->
 
 <section class="return">
 
-  <div class="label">
+  <div class="eyebrow">
     PRE-DERM SOCIETY
   </div>
 
@@ -1235,14 +765,14 @@ footer a:hover {
 
 <footer>
 
-  <div>
+  <div class="footer-links">
 
     <a
       href="https://www.instagram.com/prederm_society/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      INSTAGRAM
+      Instagram
     </a>
 
     <a
@@ -1250,262 +780,132 @@ footer a:hover {
       target="_blank"
       rel="noopener noreferrer"
     >
-      TIKTOK
+      TikTok
     </a>
 
     <a href="mailto:predermsociety@gmail.com">
-      EMAIL
+      Email
     </a>
 
   </div>
 
-  <div class="footer-name">
-    PRE-DERM SOCIETY
+  <div>
+    Pre-Derm Society · 2026
   </div>
 
 </footer>
 
 
 <!-- =========================
-     INSTAGRAM OFFICIAL EMBED
-========================= -->
-
-<script async src="https://www.instagram.com/embed.js"></script>
-
-
-<!-- =========================
-     INSTAGRAM CAROUSEL
+     NUMBER ANIMATION
 ========================= -->
 
 <script>
 
-const carousel =
-  document.getElementById("instagramCarousel");
-
-const leftButton =
-  document.getElementById("instagramLeft");
-
-const rightButton =
-  document.getElementById("instagramRight");
+const numbers =
+  document.querySelectorAll(".impact-number");
 
 
-function moveCarousel(direction) {
+function animateNumber(element){
 
-  const slide =
-    carousel.querySelector(".instagram-slide");
+  const target =
+    Number(element.dataset.target);
 
-  if (!slide) return;
+  const suffix =
+    element.dataset.suffix || "";
 
-  const amount =
-    slide.offsetWidth + 28;
+  const duration = 1300;
 
-  carousel.scrollBy({
-
-    left: amount * direction,
-
-    behavior: "smooth"
-
-  });
-
-}
+  const startTime =
+    performance.now();
 
 
-leftButton.addEventListener(
-  "click",
-  () => moveCarousel(-1)
-);
+  function update(currentTime){
+
+    const elapsed =
+      currentTime - startTime;
+
+    const progress =
+      Math.min(elapsed / duration, 1);
 
 
-rightButton.addEventListener(
-  "click",
-  () => moveCarousel(1)
-);
+    /*
+      Ease-out animation:
+      starts quickly and slows down
+      when it reaches the final number.
+    */
+
+    const eased =
+      1 - Math.pow(1 - progress, 3);
 
 
-/* Make sure Instagram processes
-   all embeds after the page loads */
+    const current =
+      Math.floor(eased * target);
 
-window.addEventListener(
-  "load",
-  function() {
 
-    if (
-      window.instgrm &&
-      window.instgrm.Embeds
-    ) {
+    element.textContent =
+      current + suffix;
 
-      window.instgrm.Embeds.process();
+
+    if(progress < 1){
+
+      requestAnimationFrame(update);
+
+    }else{
+
+      element.textContent =
+        target + suffix;
 
     }
 
   }
-);
 
 
-/* =========================
-   TOUCH / SWIPE
-========================= */
+  requestAnimationFrame(update);
 
-let touchStartX = 0;
-
-let touchEndX = 0;
+}
 
 
-carousel.addEventListener(
-  "touchstart",
-  function(event) {
+/*
+  Only animate the numbers when
+  the impact section enters the screen.
+*/
 
-    touchStartX =
-      event.changedTouches[0].screenX;
-
-  },
-  { passive: true }
-);
-
-
-carousel.addEventListener(
-  "touchend",
-  function(event) {
-
-    touchEndX =
-      event.changedTouches[0].screenX;
-
-    const difference =
-      touchStartX - touchEndX;
-
-
-    if (Math.abs(difference) < 40) {
-      return;
-    }
-
-
-    if (difference > 0) {
-
-      moveCarousel(1);
-
-    } else {
-
-      moveCarousel(-1);
-
-    }
-
-  },
-  { passive: true }
-);
-
-</script>
-
-
-<!-- =========================
-     COUNT-UP NUMBERS
-========================= -->
-
-<script>
-
-const counters =
-  document.querySelectorAll(".impact-number");
-
-
-const counterObserver =
+const observer =
   new IntersectionObserver(
 
     (entries, observer) => {
 
       entries.forEach(entry => {
 
-        if (!entry.isIntersecting) {
-          return;
-        }
+        if(entry.isIntersecting){
 
+          numbers.forEach(number => {
 
-        const counter = entry.target;
+            animateNumber(number);
 
-        const target =
-          parseInt(
-            counter.dataset.target
-          );
+          });
 
-        const suffix =
-          counter.dataset.suffix || "";
-
-
-        const duration = 1400;
-
-        const startTime =
-          performance.now();
-
-
-        function updateCounter(currentTime) {
-
-          const elapsed =
-            currentTime - startTime;
-
-
-          const progress =
-            Math.min(
-              elapsed / duration,
-              1
-            );
-
-
-          const eased =
-            1 - Math.pow(
-              1 - progress,
-              3
-            );
-
-
-          const current =
-            Math.floor(
-              target * eased
-            );
-
-
-          counter.textContent =
-            current.toLocaleString() +
-            suffix;
-
-
-          if (progress < 1) {
-
-            requestAnimationFrame(
-              updateCounter
-            );
-
-          } else {
-
-            counter.textContent =
-              target.toLocaleString() +
-              suffix;
-
-          }
+          observer.disconnect();
 
         }
-
-
-        requestAnimationFrame(
-          updateCounter
-        );
-
-
-        observer.unobserve(counter);
 
       });
 
     },
 
     {
-      threshold: 0.35
+      threshold:0.25
     }
 
   );
 
 
-counters.forEach(counter => {
+const impactSection =
+  document.querySelector(".impact");
 
-  counterObserver.observe(counter);
 
-});
+observer.observe(impactSection);
 
 </script>
 
