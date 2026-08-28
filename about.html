@@ -12,6 +12,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -124,7 +128,6 @@ h1 {
 .hero-description {
   max-width: 650px;
   margin-top: 45px;
-
   font-size: 16px;
   line-height: 1.8;
   color: #666;
@@ -132,7 +135,7 @@ h1 {
 
 
 /* =========================
-   GENERAL SECTIONS
+   GENERAL
 ========================= */
 
 section {
@@ -164,7 +167,7 @@ h2 {
 
 
 /* =========================
-   ABOUT
+   OUR STORY
 ========================= */
 
 .about-section {
@@ -183,56 +186,224 @@ h2 {
 
 
 /* =========================
-   PHOTO
+   INSTAGRAM SECTION
 ========================= */
 
-.photo-section {
+.instagram-section {
   background: #efeee9;
+  overflow: hidden;
 }
 
-.photo-wrapper {
-  max-width: 1050px;
-  margin: 70px auto 0;
+.instagram-header {
+  max-width: 850px;
+}
 
-  overflow: hidden;
+.instagram-header h2 {
+  margin-bottom: 25px;
+}
 
-  border: 1px solid #dedcd8;
+
+/* =========================
+   INSTAGRAM CAROUSEL
+========================= */
+
+.instagram-carousel-wrapper {
+  position: relative;
+  margin-top: 65px;
+}
+
+
+/* The actual horizontal scrolling area */
+
+.instagram-carousel {
+  display: flex;
+
+  gap: 28px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  padding: 10px 5px 35px;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+}
+
+.instagram-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Each post */
+
+.instagram-slide {
+  flex: 0 0 540px;
+
+  scroll-snap-align: center;
 
   background: #faf9f6;
 
+  border: 1px solid #dedcd8;
+
   padding: 14px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.photo-wrapper img {
-  display: block;
+.instagram-slide:hover {
+  transform: translateY(-4px);
 
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.09);
+}
+
+
+/* Embed container */
+
+.instagram-embed {
   width: 100%;
-  height: auto;
+  min-height: 620px;
 
-  max-height: 650px;
+  display: flex;
+  justify-content: center;
 
-  object-fit: cover;
-
-  /* subtle softness — not heavily blurry */
-  filter: blur(1.2px);
-
-  transform: scale(1.015);
-
-  transition: filter 0.4s ease,
-              transform 0.4s ease;
+  overflow: hidden;
 }
 
-.photo-wrapper:hover img {
-  filter: blur(0.3px);
-  transform: scale(1.01);
+
+/* Instagram official embed */
+
+.instagram-media {
+  width: 100% !important;
+
+  min-width: 0 !important;
+
+  margin: 0 auto !important;
 }
 
-.photo-caption {
-  padding: 22px 10px 8px;
+
+/* =========================
+   ARROWS
+========================= */
+
+.carousel-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid #cfcac4;
+
+  background: rgba(250,249,246,0.95);
+
+  color: #111;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: #111;
+  color: #fff;
+
+  transform:
+    translateY(-50%)
+    scale(1.05);
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+
+/* =========================
+   POST LABEL
+========================= */
+
+.post-label {
+  text-align: center;
+
+  margin-top: 22px;
 
   font-size: 9px;
-  letter-spacing: 2px;
+
+  letter-spacing: 3px;
+
   color: #777;
+}
+
+
+/* =========================
+   INSTAGRAM LINK
+========================= */
+
+.instagram-link {
+  display: block;
+
+  width: fit-content;
+
+  margin: 25px auto 0;
+
+  padding: 14px 23px;
+
+  border: 1px solid #111;
+
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.instagram-link:hover {
+  background: #111;
+  color: #fff;
 }
 
 
@@ -244,6 +415,7 @@ h2 {
   min-height: 60vh;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -274,11 +446,13 @@ h2 {
 
 .impact-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   margin-top: 80px;
 
   border-top: 1px solid #dedcd8;
+
   border-left: 1px solid #dedcd8;
 }
 
@@ -288,10 +462,13 @@ h2 {
   padding: 45px 35px;
 
   border-right: 1px solid #dedcd8;
+
   border-bottom: 1px solid #dedcd8;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
 
   background: #faf9f6;
@@ -317,7 +494,7 @@ h2 {
 
 
 /* =========================
-   HOW WE HELP
+   WHAT WE DO
 ========================= */
 
 .help {
@@ -326,6 +503,7 @@ h2 {
 
 .help-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   margin-top: 70px;
@@ -345,7 +523,9 @@ h2 {
 
 .help-number {
   font-size: 9px;
+
   letter-spacing: 3px;
+
   color: #777;
 }
 
@@ -418,7 +598,9 @@ footer {
   padding: 45px 8%;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
   border-top: 1px solid #dedcd8;
@@ -442,7 +624,9 @@ footer a:hover {
 
 .footer-name {
   font-size: 9px;
+
   letter-spacing: 3px;
+
   color: #777;
 }
 
@@ -459,9 +643,12 @@ footer a:hover {
 
   .links {
     gap: 13px;
+
     flex-wrap: wrap;
+
     justify-content: flex-end;
-    max-width: 250px;
+
+    max-width: 230px;
   }
 
   .links a {
@@ -470,6 +657,7 @@ footer a:hover {
 
   .hero {
     min-height: 80vh;
+
     padding: 150px 8% 80px;
   }
 
@@ -485,14 +673,44 @@ footer a:hover {
     padding: 90px 8%;
   }
 
-  .photo-wrapper {
-    padding: 8px;
-    margin-top: 50px;
+
+  /* Mobile carousel */
+
+  .instagram-carousel {
+    gap: 18px;
+
+    padding-left: 0;
+
+    padding-right: 0;
+
+    scroll-snap-type: x mandatory;
   }
 
-  .photo-wrapper img {
-    max-height: 500px;
+  .instagram-slide {
+    flex: 0 0 88vw;
+
+    padding: 8px;
   }
+
+  .instagram-embed {
+    min-height: 500px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 16px;
+  }
+
+  .carousel-arrow.left {
+    left: 4px;
+  }
+
+  .carousel-arrow.right {
+    right: 4px;
+  }
+
 
   .impact-grid {
     grid-template-columns: 1fr;
@@ -502,13 +720,17 @@ footer a:hover {
     min-height: 230px;
   }
 
+
   .help-grid {
     grid-template-columns: 1fr;
   }
 
+
   footer {
     flex-direction: column;
+
     align-items: flex-start;
+
     gap: 25px;
   }
 
@@ -516,6 +738,7 @@ footer a:hover {
 
 </style>
 </head>
+
 
 <body>
 
@@ -541,16 +764,12 @@ footer a:hover {
       ABOUT
     </a>
 
-    <a href="lessons.html">
-      LESSONS
-    </a>
-
-    <a href="opportunities.html">
-      OPPORTUNITIES
-    </a>
-
-    <a href="index.html#join">
-      JOIN
+    <a
+      href="https://www.instagram.com/prederm_society/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      INSTAGRAM
     </a>
 
   </div>
@@ -588,7 +807,7 @@ footer a:hover {
 
 
 <!-- =========================
-     ABOUT
+     OUR STORY
 ========================= -->
 
 <section class="about-section">
@@ -613,7 +832,7 @@ footer a:hover {
     <p class="text">
       We create educational resources, introduce
       students to research, share opportunities,
-      and encourage young people to ask questions
+      and encourage students to ask questions
       about medicine and healthcare.
     </p>
 
@@ -623,31 +842,161 @@ footer a:hover {
 
 
 <!-- =========================
-     PHOTO
+     INSTAGRAM POSTS
 ========================= -->
 
-<section class="photo-section">
+<section class="instagram-section">
 
-  <div class="label">
-    02 · OUR COMMUNITY
+  <div class="instagram-header">
+
+    <div class="label">
+      02 · FOLLOW OUR JOURNEY
+    </div>
+
+    <h2>
+      @prederm_society
+    </h2>
+
+    <p class="text">
+      Follow along as we share what we're learning,
+      creating, and exploring in dermatology,
+      medicine, and research.
+    </p>
+
   </div>
 
-  <h2>
-    Learning.<br>
-    Exploring.<br>
-    Growing.
-  </h2>
 
-  <div class="photo-wrapper">
+  <div class="instagram-carousel-wrapper">
 
-    <img
-      src="IMG_5145.jpeg"
-      alt="Pre-Derm Society community"
+
+    <!-- LEFT ARROW -->
+
+    <button
+      class="carousel-arrow left"
+      id="instagramLeft"
+      aria-label="Previous Instagram post"
+    >
+      ←
+    </button>
+
+
+    <!-- CAROUSEL -->
+
+    <div
+      class="instagram-carousel"
+      id="instagramCarousel"
     >
 
-    <div class="photo-caption">
-      PRE-DERM SOCIETY · STUDENT-LED MEDICINE & DERMATOLOGY
+
+      <!-- POST 1 · MAIN POST -->
+
+      <div class="instagram-slide">
+
+        <div class="instagram-embed">
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DckYfK6FFQ9/"
+            data-instgrm-version="14"
+          >
+
+          </blockquote>
+
+        </div>
+
+        <div class="post-label">
+          FEATURED POST · PRE-DERM SOCIETY
+        </div>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/p/DckYfK6FFQ9/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW ON INSTAGRAM →
+        </a>
+
+      </div>
+
+
+      <!-- POST 2 -->
+
+      <div class="instagram-slide">
+
+        <div class="instagram-embed">
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
+            data-instgrm-version="14"
+          >
+
+          </blockquote>
+
+        </div>
+
+        <div class="post-label">
+          PRE-DERM SOCIETY · INSTAGRAM
+        </div>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/p/DVCQc5Aksk4/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW ON INSTAGRAM →
+        </a>
+
+      </div>
+
+
+      <!-- POST 3 -->
+
+      <div class="instagram-slide">
+
+        <div class="instagram-embed">
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
+            data-instgrm-version="14"
+          >
+
+          </blockquote>
+
+        </div>
+
+        <div class="post-label">
+          PRE-DERM SOCIETY · INSTAGRAM
+        </div>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/p/DWMpub7D-ep/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW ON INSTAGRAM →
+        </a>
+
+      </div>
+
+
     </div>
+
+
+    <!-- RIGHT ARROW -->
+
+    <button
+      class="carousel-arrow right"
+      id="instagramRight"
+      aria-label="Next Instagram post"
+    >
+      →
+    </button>
+
 
   </div>
 
@@ -674,7 +1023,7 @@ footer a:hover {
     <p class="text">
       We believe students should be able to explore
       medicine before they ever have to decide what
-      they want their future to look like.
+      their future should look like.
     </p>
 
     <p class="text">
@@ -857,7 +1206,7 @@ footer a:hover {
 
 
 <!-- =========================
-     RETURN
+     RETURN HOME
 ========================= -->
 
 <section class="return">
@@ -918,90 +1267,248 @@ footer a:hover {
 
 
 <!-- =========================
-     COUNT-UP ANIMATION
+     INSTAGRAM OFFICIAL EMBED
+========================= -->
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+
+<!-- =========================
+     INSTAGRAM CAROUSEL
 ========================= -->
 
 <script>
 
-const counters = document.querySelectorAll(".impact-number");
+const carousel =
+  document.getElementById("instagramCarousel");
 
-const observer = new IntersectionObserver(
-  (entries, observer) => {
+const leftButton =
+  document.getElementById("instagramLeft");
 
-    entries.forEach(entry => {
+const rightButton =
+  document.getElementById("instagramRight");
 
-      if (!entry.isIntersecting) return;
 
-      const counter = entry.target;
+function moveCarousel(direction) {
 
-      const target =
-        parseInt(counter.dataset.target);
+  const slide =
+    carousel.querySelector(".instagram-slide");
 
-      const suffix =
-        counter.dataset.suffix || "";
+  if (!slide) return;
 
-      let current = 0;
+  const amount =
+    slide.offsetWidth + 28;
 
-      const duration = 1200;
+  carousel.scrollBy({
 
-      const startTime = performance.now();
+    left: amount * direction,
 
-      function updateCounter(currentTime) {
+    behavior: "smooth"
 
-        const elapsed =
-          currentTime - startTime;
+  });
 
-        const progress =
-          Math.min(elapsed / duration, 1);
+}
 
-        /*
-          Ease-out animation:
-          starts quickly and slows near
-          the final number.
-        */
 
-        const eased =
-          1 - Math.pow(1 - progress, 3);
+leftButton.addEventListener(
+  "click",
+  () => moveCarousel(-1)
+);
 
-        current =
-          Math.floor(target * eased);
 
-        counter.textContent =
-          current.toLocaleString() + suffix;
+rightButton.addEventListener(
+  "click",
+  () => moveCarousel(1)
+);
 
-        if (progress < 1) {
 
-          requestAnimationFrame(updateCounter);
+/* Make sure Instagram processes
+   all embeds after the page loads */
 
-        } else {
+window.addEventListener(
+  "load",
+  function() {
 
-          counter.textContent =
-            target.toLocaleString() + suffix;
+    if (
+      window.instgrm &&
+      window.instgrm.Embeds
+    ) {
 
-        }
+      window.instgrm.Embeds.process();
 
-      }
+    }
 
-      requestAnimationFrame(updateCounter);
-
-      observer.unobserve(counter);
-
-    });
-
-  },
-  {
-    threshold: 0.35
   }
 );
 
 
+/* =========================
+   TOUCH / SWIPE
+========================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+carousel.addEventListener(
+  "touchstart",
+  function(event) {
+
+    touchStartX =
+      event.changedTouches[0].screenX;
+
+  },
+  { passive: true }
+);
+
+
+carousel.addEventListener(
+  "touchend",
+  function(event) {
+
+    touchEndX =
+      event.changedTouches[0].screenX;
+
+    const difference =
+      touchStartX - touchEndX;
+
+
+    if (Math.abs(difference) < 40) {
+      return;
+    }
+
+
+    if (difference > 0) {
+
+      moveCarousel(1);
+
+    } else {
+
+      moveCarousel(-1);
+
+    }
+
+  },
+  { passive: true }
+);
+
+</script>
+
+
+<!-- =========================
+     COUNT-UP NUMBERS
+========================= -->
+
+<script>
+
+const counters =
+  document.querySelectorAll(".impact-number");
+
+
+const counterObserver =
+  new IntersectionObserver(
+
+    (entries, observer) => {
+
+      entries.forEach(entry => {
+
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+
+        const counter = entry.target;
+
+        const target =
+          parseInt(
+            counter.dataset.target
+          );
+
+        const suffix =
+          counter.dataset.suffix || "";
+
+
+        const duration = 1400;
+
+        const startTime =
+          performance.now();
+
+
+        function updateCounter(currentTime) {
+
+          const elapsed =
+            currentTime - startTime;
+
+
+          const progress =
+            Math.min(
+              elapsed / duration,
+              1
+            );
+
+
+          const eased =
+            1 - Math.pow(
+              1 - progress,
+              3
+            );
+
+
+          const current =
+            Math.floor(
+              target * eased
+            );
+
+
+          counter.textContent =
+            current.toLocaleString() +
+            suffix;
+
+
+          if (progress < 1) {
+
+            requestAnimationFrame(
+              updateCounter
+            );
+
+          } else {
+
+            counter.textContent =
+              target.toLocaleString() +
+              suffix;
+
+          }
+
+        }
+
+
+        requestAnimationFrame(
+          updateCounter
+        );
+
+
+        observer.unobserve(counter);
+
+      });
+
+    },
+
+    {
+      threshold: 0.35
+    }
+
+  );
+
+
 counters.forEach(counter => {
 
-  observer.observe(counter);
+  counterObserver.observe(counter);
 
 });
 
 </script>
+
 
 </body>
 </html>
