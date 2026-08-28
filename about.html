@@ -35,22 +35,16 @@ a{
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav{
   width:100%;
   padding:24px 7%;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   border-bottom:1px solid #eee;
-
   background:rgba(255,255,255,.97);
-
   position:sticky;
   top:0;
   z-index:100;
@@ -66,7 +60,6 @@ nav{
   display:flex;
   gap:30px;
   align-items:center;
-
   font-size:14px;
   font-weight:500;
 }
@@ -88,24 +81,19 @@ nav{
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-  min-height:70vh;
-
+  min-height:72vh;
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
-
   padding:100px 7%;
 }
 
 .hero-content{
-  max-width:850px;
+  max-width:900px;
 }
 
 .eyebrow{
@@ -116,153 +104,122 @@ nav{
   margin-bottom:20px;
 }
 
-h1{
-  font-size:clamp(55px,9vw,100px);
+.hero h1{
+  font-size:clamp(52px,9vw,100px);
   line-height:.95;
   letter-spacing:-5px;
   font-weight:600;
   margin-bottom:30px;
 }
 
-.hero p{
+.hero-description{
   max-width:650px;
-  margin:0 auto;
-
+  margin:auto;
   color:#666;
   font-size:17px;
+  line-height:1.7;
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* ABOUT SECTION */
 
-section{
+.about-section{
   padding:100px 7%;
   border-top:1px solid #eee;
 }
 
-.section-heading{
-  max-width:750px;
-  margin-bottom:55px;
-}
-
-.section-heading span{
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#888;
-}
-
-.section-heading h2{
-  font-size:clamp(38px,6vw,65px);
-  letter-spacing:-3px;
-  line-height:1.02;
-  margin-top:12px;
-  font-weight:600;
-}
-
-.section-heading p{
-  margin-top:18px;
-  color:#777;
-  max-width:650px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-content{
+.about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-
   gap:70px;
-
   align-items:center;
 }
 
 .about-text{
-  max-width:650px;
+  max-width:620px;
+}
+
+.section-label{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#888;
+  margin-bottom:20px;
 }
 
 .about-text h2{
   font-size:clamp(40px,6vw,65px);
-  letter-spacing:-3px;
   line-height:1;
+  letter-spacing:-3px;
   font-weight:600;
-
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 .about-text p{
   color:#707070;
   font-size:16px;
   line-height:1.8;
-
   margin-bottom:18px;
 }
 
-.about-image{
+
+/* PHOTO */
+
+.about-photo{
   width:100%;
   height:520px;
-
   overflow:hidden;
-
   border-radius:26px;
-
   background:#f5f5f5;
 }
 
-.about-image img{
+.about-photo img{
   width:100%;
   height:100%;
-
   object-fit:cover;
 
-  filter:blur(.7px) saturate(.85);
+  /*
+  Slight softness — not heavily blurry.
+  */
 
-  transform:scale(1.02);
+  filter:blur(.8px) saturate(.88);
+  transform:scale(1.025);
 
-  opacity:.92;
+  opacity:.93;
 }
 
 
-/* =========================
-   IMPACT
-========================= */
+/* IMPACT */
 
-.impact{
+.impact-section{
+  padding:100px 7%;
+  border-top:1px solid #eee;
   background:#f8f8f8;
 }
 
-.impact-heading{
-  text-align:center;
+.impact-header{
   max-width:700px;
-  margin:0 auto 65px;
+  margin:0 auto 60px;
+  text-align:center;
 }
 
-.impact-heading span{
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#888;
-}
-
-.impact-heading h2{
+.impact-header h2{
   font-size:clamp(40px,6vw,65px);
-  letter-spacing:-3px;
   line-height:1;
-  margin-top:12px;
+  letter-spacing:-3px;
   font-weight:600;
+  margin-bottom:18px;
 }
 
-.impact-heading p{
+.impact-header p{
   color:#777;
-  margin-top:18px;
+  font-size:16px;
 }
 
 .impact-grid{
+  max-width:1100px;
+  margin:auto;
+
   display:grid;
   grid-template-columns:repeat(3,1fr);
 
@@ -271,11 +228,9 @@ section{
 }
 
 .impact-card{
-  padding:55px 35px;
-
-  text-align:center;
-
   background:#fff;
+  text-align:center;
+  padding:55px 30px;
 
   border-right:1px solid #ddd;
   border-bottom:1px solid #ddd;
@@ -283,113 +238,89 @@ section{
 
 .impact-number{
   font-size:clamp(55px,7vw,90px);
-
   line-height:1;
-
   letter-spacing:-5px;
-
   font-weight:600;
-
   margin-bottom:18px;
 }
 
 .impact-card h3{
-  font-size:17px;
+  font-size:18px;
   font-weight:600;
   margin-bottom:8px;
 }
 
 .impact-card p{
-  font-size:13px;
   color:#777;
+  font-size:13px;
+  line-height:1.6;
 }
 
 
-/* =========================
-   MISSION
-========================= */
+/* MISSION */
 
-.mission{
-  background:#fff;
+.mission-section{
+  padding:110px 7%;
+  border-top:1px solid #eee;
 }
 
 .mission-box{
   max-width:1000px;
-
-  margin:0 auto;
+  margin:auto;
 
   padding:65px;
 
+  background:#f8f8f8;
+
   border:1px solid #e7e7e7;
-
   border-radius:28px;
-
-  background:#fafafa;
 
   text-align:center;
 }
 
 .mission-box h2{
   font-size:clamp(40px,6vw,65px);
-
   line-height:1;
-
   letter-spacing:-3px;
-
   font-weight:600;
-
   margin-bottom:25px;
 }
 
 .mission-box p{
   max-width:700px;
-
-  margin:0 auto;
+  margin:auto;
 
   color:#707070;
-
   font-size:16px;
-
   line-height:1.8;
 }
 
 
-/* =========================
-   RETURN
-========================= */
+/* RETURN */
 
-.return{
-  text-align:center;
+.return-section{
   padding:110px 7%;
+  text-align:center;
+  border-top:1px solid #eee;
 }
 
-.return .eyebrow{
-  margin-bottom:18px;
-}
-
-.return h2{
+.return-section h2{
   font-size:clamp(45px,7vw,75px);
-
-  letter-spacing:-4px;
-
   line-height:1;
-
+  letter-spacing:-4px;
   font-weight:600;
-
   margin-bottom:30px;
 }
 
 .return-button{
   display:inline-block;
 
-  padding:13px 22px;
+  padding:13px 23px;
 
   border:1px solid #171717;
-
   border-radius:30px;
 
   font-size:13px;
-
   font-weight:600;
 }
 
@@ -399,23 +330,18 @@ section{
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   padding:30px 7%;
 
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
 
   border-top:1px solid #eee;
 
   font-size:12px;
-
   color:#999;
 }
 
@@ -429,11 +355,13 @@ footer{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:850px){
+
+  nav{
+    padding:20px 5%;
+  }
 
   .nav-links{
     gap:12px;
@@ -443,12 +371,12 @@ footer{
     display:none;
   }
 
-  .about-content{
+  .about-grid{
     grid-template-columns:1fr;
     gap:40px;
   }
 
-  .about-image{
+  .about-photo{
     height:400px;
   }
 
@@ -457,12 +385,13 @@ footer{
   }
 
   .mission-box{
-    padding:40px 25px;
+    padding:45px 25px;
   }
 
   footer{
     flex-direction:column;
     gap:20px;
+    text-align:center;
   }
 
 }
@@ -474,9 +403,7 @@ footer{
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -507,9 +434,7 @@ footer{
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -524,10 +449,10 @@ footer{
       Pre-Derm Society.
     </h1>
 
-    <p>
-      A student-led community created to make
-      dermatology, medicine, skincare, science,
-      and healthcare easier to explore.
+    <p class="hero-description">
+      Pre-Derm Society is a student-led space for
+      exploring dermatology, medicine, skincare,
+      research, and healthcare.
     </p>
 
   </div>
@@ -535,35 +460,18 @@ footer{
 </header>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
-<section>
+<section class="about-section">
 
-  <div class="section-heading">
+  <div class="about-grid">
 
-    <span>
-      01 — Who We Are
-    </span>
-
-    <h2>
-      Curiosity can<br>
-      start anywhere.
-    </h2>
-
-    <p>
-      Pre-Derm Society was created to give students
-      a place to learn about dermatology and medicine
-      in a simple, accessible, and student-friendly way.
-    </p>
-
-  </div>
-
-
-  <div class="about-content">
 
     <div class="about-text">
+
+      <div class="section-label">
+        01 — Who We Are
+      </div>
 
       <h2>
         Learn.<br>
@@ -572,27 +480,26 @@ footer{
       </h2>
 
       <p>
-        We believe students should be able to explore
-        healthcare and science before they ever step
-        into a medical school classroom.
+        Pre-Derm Society was created to give students
+        a place to learn about dermatology and medicine
+        in a simple, accessible, and student-friendly way.
       </p>
 
       <p>
         Through educational lessons, research resources,
         medical opportunities, and student projects,
-        Pre-Derm Society encourages curiosity and
-        evidence-based learning.
+        we encourage curiosity and evidence-based learning.
       </p>
 
       <p>
-        Our goal is simple: make learning about medicine
-        feel exciting, approachable, and meaningful.
+        Our goal is to make exploring medicine feel
+        exciting, approachable, and meaningful.
       </p>
 
     </div>
 
 
-    <div class="about-image">
+    <div class="about-photo">
 
       <img
         src="IMG_5145.jpeg"
@@ -601,22 +508,21 @@ footer{
 
     </div>
 
+
   </div>
 
 </section>
 
 
-<!-- =========================
-     IMPACT
-========================= -->
+<!-- IMPACT -->
 
-<section class="impact" id="impact">
+<section class="impact-section">
 
-  <div class="impact-heading">
+  <div class="impact-header">
 
-    <span>
+    <div class="section-label">
       02 — Our Impact
-    </span>
+    </div>
 
     <h2>
       Small lessons.<br>
@@ -624,8 +530,8 @@ footer{
     </h2>
 
     <p>
-      Every lesson completed helps grow our
-      student-led educational community.
+      Every student reached and every lesson completed
+      helps grow our educational community.
     </p>
 
   </div>
@@ -633,6 +539,8 @@ footer{
 
   <div class="impact-grid">
 
+
+    <!-- PEOPLE REACHED -->
 
     <div class="impact-card">
 
@@ -656,6 +564,8 @@ footer{
     </div>
 
 
+    <!-- LESSONS TAUGHT -->
+
     <div class="impact-card">
 
       <div
@@ -678,6 +588,8 @@ footer{
     </div>
 
 
+    <!-- LESSONS AVAILABLE -->
+
     <div class="impact-card">
 
       <div
@@ -693,8 +605,8 @@ footer{
       </h3>
 
       <p>
-        Student-friendly topics designed to
-        make medicine easier to explore.
+        Student-friendly topics designed to make
+        medicine easier to explore.
       </p>
 
     </div>
@@ -705,11 +617,9 @@ footer{
 </section>
 
 
-<!-- =========================
-     MISSION
-========================= -->
+<!-- MISSION -->
 
-<section class="mission">
+<section class="mission-section">
 
   <div class="mission-box">
 
@@ -726,8 +636,7 @@ footer{
       We want to inspire students to ask questions,
       explore science, understand healthcare, and
       discover where their curiosity can take them.
-      Pre-Derm Society is a starting point — not an
-      endpoint.
+      Pre-Derm Society is a starting point — not an endpoint.
     </p>
 
   </div>
@@ -735,11 +644,9 @@ footer{
 </section>
 
 
-<!-- =========================
-     RETURN
-========================= -->
+<!-- RETURN HOME -->
 
-<section class="return">
+<section class="return-section">
 
   <div class="eyebrow">
     PRE-DERM SOCIETY
@@ -759,9 +666,7 @@ footer{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -796,9 +701,7 @@ footer{
 </footer>
 
 
-<!-- =========================
-     NUMBER ANIMATION
-========================= -->
+<!-- NUMBER ANIMATION -->
 
 <script>
 
@@ -806,85 +709,68 @@ const numbers =
   document.querySelectorAll(".impact-number");
 
 
-function animateNumber(element){
-
-  const target =
-    Number(element.dataset.target);
-
-  const suffix =
-    element.dataset.suffix || "";
-
-  const duration = 1300;
-
-  const startTime =
-    performance.now();
-
-
-  function update(currentTime){
-
-    const elapsed =
-      currentTime - startTime;
-
-    const progress =
-      Math.min(elapsed / duration, 1);
-
-
-    /*
-      Ease-out animation:
-      starts quickly and slows down
-      when it reaches the final number.
-    */
-
-    const eased =
-      1 - Math.pow(1 - progress, 3);
-
-
-    const current =
-      Math.floor(eased * target);
-
-
-    element.textContent =
-      current + suffix;
-
-
-    if(progress < 1){
-
-      requestAnimationFrame(update);
-
-    }else{
-
-      element.textContent =
-        target + suffix;
-
-    }
-
-  }
-
-
-  requestAnimationFrame(update);
-
-}
-
-
-/*
-  Only animate the numbers when
-  the impact section enters the screen.
-*/
-
 const observer =
   new IntersectionObserver(
 
-    (entries, observer) => {
+    function(entries){
 
-      entries.forEach(entry => {
+      entries.forEach(function(entry){
 
         if(entry.isIntersecting){
 
-          numbers.forEach(number => {
+          numbers.forEach(function(number){
 
-            animateNumber(number);
+            const target =
+              Number(number.dataset.target);
+
+            const suffix =
+              number.dataset.suffix || "";
+
+            const duration = 1400;
+
+            const start =
+              performance.now();
+
+
+            function animate(currentTime){
+
+              const elapsed =
+                currentTime - start;
+
+              const progress =
+                Math.min(elapsed / duration, 1);
+
+
+              const eased =
+                1 - Math.pow(1 - progress, 3);
+
+
+              const current =
+                Math.floor(eased * target);
+
+
+              number.textContent =
+                current + suffix;
+
+
+              if(progress < 1){
+
+                requestAnimationFrame(animate);
+
+              }else{
+
+                number.textContent =
+                  target + suffix;
+
+              }
+
+            }
+
+
+            requestAnimationFrame(animate);
 
           });
+
 
           observer.disconnect();
 
@@ -901,11 +787,9 @@ const observer =
   );
 
 
-const impactSection =
-  document.querySelector(".impact");
-
-
-observer.observe(impactSection);
+observer.observe(
+  document.querySelector(".impact-section")
+);
 
 </script>
 
