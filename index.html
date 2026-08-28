@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
   box-sizing:border-box;
   margin:0;
@@ -35,21 +34,16 @@ a{
 }
 
 
-/* ================================
-   NAVIGATION
-================================ */
+/* NAV */
 
 nav{
   width:100%;
   padding:24px 7%;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   border-bottom:1px solid #eee;
   background:rgba(255,255,255,.97);
-
   position:sticky;
   top:0;
   z-index:100;
@@ -63,9 +57,8 @@ nav{
 
 .nav-links{
   display:flex;
-  gap:25px;
+  gap:30px;
   align-items:center;
-
   font-size:14px;
   font-weight:500;
 }
@@ -87,20 +80,15 @@ nav{
 }
 
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 
 .hero{
   min-height:78vh;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
-
-  padding:80px 7%;
+  padding:90px 7%;
 }
 
 .hero-content{
@@ -126,7 +114,6 @@ h1{
 .hero p{
   max-width:620px;
   margin:0 auto 35px;
-
   color:#666;
   font-size:17px;
 }
@@ -142,7 +129,6 @@ h1{
 .secondary-btn{
   padding:13px 23px;
   border-radius:30px;
-
   font-size:14px;
   font-weight:600;
 }
@@ -165,9 +151,7 @@ h1{
 }
 
 
-/* ================================
-   GENERAL SECTIONS
-================================ */
+/* GENERAL SECTIONS */
 
 section{
   padding:90px 7%;
@@ -199,9 +183,7 @@ section{
 }
 
 
-/* ================================
-   CARDS
-================================ */
+/* CARDS */
 
 .cards{
   display:grid;
@@ -212,14 +194,11 @@ section{
 .card{
   border:1px solid #e9e9e9;
   border-radius:22px;
-
   padding:30px;
   min-height:245px;
-
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-
   transition:.25s;
   background:#fff;
 }
@@ -258,118 +237,91 @@ section{
   font-weight:700;
 }
 
-.card-link:hover{
-  opacity:.55;
-}
 
-
-/* ================================
-   IMPACT
-================================ */
+/* IMPACT */
 
 .impact-section{
   text-align:center;
   background:#f8f8f8;
+  border-radius:30px;
+  margin:30px 7%;
+  padding:75px 7%;
+}
+
+.impact-section .eyebrow{
+  margin-bottom:15px;
+}
+
+.impact-section h2{
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-3px;
+  margin-bottom:45px;
 }
 
 .impact-grid{
-  max-width:900px;
-  margin:50px auto 0;
-
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-.impact-card{
-  background:#fff;
-  border:1px solid #e9e9e9;
-  border-radius:22px;
-  padding:45px 25px;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 .impact-number{
-  font-size:clamp(48px,7vw,80px);
+  font-size:clamp(42px,6vw,70px);
   font-weight:600;
-  letter-spacing:-4px;
-  line-height:1;
+  letter-spacing:-3px;
 }
 
 .impact-label{
-  margin-top:12px;
+  font-size:12px;
+  letter-spacing:2px;
   color:#777;
-  font-size:13px;
-  letter-spacing:1px;
   text-transform:uppercase;
 }
 
 
-/* ================================
-   INSTAGRAM
-================================ */
+/* INSTAGRAM */
 
 .instagram-section{
-  padding:90px 7%;
-  overflow:hidden;
+  text-align:center;
 }
 
 .instagram-header{
   max-width:700px;
-  margin-bottom:40px;
-}
-
-.instagram-header span{
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#888;
+  margin:0 auto 45px;
 }
 
 .instagram-header h2{
-  font-size:clamp(34px,5vw,55px);
-  letter-spacing:-2px;
-  line-height:1.05;
-  margin-top:10px;
-  font-weight:600;
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-3px;
+  line-height:1;
+  margin:12px 0 15px;
 }
 
 .instagram-header p{
-  margin-top:15px;
   color:#777;
 }
 
-.instagram-scroll{
+.instagram-track{
   display:flex;
   gap:20px;
-
   overflow-x:auto;
-
+  padding:15px 5px 25px;
   scroll-snap-type:x mandatory;
-
-  padding:10px 4px 25px;
-
-  -webkit-overflow-scrolling:touch;
-
   scrollbar-width:none;
 }
 
-.instagram-scroll::-webkit-scrollbar{
+.instagram-track::-webkit-scrollbar{
   display:none;
 }
 
 .instagram-card{
-  flex:0 0 330px;
-
-  scroll-snap-align:start;
-
+  flex:0 0 360px;
+  min-height:520px;
   border:1px solid #e9e9e9;
-  border-radius:22px;
-
+  border-radius:24px;
+  padding:12px;
   background:#fff;
-
+  scroll-snap-align:center;
   overflow:hidden;
-
-  box-shadow:0 10px 30px rgba(0,0,0,.04);
 }
 
 .instagram-card blockquote{
@@ -378,29 +330,80 @@ section{
   min-width:0!important;
 }
 
-.follow-instagram{
+.follow-button{
   display:inline-block;
-
   margin-top:25px;
-
-  border:1px solid #171717;
+  padding:13px 23px;
   border-radius:30px;
-
-  padding:12px 20px;
-
+  background:#171717;
+  color:#fff;
   font-size:14px;
   font-weight:600;
 }
 
-.follow-instagram:hover{
+.follow-button:hover{
+  opacity:.8;
+}
+
+
+/* RESEARCH FEATURE */
+
+.feature{
+  background:#f8f8f8;
+  border-radius:30px;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.feature h2{
+  font-size:clamp(35px,5vw,58px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:15px 0;
+}
+
+.feature p{
+  color:#707070;
+  max-width:560px;
+}
+
+.feature-btn{
+  display:inline-block;
+  margin-top:25px;
+  border:1px solid #171717;
+  border-radius:30px;
+  padding:12px 20px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.feature-btn:hover{
   background:#171717;
   color:#fff;
 }
 
+.feature-box{
+  background:#fff;
+  border-radius:24px;
+  padding:35px;
+  border:1px solid #e7e7e7;
+}
 
-/* ================================
-   PHOTO LOOP
-================================ */
+.feature-box div{
+  padding:16px 0;
+  border-bottom:1px solid #eee;
+  font-size:14px;
+}
+
+.feature-box div:last-child{
+  border-bottom:none;
+}
+
+
+/* PHOTO LOOP */
 
 .photo-section{
   overflow:hidden;
@@ -411,7 +414,6 @@ section{
   display:flex;
   width:max-content;
   gap:16px;
-
   animation:scrollPhotos 32s linear infinite;
 }
 
@@ -422,38 +424,27 @@ section{
 .photo-track img{
   width:270px;
   height:150px;
-
   object-fit:cover;
-
   border-radius:16px;
-
   opacity:.88;
-
   filter:saturate(.85);
 }
 
 @keyframes scrollPhotos{
-
   from{
     transform:translateX(0);
   }
-
   to{
     transform:translateX(-50%);
   }
-
 }
 
 
-/* ================================
-   CONTACT
-================================ */
+/* CONTACT */
 
 .contact{
   text-align:center;
-
   border-top:1px solid #eee;
-
   padding-top:100px;
   padding-bottom:30px;
 }
@@ -473,10 +464,8 @@ section{
   display:flex;
   justify-content:center;
   gap:25px;
-
   font-size:14px;
   font-weight:600;
-
   margin-bottom:55px;
 }
 
@@ -485,30 +474,33 @@ section{
 }
 
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 
 footer{
   text-align:center;
-
   font-size:12px;
   color:#999;
-
   padding:25px;
-
   border-top:1px solid #eee;
 }
 
 
-/* ================================
-   MOBILE
-================================ */
+/* MOBILE */
 
 @media(max-width:850px){
 
   .cards{
     grid-template-columns:1fr;
+  }
+
+  .impact-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .feature{
+    grid-template-columns:1fr;
+    padding:35px;
   }
 
   .nav-links{
@@ -523,554 +515,639 @@ footer{
     letter-spacing:-2.5px;
   }
 
-  .impact-grid{
-    grid-template-columns:1fr;
-  }
-
   .instagram-card{
-    flex:0 0 85vw;
+    flex-basis:320px;
   }
 
 }
-
 </style>
 </head>
-
 
 <body>
 
 
-<!-- ================================
-     NAV
-================================ -->
+<!-- NAVIGATION -->
 
 <nav>
 
-  <a href="index.html" class="logo">
-    Pre-Derm Society
-  </a>
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
 
-  <div class="nav-links">
+<div class="nav-links">
 
-    <a href="index.html">
-      Home
-    </a>
+<a href="index.html">
+Home
+</a>
 
-    <a href="about.html">
-      About
-    </a>
+<a href="about.html">
+About
+</a>
 
-    <a href="lessons.html">
-      Lessons
-    </a>
+<a href="#learn">
+Learn
+</a>
 
-    <a href="opportunities.html">
-      Opportunities
-    </a>
+<a href="opportunities.html">
+Opportunities
+</a>
 
-    <a href="join.html" class="join-btn">
-      Join Now
-    </a>
+<a href="join.html" class="join-btn">
+Join Now
+</a>
 
-  </div>
+</div>
 
 </nav>
 
 
-<!-- ================================
-     HERO
-================================ -->
+<!-- HERO -->
 
 <header class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <div class="eyebrow">
-      Student-led • Medicine • Dermatology
-    </div>
+<div class="eyebrow">
+Student-led • Medicine • Dermatology
+</div>
 
-    <h1>
-      Medicine starts<br>
-      with curiosity.
-    </h1>
+<h1>
+Medicine starts<br>
+with curiosity.
+</h1>
 
-    <p>
-      Pre-Derm Society is a student-led space for exploring
-      dermatology, medicine, skincare, research, and healthcare.
-    </p>
+<p>
+Pre-Derm Society is a student-led space for exploring
+dermatology, medicine, skincare, research, and healthcare.
+</p>
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-      <a href="lessons.html" class="primary-btn">
-        Explore Lessons
-      </a>
+<a href="#learn" class="primary-btn">
+Explore Lessons
+</a>
 
-      <a href="skin101.html" class="secondary-btn">
-        Skin 101
-      </a>
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics"
+target="_blank"
+rel="noopener noreferrer"
+class="secondary-btn"
+>
+Skin Science
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </header>
 
 
-<!-- ================================
-     QUICK ACCESS
-================================ -->
-
-<section>
-
-  <div class="section-heading">
-
-    <span>
-      Explore
-    </span>
-
-    <h2>
-      Learn. Research.<br>
-      Discover medicine.
-    </h2>
-
-    <p>
-      Explore student-friendly lessons and real opportunities
-      for students interested in science, healthcare, and medicine.
-    </p>
-
-  </div>
-
-
-  <div class="cards">
-
-
-    <a href="lessons.html" class="card">
-
-      <div>
-
-        <div class="emoji">
-          🔎
-        </div>
-
-        <div class="card-number">
-          01
-        </div>
-
-        <h3>
-          Lessons
-        </h3>
-
-        <p>
-          Explore Skin 101 and other student-friendly
-          dermatology and medicine lessons.
-        </p>
-
-      </div>
-
-      <div class="card-link">
-        EXPLORE LESSONS →
-      </div>
-
-    </a>
-
-
-    <a href="opportunities.html" class="card">
-
-      <div>
-
-        <div class="emoji">
-          🔬
-        </div>
-
-        <div class="card-number">
-          02
-        </div>
-
-        <h3>
-          Opportunities
-        </h3>
-
-        <p>
-          Explore research, medicine, and STEM opportunities
-          from established organizations and universities.
-        </p>
-
-      </div>
-
-      <div class="card-link">
-        EXPLORE →
-      </div>
-
-    </a>
-
-
-    <a href="about.html" class="card">
-
-      <div>
-
-        <div class="emoji">
-          🤍
-        </div>
-
-        <div class="card-number">
-          03
-        </div>
-
-        <h3>
-          About Us
-        </h3>
-
-        <p>
-          Learn about Pre-Derm Society, our mission,
-          and the impact we hope to create.
-        </p>
-
-      </div>
-
-      <div class="card-link">
-        OUR STORY →
-      </div>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ================================
-     IMPACT
-================================ -->
+<!-- IMPACT -->
 
 <section class="impact-section">
 
-  <div class="section-heading" style="margin-left:auto;margin-right:auto;">
+<div class="eyebrow">
+Our impact
+</div>
 
-    <span>
-      Our Impact
-    </span>
+<h2>
+Learning creates impact.
+</h2>
 
-    <h2>
-      Small lessons.<br>
-      Growing impact.
-    </h2>
+<div class="impact-grid">
 
-    <p>
-      Every completed lesson contributes to our growing
-      student education community.
-    </p>
+<div>
+<div class="impact-number" data-target="100" data-plus="true">0</div>
+<div class="impact-label">People Reached</div>
+</div>
 
-  </div>
+<div>
+<div class="impact-number" data-target="38">0</div>
+<div class="impact-label">Lessons Taught</div>
+</div>
 
+<div>
+<div class="impact-number" data-target="20">0</div>
+<div class="impact-label">Lessons Done</div>
+</div>
 
-  <div class="impact-grid">
-
-
-    <div class="impact-card">
-
-      <div class="impact-number">
-        <span id="peopleReached">
-          0
-        </span>+
-      </div>
-
-      <div class="impact-label">
-        People Reached
-      </div>
-
-    </div>
-
-
-    <div class="impact-card">
-
-      <div class="impact-number">
-        <span id="lessonsDone">
-          0
-        </span>
-      </div>
-
-      <div class="impact-label">
-        Lessons Taught
-      </div>
-
-    </div>
-
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- ================================
-     INSTAGRAM
-================================ -->
+<!-- LEARN -->
+
+<section id="learn">
+
+<div class="section-heading">
+
+<span>
+01 — Learn
+</span>
+
+<h2>
+Explore medicine<br>
+one lesson at a time.
+</h2>
+
+<p>
+Short, student-friendly resources designed to make
+medicine, dermatology, and skincare easier to explore.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- SKIN SCIENCE -->
+
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🔎</div>
+
+<div class="card-number">
+01
+</div>
+
+<h3>
+Skin Science
+</h3>
+
+<p>
+Learn dermatologist-reviewed skincare basics,
+skin health, and everyday skin care.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN → 
+</div>
+
+</a>
+
+
+<!-- CLEANSING -->
+
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics/care/face-washing-101"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🫧</div>
+
+<div class="card-number">
+02
+</div>
+
+<h3>
+Cleansing
+</h3>
+
+<p>
+Learn how dermatologists recommend washing
+your face and caring for your skin.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- SUN -->
+
+<a
+href="https://www.aad.org/public/everyday-care/sun-protection"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">☀️</div>
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+Sun Protection
+</h3>
+
+<p>
+Learn about protecting your skin from UV
+radiation and sun damage.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- ACNE -->
+
+<a
+href="https://www.aad.org/public/diseases/acne"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🧴</div>
+
+<div class="card-number">
+04
+</div>
+
+<h3>
+Acne
+</h3>
+
+<p>
+Explore dermatologist-reviewed information
+about acne and treatment options.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- MOISTURIZING -->
+
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics/dry"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">💧</div>
+
+<div class="card-number">
+05
+</div>
+
+<h3>
+Moisturizing
+</h3>
+
+<p>
+Learn about moisturizing and caring for
+dry or irritated skin.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- MEDICINE -->
+
+<a
+href="https://medlineplus.gov/healthcareprofessionalsandstudents.html"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🩺</div>
+
+<div class="card-number">
+06
+</div>
+
+<h3>
+Medicine 101
+</h3>
+
+<p>
+Explore trusted health information and
+learn more about healthcare.
+</p>
+
+</div>
+
+<div class="card-link">
+EXPLORE →
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
 
 <section class="instagram-section">
 
-  <div class="instagram-header">
+<div class="instagram-header">
 
-    <span>
-      Follow us
-    </span>
+<div class="eyebrow">
+Follow us @prederm_society
+</div>
 
-    <h2>
-      @prederm_society
-    </h2>
+<h2>
+What we're learning.
+</h2>
 
-    <p>
-      Follow along with Pre-Derm Society as we learn,
-      explore medicine, and share our journey.
-    </p>
+<p>
+Follow along with Pre-Derm Society updates,
+projects, and student-led work.
+</p>
 
-  </div>
-
-
-  <div class="instagram-scroll">
+</div>
 
 
-    <div class="instagram-card">
-
-      <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
-        data-instgrm-version="14"
-        style="background:#FFF;border:0;margin:0;padding:0;width:100%;">
-      </blockquote>
-
-    </div>
+<div class="instagram-track">
 
 
-    <div class="instagram-card">
+<div class="instagram-card">
 
-      <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
-        data-instgrm-version="14"
-        style="background:#FFF;border:0;margin:0;padding:0;width:100%;">
-      </blockquote>
+<blockquote
+class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
+data-instgrm-version="14"
+style="background:#FFF; border:0; margin:0 auto; max-width:540px; min-width:280px; width:100%;">
+</blockquote>
 
-    </div>
-
-
-  </div>
+</div>
 
 
-  <a
-    href="https://www.instagram.com/prederm_society/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="follow-instagram"
-  >
-    FOLLOW @PRE-DERM_SOCIETY →
-  </a>
+<div class="instagram-card">
+
+<blockquote
+class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
+data-instgrm-version="14"
+style="background:#FFF; border:0; margin:0 auto; max-width:540px; min-width:280px; width:100%;">
+</blockquote>
+
+</div>
+
+
+</div>
+
+
+<a
+href="https://www.instagram.com/prederm_society/"
+target="_blank"
+rel="noopener noreferrer"
+class="follow-button"
+>
+Follow @prederm_society →
+</a>
 
 </section>
 
 
-<!-- INSTAGRAM SCRIPT -->
+<!-- RESEARCH -->
 
-<script async src="https://www.instagram.com/embed.js"></script>
+<section>
+
+<div class="feature">
+
+<div>
+
+<span class="eyebrow">
+03 — Research
+</span>
+
+<h2>
+Start thinking<br>
+like a researcher.
+</h2>
+
+<p>
+Research doesn't have to feel intimidating.
+Learn how to find questions, explore evidence,
+and understand medicine responsibly.
+</p>
+
+<a
+href="https://hms.harvard.edu/research/examples-current-research"
+target="_blank"
+rel="noopener noreferrer"
+class="feature-btn"
+>
+Explore Medical Research →
+</a>
+
+</div>
 
 
-<!-- ================================
-     PHOTO LOOP
-================================ -->
+<div class="feature-box">
+
+<div>
+🔎 Find a question
+</div>
+
+<div>
+🧪 Investigate evidence
+</div>
+
+<div>
+📄 Explore scientific research
+</div>
+
+<div>
+💡 Develop project ideas
+</div>
+
+<div>
+🌎 Find opportunities
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PHOTO LOOP -->
 
 <section class="photo-section">
 
-  <div class="photo-track">
+<div class="photo-track">
 
-    <img
-      src="IMG_5085.jpeg"
-      alt="Pre-Derm Society"
-    >
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-    <img
-      src="IMG_8766.jpeg"
-      alt="Pre-Derm Society"
-    >
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-    <img
-      src="IMG_5125.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-    <img
-      src="IMG_5126.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-
-    <img
-      src="IMG_5085.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-    <img
-      src="IMG_8766.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-    <img
-      src="IMG_5125.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-    <img
-      src="IMG_5126.jpeg"
-      alt="Pre-Derm Society"
-    >
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- ================================
-     CONTACT
-================================ -->
+<!-- CONTACT -->
 
 <section class="contact">
 
-  <div class="eyebrow">
-    Pre-Derm Society
-  </div>
+<div class="eyebrow">
+Pre-Derm Society
+</div>
 
-  <h2>
-    Let's learn together.
-  </h2>
+<h2>
+Let's learn together.
+</h2>
 
-  <p>
-    A student-led community exploring medicine,
-    science, and dermatology.
-  </p>
+<p>
+A student-led community exploring medicine,
+science, and dermatology.
+</p>
 
-  <div class="socials">
+<div class="socials">
 
-    <a
-      href="https://www.instagram.com/prederm_society/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Instagram
-    </a>
+<a
+href="https://www.instagram.com/prederm_society/"
+target="_blank"
+rel="noopener noreferrer"
+>
+Instagram
+</a>
 
-    <a
-      href="https://www.tiktok.com/@prederm_society"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      TikTok
-    </a>
+<a
+href="https://www.tiktok.com/@prederm_society"
+target="_blank"
+rel="noopener noreferrer"
+>
+TikTok
+</a>
 
-    <a href="join.html">
-      Join Us
-    </a>
+<a href="join.html">
+Join Us
+</a>
 
-  </div>
+</div>
 
 </section>
 
 
 <footer>
-
-  © 2026 Pre-Derm Society · Student-led education
-
+© 2026 Pre-Derm Society · Student-led education
 </footer>
 
 
-<!-- ================================
-     IMPACT COUNTER
-================================ -->
+<!-- INSTAGRAM EMBED SCRIPT -->
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+
+<!-- NUMBER ANIMATION -->
 
 <script>
 
-const PEOPLE_REACHED = 100;
-const LESSONS_DONE = 38;
+const counters =
+document.querySelectorAll(".impact-number");
 
-function animateNumber(element, finalNumber, duration){
+const observer =
+new IntersectionObserver((entries, observer) => {
 
-  let start = 0;
+entries.forEach(entry => {
 
-  const startTime = performance.now();
+if(!entry.isIntersecting) return;
 
-  function update(currentTime){
+const counter = entry.target;
 
-    const elapsed = currentTime - startTime;
+const target =
+parseInt(counter.dataset.target);
 
-    const progress = Math.min(
-      elapsed / duration,
-      1
-    );
+const hasPlus =
+counter.dataset.plus === "true";
 
-    const eased =
-      1 - Math.pow(1 - progress, 3);
+let current = 0;
 
-    const current =
-      Math.floor(eased * finalNumber);
+const duration = 1100;
 
-    element.textContent = current;
+const startTime = performance.now();
 
-    if(progress < 1){
+function animate(time){
 
-      requestAnimationFrame(update);
+const progress =
+Math.min((time - startTime) / duration, 1);
 
-    }else{
+const eased =
+1 - Math.pow(1 - progress, 3);
 
-      element.textContent = finalNumber;
+current =
+Math.floor(eased * target);
 
-    }
+counter.textContent =
+current.toLocaleString();
 
-  }
+if(progress < 1){
 
-  requestAnimationFrame(update);
+requestAnimationFrame(animate);
+
+}else{
+
+counter.textContent =
+target.toLocaleString() + (hasPlus ? "+" : "");
 
 }
 
+}
 
-const peopleElement =
-  document.getElementById("peopleReached");
+requestAnimationFrame(animate);
 
-const lessonsElement =
-  document.getElementById("lessonsDone");
+observer.unobserve(counter);
 
+});
 
-let impactObserver =
-  new IntersectionObserver(
-    function(entries){
+},{
+threshold:.35
+});
 
-      entries.forEach(function(entry){
-
-        if(entry.isIntersecting){
-
-          animateNumber(
-            peopleElement,
-            PEOPLE_REACHED,
-            1100
-          );
-
-          animateNumber(
-            lessonsElement,
-            LESSONS_DONE,
-            1000
-          );
-
-          impactObserver.disconnect();
-
-        }
-
-      });
-
-    },
-    {
-      threshold:.35
-    }
-  );
-
-
-impactObserver.observe(
-  document.querySelector(".impact-section")
-);
+counters.forEach(counter => {
+observer.observe(counter);
+});
 
 </script>
 
