@@ -6,1152 +6,1151 @@
 
 <title>Pre-Derm Society</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
-  background: #faf9f6;
-  color: #111;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#fff;
+  color:#171717;
+  line-height:1.6;
 }
 
-a {
-  color: #111;
-  text-decoration: none;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-a:hover {
-  opacity: .55;
-}
 
 /* NAV */
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 25px 7%;
-
-  background: rgba(250,249,246,.94);
-  backdrop-filter: blur(14px);
-
-  border-bottom: 1px solid #dedcd8;
+nav{
+  width:100%;
+  padding:24px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eee;
+  background:rgba(255,255,255,.97);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.logo {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
+.logo{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.5px;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  font-size:14px;
+  font-weight:500;
 }
 
-.nav-links a {
-  font-size: 10px;
-  letter-spacing: 2px;
+.nav-links a:hover{
+  opacity:.55;
 }
 
-.join-button {
-  padding: 13px 23px;
-  border: 1px solid #111;
-  border-radius: 100px;
+.join-btn{
+  border:1px solid #171717;
+  padding:9px 18px;
+  border-radius:30px;
 }
+
+.join-btn:hover{
+  background:#171717;
+  color:#fff;
+  opacity:1!important;
+}
+
 
 /* HERO */
 
-.hero {
-  min-height: 82vh;
-
-  display: flex;
-  align-items: center;
-
-  padding: 120px 8%;
-
-  background:
-    radial-gradient(
-      circle at 75% 25%,
-      #e8e2dc 0%,
-      transparent 35%
-    ),
-    #faf9f6;
+.hero{
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:90px 7%;
 }
 
-.hero-content {
-  max-width: 1050px;
+.hero-content{
+  max-width:850px;
 }
 
-.eyebrow {
-  margin-bottom: 28px;
-
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #777;
+.eyebrow{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:20px;
 }
 
-h1 {
-  margin: 0;
-
-  font-size: clamp(65px, 12vw, 150px);
-  line-height: .82;
-  letter-spacing: -8px;
-  font-weight: 300;
+h1{
+  font-size:clamp(48px,8vw,88px);
+  line-height:.98;
+  letter-spacing:-4px;
+  font-weight:600;
+  margin-bottom:28px;
 }
 
-.hero-text {
-  max-width: 650px;
-
-  margin-top: 45px;
-
-  font-size: 17px;
-  line-height: 1.8;
-  color: #666;
+.hero p{
+  max-width:620px;
+  margin:0 auto 35px;
+  color:#666;
+  font-size:17px;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-
-  margin-top: 35px;
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
-.button {
-  display: inline-block;
-
-  padding: 15px 25px;
-
-  border: 1px solid #111;
-  border-radius: 100px;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
+.primary-btn,
+.secondary-btn{
+  padding:13px 23px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
 }
 
-.button.dark {
-  background: #111;
-  color: white;
+.primary-btn{
+  background:#171717;
+  color:#fff;
 }
 
-/* STATS */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-
-  border-top: 1px solid #dedcd8;
-  border-bottom: 1px solid #dedcd8;
+.secondary-btn{
+  border:1px solid #ddd;
 }
 
-.stat {
-  padding: 55px 8%;
-
-  border-right: 1px solid #dedcd8;
+.primary-btn:hover{
+  opacity:.8;
 }
 
-.stat:last-child {
-  border-right: none;
+.secondary-btn:hover{
+  background:#f7f7f7;
 }
 
-.stat-number {
-  font-size: clamp(45px,7vw,85px);
-  font-weight: 300;
-  letter-spacing: -5px;
-}
-
-.stat-label {
-  margin-top: 10px;
-
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #777;
-}
 
 /* GENERAL SECTIONS */
 
-section {
-  padding: 120px 8%;
-  border-bottom: 1px solid #dedcd8;
+section{
+  padding:90px 7%;
 }
 
-.label {
-  margin-bottom: 28px;
-
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #777;
+.section-heading{
+  max-width:700px;
+  margin-bottom:45px;
 }
 
-h2 {
-  margin: 0 0 35px;
-
-  font-size: clamp(50px,8vw,100px);
-  line-height: .86;
-  letter-spacing: -6px;
-  font-weight: 300;
+.section-heading span{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#888;
 }
 
-.text {
-  max-width: 680px;
-
-  font-size: 15px;
-  line-height: 1.8;
-  color: #666;
+.section-heading h2{
+  font-size:clamp(34px,5vw,55px);
+  letter-spacing:-2px;
+  line-height:1.05;
+  margin-top:10px;
+  font-weight:600;
 }
 
-/* ABOUT PREVIEW */
-
-.about {
-  min-height: 65vh;
-
-  display: flex;
-  align-items: center;
+.section-heading p{
+  margin-top:15px;
+  color:#777;
 }
 
-.about-content {
-  max-width: 900px;
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-/* LEARNING */
-
-.learning {
-  background: #efeee9;
+.card{
+  border:1px solid #e9e9e9;
+  border-radius:22px;
+  padding:30px;
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.25s;
+  background:#fff;
 }
 
-.learning-header {
-  max-width: 850px;
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-
-  gap: 18px;
-
-  margin-top: 70px;
+.emoji{
+  font-size:27px;
+  margin-bottom:18px;
 }
 
-.card {
-  padding: 45px;
-
-  min-height: 300px;
-
-  background: #faf9f6;
-
-  border: 1px solid #dedcd8;
-  border-radius: 28px;
-
-  transition: transform .2s ease;
+.card-number{
+  font-size:11px;
+  color:#999;
+  letter-spacing:1px;
+  margin-bottom:7px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.card h3{
+  font-size:22px;
+  margin-bottom:8px;
+  letter-spacing:-.5px;
 }
 
-.card-number {
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #777;
+.card p{
+  font-size:14px;
+  color:#777;
 }
 
-.card h3 {
-  margin: 55px 0 20px;
-
-  font-size: 38px;
-  line-height: .95;
-  letter-spacing: -3px;
-  font-weight: 300;
+.card-link{
+  margin-top:20px;
+  font-size:13px;
+  font-weight:700;
 }
 
-.card p {
-  max-width: 500px;
 
-  color: #666;
-  line-height: 1.7;
-  font-size: 14px;
+/* IMPACT */
+
+.impact-section{
+  text-align:center;
+  background:#f8f8f8;
+  border-radius:30px;
+  margin:30px 7%;
+  padding:75px 7%;
 }
 
-.card-link {
-  display: inline-block;
-
-  margin-top: 25px;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
+.impact-section .eyebrow{
+  margin-bottom:15px;
 }
 
-/* RESOURCES */
-
-.resources {
-  background: #faf9f6;
+.impact-section h2{
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-3px;
+  margin-bottom:45px;
 }
 
-.resource-list {
-  max-width: 950px;
-
-  margin-top: 65px;
-
-  border-top: 1px solid #dedcd8;
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.resource {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 28px 5px;
-
-  border-bottom: 1px solid #dedcd8;
+.impact-number{
+  font-size:clamp(42px,6vw,70px);
+  font-weight:600;
+  letter-spacing:-3px;
 }
 
-.resource-title {
-  font-size: 20px;
-  font-weight: 400;
+.impact-label{
+  font-size:12px;
+  letter-spacing:2px;
+  color:#777;
+  text-transform:uppercase;
 }
 
-.resource-description {
-  margin-top: 7px;
 
-  color: #777;
-  font-size: 13px;
+/* INSTAGRAM */
+
+.instagram-section{
+  text-align:center;
 }
 
-.resource-arrow {
-  font-size: 20px;
+.instagram-header{
+  max-width:700px;
+  margin:0 auto 45px;
 }
 
-/* OPPORTUNITIES */
-
-.opportunities {
-  background:
-    radial-gradient(
-      circle at 75% 25%,
-      #e7dfd7,
-      transparent 40%
-    ),
-    #f4f1ec;
+.instagram-header h2{
+  font-size:clamp(38px,6vw,65px);
+  letter-spacing:-3px;
+  line-height:1;
+  margin:12px 0 15px;
 }
 
-.opportunity-list {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-
-  gap: 18px;
-
-  margin-top: 65px;
+.instagram-header p{
+  color:#777;
 }
 
-.opportunity {
-  padding: 38px;
-
-  background: #faf9f6;
-
-  border: 1px solid #dedcd8;
-  border-radius: 25px;
+.instagram-track{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding:15px 5px 25px;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
 }
 
-.opportunity h3 {
-  margin: 0 0 15px;
-
-  font-size: 28px;
-  letter-spacing: -2px;
-  font-weight: 300;
+.instagram-track::-webkit-scrollbar{
+  display:none;
 }
 
-.opportunity p {
-  color: #666;
-  line-height: 1.7;
-  font-size: 14px;
+.instagram-card{
+  flex:0 0 360px;
+  min-height:520px;
+  border:1px solid #e9e9e9;
+  border-radius:24px;
+  padding:12px;
+  background:#fff;
+  scroll-snap-align:center;
+  overflow:hidden;
 }
 
-.opportunity-link {
-  display: inline-block;
-
-  margin-top: 20px;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
+.instagram-card blockquote{
+  margin:0!important;
+  width:100%!important;
+  min-width:0!important;
 }
 
-/* SOCIAL */
-
-.social {
-  text-align: center;
+.follow-button{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 23px;
+  border-radius:30px;
+  background:#171717;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
 }
 
-.social h2 {
-  margin-bottom: 20px;
+.follow-button:hover{
+  opacity:.8;
 }
 
-.social-button {
-  display: inline-block;
 
-  margin-top: 30px;
+/* RESEARCH FEATURE */
 
-  padding: 16px 27px;
-
-  border-radius: 100px;
-
-  background: #111;
-  color: white;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
+.feature{
+  background:#f8f8f8;
+  border-radius:30px;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
 }
+
+.feature h2{
+  font-size:clamp(35px,5vw,58px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:15px 0;
+}
+
+.feature p{
+  color:#707070;
+  max-width:560px;
+}
+
+.feature-btn{
+  display:inline-block;
+  margin-top:25px;
+  border:1px solid #171717;
+  border-radius:30px;
+  padding:12px 20px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.feature-btn:hover{
+  background:#171717;
+  color:#fff;
+}
+
+.feature-box{
+  background:#fff;
+  border-radius:24px;
+  padding:35px;
+  border:1px solid #e7e7e7;
+}
+
+.feature-box div{
+  padding:16px 0;
+  border-bottom:1px solid #eee;
+  font-size:14px;
+}
+
+.feature-box div:last-child{
+  border-bottom:none;
+}
+
+
+/* PHOTO LOOP */
+
+.photo-section{
+  overflow:hidden;
+  padding:30px 0 80px;
+}
+
+.photo-track{
+  display:flex;
+  width:max-content;
+  gap:16px;
+  animation:scrollPhotos 32s linear infinite;
+}
+
+.photo-track:hover{
+  animation-play-state:paused;
+}
+
+.photo-track img{
+  width:270px;
+  height:150px;
+  object-fit:cover;
+  border-radius:16px;
+  opacity:.88;
+  filter:saturate(.85);
+}
+
+@keyframes scrollPhotos{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+
+/* CONTACT */
+
+.contact{
+  text-align:center;
+  border-top:1px solid #eee;
+  padding-top:100px;
+  padding-bottom:30px;
+}
+
+.contact h2{
+  font-size:clamp(40px,6vw,70px);
+  letter-spacing:-3px;
+  margin-bottom:15px;
+}
+
+.contact p{
+  color:#777;
+  margin-bottom:25px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:55px;
+}
+
+.socials a:hover{
+  opacity:.55;
+}
+
 
 /* FOOTER */
 
-footer {
-  padding: 45px 8%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border-top: 1px solid #dedcd8;
+footer{
+  text-align:center;
+  font-size:12px;
+  color:#999;
+  padding:25px;
+  border-top:1px solid #eee;
 }
 
-footer a {
-  margin-right: 25px;
-
-  font-size: 9px;
-  letter-spacing: 2px;
-}
-
-.footer-name {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #777;
-}
 
 /* MOBILE */
 
-@media(max-width:700px) {
+@media(max-width:850px){
 
-  nav {
-    padding: 20px 6%;
+  .cards{
+    grid-template-columns:1fr;
   }
 
-  .nav-links {
-    gap: 12px;
+  .impact-grid{
+    grid-template-columns:1fr;
+    gap:35px;
   }
 
-  .nav-links a:not(.join-button) {
-    display: none;
+  .feature{
+    grid-template-columns:1fr;
+    padding:35px;
   }
 
-  .join-button {
-    padding: 11px 18px;
+  .nav-links{
+    gap:12px;
   }
 
-  .hero {
-    min-height: 75vh;
-    padding: 100px 8%;
+  .nav-links a:not(.join-btn){
+    display:none;
   }
 
-  h1 {
-    letter-spacing: -5px;
+  h1{
+    letter-spacing:-2.5px;
   }
 
-  h2 {
-    letter-spacing: -4px;
+  .instagram-card{
+    flex-basis:320px;
   }
 
-  section {
-    padding: 90px 8%;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .stat {
-    border-right: none;
-    border-bottom: 1px solid #dedcd8;
-  }
-
-  .stat:last-child {
-    border-bottom: none;
-  }
-
-  .cards,
-  .opportunity-list {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 260px;
-    padding: 32px;
-  }
-
-  .resource {
-    gap: 20px;
-  }
-
-  .resource-title {
-    font-size: 17px;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-  }
 }
 </style>
 </head>
 
 <body>
 
+
 <!-- NAVIGATION -->
 
 <nav>
 
-  <a href="index.html" class="logo">
-    PRE-DERM SOCIETY
-  </a>
+<a href="index.html" class="logo">
+Pre-Derm Society
+</a>
 
-  <div class="nav-links">
+<div class="nav-links">
 
-    <a href="index.html">
-      HOME
-    </a>
+<a href="index.html">
+Home
+</a>
 
-    <a href="about.html">
-      ABOUT
-    </a>
+<a href="about.html">
+About
+</a>
 
-    <a href="#learning">
-      LEARN
-    </a>
+<a href="#learn">
+Learn
+</a>
 
-    <a href="#opportunities">
-      OPPORTUNITIES
-    </a>
+<a href="opportunities.html">
+Opportunities
+</a>
 
-    <a href="#resources">
-      RESOURCES
-    </a>
+<a href="join.html" class="join-btn">
+Join Now
+</a>
 
-    <a href="mailto:predermsociety@gmail.com" class="join-button">
-      JOIN NOW
-    </a>
-
-  </div>
+</div>
 
 </nav>
 
 
 <!-- HERO -->
 
-<section class="hero">
+<header class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <div class="eyebrow">
-      STUDENT-LED · MEDICINE · DERMATOLOGY
-    </div>
+<div class="eyebrow">
+Student-led • Medicine • Dermatology
+</div>
 
-    <h1>
-      Medicine<br>
-      starts with<br>
-      curiosity.
-    </h1>
+<h1>
+Medicine starts<br>
+with curiosity.
+</h1>
 
-    <p class="hero-text">
-      Pre-Derm Society is a student-led space for exploring
-      dermatology, medicine, skincare, research, and healthcare.
-      Learn something new, discover opportunities, and start
-      thinking like a researcher.
-    </p>
+<p>
+Pre-Derm Society is a student-led space for exploring
+dermatology, medicine, skincare, research, and healthcare.
+</p>
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-      <a href="#learning" class="button dark">
-        EXPLORE LEARNING →
-      </a>
+<a href="#learn" class="primary-btn">
+Explore Lessons
+</a>
 
-      <a href="about.html" class="button">
-        ABOUT US →
-      </a>
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics"
+target="_blank"
+rel="noopener noreferrer"
+class="secondary-btn"
+>
+Skin Science
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
-</section>
+</header>
 
 
 <!-- IMPACT -->
 
-<div class="stats">
+<section class="impact-section">
 
-  <div class="stat">
+<div class="eyebrow">
+Our impact
+</div>
 
-    <div class="stat-number" data-target="100" data-suffix="+">
-      0
-    </div>
+<h2>
+Learning creates impact.
+</h2>
 
-    <div class="stat-label">
-      PEOPLE REACHED
-    </div>
+<div class="impact-grid">
 
-  </div>
+<div>
+<div class="impact-number" data-target="100" data-plus="true">0</div>
+<div class="impact-label">People Reached</div>
+</div>
+
+<div>
+<div class="impact-number" data-target="38">0</div>
+<div class="impact-label">Lessons Taught</div>
+</div>
+
+<div>
+<div class="impact-number" data-target="20">0</div>
+<div class="impact-label">Lessons Done</div>
+</div>
+
+</div>
+
+</section>
 
 
-  <div class="stat">
+<!-- LEARN -->
 
-    <div class="stat-number" data-target="38">
-      0
-    </div>
+<section id="learn">
 
-    <div class="stat-label">
-      LESSONS TAUGHT
-    </div>
+<div class="section-heading">
 
-  </div>
+<span>
+01 — Learn
+</span>
 
+<h2>
+Explore medicine<br>
+one lesson at a time.
+</h2>
 
-  <div class="stat">
-
-    <div class="stat-number" data-target="20">
-      0
-    </div>
-
-    <div class="stat-label">
-      LESSONS AVAILABLE
-    </div>
-
-  </div>
+<p>
+Short, student-friendly resources designed to make
+medicine, dermatology, and skincare easier to explore.
+</p>
 
 </div>
 
 
-<!-- ABOUT -->
+<div class="cards">
 
-<section class="about">
 
-  <div class="about-content">
+<!-- SKIN SCIENCE -->
 
-    <div class="label">
-      01 · WHO WE ARE
-    </div>
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
 
-    <h2>
-      Curious about<br>
-      medicine?
-    </h2>
+<div>
 
-    <p class="text">
-      Pre-Derm Society makes medicine and dermatology easier
-      to explore through student-led education, research
-      opportunities, and accessible resources.
-    </p>
+<div class="emoji">🔎</div>
 
-    <a href="about.html" class="card-link">
-      LEARN ABOUT PRE-DERM SOCIETY →
-    </a>
+<div class="card-number">
+01
+</div>
 
-  </div>
+<h3>
+Skin Science
+</h3>
+
+<p>
+Learn dermatologist-reviewed skincare basics,
+skin health, and everyday skin care.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN → 
+</div>
+
+</a>
+
+
+<!-- CLEANSING -->
+
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics/care/face-washing-101"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🫧</div>
+
+<div class="card-number">
+02
+</div>
+
+<h3>
+Cleansing
+</h3>
+
+<p>
+Learn how dermatologists recommend washing
+your face and caring for your skin.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- SUN -->
+
+<a
+href="https://www.aad.org/public/everyday-care/sun-protection"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">☀️</div>
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+Sun Protection
+</h3>
+
+<p>
+Learn about protecting your skin from UV
+radiation and sun damage.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- ACNE -->
+
+<a
+href="https://www.aad.org/public/diseases/acne"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🧴</div>
+
+<div class="card-number">
+04
+</div>
+
+<h3>
+Acne
+</h3>
+
+<p>
+Explore dermatologist-reviewed information
+about acne and treatment options.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- MOISTURIZING -->
+
+<a
+href="https://www.aad.org/public/everyday-care/skin-care-basics/dry"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">💧</div>
+
+<div class="card-number">
+05
+</div>
+
+<h3>
+Moisturizing
+</h3>
+
+<p>
+Learn about moisturizing and caring for
+dry or irritated skin.
+</p>
+
+</div>
+
+<div class="card-link">
+LEARN →
+</div>
+
+</a>
+
+
+<!-- MEDICINE -->
+
+<a
+href="https://medlineplus.gov/healthcareprofessionalsandstudents.html"
+target="_blank"
+rel="noopener noreferrer"
+class="card"
+>
+
+<div>
+
+<div class="emoji">🩺</div>
+
+<div class="card-number">
+06
+</div>
+
+<h3>
+Medicine 101
+</h3>
+
+<p>
+Explore trusted health information and
+learn more about healthcare.
+</p>
+
+</div>
+
+<div class="card-link">
+EXPLORE →
+</div>
+
+</a>
+
+</div>
 
 </section>
 
 
-<!-- LEARNING -->
+<!-- INSTAGRAM -->
 
-<section class="learning" id="learning">
+<section class="instagram-section">
 
-  <div class="learning-header">
+<div class="instagram-header">
 
-    <div class="label">
-      02 · EXPLORE
-    </div>
+<div class="eyebrow">
+Follow us @prederm_society
+</div>
 
-    <h2>
-      Learn one<br>
-      lesson at a time.
-    </h2>
+<h2>
+What we're learning.
+</h2>
 
-    <p class="text">
-      Start with the basics and build your understanding
-      of skin, medicine, and healthcare.
-    </p>
+<p>
+Follow along with Pre-Derm Society updates,
+projects, and student-led work.
+</p>
 
-  </div>
-
-
-  <div class="cards">
-
-    <div class="card">
-
-      <div class="card-number">
-        01
-      </div>
-
-      <h3>
-        Skin 101
-      </h3>
-
-      <p>
-        Learn the basic structure of skin, its major layers,
-        and why the skin acts as an important barrier.
-      </p>
-
-      <a href="skin101.html" class="card-link">
-        START LESSON →
-      </a>
-
-    </div>
+</div>
 
 
-    <div class="card">
-
-      <div class="card-number">
-        02
-      </div>
-
-      <h3>
-        Medicine 101
-      </h3>
-
-      <p>
-        Explore trusted health information and learn
-        more about healthcare and medical science.
-      </p>
-
-      <a
-        href="https://medlineplus.gov/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="card-link"
-      >
-        EXPLORE →
-      </a>
-
-    </div>
+<div class="instagram-track">
 
 
-    <div class="card">
+<div class="instagram-card">
 
-      <div class="card-number">
-        03
-      </div>
+<blockquote
+class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
+data-instgrm-version="14"
+style="background:#FFF; border:0; margin:0 auto; max-width:540px; min-width:280px; width:100%;">
+</blockquote>
 
-      <h3>
-        Dermatology
-      </h3>
-
-      <p>
-        Explore reliable information about skin, hair,
-        nails, and common dermatologic conditions.
-      </p>
-
-      <a
-        href="https://www.aad.org/public"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="card-link"
-      >
-        LEARN MORE →
-      </a>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="instagram-card">
 
-      <div class="card-number">
-        04
-      </div>
+<blockquote
+class="instagram-media"
+data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
+data-instgrm-version="14"
+style="background:#FFF; border:0; margin:0 auto; max-width:540px; min-width:280px; width:100%;">
+</blockquote>
 
-      <h3>
-        Research
-      </h3>
+</div>
 
-      <p>
-        Discover how researchers ask questions, evaluate
-        evidence, and contribute to scientific knowledge.
-      </p>
 
-      <a
-        href="https://hms.harvard.edu/research/examples-current-research"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="card-link"
-      >
-        EXPLORE RESEARCH →
-      </a>
+</div>
 
-    </div>
 
-  </div>
+<a
+href="https://www.instagram.com/prederm_society/"
+target="_blank"
+rel="noopener noreferrer"
+class="follow-button"
+>
+Follow @prederm_society →
+</a>
 
 </section>
 
 
-<!-- RESOURCES -->
+<!-- RESEARCH -->
 
-<section class="resources" id="resources">
+<section>
 
-  <div class="label">
-    03 · STUDENT RESOURCES
-  </div>
+<div class="feature">
 
-  <h2>
-    Resources for<br>
-    curious students.
-  </h2>
+<div>
 
-  <p class="text">
-    Explore trusted organizations and educational resources
-    that can help you learn more about medicine and research.
-  </p>
+<span class="eyebrow">
+03 — Research
+</span>
 
+<h2>
+Start thinking<br>
+like a researcher.
+</h2>
 
-  <div class="resource-list">
+<p>
+Research doesn't have to feel intimidating.
+Learn how to find questions, explore evidence,
+and understand medicine responsibly.
+</p>
 
-    <a
-      href="https://medlineplus.gov/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="resource"
-    >
+<a
+href="https://hms.harvard.edu/research/examples-current-research"
+target="_blank"
+rel="noopener noreferrer"
+class="feature-btn"
+>
+Explore Medical Research →
+</a>
 
-      <div>
-        <div class="resource-title">
-          MedlinePlus
-        </div>
-
-        <div class="resource-description">
-          Trusted health information from the U.S. National Library of Medicine.
-        </div>
-      </div>
-
-      <div class="resource-arrow">
-        →
-      </div>
-
-    </a>
+</div>
 
 
-    <a
-      href="https://www.aad.org/public"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="resource"
-    >
+<div class="feature-box">
 
-      <div>
-        <div class="resource-title">
-          American Academy of Dermatology
-        </div>
+<div>
+🔎 Find a question
+</div>
 
-        <div class="resource-description">
-          Reliable dermatology and skin-health information.
-        </div>
-      </div>
+<div>
+🧪 Investigate evidence
+</div>
 
-      <div class="resource-arrow">
-        →
-      </div>
+<div>
+📄 Explore scientific research
+</div>
 
-    </a>
+<div>
+💡 Develop project ideas
+</div>
 
+<div>
+🌎 Find opportunities
+</div>
 
-    <a
-      href="https://www.girlsinresearchglobal.org/opportunities"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="resource"
-    >
+</div>
 
-      <div>
-        <div class="resource-title">
-          Girls in Research
-        </div>
-
-        <div class="resource-description">
-          Research opportunities and resources for students.
-        </div>
-      </div>
-
-      <div class="resource-arrow">
-        →
-      </div>
-
-    </a>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- OPPORTUNITIES -->
+<!-- PHOTO LOOP -->
 
-<section class="opportunities" id="opportunities">
+<section class="photo-section">
 
-  <div class="label">
-    04 · OPPORTUNITIES
-  </div>
+<div class="photo-track">
 
-  <h2>
-    Find your<br>
-    next opportunity.
-  </h2>
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-  <p class="text">
-    Explore real research, medical education, and student
-    opportunities from established institutions.
-  </p>
+<img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+<img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+<img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-
-  <div class="opportunity-list">
-
-
-    <div class="opportunity">
-
-      <h3>
-        Stanford MedCSI
-      </h3>
-
-      <p>
-        Learn about Stanford Medicine's MedCSI program
-        and opportunities connected to medical education.
-      </p>
-
-      <a
-        href="https://med.stanford.edu/medcsi/about.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="opportunity-link"
-      >
-        VISIT STANFORD →
-      </a>
-
-    </div>
-
-
-    <div class="opportunity">
-
-      <h3>
-        Stanford Pediatrics
-      </h3>
-
-      <p>
-        Explore Stanford Medicine's Pediatrics Internship
-        Program information.
-      </p>
-
-      <a
-        href="https://med.stanford.edu/content/sm/pediatrics/education/pediatrics-internship-program.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="opportunity-link"
-      >
-        VIEW PROGRAM →
-      </a>
-
-    </div>
-
-
-    <div class="opportunity">
-
-      <h3>
-        Girls in Research
-      </h3>
-
-      <p>
-        Browse research opportunities and programs
-        designed to help students explore research.
-      </p>
-
-      <a
-        href="https://www.girlsinresearchglobal.org/opportunities"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="opportunity-link"
-      >
-        EXPLORE →
-      </a>
-
-    </div>
-
-
-    <div class="opportunity">
-
-      <h3>
-        Harvard Medical School
-      </h3>
-
-      <p>
-        Explore examples of current research happening
-        at Harvard Medical School.
-      </p>
-
-      <a
-        href="https://hms.harvard.edu/research/examples-current-research"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="opportunity-link"
-      >
-        EXPLORE RESEARCH →
-      </a>
-
-    </div>
-
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- SOCIAL -->
+<!-- CONTACT -->
 
-<section class="social">
+<section class="contact">
 
-  <div class="label">
-    FOLLOW US
-  </div>
+<div class="eyebrow">
+Pre-Derm Society
+</div>
 
-  <h2>
-    @prederm_society
-  </h2>
+<h2>
+Let's learn together.
+</h2>
 
-  <p class="text" style="margin:0 auto;">
-    Follow along with Pre-Derm Society updates,
-    projects, and student-led work.
-  </p>
+<p>
+A student-led community exploring medicine,
+science, and dermatology.
+</p>
 
-  <a
-    href="https://www.instagram.com/prederm_society/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-button"
-  >
-    FOLLOW @PRE-DERM_SOCIETY →
-  </a>
+<div class="socials">
+
+<a
+href="https://www.instagram.com/prederm_society/"
+target="_blank"
+rel="noopener noreferrer"
+>
+Instagram
+</a>
+
+<a
+href="https://www.tiktok.com/@prederm_society"
+target="_blank"
+rel="noopener noreferrer"
+>
+TikTok
+</a>
+
+<a href="join.html">
+Join Us
+</a>
+
+</div>
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
-
-  <div>
-
-    <a
-      href="https://www.instagram.com/prederm_society/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      INSTAGRAM
-    </a>
-
-    <a href="mailto:predermsociety@gmail.com">
-      EMAIL
-    </a>
-
-  </div>
-
-  <div class="footer-name">
-    PRE-DERM SOCIETY
-  </div>
-
+© 2026 Pre-Derm Society · Student-led education
 </footer>
 
 
+<!-- INSTAGRAM EMBED SCRIPT -->
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+
+<!-- NUMBER ANIMATION -->
+
 <script>
 
-/* ==========================
-   ANIMATED IMPACT NUMBERS
-   ========================== */
+const counters =
+document.querySelectorAll(".impact-number");
 
-const counters = document.querySelectorAll(".stat-number");
+const observer =
+new IntersectionObserver((entries, observer) => {
 
-const counterObserver = new IntersectionObserver(
-  (entries, observer) => {
+entries.forEach(entry => {
 
-    entries.forEach(entry => {
+if(!entry.isIntersecting) return;
 
-      if (!entry.isIntersecting) return;
+const counter = entry.target;
 
-      const counter = entry.target;
+const target =
+parseInt(counter.dataset.target);
 
-      const target = Number(counter.dataset.target);
+const hasPlus =
+counter.dataset.plus === "true";
 
-      const suffix = counter.dataset.suffix || "";
+let current = 0;
 
-      let current = 0;
+const duration = 1100;
 
-      const duration = 1200;
+const startTime = performance.now();
 
-      const startTime = performance.now();
+function animate(time){
 
-      function animate(time) {
+const progress =
+Math.min((time - startTime) / duration, 1);
 
-        const progress =
-          Math.min((time - startTime) / duration, 1);
+const eased =
+1 - Math.pow(1 - progress, 3);
 
-        const eased =
-          1 - Math.pow(1 - progress, 3);
+current =
+Math.floor(eased * target);
 
-        current =
-          Math.floor(eased * target);
+counter.textContent =
+current.toLocaleString();
 
-        counter.textContent =
-          current.toLocaleString() + suffix;
+if(progress < 1){
 
-        if (progress < 1) {
+requestAnimationFrame(animate);
 
-          requestAnimationFrame(animate);
+}else{
 
-        } else {
+counter.textContent =
+target.toLocaleString() + (hasPlus ? "+" : "");
 
-          counter.textContent =
-            target.toLocaleString() + suffix;
+}
 
-        }
+}
 
-      }
+requestAnimationFrame(animate);
 
-      requestAnimationFrame(animate);
+observer.unobserve(counter);
 
-      observer.unobserve(counter);
+});
 
-    });
-
-  },
-  {
-    threshold: 0.4
-  }
-);
-
+},{
+threshold:.35
+});
 
 counters.forEach(counter => {
-  counterObserver.observe(counter);
+observer.observe(counter);
 });
 
 </script>
+
 
 </body>
 </html>
