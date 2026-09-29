@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Pre-Derm Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       box-sizing:border-box;
       margin:0;
@@ -28,9 +30,19 @@
       width:100%;
       max-width:100%;
       font-family:'DM Sans',sans-serif;
-      background:#fff;
-      color:#171717;
+      color:#fff;
       line-height:1.6;
+
+      /* WHOLE PAGE COLOR */
+      background:
+        linear-gradient(
+          135deg,
+          #f7b6c9 0%,
+          #f8c3c6 25%,
+          #ffd0bb 52%,
+          #f4c5d9 76%,
+          #cfc9ed 100%
+        );
     }
 
     a{
@@ -39,324 +51,751 @@
     }
 
 
-    /* =========================
+    /* =========================================
        COVER / HERO
-    ========================= */
+    ========================================= */
 
     .hero{
+
       min-height:100vh;
       width:100%;
       position:relative;
 
-      background-image:url('Untitled514_20260927203155.PNG');
+      /*
+        YOUR BACKGROUND IMAGE
+        The image covers the entire cover,
+        including behind the navigation.
+      */
+
+      background-image:
+        linear-gradient(
+          rgba(247,182,201,.12),
+          rgba(247,182,201,.12)
+        ),
+        url('Untitled514_20260927203155.PNG');
+
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
 
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
 
       overflow:hidden;
     }
 
-    /* white frame like your cover */
+
+    /* SOFT COLOR OVERLAY */
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(246,174,197,.18),
+          rgba(255,207,181,.12),
+          rgba(198,193,235,.14)
+        );
+
+      pointer-events:none;
+      z-index:1;
+    }
+
+
+    /* WHITE FRAME */
 
     .hero::before{
       content:"";
+
       position:absolute;
-      top:46px;
+
+      top:42px;
       left:8%;
       right:8%;
-      bottom:46px;
-      border:2px solid rgba(255,255,255,.9);
+      bottom:42px;
+
+      border:2px solid rgba(255,255,255,.88);
+
       pointer-events:none;
+
+      z-index:2;
     }
 
-    .hero-content{
-      position:relative;
-      z-index:2;
+
+    /* =========================================
+       NAVIGATION
+    ========================================= */
+
+    nav{
+
+      position:absolute;
+
+      top:0;
+      left:0;
+
       width:100%;
-      max-width:1100px;
+
+      padding:30px 9%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      z-index:10;
+
+      color:#fff;
+    }
+
+
+    .logo{
+
+      font-size:18px;
+      font-weight:600;
+      letter-spacing:-.5px;
+
+      color:#fff;
+    }
+
+
+    .nav-links{
+
+      display:flex;
+      align-items:center;
+
+      gap:30px;
+
+      font-size:14px;
+
+      color:#fff;
+    }
+
+
+    .nav-links a{
+      color:#fff;
+    }
+
+
+    /* =========================================
+       HERO CONTENT
+    ========================================= */
+
+    .hero-content{
+
+      position:relative;
+
+      z-index:5;
+
+      width:100%;
       min-height:100vh;
-      padding:100px 10%;
+
+      padding:
+        115px
+        10%
+        80px;
+
       display:flex;
       flex-direction:column;
       align-items:center;
+
       text-align:center;
     }
 
 
-    /* BIG COVER TITLE */
+    /* =========================================
+       STUDENT-LED WORDS
+    ========================================= */
+
+    .eyebrow{
+
+      /*
+        MOVED HIGHER
+      */
+
+      margin-top:0;
+
+      margin-bottom:22px;
+
+      color:#fff;
+
+      font-size:12px;
+
+      letter-spacing:2px;
+
+      text-transform:uppercase;
+
+      font-weight:600;
+
+      text-shadow:
+        0 1px 7px rgba(205,117,145,.18);
+    }
+
+
+    /* =========================================
+       PRE-DERM SOCIETY
+    ========================================= */
 
     .hero-title{
+
       color:#fff;
-      font-size:clamp(60px,9vw,125px);
+
+      font-size:
+        clamp(
+          58px,
+          9vw,
+          125px
+        );
+
       line-height:.9;
+
       letter-spacing:-5px;
+
       font-weight:600;
-      margin-top:25px;
-      text-shadow:0 2px 10px rgba(255,255,255,.15);
+
+      margin:0;
+
+      text-shadow:
+        2px 3px 0 rgba(217,121,145,.25);
+
+      position:relative;
+
+      z-index:7;
     }
+
 
     .hero-title span{
       display:block;
     }
 
 
-    /* SMALL PINK EYEBROW */
-
-    .eyebrow{
-      color:#d97991;
-      font-size:12px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      margin-top:18px;
-      margin-bottom:0;
-      font-weight:600;
-    }
-
-
-    /* PHOTO */
+    /* =========================================
+       PHOTO
+       IMPORTANT:
+       PHOTO IS BELOW THE TITLE
+       AND DOES NOT COVER THE WORDS
+    ========================================= */
 
     .hero-photo{
+
       position:absolute;
-      left:13%;
-      bottom:17%;
-      width:290px;
-      max-width:28vw;
+
+      left:15%;
+
+      bottom:14%;
+
+      width:275px;
+
       background:#fff;
-      padding:12px 12px 55px;
-      transform:rotate(-11deg);
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+      padding:10px 10px 45px;
+
+      transform:rotate(-9deg);
+
+      box-shadow:
+        0 10px 30px rgba(125,83,105,.15);
+
+      z-index:4;
     }
 
+
     .hero-photo img{
+
       display:block;
+
       width:100%;
-      height:245px;
+
+      height:225px;
+
       object-fit:cover;
     }
 
 
-    /* BUTTONS */
+    /* =========================================
+       ABOUT + JOIN
+    ========================================= */
 
     .hero-buttons{
+
       position:absolute;
-      right:21%;
-      bottom:19%;
+
+      right:19%;
+
+      bottom:16%;
+
       display:flex;
+
       flex-direction:column;
+
       align-items:center;
-      gap:32px;
+
+      gap:30px;
+
+      z-index:6;
     }
+
 
     .cover-btn{
-      font-size:32px;
-      font-weight:600;
-      letter-spacing:-1.5px;
+
       color:#fff;
+
       background:transparent;
+
       border:none;
+
+      font-size:30px;
+
+      font-weight:600;
+
+      letter-spacing:-1.5px;
+
       cursor:pointer;
+
       transition:.2s ease;
-      text-shadow:2px 3px 0 rgba(220,125,151,.35);
+
+      text-shadow:
+        3px 3px 0 rgba(217,121,145,.35);
     }
+
 
     .cover-btn:hover{
+
       transform:translateY(-3px);
-      color:#fff;
-      text-shadow:3px 4px 0 rgba(220,125,151,.55);
+
+      text-shadow:
+        4px 4px 0 rgba(217,121,145,.5);
     }
 
 
-    /* =========================
-       EXPLORE
-    ========================= */
+    /* =========================================
+       ALL OTHER SECTIONS
+       SAME COLOR VIBE
+    ========================================= */
 
-    section{
+    section:not(.hero){
+
+      position:relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f6b4c8 0%,
+          #fac5c2 30%,
+          #ffd0b8 58%,
+          #edc7df 80%,
+          #cbc7ed 100%
+        );
+
       padding:100px 7%;
+
+      overflow:hidden;
     }
+
+
+    /* subtle medical-pattern feel */
+
+    section:not(.hero)::before{
+
+      content:"";
+
+      position:absolute;
+
+      inset:0;
+
+      background-image:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255,255,255,.25) 0 2px,
+          transparent 3px
+        ),
+        radial-gradient(
+          circle at 80% 70%,
+          rgba(255,255,255,.2) 0 2px,
+          transparent 3px
+        );
+
+      background-size:90px 90px,120px 120px;
+
+      opacity:.5;
+
+      pointer-events:none;
+    }
+
 
     .section-heading{
+
+      position:relative;
+
+      z-index:2;
+
       max-width:650px;
+
       margin-bottom:55px;
     }
 
+
     .section-heading span{
+
       display:block;
+
       font-size:12px;
+
       letter-spacing:2px;
+
       text-transform:uppercase;
-      color:#999;
+
+      color:#fff;
+
       margin-bottom:15px;
+
+      font-weight:600;
     }
+
 
     .section-heading h2{
-      font-size:clamp(36px,5vw,58px);
+
+      font-size:
+        clamp(
+          36px,
+          5vw,
+          58px
+        );
+
       line-height:1.05;
+
       letter-spacing:-2px;
+
       font-weight:600;
+
       margin-bottom:20px;
+
+      color:#fff;
+
+      text-shadow:
+        2px 2px 0 rgba(217,121,145,.25);
     }
+
 
     .section-heading p{
-      color:#777;
+
+      color:#fff;
+
       font-size:16px;
+
+      max-width:600px;
     }
 
 
-    /* CARDS */
+    /* =========================================
+       ABOUT CARD
+    ========================================= */
 
     .cards{
+
+      position:relative;
+
+      z-index:2;
+
       display:grid;
-      grid-template-columns:repeat(1,minmax(0,1fr));
+
+      grid-template-columns:
+        repeat(
+          1,
+          minmax(0,1fr)
+        );
+
       gap:18px;
     }
 
+
     .card{
-      border:1px solid #e7e7e7;
+
+      border:
+        1px solid
+        rgba(255,255,255,.7);
+
       border-radius:24px;
+
       padding:35px;
+
       min-height:220px;
+
       display:flex;
+
       flex-direction:column;
+
       justify-content:space-between;
+
       transition:.25s ease;
-      background:#fff;
+
+      background:
+        rgba(255,255,255,.18);
+
+      backdrop-filter:blur(8px);
+
+      color:#fff;
     }
+
 
     .card:hover{
+
       transform:translateY(-4px);
-      border-color:#ccc;
+
+      background:
+        rgba(255,255,255,.27);
     }
+
 
     .card-number{
+
       font-size:12px;
-      color:#999;
+
+      color:#fff;
     }
+
 
     .card h3{
+
       font-size:27px;
+
       letter-spacing:-1px;
+
       font-weight:500;
+
       margin-top:30px;
+
+      color:#fff;
     }
 
+
     .card p{
-      color:#777;
+
+      color:#fff;
+
       font-size:14px;
+
       margin-top:10px;
     }
 
+
     .card-link{
+
       font-size:12px;
+
       letter-spacing:1.5px;
+
       text-transform:uppercase;
+
       margin-top:25px;
+
+      color:#fff;
     }
 
 
-    /* =========================
+    /* =========================================
        IMPACT
-    ========================= */
+    ========================================= */
 
     .impact-section{
-      background:#f8f8f8;
+
       text-align:center;
     }
 
+
+    .impact-section
+    .section-heading{
+
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+
     .impact-grid{
+
+      position:relative;
+
+      z-index:2;
+
       max-width:850px;
+
       margin:0 auto;
+
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+
+      grid-template-columns:
+        repeat(2,1fr);
+
       gap:18px;
     }
 
+
     .impact-card{
-      background:#fff;
-      border:1px solid #e8e8e8;
+
+      background:
+        rgba(255,255,255,.22);
+
+      border:
+        1px solid
+        rgba(255,255,255,.75);
+
       border-radius:24px;
+
       padding:45px 25px;
+
+      backdrop-filter:blur(8px);
+
+      color:#fff;
     }
+
 
     .impact-number{
+
       font-size:52px;
+
       line-height:1;
+
       letter-spacing:-3px;
+
       font-weight:600;
+
       margin-bottom:12px;
+
+      color:#fff;
     }
 
+
     .impact-label{
-      color:#777;
+
+      color:#fff;
+
       font-size:14px;
     }
 
 
-    /* =========================
+    /* =========================================
        INSTAGRAM
-    ========================= */
+    ========================================= */
 
     .instagram-section{
+
       overflow:hidden;
     }
 
+
     .instagram-scroll{
+
+      position:relative;
+
+      z-index:2;
+
       display:flex;
+
       gap:20px;
+
       overflow-x:hidden;
+
       width:100%;
     }
 
+
     .instagram-card{
+
       min-width:320px;
+
       width:320px;
-      border:1px solid #e8e8e8;
+
+      border:
+        1px solid
+        rgba(255,255,255,.7);
+
       border-radius:20px;
+
       overflow:hidden;
-      background:#fff;
+
+      background:
+        rgba(255,255,255,.2);
+
+      backdrop-filter:blur(8px);
     }
 
+
     .instagram-follow{
+
+      position:relative;
+
+      z-index:2;
+
       margin-top:35px;
+
       text-align:center;
     }
 
+
     .instagram-follow a{
+
       display:inline-block;
+
       padding:13px 22px;
-      border:1px solid #171717;
+
+      border:
+        1px solid
+        rgba(255,255,255,.9);
+
       border-radius:30px;
+
       font-size:14px;
+
+      color:#fff;
+
+      background:
+        rgba(255,255,255,.15);
     }
 
 
-    /* =========================
+    /* =========================================
        PHOTO LOOP
-    ========================= */
+    ========================================= */
 
     .photo-section{
-      padding:0;
+
+      padding:0 !important;
+
       overflow:hidden;
+
       width:100%;
     }
 
+
     .photo-track{
+
       display:flex;
+
       width:max-content;
-      animation:scrollPhotos 32s linear infinite;
+
+      animation:
+        scrollPhotos
+        32s
+        linear
+        infinite;
     }
 
+
     .photo-track img{
+
       width:280px;
+
       height:350px;
+
       object-fit:cover;
+
       display:block;
     }
 
+
     @keyframes scrollPhotos{
+
       from{
         transform:translateX(0);
       }
@@ -367,121 +806,230 @@
     }
 
 
-    /* =========================
+    /* =========================================
        CONTACT
-    ========================= */
+    ========================================= */
 
     .contact-section{
+
       text-align:center;
-      padding:120px 7%;
+
+      padding:120px 7% !important;
     }
+
 
     .contact-section h2{
-      font-size:clamp(42px,6vw,70px);
+
+      font-size:
+        clamp(
+          42px,
+          6vw,
+          70px
+        );
+
       line-height:1;
+
       letter-spacing:-3px;
+
       font-weight:600;
+
       margin-bottom:25px;
+
+      color:#fff;
+
+      position:relative;
+
+      z-index:2;
     }
+
 
     .contact-section p{
-      color:#777;
+
+      color:#fff;
+
       margin-bottom:30px;
+
+      position:relative;
+
+      z-index:2;
     }
+
 
     .contact-links{
+
+      position:relative;
+
+      z-index:2;
+
       display:flex;
+
       justify-content:center;
+
       gap:25px;
+
       flex-wrap:wrap;
+
       font-size:14px;
+
+      color:#fff;
     }
 
+
     .contact-links a{
+
       text-decoration:underline;
+
       text-underline-offset:4px;
     }
 
 
-    /* =========================
+    /* =========================================
        FOOTER
-    ========================= */
+    ========================================= */
 
     footer{
+
       padding:30px 7%;
-      border-top:1px solid #eee;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.5);
+
       display:flex;
+
       justify-content:space-between;
+
       align-items:center;
+
       gap:20px;
+
       font-size:12px;
-      color:#999;
+
+      color:#fff;
+
+      background:#dcaec8;
     }
 
 
-    /* =========================
+    /* =========================================
        MOBILE
-    ========================= */
+    ========================================= */
 
     @media(max-width:800px){
 
       .hero{
+
         min-height:100svh;
       }
 
+
       .hero::before{
+
         top:25px;
+
         left:5%;
+
         right:5%;
+
         bottom:25px;
       }
 
+
       .hero-content{
-        padding:80px 8%;
+
+        padding:
+          100px
+          7%
+          60px;
       }
 
+
+      .eyebrow{
+
+        font-size:10px;
+
+        letter-spacing:1.5px;
+
+        margin-bottom:18px;
+      }
+
+
       .hero-title{
-        font-size:clamp(55px,15vw,90px);
+
+        font-size:
+          clamp(
+            55px,
+            15vw,
+            90px
+          );
+
         letter-spacing:-4px;
       }
 
+
       .hero-photo{
-        left:9%;
-        bottom:13%;
-        width:210px;
-        max-width:42vw;
-        padding:8px 8px 38px;
+
+        left:8%;
+
+        bottom:12%;
+
+        width:200px;
+
+        max-width:40vw;
+
+        padding:
+          8px
+          8px
+          35px;
       }
+
 
       .hero-photo img{
-        height:175px;
+
+        height:165px;
       }
+
 
       .hero-buttons{
-        right:9%;
-        bottom:17%;
-        gap:25px;
+
+        right:8%;
+
+        bottom:15%;
+
+        gap:24px;
       }
+
 
       .cover-btn{
-        font-size:24px;
+
+        font-size:23px;
       }
 
-      section{
+
+      section:not(.hero){
+
         padding:75px 6%;
       }
 
+
       .impact-grid{
+
         grid-template-columns:1fr;
       }
 
+
       .instagram-card{
+
         min-width:280px;
+
         width:280px;
       }
 
+
       footer{
+
         flex-direction:column;
+
         text-align:center;
       }
     }
@@ -490,28 +1038,40 @@
     @media(max-width:520px){
 
       .hero-title{
+
         font-size:52px;
+
         letter-spacing:-3px;
-        margin-top:10px;
       }
+
 
       .hero-photo{
-        width:175px;
-        bottom:15%;
-        left:6%;
+
+        width:160px;
+
+        left:5%;
+
+        bottom:13%;
       }
+
 
       .hero-photo img{
-        height:145px;
+
+        height:135px;
       }
+
 
       .hero-buttons{
-        right:7%;
-        bottom:17%;
+
+        right:6%;
+
+        bottom:16%;
       }
 
+
       .cover-btn{
-        font-size:21px;
+
+        font-size:20px;
       }
     }
 
@@ -522,35 +1082,77 @@
 <body>
 
 
-  <!-- =========================
+  <!-- =========================================
        COVER
-  ========================= -->
+  ========================================= -->
 
   <section class="hero">
 
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        Pre-Derm Society
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="join.html">
+          Join Now
+        </a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- HERO CONTENT -->
+
     <div class="hero-content">
+
+
+      <!-- THESE ARE HIGHER + WHITE -->
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
+
+      <!-- TITLE -->
+
       <h1 class="hero-title">
+
         <span>Pre-Derm</span>
+
         <span>Society</span>
+
       </h1>
 
 
-      <!-- PHOTO -->
+      <!-- PHOTO
+           SEPARATE FROM TITLE -->
 
       <div class="hero-photo">
+
         <img
           src="IMG_5085.jpeg"
           alt="Pre-Derm Society"
         >
+
       </div>
 
 
-      <!-- COVER BUTTONS -->
+      <!-- BUTTONS -->
 
       <div class="hero-buttons">
 
@@ -560,6 +1162,7 @@
         >
           About Us
         </a>
+
 
         <a
           href="join.html"
@@ -576,20 +1179,25 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        EXPLORE
-  ========================= -->
+  ========================================= -->
 
   <section>
 
+
     <div class="section-heading">
 
-      <span>Explore</span>
+      <span>
+        Explore
+      </span>
+
 
       <h2>
         Learn. Research.<br>
         Discover medicine.
       </h2>
+
 
       <p>
         Explore student-friendly lessons and real opportunities for students
@@ -601,7 +1209,11 @@
 
     <div class="cards">
 
-      <a href="about.html" class="card">
+
+      <a
+        href="about.html"
+        class="card"
+      >
 
         <div>
 
@@ -609,9 +1221,11 @@
             01
           </div>
 
+
           <h3>
             About Us
           </h3>
+
 
           <p>
             Learn about Pre-Derm Society, our mission, and why we created
@@ -619,6 +1233,7 @@
           </p>
 
         </div>
+
 
         <div class="card-link">
           Our Story →
@@ -632,25 +1247,26 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        IMPACT
-  ========================= -->
+  ========================================= -->
 
   <section class="impact-section">
 
-    <div
-      class="section-heading"
-      style="margin-left:auto;margin-right:auto;"
-    >
+
+    <div class="section-heading">
+
 
       <span>
         Our Impact
       </span>
 
+
       <h2>
         Small lessons.<br>
         Growing impact.
       </h2>
+
 
       <p>
         Every completed lesson contributes to our growing student education
@@ -662,11 +1278,17 @@
 
     <div class="impact-grid">
 
+
       <div class="impact-card">
 
         <div class="impact-number">
-          <span id="peopleReached">0</span>+
+
+          <span id="peopleReached">
+            0
+          </span>+
+
         </div>
+
 
         <div class="impact-label">
           People Reached
@@ -678,8 +1300,13 @@
       <div class="impact-card">
 
         <div class="impact-number">
-          <span id="lessonsDone">0</span>
+
+          <span id="lessonsDone">
+            0
+          </span>
+
         </div>
+
 
         <div class="impact-label">
           Lessons Taught
@@ -693,22 +1320,26 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        INSTAGRAM
-  ========================= -->
+  ========================================= -->
 
   <section class="instagram-section">
 
+
     <div class="section-heading">
+
 
       <span>
         Follow Along
       </span>
 
+
       <h2>
         See what we're<br>
         learning.
       </h2>
+
 
       <p>
         Follow Pre-Derm Society for educational posts, dermatology facts,
@@ -719,6 +1350,7 @@
 
 
     <div class="instagram-scroll">
+
 
       <div class="instagram-card">
 
@@ -748,7 +1380,9 @@
 
     <div class="instagram-follow">
 
-      <a href="https://www.instagram.com/prederm_society/">
+      <a
+        href="https://www.instagram.com/prederm_society/"
+      >
         Follow @prederm_society
       </a>
 
@@ -758,23 +1392,55 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        PHOTO LOOP
-  ========================= -->
+  ========================================= -->
 
   <section class="photo-section">
 
+
     <div class="photo-track">
 
-      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+      <img
+        src="IMG_5085.jpeg"
+        alt="Pre-Derm Society"
+      >
 
-      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+      <img
+        src="IMG_8766.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+
+      <img
+        src="IMG_5085.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+      <img
+        src="IMG_8766.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt="Pre-Derm Society"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt="Pre-Derm Society"
+      >
 
     </div>
 
@@ -782,29 +1448,38 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        CONTACT
-  ========================= -->
+  ========================================= -->
 
   <section class="contact-section">
+
 
     <h2>
       Let's learn together.
     </h2>
 
+
     <p>
       Curious about medicine? Come explore with us.
     </p>
 
+
     <div class="contact-links">
 
-      <a href="https://www.instagram.com/prederm_society/">
+      <a
+        href="https://www.instagram.com/prederm_society/"
+      >
         Instagram
       </a>
 
-      <a href="https://www.tiktok.com/@prederm_society">
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+      >
         TikTok
       </a>
+
 
       <a href="join.html">
         Join Us
@@ -816,15 +1491,16 @@
 
 
 
-  <!-- =========================
+  <!-- =========================================
        FOOTER
-  ========================= -->
+  ========================================= -->
 
   <footer>
 
     <span>
       © Pre-Derm Society
     </span>
+
 
     <span>
       Student-led • Medicine • Dermatology
@@ -834,9 +1510,12 @@
 
 
 
-  <!-- INSTAGRAM -->
+  <!-- INSTAGRAM SCRIPT -->
 
-  <script async src="//www.instagram.com/embed.js"></script>
+  <script
+    async
+    src="//www.instagram.com/embed.js"
+  ></script>
 
 
 
@@ -845,89 +1524,139 @@
   <script>
 
     const PEOPLE_REACHED = 100;
+
     const LESSONS_DONE = 38;
 
-    function animateNumber(element, finalNumber, duration){
 
-      const startTime = performance.now();
+    function animateNumber(
+      element,
+      finalNumber,
+      duration
+    ){
+
+      const startTime =
+        performance.now();
+
 
       function update(currentTime){
 
-        const elapsed = currentTime - startTime;
+        const elapsed =
+          currentTime - startTime;
+
 
         const progress =
-          Math.min(elapsed / duration, 1);
+          Math.min(
+            elapsed / duration,
+            1
+          );
+
 
         const easedProgress =
-          1 - Math.pow(1 - progress, 3);
+          1 -
+          Math.pow(
+            1 - progress,
+            3
+          );
+
 
         const currentNumber =
-          Math.floor(easedProgress * finalNumber);
+          Math.floor(
+            easedProgress *
+            finalNumber
+          );
 
-        element.textContent = currentNumber;
+
+        element.textContent =
+          currentNumber;
+
 
         if(progress < 1){
 
-          requestAnimationFrame(update);
+          requestAnimationFrame(
+            update
+          );
 
         }else{
 
-          element.textContent = finalNumber;
+          element.textContent =
+            finalNumber;
 
         }
 
       }
 
-      requestAnimationFrame(update);
+
+      requestAnimationFrame(
+        update
+      );
+
     }
 
 
     const peopleElement =
-      document.getElementById("peopleReached");
+      document.getElementById(
+        "peopleReached"
+      );
+
 
     const lessonsElement =
-      document.getElementById("lessonsDone");
+      document.getElementById(
+        "lessonsDone"
+      );
 
 
     let impactObserver =
-      new IntersectionObserver(function(entries){
+      new IntersectionObserver(
+        function(entries){
 
-        entries.forEach(function(entry){
+          entries.forEach(
+            function(entry){
 
-          if(entry.isIntersecting){
+              if(
+                entry.isIntersecting
+              ){
 
-            animateNumber(
-              peopleElement,
-              PEOPLE_REACHED,
-              1100
-            );
+                animateNumber(
+                  peopleElement,
+                  PEOPLE_REACHED,
+                  1100
+                );
 
-            animateNumber(
-              lessonsElement,
-              LESSONS_DONE,
-              1100
-            );
+
+                animateNumber(
+                  lessonsElement,
+                  LESSONS_DONE,
+                  1100
+                );
+
+              }
+
+            }
+          );
+
+
+          if(
+            entries.some(
+              function(entry){
+
+                return entry.isIntersecting;
+
+              }
+            )
+          ){
+
+            impactObserver.disconnect();
 
           }
 
-        });
-
-
-        if(
-          entries.some(function(entry){
-            return entry.isIntersecting;
-          })
-        ){
-
-          impactObserver.disconnect();
-
         }
-
-      });
+      );
 
 
     impactObserver.observe(
-      document.querySelector(".impact-section")
+      document.querySelector(
+        ".impact-section"
+      )
     );
 
   </script>
