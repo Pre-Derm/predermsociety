@@ -53,52 +53,12 @@
 
       position: relative;
 
-      /* YOUR PINK MICROSCOPE BACKGROUND */
       background-image: url('Untitled514_20260927203155.PNG');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
       overflow: hidden;
-    }
-
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-
-      padding: 30px 8%;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      z-index: 20;
-    }
-
-    .logo {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      color: #fff;
     }
 
 
@@ -123,7 +83,9 @@
     }
 
 
-    /* STUDENT-LED LINE */
+    /* =========================
+       STUDENT-LED LINE
+    ========================= */
 
     .eyebrow {
       color: #fff;
@@ -166,7 +128,6 @@
 
     /* =========================
        PHOTO
-       NOT OVER THE WORDS
     ========================= */
 
     .hero-photo {
@@ -199,43 +160,33 @@
 
 
     /* =========================
-       ABOUT / JOIN
+       ONLY BUTTON
     ========================= */
 
-    .hero-buttons {
+    .hero-button {
       position: absolute;
 
-      right: 18%;
-      bottom: 15%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      gap: 28px;
+      right: 17%;
+      bottom: 16%;
 
       z-index: 10;
-    }
 
-    .cover-btn {
       color: #fff;
-
-      background: transparent;
-      border: none;
-
-      font-family: 'DM Sans', sans-serif;
 
       font-size: 30px;
       font-weight: 600;
 
       letter-spacing: -1.5px;
 
+      background: transparent;
+      border: none;
+
       cursor: pointer;
 
       transition: transform .2s ease;
     }
 
-    .cover-btn:hover {
+    .hero-button:hover {
       transform: translateY(-3px);
     }
 
@@ -251,7 +202,9 @@
     }
 
 
-    /* PINK IMAGE BACKGROUND */
+    /* =========================
+       PINK SECTIONS
+    ========================= */
 
     .color-section {
       background-image: url('Untitled514_20260927203155.PNG');
@@ -263,7 +216,9 @@
     }
 
 
-    /* WHITE SECTION */
+    /* =========================
+       WHITE SECTION
+    ========================= */
 
     .white-section {
       background: #fff;
@@ -364,12 +319,6 @@
 
       background: #fff;
       color: #171717;
-
-      transition: .25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
     }
 
     .card-number {
@@ -389,14 +338,6 @@
       color: #777;
       font-size: 14px;
       margin-top: 10px;
-    }
-
-    .card-link {
-      font-size: 12px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-
-      margin-top: 25px;
     }
 
 
@@ -486,32 +427,10 @@
       background: #fff;
     }
 
-    .instagram-follow {
-      position: relative;
-      z-index: 2;
-
-      margin-top: 35px;
-
-      text-align: center;
-    }
-
-    .instagram-follow a {
-      display: inline-block;
-
-      padding: 13px 22px;
-
-      border: 1px solid #171717;
-      border-radius: 30px;
-
-      font-size: 14px;
-
-      color: #171717;
-      background: #fff;
-    }
-
 
     /* =========================
        PHOTO LOOP
+       WITH IMG_5606 BACKGROUND
     ========================= */
 
     .photo-section {
@@ -520,6 +439,11 @@
       overflow: hidden;
 
       width: 100%;
+
+      background-image: url('IMG_5606.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .photo-track {
@@ -575,24 +499,7 @@
 
     .contact-section p {
       margin-bottom: 30px;
-      color: #777;
-    }
-
-    .contact-links {
-      display: flex;
-
-      justify-content: center;
-
-      gap: 25px;
-
-      flex-wrap: wrap;
-
-      font-size: 14px;
-    }
-
-    .contact-links a {
-      text-decoration: underline;
-      text-underline-offset: 4px;
+      color: #fff;
     }
 
 
@@ -626,15 +533,6 @@
 
     @media (max-width: 800px) {
 
-      nav {
-        padding: 24px 7%;
-      }
-
-      .nav-links {
-        gap: 18px;
-        font-size: 13px;
-      }
-
       .hero-content {
         padding: 105px 7% 60px;
       }
@@ -664,14 +562,10 @@
         height: 165px;
       }
 
-      .hero-buttons {
+      .hero-button {
         right: 8%;
         bottom: 15%;
 
-        gap: 24px;
-      }
-
-      .cover-btn {
         font-size: 23px;
       }
 
@@ -692,6 +586,7 @@
         flex-direction: column;
         text-align: center;
       }
+
     }
 
 
@@ -712,12 +607,10 @@
         height: 135px;
       }
 
-      .hero-buttons {
+      .hero-button {
         right: 6%;
         bottom: 16%;
-      }
 
-      .cover-btn {
         font-size: 20px;
       }
 
@@ -737,42 +630,13 @@
   <section class="hero">
 
 
-    <nav>
-
-      <a
-        href="index.html"
-        class="logo"
-      >
-        Pre-Derm Society
-      </a>
-
-
-      <div class="nav-links">
-
-        <a href="index.html">
-          Home
-        </a>
-
-        <a href="join.html">
-          Join Now
-        </a>
-
-      </div>
-
-    </nav>
-
-
     <div class="hero-content">
 
-
-      <!-- WHITE + HIGHER -->
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
-
-      <!-- WHITE TITLE -->
 
       <h1 class="hero-title">
 
@@ -783,7 +647,7 @@
       </h1>
 
 
-      <!-- PHOTO DOES NOT COVER TITLE -->
+      <!-- PHOTO STAYS AWAY FROM TITLE -->
 
       <div class="hero-photo">
 
@@ -795,26 +659,14 @@
       </div>
 
 
-      <!-- BUTTONS -->
+      <!-- ONLY BUTTON ON COVER -->
 
-      <div class="hero-buttons">
-
-        <a
-          href="about.html"
-          class="cover-btn"
-        >
-          About Us
-        </a>
-
-
-        <a
-          href="join.html"
-          class="cover-btn"
-        >
-          Join
-        </a>
-
-      </div>
+      <a
+        href="about.html"
+        class="hero-button"
+      >
+        Learn About Us
+      </a>
 
 
     </div>
@@ -824,7 +676,7 @@
 
 
   <!-- =========================
-       COLOR SECTION
+       EXPLORE
   ========================= -->
 
   <section class="color-section">
@@ -850,10 +702,7 @@
 
     <div class="cards">
 
-      <a
-        href="about.html"
-        class="card"
-      >
+      <div class="card">
 
         <div>
 
@@ -872,12 +721,7 @@
 
         </div>
 
-
-        <div class="card-link">
-          Our Story →
-        </div>
-
-      </a>
+      </div>
 
     </div>
 
@@ -886,7 +730,7 @@
 
 
   <!-- =========================
-       WHITE SECTION
+       IMPACT
   ========================= -->
 
   <section class="impact-section white-section">
@@ -955,7 +799,7 @@
 
 
   <!-- =========================
-       COLOR SECTION
+       INSTAGRAM
   ========================= -->
 
   <section class="instagram-section color-section">
@@ -1009,24 +853,15 @@
 
     </div>
 
-
-    <div class="instagram-follow">
-
-      <a href="https://www.instagram.com/prederm_society/">
-        Follow @prederm_society
-      </a>
-
-    </div>
-
   </section>
 
 
 
   <!-- =========================
-       WHITE PHOTO SECTION
+       PHOTO LOOP
   ========================= -->
 
-  <section class="photo-section white-section">
+  <section class="photo-section">
 
     <div class="photo-track">
 
@@ -1047,37 +882,18 @@
 
 
   <!-- =========================
-       COLOR SECTION
+       CONTACT
   ========================= -->
 
   <section class="contact-section color-section">
-
 
     <h2>
       Let's learn together.
     </h2>
 
-
     <p>
       Curious about medicine? Come explore with us.
     </p>
-
-
-    <div class="contact-links">
-
-      <a href="https://www.instagram.com/prederm_society/">
-        Instagram
-      </a>
-
-      <a href="https://www.tiktok.com/@prederm_society">
-        TikTok
-      </a>
-
-      <a href="join.html">
-        Join Us
-      </a>
-
-    </div>
 
   </section>
 
