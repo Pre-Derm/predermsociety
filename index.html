@@ -8,7 +8,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -21,28 +25,19 @@
     html{
       scroll-behavior:smooth;
       overflow-x:hidden;
-      overscroll-behavior-x:none;
     }
 
     body{
-      overflow-x:hidden;
-      overscroll-behavior-x:none;
       width:100%;
       max-width:100%;
-      font-family:'DM Sans',sans-serif;
-      color:#fff;
-      line-height:1.6;
+      overflow-x:hidden;
 
-      /* WHOLE PAGE COLOR */
-      background:
-        linear-gradient(
-          135deg,
-          #f7b6c9 0%,
-          #f8c3c6 25%,
-          #ffd0bb 52%,
-          #f4c5d9 76%,
-          #cfc9ed 100%
-        );
+      font-family:'DM Sans', sans-serif;
+
+      color:#171717;
+      background:#fff;
+
+      line-height:1.6;
     }
 
     a{
@@ -51,84 +46,43 @@
     }
 
 
-    /* =========================================
-       COVER / HERO
-    ========================================= */
+    /* =====================================================
+       COVER
+    ===================================================== */
 
     .hero{
 
       min-height:100vh;
       width:100%;
+
       position:relative;
 
       /*
-        YOUR BACKGROUND IMAGE
-        The image covers the entire cover,
-        including behind the navigation.
+        THIS IS YOUR UPLOADED IMAGE.
+        No extra overlay.
+        No extra frame.
       */
 
-      background-image:
-        linear-gradient(
-          rgba(247,182,201,.12),
-          rgba(247,182,201,.12)
-        ),
-        url('Untitled514_20260927203155.PNG');
+      background-image:url('Untitled514_20260927201911.PNG');
 
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
 
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
       overflow:hidden;
     }
 
 
-    /* SOFT COLOR OVERLAY */
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(246,174,197,.18),
-          rgba(255,207,181,.12),
-          rgba(198,193,235,.14)
-        );
-
-      pointer-events:none;
-      z-index:1;
-    }
+    /*
+      IMPORTANT:
+      There is NO ::before frame.
+      Your uploaded image already contains the frame.
+    */
 
 
-    /* WHITE FRAME */
-
-    .hero::before{
-      content:"";
-
-      position:absolute;
-
-      top:42px;
-      left:8%;
-      right:8%;
-      bottom:42px;
-
-      border:2px solid rgba(255,255,255,.88);
-
-      pointer-events:none;
-
-      z-index:2;
-    }
-
-
-    /* =========================================
+    /* =====================================================
        NAVIGATION
-    ========================================= */
+    ===================================================== */
 
     nav{
 
@@ -145,7 +99,7 @@
       justify-content:space-between;
       align-items:center;
 
-      z-index:10;
+      z-index:20;
 
       color:#fff;
     }
@@ -153,24 +107,27 @@
 
     .logo{
 
-      font-size:18px;
-      font-weight:600;
-      letter-spacing:-.5px;
-
       color:#fff;
+
+      font-size:18px;
+
+      font-weight:600;
+
+      letter-spacing:-.5px;
     }
 
 
     .nav-links{
 
       display:flex;
+
       align-items:center;
 
       gap:30px;
 
-      font-size:14px;
-
       color:#fff;
+
+      font-size:14px;
     }
 
 
@@ -179,9 +136,9 @@
     }
 
 
-    /* =========================================
+    /* =====================================================
        HERO CONTENT
-    ========================================= */
+    ===================================================== */
 
     .hero-content{
 
@@ -189,35 +146,29 @@
 
       z-index:5;
 
-      width:100%;
       min-height:100vh;
+      width:100%;
 
       padding:
-        115px
+        105px
         10%
-        80px;
+        70px;
 
       display:flex;
+
       flex-direction:column;
+
       align-items:center;
 
       text-align:center;
     }
 
 
-    /* =========================================
-       STUDENT-LED WORDS
-    ========================================= */
+    /* =====================================================
+       STUDENT-LED LINE
+    ===================================================== */
 
     .eyebrow{
-
-      /*
-        MOVED HIGHER
-      */
-
-      margin-top:0;
-
-      margin-bottom:22px;
 
       color:#fff;
 
@@ -229,14 +180,22 @@
 
       font-weight:600;
 
+      /*
+        HIGHER UP
+      */
+
+      margin-top:0;
+
+      margin-bottom:22px;
+
       text-shadow:
-        0 1px 7px rgba(205,117,145,.18);
+        0 1px 6px rgba(150,80,110,.15);
     }
 
 
-    /* =========================================
-       PRE-DERM SOCIETY
-    ========================================= */
+    /* =====================================================
+       TITLE
+    ===================================================== */
 
     .hero-title{
 
@@ -257,12 +216,12 @@
 
       margin:0;
 
-      text-shadow:
-        2px 3px 0 rgba(217,121,145,.25);
-
       position:relative;
 
       z-index:7;
+
+      text-shadow:
+        2px 3px 0 rgba(217,121,145,.25);
     }
 
 
@@ -271,12 +230,10 @@
     }
 
 
-    /* =========================================
+    /* =====================================================
        PHOTO
-       IMPORTANT:
-       PHOTO IS BELOW THE TITLE
-       AND DOES NOT COVER THE WORDS
-    ========================================= */
+       BELOW THE TITLE
+    ===================================================== */
 
     .hero-photo{
 
@@ -284,18 +241,21 @@
 
       left:15%;
 
-      bottom:14%;
+      bottom:13%;
 
       width:275px;
 
       background:#fff;
 
-      padding:10px 10px 45px;
+      padding:
+        10px
+        10px
+        45px;
 
       transform:rotate(-9deg);
 
       box-shadow:
-        0 10px 30px rgba(125,83,105,.15);
+        0 10px 30px rgba(100,70,90,.15);
 
       z-index:4;
     }
@@ -313,9 +273,9 @@
     }
 
 
-    /* =========================================
+    /* =====================================================
        ABOUT + JOIN
-    ========================================= */
+    ===================================================== */
 
     .hero-buttons{
 
@@ -333,7 +293,7 @@
 
       gap:30px;
 
-      z-index:6;
+      z-index:10;
     }
 
 
@@ -344,6 +304,8 @@
       background:transparent;
 
       border:none;
+
+      font-family:'DM Sans', sans-serif;
 
       font-size:30px;
 
@@ -369,24 +331,14 @@
     }
 
 
-    /* =========================================
-       ALL OTHER SECTIONS
-       SAME COLOR VIBE
-    ========================================= */
+
+    /* =====================================================
+       ALTERNATING SECTIONS
+    ===================================================== */
 
     section:not(.hero){
 
       position:relative;
-
-      background:
-        linear-gradient(
-          135deg,
-          #f6b4c8 0%,
-          #fac5c2 30%,
-          #ffd0b8 58%,
-          #edc7df 80%,
-          #cbc7ed 100%
-        );
 
       padding:100px 7%;
 
@@ -394,35 +346,41 @@
     }
 
 
-    /* subtle medical-pattern feel */
+    /*
+      COLORFUL SECTION
+      Uses the SAME background image.
+    */
 
-    section:not(.hero)::before{
-
-      content:"";
-
-      position:absolute;
-
-      inset:0;
+    .color-section{
 
       background-image:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(255,255,255,.25) 0 2px,
-          transparent 3px
-        ),
-        radial-gradient(
-          circle at 80% 70%,
-          rgba(255,255,255,.2) 0 2px,
-          transparent 3px
-        );
+        url('Untitled514_20260927201911.PNG');
 
-      background-size:90px 90px,120px 120px;
+      background-size:cover;
 
-      opacity:.5;
+      background-position:center;
 
-      pointer-events:none;
+      background-repeat:no-repeat;
+
+      color:#fff;
     }
 
+
+    /*
+      WHITE SECTION
+    */
+
+    .white-section{
+
+      background:#fff;
+
+      color:#171717;
+    }
+
+
+    /* =====================================================
+       SECTION CONTENT
+    ===================================================== */
 
     .section-heading{
 
@@ -446,11 +404,19 @@
 
       text-transform:uppercase;
 
-      color:#fff;
-
       margin-bottom:15px;
 
       font-weight:600;
+    }
+
+
+    .color-section .section-heading span{
+      color:#fff;
+    }
+
+
+    .white-section .section-heading span{
+      color:#999;
     }
 
 
@@ -470,27 +436,39 @@
       font-weight:600;
 
       margin-bottom:20px;
+    }
 
+
+    .color-section .section-heading h2{
       color:#fff;
+    }
 
-      text-shadow:
-        2px 2px 0 rgba(217,121,145,.25);
+
+    .white-section .section-heading h2{
+      color:#171717;
     }
 
 
     .section-heading p{
 
-      color:#fff;
-
       font-size:16px;
-
-      max-width:600px;
     }
 
 
-    /* =========================================
+    .color-section .section-heading p{
+      color:#fff;
+    }
+
+
+    .white-section .section-heading p{
+      color:#777;
+    }
+
+
+
+    /* =====================================================
        ABOUT CARD
-    ========================================= */
+    ===================================================== */
 
     .cards{
 
@@ -500,11 +478,7 @@
 
       display:grid;
 
-      grid-template-columns:
-        repeat(
-          1,
-          minmax(0,1fr)
-        );
+      grid-template-columns:1fr;
 
       gap:18px;
     }
@@ -512,9 +486,7 @@
 
     .card{
 
-      border:
-        1px solid
-        rgba(255,255,255,.7);
+      border:1px solid #e7e7e7;
 
       border-radius:24px;
 
@@ -530,12 +502,9 @@
 
       transition:.25s ease;
 
-      background:
-        rgba(255,255,255,.18);
+      background:#fff;
 
-      backdrop-filter:blur(8px);
-
-      color:#fff;
+      color:#171717;
     }
 
 
@@ -543,8 +512,7 @@
 
       transform:translateY(-4px);
 
-      background:
-        rgba(255,255,255,.27);
+      border-color:#ccc;
     }
 
 
@@ -552,7 +520,7 @@
 
       font-size:12px;
 
-      color:#fff;
+      color:#999;
     }
 
 
@@ -565,14 +533,12 @@
       font-weight:500;
 
       margin-top:30px;
-
-      color:#fff;
     }
 
 
     .card p{
 
-      color:#fff;
+      color:#777;
 
       font-size:14px;
 
@@ -589,14 +555,13 @@
       text-transform:uppercase;
 
       margin-top:25px;
-
-      color:#fff;
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        IMPACT
-    ========================================= */
+    ===================================================== */
 
     .impact-section{
 
@@ -604,10 +569,10 @@
     }
 
 
-    .impact-section
-    .section-heading{
+    .impact-section .section-heading{
 
       margin-left:auto;
+
       margin-right:auto;
     }
 
@@ -633,20 +598,15 @@
 
     .impact-card{
 
-      background:
-        rgba(255,255,255,.22);
+      background:#fff;
 
-      border:
-        1px solid
-        rgba(255,255,255,.75);
+      border:1px solid #e8e8e8;
 
       border-radius:24px;
 
       padding:45px 25px;
 
-      backdrop-filter:blur(8px);
-
-      color:#fff;
+      color:#171717;
     }
 
 
@@ -661,22 +621,21 @@
       font-weight:600;
 
       margin-bottom:12px;
-
-      color:#fff;
     }
 
 
     .impact-label{
 
-      color:#fff;
+      color:#777;
 
       font-size:14px;
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        INSTAGRAM
-    ========================================= */
+    ===================================================== */
 
     .instagram-section{
 
@@ -706,18 +665,13 @@
 
       width:320px;
 
-      border:
-        1px solid
-        rgba(255,255,255,.7);
+      border:1px solid #e8e8e8;
 
       border-radius:20px;
 
       overflow:hidden;
 
-      background:
-        rgba(255,255,255,.2);
-
-      backdrop-filter:blur(8px);
+      background:#fff;
     }
 
 
@@ -739,24 +693,22 @@
 
       padding:13px 22px;
 
-      border:
-        1px solid
-        rgba(255,255,255,.9);
+      border:1px solid #171717;
 
       border-radius:30px;
 
       font-size:14px;
 
-      color:#fff;
+      color:#171717;
 
-      background:
-        rgba(255,255,255,.15);
+      background:#fff;
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        PHOTO LOOP
-    ========================================= */
+    ===================================================== */
 
     .photo-section{
 
@@ -806,9 +758,10 @@
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        CONTACT
-    ========================================= */
+    ===================================================== */
 
     .contact-section{
 
@@ -834,32 +787,18 @@
       font-weight:600;
 
       margin-bottom:25px;
-
-      color:#fff;
-
-      position:relative;
-
-      z-index:2;
     }
 
 
     .contact-section p{
 
-      color:#fff;
-
       margin-bottom:30px;
 
-      position:relative;
-
-      z-index:2;
+      color:#777;
     }
 
 
     .contact-links{
-
-      position:relative;
-
-      z-index:2;
 
       display:flex;
 
@@ -870,8 +809,6 @@
       flex-wrap:wrap;
 
       font-size:14px;
-
-      color:#fff;
     }
 
 
@@ -883,17 +820,16 @@
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        FOOTER
-    ========================================= */
+    ===================================================== */
 
     footer{
 
       padding:30px 7%;
 
-      border-top:
-        1px solid
-        rgba(255,255,255,.5);
+      border-top:1px solid #eee;
 
       display:flex;
 
@@ -905,33 +841,36 @@
 
       font-size:12px;
 
-      color:#fff;
+      color:#999;
 
-      background:#dcaec8;
+      background:#fff;
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        MOBILE
-    ========================================= */
+    ===================================================== */
 
     @media(max-width:800px){
 
       .hero{
-
         min-height:100svh;
       }
 
 
-      .hero::before{
+      nav{
 
-        top:25px;
+        padding:24px 7%;
 
-        left:5%;
+      }
 
-        right:5%;
 
-        bottom:25px;
+      .nav-links{
+
+        gap:18px;
+
+        font-size:13px;
       }
 
 
@@ -1032,6 +971,7 @@
 
         text-align:center;
       }
+
     }
 
 
@@ -1073,6 +1013,7 @@
 
         font-size:20px;
       }
+
     }
 
   </style>
@@ -1082,14 +1023,12 @@
 <body>
 
 
-  <!-- =========================================
+  <!-- =====================================================
        COVER
-  ========================================= -->
+  ===================================================== -->
 
   <section class="hero">
 
-
-    <!-- NAVIGATION -->
 
     <nav>
 
@@ -1116,12 +1055,10 @@
     </nav>
 
 
-    <!-- HERO CONTENT -->
-
     <div class="hero-content">
 
 
-      <!-- THESE ARE HIGHER + WHITE -->
+      <!-- HIGHER + WHITE -->
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
@@ -1139,8 +1076,7 @@
       </h1>
 
 
-      <!-- PHOTO
-           SEPARATE FROM TITLE -->
+      <!-- PHOTO IS BELOW THE TITLE -->
 
       <div class="hero-photo">
 
@@ -1179,11 +1115,11 @@
 
 
 
-  <!-- =========================================
-       EXPLORE
-  ========================================= -->
+  <!-- =====================================================
+       COLORFUL
+    ===================================================== -->
 
-  <section>
+  <section class="color-section">
 
 
     <div class="section-heading">
@@ -1208,7 +1144,6 @@
 
 
     <div class="cards">
-
 
       <a
         href="about.html"
@@ -1247,15 +1182,14 @@
 
 
 
-  <!-- =========================================
-       IMPACT
-  ========================================= -->
+  <!-- =====================================================
+       WHITE
+    ===================================================== -->
 
-  <section class="impact-section">
+  <section class="impact-section white-section">
 
 
     <div class="section-heading">
-
 
       <span>
         Our Impact
@@ -1320,15 +1254,14 @@
 
 
 
-  <!-- =========================================
-       INSTAGRAM
-  ========================================= -->
+  <!-- =====================================================
+       COLORFUL
+    ===================================================== -->
 
-  <section class="instagram-section">
+  <section class="instagram-section color-section">
 
 
     <div class="section-heading">
-
 
       <span>
         Follow Along
@@ -1392,11 +1325,11 @@
 
 
 
-  <!-- =========================================
-       PHOTO LOOP
-  ========================================= -->
+  <!-- =====================================================
+       WHITE PHOTO SECTION
+    ===================================================== -->
 
-  <section class="photo-section">
+  <section class="photo-section white-section">
 
 
     <div class="photo-track">
@@ -1448,11 +1381,11 @@
 
 
 
-  <!-- =========================================
-       CONTACT
-  ========================================= -->
+  <!-- =====================================================
+       COLORFUL
+    ===================================================== -->
 
-  <section class="contact-section">
+  <section class="contact-section color-section">
 
 
     <h2>
@@ -1491,9 +1424,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =====================================================
        FOOTER
-  ========================================= -->
+    ===================================================== -->
 
   <footer>
 
@@ -1510,7 +1443,7 @@
 
 
 
-  <!-- INSTAGRAM SCRIPT -->
+  <!-- INSTAGRAM -->
 
   <script
     async
@@ -1586,9 +1519,7 @@
       }
 
 
-      requestAnimationFrame(
-        update
-      );
+      requestAnimationFrame(update);
 
     }
 
