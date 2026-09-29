@@ -430,7 +430,6 @@
 
     /* =========================
        PHOTO LOOP
-       WITH IMG_5606 BACKGROUND
     ========================= */
 
     .photo-section {
@@ -478,12 +477,20 @@
 
     /* =========================
        CONTACT
+       IMG_5606 BACKGROUND
     ========================= */
 
     .contact-section {
       text-align: center;
 
       padding: 120px 7% !important;
+
+      background-image: url('IMG_5606.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      color: #fff;
     }
 
     .contact-section h2 {
@@ -495,6 +502,8 @@
       font-weight: 600;
 
       margin-bottom: 25px;
+
+      color: #fff;
     }
 
     .contact-section p {
@@ -629,14 +638,11 @@
 
   <section class="hero">
 
-
     <div class="hero-content">
-
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
-
 
       <h1 class="hero-title">
 
@@ -659,7 +665,7 @@
       </div>
 
 
-      <!-- ONLY BUTTON ON COVER -->
+      <!-- ONLY BUTTON -->
 
       <a
         href="about.html"
@@ -667,7 +673,6 @@
       >
         Learn About Us
       </a>
-
 
     </div>
 
@@ -735,7 +740,6 @@
 
   <section class="impact-section white-section">
 
-
     <div class="section-heading">
 
       <span>
@@ -756,7 +760,6 @@
 
 
     <div class="impact-grid">
-
 
       <div class="impact-card">
 
@@ -791,7 +794,6 @@
 
       </div>
 
-
     </div>
 
   </section>
@@ -803,7 +805,6 @@
   ========================= -->
 
   <section class="instagram-section color-section">
-
 
     <div class="section-heading">
 
@@ -825,7 +826,6 @@
 
 
     <div class="instagram-scroll">
-
 
       <div class="instagram-card">
 
@@ -849,7 +849,6 @@
         ></blockquote>
 
       </div>
-
 
     </div>
 
@@ -883,9 +882,10 @@
 
   <!-- =========================
        CONTACT
+       IMG_5606.jpg BACKGROUND
   ========================= -->
 
-  <section class="contact-section color-section">
+  <section class="contact-section">
 
     <h2>
       Let's learn together.
@@ -917,13 +917,7 @@
 
 
 
-  <!-- INSTAGRAM -->
-
-  <script
-    async
-    src="//www.instagram.com/embed.js"
-  ></script>
-
+  <script async src="//www.instagram.com/embed.js"></script>
 
 
   <!-- IMPACT COUNTER -->
@@ -934,39 +928,28 @@
     const LESSONS_DONE = 38;
 
 
-    function animateNumber(
-      element,
-      finalNumber,
-      duration
-    ) {
+    function animateNumber(element, finalNumber, duration) {
 
       const startTime = performance.now();
 
-
       function update(currentTime) {
 
-        const elapsed =
-          currentTime - startTime;
+        const elapsed = currentTime - startTime;
 
-        const progress =
-          Math.min(
-            elapsed / duration,
-            1
-          );
+        const progress = Math.min(
+          elapsed / duration,
+          1
+        );
 
         const easedProgress =
-          1 - Math.pow(
-            1 - progress,
-            3
-          );
+          1 - Math.pow(1 - progress, 3);
 
         const currentNumber =
           Math.floor(
             easedProgress * finalNumber
           );
 
-        element.textContent =
-          currentNumber;
+        element.textContent = currentNumber;
 
 
         if (progress < 1) {
@@ -975,13 +958,11 @@
 
         } else {
 
-          element.textContent =
-            finalNumber;
+          element.textContent = finalNumber;
 
         }
 
       }
-
 
       requestAnimationFrame(update);
 
@@ -989,50 +970,41 @@
 
 
     const peopleElement =
-      document.getElementById(
-        "peopleReached"
-      );
-
+      document.getElementById("peopleReached");
 
     const lessonsElement =
-      document.getElementById(
-        "lessonsDone"
-      );
+      document.getElementById("lessonsDone");
 
 
     let impactObserver =
       new IntersectionObserver(
         function(entries) {
 
-          entries.forEach(
-            function(entry) {
+          entries.forEach(function(entry) {
 
-              if (entry.isIntersecting) {
+            if (entry.isIntersecting) {
 
-                animateNumber(
-                  peopleElement,
-                  PEOPLE_REACHED,
-                  1100
-                );
+              animateNumber(
+                peopleElement,
+                PEOPLE_REACHED,
+                1100
+              );
 
-                animateNumber(
-                  lessonsElement,
-                  LESSONS_DONE,
-                  1100
-                );
-
-              }
+              animateNumber(
+                lessonsElement,
+                LESSONS_DONE,
+                1100
+              );
 
             }
-          );
+
+          });
 
 
           if (
-            entries.some(
-              function(entry) {
-                return entry.isIntersecting;
-              }
-            )
+            entries.some(function(entry) {
+              return entry.isIntersecting;
+            })
           ) {
 
             impactObserver.disconnect();
@@ -1044,9 +1016,7 @@
 
 
     impactObserver.observe(
-      document.querySelector(
-        ".impact-section"
-      )
+      document.querySelector(".impact-section")
     );
 
   </script>
