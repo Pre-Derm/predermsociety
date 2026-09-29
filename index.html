@@ -38,56 +38,15 @@
       text-decoration:none;
     }
 
-    /* NAVIGATION */
 
-    nav{
-      position:absolute;
-      top:0;
-      left:0;
-      z-index:10;
-      width:100%;
-      padding:24px 7%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      background:transparent;
-      color:#fff;
-    }
-
-    .logo{
-      font-size:18px;
-      font-weight:600;
-      letter-spacing:-.5px;
-      color:#fff;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:32px;
-      font-size:14px;
-      color:#fff;
-    }
-
-    .nav-links a{
-      color:#fff;
-    }
-
-    .nav-links a:hover{
-      color:#fff;
-    }
-
-    .nav-button{
-      padding:10px 18px;
-      border:1px solid #fff;
-      border-radius:30px;
-      color:#fff !important;
-    }
-
-    /* HERO */
+    /* =========================
+       COVER / HERO
+    ========================= */
 
     .hero{
-      min-height:78vh;
+      min-height:100vh;
+      width:100%;
+      position:relative;
 
       background-image:url('Untitled514_20260927203155.PNG');
       background-size:cover;
@@ -97,52 +56,123 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      text-align:center;
 
-      padding:120px 7% 80px;
+      overflow:hidden;
+    }
+
+    /* white frame like your cover */
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      top:46px;
+      left:8%;
+      right:8%;
+      bottom:46px;
+      border:2px solid rgba(255,255,255,.9);
+      pointer-events:none;
     }
 
     .hero-content{
-      max-width:850px;
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:1100px;
+      min-height:100vh;
+      padding:100px 10%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
     }
 
-    /* STUDENT-LED • MEDICINE • DERMATOLOGY */
+
+    /* BIG COVER TITLE */
+
+    .hero-title{
+      color:#fff;
+      font-size:clamp(60px,9vw,125px);
+      line-height:.9;
+      letter-spacing:-5px;
+      font-weight:600;
+      margin-top:25px;
+      text-shadow:0 2px 10px rgba(255,255,255,.15);
+    }
+
+    .hero-title span{
+      display:block;
+    }
+
+
+    /* SMALL PINK EYEBROW */
 
     .eyebrow{
+      color:#d97991;
       font-size:12px;
       letter-spacing:2px;
       text-transform:uppercase;
-
-      /* slightly darker pink than the background */
-      color:#d97991;
-
-      margin-bottom:20px;
-    }
-
-    /* MEDICINE STARTS WITH CURIOSITY */
-
-    h1{
-      font-size:clamp(48px,8vw,88px);
-      line-height:.98;
-      letter-spacing:-4px;
+      margin-top:18px;
+      margin-bottom:0;
       font-weight:600;
-      margin-bottom:28px;
-
-      color:#fff;
     }
 
-    /* DESCRIPTION */
 
-    .hero p{
-      max-width:620px;
-      margin:0 auto 35px;
+    /* PHOTO */
 
-      color:#fff;
-
-      font-size:17px;
+    .hero-photo{
+      position:absolute;
+      left:13%;
+      bottom:17%;
+      width:290px;
+      max-width:28vw;
+      background:#fff;
+      padding:12px 12px 55px;
+      transform:rotate(-11deg);
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
     }
 
-    /* SECTIONS */
+    .hero-photo img{
+      display:block;
+      width:100%;
+      height:245px;
+      object-fit:cover;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons{
+      position:absolute;
+      right:21%;
+      bottom:19%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:32px;
+    }
+
+    .cover-btn{
+      font-size:32px;
+      font-weight:600;
+      letter-spacing:-1.5px;
+      color:#fff;
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      transition:.2s ease;
+      text-shadow:2px 3px 0 rgba(220,125,151,.35);
+    }
+
+    .cover-btn:hover{
+      transform:translateY(-3px);
+      color:#fff;
+      text-shadow:3px 4px 0 rgba(220,125,151,.55);
+    }
+
+
+    /* =========================
+       EXPLORE
+    ========================= */
 
     section{
       padding:100px 7%;
@@ -174,6 +204,7 @@
       color:#777;
       font-size:16px;
     }
+
 
     /* CARDS */
 
@@ -225,7 +256,10 @@
       margin-top:25px;
     }
 
-    /* IMPACT */
+
+    /* =========================
+       IMPACT
+    ========================= */
 
     .impact-section{
       background:#f8f8f8;
@@ -260,7 +294,10 @@
       font-size:14px;
     }
 
-    /* INSTAGRAM */
+
+    /* =========================
+       INSTAGRAM
+    ========================= */
 
     .instagram-section{
       overflow:hidden;
@@ -295,7 +332,10 @@
       font-size:14px;
     }
 
-    /* PHOTO LOOP */
+
+    /* =========================
+       PHOTO LOOP
+    ========================= */
 
     .photo-section{
       padding:0;
@@ -326,7 +366,10 @@
       }
     }
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-section{
       text-align:center;
@@ -359,7 +402,10 @@
       text-underline-offset:4px;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer{
       padding:30px 7%;
@@ -372,34 +418,53 @@
       color:#999;
     }
 
-    /* MOBILE */
 
-    @media(max-width:700px){
+    /* =========================
+       MOBILE
+    ========================= */
 
-      nav{
-        padding:20px 5%;
-      }
-
-      .nav-links{
-        gap:15px;
-        font-size:12px;
-      }
-
-      .nav-button{
-        padding:8px 14px;
-      }
+    @media(max-width:800px){
 
       .hero{
-        min-height:75vh;
-        padding:110px 6% 70px;
+        min-height:100svh;
       }
 
-      h1{
-        letter-spacing:-2.5px;
+      .hero::before{
+        top:25px;
+        left:5%;
+        right:5%;
+        bottom:25px;
       }
 
-      .hero p{
-        font-size:15px;
+      .hero-content{
+        padding:80px 8%;
+      }
+
+      .hero-title{
+        font-size:clamp(55px,15vw,90px);
+        letter-spacing:-4px;
+      }
+
+      .hero-photo{
+        left:9%;
+        bottom:13%;
+        width:210px;
+        max-width:42vw;
+        padding:8px 8px 38px;
+      }
+
+      .hero-photo img{
+        height:175px;
+      }
+
+      .hero-buttons{
+        right:9%;
+        bottom:17%;
+        gap:25px;
+      }
+
+      .cover-btn{
+        font-size:24px;
       }
 
       section{
@@ -420,24 +485,46 @@
         text-align:center;
       }
     }
+
+
+    @media(max-width:520px){
+
+      .hero-title{
+        font-size:52px;
+        letter-spacing:-3px;
+        margin-top:10px;
+      }
+
+      .hero-photo{
+        width:175px;
+        bottom:15%;
+        left:6%;
+      }
+
+      .hero-photo img{
+        height:145px;
+      }
+
+      .hero-buttons{
+        right:7%;
+        bottom:17%;
+      }
+
+      .cover-btn{
+        font-size:21px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
 
-  <nav>
-    <a href="index.html" class="logo">Pre-Derm Society</a>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="join.html" class="nav-button">Join Now</a>
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
+  <!-- =========================
+       COVER
+  ========================= -->
 
   <section class="hero">
 
@@ -447,22 +534,51 @@
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
-      <h1>
-        Medicine starts<br>
-        with curiosity.
+      <h1 class="hero-title">
+        <span>Pre-Derm</span>
+        <span>Society</span>
       </h1>
 
-      <p>
-        Pre-Derm Society is a student-led space for exploring dermatology,
-        medicine, skincare, research, and healthcare.
-      </p>
+
+      <!-- PHOTO -->
+
+      <div class="hero-photo">
+        <img
+          src="IMG_5085.jpeg"
+          alt="Pre-Derm Society"
+        >
+      </div>
+
+
+      <!-- COVER BUTTONS -->
+
+      <div class="hero-buttons">
+
+        <a
+          href="about.html"
+          class="cover-btn"
+        >
+          About Us
+        </a>
+
+        <a
+          href="join.html"
+          class="cover-btn"
+        >
+          Join
+        </a>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- EXPLORE -->
+
+  <!-- =========================
+       EXPLORE
+  ========================= -->
 
   <section>
 
@@ -482,15 +598,20 @@
 
     </div>
 
+
     <div class="cards">
 
       <a href="about.html" class="card">
 
         <div>
 
-          <div class="card-number">01</div>
+          <div class="card-number">
+            01
+          </div>
 
-          <h3>About Us</h3>
+          <h3>
+            About Us
+          </h3>
 
           <p>
             Learn about Pre-Derm Society, our mission, and why we created
@@ -510,7 +631,10 @@
   </section>
 
 
-  <!-- IMPACT -->
+
+  <!-- =========================
+       IMPACT
+  ========================= -->
 
   <section class="impact-section">
 
@@ -519,7 +643,9 @@
       style="margin-left:auto;margin-right:auto;"
     >
 
-      <span>Our Impact</span>
+      <span>
+        Our Impact
+      </span>
 
       <h2>
         Small lessons.<br>
@@ -532,6 +658,7 @@
       </p>
 
     </div>
+
 
     <div class="impact-grid">
 
@@ -546,6 +673,7 @@
         </div>
 
       </div>
+
 
       <div class="impact-card">
 
@@ -564,13 +692,18 @@
   </section>
 
 
-  <!-- INSTAGRAM -->
+
+  <!-- =========================
+       INSTAGRAM
+  ========================= -->
 
   <section class="instagram-section">
 
     <div class="section-heading">
 
-      <span>Follow Along</span>
+      <span>
+        Follow Along
+      </span>
 
       <h2>
         See what we're<br>
@@ -583,6 +716,7 @@
       </p>
 
     </div>
+
 
     <div class="instagram-scroll">
 
@@ -597,6 +731,7 @@
 
       </div>
 
+
       <div class="instagram-card">
 
         <blockquote
@@ -610,6 +745,7 @@
 
     </div>
 
+
     <div class="instagram-follow">
 
       <a href="https://www.instagram.com/prederm_society/">
@@ -621,7 +757,10 @@
   </section>
 
 
-  <!-- PHOTO LOOP -->
+
+  <!-- =========================
+       PHOTO LOOP
+  ========================= -->
 
   <section class="photo-section">
 
@@ -642,7 +781,10 @@
   </section>
 
 
-  <!-- CONTACT -->
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section class="contact-section">
 
@@ -673,7 +815,10 @@
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -688,9 +833,11 @@
   </footer>
 
 
-  <!-- INSTAGRAM SCRIPT -->
+
+  <!-- INSTAGRAM -->
 
   <script async src="//www.instagram.com/embed.js"></script>
+
 
 
   <!-- IMPACT COUNTER -->
@@ -707,7 +854,9 @@
       function update(currentTime){
 
         const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+
+        const progress =
+          Math.min(elapsed / duration, 1);
 
         const easedProgress =
           1 - Math.pow(1 - progress, 3);
@@ -718,20 +867,27 @@
         element.textContent = currentNumber;
 
         if(progress < 1){
+
           requestAnimationFrame(update);
+
         }else{
+
           element.textContent = finalNumber;
+
         }
+
       }
 
       requestAnimationFrame(update);
     }
+
 
     const peopleElement =
       document.getElementById("peopleReached");
 
     const lessonsElement =
       document.getElementById("lessonsDone");
+
 
     let impactObserver =
       new IntersectionObserver(function(entries){
@@ -756,6 +912,7 @@
 
         });
 
+
         if(
           entries.some(function(entry){
             return entry.isIntersecting;
@@ -767,6 +924,7 @@
         }
 
       });
+
 
     impactObserver.observe(
       document.querySelector(".impact-section")
