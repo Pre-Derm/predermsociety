@@ -16,1002 +16,709 @@
 
   <style>
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      scroll-behavior:smooth;
-      overflow-x:hidden;
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
-    body{
-      width:100%;
-      max-width:100%;
-      overflow-x:hidden;
-
-      font-family:'DM Sans', sans-serif;
-
-      color:#171717;
-      background:#fff;
-
-      line-height:1.6;
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: #171717;
+      line-height: 1.6;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
 
-    /* =====================================================
-       COVER
-    ===================================================== */
+    /* =========================
+       FIRST COVER
+    ========================= */
 
-    .hero{
+    .hero {
+      min-height: 100vh;
+      width: 100%;
 
-      min-height:100vh;
-      width:100%;
+      position: relative;
 
-      position:relative;
+      /* YOUR PINK MICROSCOPE BACKGROUND */
+      background-image: url('Untitled514_20260927203155.PNG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-      /*
-        THIS IS YOUR UPLOADED IMAGE.
-        No extra overlay.
-        No extra frame.
-      */
-
-      background-image:url('Untitled514_20260927201911.PNG');
-
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-
-      overflow:hidden;
+      overflow: hidden;
     }
 
 
-    /*
-      IMPORTANT:
-      There is NO ::before frame.
-      Your uploaded image already contains the frame.
-    */
-
-
-    /* =====================================================
+    /* =========================
        NAVIGATION
-    ===================================================== */
+    ========================= */
 
-    nav{
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-      position:absolute;
+      width: 100%;
 
-      top:0;
-      left:0;
+      padding: 30px 8%;
 
-      width:100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      padding:30px 9%;
+      z-index: 20;
+    }
 
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+    .logo {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -.5px;
+    }
 
-      z-index:20;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+    }
 
-      color:#fff;
+    .nav-links a {
+      color: #fff;
     }
 
 
-    .logo{
+    /* =========================
+       COVER CONTENT
+    ========================= */
 
-      color:#fff;
+    .hero-content {
+      position: relative;
+      z-index: 5;
 
-      font-size:18px;
+      min-height: 100vh;
+      width: 100%;
 
-      font-weight:600;
+      padding: 125px 8% 70px;
 
-      letter-spacing:-.5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: center;
     }
 
 
-    .nav-links{
+    /* STUDENT-LED LINE */
 
-      display:flex;
+    .eyebrow {
+      color: #fff;
 
-      align-items:center;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
 
-      gap:30px;
+      margin-bottom: 22px;
 
-      color:#fff;
-
-      font-size:14px;
+      position: relative;
+      z-index: 10;
     }
 
 
-    .nav-links a{
-      color:#fff;
+    /* =========================
+       PRE-DERM SOCIETY
+    ========================= */
+
+    .hero-title {
+      color: #fff;
+
+      font-size: clamp(58px, 9vw, 125px);
+
+      line-height: .9;
+      letter-spacing: -5px;
+      font-weight: 600;
+
+      position: relative;
+      z-index: 10;
+
+      margin: 0;
+    }
+
+    .hero-title span {
+      display: block;
     }
 
 
-    /* =====================================================
-       HERO CONTENT
-    ===================================================== */
-
-    .hero-content{
-
-      position:relative;
-
-      z-index:5;
-
-      min-height:100vh;
-      width:100%;
-
-      padding:
-        105px
-        10%
-        70px;
-
-      display:flex;
-
-      flex-direction:column;
-
-      align-items:center;
-
-      text-align:center;
-    }
-
-
-    /* =====================================================
-       STUDENT-LED LINE
-    ===================================================== */
-
-    .eyebrow{
-
-      color:#fff;
-
-      font-size:12px;
-
-      letter-spacing:2px;
-
-      text-transform:uppercase;
-
-      font-weight:600;
-
-      /*
-        HIGHER UP
-      */
-
-      margin-top:0;
-
-      margin-bottom:22px;
-
-      text-shadow:
-        0 1px 6px rgba(150,80,110,.15);
-    }
-
-
-    /* =====================================================
-       TITLE
-    ===================================================== */
-
-    .hero-title{
-
-      color:#fff;
-
-      font-size:
-        clamp(
-          58px,
-          9vw,
-          125px
-        );
-
-      line-height:.9;
-
-      letter-spacing:-5px;
-
-      font-weight:600;
-
-      margin:0;
-
-      position:relative;
-
-      z-index:7;
-
-      text-shadow:
-        2px 3px 0 rgba(217,121,145,.25);
-    }
-
-
-    .hero-title span{
-      display:block;
-    }
-
-
-    /* =====================================================
+    /* =========================
        PHOTO
-       BELOW THE TITLE
-    ===================================================== */
+       NOT OVER THE WORDS
+    ========================= */
 
-    .hero-photo{
+    .hero-photo {
+      position: absolute;
 
-      position:absolute;
+      left: 14%;
+      bottom: 12%;
 
-      left:15%;
+      width: 260px;
 
-      bottom:13%;
+      background: #fff;
 
-      width:275px;
+      padding: 10px 10px 42px;
 
-      background:#fff;
+      transform: rotate(-8deg);
 
-      padding:
-        10px
-        10px
-        45px;
+      z-index: 4;
 
-      transform:rotate(-9deg);
+      box-shadow: 0 8px 25px rgba(80, 50, 70, .12);
+    }
 
-      box-shadow:
-        0 10px 30px rgba(100,70,90,.15);
+    .hero-photo img {
+      display: block;
 
-      z-index:4;
+      width: 100%;
+      height: 215px;
+
+      object-fit: cover;
     }
 
 
-    .hero-photo img{
+    /* =========================
+       ABOUT / JOIN
+    ========================= */
 
-      display:block;
+    .hero-buttons {
+      position: absolute;
 
-      width:100%;
+      right: 18%;
+      bottom: 15%;
 
-      height:225px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      object-fit:cover;
+      gap: 28px;
+
+      z-index: 10;
+    }
+
+    .cover-btn {
+      color: #fff;
+
+      background: transparent;
+      border: none;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 30px;
+      font-weight: 600;
+
+      letter-spacing: -1.5px;
+
+      cursor: pointer;
+
+      transition: transform .2s ease;
+    }
+
+    .cover-btn:hover {
+      transform: translateY(-3px);
     }
 
 
-    /* =====================================================
-       ABOUT + JOIN
-    ===================================================== */
+    /* =========================
+       OTHER SECTIONS
+    ========================= */
 
-    .hero-buttons{
-
-      position:absolute;
-
-      right:19%;
-
-      bottom:16%;
-
-      display:flex;
-
-      flex-direction:column;
-
-      align-items:center;
-
-      gap:30px;
-
-      z-index:10;
+    section:not(.hero) {
+      position: relative;
+      padding: 100px 7%;
+      overflow: hidden;
     }
 
 
-    .cover-btn{
+    /* PINK IMAGE BACKGROUND */
 
-      color:#fff;
+    .color-section {
+      background-image: url('Untitled514_20260927203155.PNG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-      background:transparent;
-
-      border:none;
-
-      font-family:'DM Sans', sans-serif;
-
-      font-size:30px;
-
-      font-weight:600;
-
-      letter-spacing:-1.5px;
-
-      cursor:pointer;
-
-      transition:.2s ease;
-
-      text-shadow:
-        3px 3px 0 rgba(217,121,145,.35);
+      color: #fff;
     }
 
 
-    .cover-btn:hover{
+    /* WHITE SECTION */
 
-      transform:translateY(-3px);
-
-      text-shadow:
-        4px 4px 0 rgba(217,121,145,.5);
+    .white-section {
+      background: #fff;
+      color: #171717;
     }
 
 
+    /* =========================
+       SECTION HEADINGS
+    ========================= */
 
-    /* =====================================================
-       ALTERNATING SECTIONS
-    ===================================================== */
+    .section-heading {
+      position: relative;
+      z-index: 2;
 
-    section:not(.hero){
+      max-width: 650px;
 
-      position:relative;
+      margin-bottom: 55px;
+    }
 
-      padding:100px 7%;
+    .section-heading span {
+      display: block;
 
-      overflow:hidden;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+
+      font-weight: 600;
+    }
+
+    .color-section .section-heading span {
+      color: #fff;
+    }
+
+    .white-section .section-heading span {
+      color: #999;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(36px, 5vw, 58px);
+
+      line-height: 1.05;
+      letter-spacing: -2px;
+
+      font-weight: 600;
+
+      margin-bottom: 20px;
+    }
+
+    .color-section .section-heading h2 {
+      color: #fff;
+    }
+
+    .white-section .section-heading h2 {
+      color: #171717;
+    }
+
+    .section-heading p {
+      font-size: 16px;
+    }
+
+    .color-section .section-heading p {
+      color: #fff;
+    }
+
+    .white-section .section-heading p {
+      color: #777;
     }
 
 
-    /*
-      COLORFUL SECTION
-      Uses the SAME background image.
-    */
-
-    .color-section{
-
-      background-image:
-        url('Untitled514_20260927201911.PNG');
-
-      background-size:cover;
-
-      background-position:center;
-
-      background-repeat:no-repeat;
-
-      color:#fff;
-    }
-
-
-    /*
-      WHITE SECTION
-    */
-
-    .white-section{
-
-      background:#fff;
-
-      color:#171717;
-    }
-
-
-    /* =====================================================
-       SECTION CONTENT
-    ===================================================== */
-
-    .section-heading{
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:650px;
-
-      margin-bottom:55px;
-    }
-
-
-    .section-heading span{
-
-      display:block;
-
-      font-size:12px;
-
-      letter-spacing:2px;
-
-      text-transform:uppercase;
-
-      margin-bottom:15px;
-
-      font-weight:600;
-    }
-
-
-    .color-section .section-heading span{
-      color:#fff;
-    }
-
-
-    .white-section .section-heading span{
-      color:#999;
-    }
-
-
-    .section-heading h2{
-
-      font-size:
-        clamp(
-          36px,
-          5vw,
-          58px
-        );
-
-      line-height:1.05;
-
-      letter-spacing:-2px;
-
-      font-weight:600;
-
-      margin-bottom:20px;
-    }
-
-
-    .color-section .section-heading h2{
-      color:#fff;
-    }
-
-
-    .white-section .section-heading h2{
-      color:#171717;
-    }
-
-
-    .section-heading p{
-
-      font-size:16px;
-    }
-
-
-    .color-section .section-heading p{
-      color:#fff;
-    }
-
-
-    .white-section .section-heading p{
-      color:#777;
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        ABOUT CARD
-    ===================================================== */
+    ========================= */
 
-    .cards{
+    .cards {
+      position: relative;
+      z-index: 2;
 
-      position:relative;
+      display: grid;
+      grid-template-columns: 1fr;
 
-      z-index:2;
+      gap: 18px;
+    }
 
-      display:grid;
+    .card {
+      border: 1px solid #e7e7e7;
+      border-radius: 24px;
 
-      grid-template-columns:1fr;
+      padding: 35px;
 
-      gap:18px;
+      min-height: 220px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: #fff;
+      color: #171717;
+
+      transition: .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-number {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .card h3 {
+      font-size: 27px;
+      letter-spacing: -1px;
+      font-weight: 500;
+
+      margin-top: 30px;
+    }
+
+    .card p {
+      color: #777;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .card-link {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+
+      margin-top: 25px;
     }
 
 
-    .card{
-
-      border:1px solid #e7e7e7;
-
-      border-radius:24px;
-
-      padding:35px;
-
-      min-height:220px;
-
-      display:flex;
-
-      flex-direction:column;
-
-      justify-content:space-between;
-
-      transition:.25s ease;
-
-      background:#fff;
-
-      color:#171717;
-    }
-
-
-    .card:hover{
-
-      transform:translateY(-4px);
-
-      border-color:#ccc;
-    }
-
-
-    .card-number{
-
-      font-size:12px;
-
-      color:#999;
-    }
-
-
-    .card h3{
-
-      font-size:27px;
-
-      letter-spacing:-1px;
-
-      font-weight:500;
-
-      margin-top:30px;
-    }
-
-
-    .card p{
-
-      color:#777;
-
-      font-size:14px;
-
-      margin-top:10px;
-    }
-
-
-    .card-link{
-
-      font-size:12px;
-
-      letter-spacing:1.5px;
-
-      text-transform:uppercase;
-
-      margin-top:25px;
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        IMPACT
-    ===================================================== */
+    ========================= */
 
-    .impact-section{
+    .impact-section {
+      text-align: center;
+    }
 
-      text-align:center;
+    .impact-section .section-heading {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .impact-grid {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .impact-card {
+      background: #fff;
+
+      border: 1px solid #e8e8e8;
+      border-radius: 24px;
+
+      padding: 45px 25px;
+
+      color: #171717;
+    }
+
+    .impact-number {
+      font-size: 52px;
+
+      line-height: 1;
+      letter-spacing: -3px;
+
+      font-weight: 600;
+
+      margin-bottom: 12px;
+    }
+
+    .impact-label {
+      color: #777;
+      font-size: 14px;
     }
 
 
-    .impact-section .section-heading{
-
-      margin-left:auto;
-
-      margin-right:auto;
-    }
-
-
-    .impact-grid{
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:850px;
-
-      margin:0 auto;
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(2,1fr);
-
-      gap:18px;
-    }
-
-
-    .impact-card{
-
-      background:#fff;
-
-      border:1px solid #e8e8e8;
-
-      border-radius:24px;
-
-      padding:45px 25px;
-
-      color:#171717;
-    }
-
-
-    .impact-number{
-
-      font-size:52px;
-
-      line-height:1;
-
-      letter-spacing:-3px;
-
-      font-weight:600;
-
-      margin-bottom:12px;
-    }
-
-
-    .impact-label{
-
-      color:#777;
-
-      font-size:14px;
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        INSTAGRAM
-    ===================================================== */
+    ========================= */
 
-    .instagram-section{
+    .instagram-section {
+      overflow: hidden;
+    }
 
-      overflow:hidden;
+    .instagram-scroll {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      gap: 20px;
+
+      overflow-x: hidden;
+
+      width: 100%;
+    }
+
+    .instagram-card {
+      min-width: 320px;
+      width: 320px;
+
+      border: 1px solid #e8e8e8;
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      background: #fff;
+    }
+
+    .instagram-follow {
+      position: relative;
+      z-index: 2;
+
+      margin-top: 35px;
+
+      text-align: center;
+    }
+
+    .instagram-follow a {
+      display: inline-block;
+
+      padding: 13px 22px;
+
+      border: 1px solid #171717;
+      border-radius: 30px;
+
+      font-size: 14px;
+
+      color: #171717;
+      background: #fff;
     }
 
 
-    .instagram-scroll{
-
-      position:relative;
-
-      z-index:2;
-
-      display:flex;
-
-      gap:20px;
-
-      overflow-x:hidden;
-
-      width:100%;
-    }
-
-
-    .instagram-card{
-
-      min-width:320px;
-
-      width:320px;
-
-      border:1px solid #e8e8e8;
-
-      border-radius:20px;
-
-      overflow:hidden;
-
-      background:#fff;
-    }
-
-
-    .instagram-follow{
-
-      position:relative;
-
-      z-index:2;
-
-      margin-top:35px;
-
-      text-align:center;
-    }
-
-
-    .instagram-follow a{
-
-      display:inline-block;
-
-      padding:13px 22px;
-
-      border:1px solid #171717;
-
-      border-radius:30px;
-
-      font-size:14px;
-
-      color:#171717;
-
-      background:#fff;
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        PHOTO LOOP
-    ===================================================== */
+    ========================= */
 
-    .photo-section{
+    .photo-section {
+      padding: 0 !important;
 
-      padding:0 !important;
+      overflow: hidden;
 
-      overflow:hidden;
-
-      width:100%;
+      width: 100%;
     }
 
+    .photo-track {
+      display: flex;
 
-    .photo-track{
+      width: max-content;
 
-      display:flex;
-
-      width:max-content;
-
-      animation:
-        scrollPhotos
-        32s
-        linear
-        infinite;
+      animation: scrollPhotos 32s linear infinite;
     }
 
+    .photo-track img {
+      width: 280px;
+      height: 350px;
 
-    .photo-track img{
+      object-fit: cover;
 
-      width:280px;
-
-      height:350px;
-
-      object-fit:cover;
-
-      display:block;
+      display: block;
     }
 
+    @keyframes scrollPhotos {
 
-    @keyframes scrollPhotos{
-
-      from{
-        transform:translateX(0);
+      from {
+        transform: translateX(0);
       }
 
-      to{
-        transform:translateX(-1120px);
+      to {
+        transform: translateX(-1120px);
       }
+
     }
 
 
-
-    /* =====================================================
+    /* =========================
        CONTACT
-    ===================================================== */
+    ========================= */
 
-    .contact-section{
+    .contact-section {
+      text-align: center;
 
-      text-align:center;
+      padding: 120px 7% !important;
+    }
 
-      padding:120px 7% !important;
+    .contact-section h2 {
+      font-size: clamp(42px, 6vw, 70px);
+
+      line-height: 1;
+      letter-spacing: -3px;
+
+      font-weight: 600;
+
+      margin-bottom: 25px;
+    }
+
+    .contact-section p {
+      margin-bottom: 30px;
+      color: #777;
+    }
+
+    .contact-links {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 25px;
+
+      flex-wrap: wrap;
+
+      font-size: 14px;
+    }
+
+    .contact-links a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
 
-    .contact-section h2{
-
-      font-size:
-        clamp(
-          42px,
-          6vw,
-          70px
-        );
-
-      line-height:1;
-
-      letter-spacing:-3px;
-
-      font-weight:600;
-
-      margin-bottom:25px;
-    }
-
-
-    .contact-section p{
-
-      margin-bottom:30px;
-
-      color:#777;
-    }
-
-
-    .contact-links{
-
-      display:flex;
-
-      justify-content:center;
-
-      gap:25px;
-
-      flex-wrap:wrap;
-
-      font-size:14px;
-    }
-
-
-    .contact-links a{
-
-      text-decoration:underline;
-
-      text-underline-offset:4px;
-    }
-
-
-
-    /* =====================================================
+    /* =========================
        FOOTER
-    ===================================================== */
+    ========================= */
 
-    footer{
+    footer {
+      padding: 30px 7%;
 
-      padding:30px 7%;
+      border-top: 1px solid #eee;
 
-      border-top:1px solid #eee;
+      display: flex;
 
-      display:flex;
+      justify-content: space-between;
+      align-items: center;
 
-      justify-content:space-between;
+      gap: 20px;
 
-      align-items:center;
+      font-size: 12px;
 
-      gap:20px;
+      color: #999;
 
-      font-size:12px;
-
-      color:#999;
-
-      background:#fff;
+      background: #fff;
     }
 
 
-
-    /* =====================================================
+    /* =========================
        MOBILE
-    ===================================================== */
+    ========================= */
 
-    @media(max-width:800px){
+    @media (max-width: 800px) {
 
-      .hero{
-        min-height:100svh;
+      nav {
+        padding: 24px 7%;
       }
 
-
-      nav{
-
-        padding:24px 7%;
-
+      .nav-links {
+        gap: 18px;
+        font-size: 13px;
       }
 
-
-      .nav-links{
-
-        gap:18px;
-
-        font-size:13px;
+      .hero-content {
+        padding: 105px 7% 60px;
       }
 
-
-      .hero-content{
-
-        padding:
-          100px
-          7%
-          60px;
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
       }
 
-
-      .eyebrow{
-
-        font-size:10px;
-
-        letter-spacing:1.5px;
-
-        margin-bottom:18px;
+      .hero-title {
+        font-size: clamp(55px, 15vw, 90px);
+        letter-spacing: -4px;
       }
 
+      .hero-photo {
+        left: 8%;
+        bottom: 12%;
 
-      .hero-title{
+        width: 200px;
+        max-width: 40vw;
 
-        font-size:
-          clamp(
-            55px,
-            15vw,
-            90px
-          );
-
-        letter-spacing:-4px;
+        padding: 8px 8px 35px;
       }
 
-
-      .hero-photo{
-
-        left:8%;
-
-        bottom:12%;
-
-        width:200px;
-
-        max-width:40vw;
-
-        padding:
-          8px
-          8px
-          35px;
+      .hero-photo img {
+        height: 165px;
       }
 
+      .hero-buttons {
+        right: 8%;
+        bottom: 15%;
 
-      .hero-photo img{
-
-        height:165px;
+        gap: 24px;
       }
 
-
-      .hero-buttons{
-
-        right:8%;
-
-        bottom:15%;
-
-        gap:24px;
+      .cover-btn {
+        font-size: 23px;
       }
 
-
-      .cover-btn{
-
-        font-size:23px;
+      section:not(.hero) {
+        padding: 75px 6%;
       }
 
-
-      section:not(.hero){
-
-        padding:75px 6%;
+      .impact-grid {
+        grid-template-columns: 1fr;
       }
 
-
-      .impact-grid{
-
-        grid-template-columns:1fr;
+      .instagram-card {
+        min-width: 280px;
+        width: 280px;
       }
 
-
-      .instagram-card{
-
-        min-width:280px;
-
-        width:280px;
+      footer {
+        flex-direction: column;
+        text-align: center;
       }
-
-
-      footer{
-
-        flex-direction:column;
-
-        text-align:center;
-      }
-
     }
 
 
-    @media(max-width:520px){
+    @media (max-width: 520px) {
 
-      .hero-title{
-
-        font-size:52px;
-
-        letter-spacing:-3px;
+      .hero-title {
+        font-size: 52px;
+        letter-spacing: -3px;
       }
 
-
-      .hero-photo{
-
-        width:160px;
-
-        left:5%;
-
-        bottom:13%;
+      .hero-photo {
+        width: 160px;
+        left: 5%;
+        bottom: 13%;
       }
 
-
-      .hero-photo img{
-
-        height:135px;
+      .hero-photo img {
+        height: 135px;
       }
 
-
-      .hero-buttons{
-
-        right:6%;
-
-        bottom:16%;
+      .hero-buttons {
+        right: 6%;
+        bottom: 16%;
       }
 
-
-      .cover-btn{
-
-        font-size:20px;
+      .cover-btn {
+        font-size: 20px;
       }
 
     }
@@ -1023,9 +730,9 @@
 <body>
 
 
-  <!-- =====================================================
-       COVER
-  ===================================================== -->
+  <!-- =========================
+       FIRST COVER
+  ========================= -->
 
   <section class="hero">
 
@@ -1058,14 +765,14 @@
     <div class="hero-content">
 
 
-      <!-- HIGHER + WHITE -->
+      <!-- WHITE + HIGHER -->
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
 
-      <!-- TITLE -->
+      <!-- WHITE TITLE -->
 
       <h1 class="hero-title">
 
@@ -1076,7 +783,7 @@
       </h1>
 
 
-      <!-- PHOTO IS BELOW THE TITLE -->
+      <!-- PHOTO DOES NOT COVER TITLE -->
 
       <div class="hero-photo">
 
@@ -1109,18 +816,18 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
 
-  <!-- =====================================================
-       COLORFUL
-    ===================================================== -->
+  <!-- =========================
+       COLOR SECTION
+  ========================= -->
 
   <section class="color-section">
-
 
     <div class="section-heading">
 
@@ -1128,12 +835,10 @@
         Explore
       </span>
 
-
       <h2>
         Learn. Research.<br>
         Discover medicine.
       </h2>
-
 
       <p>
         Explore student-friendly lessons and real opportunities for students
@@ -1156,11 +861,9 @@
             01
           </div>
 
-
           <h3>
             About Us
           </h3>
-
 
           <p>
             Learn about Pre-Derm Society, our mission, and why we created
@@ -1182,9 +885,9 @@
 
 
 
-  <!-- =====================================================
-       WHITE
-    ===================================================== -->
+  <!-- =========================
+       WHITE SECTION
+  ========================= -->
 
   <section class="impact-section white-section">
 
@@ -1195,12 +898,10 @@
         Our Impact
       </span>
 
-
       <h2>
         Small lessons.<br>
         Growing impact.
       </h2>
-
 
       <p>
         Every completed lesson contributes to our growing student education
@@ -1223,7 +924,6 @@
 
         </div>
 
-
         <div class="impact-label">
           People Reached
         </div>
@@ -1241,12 +941,12 @@
 
         </div>
 
-
         <div class="impact-label">
           Lessons Taught
         </div>
 
       </div>
+
 
     </div>
 
@@ -1254,9 +954,9 @@
 
 
 
-  <!-- =====================================================
-       COLORFUL
-    ===================================================== -->
+  <!-- =========================
+       COLOR SECTION
+  ========================= -->
 
   <section class="instagram-section color-section">
 
@@ -1267,12 +967,10 @@
         Follow Along
       </span>
 
-
       <h2>
         See what we're<br>
         learning.
       </h2>
-
 
       <p>
         Follow Pre-Derm Society for educational posts, dermatology facts,
@@ -1291,7 +989,7 @@
           class="instagram-media"
           data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
           data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0; max-width:540px; min-width:280px; width:100%;"
+          style="background:#FFF;border:0;margin:0;max-width:540px;min-width:280px;width:100%;"
         ></blockquote>
 
       </div>
@@ -1303,19 +1001,18 @@
           class="instagram-media"
           data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
           data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0; max-width:540px; min-width:280px; width:100%;"
+          style="background:#FFF;border:0;margin:0;max-width:540px;min-width:280px;width:100%;"
         ></blockquote>
 
       </div>
+
 
     </div>
 
 
     <div class="instagram-follow">
 
-      <a
-        href="https://www.instagram.com/prederm_society/"
-      >
+      <a href="https://www.instagram.com/prederm_society/">
         Follow @prederm_society
       </a>
 
@@ -1325,55 +1022,23 @@
 
 
 
-  <!-- =====================================================
+  <!-- =========================
        WHITE PHOTO SECTION
-    ===================================================== -->
+  ========================= -->
 
   <section class="photo-section white-section">
 
-
     <div class="photo-track">
 
-      <img
-        src="IMG_5085.jpeg"
-        alt="Pre-Derm Society"
-      >
+      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
-      <img
-        src="IMG_8766.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-      <img
-        src="IMG_5125.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-      <img
-        src="IMG_5126.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-
-      <img
-        src="IMG_5085.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-      <img
-        src="IMG_8766.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-      <img
-        src="IMG_5125.jpeg"
-        alt="Pre-Derm Society"
-      >
-
-      <img
-        src="IMG_5126.jpeg"
-        alt="Pre-Derm Society"
-      >
+      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
+      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
 
     </div>
 
@@ -1381,9 +1046,9 @@
 
 
 
-  <!-- =====================================================
-       COLORFUL
-    ===================================================== -->
+  <!-- =========================
+       COLOR SECTION
+  ========================= -->
 
   <section class="contact-section color-section">
 
@@ -1400,19 +1065,13 @@
 
     <div class="contact-links">
 
-      <a
-        href="https://www.instagram.com/prederm_society/"
-      >
+      <a href="https://www.instagram.com/prederm_society/">
         Instagram
       </a>
 
-
-      <a
-        href="https://www.tiktok.com/@prederm_society"
-      >
+      <a href="https://www.tiktok.com/@prederm_society">
         TikTok
       </a>
-
 
       <a href="join.html">
         Join Us
@@ -1424,16 +1083,15 @@
 
 
 
-  <!-- =====================================================
+  <!-- =========================
        FOOTER
-    ===================================================== -->
+  ========================= -->
 
   <footer>
 
     <span>
       © Pre-Derm Society
     </span>
-
 
     <span>
       Student-led • Medicine • Dermatology
@@ -1457,7 +1115,6 @@
   <script>
 
     const PEOPLE_REACHED = 100;
-
     const LESSONS_DONE = 38;
 
 
@@ -1465,17 +1122,15 @@
       element,
       finalNumber,
       duration
-    ){
+    ) {
 
-      const startTime =
-        performance.now();
+      const startTime = performance.now();
 
 
-      function update(currentTime){
+      function update(currentTime) {
 
         const elapsed =
           currentTime - startTime;
-
 
         const progress =
           Math.min(
@@ -1483,33 +1138,26 @@
             1
           );
 
-
         const easedProgress =
-          1 -
-          Math.pow(
+          1 - Math.pow(
             1 - progress,
             3
           );
 
-
         const currentNumber =
           Math.floor(
-            easedProgress *
-            finalNumber
+            easedProgress * finalNumber
           );
-
 
         element.textContent =
           currentNumber;
 
 
-        if(progress < 1){
+        if (progress < 1) {
 
-          requestAnimationFrame(
-            update
-          );
+          requestAnimationFrame(update);
 
-        }else{
+        } else {
 
           element.textContent =
             finalNumber;
@@ -1538,21 +1186,18 @@
 
     let impactObserver =
       new IntersectionObserver(
-        function(entries){
+        function(entries) {
 
           entries.forEach(
-            function(entry){
+            function(entry) {
 
-              if(
-                entry.isIntersecting
-              ){
+              if (entry.isIntersecting) {
 
                 animateNumber(
                   peopleElement,
                   PEOPLE_REACHED,
                   1100
                 );
-
 
                 animateNumber(
                   lessonsElement,
@@ -1566,15 +1211,13 @@
           );
 
 
-          if(
+          if (
             entries.some(
-              function(entry){
-
+              function(entry) {
                 return entry.isIntersecting;
-
               }
             )
-          ){
+          ) {
 
             impactObserver.disconnect();
 
