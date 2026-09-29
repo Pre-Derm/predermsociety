@@ -21,10 +21,14 @@
 html{
   scroll-behavior:smooth;
   overflow-x:hidden;
+  overscroll-behavior-x:none;
 }
 
 body{
   overflow-x:hidden;
+  overscroll-behavior-x:none;
+  width:100%;
+  max-width:100%;
   font-family:'DM Sans',sans-serif;
   background:#fff;
   color:#171717;
@@ -207,7 +211,7 @@ section{
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
@@ -344,7 +348,7 @@ section{
   display:flex;
   gap:20px;
 
-  overflow-x:auto;
+  overflow-x:hidden;
 
   scroll-snap-type:x mandatory;
 
@@ -628,36 +632,6 @@ footer{
 
 
   <div class="cards">
-
-
-    <a href="lessons.html" class="card">
-
-      <div>
-
-        <div class="emoji">
-          🔎
-        </div>
-
-        <div class="card-number">
-          01
-        </div>
-
-        <h3>
-          Lessons
-        </h3>
-
-        <p>
-          Explore Skin 101 and other student-friendly
-          dermatology and medicine lessons.
-        </p>
-
-      </div>
-
-      <div class="card-link">
-        EXPLORE LESSONS →
-      </div>
-
-    </a>
 
 
     <a href="about.html" class="card">
@@ -1014,6 +988,12 @@ let impactObserver =
         }
 
       });
+
+      if(entries.some(function(entry){
+        return entry.isIntersecting;
+      })){
+        impactObserver.disconnect();
+      }
 
     }
   );
