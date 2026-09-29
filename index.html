@@ -41,18 +41,24 @@
     /* NAVIGATION */
 
     nav{
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:10;
       width:100%;
       padding:24px 7%;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      background:#fff;
+      background:transparent;
+      color:#fff;
     }
 
     .logo{
       font-size:18px;
       font-weight:600;
       letter-spacing:-.5px;
+      color:#fff;
     }
 
     .nav-links{
@@ -60,33 +66,39 @@
       align-items:center;
       gap:32px;
       font-size:14px;
-      color:#555;
+      color:#fff;
+    }
+
+    .nav-links a{
+      color:#fff;
     }
 
     .nav-links a:hover{
-      color:#111;
+      color:#fff;
     }
 
     .nav-button{
       padding:10px 18px;
-      border:1px solid #171717;
+      border:1px solid #fff;
       border-radius:30px;
-      color:#171717 !important;
+      color:#fff !important;
     }
 
     /* HERO */
 
     .hero{
       min-height:78vh;
+
       background-image:url('Untitled514_20260927203155.PNG');
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
+
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:80px 7%;
+      padding:120px 7% 80px;
     }
 
     .hero-content{
@@ -404,7 +416,7 @@
 
       .hero{
         min-height:75vh;
-        padding:70px 6%;
+        padding:110px 6% 70px;
       }
 
       h1{
@@ -471,6 +483,7 @@
       </p>
 
       <div class="hero-buttons">
+
         <a
           href="https://pre-derm.github.io/predermsociety/lessons.html"
           class="primary-btn"
@@ -484,6 +497,7 @@
         >
           Skin 101
         </a>
+
       </div>
 
     </div>
@@ -496,6 +510,7 @@
   <section>
 
     <div class="section-heading">
+
       <span>Explore</span>
 
       <h2>
@@ -507,6 +522,7 @@
         Explore student-friendly lessons and real opportunities for students
         interested in science, healthcare, and medicine.
       </p>
+
     </div>
 
     <div class="cards">
@@ -514,6 +530,7 @@
       <a href="about.html" class="card">
 
         <div>
+
           <div class="card-number">01</div>
 
           <h3>About Us</h3>
@@ -522,6 +539,7 @@
             Learn about Pre-Derm Society, our mission, and why we created
             a student-led space for dermatology and medicine.
           </p>
+
         </div>
 
         <div class="card-link">
@@ -572,7 +590,6 @@
 
       </div>
 
-
       <div class="impact-card">
 
         <div class="impact-number">
@@ -610,7 +627,6 @@
 
     </div>
 
-
     <div class="instagram-scroll">
 
       <div class="instagram-card">
@@ -624,7 +640,6 @@
 
       </div>
 
-
       <div class="instagram-card">
 
         <blockquote
@@ -637,7 +652,6 @@
       </div>
 
     </div>
-
 
     <div class="instagram-follow">
 
@@ -738,7 +752,8 @@
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        const easedProgress =
+          1 - Math.pow(1 - progress, 3);
 
         const currentNumber =
           Math.floor(easedProgress * finalNumber);
@@ -755,13 +770,11 @@
       requestAnimationFrame(update);
     }
 
-
     const peopleElement =
       document.getElementById("peopleReached");
 
     const lessonsElement =
       document.getElementById("lessonsDone");
-
 
     let impactObserver =
       new IntersectionObserver(function(entries){
@@ -786,7 +799,6 @@
 
         });
 
-
         if(
           entries.some(function(entry){
             return entry.isIntersecting;
@@ -798,7 +810,6 @@
         }
 
       });
-
 
     impactObserver.observe(
       document.querySelector(".impact-section")
