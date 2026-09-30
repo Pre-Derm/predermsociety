@@ -8,11 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -22,166 +18,86 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html,
+    body {
       overflow-x: hidden;
     }
 
     body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      font-family: 'DM Sans', sans-serif;
+      font-family: "DM Sans", sans-serif;
+      color: #222;
       background: #fff;
-      color: #171717;
-      line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    /* =========================
-       FIRST COVER
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
-      width: 100%;
 
-      position: relative;
-
-      background-image: url('Untitled514_20260927203155.PNG');
+      background-image: url("Untitled514_20260927203155.PNG");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
-      overflow: hidden;
-    }
-
-
-    /* =========================
-       COVER CONTENT
-    ========================= */
-
-    .hero-content {
       position: relative;
-      z-index: 5;
-
-      min-height: 100vh;
-      width: 100%;
-
-      padding: 125px 8% 70px;
 
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
 
       text-align: center;
+
+      padding: 80px 7%;
     }
 
-
-    /* =========================
-       STUDENT-LED LINE
-    ========================= */
+    .hero-content {
+      max-width: 1000px;
+      position: relative;
+      z-index: 5;
+    }
 
     .eyebrow {
       color: #fff;
 
       font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
       font-weight: 600;
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
 
       margin-bottom: 22px;
-
-      position: relative;
-      z-index: 10;
     }
 
-
-    /* =========================
-       PRE-DERM SOCIETY
-    ========================= */
-
-    .hero-title {
+    .hero h1 {
       color: #fff;
 
-      font-size: clamp(58px, 9vw, 125px);
+      font-size: clamp(70px, 12vw, 170px);
+      line-height: .84;
 
-      line-height: .9;
-      letter-spacing: -5px;
       font-weight: 600;
-
-      position: relative;
-      z-index: 10;
-
-      margin: 0;
+      letter-spacing: -6px;
     }
 
-    .hero-title span {
+    .hero h1 span {
       display: block;
     }
-
-
-    /* =========================
-       PHOTO
-    ========================= */
-
-    .hero-photo {
-      position: absolute;
-
-      left: 14%;
-      bottom: 12%;
-
-      width: 260px;
-
-      background: #fff;
-
-      padding: 10px 10px 42px;
-
-      transform: rotate(-8deg);
-
-      z-index: 4;
-
-      box-shadow: 0 8px 25px rgba(80, 50, 70, .12);
-    }
-
-    .hero-photo img {
-      display: block;
-
-      width: 100%;
-      height: 215px;
-
-      object-fit: cover;
-    }
-
-
-    /* =========================
-       ONLY BUTTON
-    ========================= */
 
     .hero-button {
-      position: absolute;
+      display: inline-block;
 
-      right: 17%;
-      bottom: 16%;
+      margin-top: 45px;
 
-      z-index: 10;
+      padding: 15px 27px;
 
-      color: #fff;
+      background: #fff;
+      color: #222;
 
-      font-size: 30px;
+      text-decoration: none;
+
+      font-size: 14px;
       font-weight: 600;
 
-      letter-spacing: -1.5px;
-
-      background: transparent;
-      border: none;
-
-      cursor: pointer;
+      border-radius: 100px;
 
       transition: transform .2s ease;
     }
@@ -190,276 +106,215 @@
       transform: translateY(-3px);
     }
 
+    /* COVER PHOTO */
 
-    /* =========================
-       OTHER SECTIONS
-    ========================= */
+    .cover-photo {
+      position: absolute;
 
-    section:not(.hero) {
-      position: relative;
-      padding: 100px 7%;
-      overflow: hidden;
+      left: 8%;
+      bottom: 7%;
+
+      width: 180px;
+
+      z-index: 4;
+
+      transform: rotate(-8deg);
+
+      border: 8px solid #fff;
+
+      box-shadow: 0 18px 40px rgba(0,0,0,.15);
+
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
     }
 
-
-    /* =========================
-       PINK SECTIONS
-    ========================= */
+    /* PINK SECTION */
 
     .color-section {
-      background-image: url('Untitled514_20260927203155.PNG');
+      background-image: url("Untitled514_20260927203155.PNG");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
       color: #fff;
-    }
 
+      padding: 120px 7%;
 
-    /* =========================
-       WHITE SECTION
-    ========================= */
-
-    .white-section {
-      background: #fff;
-      color: #171717;
-    }
-
-
-    /* =========================
-       SECTION HEADINGS
-    ========================= */
-
-    .section-heading {
-      position: relative;
-      z-index: 2;
-
-      max-width: 650px;
-
-      margin-bottom: 55px;
-    }
-
-    .section-heading span {
-      display: block;
-
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      margin-bottom: 15px;
-
-      font-weight: 600;
-    }
-
-    .color-section .section-heading span {
-      color: #fff;
-    }
-
-    .white-section .section-heading span {
-      color: #999;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(36px, 5vw, 58px);
-
-      line-height: 1.05;
-      letter-spacing: -2px;
-
-      font-weight: 600;
-
-      margin-bottom: 20px;
-    }
-
-    .color-section .section-heading h2 {
-      color: #fff;
-    }
-
-    .white-section .section-heading h2 {
-      color: #171717;
-    }
-
-    .section-heading p {
-      font-size: 16px;
-    }
-
-    .color-section .section-heading p {
-      color: #fff;
-    }
-
-    .white-section .section-heading p {
-      color: #777;
-    }
-
-
-    /* =========================
-       ABOUT CARD
-    ========================= */
-
-    .cards {
-      position: relative;
-      z-index: 2;
-
-      display: grid;
-      grid-template-columns: 1fr;
-
-      gap: 18px;
-    }
-
-    .card {
-      border: 1px solid #e7e7e7;
-      border-radius: 24px;
-
-      padding: 35px;
-
-      min-height: 220px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      background: #fff;
-      color: #171717;
-    }
-
-    .card-number {
-      font-size: 12px;
-      color: #999;
-    }
-
-    .card h3 {
-      font-size: 27px;
-      letter-spacing: -1px;
-      font-weight: 500;
-
-      margin-top: 30px;
-    }
-
-    .card p {
-      color: #777;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-
-    /* =========================
-       IMPACT
-    ========================= */
-
-    .impact-section {
       text-align: center;
     }
 
-    .impact-section .section-heading {
-      margin-left: auto;
-      margin-right: auto;
+    .color-inner {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .impact-grid {
-      position: relative;
-      z-index: 2;
+    .color-section h2 {
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: .95;
 
-      max-width: 850px;
+      letter-spacing: -4px;
+      font-weight: 600;
+
+      margin-bottom: 25px;
+    }
+
+    .color-section p {
+      max-width: 680px;
+      margin: 0 auto;
+
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* IMPACT */
+
+    .impact-section {
+      padding: 120px 7%;
+      background: #fff;
+    }
+
+    .impact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .impact-heading {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .impact-heading span {
+      display: block;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+    .impact-heading h2 {
+      font-size: clamp(45px, 6vw, 75px);
+      line-height: 1;
+
+      letter-spacing: -3px;
+      font-weight: 600;
+    }
+
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .stat-number {
+      font-size: clamp(60px, 8vw, 100px);
+
+      font-weight: 600;
+      letter-spacing: -5px;
+
+      line-height: 1;
+
+      margin-bottom: 15px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-section {
+      padding: 120px 7%;
+      background: #f8f5f4;
+    }
+
+    .instagram-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .instagram-heading span {
+      display: block;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+    .instagram-heading h2 {
+      font-size: clamp(45px, 6vw, 75px);
+      line-height: 1;
+
+      letter-spacing: -3px;
+      font-weight: 600;
+    }
+
+    .instagram-grid {
+      max-width: 1000px;
       margin: 0 auto;
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 18px;
+      gap: 25px;
     }
 
-    .impact-card {
-      background: #fff;
+    .instagram-grid iframe {
+      width: 100% !important;
+      min-height: 500px;
 
-      border: 1px solid #e8e8e8;
-      border-radius: 24px;
-
-      padding: 45px 25px;
-
-      color: #171717;
+      border: none !important;
     }
 
-    .impact-number {
-      font-size: 52px;
-
-      line-height: 1;
-      letter-spacing: -3px;
-
-      font-weight: 600;
-
-      margin-bottom: 12px;
-    }
-
-    .impact-label {
-      color: #777;
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       INSTAGRAM
-    ========================= */
-
-    .instagram-section {
-      overflow: hidden;
-    }
-
-    .instagram-scroll {
-      position: relative;
-      z-index: 2;
-
-      display: flex;
-      gap: 20px;
-
-      overflow-x: hidden;
-
-      width: 100%;
-    }
-
-    .instagram-card {
-      min-width: 320px;
-      width: 320px;
-
-      border: 1px solid #e8e8e8;
-      border-radius: 20px;
-
-      overflow: hidden;
-
-      background: #fff;
-    }
-
-
-    /* =========================
-       PHOTO LOOP
-    ========================= */
+    /* PHOTO LOOP */
 
     .photo-section {
-      padding: 0 !important;
-
+      width: 100%;
       overflow: hidden;
 
-      width: 100%;
-
-      background-image: url('IMG_5606.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: #fff;
     }
 
     .photo-track {
       display: flex;
-
       width: max-content;
 
-      animation: scrollPhotos 32s linear infinite;
+      animation: scrollPhotos 28s linear infinite;
     }
 
     .photo-track img {
-      width: 280px;
-      height: 350px;
+      width: 330px;
+      height: 420px;
 
       object-fit: cover;
 
-      display: block;
+      flex-shrink: 0;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
     }
 
     @keyframes scrollPhotos {
@@ -469,23 +324,19 @@
       }
 
       to {
-        transform: translateX(-1120px);
+        transform: translateX(-50%);
       }
 
     }
 
-
-    /* =========================
-       CONTACT
-       IMG_5606 BACKGROUND
-    ========================= */
+    /* CONTACT */
 
     .contact-section {
       text-align: center;
 
       padding: 120px 7% !important;
 
-      background-image: url('IMG_5606.jpg');
+      background-image: url("IMG_5606.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -494,101 +345,88 @@
     }
 
     .contact-section h2 {
-      font-size: clamp(42px, 6vw, 70px);
+      font-size: clamp(50px, 7vw, 90px);
 
-      line-height: 1;
-      letter-spacing: -3px;
+      line-height: .95;
+
+      letter-spacing: -4px;
 
       font-weight: 600;
 
       margin-bottom: 25px;
-
-      color: #fff;
     }
 
     .contact-section p {
-      margin-bottom: 30px;
-      color: #fff;
+      font-size: 18px;
+      line-height: 1.8;
+
+      max-width: 650px;
+      margin: 0 auto;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
-      padding: 30px 7%;
+      background: #fff;
 
-      border-top: 1px solid #eee;
+      padding: 35px 7%;
 
       display: flex;
-
       justify-content: space-between;
       align-items: center;
 
       gap: 20px;
-
-      font-size: 12px;
-
-      color: #999;
-
-      background: #fff;
     }
 
+    footer p {
+      font-size: 13px;
+      color: #777;
+    }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-socials a {
+      color: #222;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* MOBILE */
 
     @media (max-width: 800px) {
 
-      .hero-content {
-        padding: 105px 7% 60px;
+      .hero {
+        padding: 80px 7%;
       }
 
-      .eyebrow {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-        margin-bottom: 18px;
-      }
-
-      .hero-title {
-        font-size: clamp(55px, 15vw, 90px);
+      .hero h1 {
         letter-spacing: -4px;
       }
 
-      .hero-photo {
-        left: 8%;
-        bottom: 12%;
+      .cover-photo {
+        width: 130px;
 
-        width: 200px;
-        max-width: 40vw;
-
-        padding: 8px 8px 35px;
+        left: 5%;
+        bottom: 5%;
       }
 
-      .hero-photo img {
-        height: 165px;
-      }
-
-      .hero-button {
-        right: 8%;
-        bottom: 15%;
-
-        font-size: 23px;
-      }
-
-      section:not(.hero) {
-        padding: 75px 6%;
-      }
-
-      .impact-grid {
+      .impact-stats {
         grid-template-columns: 1fr;
       }
 
-      .instagram-card {
-        min-width: 280px;
-        width: 280px;
+      .instagram-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-track img {
+        width: 250px;
+        height: 330px;
       }
 
       footer {
@@ -598,43 +436,12 @@
 
     }
 
-
-    @media (max-width: 520px) {
-
-      .hero-title {
-        font-size: 52px;
-        letter-spacing: -3px;
-      }
-
-      .hero-photo {
-        width: 160px;
-        left: 5%;
-        bottom: 13%;
-      }
-
-      .hero-photo img {
-        height: 135px;
-      }
-
-      .hero-button {
-        right: 6%;
-        bottom: 16%;
-
-        font-size: 20px;
-      }
-
-    }
-
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       FIRST COVER
-  ========================= -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -644,53 +451,33 @@
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
-      <h1 class="hero-title">
-
+      <h1>
         <span>Pre-Derm</span>
-
         <span>Society</span>
-
       </h1>
 
-
-      <!-- PHOTO STAYS AWAY FROM TITLE -->
-
-      <div class="hero-photo">
-
-        <img
-          src="IMG_5085.jpeg"
-          alt="Pre-Derm Society"
-        >
-
-      </div>
-
-
-      <!-- ONLY BUTTON -->
-
-      <a
-        href="about.html"
-        class="hero-button"
-      >
+      <a href="about.html" class="hero-button">
         Learn About Us
       </a>
 
     </div>
 
+    <img
+      src="IMG_5085.jpeg"
+      alt=""
+      class="cover-photo"
+      draggable="false"
+      oncontextmenu="return false;"
+    >
+
   </section>
 
 
-
-  <!-- =========================
-       EXPLORE
-  ========================= -->
+  <!-- PINK SECTION -->
 
   <section class="color-section">
 
-    <div class="section-heading">
-
-      <span>
-        Explore
-      </span>
+    <div class="color-inner">
 
       <h2>
         Learn. Research.<br>
@@ -698,98 +485,53 @@
       </h2>
 
       <p>
-        Explore student-friendly lessons and real opportunities for students
-        interested in science, healthcare, and medicine.
+        A student-led community exploring dermatology, skincare science,
+        medicine, research, and healthcare education.
       </p>
 
     </div>
 
+  </section>
 
-    <div class="cards">
 
-      <div class="card">
+  <!-- IMPACT -->
 
-        <div>
+  <section class="impact-section">
 
-          <div class="card-number">
-            01
+    <div class="impact-inner">
+
+      <div class="impact-heading">
+
+        <span>Our Impact</span>
+
+        <h2>Learning beyond the classroom.</h2>
+
+      </div>
+
+      <div class="impact-stats">
+
+        <div class="stat">
+
+          <div class="stat-number" data-target="100">
+            0
           </div>
 
-          <h3>
-            About Us
-          </h3>
-
-          <p>
-            Learn about Pre-Derm Society, our mission, and why we created
-            a student-led space for dermatology and medicine.
-          </p>
+          <div class="stat-label">
+            People Reached
+          </div>
 
         </div>
 
-      </div>
+        <div class="stat">
 
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       IMPACT
-  ========================= -->
-
-  <section class="impact-section white-section">
-
-    <div class="section-heading">
-
-      <span>
-        Our Impact
-      </span>
-
-      <h2>
-        Small lessons.<br>
-        Growing impact.
-      </h2>
-
-      <p>
-        Every completed lesson contributes to our growing student education
-        community.
-      </p>
-
-    </div>
-
-
-    <div class="impact-grid">
-
-      <div class="impact-card">
-
-        <div class="impact-number">
-
-          <span id="peopleReached">
+          <div class="stat-number" data-target="38">
             0
-          </span>+
+          </div>
 
-        </div>
+          <div class="stat-label">
+            Lessons Taught
+          </div>
 
-        <div class="impact-label">
-          People Reached
-        </div>
-
-      </div>
-
-
-      <div class="impact-card">
-
-        <div class="impact-number">
-
-          <span id="lessonsDone">
-            0
-          </span>
-
-        </div>
-
-        <div class="impact-label">
-          Lessons Taught
         </div>
 
       </div>
@@ -799,97 +541,111 @@
   </section>
 
 
+  <!-- INSTAGRAM -->
 
-  <!-- =========================
-       INSTAGRAM
-  ========================= -->
+  <section class="instagram-section">
 
-  <section class="instagram-section color-section">
+    <div class="instagram-heading">
 
-    <div class="section-heading">
+      <span>Follow Along</span>
 
-      <span>
-        Follow Along
-      </span>
-
-      <h2>
-        See what we're<br>
-        learning.
-      </h2>
-
-      <p>
-        Follow Pre-Derm Society for educational posts, dermatology facts,
-        and updates from our student community.
-      </p>
+      <h2>@prederm_society</h2>
 
     </div>
 
+    <div class="instagram-grid">
 
-    <div class="instagram-scroll">
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/prederm_society/"
+        data-instgrm-version="14">
+      </blockquote>
 
-      <div class="instagram-card">
-
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DVCQc5Aksk4/"
-          data-instgrm-version="14"
-          style="background:#FFF;border:0;margin:0;max-width:540px;min-width:280px;width:100%;"
-        ></blockquote>
-
-      </div>
-
-
-      <div class="instagram-card">
-
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DWMpub7D-ep/"
-          data-instgrm-version="14"
-          style="background:#FFF;border:0;margin:0;max-width:540px;min-width:280px;width:100%;"
-        ></blockquote>
-
-      </div>
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/prederm_society/"
+        data-instgrm-version="14">
+      </blockquote>
 
     </div>
 
   </section>
 
+  <script async src="https://www.instagram.com/embed.js"></script>
 
 
-  <!-- =========================
-       PHOTO LOOP
-  ========================= -->
+  <!-- PHOTO LOOP -->
 
   <section class="photo-section">
 
     <div class="photo-track">
 
-      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+      <img
+        src="IMG_5085.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
 
-      <img src="IMG_5085.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_8766.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5125.jpeg" alt="Pre-Derm Society">
-      <img src="IMG_5126.jpeg" alt="Pre-Derm Society">
+      <img
+        src="IMG_8766.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_5085.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_8766.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt=""
+        draggable="false"
+        oncontextmenu="return false;"
+      >
 
     </div>
 
   </section>
 
 
-
-  <!-- =========================
-       CONTACT
-       IMG_5606.jpg BACKGROUND
-  ========================= -->
+  <!-- CONTACT -->
 
   <section class="contact-section">
 
-    <h2>
-      Let's learn together.
-    </h2>
+    <h2>Let’s learn together.</h2>
 
     <p>
       Curious about medicine? Come explore with us.
@@ -898,126 +654,116 @@
   </section>
 
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <span>
-      © Pre-Derm Society
-    </span>
+    <p>
+      © 2026 Pre-Derm Society
+    </p>
 
-    <span>
-      Student-led • Medicine • Dermatology
-    </span>
+    <div class="footer-socials">
+
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+      <a href="mailto:predermsociety@gmail.com">
+        Email
+      </a>
+
+    </div>
 
   </footer>
 
 
-
-  <script async src="//www.instagram.com/embed.js"></script>
-
-
-  <!-- IMPACT COUNTER -->
+  <!-- IMAGE PROTECTION -->
 
   <script>
 
-    const PEOPLE_REACHED = 100;
-    const LESSONS_DONE = 38;
+    document.addEventListener("contextmenu", function(event) {
 
-
-    function animateNumber(element, finalNumber, duration) {
-
-      const startTime = performance.now();
-
-      function update(currentTime) {
-
-        const elapsed = currentTime - startTime;
-
-        const progress = Math.min(
-          elapsed / duration,
-          1
-        );
-
-        const easedProgress =
-          1 - Math.pow(1 - progress, 3);
-
-        const currentNumber =
-          Math.floor(
-            easedProgress * finalNumber
-          );
-
-        element.textContent = currentNumber;
-
-
-        if (progress < 1) {
-
-          requestAnimationFrame(update);
-
-        } else {
-
-          element.textContent = finalNumber;
-
-        }
-
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
       }
 
-      requestAnimationFrame(update);
+    });
 
-    }
+    document.addEventListener("dragstart", function(event) {
 
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
 
-    const peopleElement =
-      document.getElementById("peopleReached");
+    });
 
-    const lessonsElement =
-      document.getElementById("lessonsDone");
-
-
-    let impactObserver =
-      new IntersectionObserver(
-        function(entries) {
-
-          entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-              animateNumber(
-                peopleElement,
-                PEOPLE_REACHED,
-                1100
-              );
-
-              animateNumber(
-                lessonsElement,
-                LESSONS_DONE,
-                1100
-              );
-
-            }
-
-          });
+  </script>
 
 
-          if (
-            entries.some(function(entry) {
-              return entry.isIntersecting;
-            })
-          ) {
+  <!-- IMPACT ANIMATION -->
 
-            impactObserver.disconnect();
+  <script>
+
+    const numbers = document.querySelectorAll(".stat-number");
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            const number = entry.target;
+            const target = Number(number.dataset.target);
+
+            let current = 0;
+
+            const increment = target / 60;
+
+            const updateNumber = () => {
+
+              current += increment;
+
+              if (current < target) {
+
+                number.textContent = Math.floor(current);
+                requestAnimationFrame(updateNumber);
+
+              } else {
+
+                number.textContent = target;
+
+              }
+
+            };
+
+            updateNumber();
+
+            observer.unobserve(number);
 
           }
 
-        }
-      );
+        });
 
-
-    impactObserver.observe(
-      document.querySelector(".impact-section")
+      },
+      {
+        threshold: 0.5
+      }
     );
+
+    numbers.forEach(number => observer.observe(number));
 
   </script>
 
