@@ -8,7 +8,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -40,7 +44,9 @@
       min-height: 100vh;
       width: 100%;
 
-      background-image: url("Untitled514_20260929201039.jpeg");
+      background-image:
+        url("Untitled514_20260929201039.jpeg");
+
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -88,6 +94,7 @@
     .hero-button {
       display: inline-block;
       margin-top: 45px;
+
       padding: 15px 27px;
 
       background: #fff;
@@ -107,23 +114,30 @@
       transform: translateY(-3px);
     }
 
-    /* FRAMED COVER PHOTO */
-
     .cover-photo-frame {
       position: absolute;
+
       left: 8%;
       bottom: 7%;
+
       width: 190px;
+
       padding: 10px;
+
       background: #fff;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+
+      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+
       transform: rotate(-8deg);
+
       z-index: 4;
+
       pointer-events: none;
     }
 
     .cover-photo-frame img {
       display: block;
+
       width: 100%;
       height: auto;
 
@@ -135,7 +149,7 @@
       pointer-events: none;
     }
 
-    /* SOFT PINK SECTION */
+    /* COLOR SECTION */
 
     .color-section {
       width: 100%;
@@ -143,15 +157,17 @@
       background:
         radial-gradient(
           circle at 50% 0%,
-          rgba(255, 255, 255, 0.28),
+          rgba(255,255,255,0.28),
           transparent 45%
         ),
+
         linear-gradient(
           180deg,
           rgba(244,185,202,.92) 0%,
           rgba(239,175,194,.92) 45%,
           rgba(233,168,188,.92) 100%
         ),
+
         url("Untitled514_20260929201039.jpeg");
 
       background-size: cover;
@@ -173,17 +189,19 @@
       content: "";
 
       position: absolute;
+
       top: 0;
       left: 0;
 
       width: 100%;
       height: 90px;
 
-      background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.12),
-        transparent
-      );
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.12),
+          transparent
+        );
 
       pointer-events: none;
     }
@@ -192,17 +210,19 @@
       content: "";
 
       position: absolute;
+
       bottom: 0;
       left: 0;
 
       width: 100%;
       height: 100px;
 
-      background: linear-gradient(
-        to top,
-        rgba(255,255,255,0.10),
-        transparent
-      );
+      background:
+        linear-gradient(
+          to top,
+          rgba(255,255,255,0.10),
+          transparent
+        );
 
       pointer-events: none;
     }
@@ -216,18 +236,24 @@
     }
 
     .color-section h2 {
-      font-size: clamp(48px, 7vw, 90px);
+      font-size: clamp(48px,7vw,90px);
+
       line-height: .95;
+
       letter-spacing: -4px;
+
       font-weight: 600;
+
       margin-bottom: 25px;
     }
 
     .color-section p {
       max-width: 680px;
+
       margin: 0 auto;
 
       font-size: 18px;
+
       line-height: 1.8;
     }
 
@@ -235,18 +261,23 @@
 
     .impact-section {
       width: 100%;
+
       padding: 120px 7%;
+
       background: #fff;
+
       overflow: hidden;
     }
 
     .impact-inner {
       max-width: 1100px;
+
       margin: 0 auto;
     }
 
     .impact-heading {
       text-align: center;
+
       margin-bottom: 70px;
     }
 
@@ -254,7 +285,9 @@
       display: block;
 
       font-size: 12px;
+
       font-weight: 600;
+
       letter-spacing: 2px;
 
       text-transform: uppercase;
@@ -263,37 +296,48 @@
     }
 
     .impact-heading h2 {
-      font-size: clamp(45px, 6vw, 75px);
+      font-size: clamp(45px,6vw,75px);
+
       line-height: 1;
 
       letter-spacing: -3px;
+
       font-weight: 600;
     }
 
     .impact-stats {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns: repeat(2,1fr);
+
       gap: 40px;
     }
 
     .stat {
       text-align: center;
+
       padding: 40px 20px;
     }
 
     .stat-number {
-      font-size: clamp(60px, 8vw, 100px);
+      font-size: clamp(60px,8vw,100px);
+
       font-weight: 600;
+
       letter-spacing: -5px;
+
       line-height: 1;
+
       margin-bottom: 15px;
     }
 
     .stat-label {
       font-size: 14px;
+
       color: #666;
 
       text-transform: uppercase;
+
       letter-spacing: 1.5px;
 
       font-weight: 600;
@@ -314,6 +358,7 @@
 
     .photo-track {
       display: flex;
+
       width: max-content;
 
       animation: scrollPhotos 28s linear infinite;
@@ -340,11 +385,11 @@
     @keyframes scrollPhotos {
 
       from {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0,0,0);
       }
 
       to {
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%,0,0);
       }
 
     }
@@ -358,9 +403,13 @@
 
       padding: 120px 7% !important;
 
-      background-image: url("IMG_5606.jpg");
+      background-image:
+        url("IMG_5606.jpg");
+
       background-size: cover;
+
       background-position: center;
+
       background-repeat: no-repeat;
 
       color: #fff;
@@ -369,10 +418,12 @@
     }
 
     .contact-section h2 {
-      font-size: clamp(50px, 7vw, 90px);
+      font-size: clamp(50px,7vw,90px);
+
       line-height: .95;
 
       letter-spacing: -4px;
+
       font-weight: 600;
 
       margin-bottom: 25px;
@@ -380,6 +431,7 @@
 
     .contact-section p {
       font-size: 18px;
+
       line-height: 1.8;
 
       max-width: 650px;
@@ -399,6 +451,7 @@
       display: flex;
 
       justify-content: space-between;
+
       align-items: center;
 
       gap: 20px;
@@ -406,11 +459,13 @@
 
     footer p {
       font-size: 13px;
+
       color: #777;
     }
 
     .footer-socials {
       display: flex;
+
       gap: 20px;
     }
 
@@ -420,12 +475,13 @@
       text-decoration: none;
 
       font-size: 13px;
+
       font-weight: 600;
     }
 
     /* MOBILE */
 
-    @media (max-width: 800px) {
+    @media (max-width:800px) {
 
       .hero {
         padding: 80px 7%;
@@ -455,12 +511,14 @@
 
       footer {
         flex-direction: column;
+
         text-align: center;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -480,7 +538,10 @@
         <span>Society</span>
       </h1>
 
-      <a href="about.html" class="hero-button">
+      <a
+        href="about.html"
+        class="hero-button"
+      >
         Learn About Us
       </a>
 
@@ -499,7 +560,7 @@
   </section>
 
 
-  <!-- SOFT PINK SECTION -->
+  <!-- LEARN / RESEARCH -->
 
   <section class="color-section">
 
@@ -511,8 +572,8 @@
       </h2>
 
       <p>
-        A student-led community exploring dermatology, skincare science,
-        medicine, research, and healthcare education.
+        A student-led community exploring dermatology,
+        skincare science, medicine, research, and healthcare education.
       </p>
 
     </div>
@@ -528,7 +589,9 @@
 
       <div class="impact-heading">
 
-        <span>Our Impact</span>
+        <span>
+          Our Impact
+        </span>
 
         <h2>
           Learning beyond the classroom.
@@ -540,7 +603,10 @@
 
         <div class="stat">
 
-          <div class="stat-number" data-target="100">
+          <div
+            class="stat-number"
+            data-target="100"
+          >
             0
           </div>
 
@@ -550,9 +616,13 @@
 
         </div>
 
+
         <div class="stat">
 
-          <div class="stat-number" data-target="38">
+          <div
+            class="stat-number"
+            data-target="38"
+          >
             0
           </div>
 
@@ -575,15 +645,53 @@
 
     <div class="photo-track">
 
-      <img src="IMG_5085.jpeg" alt="" draggable="false">
-      <img src="IMG_8766.jpeg" alt="" draggable="false">
-      <img src="IMG_5125.jpeg" alt="" draggable="false">
-      <img src="IMG_5126.jpeg" alt="" draggable="false">
+      <img
+        src="IMG_5085.jpeg"
+        alt=""
+        draggable="false"
+      >
 
-      <img src="IMG_5085.jpeg" alt="" draggable="false">
-      <img src="IMG_8766.jpeg" alt="" draggable="false">
-      <img src="IMG_5125.jpeg" alt="" draggable="false">
-      <img src="IMG_5126.jpeg" alt="" draggable="false">
+      <img
+        src="IMG_8766.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_5085.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_8766.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_5125.jpeg"
+        alt=""
+        draggable="false"
+      >
+
+      <img
+        src="IMG_5126.jpeg"
+        alt=""
+        draggable="false"
+      >
 
     </div>
 
@@ -652,6 +760,7 @@
 
     });
 
+
     document.addEventListener("dragstart", function(event) {
 
       if (event.target.tagName === "IMG") {
@@ -663,58 +772,79 @@
   </script>
 
 
-  <!-- IMPACT ANIMATION -->
+  <!-- COUNTERS -->
 
   <script>
 
-    const numbers = document.querySelectorAll(".stat-number");
+    const numbers =
+      document.querySelectorAll(".stat-number");
 
-    const observer = new IntersectionObserver(
-      entries => {
 
-        entries.forEach(entry => {
+    const observer =
+      new IntersectionObserver(
 
-          if (entry.isIntersecting) {
+        entries => {
 
-            const number = entry.target;
-            const target = Number(number.dataset.target);
+          entries.forEach(entry => {
 
-            let current = 0;
-            const increment = target / 60;
+            if (entry.isIntersecting) {
 
-            const updateNumber = () => {
+              const number =
+                entry.target;
 
-              current += increment;
+              const target =
+                Number(number.dataset.target);
 
-              if (current < target) {
+              let current = 0;
 
-                number.textContent = Math.floor(current);
+              const increment =
+                target / 60;
 
-                requestAnimationFrame(updateNumber);
 
-              } else {
+              const updateNumber = () => {
 
-                number.textContent = target;
+                current += increment;
 
-              }
 
-            };
+                if (current < target) {
 
-            updateNumber();
+                  number.textContent =
+                    Math.floor(current);
 
-            observer.unobserve(number);
+                  requestAnimationFrame(
+                    updateNumber
+                  );
 
-          }
+                } else {
 
-        });
+                  number.textContent =
+                    target + "+";
 
-      },
-      {
-        threshold: 0.5
-      }
+                }
+
+              };
+
+
+              updateNumber();
+
+              observer.unobserve(number);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.5
+        }
+
+      );
+
+
+    numbers.forEach(number =>
+      observer.observe(number)
     );
-
-    numbers.forEach(number => observer.observe(number));
 
   </script>
 
