@@ -209,10 +209,30 @@
       pointer-events: none;
     }
 
-    /* MISSION */
+    /* OUR MISSION */
 
     .mission-section {
-      background-image: url("Untitled514_20260927203155.PNG");
+      position: relative;
+
+      padding: 120px 7%;
+
+      text-align: center;
+
+      color: #fff;
+
+      overflow: hidden;
+    }
+
+    /* Faded background image */
+
+    .mission-section::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image: url("IMG_5726.jpeg");
 
       background-size: cover;
 
@@ -220,14 +240,30 @@
 
       background-repeat: no-repeat;
 
-      padding: 120px 7%;
+      opacity: .28;
 
-      text-align: center;
+      z-index: 0;
+    }
 
-      color: #fff;
+    /* Soft overlay */
+
+    .mission-section::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background: rgba(205, 130, 155, .58);
+
+      z-index: 1;
     }
 
     .mission-inner {
+      position: relative;
+
+      z-index: 2;
+
       max-width: 850px;
 
       margin: 0 auto;
@@ -461,7 +497,6 @@
           src="IMG_5724.jpeg"
           alt="Pre-Derm Society"
           draggable="false"
-          oncontextmenu="return false;"
         >
 
       </div>
@@ -471,7 +506,7 @@
   </section>
 
 
-  <!-- MISSION -->
+  <!-- OUR MISSION -->
 
   <section class="mission-section">
 
