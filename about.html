@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +9,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -18,68 +23,81 @@
       padding: 0;
     }
 
-    html,
-    body {
+    html {
+      width: 100%;
       overflow-x: hidden;
+      overscroll-behavior-x: none;
     }
 
     body {
+      width: 100%;
+      max-width: 100%;
+
+      overflow-x: hidden;
+      overscroll-behavior-x: none;
+
       font-family: "DM Sans", sans-serif;
+
       color: #222;
       background: #fff;
     }
 
     /* HERO */
 
-    .hero {
-      min-height: 100vh;
+    .about-hero {
 
-      background-image: url("Untitled514_20260927203155.PNG");
+      min-height: 75vh;
+      width: 100%;
+
+      background-image:
+        url("Untitled514_20260929201039.jpeg");
+
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
+      position: relative;
+
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       text-align: center;
 
-      position: relative;
+      padding: 100px 7%;
 
-      padding: 80px 7%;
+      overflow: hidden;
     }
 
-    .home-button {
+    .about-hero::after {
+
+      content: "";
+
       position: absolute;
 
-      top: 35px;
-      left: 7%;
+      inset: 0;
 
-      z-index: 20;
+      background: rgba(0,0,0,.10);
 
-      color: #fff;
-
-      font-size: 14px;
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition: transform .2s ease;
+      z-index: 1;
     }
 
-    .home-button:hover {
-      transform: translateY(-2px);
-    }
+    .about-hero-content {
 
-    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
       max-width: 900px;
     }
 
-    .eyebrow {
+    .about-eyebrow {
+
       color: #fff;
 
       font-size: 12px;
+
       font-weight: 600;
 
       letter-spacing: 2px;
@@ -89,58 +107,97 @@
       margin-bottom: 22px;
     }
 
-    .hero h1 {
+    .about-hero h1 {
+
       color: #fff;
 
-      font-size: clamp(64px, 11vw, 150px);
+      font-size: clamp(70px, 11vw, 150px);
 
       line-height: .88;
 
+      letter-spacing: -6px;
+
       font-weight: 600;
-
-      letter-spacing: -5px;
-
-      margin-bottom: 35px;
     }
 
-    .hero p {
+    .about-hero p {
+
       max-width: 650px;
 
-      margin: 0 auto;
+      margin: 35px auto 0;
 
       color: #fff;
 
       font-size: 18px;
 
-      line-height: 1.7;
+      line-height: 1.8;
+    }
 
-      font-weight: 400;
+    /* HOME BUTTON */
+
+    .home-button {
+
+      position: absolute;
+
+      top: 30px;
+      left: 7%;
+
+      z-index: 5;
+
+      display: inline-block;
+
+      padding: 12px 21px;
+
+      background: #fff;
+
+      color: #222;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      border-radius: 100px;
+
+      transition: transform .2s ease;
+    }
+
+    .home-button:hover {
+
+      transform: translateY(-3px);
+
     }
 
     /* OUR STORY */
 
     .story-section {
+
+      width: 100%;
+
+      padding: 130px 7%;
+
       background: #fff;
 
-      padding: 120px 7%;
+      overflow: hidden;
     }
 
     .story-inner {
+
       max-width: 1200px;
 
       margin: 0 auto;
 
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr .95fr;
 
-      gap: 80px;
+      gap: 90px;
 
       align-items: center;
     }
 
-    .story-text span {
-      display: block;
+    .story-label {
 
       font-size: 12px;
 
@@ -153,50 +210,58 @@
       margin-bottom: 20px;
     }
 
-    .story-text h2 {
-      font-size: clamp(42px, 6vw, 72px);
+    .story-copy h2 {
 
-      line-height: 1;
+      font-size: clamp(50px, 6vw, 85px);
 
-      letter-spacing: -3px;
+      line-height: .95;
+
+      letter-spacing: -4px;
 
       font-weight: 600;
 
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    .story-text p {
+    .story-copy p {
+
+      max-width: 650px;
+
       font-size: 17px;
 
-      line-height: 1.8;
+      line-height: 1.9;
+
+      margin-bottom: 20px;
 
       color: #555;
-
-      max-width: 600px;
-
-      margin-bottom: 18px;
     }
 
-    .story-image {
-      display: flex;
+    .story-photo {
 
-      justify-content: center;
-
-      align-items: center;
-    }
-
-    .story-image img {
       width: 100%;
 
-      max-width: 500px;
+      max-width: 470px;
+
+      justify-self: end;
+
+      padding: 12px;
+
+      background: #fff;
+
+      box-shadow: 0 20px 50px rgba(0,0,0,.12);
+
+      transform: rotate(5deg);
+
+      pointer-events: none;
+    }
+
+    .story-photo img {
 
       display: block;
 
-      border: 10px solid #fff;
+      width: 100%;
 
-      box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
-
-      transform: rotate(3deg);
+      height: auto;
 
       user-select: none;
 
@@ -212,6 +277,7 @@
     /* OUR MISSION */
 
     .mission-section {
+
       position: relative;
 
       padding: 120px 7%;
@@ -223,9 +289,8 @@
       overflow: hidden;
     }
 
-    /* Faded background image */
-
     .mission-section::before {
+
       content: "";
 
       position: absolute;
@@ -245,21 +310,21 @@
       z-index: 0;
     }
 
-    /* Soft overlay */
-
     .mission-section::after {
+
       content: "";
 
       position: absolute;
 
       inset: 0;
 
-      background: rgba(205, 130, 155, .58);
+      background: rgba(205,130,155,.58);
 
       z-index: 1;
     }
 
     .mission-inner {
+
       position: relative;
 
       z-index: 2;
@@ -269,8 +334,7 @@
       margin: 0 auto;
     }
 
-    .mission-section span {
-      display: block;
+    .mission-label {
 
       font-size: 12px;
 
@@ -283,54 +347,53 @@
       margin-bottom: 20px;
     }
 
-    .mission-section h2 {
-      font-size: clamp(42px, 6vw, 76px);
+    .mission-inner h2 {
 
-      line-height: 1;
+      font-size: clamp(50px, 7vw, 90px);
 
-      letter-spacing: -3px;
+      line-height: .95;
+
+      letter-spacing: -4px;
 
       font-weight: 600;
 
       margin-bottom: 30px;
     }
 
-    .mission-section p {
-      font-size: 18px;
-
-      line-height: 1.8;
+    .mission-inner p {
 
       max-width: 700px;
 
       margin: 0 auto;
+
+      font-size: 18px;
+
+      line-height: 1.8;
     }
 
     /* JOIN */
 
     .join-section {
-      background-image: url("Untitled514_20260927203155.PNG");
 
-      background-size: cover;
-
-      background-position: center;
-
-      background-repeat: no-repeat;
+      width: 100%;
 
       padding: 120px 7%;
 
-      text-align: center;
+      background: #fff;
 
-      color: #fff;
+      text-align: center;
     }
 
     .join-inner {
+
       max-width: 800px;
 
       margin: 0 auto;
     }
 
-    .join-section h2 {
-      font-size: clamp(48px, 7vw, 90px);
+    .join-inner h2 {
+
+      font-size: clamp(50px, 7vw, 90px);
 
       line-height: .95;
 
@@ -341,19 +404,25 @@
       margin-bottom: 25px;
     }
 
-    .join-section p {
-      font-size: 18px;
-
-      line-height: 1.8;
+    .join-inner p {
 
       max-width: 650px;
 
       margin: 0 auto;
+
+      font-size: 18px;
+
+      line-height: 1.8;
+
+      color: #666;
     }
 
     /* FOOTER */
 
     footer {
+
+      width: 100%;
+
       background: #fff;
 
       padding: 35px 7%;
@@ -368,18 +437,21 @@
     }
 
     footer p {
+
       font-size: 13px;
 
       color: #777;
     }
 
     .footer-socials {
+
       display: flex;
 
       gap: 20px;
     }
 
     .footer-socials a {
+
       color: #222;
 
       text-decoration: none;
@@ -393,35 +465,56 @@
 
     @media (max-width: 800px) {
 
-      .hero {
-        padding: 80px 7%;
+      .about-hero {
+
+        min-height: 80vh;
+
+        padding: 100px 7%;
       }
 
-      .hero h1 {
-        letter-spacing: -3px;
+      .about-hero h1 {
+
+        letter-spacing: -4px;
+      }
+
+      .home-button {
+
+        left: 5%;
+
+        top: 25px;
+      }
+
+      .story-section {
+
+        padding: 90px 7%;
       }
 
       .story-inner {
+
         grid-template-columns: 1fr;
 
-        gap: 55px;
+        gap: 60px;
       }
 
-      .story-image {
-        order: 2;
+      .story-photo {
+
+        justify-self: center;
+
+        max-width: 400px;
       }
 
-      .story-text {
-        order: 1;
+      .mission-section {
+
+        padding: 90px 7%;
       }
 
-      .story-section,
-      .mission-section,
       .join-section {
+
         padding: 90px 7%;
       }
 
       footer {
+
         flex-direction: column;
 
         text-align: center;
@@ -430,22 +523,27 @@
     }
 
   </style>
+
 </head>
 
 <body>
 
+
   <!-- HERO -->
 
-  <section class="hero">
+  <section class="about-hero">
 
-    <a href="index.html" class="home-button">
+    <a
+      href="index.html"
+      class="home-button"
+    >
       Home
     </a>
 
-    <div class="hero-content">
+    <div class="about-hero-content">
 
-      <div class="eyebrow">
-        STUDENT-LED • MEDICINE • DERMATOLOGY
+      <div class="about-eyebrow">
+        PRE-DERM SOCIETY
       </div>
 
       <h1>
@@ -453,8 +551,8 @@
       </h1>
 
       <p>
-        Pre-Derm Society is a student-led space for exploring dermatology,
-        medicine, skincare, research, and healthcare.
+        A student-led community exploring dermatology,
+        medicine, skincare science, research, and healthcare education.
       </p>
 
     </div>
@@ -468,34 +566,43 @@
 
     <div class="story-inner">
 
-      <div class="story-text">
+      <div class="story-copy">
 
-        <span>Our Story</span>
+        <div class="story-label">
+          Our Story
+        </div>
 
         <h2>
           Curiosity can become a career.
         </h2>
 
         <p>
-          Our interest in dermatology started when we were young. Watching our mom enjoy her work as a dermatologist and seeing how she helped others made us interested in the field too.
+          Our interest in dermatology started when we were young.
+          Watching our mom enjoy her work as a dermatologist and seeing
+          how she helped others made us interested in the field too.
         </p>
 
         <p>
-          We actually started a dermatology club in middle school, and that interest has continued to grow. As we learned more about dermatology, we wanted to create a space where other students could explore it with us.
+          We actually started a dermatology club in middle school,
+          and that interest has continued to grow. As we learned more
+          about dermatology, we wanted to create a space where other
+          students could explore it with us.
         </p>
 
         <p>
-          That is why we created Pre-Derm Society: to share our interest in dermatology, learn about medicine together, and encourage other students to discover what they might be interested in too.
+          That is why we created Pre-Derm Society: to share our interest
+          in dermatology, learn about medicine together, and encourage
+          other students to discover what they might be interested in too.
         </p>
 
       </div>
 
 
-      <div class="story-image">
+      <div class="story-photo">
 
         <img
           src="IMG_5724.jpeg"
-          alt="Pre-Derm Society"
+          alt=""
           draggable="false"
         >
 
@@ -512,10 +619,13 @@
 
     <div class="mission-inner">
 
-      <span>Our Mission</span>
+      <div class="mission-label">
+        Our Mission
+      </div>
 
       <h2>
-        Learn. Research. Discover medicine.
+        Learn. Research.<br>
+        Discover medicine.
       </h2>
 
       <p>
@@ -535,13 +645,13 @@
     <div class="join-inner">
 
       <h2>
-        Come learn with us.
+        Explore medicine with us.
       </h2>
 
       <p>
-        Whether you're already interested in medicine or simply curious
-        about how the skin works, Pre-Derm Society is a place to learn,
-        ask questions, and discover something new.
+        Pre-Derm Society is a place for students to learn,
+        ask questions, explore healthcare, and discover
+        what interests them.
       </p>
 
     </div>
@@ -605,6 +715,7 @@
     });
 
   </script>
+
 
 </body>
 </html>
