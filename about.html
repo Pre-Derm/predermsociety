@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About Us · Pre-Derm Society</title>
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -34,78 +18,42 @@
       padding: 0;
     }
 
-
-    html {
-      scroll-behavior: smooth;
+    html,
+    body {
       overflow-x: hidden;
     }
-
 
     body {
-      width: 100%;
-      overflow-x: hidden;
-
-      font-family: 'DM Sans', sans-serif;
-
-      color: #171717;
-
+      font-family: "DM Sans", sans-serif;
+      color: #222;
       background: #fff;
-
-      line-height: 1.6;
     }
 
+    /* HERO */
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    .hero {
+      min-height: 100vh;
 
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .about-hero {
-
-      min-height: 78vh;
-
-      width: 100%;
-
-      position: relative;
-
-      background-image:
-        url('Untitled514_20260927203155.PNG');
-
+      background-image: url("Untitled514_20260927203155.PNG");
       background-size: cover;
-
       background-position: center;
-
       background-repeat: no-repeat;
 
-      overflow: hidden;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
 
-      padding: 100px 7%;
+      position: relative;
+
+      padding: 80px 7%;
     }
 
-
-    /* =========================
-       HOME BUTTON
-    ========================= */
-
     .home-button {
-
       position: absolute;
 
       top: 35px;
-
       left: 7%;
 
       z-index: 20;
@@ -113,7 +61,6 @@
       color: #fff;
 
       font-size: 14px;
-
       font-weight: 600;
 
       text-decoration: none;
@@ -121,89 +68,65 @@
       transition: transform .2s ease;
     }
 
-
     .home-button:hover {
-
       transform: translateY(-2px);
-
     }
 
-
-    /* =========================
-       HERO CONTENT
-    ========================= */
-
-    .about-hero-content {
-
-      position: relative;
-
-      z-index: 5;
-
+    .hero-content {
       max-width: 900px;
-
-      color: #fff;
     }
-
 
     .eyebrow {
+      color: #fff;
 
       font-size: 12px;
+      font-weight: 600;
 
       letter-spacing: 2px;
 
       text-transform: uppercase;
 
-      font-weight: 600;
-
       margin-bottom: 22px;
-
-      color: #fff;
     }
 
+    .hero h1 {
+      color: #fff;
 
-    .about-hero h1 {
+      font-size: clamp(64px, 11vw, 150px);
 
-      font-size: clamp(58px, 9vw, 120px);
+      line-height: .88;
 
-      line-height: .9;
+      font-weight: 600;
 
       letter-spacing: -5px;
 
-      font-weight: 600;
-
       margin-bottom: 35px;
-
-      color: #fff;
     }
 
-
-    .about-hero p {
-
+    .hero p {
       max-width: 650px;
 
       margin: 0 auto;
 
+      color: #fff;
+
       font-size: 18px;
 
-      color: #fff;
+      line-height: 1.7;
+
+      font-weight: 400;
     }
 
+    /* OUR STORY */
 
-    /* =========================
-       STORY
-    ========================= */
-
-    .story {
-
-      padding: 110px 7%;
-
+    .story-section {
       background: #fff;
-    }
 
+      padding: 120px 7%;
+    }
 
     .story-inner {
-
-      max-width: 1050px;
+      max-width: 1200px;
 
       margin: 0 auto;
 
@@ -211,31 +134,27 @@
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 70px;
+      gap: 80px;
 
       align-items: center;
     }
 
-
-    .story-label {
+    .story-text span {
+      display: block;
 
       font-size: 12px;
+
+      font-weight: 600;
 
       letter-spacing: 2px;
 
       text-transform: uppercase;
 
-      font-weight: 600;
-
-      color: #999;
-
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-
-    .story h2 {
-
-      font-size: clamp(38px, 5vw, 62px);
+    .story-text h2 {
+      font-size: clamp(42px, 6vw, 72px);
 
       line-height: 1;
 
@@ -243,251 +162,117 @@
 
       font-weight: 600;
 
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
+    .story-text p {
+      font-size: 17px;
 
-    .story p {
+      line-height: 1.8;
 
-      color: #777;
+      color: #555;
 
-      font-size: 16px;
+      max-width: 600px;
 
       margin-bottom: 18px;
     }
 
+    .story-image {
+      display: flex;
 
-    /* =========================
-       PHOTO
-    ========================= */
+      justify-content: center;
 
-    .story-photo {
-
-      background: #fff;
-
-      padding: 12px 12px 45px;
-
-      box-shadow:
-        0 12px 35px rgba(80, 50, 70, .12);
-
-      transform: rotate(3deg);
+      align-items: center;
     }
 
-
-    .story-photo img {
-
+    .story-image img {
       width: 100%;
 
-      height: 430px;
-
-      object-fit: cover;
+      max-width: 500px;
 
       display: block;
+
+      border: 10px solid #fff;
+
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
+
+      transform: rotate(3deg);
+
+      user-select: none;
+
+      -webkit-user-select: none;
+
+      -webkit-touch-callout: none;
+
+      -webkit-user-drag: none;
+
+      pointer-events: none;
     }
 
+    /* MISSION */
 
-    /* =========================
-       MISSION
-    ========================= */
-
-    .mission {
-
-      padding: 110px 7%;
-
-      background-image:
-        url('Untitled514_20260927203155.PNG');
+    .mission-section {
+      background-image: url("Untitled514_20260927203155.PNG");
 
       background-size: cover;
 
       background-position: center;
 
       background-repeat: no-repeat;
-
-      color: #fff;
-
-      text-align: center;
-    }
-
-
-    .mission-inner {
-
-      max-width: 800px;
-
-      margin: 0 auto;
-    }
-
-
-    .mission .label {
-
-      font-size: 12px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      font-weight: 600;
-
-      margin-bottom: 20px;
-
-      color: #fff;
-    }
-
-
-    .mission h2 {
-
-      font-size: clamp(40px, 6vw, 70px);
-
-      line-height: 1;
-
-      letter-spacing: -3px;
-
-      margin-bottom: 25px;
-
-      color: #fff;
-    }
-
-
-    .mission p {
-
-      font-size: 17px;
-
-      color: #fff;
-    }
-
-
-    /* =========================
-       WHAT WE DO
-    ========================= */
-
-    .what-we-do {
-
-      padding: 110px 7%;
-
-      background: #fff;
-    }
-
-
-    .what-inner {
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-    }
-
-
-    .what-heading {
-
-      max-width: 650px;
-
-      margin-bottom: 55px;
-    }
-
-
-    .what-heading span {
-
-      display: block;
-
-      font-size: 12px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      color: #999;
-
-      margin-bottom: 15px;
-
-      font-weight: 600;
-    }
-
-
-    .what-heading h2 {
-
-      font-size: clamp(38px, 5vw, 60px);
-
-      line-height: 1;
-
-      letter-spacing: -3px;
-
-      margin-bottom: 20px;
-    }
-
-
-    .what-heading p {
-
-      color: #777;
-
-      font-size: 16px;
-    }
-
-
-    .values {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px;
-    }
-
-
-    .value {
-
-      border: 1px solid #e8e8e8;
-
-      border-radius: 24px;
-
-      padding: 35px;
-
-      min-height: 240px;
-
-      background: #fff;
-    }
-
-
-    .value-number {
-
-      font-size: 12px;
-
-      color: #999;
-
-      margin-bottom: 35px;
-    }
-
-
-    .value h3 {
-
-      font-size: 25px;
-
-      letter-spacing: -1px;
-
-      margin-bottom: 12px;
-
-      font-weight: 500;
-    }
-
-
-    .value p {
-
-      color: #777;
-
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       JOIN
-    ========================= */
-
-    .join-section {
 
       padding: 120px 7%;
 
       text-align: center;
 
-      background-image:
-        url('Untitled514_20260927203155.PNG');
+      color: #fff;
+    }
+
+    .mission-inner {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+    .mission-section span {
+      display: block;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 20px;
+    }
+
+    .mission-section h2 {
+      font-size: clamp(42px, 6vw, 76px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      font-weight: 600;
+
+      margin-bottom: 30px;
+    }
+
+    .mission-section p {
+      font-size: 18px;
+
+      line-height: 1.8;
+
+      max-width: 700px;
+
+      margin: 0 auto;
+    }
+
+    /* JOIN */
+
+    .join-section {
+      background-image: url("Untitled514_20260927203155.PNG");
 
       background-size: cover;
 
@@ -495,43 +280,47 @@
 
       background-repeat: no-repeat;
 
+      padding: 120px 7%;
+
+      text-align: center;
+
       color: #fff;
     }
 
+    .join-inner {
+      max-width: 800px;
+
+      margin: 0 auto;
+    }
 
     .join-section h2 {
+      font-size: clamp(48px, 7vw, 90px);
 
-      font-size: clamp(42px, 6vw, 75px);
+      line-height: .95;
 
-      line-height: 1;
+      letter-spacing: -4px;
 
-      letter-spacing: -3px;
+      font-weight: 600;
 
       margin-bottom: 25px;
     }
 
-
     .join-section p {
+      font-size: 18px;
 
-      max-width: 600px;
+      line-height: 1.8;
+
+      max-width: 650px;
 
       margin: 0 auto;
-
-      color: #fff;
-
-      font-size: 17px;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
+      background: #fff;
 
-      padding: 30px 7%;
-
-      border-top: 1px solid #eee;
+      padding: 35px 7%;
 
       display: flex;
 
@@ -540,71 +329,63 @@
       align-items: center;
 
       gap: 20px;
-
-      font-size: 12px;
-
-      color: #999;
-
-      background: #fff;
     }
 
+    footer p {
+      font-size: 13px;
 
-    /* =========================
-       MOBILE
-    ========================= */
+      color: #777;
+    }
+
+    .footer-socials {
+      display: flex;
+
+      gap: 20px;
+    }
+
+    .footer-socials a {
+      color: #222;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 600;
+    }
+
+    /* MOBILE */
 
     @media (max-width: 800px) {
 
-      .about-hero {
-
-        min-height: 70vh;
-
-        padding: 90px 7%;
+      .hero {
+        padding: 80px 7%;
       }
 
-
-      .about-hero h1 {
-
-        font-size: 58px;
-
+      .hero h1 {
         letter-spacing: -3px;
       }
 
-
-      .home-button {
-
-        top: 25px;
-
-        left: 6%;
-
-        font-size: 13px;
-      }
-
-
       .story-inner {
-
         grid-template-columns: 1fr;
 
         gap: 55px;
       }
 
-
-      .story-photo {
-
-        max-width: 600px;
-
-        margin: 0 auto;
+      .story-image {
+        order: 2;
       }
 
-
-      .values {
-
-        grid-template-columns: 1fr;
+      .story-text {
+        order: 1;
       }
 
+      .story-section,
+      .mission-section,
+      .join-section {
+        padding: 90px 7%;
+      }
 
       footer {
-
         flex-direction: column;
 
         text-align: center;
@@ -613,285 +394,182 @@
     }
 
   </style>
-
 </head>
-
 
 <body>
 
+  <!-- HERO -->
 
-  <!-- =========================
-       ABOUT HERO
-  ========================= -->
+  <section class="hero">
 
-  <section class="about-hero">
-
-
-    <!-- HOME BUTTON -->
-
-    <a
-      href="index.html"
-      class="home-button"
-    >
+    <a href="index.html" class="home-button">
       Home
     </a>
 
-
-    <div class="about-hero-content">
-
+    <div class="hero-content">
 
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
 
-
       <h1>
         About Us
       </h1>
-
 
       <p>
         Pre-Derm Society is a student-led space for exploring dermatology,
         medicine, skincare, research, and healthcare.
       </p>
 
-
     </div>
 
   </section>
 
 
+  <!-- OUR STORY -->
 
-  <!-- =========================
-       OUR STORY
-  ========================= -->
-
-  <section class="story">
+  <section class="story-section">
 
     <div class="story-inner">
 
+      <div class="story-text">
 
-      <div>
-
-        <div class="story-label">
-          Our Story
-        </div>
-
+        <span>Our Story</span>
 
         <h2>
           Curiosity can become a career.
         </h2>
 
-
         <p>
-          Pre-Derm Society was created by students who wanted to make
-          dermatology and medicine easier to explore at a young age.
+          Our interest in dermatology started when we were young. Watching our mom enjoy her work as a dermatologist and seeing how she helped others made us interested in the field too.
         </p>
 
-
         <p>
-          We believe students should be able to ask questions, discover
-          science, learn about healthcare, and explore the many paths
-          within medicine.
+          We actually started a dermatology club in middle school, and that interest has continued to grow. As we learned more about dermatology, we wanted to create a space where other students could explore it with us.
         </p>
 
-
         <p>
-          Our goal is to create a welcoming student community centered
-          around curiosity, education, and the science of skin.
+          That is why we created Pre-Derm Society: to share our interest in dermatology, learn about medicine together, and encourage other students to discover what they might be interested in too.
         </p>
 
       </div>
 
 
-      <div class="story-photo">
+      <div class="story-image">
 
         <img
-          src="IMG_5085.jpeg"
+          src="IMG_5724.jpeg"
           alt="Pre-Derm Society"
+          draggable="false"
+          oncontextmenu="return false;"
         >
 
       </div>
-
 
     </div>
 
   </section>
 
 
+  <!-- MISSION -->
 
-  <!-- =========================
-       MISSION
-  ========================= -->
-
-  <section class="mission">
+  <section class="mission-section">
 
     <div class="mission-inner">
 
-
-      <div class="label">
-        Our Mission
-      </div>
-
+      <span>Our Mission</span>
 
       <h2>
         Learn. Research. Discover medicine.
       </h2>
 
-
       <p>
-        We want to make dermatology, skincare science, and healthcare
-        education accessible and exciting for students.
+        We want to make dermatology, skincare science, healthcare,
+        and medical education accessible and exciting for students.
       </p>
 
-
     </div>
 
   </section>
 
 
-
-  <!-- =========================
-       WHAT WE DO
-  ========================= -->
-
-  <section class="what-we-do">
-
-    <div class="what-inner">
-
-
-      <div class="what-heading">
-
-        <span>
-          What We Do
-        </span>
-
-
-        <h2>
-          A place to explore medicine.
-        </h2>
-
-
-        <p>
-          Pre-Derm Society combines education, research, service,
-          and student creativity.
-        </p>
-
-      </div>
-
-
-      <div class="values">
-
-
-        <div class="value">
-
-          <div class="value-number">
-            01
-          </div>
-
-
-          <h3>
-            Education
-          </h3>
-
-
-          <p>
-            We create student-friendly resources that make dermatology
-            and medical science easier to understand.
-          </p>
-
-        </div>
-
-
-
-        <div class="value">
-
-          <div class="value-number">
-            02
-          </div>
-
-
-          <h3>
-            Research
-          </h3>
-
-
-          <p>
-            We encourage students to ask questions, explore science,
-            and become curious about the research behind medicine.
-          </p>
-
-        </div>
-
-
-
-        <div class="value">
-
-          <div class="value-number">
-            03
-          </div>
-
-
-          <h3>
-            Service
-          </h3>
-
-
-          <p>
-            We hope to use what we learn to help spread health
-            education and support communities around us.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       JOIN
-  ========================= -->
+  <!-- JOIN -->
 
   <section class="join-section">
 
+    <div class="join-inner">
 
-    <h2>
-      Come learn with us.
-    </h2>
+      <h2>
+        Come learn with us.
+      </h2>
 
+      <p>
+        Whether you're already interested in medicine or simply curious
+        about how the skin works, Pre-Derm Society is a place to learn,
+        ask questions, and discover something new.
+      </p>
 
-    <p>
-      Whether you're curious about dermatology, medicine, skincare,
-      or research, there's always something new to discover.
-    </p>
-
+    </div>
 
   </section>
 
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <span>
-      © Pre-Derm Society
-    </span>
+    <p>
+      © 2026 Pre-Derm Society
+    </p>
 
+    <div class="footer-socials">
 
-    <span>
-      Student-led • Medicine • Dermatology
-    </span>
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+      <a href="mailto:predermsociety@gmail.com">
+        Email
+      </a>
+
+    </div>
 
   </footer>
 
+
+  <!-- IMAGE PROTECTION -->
+
+  <script>
+
+    document.addEventListener("contextmenu", function(event) {
+
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+
+    });
+
+    document.addEventListener("dragstart", function(event) {
+
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
