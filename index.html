@@ -152,15 +152,23 @@
       pointer-events: none;
     }
 
-    /* PINK SECTION */
+    /* SOFT PINK SECTION */
 
     .color-section {
       width: 100%;
 
-      background-image: url("Untitled514_20260927203155.PNG");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255, 255, 255, 0.28),
+          transparent 45%
+        ),
+        linear-gradient(
+          180deg,
+          #f4b9ca 0%,
+          #efafc2 45%,
+          #e9a8bc 100%
+        );
 
       color: #fff;
 
@@ -169,11 +177,56 @@
       text-align: center;
 
       overflow: hidden;
+
+      position: relative;
+    }
+
+    .color-section::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 90px;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.12),
+        transparent
+      );
+
+      pointer-events: none;
+    }
+
+    .color-section::after {
+      content: "";
+
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100px;
+
+      background: linear-gradient(
+        to top,
+        rgba(255,255,255,0.10),
+        transparent
+      );
+
+      pointer-events: none;
     }
 
     .color-inner {
       max-width: 900px;
       margin: 0 auto;
+
+      position: relative;
+      z-index: 2;
     }
 
     .color-section h2 {
@@ -479,7 +532,7 @@
   </section>
 
 
-  <!-- PINK SECTION -->
+  <!-- SOFT PINK SECTION -->
 
   <section class="color-section">
 
@@ -549,7 +602,7 @@
   </section>
 
 
-  <!-- PHOTO LOOP — DO NOT REMOVE -->
+  <!-- PHOTO LOOP -->
 
   <section class="photo-section">
 
