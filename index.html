@@ -46,6 +46,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(45px);
+
       transition:
         opacity 1s ease,
         transform 1s ease;
@@ -382,6 +383,18 @@
       font-weight: 600;
     }
 
+    /* PHOTO + CONTACT WRAPPER */
+
+    .photo-contact {
+      position: relative;
+
+      width: 100%;
+
+      background: #fff;
+
+      overflow: hidden;
+    }
+
     /* PHOTO LOOP */
 
     .photo-section {
@@ -396,26 +409,6 @@
       touch-action: pan-y;
 
       position: relative;
-    }
-
-    .photo-section::before {
-      content: "";
-
-      position: absolute;
-
-      top: -1px;
-      left: 0;
-
-      width: 100%;
-      height: 65px;
-
-      background: #fff;
-
-      clip-path: ellipse(58% 55% at 50% 0%);
-
-      z-index: 3;
-
-      pointer-events: none;
     }
 
     .photo-track {
@@ -460,6 +453,32 @@
 
     }
 
+    /* WAVY TRANSITION */
+
+    .photo-contact::after {
+      content: "";
+
+      position: absolute;
+
+      left: -5%;
+
+      bottom: 0;
+
+      width: 110%;
+
+      height: 95px;
+
+      background: #fff;
+
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+      transform: translateY(48px);
+
+      z-index: 4;
+
+      pointer-events: none;
+    }
+
     /* CONTACT */
 
     .contact-section {
@@ -467,7 +486,7 @@
 
       text-align: center;
 
-      padding: 120px 7% !important;
+      padding: 145px 7% 120px !important;
 
       background-image:
         url("IMG_5606.jpg");
@@ -483,24 +502,6 @@
       overflow: hidden;
 
       position: relative;
-    }
-
-    .contact-section::before {
-      content: "";
-
-      position: absolute;
-
-      top: -1px;
-      left: 0;
-
-      width: 100%;
-      height: 70px;
-
-      background: #fff;
-
-      clip-path: ellipse(58% 55% at 50% 0%);
-
-      pointer-events: none;
     }
 
     .contact-section h2,
@@ -602,6 +603,16 @@
         width: 250px;
 
         height: 330px;
+      }
+
+      .photo-contact::after {
+        height: 70px;
+
+        transform: translateY(35px);
+      }
+
+      .contact-section {
+        padding-top: 115px !important;
       }
 
       footer {
@@ -735,78 +746,86 @@
   </section>
 
 
-  <!-- PHOTO LOOP -->
+  <!-- PHOTO + LET'S LEARN AS ONE SECTION -->
 
-  <section class="photo-section">
-
-    <div class="photo-track">
-
-      <img
-        src="IMG_5085.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_8766.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_5125.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_5126.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_5085.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_8766.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_5125.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-      <img
-        src="IMG_5126.jpeg"
-        alt=""
-        draggable="false"
-      >
-
-    </div>
-
-  </section>
+  <div class="photo-contact">
 
 
-  <!-- CONTACT -->
+    <!-- PHOTO LOOP -->
 
-  <section class="contact-section reveal">
+    <section class="photo-section">
 
-    <h2>
-      Let’s learn together.
-    </h2>
+      <div class="photo-track">
 
-    <p>
-      Curious about medicine? Come explore with us.
-    </p>
+        <img
+          src="IMG_5085.jpeg"
+          alt=""
+          draggable="false"
+        >
 
-  </section>
+        <img
+          src="IMG_8766.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_5125.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_5126.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_5085.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_8766.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_5125.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+        <img
+          src="IMG_5126.jpeg"
+          alt=""
+          draggable="false"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact-section">
+
+      <h2>
+        Let’s learn together.
+      </h2>
+
+      <p>
+        Curious about medicine? Come explore with us.
+      </p>
+
+    </section>
+
+
+  </div>
 
 
   <!-- FOOTER -->
@@ -851,7 +870,9 @@
     document.addEventListener("contextmenu", function(event) {
 
       if (event.target.tagName === "IMG") {
+
         event.preventDefault();
+
       }
 
     });
@@ -860,7 +881,9 @@
     document.addEventListener("dragstart", function(event) {
 
       if (event.target.tagName === "IMG") {
+
         event.preventDefault();
+
       }
 
     });
