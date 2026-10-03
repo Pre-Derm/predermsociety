@@ -25,21 +25,46 @@
 
     html {
       width: 100%;
+
       overflow-x: hidden;
+
       overscroll-behavior-x: none;
+
+      scroll-behavior: smooth;
     }
 
     body {
       width: 100%;
+
       max-width: 100%;
 
       overflow-x: hidden;
+
       overscroll-behavior-x: none;
 
       font-family: "DM Sans", sans-serif;
 
       color: #222;
+
       background: #fff;
+    }
+
+    /* SCROLL REVEAL */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(45px);
+
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
     }
 
     /* HERO */
@@ -47,13 +72,16 @@
     .about-hero {
 
       min-height: 75vh;
+
       width: 100%;
 
       background-image:
         url("Untitled514_20260929201039.jpeg");
 
       background-size: cover;
+
       background-position: center;
+
       background-repeat: no-repeat;
 
       position: relative;
@@ -61,6 +89,7 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
@@ -140,6 +169,7 @@
       position: absolute;
 
       top: 30px;
+
       left: 7%;
 
       z-index: 5;
@@ -234,13 +264,32 @@
       color: #555;
     }
 
-    .story-photo {
+    /* PHOTO COLLAGE */
+
+    .story-photo-area {
+
+      position: relative;
+
+      width: 100%;
+
+      max-width: 500px;
+
+      justify-self: end;
+
+      min-height: 570px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .story-photo-main {
 
       width: 100%;
 
       max-width: 470px;
-
-      justify-self: end;
 
       padding: 12px;
 
@@ -251,9 +300,13 @@
       transform: rotate(5deg);
 
       pointer-events: none;
+
+      position: relative;
+
+      z-index: 1;
     }
 
-    .story-photo img {
+    .story-photo-main img {
 
       display: block;
 
@@ -270,6 +323,60 @@
       -webkit-user-drag: none;
 
       pointer-events: none;
+    }
+
+    .story-small-photo {
+
+      position: absolute;
+
+      width: 150px;
+
+      padding: 8px;
+
+      background: #fff;
+
+      box-shadow: 0 15px 35px rgba(0,0,0,.16);
+
+      z-index: 3;
+
+      pointer-events: none;
+    }
+
+    .story-small-photo img {
+
+      display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      user-select: none;
+
+      -webkit-user-select: none;
+
+      -webkit-touch-callout: none;
+
+      -webkit-user-drag: none;
+
+      pointer-events: none;
+    }
+
+    .story-small-top {
+
+      top: 35px;
+
+      left: 10px;
+
+      transform: rotate(-9deg);
+    }
+
+    .story-small-bottom {
+
+      bottom: 20px;
+
+      left: 0;
+
+      transform: rotate(8deg);
     }
 
     /* OUR MISSION */
@@ -457,6 +564,16 @@
       line-height: 1.8;
     }
 
+    /* WAVY TRANSITION INTO JOIN */
+
+    .join-section {
+      margin-top: 0;
+    }
+
+    .join-section::before {
+      clip-path: ellipse(75% 100% at 50% 100%);
+    }
+
     /* FOOTER */
 
     footer {
@@ -536,11 +653,37 @@
         gap: 60px;
       }
 
-      .story-photo {
+      .story-photo-area {
 
-        justify-self: center;
+        min-height: 470px;
 
         max-width: 400px;
+
+        justify-self: center;
+      }
+
+      .story-photo-main {
+
+        max-width: 360px;
+      }
+
+      .story-small-photo {
+
+        width: 115px;
+      }
+
+      .story-small-top {
+
+        top: 25px;
+
+        left: 0;
+      }
+
+      .story-small-bottom {
+
+        bottom: 10px;
+
+        left: 0;
       }
 
       .mission-section {
@@ -606,7 +749,7 @@
 
     <div class="story-inner">
 
-      <div class="story-copy">
+      <div class="story-copy reveal">
 
         <div class="story-label">
           Our Story
@@ -647,13 +790,41 @@
       </div>
 
 
-      <div class="story-photo">
+      <!-- PHOTO COLLAGE -->
 
-        <img
-          src="IMG_5724.jpeg"
-          alt=""
-          draggable="false"
-        >
+      <div class="story-photo-area reveal">
+
+        <div class="story-photo-main">
+
+          <img
+            src="IMG_5724.jpeg"
+            alt=""
+            draggable="false"
+          >
+
+        </div>
+
+
+        <div class="story-small-photo story-small-top">
+
+          <img
+            src="IMG_5799.jpeg"
+            alt=""
+            draggable="false"
+          >
+
+        </div>
+
+
+        <div class="story-small-photo story-small-bottom">
+
+          <img
+            src="IMG_5801.jpeg"
+            alt=""
+            draggable="false"
+          >
+
+        </div>
 
       </div>
 
@@ -664,7 +835,7 @@
 
   <!-- OUR MISSION -->
 
-  <section class="mission-section">
+  <section class="mission-section reveal">
 
     <div class="mission-inner">
 
@@ -689,7 +860,7 @@
 
   <!-- EXPLORE MEDICINE -->
 
-  <section class="join-section">
+  <section class="join-section reveal">
 
     <div class="join-inner">
 
@@ -749,16 +920,64 @@
     document.addEventListener("contextmenu", function(event) {
 
       if (event.target.tagName === "IMG") {
+
         event.preventDefault();
+
       }
 
     });
 
+
     document.addEventListener("dragstart", function(event) {
 
       if (event.target.tagName === "IMG") {
+
         event.preventDefault();
+
       }
+
+    });
+
+  </script>
+
+
+  <!-- SCROLL REVEAL -->
+
+  <script>
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
 
     });
 
