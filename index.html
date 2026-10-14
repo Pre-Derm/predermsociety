@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +69,7 @@
       max-width: 1000px;
       position: relative;
       z-index: 5;
-      padding-bottom: 220px;
+      padding-bottom: 260px;
     }
 
     .eyebrow {
@@ -111,23 +110,30 @@
       transform: translateY(-3px);
     }
 
-    /* LARGE CLUB PHOTO IN HERO */
+    /* LARGE CLUB PHOTO: GENTLY FADES IN WHEN SCROLLING INTO VIEW */
 
     .hero-club-photo {
       position: absolute;
-      left: 7%;
+      left: 4%;
       bottom: 0;
-      width: 86%;
-      height: 240px;
+      width: 92%;
+      height: 285px;
       object-fit: contain;
       object-position: center bottom;
-      opacity: 0.96;
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
       z-index: 4;
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
       -webkit-user-drag: none;
       pointer-events: none;
+    }
+
+    .hero-club-photo.visible {
+      opacity: 0.92;
+      transform: translateY(0);
     }
 
     /* COLOR SECTION */
@@ -309,7 +315,7 @@
       pointer-events: none;
     }
 
-    /* SHOW THE FULL CLUB PHOTO WITHOUT CROPPING PEOPLE */
+    /* FULL WIDTH OF CLUB PHOTO, SAME LOOP TILE SIZE */
 
     .photo-track img.club-loop-photo {
       object-fit: contain;
@@ -420,13 +426,13 @@
       }
 
       .hero-content {
-        padding-bottom: 205px;
+        padding-bottom: 225px;
       }
 
       .hero-club-photo {
-        left: 5%;
-        width: 90%;
-        height: 205px;
+        left: 3%;
+        width: 94%;
+        height: 235px;
         bottom: 0;
       }
 
@@ -453,6 +459,12 @@
         text-align: center;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-club-photo {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
@@ -477,7 +489,7 @@
       </a>
     </div>
 
-    <!-- ONLY THE LARGE CLUB PHOTO IN THE HERO -->
+    <!-- ONLY THE LARGE CLUB PHOTO -->
 
     <img
       class="hero-club-photo"
@@ -586,118 +598,5 @@
     <!-- CONTACT -->
 
     <section class="contact-section">
-      <h2>Let’s learn together.</h2>
+      <h2>Let’s learn together
 
-      <p>
-        Curious about medicine? Come explore with us.
-      </p>
-    </section>
-
-  </div>
-
-  <!-- FOOTER -->
-
-  <footer>
-    <p>© 2026 Pre-Derm Society</p>
-
-    <div class="footer-socials">
-      <a
-        href="https://www.instagram.com/prederm_society/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Instagram</a>
-
-      <a
-        href="https://www.tiktok.com/@prederm_society"
-        target="_blank"
-        rel="noopener noreferrer"
-      >TikTok</a>
-
-      <a href="mailto:predermsociety@gmail.com">Email</a>
-    </div>
-  </footer>
-
-  <!-- IMAGE PROTECTION -->
-
-  <script>
-    document.addEventListener("contextmenu", function(event) {
-      if (event.target.tagName === "IMG") {
-        event.preventDefault();
-      }
-    });
-
-    document.addEventListener("dragstart", function(event) {
-      if (event.target.tagName === "IMG") {
-        event.preventDefault();
-      }
-    });
-  </script>
-
-  <!-- SCROLL REVEAL: ELEMENTS STAY VISIBLE -->
-
-  <script>
-    const revealElements = document.querySelectorAll(".reveal");
-
-    const revealObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-    revealElements.forEach(element => {
-      revealObserver.observe(element);
-    });
-  </script>
-
-  <!-- IMPACT COUNTERS -->
-
-  <script>
-    const numbers = document.querySelectorAll(".stat-number");
-
-    const counterObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const number = entry.target;
-            const target = Number(number.dataset.target);
-
-            let current = 0;
-            const increment = target / 60;
-
-            const updateNumber = () => {
-              current += increment;
-
-              if (current < target) {
-                number.textContent = Math.floor(current);
-                requestAnimationFrame(updateNumber);
-              } else {
-                number.textContent = target + "+";
-              }
-            };
-
-            updateNumber();
-            counterObserver.unobserve(number);
-          }
-        });
-      },
-      {
-        threshold: 0.5
-      }
-    );
-
-    numbers.forEach(number => {
-      counterObserver.observe(number);
-    });
-  </script>
-
-</body>
-</html>
-```
