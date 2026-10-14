@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +70,7 @@
       max-width: 1000px;
       position: relative;
       z-index: 5;
+      padding-bottom: 220px;
     }
 
     .eyebrow {
@@ -110,54 +111,23 @@
       transform: translateY(-3px);
     }
 
-    /* ORIGINAL HERO PHOTO - UNCHANGED */
+    /* LARGE CLUB PHOTO IN HERO */
 
-    .cover-photo-frame {
+    .hero-club-photo {
       position: absolute;
-      left: 8%;
-      bottom: 7%;
-      width: 190px;
-      padding: 10px;
-      background: #fff;
-      box-shadow: 0 18px 40px rgba(0,0,0,.18);
-      transform: rotate(-8deg);
+      left: 7%;
+      bottom: 0;
+      width: 86%;
+      height: 240px;
+      object-fit: contain;
+      object-position: center bottom;
+      opacity: 0.96;
       z-index: 4;
-      pointer-events: none;
-    }
-
-    .cover-photo-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
       -webkit-user-drag: none;
       pointer-events: none;
-    }
-
-    /* CLUB PHOTO IN HERO - SLIGHTLY BIGGER, NO FRAME, SUBTLY FADED */
-
-    .cover-photo-frame-club {
-      left: auto;
-      right: 6%;
-      bottom: 8%;
-      width: 220px;
-      padding: 0;
-      background: transparent;
-      box-shadow: none;
-      transform: rotate(3deg);
-      opacity: 0.94;
-      z-index: 4;
-    }
-
-    .cover-photo-frame-club img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: none;
-      box-shadow: none;
-      opacity: 1;
     }
 
     /* COLOR SECTION */
@@ -339,8 +309,7 @@
       pointer-events: none;
     }
 
-    /* CLUB PHOTO ONLY: SHOW FULL HORIZONTAL WIDTH
-       WHILE KEEPING THE SAME LOOP TILE SIZE */
+    /* SHOW THE FULL CLUB PHOTO WITHOUT CROPPING PEOPLE */
 
     .photo-track img.club-loop-photo {
       object-fit: contain;
@@ -450,19 +419,15 @@
         letter-spacing: -4px;
       }
 
-      .cover-photo-frame {
-        width: 140px;
-        left: 5%;
-        bottom: 5%;
-        padding: 8px;
+      .hero-content {
+        padding-bottom: 205px;
       }
 
-      .cover-photo-frame-club {
-        left: auto;
-        right: 4%;
-        bottom: 6%;
-        width: 155px;
-        padding: 0;
+      .hero-club-photo {
+        left: 5%;
+        width: 90%;
+        height: 205px;
+        bottom: 0;
       }
 
       .impact-stats {
@@ -512,25 +477,14 @@
       </a>
     </div>
 
-    <!-- ORIGINAL HERO PHOTO - KEPT UNCHANGED -->
+    <!-- ONLY THE LARGE CLUB PHOTO IN THE HERO -->
 
-    <div class="cover-photo-frame">
-      <img
-        src="IMG_5085.jpeg"
-        alt=""
-        draggable="false"
-      >
-    </div>
-
-    <!-- CLUB PHOTO - LARGER, NO WHITE FRAME, VERY SLIGHTLY FADED -->
-
-    <div class="cover-photo-frame cover-photo-frame-club">
-      <img
-        src="Untitled521_20261014154251.png"
-        alt="Pre-Derm Society club meeting"
-        draggable="false"
-      >
-    </div>
+    <img
+      class="hero-club-photo"
+      src="Untitled521_20261014154251.png"
+      alt="Pre-Derm Society club meeting"
+      draggable="false"
+    >
 
   </section>
 
@@ -600,7 +554,11 @@
           draggable="false"
         >
 
-        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
+        <img
+          src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg"
+          alt="Pre-Derm Society"
+          draggable="false"
+        >
 
         <!-- SECOND HALF: MATCHING ORDER FOR SEAMLESS LOOP -->
 
@@ -616,7 +574,11 @@
           draggable="false"
         >
 
-        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
+        <img
+          src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg"
+          alt="Pre-Derm Society"
+          draggable="false"
+        >
 
       </div>
     </section>
