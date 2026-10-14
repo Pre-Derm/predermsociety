@@ -69,7 +69,7 @@
       max-width: 1000px;
       position: relative;
       z-index: 5;
-      padding-bottom: 260px;
+      padding-bottom: 300px;
     }
 
     .eyebrow {
@@ -110,19 +110,22 @@
       transform: translateY(-3px);
     }
 
-    /* LARGE CLUB PHOTO: GENTLY FADES IN WHEN SCROLLING INTO VIEW */
+    /* LARGE, SOFTLY FADED CLUB PHOTO */
 
     .hero-club-photo {
       position: absolute;
-      left: 4%;
+      left: 2%;
       bottom: 0;
-      width: 92%;
-      height: 285px;
+      width: 96%;
+      height: 320px;
       object-fit: contain;
       object-position: center bottom;
+
+      /* Starts hidden, then gently appears on scroll */
       opacity: 0;
       transform: translateY(35px);
-      transition: opacity 1.2s ease, transform 1.2s ease;
+      transition: opacity 1.3s ease, transform 1.3s ease;
+
       z-index: 4;
       user-select: none;
       -webkit-user-select: none;
@@ -132,7 +135,7 @@
     }
 
     .hero-club-photo.visible {
-      opacity: 0.92;
+      opacity: 0.68;
       transform: translateY(0);
     }
 
@@ -315,14 +318,6 @@
       pointer-events: none;
     }
 
-    /* FULL WIDTH OF CLUB PHOTO, SAME LOOP TILE SIZE */
-
-    .photo-track img.club-loop-photo {
-      object-fit: contain;
-      object-position: center;
-      background: #fff;
-    }
-
     @keyframes scrollPhotos {
       from {
         transform: translate3d(0,0,0);
@@ -426,13 +421,13 @@
       }
 
       .hero-content {
-        padding-bottom: 225px;
+        padding-bottom: 250px;
       }
 
       .hero-club-photo {
-        left: 3%;
-        width: 94%;
-        height: 235px;
+        left: 1%;
+        width: 98%;
+        height: 260px;
         bottom: 0;
       }
 
@@ -489,7 +484,7 @@
       </a>
     </div>
 
-    <!-- ONLY THE LARGE CLUB PHOTO -->
+    <!-- ONLY THE LARGE CLUB PHOTO IN THE HERO -->
 
     <img
       class="hero-club-photo"
@@ -552,25 +547,13 @@
     <section class="photo-section">
       <div class="photo-track">
 
-        <!-- FIRST HALF OF LOOP -->
+        <!-- FIRST HALF OF LOOP: OTHER PHOTOS ONLY -->
 
         <img src="IMG_5085.jpeg" alt="" draggable="false">
         <img src="IMG_8766.jpeg" alt="" draggable="false">
         <img src="IMG_5125.jpeg" alt="" draggable="false">
         <img src="IMG_5126.jpeg" alt="" draggable="false">
-
-        <img
-          class="club-loop-photo"
-          src="Untitled521_20261014154251.png"
-          alt="Pre-Derm Society club meeting"
-          draggable="false"
-        >
-
-        <img
-          src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg"
-          alt="Pre-Derm Society"
-          draggable="false"
-        >
+        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
         <!-- SECOND HALF: MATCHING ORDER FOR SEAMLESS LOOP -->
 
@@ -578,19 +561,7 @@
         <img src="IMG_8766.jpeg" alt="" draggable="false">
         <img src="IMG_5125.jpeg" alt="" draggable="false">
         <img src="IMG_5126.jpeg" alt="" draggable="false">
-
-        <img
-          class="club-loop-photo"
-          src="Untitled521_20261014154251.png"
-          alt="Pre-Derm Society club meeting"
-          draggable="false"
-        >
-
-        <img
-          src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg"
-          alt="Pre-Derm Society"
-          draggable="false"
-        >
+        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
       </div>
     </section>
@@ -598,5 +569,141 @@
     <!-- CONTACT -->
 
     <section class="contact-section">
-      <h2>Let’s learn together
+      <h2>Let’s learn together.</h2>
 
+      <p>
+        Curious about medicine? Come explore with us.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Pre-Derm Society</p>
+
+    <div class="footer-socials">
+      <a
+        href="https://www.instagram.com/prederm_society/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram</a>
+
+      <a
+        href="https://www.tiktok.com/@prederm_society"
+        target="_blank"
+        rel="noopener noreferrer"
+      >TikTok</a>
+
+      <a href="mailto:predermsociety@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <!-- IMAGE PROTECTION -->
+
+  <script>
+    document.addEventListener("contextmenu", function(event) {
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
+
+    document.addEventListener("dragstart", function(event) {
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
+  </script>
+
+  <!-- SCROLL REVEAL: ELEMENTS STAY VISIBLE -->
+
+  <script>
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+  <!-- CLUB PHOTO FADES IN WHEN IT ENTERS THE VIEWPORT -->
+
+  <script>
+    const clubPhoto = document.querySelector(".hero-club-photo");
+
+    if (clubPhoto) {
+      const clubPhotoObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              clubPhoto.classList.add("visible");
+              clubPhotoObserver.unobserve(clubPhoto);
+            }
+          });
+        },
+        {
+          threshold: 0.1
+        }
+      );
+
+      clubPhotoObserver.observe(clubPhoto);
+    }
+  </script>
+
+  <!-- IMPACT COUNTERS -->
+
+  <script>
+    const numbers = document.querySelectorAll(".stat-number");
+
+    const counterObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const number = entry.target;
+            const target = Number(number.dataset.target);
+
+            let current = 0;
+            const increment = target / 60;
+
+            const updateNumber = () => {
+              current += increment;
+
+              if (current < target) {
+                number.textContent = Math.floor(current);
+                requestAnimationFrame(updateNumber);
+              } else {
+                number.textContent = target + "+";
+              }
+            };
+
+            updateNumber();
+            counterObserver.unobserve(number);
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+    numbers.forEach(number => {
+      counterObserver.observe(number);
+    });
+  </script>
+
+</body>
+</html>
