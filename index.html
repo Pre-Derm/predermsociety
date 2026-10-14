@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +9,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -34,9 +30,7 @@
       max-width: 100%;
       overflow-x: hidden;
       overscroll-behavior-x: none;
-
       font-family: "DM Sans", sans-serif;
-
       color: #222;
       background: #fff;
     }
@@ -46,10 +40,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(45px);
-
-      transition:
-        opacity 1s ease,
-        transform 1s ease;
+      transition: opacity 1s ease, transform 1s ease;
     }
 
     .reveal.visible {
@@ -62,57 +53,39 @@
     .hero {
       min-height: 100vh;
       width: 100%;
-
-      background-image:
-        url("Untitled514_20260929201039.jpeg");
-
+      background-image: url("Untitled514_20260929201039.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       position: relative;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
-
       padding: 80px 7%;
-
       overflow: hidden;
     }
 
     .hero-content {
       max-width: 1000px;
-
       position: relative;
       z-index: 5;
     }
 
     .eyebrow {
       color: #fff;
-
       font-size: 12px;
-
       font-weight: 600;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
-
       margin-bottom: 22px;
     }
 
     .hero h1 {
       color: #fff;
-
       font-size: clamp(70px, 12vw, 170px);
-
       line-height: .84;
-
       font-weight: 600;
-
       letter-spacing: -6px;
     }
 
@@ -122,23 +95,14 @@
 
     .hero-button {
       display: inline-block;
-
       margin-top: 45px;
-
       padding: 15px 27px;
-
       background: #fff;
-
       color: #222;
-
       text-decoration: none;
-
       font-size: 14px;
-
       font-weight: 600;
-
       border-radius: 100px;
-
       transition: transform .2s ease;
     }
 
@@ -148,150 +112,112 @@
 
     .cover-photo-frame {
       position: absolute;
-
       left: 8%;
       bottom: 7%;
-
       width: 190px;
-
       padding: 10px;
-
       background: #fff;
-
       box-shadow: 0 18px 40px rgba(0,0,0,.18);
-
       transform: rotate(-8deg);
-
       z-index: 4;
-
       pointer-events: none;
     }
 
     .cover-photo-frame img {
       display: block;
-
       width: 100%;
       height: auto;
-
       user-select: none;
-
       -webkit-user-select: none;
-
       -webkit-touch-callout: none;
-
       -webkit-user-drag: none;
-
       pointer-events: none;
+    }
+
+    /* NEW CLUB PHOTO IN HERO */
+
+    .cover-photo-frame-club {
+      left: auto;
+      right: 7%;
+      bottom: 9%;
+      width: 155px;
+      transform: rotate(7deg);
     }
 
     /* COLOR SECTION */
 
     .color-section {
       width: 100%;
-
       background:
         radial-gradient(
           circle at 50% 0%,
           rgba(255,255,255,0.28),
           transparent 45%
         ),
-
         linear-gradient(
           180deg,
           rgba(244,185,202,.92) 0%,
           rgba(239,175,194,.92) 45%,
           rgba(233,168,188,.92) 100%
         ),
-
         url("Untitled514_20260929201039.jpeg");
-
       background-size: cover;
-
       background-position: center;
-
       background-repeat: no-repeat;
-
       color: #fff;
-
       padding: 120px 7%;
-
       text-align: center;
-
       overflow: hidden;
-
       position: relative;
     }
 
     .color-section::after {
       content: "";
-
       position: absolute;
-
       bottom: -1px;
       left: 0;
-
       width: 100%;
       height: 75px;
-
       background: #fff;
-
       clip-path: ellipse(58% 55% at 50% 100%);
-
       z-index: 3;
-
       pointer-events: none;
     }
 
     .color-section::before {
       content: "";
-
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 100%;
       height: 90px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(255,255,255,0.12),
-          transparent
-        );
-
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.12),
+        transparent
+      );
       pointer-events: none;
     }
 
     .color-inner {
       max-width: 900px;
-
       margin: 0 auto;
-
       position: relative;
-
       z-index: 2;
     }
 
     .color-section h2 {
       font-size: clamp(48px,7vw,90px);
-
       line-height: .95;
-
       letter-spacing: -4px;
-
       font-weight: 600;
-
       margin-bottom: 25px;
     }
 
     .color-section p {
       max-width: 680px;
-
       margin: 0 auto;
-
       font-size: 18px;
-
       line-height: 1.8;
     }
 
@@ -299,87 +225,62 @@
 
     .impact-section {
       width: 100%;
-
       padding: 120px 7% 150px;
-
       background: #fff;
-
       overflow: hidden;
-
       position: relative;
     }
 
     .impact-inner {
       max-width: 1100px;
-
       margin: 0 auto;
     }
 
     .impact-heading {
       text-align: center;
-
       margin-bottom: 70px;
     }
 
     .impact-heading span {
       display: block;
-
       font-size: 12px;
-
       font-weight: 600;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
-
       margin-bottom: 18px;
     }
 
     .impact-heading h2 {
       font-size: clamp(45px,6vw,75px);
-
       line-height: 1;
-
       letter-spacing: -3px;
-
       font-weight: 600;
     }
 
     .impact-stats {
       display: grid;
-
       grid-template-columns: repeat(2,1fr);
-
       gap: 40px;
     }
 
     .stat {
       text-align: center;
-
       padding: 40px 20px;
     }
 
     .stat-number {
       font-size: clamp(60px,8vw,100px);
-
       font-weight: 600;
-
       letter-spacing: -5px;
-
       line-height: 1;
-
       margin-bottom: 15px;
     }
 
     .stat-label {
       font-size: 14px;
-
       color: #666;
-
       text-transform: uppercase;
-
       letter-spacing: 1.5px;
-
       font-weight: 600;
     }
 
@@ -387,11 +288,8 @@
 
     .photo-contact {
       position: relative;
-
       width: 100%;
-
       background: #fff;
-
       overflow: hidden;
     }
 
@@ -399,50 +297,33 @@
 
     .photo-section {
       width: 100%;
-
       max-width: 100vw;
-
       overflow: hidden;
-
       background: #fff;
-
       touch-action: pan-y;
-
       position: relative;
     }
 
     .photo-track {
       display: flex;
-
       width: max-content;
-
       animation: scrollPhotos 28s linear infinite;
-
       will-change: transform;
     }
 
     .photo-track img {
       width: 330px;
-
       height: 420px;
-
       object-fit: cover;
-
       flex-shrink: 0;
-
       user-select: none;
-
       -webkit-user-select: none;
-
       -webkit-touch-callout: none;
-
       -webkit-user-drag: none;
-
       pointer-events: none;
     }
 
     @keyframes scrollPhotos {
-
       from {
         transform: translate3d(0,0,0);
       }
@@ -450,32 +331,21 @@
       to {
         transform: translate3d(-50%,0,0);
       }
-
     }
 
-    /* WAVY TRANSITION */
+    /* SMOOTH WAVE BETWEEN PHOTO LOOP AND CONTACT */
 
     .photo-contact::after {
       content: "";
-
       position: absolute;
-
       left: -5%;
-
       bottom: 0;
-
       width: 110%;
-
       height: 95px;
-
       background: #fff;
-
       border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-
       transform: translateY(48px);
-
       z-index: 4;
-
       pointer-events: none;
     }
 
@@ -483,53 +353,35 @@
 
     .contact-section {
       width: 100%;
-
       text-align: center;
-
       padding: 145px 7% 120px !important;
-
-      background-image:
-        url("IMG_5606.jpg");
-
+      background-image: url("IMG_5606.jpg");
       background-size: cover;
-
       background-position: center;
-
       background-repeat: no-repeat;
-
       color: #fff;
-
       overflow: hidden;
-
       position: relative;
     }
 
     .contact-section h2,
     .contact-section p {
       position: relative;
-
       z-index: 2;
     }
 
     .contact-section h2 {
       font-size: clamp(50px,7vw,90px);
-
       line-height: .95;
-
       letter-spacing: -4px;
-
       font-weight: 600;
-
       margin-bottom: 25px;
     }
 
     .contact-section p {
       font-size: 18px;
-
       line-height: 1.8;
-
       max-width: 650px;
-
       margin: 0 auto;
     }
 
@@ -537,46 +389,34 @@
 
     footer {
       width: 100%;
-
       background: #fff;
-
       padding: 35px 7%;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
       gap: 20px;
     }
 
     footer p {
       font-size: 13px;
-
       color: #777;
     }
 
     .footer-socials {
       display: flex;
-
       gap: 20px;
     }
 
     .footer-socials a {
       color: #222;
-
       text-decoration: none;
-
       font-size: 13px;
-
       font-weight: 600;
     }
 
     /* MOBILE */
 
     @media (max-width:800px) {
-
       .hero {
         padding: 80px 7%;
       }
@@ -587,12 +427,16 @@
 
       .cover-photo-frame {
         width: 140px;
-
         left: 5%;
-
         bottom: 5%;
-
         padding: 8px;
+      }
+
+      .cover-photo-frame-club {
+        left: auto;
+        right: 5%;
+        bottom: 6%;
+        width: 115px;
       }
 
       .impact-stats {
@@ -601,13 +445,11 @@
 
       .photo-track img {
         width: 250px;
-
         height: 330px;
       }
 
       .photo-contact::after {
         height: 70px;
-
         transform: translateY(35px);
       }
 
@@ -617,25 +459,20 @@
 
       footer {
         flex-direction: column;
-
         text-align: center;
       }
-
     }
 
   </style>
-
 </head>
 
 <body>
-
 
   <!-- HERO -->
 
   <section class="hero">
 
     <div class="hero-content">
-
       <div class="eyebrow">
         STUDENT-LED • MEDICINE • DERMATOLOGY
       </div>
@@ -645,34 +482,37 @@
         <span>Society</span>
       </h1>
 
-      <a
-        href="about.html"
-        class="hero-button"
-      >
+      <a href="about.html" class="hero-button">
         Learn About Us
       </a>
-
     </div>
 
-    <div class="cover-photo-frame">
+    <!-- ORIGINAL HERO PHOTO - KEPT -->
 
+    <div class="cover-photo-frame">
       <img
         src="IMG_5085.jpeg"
         alt=""
         draggable="false"
       >
+    </div>
 
+    <!-- NEW CLUB MEETING PHOTO -->
+
+    <div class="cover-photo-frame cover-photo-frame-club">
+      <img
+        src="Untitled521_20261014154251.png"
+        alt="Pre-Derm Society club meeting"
+        draggable="false"
+      >
     </div>
 
   </section>
 
-
   <!-- LEARN / RESEARCH -->
 
   <section class="color-section reveal">
-
     <div class="color-inner">
-
       <h2>
         Learn. Research.<br>
         Discover medicine.
@@ -682,333 +522,181 @@
         A student-led community exploring dermatology,
         skincare science, medicine, research, and healthcare education.
       </p>
-
     </div>
-
   </section>
-
 
   <!-- IMPACT -->
 
   <section class="impact-section">
-
     <div class="impact-inner">
 
       <div class="impact-heading reveal">
-
-        <span>
-          Our Impact
-        </span>
+        <span>Our Impact</span>
 
         <h2>
           Learning beyond the classroom.
         </h2>
-
       </div>
 
       <div class="impact-stats">
 
         <div class="stat reveal">
-
-          <div
-            class="stat-number"
-            data-target="100"
-          >
-            0
-          </div>
-
-          <div class="stat-label">
-            People Reached
-          </div>
-
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">People Reached</div>
         </div>
 
-
         <div class="stat reveal">
-
-          <div
-            class="stat-number"
-            data-target="38"
-          >
-            0
-          </div>
-
-          <div class="stat-label">
-            Lessons Taught
-          </div>
-
+          <div class="stat-number" data-target="38">0</div>
+          <div class="stat-label">Lessons Taught</div>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- PHOTO + LET'S LEARN AS ONE SECTION -->
+  <!-- PHOTO LOOP + CONTACT AS ONE CONTINUOUS SECTION -->
 
   <div class="photo-contact">
 
-
-    <!-- PHOTO LOOP -->
-
     <section class="photo-section">
-
       <div class="photo-track">
 
-        <img
-          src="IMG_5085.jpeg"
-          alt=""
-          draggable="false"
-        >
+        <!-- FIRST HALF OF LOOP: ORIGINAL PHOTOS + NEW PHOTOS -->
 
-        <img
-          src="IMG_8766.jpeg"
-          alt=""
-          draggable="false"
-        >
+        <img src="IMG_5085.jpeg" alt="" draggable="false">
+        <img src="IMG_8766.jpeg" alt="" draggable="false">
+        <img src="IMG_5125.jpeg" alt="" draggable="false">
+        <img src="IMG_5126.jpeg" alt="" draggable="false">
+        <img src="Untitled521_20261014154251.png" alt="Pre-Derm Society club meeting" draggable="false">
+        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
-        <img
-          src="IMG_5125.jpeg"
-          alt=""
-          draggable="false"
-        >
+        <!-- SECOND HALF: MATCHING ORDER FOR SEAMLESS LOOP -->
 
-        <img
-          src="IMG_5126.jpeg"
-          alt=""
-          draggable="false"
-        >
-
-        <img
-          src="IMG_5085.jpeg"
-          alt=""
-          draggable="false"
-        >
-
-        <img
-          src="IMG_8766.jpeg"
-          alt=""
-          draggable="false"
-        >
-
-        <img
-          src="IMG_5125.jpeg"
-          alt=""
-          draggable="false"
-        >
-
-        <img
-          src="IMG_5126.jpeg"
-          alt=""
-          draggable="false"
-        >
+        <img src="IMG_5085.jpeg" alt="" draggable="false">
+        <img src="IMG_8766.jpeg" alt="" draggable="false">
+        <img src="IMG_5125.jpeg" alt="" draggable="false">
+        <img src="IMG_5126.jpeg" alt="" draggable="false">
+        <img src="Untitled521_20261014154251.png" alt="Pre-Derm Society club meeting" draggable="false">
+        <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
       </div>
-
     </section>
-
 
     <!-- CONTACT -->
 
     <section class="contact-section">
-
-      <h2>
-        Let’s learn together.
-      </h2>
+      <h2>Let’s learn together.</h2>
 
       <p>
         Curious about medicine? Come explore with us.
       </p>
-
     </section>
 
-
   </div>
-
 
   <!-- FOOTER -->
 
   <footer>
-
-    <p>
-      © 2026 Pre-Derm Society
-    </p>
+    <p>© 2026 Pre-Derm Society</p>
 
     <div class="footer-socials">
-
       <a
         href="https://www.instagram.com/prederm_society/"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        Instagram
-      </a>
+      >Instagram</a>
 
       <a
         href="https://www.tiktok.com/@prederm_society"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        TikTok
-      </a>
+      >TikTok</a>
 
-      <a href="mailto:predermsociety@gmail.com">
-        Email
-      </a>
-
+      <a href="mailto:predermsociety@gmail.com">Email</a>
     </div>
-
   </footer>
-
 
   <!-- IMAGE PROTECTION -->
 
   <script>
-
     document.addEventListener("contextmenu", function(event) {
-
       if (event.target.tagName === "IMG") {
-
         event.preventDefault();
-
       }
-
     });
-
 
     document.addEventListener("dragstart", function(event) {
-
       if (event.target.tagName === "IMG") {
-
         event.preventDefault();
-
       }
-
     });
-
   </script>
 
-
-  <!-- SCROLL REVEAL -->
-
-  <script>
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-
-    const revealObserver =
-      new IntersectionObserver(
-
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              revealObserver.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.12
-        }
-
-      );
-
-
-    revealElements.forEach(element => {
-
-      revealObserver.observe(element);
-
-    });
-
-  </script>
-
-
-  <!-- COUNTERS -->
+  <!-- SCROLL REVEAL: ELEMENTS STAY VISIBLE -->
 
   <script>
+    const revealElements = document.querySelectorAll(".reveal");
 
-    const numbers =
-      document.querySelectorAll(".stat-number");
-
-
-    const counterObserver =
-      new IntersectionObserver(
-
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              const number =
-                entry.target;
-
-              const target =
-                Number(number.dataset.target);
-
-              let current = 0;
-
-              const increment =
-                target / 60;
-
-
-              const updateNumber = () => {
-
-                current += increment;
-
-
-                if (current < target) {
-
-                  number.textContent =
-                    Math.floor(current);
-
-                  requestAnimationFrame(
-                    updateNumber
-                  );
-
-                } else {
-
-                  number.textContent =
-                    target + "+";
-
-                }
-
-              };
-
-
-              updateNumber();
-
-              counterObserver.unobserve(number);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.5
-        }
-
-      );
-
-
-    numbers.forEach(number =>
-      counterObserver.observe(number)
+    const revealObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
     );
 
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+  <!-- IMPACT COUNTERS -->
+
+  <script>
+    const numbers = document.querySelectorAll(".stat-number");
+
+    const counterObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const number = entry.target;
+            const target = Number(number.dataset.target);
+
+            let current = 0;
+            const increment = target / 60;
+
+            const updateNumber = () => {
+              current += increment;
+
+              if (current < target) {
+                number.textContent = Math.floor(current);
+                requestAnimationFrame(updateNumber);
+              } else {
+                number.textContent = target + "+";
+              }
+            };
+
+            updateNumber();
+            counterObserver.unobserve(number);
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+    numbers.forEach(number => {
+      counterObserver.observe(number);
+    });
   </script>
 
 </body>
 </html>
+```
