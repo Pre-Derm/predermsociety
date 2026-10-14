@@ -110,6 +110,8 @@
       transform: translateY(-3px);
     }
 
+    /* ORIGINAL HERO PHOTO - UNCHANGED */
+
     .cover-photo-frame {
       position: absolute;
       left: 8%;
@@ -134,14 +136,28 @@
       pointer-events: none;
     }
 
-    /* NEW CLUB PHOTO IN HERO */
+    /* CLUB PHOTO IN HERO - SLIGHTLY BIGGER, NO FRAME, SUBTLY FADED */
 
     .cover-photo-frame-club {
       left: auto;
-      right: 7%;
-      bottom: 9%;
-      width: 155px;
-      transform: rotate(7deg);
+      right: 6%;
+      bottom: 8%;
+      width: 220px;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+      transform: rotate(3deg);
+      opacity: 0.94;
+      z-index: 4;
+    }
+
+    .cover-photo-frame-club img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none;
+      box-shadow: none;
+      opacity: 1;
     }
 
     /* COLOR SECTION */
@@ -323,6 +339,15 @@
       pointer-events: none;
     }
 
+    /* CLUB PHOTO ONLY: SHOW FULL HORIZONTAL WIDTH
+       WHILE KEEPING THE SAME LOOP TILE SIZE */
+
+    .photo-track img.club-loop-photo {
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+    }
+
     @keyframes scrollPhotos {
       from {
         transform: translate3d(0,0,0);
@@ -434,9 +459,10 @@
 
       .cover-photo-frame-club {
         left: auto;
-        right: 5%;
+        right: 4%;
         bottom: 6%;
-        width: 115px;
+        width: 155px;
+        padding: 0;
       }
 
       .impact-stats {
@@ -462,7 +488,6 @@
         text-align: center;
       }
     }
-
   </style>
 </head>
 
@@ -487,7 +512,7 @@
       </a>
     </div>
 
-    <!-- ORIGINAL HERO PHOTO - KEPT -->
+    <!-- ORIGINAL HERO PHOTO - KEPT UNCHANGED -->
 
     <div class="cover-photo-frame">
       <img
@@ -497,7 +522,7 @@
       >
     </div>
 
-    <!-- NEW CLUB MEETING PHOTO -->
+    <!-- CLUB PHOTO - LARGER, NO WHITE FRAME, VERY SLIGHTLY FADED -->
 
     <div class="cover-photo-frame cover-photo-frame-club">
       <img
@@ -561,13 +586,20 @@
     <section class="photo-section">
       <div class="photo-track">
 
-        <!-- FIRST HALF OF LOOP: ORIGINAL PHOTOS + NEW PHOTOS -->
+        <!-- FIRST HALF OF LOOP -->
 
         <img src="IMG_5085.jpeg" alt="" draggable="false">
         <img src="IMG_8766.jpeg" alt="" draggable="false">
         <img src="IMG_5125.jpeg" alt="" draggable="false">
         <img src="IMG_5126.jpeg" alt="" draggable="false">
-        <img src="Untitled521_20261014154251.png" alt="Pre-Derm Society club meeting" draggable="false">
+
+        <img
+          class="club-loop-photo"
+          src="Untitled521_20261014154251.png"
+          alt="Pre-Derm Society club meeting"
+          draggable="false"
+        >
+
         <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
         <!-- SECOND HALF: MATCHING ORDER FOR SEAMLESS LOOP -->
@@ -576,7 +608,14 @@
         <img src="IMG_8766.jpeg" alt="" draggable="false">
         <img src="IMG_5125.jpeg" alt="" draggable="false">
         <img src="IMG_5126.jpeg" alt="" draggable="false">
-        <img src="Untitled521_20261014154251.png" alt="Pre-Derm Society club meeting" draggable="false">
+
+        <img
+          class="club-loop-photo"
+          src="Untitled521_20261014154251.png"
+          alt="Pre-Derm Society club meeting"
+          draggable="false"
+        >
+
         <img src="02EB2628-65CA-476A-AFBD-57096CC2F265.jpeg" alt="Pre-Derm Society" draggable="false">
 
       </div>
