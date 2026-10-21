@@ -55,7 +55,7 @@
       transform: translateY(0);
     }
 
-    /* HERO */
+    /* HERO - UNCHANGED */
 
     .about-hero {
       min-height: 75vh;
@@ -116,7 +116,7 @@
       line-height: 1.8;
     }
 
-    /* HOME BUTTON */
+    /* HOME BUTTON - UNCHANGED */
 
     .home-button {
       position: absolute;
@@ -138,21 +138,119 @@
       transform: translateY(-3px);
     }
 
-    /* EVENTS */
+    /* EVENTS SECTION */
 
     .story-section {
       width: 100%;
       padding: 130px 7%;
       background: #fff;
       overflow: hidden;
+      position: relative;
+      isolation: isolate;
     }
+
+    /* ANIMATED PHOTO BACKGROUND */
+
+    .events-background {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background: #fce8f0;
+    }
+
+    .events-background-photo {
+      position: absolute;
+      inset: -15%;
+      width: 130%;
+      height: 130%;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      opacity: 0;
+      filter: blur(7px);
+
+      animation: eventPhotoSlideshow 24s linear infinite;
+      will-change: opacity;
+    }
+
+    /* PHOTO 1 */
+
+    .events-background-photo:nth-child(1) {
+      background-image: url("IMG_6071.jpeg");
+      animation-delay: 0s;
+    }
+
+    /* PHOTO 2 */
+
+    .events-background-photo:nth-child(2) {
+      background-image: url("IMG_6068.jpeg");
+      animation-delay: -18s;
+    }
+
+    /* PHOTO 3 */
+
+    .events-background-photo:nth-child(3) {
+      background-image: url("IMG_6076.jpeg");
+      animation-delay: -12s;
+    }
+
+    /* PHOTO 4 */
+
+    .events-background-photo:nth-child(4) {
+      background-image: url("Untitled521_20261014154251.png");
+      animation-delay: -6s;
+    }
+
+    /* ONE PHOTO AT A TIME, CHANGING EVERY 6 SECONDS */
+
+    @keyframes eventPhotoSlideshow {
+
+      0% {
+        opacity: 0;
+      }
+
+      3% {
+        opacity: 1;
+      }
+
+      22% {
+        opacity: 1;
+      }
+
+      25% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+
+    }
+
+    /* SOFT PINK OVERLAY */
+
+    .events-background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 229, 239, .72);
+      z-index: 2;
+    }
+
+    /* EVENTS CONTENT */
 
     .story-inner {
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
-    /* EVENTS HEADING - PURPLE AND WHITE GRADIENT */
+    /* EVENTS HEADING - ORIGINAL GRADIENT */
 
     .story-copy h2 {
       font-size: clamp(50px, 6vw, 85px);
@@ -175,7 +273,7 @@
       color: transparent;
     }
 
-    /* KNOW YOUR UV - PURPLE AND WHITE GRADIENT */
+    /* KNOW YOUR UV - ORIGINAL GRADIENT */
 
     .event-title {
       font-size: clamp(30px, 4vw, 48px);
@@ -198,7 +296,7 @@
       color: transparent;
     }
 
-    /* EVENT PHOTO GALLERY */
+    /* EVENT PHOTO GALLERY - UNCHANGED */
 
     .event-gallery {
       display: grid;
@@ -229,7 +327,7 @@
       pointer-events: none;
     }
 
-    /* EXPLORE MEDICINE */
+    /* EXPLORE MEDICINE - UNCHANGED */
 
     .join-section {
       width: 100%;
@@ -296,7 +394,7 @@
       clip-path: ellipse(75% 100% at 50% 100%);
     }
 
-    /* FOOTER */
+    /* FOOTER - UNCHANGED */
 
     footer {
       width: 100%;
@@ -386,13 +484,28 @@
 
     }
 
+    /* REDUCED MOTION */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .events-background-photo {
+        animation: none;
+        opacity: 0;
+      }
+
+      .events-background-photo:first-child {
+        opacity: 1;
+      }
+
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <!-- HERO -->
+  <!-- HERO - UNCHANGED -->
 
   <section class="about-hero">
 
@@ -423,9 +536,20 @@
   </section>
 
 
-  <!-- EVENTS -->
+  <!-- EVENTS - ANIMATED BACKGROUND SLIDESHOW -->
 
   <section class="story-section">
+
+    <!-- BACKGROUND PHOTOS CHANGE ONE AT A TIME -->
+
+    <div class="events-background" aria-hidden="true">
+
+      <div class="events-background-photo"></div>
+      <div class="events-background-photo"></div>
+      <div class="events-background-photo"></div>
+      <div class="events-background-photo"></div>
+
+    </div>
 
     <div class="story-inner">
 
@@ -473,7 +597,7 @@
 
           </div>
 
-          <!-- PHOTO 3 - CORRECTED FILENAME -->
+          <!-- PHOTO 3 -->
 
           <div class="event-photo">
 
@@ -495,7 +619,7 @@
   </section>
 
 
-  <!-- EXPLORE MEDICINE -->
+  <!-- EXPLORE MEDICINE - UNCHANGED -->
 
   <section class="join-section reveal">
 
@@ -515,7 +639,7 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- FOOTER - UNCHANGED -->
 
   <footer>
 
@@ -550,7 +674,7 @@
   </footer>
 
 
-  <!-- IMAGE PROTECTION -->
+  <!-- IMAGE PROTECTION - UNCHANGED -->
 
   <script>
 
@@ -573,7 +697,7 @@
   </script>
 
 
-  <!-- SCROLL REVEAL -->
+  <!-- SCROLL REVEAL - UNCHANGED -->
 
   <script>
 
