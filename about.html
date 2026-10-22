@@ -8,7 +8,7 @@
   <title>About Us · Pre-Derm Society</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
@@ -138,7 +138,7 @@
       transform: translateY(-3px);
     }
 
-    /* EVENTS SECTION */
+    /* EVENTS SECTION - UNCHANGED */
 
     .story-section {
       width: 100%;
@@ -149,7 +149,7 @@
       isolation: isolate;
     }
 
-    /* ANIMATED PHOTO BACKGROUND */
+    /* ANIMATED EVENTS PHOTO BACKGROUND */
 
     .events-background {
       position: absolute;
@@ -177,35 +177,25 @@
       will-change: opacity;
     }
 
-    /* PHOTO 1 */
-
     .events-background-photo:nth-child(1) {
       background-image: url("IMG_6071.jpeg");
       animation-delay: 0s;
     }
-
-    /* PHOTO 2 */
 
     .events-background-photo:nth-child(2) {
       background-image: url("IMG_6068.jpeg");
       animation-delay: -18s;
     }
 
-    /* PHOTO 3 */
-
     .events-background-photo:nth-child(3) {
       background-image: url("IMG_6076.jpeg");
       animation-delay: -12s;
     }
 
-    /* PHOTO 4 */
-
     .events-background-photo:nth-child(4) {
       background-image: url("Untitled521_20261014154251.png");
       animation-delay: -6s;
     }
-
-    /* ONE PHOTO AT A TIME, CHANGING EVERY 6 SECONDS */
 
     @keyframes eventPhotoSlideshow {
 
@@ -325,6 +315,142 @@
       -webkit-touch-callout: none;
       -webkit-user-drag: none;
       pointer-events: none;
+    }
+
+    /* =================================== */
+    /* NEW SECTION: MEET THE TEAM          */
+    /* =================================== */
+
+    .team-section {
+      width: 100%;
+      padding: 125px 7% 140px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .team-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .team-heading {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .team-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b58add;
+      margin-bottom: 20px;
+    }
+
+    .team-heading h2 {
+      font-size: clamp(50px, 7vw, 90px);
+      line-height: .95;
+      letter-spacing: -4px;
+      font-weight: 600;
+
+      background: linear-gradient(
+        110deg,
+        #b58add 0%,
+        #d5b5f4 45%,
+        #ffffff 70%,
+        #a775d1 100%
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .team-heading p {
+      max-width: 600px;
+      margin: 25px auto 0;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #777;
+    }
+
+    /* MATCHING TEAM CARDS */
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px 25px;
+      align-items: stretch;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #f3e9f1;
+      border-radius: 12px;
+      padding: 15px 15px 30px;
+      text-align: center;
+
+      box-shadow: 0 12px 35px rgba(185, 140, 180, .08);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(185, 140, 180, .15);
+    }
+
+    /* ALL TEAM PHOTOS EXACTLY SAME SIZE */
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #f8eef5;
+      margin-bottom: 25px;
+    }
+
+    .team-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    /* NAMES AND POSITIONS */
+
+    .team-name {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .team-position {
+      font-size: 14px;
+      font-weight: 600;
+      color: #a775d1;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .team-grade {
+      font-size: 13px;
+      color: #777;
+      font-weight: 500;
     }
 
     /* EXPLORE MEDICINE - UNCHANGED */
@@ -460,6 +586,17 @@
         justify-self: center;
       }
 
+      /* TEAM TABLET LAYOUT */
+
+      .team-section {
+        padding: 90px 7%;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
       .join-section {
         padding: 90px 7%;
       }
@@ -482,6 +619,23 @@
         max-width: none;
       }
 
+      /* TEAM MOBILE LAYOUT */
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .team-card {
+        max-width: 380px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .team-heading {
+        margin-bottom: 45px;
+      }
+
     }
 
     /* REDUCED MOTION */
@@ -495,6 +649,10 @@
 
       .events-background-photo:first-child {
         opacity: 1;
+      }
+
+      .team-card {
+        transition: none;
       }
 
     }
@@ -536,11 +694,11 @@
   </section>
 
 
-  <!-- EVENTS - ANIMATED BACKGROUND SLIDESHOW -->
+  <!-- EVENTS - UNCHANGED -->
 
   <section class="story-section">
 
-    <!-- BACKGROUND PHOTOS CHANGE ONE AT A TIME -->
+    <!-- ANIMATED BACKGROUND PHOTOS -->
 
     <div class="events-background" aria-hidden="true">
 
@@ -571,8 +729,6 @@
 
         <div class="event-gallery">
 
-          <!-- PHOTO 1 -->
-
           <div class="event-photo">
 
             <img
@@ -583,8 +739,6 @@
             >
 
           </div>
-
-          <!-- PHOTO 2 -->
 
           <div class="event-photo">
 
@@ -597,8 +751,6 @@
 
           </div>
 
-          <!-- PHOTO 3 -->
-
           <div class="event-photo">
 
             <img
@@ -609,6 +761,190 @@
             >
 
           </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================== -->
+  <!-- NEW SECTION: MEET THE TEAM          -->
+  <!-- =================================== -->
+
+  <section class="team-section">
+
+    <div class="team-inner">
+
+      <div class="team-heading reveal">
+
+        <div class="team-eyebrow">
+          PRE-DERM SOCIETY
+        </div>
+
+        <h2>
+          Meet the Team.
+        </h2>
+
+        <p>
+          Meet the students behind Pre-Derm Society,
+          working together to make dermatology and
+          healthcare education more accessible.
+        </p>
+
+      </div>
+
+      <div class="team-grid">
+
+        <!-- HANNAH C. - PRESIDENT -->
+
+        <div class="team-card reveal">
+
+          <div class="team-photo">
+
+            <img
+              src="copy_9AF81E06-26A5-4CBF-975B-DADEA13C2ACE.jpg"
+              alt="Hannah C."
+              loading="lazy"
+              draggable="false"
+            >
+
+          </div>
+
+          <h3 class="team-name">
+            Hannah C.
+          </h3>
+
+          <p class="team-position">
+            President
+          </p>
+
+          <p class="team-grade">
+            Sophomore
+          </p>
+
+        </div>
+
+
+        <!-- LUCY - VICE PRESIDENT -->
+
+        <div class="team-card reveal">
+
+          <div class="team-photo">
+
+            <img
+              src="IMG_5768.jpg"
+              alt="Lucy"
+              loading="lazy"
+              draggable="false"
+            >
+
+          </div>
+
+          <h3 class="team-name">
+            Lucy
+          </h3>
+
+          <p class="team-position">
+            Vice President
+          </p>
+
+          <p class="team-grade">
+            Sophomore
+          </p>
+
+        </div>
+
+
+        <!-- CHLOE GU - SECRETARY -->
+
+        <div class="team-card reveal">
+
+          <div class="team-photo">
+
+            <img
+              src="40B55408-BD25-4BA7-A0B6-736A3E61AB65.JPG"
+              alt="Chloe Gu"
+              loading="lazy"
+              draggable="false"
+            >
+
+          </div>
+
+          <h3 class="team-name">
+            Chloe Gu
+          </h3>
+
+          <p class="team-position">
+            Secretary
+          </p>
+
+          <p class="team-grade">
+            Sophomore
+          </p>
+
+        </div>
+
+
+        <!-- IZZY - SOCIAL MEDIA MANAGER -->
+
+        <div class="team-card reveal">
+
+          <div class="team-photo">
+
+            <img
+              src="71A804BD-3C7A-48BD-A294-5924715FF81D.jpg"
+              alt="Izzy"
+              loading="lazy"
+              draggable="false"
+            >
+
+          </div>
+
+          <h3 class="team-name">
+            Izzy
+          </h3>
+
+          <p class="team-position">
+            Social Media Manager
+          </p>
+
+          <p class="team-grade">
+            Sophomore
+          </p>
+
+        </div>
+
+
+        <!-- JILLIAN - TREASURER -->
+
+        <div class="team-card reveal">
+
+          <div class="team-photo">
+
+            <img
+              src="08F66A05-0EEA-43E4-83E9-7561D3479727 2.jpg"
+              alt="Jillian"
+              loading="lazy"
+              draggable="false"
+            >
+
+          </div>
+
+          <h3 class="team-name">
+            Jillian
+          </h3>
+
+          <p class="team-position">
+            Treasurer
+          </p>
+
+          <p class="team-grade">
+            Sophomore
+          </p>
 
         </div>
 
