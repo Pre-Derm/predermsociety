@@ -318,6 +318,38 @@
     }
 
     /* =================================== */
+    /* NEW: FUNDRAISER DESCRIPTION OVERLAY */
+    /* =================================== */
+
+    .fundraiser-description {
+      position: relative;
+      z-index: 3;
+      max-width: 950px;
+      margin: 0 auto -35px;
+      padding: 20px 28px;
+
+      background: rgba(255, 241, 246, .76);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 18px;
+
+      box-shadow: 0 8px 30px rgba(165, 100, 125, .08);
+
+      color: #8d596b;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .fundraiser-description strong {
+      font-weight: 700;
+      color: #b96f80;
+    }
+
+    /* =================================== */
     /* MEET THE TEAM - FIVE IN ONE ROW     */
     /* =================================== */
 
@@ -581,6 +613,14 @@
         justify-self: center;
       }
 
+      /* DESCRIPTION: SMALL SCREEN */
+
+      .fundraiser-description {
+        padding: 17px 20px;
+        font-size: 14px;
+        margin-bottom: -25px;
+      }
+
       /* TWO TEAM CARDS PER ROW ON TABLETS */
 
       .team-section {
@@ -612,6 +652,16 @@
       .event-photo:last-child {
         grid-column: auto;
         max-width: none;
+      }
+
+      /* DESCRIPTION: PHONE */
+
+      .fundraiser-description {
+        padding: 16px 17px;
+        font-size: 13px;
+        line-height: 1.65;
+        border-radius: 14px;
+        margin-bottom: -20px;
       }
 
       /* ONE TEAM CARD PER ROW ON PHONES */
@@ -689,7 +739,7 @@
   </section>
 
 
-  <!-- EVENTS - UNCHANGED -->
+  <!-- EVENTS -->
 
   <section class="story-section">
 
@@ -719,6 +769,20 @@
         <h3 class="event-title">
           Know Your UV
         </h3>
+
+        <!-- NEW: FUNDRAISER DESCRIPTION -->
+
+        <div class="fundraiser-description">
+
+          Our <strong>Know Your UV</strong> fundraiser aimed to
+          raise awareness about UV exposure and make sun protection
+          more accessible. Through this initiative, we educated
+          60+ students about UV safety and raised enough funds to
+          provide 50+ sunscreens to organizations.
+
+        </div>
+
+        <!-- ORIGINAL THREE PHOTOS - UNCHANGED -->
 
         <div class="event-gallery">
 
@@ -765,7 +829,7 @@
 
 
   <!-- =================================== -->
-  <!-- MEET THE TEAM - FIVE IN ONE ROW     -->
+  <!-- MEET THE TEAM - UNCHANGED           -->
   <!-- =================================== -->
 
   <section class="team-section">
@@ -816,7 +880,7 @@
         </div>
 
 
-        <!-- LUCIANA C - VICE PRESIDENT -->
+        <!-- LUCY - VICE PRESIDENT -->
 
         <div class="team-card reveal">
 
@@ -824,7 +888,7 @@
 
             <img
               src="IMG_5768.jpg"
-              alt="Luciana C"
+              alt="Lucy"
               loading="lazy"
               draggable="false"
             >
@@ -832,7 +896,7 @@
           </div>
 
           <h3 class="team-name">
-            Luciana C
+            Lucy
           </h3>
 
           <p class="team-position">
